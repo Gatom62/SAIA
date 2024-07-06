@@ -18,5 +18,6 @@ namespace AgroServicios.Vista.Estadisticas
             InitializeComponent();
             ControladorStats control = new ControladorStats(this);
         }
+
     }
 }

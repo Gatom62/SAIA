@@ -25,7 +25,6 @@ namespace AgroServicios.Controlador.Login
         {
             ObjLogin = Vista;
             ObjLogin.BtnStart.Click += new EventHandler(DataAccess);
-            ObjLogin.BtnExit.Click += new EventHandler(QuitApplication);
             ObjLogin.menuTest.Click += new EventHandler(TestConnection);
         }
 
@@ -81,15 +80,6 @@ namespace AgroServicios.Controlador.Login
                 MessageBox.Show("Datos incorrectos", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public void QuitApplication(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+      
     }
 }

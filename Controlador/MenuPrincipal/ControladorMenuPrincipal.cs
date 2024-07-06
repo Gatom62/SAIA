@@ -13,6 +13,7 @@ namespace AgroServicios.Controlador.MenuPrincipal
     public class ControladorMenuPrincipal
     {
         VistaMenuPrincipal ObjMenu;
+        Form currentForm;
         /// <summary>
         /// Constructor de la clase ControllerLogin que inicia los eventos de la vista
         /// </summary>
@@ -21,27 +22,84 @@ namespace AgroServicios.Controlador.MenuPrincipal
         public ControladorMenuPrincipal(VistaMenuPrincipal Menu)
         {
             ObjMenu = Menu;
-            ObjMenu.BtnExit.Click += new EventHandler(QuitApplication);
             ObjMenu.btnStats.Click += new EventHandler(OpenStats);
             ObjMenu.btnBusqueda.Click += new EventHandler(OpenBusqueda);
+            ObjMenu.btnInicio.Click += new EventHandler(OpenInicio);
+            ObjMenu.btnExit.Click += new EventHandler(CloseProgram);
         }
-        private void QuitApplication(object sender, EventArgs e)
+ 
+        private void OpenStats(object sender, EventArgs e)
+        {
+            AbrirPanel<VistaStats>();
+        }
+
+        private void CloseProgram(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
 
-        private void OpenStats(object sender, EventArgs e)
+        private void AbrirPanel<MiForm>() where MiForm : Form, new()
         {
-            VistaStats vistaEstadisticas = new VistaStats();
-            vistaEstadisticas.Show();
-            ObjMenu.Hide();
+            Form formulario;
+
+            formulario = ObjMenu.PanelView.Controls.OfType<MiForm>().FirstOrDefault();
+
+            if (formulario == null)
+            {
+                //Se define un nuevo formulario para guardarse como nuevo objeto MiForm
+                formulario = new MiForm();
+                //Se especifica que el formulario debe mostrarse como ventana
+                formulario.TopLevel = false;
+                //Se eliminan los bordes del formulario
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                //Se establece que se abrira en todo el espacio del formulario padre
+                formulario.Dock = DockStyle.Fill;
+                //Se le asigna una opacidad de 0.75
+                formulario.Opacity = 0.75;
+                //Se evalua el formulario actual para verificar si es nulo
+                if (currentForm != null)
+                {
+                    //Se cierra el formulario actual para mostrar el nuevo formulario
+                    currentForm.Close();
+                    //Se eliminan del panel contenedor todos los controles del formulario que se cerrará
+                    ObjMenu.PanelView.Controls.Remove(currentForm);
+                }
+                //Se establece como nuevo formulario actual el formulario que se está abriendo
+                currentForm = formulario;
+                //Se agregan los controles del nuevo formulario al panel contenedor
+                ObjMenu.PanelView.Controls.Add(formulario);
+                //Tag es una propiedad genérica disponible para la mayoría de los controles en aplicaciones .NET, incluyendo los paneles.
+                ObjMenu.PanelView.Tag = formulario;
+                //Se muestra el formulario en el panel contenedor
+                formulario.Show();
+                //Se trae al frente el formulario armado
+                formulario.BringToFront();
+            }
+            else
+            {
+                formulario.BringToFront();
+            }
         }
 
         private void OpenBusqueda(object sender, EventArgs e)
         {
-            VistaBusqueda vistaBusqueda = new VistaBusqueda();
-            vistaBusqueda.Show();
-            ObjMenu.Hide();
+            AbrirPanel<VistaBusqueda>();
+        }
+
+        private void OpenInicio(object sender, EventArgs e)
+        {
+            RestablecerPanelOriginal();
+        }
+
+        private void RestablecerPanelOriginal()
+        {
+            ObjMenu.PanelView.Controls.Clear(); // Limpia el panel
+
+            // Clona los controles originales en PanelView
+            foreach (Control control in ObjMenu.OriginalControls)
+            {
+                ObjMenu.PanelView.Controls.Add(control);
+            }
         }
     }
 }
