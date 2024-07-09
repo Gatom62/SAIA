@@ -7,17 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AgroServicios.Controlador.ControladorStats;
 
-namespace AgroServicios.Vista.Estadisticas
+namespace AgroServicios.Vista.Cuentas
 {
-    public partial class VistaStats : Form
+    public partial class VistaCuentas : Form
     {
-        public VistaStats()
+        public VistaCuentas()
         {
             InitializeComponent();
-            ControladorStats control = new ControladorStats(this);
         }
-
     }
 }

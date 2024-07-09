@@ -21,8 +21,6 @@ namespace AgroServicios.Controlador.ControladorStats
         public ControladorStats(VistaStats Estadisticas)
         {
             ObjStats = Estadisticas;
-            ObjStats.btnInicio.Click += new EventHandler(OpenInicio);
-            ObjStats.btnBusqueda.Click += new EventHandler(OpenBusqueda);
         }
 
         private void OpenInicio(object sender, EventArgs e)

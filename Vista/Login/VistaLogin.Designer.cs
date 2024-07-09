@@ -30,8 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.LblUsername = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
-            this.BtnExit = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTest = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,6 +39,8 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.BtnStart = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,28 +70,6 @@
             this.LblUsername.Size = new System.Drawing.Size(147, 42);
             this.LblUsername.TabIndex = 2;
             this.LblUsername.Text = "Usuario";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(186, 277);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(1027, 49);
-            this.txtUsername.TabIndex = 4;
-            // 
-            // BtnExit
-            // 
-            this.BtnExit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnExit.BackColor = System.Drawing.Color.White;
-            this.BtnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExit.ForeColor = System.Drawing.Color.Red;
-            this.BtnExit.Location = new System.Drawing.Point(1251, 65);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(58, 48);
-            this.BtnExit.TabIndex = 7;
-            this.BtnExit.Text = "X";
-            this.BtnExit.UseVisualStyleBackColor = false;
             // 
             // menuStrip1
             // 
@@ -166,12 +144,21 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Location = new System.Drawing.Point(90, 65);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1219, 568);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(186, 281);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(1027, 49);
+            this.txtUsername.TabIndex = 12;
             // 
             // VistaLogin
             // 
@@ -179,11 +166,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(1410, 663);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.BtnStart);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.LblPassword);
-            this.Controls.Add(this.BtnExit);
-            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.LblUsername);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -210,11 +196,11 @@
         private System.Windows.Forms.ToolStripMenuItem integrantesToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem menuTest;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
-        public System.Windows.Forms.TextBox txtUsername;
-        public System.Windows.Forms.Button BtnExit;
         public System.Windows.Forms.TextBox txtPassword;
         public System.Windows.Forms.Button BtnStart;
         public System.Windows.Forms.Label LblUsername;
         public System.Windows.Forms.Label LblPassword;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        public System.Windows.Forms.TextBox txtUsername;
     }
 }

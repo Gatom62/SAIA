@@ -139,6 +139,9 @@
   <data name="Imagen de WhatsApp 2024-05-25 a las 21.38 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Imagen de WhatsApp 2024-05-25 a las 21.38 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Imagen_de_WhatsApp_2024-07-08_a_las_17.27.06_487df51c-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Imagen_de_WhatsApp_2024-07-08_a_las_17.27.06_487df51c-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tdesign_money" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tdesign_money.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -150,6 +153,9 @@
   </data>
   <data name="Rectangle 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rectangle 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Caja" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Caja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,7 +172,7 @@
   <data name="Group" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Caja" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Caja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Imagen_de_WhatsApp_2024-07-08_a_las_17.271" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Imagen_de_WhatsApp_2024-07-08_a_las_17.27.06_487df51c-removebg-preview1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

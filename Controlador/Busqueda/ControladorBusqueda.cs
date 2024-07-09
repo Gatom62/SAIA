@@ -22,9 +22,6 @@ namespace AgroServicios.Controlador.Busqueda
        public ControladorBusqueda(VistaBusqueda Busqueda)
         {
             ObjBusqueda = Busqueda;
-            ObjBusqueda.btnInicio.Click += new EventHandler(OpenInicio);
-            ObjBusqueda.btnStats.Click += new EventHandler(OpenStats);
-
         }
 
         private void OpenInicio(object sender, EventArgs e)
