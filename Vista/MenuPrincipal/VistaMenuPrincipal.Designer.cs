@@ -44,16 +44,16 @@
             this.button10 = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblfecha = new System.Windows.Forms.Label();
+            this.lblhora = new System.Windows.Forms.Label();
+            this.horafecha = new System.Windows.Forms.Timer(this.components);
             this.btnAccounts = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.btnStats = new System.Windows.Forms.Button();
             this.btnShop = new System.Windows.Forms.Button();
             this.btnBusqueda = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lblhora = new System.Windows.Forms.Label();
-            this.horafecha = new System.Windows.Forms.Timer(this.components);
-            this.lblfecha = new System.Windows.Forms.Label();
             this.PanelView.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -319,6 +319,47 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1410, 76);
             this.tableLayoutPanel1.TabIndex = 27;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.lblfecha);
+            this.panel2.Controls.Add(this.lblhora);
+            this.panel2.Controls.Add(this.tableLayoutPanel1);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1410, 263);
+            this.panel2.TabIndex = 24;
+            // 
+            // lblfecha
+            // 
+            this.lblfecha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblfecha.AutoSize = true;
+            this.lblfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
+            this.lblfecha.Location = new System.Drawing.Point(439, 160);
+            this.lblfecha.Name = "lblfecha";
+            this.lblfecha.Size = new System.Drawing.Size(147, 54);
+            this.lblfecha.TabIndex = 29;
+            this.lblfecha.Text = "label2";
+            // 
+            // lblhora
+            // 
+            this.lblhora.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblhora.AutoSize = true;
+            this.lblhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhora.Location = new System.Drawing.Point(534, 91);
+            this.lblhora.Name = "lblhora";
+            this.lblhora.Size = new System.Drawing.Size(194, 69);
+            this.lblhora.TabIndex = 28;
+            this.lblhora.Text = "label1";
+            // 
+            // horafecha
+            // 
+            this.horafecha.Enabled = true;
+            this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
+            // 
             // btnAccounts
             // 
             this.btnAccounts.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -389,57 +430,16 @@
             this.btnBusqueda.TabIndex = 15;
             this.btnBusqueda.UseVisualStyleBackColor = false;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lblfecha);
-            this.panel2.Controls.Add(this.lblhora);
-            this.panel2.Controls.Add(this.tableLayoutPanel1);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1410, 263);
-            this.panel2.TabIndex = 24;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = global::AgroServicios.Properties.Resources.Imagen_de_WhatsApp_2024_05_25_a_las_21_38_1;
+            this.pictureBox3.Image = global::AgroServicios.Properties.Resources.Imagen_de_WhatsApp_2024_07_08_a_las_17_27_06_487df51c_removebg_preview;
             this.pictureBox3.Location = new System.Drawing.Point(3, 78);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(219, 180);
+            this.pictureBox3.Size = new System.Drawing.Size(220, 180);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
-            // 
-            // lblhora
-            // 
-            this.lblhora.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblhora.AutoSize = true;
-            this.lblhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhora.Location = new System.Drawing.Point(505, 91);
-            this.lblhora.Name = "lblhora";
-            this.lblhora.Size = new System.Drawing.Size(194, 69);
-            this.lblhora.TabIndex = 28;
-            this.lblhora.Text = "label1";
-            // 
-            // horafecha
-            // 
-            this.horafecha.Enabled = true;
-            this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
-            // 
-            // lblfecha
-            // 
-            this.lblfecha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblfecha.AutoSize = true;
-            this.lblfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
-            this.lblfecha.Location = new System.Drawing.Point(408, 160);
-            this.lblfecha.Name = "lblfecha";
-            this.lblfecha.Size = new System.Drawing.Size(147, 54);
-            this.lblfecha.TabIndex = 29;
-            this.lblfecha.Text = "label2";
             // 
             // VistaMenuPrincipal
             // 
@@ -480,7 +480,6 @@
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Button button2;
         public System.Windows.Forms.Button button3;
-        public System.Windows.Forms.Button button4;
         public System.Windows.Forms.Button button6;
         public System.Windows.Forms.Button button11;
         public System.Windows.Forms.Button button10;
@@ -490,5 +489,6 @@
         private System.Windows.Forms.Label lblhora;
         private System.Windows.Forms.Timer horafecha;
         private System.Windows.Forms.Label lblfecha;
+        public System.Windows.Forms.Button button4;
     }
 }

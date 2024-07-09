@@ -54,7 +54,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::AgroServicios.Properties.Resources.Imagen_de_WhatsApp_2024_05_25_a_las_21_38_1;
+            this.pictureBox1.Image = global::AgroServicios.Properties.Resources.Imagen_de_WhatsApp_2024_07_08_a_las_17_271;
             this.pictureBox1.Location = new System.Drawing.Point(33, 23);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(108, 75);
