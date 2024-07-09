@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using AgroServicios.Vista.MenuPrincipal;
 using AgroServicios.Vista.Estadisticas;
 using AgroServicios.Vista.Busqueda;
+using AgroServicios.Vista.Cuentas;
 
 namespace AgroServicios.Controlador.MenuPrincipal
 {
@@ -26,8 +27,14 @@ namespace AgroServicios.Controlador.MenuPrincipal
             ObjMenu.btnBusqueda.Click += new EventHandler(OpenBusqueda);
             ObjMenu.btnInicio.Click += new EventHandler(OpenInicio);
             ObjMenu.btnExit.Click += new EventHandler(CloseProgram);
+            ObjMenu.btnAccounts.Click += new EventHandler(OpenCuentas);
         }
  
+        private void OpenCuentas(object sender, EventArgs e)
+        {
+            AbrirPanel<VistaCuentas>();
+        }
+
         private void OpenStats(object sender, EventArgs e)
         {
             AbrirPanel<VistaStats>();

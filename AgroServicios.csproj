@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="Controlador\Busqueda\ControladorBusqueda.cs" />
     <Compile Include="Controlador\ControladorStats\ControladorStats.cs" />
+    <Compile Include="Controlador\CuentasContralador\ControladorCuentas.cs" />
     <Compile Include="Controlador\Login\ControladorLogin.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorMenuPrincipal.cs" />
     <Compile Include="Helpers\AESEncryption.cs" />
@@ -70,6 +71,12 @@
     </Compile>
     <Compile Include="Vista\Busqueda\VistaBusqueda.Designer.cs">
       <DependentUpon>VistaBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Cuentas\VistaCuentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Cuentas\VistaCuentas.Designer.cs">
+      <DependentUpon>VistaCuentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Estadisticas\VistaStats.cs">
       <SubType>Form</SubType>
@@ -107,6 +114,9 @@
     </Compile>
     <EmbeddedResource Include="Vista\Busqueda\VistaBusqueda.resx">
       <DependentUpon>VistaBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Cuentas\VistaCuentas.resx">
+      <DependentUpon>VistaCuentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Estadisticas\VistaStats.resx">
       <DependentUpon>VistaStats.cs</DependentUpon>
@@ -191,5 +201,6 @@
   <ItemGroup>
     <None Include="Resources\Imagen_de_WhatsApp_2024-07-08_a_las_17.27.06_487df51c-removebg-preview1.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

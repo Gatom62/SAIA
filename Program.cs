@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AgroServicios.Vista.Login;
+using AgroServicios.Modelo;
+using System.Data.SqlClient;
+using AgroServicios.Vista.MenuPrincipal;
 
 namespace AgroServicios
 {
@@ -18,6 +21,7 @@ namespace AgroServicios
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new VistaLogin());
+
         }
     }
 }
