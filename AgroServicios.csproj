@@ -61,8 +61,10 @@
     <Compile Include="Controlador\Login\ControladorLogin.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorMenuPrincipal.cs" />
     <Compile Include="Helpers\AESEncryption.cs" />
+    <Compile Include="Modelo\DAO\DAOAdminUsers.cs" />
     <Compile Include="Modelo\DAO\DAOLogin.cs" />
     <Compile Include="Modelo\dbContext.cs" />
+    <Compile Include="Modelo\DTO\DTOAdminUsers.cs" />
     <Compile Include="Modelo\DTO\DTOLogin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

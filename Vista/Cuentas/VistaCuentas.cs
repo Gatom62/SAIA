@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AgroServicios.Controlador.CuentasContralador;
 
 namespace AgroServicios.Vista.Cuentas
 {
@@ -15,6 +16,7 @@ namespace AgroServicios.Vista.Cuentas
         public VistaCuentas()
         {
             InitializeComponent();
+            ControladorCuentas ObjEmpleados = new ControladorCuentas(this);
         }
     }
 }
