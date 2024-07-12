@@ -49,7 +49,7 @@ namespace AgroServicios.Controlador.MenuPrincipal
         {
             Form formulario;
 
-            formulario = ObjMenu.PanelView.Controls.OfType<MiForm>().FirstOrDefault();
+            formulario = ObjMenu.PanelContenedor.Controls.OfType<MiForm>().FirstOrDefault();
 
             if (formulario == null)
             {
@@ -69,14 +69,14 @@ namespace AgroServicios.Controlador.MenuPrincipal
                     //Se cierra el formulario actual para mostrar el nuevo formulario
                     currentForm.Close();
                     //Se eliminan del panel contenedor todos los controles del formulario que se cerrará
-                    ObjMenu.PanelView.Controls.Remove(currentForm);
+                    ObjMenu.PanelContenedor.Controls.Remove(currentForm);
                 }
                 //Se establece como nuevo formulario actual el formulario que se está abriendo
                 currentForm = formulario;
                 //Se agregan los controles del nuevo formulario al panel contenedor
-                ObjMenu.PanelView.Controls.Add(formulario);
+                ObjMenu.PanelContenedor.Controls.Add(formulario);
                 //Tag es una propiedad genérica disponible para la mayoría de los controles en aplicaciones .NET, incluyendo los paneles.
-                ObjMenu.PanelView.Tag = formulario;
+                ObjMenu.PanelContenedor.Tag = formulario;
                 //Se muestra el formulario en el panel contenedor
                 formulario.Show();
                 //Se trae al frente el formulario armado
@@ -100,12 +100,12 @@ namespace AgroServicios.Controlador.MenuPrincipal
 
         private void RestablecerPanelOriginal()
         {
-            ObjMenu.PanelView.Controls.Clear(); // Limpia el panel
+            ObjMenu.PanelContenedor.Controls.Clear(); // Limpia el panel
 
             // Clona los controles originales en PanelView
             foreach (Control control in ObjMenu.OriginalControls)
             {
-                ObjMenu.PanelView.Controls.Add(control);
+                ObjMenu.PanelContenedor.Controls.Add(control);
             }
         }
     }
