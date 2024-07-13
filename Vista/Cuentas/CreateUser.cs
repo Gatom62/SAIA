@@ -11,6 +11,5 @@ namespace AgroServicios.Vista.Cuentas
             InitializeComponent();
             ControladorCreateUser control = new ControladorCreateUser(this);
         }
-
     }
 }

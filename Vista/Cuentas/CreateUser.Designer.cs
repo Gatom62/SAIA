@@ -200,7 +200,7 @@
             this.txtNewPassword.Padding = new System.Windows.Forms.Padding(3);
             this.txtNewPassword.PasswordChar = '\0';
             this.txtNewPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtNewPassword.PlaceholderText = "Usuario";
+            this.txtNewPassword.PlaceholderText = "Contraseña";
             this.txtNewPassword.ReadOnly = false;
             this.txtNewPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtNewPassword.SelectedText = "";
@@ -214,7 +214,7 @@
             this.txtNewPassword.TextMarginBottom = 0;
             this.txtNewPassword.TextMarginLeft = 3;
             this.txtNewPassword.TextMarginTop = 1;
-            this.txtNewPassword.TextPlaceholder = "Usuario";
+            this.txtNewPassword.TextPlaceholder = "Contraseña";
             this.txtNewPassword.UseSystemPasswordChar = false;
             this.txtNewPassword.WordWrap = true;
             // 
@@ -276,7 +276,7 @@
             this.txtNewFirstName.Padding = new System.Windows.Forms.Padding(3);
             this.txtNewFirstName.PasswordChar = '\0';
             this.txtNewFirstName.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtNewFirstName.PlaceholderText = "Usuario";
+            this.txtNewFirstName.PlaceholderText = "Nombres";
             this.txtNewFirstName.ReadOnly = false;
             this.txtNewFirstName.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtNewFirstName.SelectedText = "";
@@ -290,7 +290,7 @@
             this.txtNewFirstName.TextMarginBottom = 0;
             this.txtNewFirstName.TextMarginLeft = 3;
             this.txtNewFirstName.TextMarginTop = 1;
-            this.txtNewFirstName.TextPlaceholder = "Usuario";
+            this.txtNewFirstName.TextPlaceholder = "Nombres";
             this.txtNewFirstName.UseSystemPasswordChar = false;
             this.txtNewFirstName.WordWrap = true;
             // 
@@ -352,7 +352,7 @@
             this.txtNewLastName.Padding = new System.Windows.Forms.Padding(3);
             this.txtNewLastName.PasswordChar = '\0';
             this.txtNewLastName.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtNewLastName.PlaceholderText = "Usuario";
+            this.txtNewLastName.PlaceholderText = "Apellidos";
             this.txtNewLastName.ReadOnly = false;
             this.txtNewLastName.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtNewLastName.SelectedText = "";
@@ -366,7 +366,7 @@
             this.txtNewLastName.TextMarginBottom = 0;
             this.txtNewLastName.TextMarginLeft = 3;
             this.txtNewLastName.TextMarginTop = 1;
-            this.txtNewLastName.TextPlaceholder = "Usuario";
+            this.txtNewLastName.TextPlaceholder = "Apellidos";
             this.txtNewLastName.UseSystemPasswordChar = false;
             this.txtNewLastName.WordWrap = true;
             // 
@@ -453,7 +453,7 @@
             this.txtNewPhone.Padding = new System.Windows.Forms.Padding(3);
             this.txtNewPhone.PasswordChar = '\0';
             this.txtNewPhone.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtNewPhone.PlaceholderText = "Usuario";
+            this.txtNewPhone.PlaceholderText = "Numero celular";
             this.txtNewPhone.ReadOnly = false;
             this.txtNewPhone.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtNewPhone.SelectedText = "";
@@ -467,7 +467,7 @@
             this.txtNewPhone.TextMarginBottom = 0;
             this.txtNewPhone.TextMarginLeft = 3;
             this.txtNewPhone.TextMarginTop = 1;
-            this.txtNewPhone.TextPlaceholder = "Usuario";
+            this.txtNewPhone.TextPlaceholder = "Numero celular";
             this.txtNewPhone.UseSystemPasswordChar = false;
             this.txtNewPhone.WordWrap = true;
             // 
@@ -529,7 +529,7 @@
             this.txtNewCorreo.Padding = new System.Windows.Forms.Padding(3);
             this.txtNewCorreo.PasswordChar = '\0';
             this.txtNewCorreo.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtNewCorreo.PlaceholderText = "Usuario";
+            this.txtNewCorreo.PlaceholderText = "Correo eléctronico";
             this.txtNewCorreo.ReadOnly = false;
             this.txtNewCorreo.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtNewCorreo.SelectedText = "";
@@ -543,13 +543,13 @@
             this.txtNewCorreo.TextMarginBottom = 0;
             this.txtNewCorreo.TextMarginLeft = 3;
             this.txtNewCorreo.TextMarginTop = 1;
-            this.txtNewCorreo.TextPlaceholder = "Usuario";
+            this.txtNewCorreo.TextPlaceholder = "Correo eléctronico";
             this.txtNewCorreo.UseSystemPasswordChar = false;
             this.txtNewCorreo.WordWrap = true;
             // 
             // maskedDui
             // 
-            this.maskedDui.Location = new System.Drawing.Point(413, 331);
+            this.maskedDui.Location = new System.Drawing.Point(417, 336);
             this.maskedDui.Mask = "00000000-0";
             this.maskedDui.Name = "maskedDui";
             this.maskedDui.Size = new System.Drawing.Size(92, 22);
@@ -591,12 +591,12 @@
             this.bunifuDropdown1.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.bunifuDropdown1.ItemHighLightForeColor = System.Drawing.Color.White;
             this.bunifuDropdown1.Items.AddRange(new object[] {
-            "Manager",
+            "Adminstrador",
             "Empleado"});
             this.bunifuDropdown1.ItemTopMargin = 3;
-            this.bunifuDropdown1.Location = new System.Drawing.Point(528, 328);
+            this.bunifuDropdown1.Location = new System.Drawing.Point(540, 331);
             this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.Size = new System.Drawing.Size(239, 32);
+            this.bunifuDropdown1.Size = new System.Drawing.Size(229, 32);
             this.bunifuDropdown1.TabIndex = 10;
             this.bunifuDropdown1.Text = null;
             this.bunifuDropdown1.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
