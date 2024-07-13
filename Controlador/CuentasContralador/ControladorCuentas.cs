@@ -17,6 +17,7 @@ namespace AgroServicios.Controlador.CuentasContralador
         {
             ObjEmpleados = Vista;
             ObjEmpleados.Load += new EventHandler(LoadData);
+            ObjEmpleados.btnAgregar.Click += new EventHandler(OpenFormCreateUser);
         }
 
         private void LoadData(object sender, EventArgs e)
@@ -32,6 +33,12 @@ namespace AgroServicios.Controlador.CuentasContralador
             DataSet ds = objAdmin.ObtenerPersonas();
             ////Llenar DataGridView
             ObjEmpleados.GriewEmpleados.DataSource = ds.Tables["Empleados"];
+        }
+
+        private void OpenFormCreateUser(object sender, EventArgs e)
+        {
+            CreateUser createUser = new CreateUser();
+            createUser.ShowDialog();
         }
     }
 }

@@ -1,9 +1,5 @@
 ﻿using AgroServicios.Modelo.DAO;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using AgroServicios.Vista.Login;
 using AgroServicios.Modelo.DTO;

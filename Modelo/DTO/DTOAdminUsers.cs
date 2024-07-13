@@ -1,41 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AgroServicios.Modelo.DTO
 {
     class DTOAdminUsers : dbContext
     {
-        // **** PERSONAS ****
-        private int personId;
-        private string firstName;
-        private string lastName;
-        private DateTime birthday;
-        private string dni;
-        private string personAddress;
-        private string personEmail;
-        private string personPhone;
-        // **** USUARIO ****
-        private string user;
-        private string password;
-        private bool userStatus;
-        private int userAttempts;
-        private int role;
+        private int IdEmpleado;
+        private string Usuario;
+        private string Password;
+        private string Nombre;
+        private string Apellido;
+        private DateTime fechaNacimiento;
+        private string Direction;
+        private string Phone;
+        private string Correo;
+        private string dui;
+        private int salario;
 
-        public int PersonId { get => personId; set => personId = value; }
-        public string FirstName { get => firstName; set => firstName = value; }
-        public string LastName { get => lastName; set => lastName = value; }
-        public DateTime Birthday { get => birthday; set => birthday = value; }
-        public string Dni { get => dni; set => dni = value; }
-        public string PersonAddress { get => personAddress; set => personAddress = value; }
-        public string PersonEmail { get => personEmail; set => personEmail = value; }
-        public string PersonPhone { get => personPhone; set => personPhone = value; }
-        public string User { get => user; set => user = value; }
-        public string Password { get => password; set => password = value; }
-        public bool UserStatus { get => userStatus; set => userStatus = value; }
-        public int UserAttempts { get => userAttempts; set => userAttempts = value; }
-        public int Role { get => role; set => role = value; }
+        public int IdEmpleado1 { get => IdEmpleado; set => IdEmpleado = value; }
+        public string Usuario1 { get => Usuario; set => Usuario = value; }
+        public string Password1 { get => Password; set => Password = value; }
+        public string Nombre1 { get => Nombre; set => Nombre = value; }
+        public string Apellido1 { get => Apellido; set => Apellido = value; }
+        public DateTime FechaNacimiento { get => fechaNacimiento; set => fechaNacimiento = value; }
+        public string Direction1 { get => Direction; set => Direction = value; }
+        public string Phone1 { get => Phone; set => Phone = value; }
+        public string Correo1 { get => Correo; set => Correo = value; }
+        public string Dui { get => dui; set => dui = value; }
+        public int Salario { get => salario; set => salario = value; }
     }
 }

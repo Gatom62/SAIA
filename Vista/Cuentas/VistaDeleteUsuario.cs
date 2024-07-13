@@ -7,16 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AgroServicios.Controlador.CuentasContralador;
 
 namespace AgroServicios.Vista.Cuentas
 {
-    public partial class VistaCuentas : Form
+    public partial class VistaDeleteUsuario : Form
     {
-        public VistaCuentas()
+        public VistaDeleteUsuario()
         {
             InitializeComponent();
-            ControladorCuentas control = new ControladorCuentas(this);
         }
     }
 }

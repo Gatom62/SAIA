@@ -7,6 +7,7 @@ using AgroServicios.Vista.Login;
 using AgroServicios.Modelo;
 using System.Data.SqlClient;
 using AgroServicios.Vista.MenuPrincipal;
+using AgroServicios.Vista.Cuentas;
 
 namespace AgroServicios
 {

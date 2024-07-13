@@ -100,6 +100,7 @@
   <ItemGroup>
     <Compile Include="Controlador\Busqueda\ControladorBusqueda.cs" />
     <Compile Include="Controlador\ControladorStats\ControladorStats.cs" />
+    <Compile Include="Controlador\CuentasContralador\ControladorCreateUser.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorCuentas.cs" />
     <Compile Include="Controlador\Login\ControladorLogin.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorMenuPrincipal.cs" />
@@ -117,11 +118,23 @@
     <Compile Include="Vista\Busqueda\VistaBusqueda.Designer.cs">
       <DependentUpon>VistaBusqueda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Cuentas\CreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Cuentas\CreateUser.Designer.cs">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Cuentas\VistaCuentas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\Cuentas\VistaCuentas.Designer.cs">
       <DependentUpon>VistaCuentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Cuentas\VistaDeleteUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Cuentas\VistaDeleteUsuario.Designer.cs">
+      <DependentUpon>VistaDeleteUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Estadisticas\VistaStats.cs">
       <SubType>Form</SubType>
@@ -159,6 +172,9 @@
     </Compile>
     <EmbeddedResource Include="Vista\Busqueda\VistaBusqueda.resx">
       <DependentUpon>VistaBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Cuentas\CreateUser.resx">
+      <DependentUpon>CreateUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Cuentas\VistaCuentas.resx">
       <DependentUpon>VistaCuentas.cs</DependentUpon>
