@@ -9,6 +9,8 @@ namespace AgroServicios.Vista.Login
         {
             InitializeComponent();
             ControladorLogin control = new ControladorLogin(this);
+            PasswordHide.Visible = false;
+
         }
 
     }

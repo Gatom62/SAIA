@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaLogin));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -42,12 +44,14 @@
             this.LblUsername = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuTest = new System.Windows.Forms.ToolStripMenuItem();
-            this.integrantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.LblPassword = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.menuTest = new System.Windows.Forms.ToolStripMenuItem();
+            this.integrantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.PasswordHide = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
+            this.PasswordVisible = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.BtnStart = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.txtPassword = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtUsername = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -88,7 +92,7 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1410, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1410, 30);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -98,8 +102,21 @@
             this.menuTest,
             this.integrantesToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(85, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(85, 26);
             this.toolStripMenuItem1.Text = "Opciones";
+            // 
+            // LblPassword
+            // 
+            this.LblPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LblPassword.AutoSize = true;
+            this.LblPassword.BackColor = System.Drawing.Color.White;
+            this.LblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.LblPassword.Location = new System.Drawing.Point(179, 382);
+            this.LblPassword.Name = "LblPassword";
+            this.LblPassword.Size = new System.Drawing.Size(212, 42);
+            this.LblPassword.TabIndex = 9;
+            this.LblPassword.Text = "Contraseña";
             // 
             // menuTest
             // 
@@ -115,19 +132,6 @@
             this.integrantesToolStripMenuItem.Size = new System.Drawing.Size(166, 26);
             this.integrantesToolStripMenuItem.Text = "Integrantes";
             // 
-            // LblPassword
-            // 
-            this.LblPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LblPassword.AutoSize = true;
-            this.LblPassword.BackColor = System.Drawing.Color.White;
-            this.LblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.LblPassword.Location = new System.Drawing.Point(179, 382);
-            this.LblPassword.Name = "LblPassword";
-            this.LblPassword.Size = new System.Drawing.Size(212, 42);
-            this.LblPassword.TabIndex = 9;
-            this.LblPassword.Text = "Contraseña";
-            // 
             // bunifuGradientPanel1
             // 
             this.bunifuGradientPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -135,6 +139,8 @@
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.BorderRadius = 33;
+            this.bunifuGradientPanel1.Controls.Add(this.PasswordHide);
+            this.bunifuGradientPanel1.Controls.Add(this.PasswordVisible);
             this.bunifuGradientPanel1.Controls.Add(this.BtnStart);
             this.bunifuGradientPanel1.Controls.Add(this.txtPassword);
             this.bunifuGradientPanel1.Controls.Add(this.txtUsername);
@@ -148,6 +154,68 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1127, 604);
             this.bunifuGradientPanel1.TabIndex = 13;
             // 
+            // PasswordHide
+            // 
+            this.PasswordHide.AllowAnimations = true;
+            this.PasswordHide.AllowBorderColorChanges = true;
+            this.PasswordHide.AllowMouseEffects = true;
+            this.PasswordHide.AnimationSpeed = 200;
+            this.PasswordHide.BackColor = System.Drawing.Color.Transparent;
+            this.PasswordHide.BackgroundColor = System.Drawing.Color.White;
+            this.PasswordHide.BorderColor = System.Drawing.Color.White;
+            this.PasswordHide.BorderRadius = 1;
+            this.PasswordHide.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
+            this.PasswordHide.BorderThickness = 1;
+            this.PasswordHide.ColorContrastOnClick = 30;
+            this.PasswordHide.ColorContrastOnHover = 30;
+            this.PasswordHide.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.PasswordHide.CustomizableEdges = borderEdges1;
+            this.PasswordHide.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.PasswordHide.Image = global::AgroServicios.Properties.Resources.Hide;
+            this.PasswordHide.ImageMargin = new System.Windows.Forms.Padding(0);
+            this.PasswordHide.Location = new System.Drawing.Point(1012, 411);
+            this.PasswordHide.Name = "PasswordHide";
+            this.PasswordHide.RoundBorders = true;
+            this.PasswordHide.ShowBorders = true;
+            this.PasswordHide.Size = new System.Drawing.Size(50, 50);
+            this.PasswordHide.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
+            this.PasswordHide.TabIndex = 4;
+            // 
+            // PasswordVisible
+            // 
+            this.PasswordVisible.AllowAnimations = true;
+            this.PasswordVisible.AllowBorderColorChanges = true;
+            this.PasswordVisible.AllowMouseEffects = true;
+            this.PasswordVisible.AnimationSpeed = 200;
+            this.PasswordVisible.BackColor = System.Drawing.Color.Transparent;
+            this.PasswordVisible.BackgroundColor = System.Drawing.Color.White;
+            this.PasswordVisible.BorderColor = System.Drawing.Color.White;
+            this.PasswordVisible.BorderRadius = 1;
+            this.PasswordVisible.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
+            this.PasswordVisible.BorderThickness = 1;
+            this.PasswordVisible.ColorContrastOnClick = 30;
+            this.PasswordVisible.ColorContrastOnHover = 30;
+            this.PasswordVisible.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.PasswordVisible.CustomizableEdges = borderEdges2;
+            this.PasswordVisible.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.PasswordVisible.Image = global::AgroServicios.Properties.Resources.Show;
+            this.PasswordVisible.ImageMargin = new System.Windows.Forms.Padding(0);
+            this.PasswordVisible.Location = new System.Drawing.Point(1012, 411);
+            this.PasswordVisible.Name = "PasswordVisible";
+            this.PasswordVisible.RoundBorders = true;
+            this.PasswordVisible.ShowBorders = true;
+            this.PasswordVisible.Size = new System.Drawing.Size(50, 50);
+            this.PasswordVisible.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
+            this.PasswordVisible.TabIndex = 3;
+            // 
             // BtnStart
             // 
             this.BtnStart.AllowAnimations = true;
@@ -159,7 +227,7 @@
             this.BtnStart.AutoSizeLeftIcon = true;
             this.BtnStart.AutoSizeRightIcon = true;
             this.BtnStart.BackColor = System.Drawing.Color.Transparent;
-            this.BtnStart.BackColor1 = System.Drawing.Color.Lime;
+            this.BtnStart.BackColor1 = System.Drawing.Color.LawnGreen;
             this.BtnStart.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnStart.BackgroundImage")));
             this.BtnStart.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.BtnStart.ButtonText = "Iniciar Sesión";
@@ -167,18 +235,17 @@
             this.BtnStart.ColorContrastOnClick = 45;
             this.BtnStart.ColorContrastOnHover = 45;
             this.BtnStart.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.BtnStart.CustomizableEdges = borderEdges1;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.BtnStart.CustomizableEdges = borderEdges3;
             this.BtnStart.DialogResult = System.Windows.Forms.DialogResult.None;
             this.BtnStart.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnStart.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.BtnStart.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.BtnStart.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.BtnStart.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(174)))), ((int)(((byte)(34)))));
             this.BtnStart.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnStart.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.BtnStart.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -191,7 +258,7 @@
             this.BtnStart.IdleBorderColor = System.Drawing.Color.Silver;
             this.BtnStart.IdleBorderRadius = 33;
             this.BtnStart.IdleBorderThickness = 1;
-            this.BtnStart.IdleFillColor = System.Drawing.Color.Lime;
+            this.BtnStart.IdleFillColor = System.Drawing.Color.LawnGreen;
             this.BtnStart.IdleIconLeftImage = null;
             this.BtnStart.IdleIconRightImage = null;
             this.BtnStart.IndicateFocus = true;
@@ -217,8 +284,8 @@
             this.BtnStart.OnIdleState.BorderRadius = 33;
             this.BtnStart.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.BtnStart.OnIdleState.BorderThickness = 1;
-            this.BtnStart.OnIdleState.FillColor = System.Drawing.Color.Lime;
-            this.BtnStart.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(174)))), ((int)(((byte)(34)))));
+            this.BtnStart.OnIdleState.FillColor = System.Drawing.Color.LawnGreen;
+            this.BtnStart.OnIdleState.ForeColor = System.Drawing.Color.Empty;
             this.BtnStart.OnIdleState.IconLeftImage = null;
             this.BtnStart.OnIdleState.IconRightImage = null;
             this.BtnStart.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -427,5 +494,7 @@
         public Bunifu.UI.WinForms.BunifuTextBox txtUsername;
         public Bunifu.UI.WinForms.BunifuTextBox txtPassword;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 BtnStart;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuIconButton PasswordVisible;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuIconButton PasswordHide;
     }
 }

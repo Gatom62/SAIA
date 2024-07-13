@@ -22,6 +22,8 @@ namespace AgroServicios.Controlador.Login
             ObjLogin = Vista;
             ObjLogin.BtnStart.Click += new EventHandler(DataAccess);
             ObjLogin.menuTest.Click += new EventHandler(TestConnection);
+            ObjLogin.PasswordVisible.Click += new EventHandler(ShowPassword);
+            ObjLogin.PasswordHide.Click += new EventHandler(HidePassword);
         }
 
         private void TestConnection(object sender, EventArgs e)
@@ -76,6 +78,20 @@ namespace AgroServicios.Controlador.Login
                 MessageBox.Show("Datos incorrectos", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-      
+
+        private void ShowPassword(object sender, EventArgs e)
+        {
+            ObjLogin.txtPassword.UseSystemPasswordChar = false;
+            ObjLogin.PasswordVisible.Visible = false;
+            ObjLogin.PasswordHide.Visible = true;
+        }
+
+        private void HidePassword(object sender, EventArgs e)
+        {
+            ObjLogin.txtPassword.UseSystemPasswordChar = true;
+            ObjLogin.PasswordVisible.Visible = true;
+            ObjLogin.PasswordHide.Visible = false;
+        }
+
     }
 }
