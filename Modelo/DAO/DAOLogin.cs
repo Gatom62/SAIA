@@ -13,7 +13,7 @@ namespace AgroServicios.Modelo.DAO
             try
             {
                 Command.Connection = getConnection();
-                Command.CommandText = "SELECT Usuario FROM Empleados WHERE Usuario = @username AND Contraseña = @password";
+                Command.CommandText = "SELECT * FROM Usuarios WHERE Usuario = @username AND Contraseña = @password";
                 Command.Parameters.AddWithValue("@username", Username);
                 Command.Parameters.AddWithValue("@password", Password);
                 object result = Command.ExecuteScalar();

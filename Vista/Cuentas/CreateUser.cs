@@ -6,10 +6,11 @@ namespace AgroServicios.Vista.Cuentas
 {
     public partial class CreateUser : Form
     {
-        public CreateUser()
+        public CreateUser(int accion)
         {
             InitializeComponent();
-            ControladorCreateUser control = new ControladorCreateUser(this);
+           ControladorCreateUser ObjUsers = new ControladorCreateUser(this, accion);
+
         }
     }
 }

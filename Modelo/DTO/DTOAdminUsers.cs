@@ -4,28 +4,32 @@ namespace AgroServicios.Modelo.DTO
 {
     class DTOAdminUsers : dbContext
     {
-        private int IdEmpleado;
-        private string Usuario;
-        private string Password;
+        //Empleados
+        private int idEmpleado;
         private string Nombre;
-        private string Apellido;
-        private DateTime fechaNacimiento;
-        private string Direction;
-        private string Phone;
+        private string Apellidos;
+        private DateTime FechaDeNacimiento;
+        private string Telefono;
         private string Correo;
-        private string dui;
-        private int salario;
+        private string DUI;
+        private string Direccion;
+        //Usuarios
+        private string Usuario;
+        private string Contraseña;
+        private int IntentosUsuario;
+        private int idCategoria;
 
-        public int IdEmpleado1 { get => IdEmpleado; set => IdEmpleado = value; }
-        public string Usuario1 { get => Usuario; set => Usuario = value; }
-        public string Password1 { get => Password; set => Password = value; }
+        public int IdEmpleado { get => idEmpleado; set => idEmpleado = value; }
         public string Nombre1 { get => Nombre; set => Nombre = value; }
-        public string Apellido1 { get => Apellido; set => Apellido = value; }
-        public DateTime FechaNacimiento { get => fechaNacimiento; set => fechaNacimiento = value; }
-        public string Direction1 { get => Direction; set => Direction = value; }
-        public string Phone1 { get => Phone; set => Phone = value; }
+        public string Apellidos1 { get => Apellidos; set => Apellidos = value; }
+        public DateTime FechaDeNacimiento1 { get => FechaDeNacimiento; set => FechaDeNacimiento = value; }
+        public string Telefono1 { get => Telefono; set => Telefono = value; }
         public string Correo1 { get => Correo; set => Correo = value; }
-        public string Dui { get => dui; set => dui = value; }
-        public int Salario { get => salario; set => salario = value; }
+        public string DUI1 { get => DUI; set => DUI = value; }
+        public string Direccion1 { get => Direccion; set => Direccion = value; }
+        public string Usuario1 { get => Usuario; set => Usuario = value; }
+        public string Contraseña1 { get => Contraseña; set => Contraseña = value; }
+        public int IntentosUsuario1 { get => IntentosUsuario; set => IntentosUsuario = value; }
+        public int IdCategoria { get => idCategoria; set => idCategoria = value; }
     }
 }

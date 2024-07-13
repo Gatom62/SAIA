@@ -15,7 +15,7 @@ namespace AgroServicios.Modelo
             {
                 //string server = "DESKTOP-QR03KRF";
                 string server = "AYALA\\SQLEXPRESS";
-                string database = "AgroservicioGuadalupe";
+                string database = "Tienda_de_Agroservicio";
                 SqlConnection conexion = new SqlConnection("Server =" + server +
                                                                  "; DataBase = " + database +
                                                                  "; Integrated Security = true;");

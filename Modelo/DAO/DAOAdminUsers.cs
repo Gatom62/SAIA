@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Security;
 using System.Windows.Forms;
 
 namespace AgroServicios.Modelo.DAO
@@ -49,37 +51,99 @@ namespace AgroServicios.Modelo.DAO
 
         }
 
-        public bool CrearUsuario(DTOAdminUsers nuevoUsuario)
+        public DataSet LlenarCombo()
         {
             try
             {
-
-                using (SqlConnection connection = dbContext.getConnection())
-                {
-                    SqlCommand command = new SqlCommand();
-                    command.Connection = connection;
-                    command.CommandText = "INSERT INTO Empleados (Usuario, Contraseña, Correo, Telefono, PrimerNombre, Apellido, FechaNacimiento, DUI) " +
-                                          "VALUES (@username, @password, @correo, @telefono, @primerNombre, @apellido, @fechaNacimiento, @dui)";
-                    command.Parameters.AddWithValue("@username", nuevoUsuario.Usuario1);
-                    command.Parameters.AddWithValue("@password", nuevoUsuario.Password1);
-                    command.Parameters.AddWithValue("@correo", nuevoUsuario.Correo1);
-                    command.Parameters.AddWithValue("@telefono", nuevoUsuario.Phone1);
-                    command.Parameters.AddWithValue("@primerNombre", nuevoUsuario.Nombre1);
-                    command.Parameters.AddWithValue("@apellido", nuevoUsuario.Apellido1);
-                    command.Parameters.AddWithValue("@fechaNacimiento", nuevoUsuario.FechaNacimiento);
-                    command.Parameters.AddWithValue("@dui", nuevoUsuario.Dui);
-
-                    connection.Open();
-                    int result = command.ExecuteNonQuery();
-
-                    return result > 0;
-                }
+                //Se crea una conexión para garantizar que efectivamente haya conexión a la base.
+                Command.Connection = getConnection();
+                //**
+                //Se crea el query que indica la acción que el sistema desea realizar con la base de datos
+                //En caso sea una consulta parametrizada se deberá respetar la sintaxis sobre como colocar parametros en la instrucción sql (REVISAR LOS DEMÁS MANTENIMIENTOS PARA VER COMO SE CREAN PARAMETROS Y SE LES DA VALORES).
+                string query = "SELECT * FROM Categorias";
+                //Se crea un comando de tipo sql al cual se le pasa el query y la conexión, esto para que el sistema sepa que hacer y donde hacerlo.
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                //ExecuteNonQuery indicará cuantos filas fueron afectadas, es decir, cuantas filas de datos se ingresaron o encontraron, por lo general cuando es una consulta su valor puede ser 1 o mayor a 1.
+                cmd.ExecuteNonQuery();
+                //Se crea un objeto SqlDataAdapter para poder llenar el DataSet que posteriormente utilizaremos, además recibe el comando sql
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                //Se crea un DataSet que será el objeto de retorno del método
+                DataSet ds = new DataSet();
+                //Rellenamos el DataSet con los datos encontrados con el SqlDataAdapter, además, indicamos de donde provienen los datos
+                adp.Fill(ds, "Categorias");
+                //Retornamos el objeto DataSet
+                return ds;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
-                return false;
+                //Se retorna null si durate la ejecución del try ocurrió algún error
+                return null;
+            }
+            finally
+            {
+                //Independientemente se haga o no el proceso cerramos la conexión
+                getConnection().Close();
             }
         }
+
+        public int RegistrarUsuario()
+        {
+            try
+            {
+                //Se crea una conexión para garantizar que efectivamente haya conexión a la base.
+                Command.Connection = getConnection();
+                //**
+                //Se crea el query que indica la acción que el sistema desea realizar con la base de datos
+                //el query posee parametros para evitar algún tipo de ataque como SQL Injection
+                string query2 = "INSERT INTO Usuarios(Usuario, Contraseña, IntentosUsuario, idCategoria) VALUES (@username, @password, @userAttempts, @roleId)";
+                //Se crea un comando de tipo sql al cual se le pasa el query y la conexión, esto para que el sistema sepa que hacer y donde hacerlo.
+                SqlCommand cmd2 = new SqlCommand(query2, Command.Connection);
+                //Se le da un valor a los parametros contenidos en el query, es importante mencionar que lo que esta entre comillas es el nombre del parametro y lo que esta después de la coma es el valor que se le asignará al parametro, estos valores vienen del DTO respectivo.
+                cmd2.Parameters.AddWithValue("username", Usuario1);
+                cmd2.Parameters.AddWithValue("password", Contraseña1);
+                cmd2.Parameters.AddWithValue("userAttempts", IntentosUsuario1);
+                cmd2.Parameters.AddWithValue("roleId", IdCategoria);
+                //Se ejecuta el comando ya con todos los valores de sus parametros.
+                //ExecuteNonQuery indicará cuantos filas fueron afectadas, es decir, cuantas filas de datos se ingresaron, por lo general devolvera 1 porque se hace una inserción a la vez.
+                int respuesta = cmd2.ExecuteNonQuery();
+                //Se evalúa el valor de la variable respuesta que contiene el numero de filas afectadas
+                if (respuesta == 1)
+                {
+                    //Si el valor de respuesta es 1, se procede a la inserción de los datos de la persona, como se puede observar en el diagrama de base de datos, primero es el usuario y despues la persona.
+                    string query = "INSERT INTO Empleados (Nombre, FechaDeNacimiento, Telefono, Correo, DUI, Direccion, Usuario) VALUES (@param1, @param2, @param3, @param4, @param5, @param6, @param7)";
+                    //Se crea un comando de tipo sql al cual se le pasa el query y la conexión, esto para que el sistema sepa que hacer y donde hacerlo.
+                    SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                    //Se le da un valor a los parametros contenidos en el query, es importante mencionar que lo que esta entre comillas es el nombre del parametro y lo que esta después de la coma es el valor que se le asignará al parametro, estos valores vienen del DTO
+                    cmd.Parameters.AddWithValue("param1", Nombre1);
+                    cmd.Parameters.AddWithValue("param2", FechaDeNacimiento1);
+                    cmd.Parameters.AddWithValue("param3", Telefono1);
+                    cmd.Parameters.AddWithValue("param4", Correo1);
+                    cmd.Parameters.AddWithValue("param5", DUI1);
+                    cmd.Parameters.AddWithValue("param6", Direccion1);
+                    cmd.Parameters.AddWithValue("param7", Usuario1);
+                    //Se ejecuta el comando ya con todos los valores de sus parametros.
+                    //ExecuteNonQuery indicará cuantos filas fueron afectadas, es decir, cuantas filas de datos se ingresaron, por lo general devolvera 1 porque se hace una inserción a la vez.
+                    respuesta = cmd.ExecuteNonQuery();
+                    //Se retorna el valor de respuesta, que si su valor es 1 indica que los valores fueron ingresados.
+                    return respuesta;
+                }
+                else
+                {
+                    //Se retorna cero si sus valores no pudieron ser ingresados
+                    return 0;
+                }
+            }
+            catch (Exception)
+            {
+                //Se retorna -1 en caso que en el segmento del try haya ocurrido algún error.
+                return -1;
+            }
+            finally
+            {
+                //Independientemente se haga o no el proceso cerramos la conexión
+                Command.Connection.Close();
+            }
+        }
+
     }
 }

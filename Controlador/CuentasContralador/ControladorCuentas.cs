@@ -37,8 +37,9 @@ namespace AgroServicios.Controlador.CuentasContralador
 
         private void OpenFormCreateUser(object sender, EventArgs e)
         {
-            CreateUser createUser = new CreateUser();
+            CreateUser createUser = new CreateUser(1);
             createUser.ShowDialog();
+            RefrescarData();
         }
     }
 }
