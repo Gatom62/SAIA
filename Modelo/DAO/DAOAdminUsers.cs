@@ -145,5 +145,32 @@ namespace AgroServicios.Modelo.DAO
             }
         }
 
+        public int DeteleEmpleado()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+
+                string query = "DELETE Empleados WHERE idEmpleado = @param1";
+
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+
+                cmd.Parameters.AddWithValue("param1", IdEmpleado);
+
+                int respuesta = cmd.ExecuteNonQuery();
+
+                return respuesta;
+            }
+            catch (Exception)
+            {
+                return -1;
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+
+        }
+
     }
 }

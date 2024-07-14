@@ -8,28 +8,31 @@ namespace AgroServicios
 {
     internal static class Program
     {
-        /// <summary>
-        /// Punto de entrada principal para la aplicación.
-        /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-           
-            //Verificación de Primer Uso
-            DAOLogin Verificacion = new DAOLogin();
-            //Llama al metodo "PrimerUso" para verificar que haya usuarios
-            if(Verificacion.PrimerUso() == true)
-            {
 
+            // Verificación de Primer Uso
+            DAOLogin Verificacion = new DAOLogin();
+
+            if (Verificacion.PrimerUso() == true)
+            {
                 Application.Run(new VistaLogin());
             }
             else
             {
-                Application.Run(new CreateUser(accion: 1));
-            }
+                // Crear un formulario CreateUser
+                CreateUser createUserForm = new CreateUser(accion: 1);
 
+                // Mostrar CreateUser como un formulario modal
+                createUserForm.ShowDialog();
+
+                // Una vez que CreateUser se cierra, abrir VistaLogin
+                Application.Run(new VistaLogin());
+            }
         }
     }
+
 }

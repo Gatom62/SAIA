@@ -70,6 +70,7 @@ namespace AgroServicios.Controlador.CuentasContralador
                                 "Proceso completado",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
+                ObjUsers.Close();
             }
             else
             {
