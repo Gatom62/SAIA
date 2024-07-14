@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using AgroServicios.Vista.Login;
-using AgroServicios.Modelo;
-using System.Data.SqlClient;
-using AgroServicios.Vista.MenuPrincipal;
 using AgroServicios.Vista.Cuentas;
+using AgroServicios.Modelo.DAO;
 
 namespace AgroServicios
 {
@@ -21,7 +16,19 @@ namespace AgroServicios
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VistaLogin());
+           
+            //Verificación de Primer Uso
+            DAOLogin Verificacion = new DAOLogin();
+            //Llama al metodo "PrimerUso" para verificar que haya usuarios
+            if(Verificacion.PrimerUso() == true)
+            {
+
+                Application.Run(new VistaLogin());
+            }
+            else
+            {
+                Application.Run(new CreateUser(accion: 1));
+            }
 
         }
     }

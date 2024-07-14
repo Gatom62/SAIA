@@ -37,5 +37,22 @@ namespace AgroServicios.Modelo.DAO
                 getConnection().Close();
             }
         }
+
+        public bool PrimerUso()
+        {
+            Command.Connection = getConnection();
+            Command.CommandText = "SELECT * FROM Usuarios";
+            object  users = Command.ExecuteScalar();
+            if (users != null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
     }
 }
