@@ -48,7 +48,7 @@ namespace AgroServicios.Controlador.CuentasContralador
         {
             int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
 
-            if (MessageBox.Show($"¿Seguro que deseas eliminar a: \n {ObjEmpleados.GriewEmpleados[1, pos].Value.ToString()}{ObjEmpleados.GriewEmpleados[2, pos].Value.ToString()}.\nLa eliminación sera permanente.","Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show($"¿Seguro que deseas eliminar a: \n {ObjEmpleados.GriewEmpleados[1, pos].Value.ToString()}\nLa eliminación sera permanente.","Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 DAOAdminUsers daodelete = new DAOAdminUsers();
                 daodelete.IdEmpleado = int.Parse(ObjEmpleados.GriewEmpleados[0, pos].Value.ToString());
