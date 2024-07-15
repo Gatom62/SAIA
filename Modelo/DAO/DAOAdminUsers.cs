@@ -172,5 +172,33 @@ namespace AgroServicios.Modelo.DAO
 
         }
 
+        public DataTable BuscarProducto(string criterio)
+        {
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                Command.Connection = getConnection();
+                Command.CommandText = "SELECT * FROM Productos WHERE Nombre LIKE @criterio";
+                Command.Parameters.Clear();
+                Command.Parameters.AddWithValue("@criterio", "%" + criterio + "%");
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(Command);
+                dataAdapter.Fill(dataTable);
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+
+            return dataTable;
+        }
     }
+
 }
+
