@@ -61,7 +61,7 @@ namespace AgroServicios.Controlador.Login
             // Utilizando el objeto DAO para invocar a los métodos getter y setter del DTO
             Encryp ObjEncriptar = new Encryp();
             DAOData.Username = ObjLogin.txtUsername.Text;
-            DAOData.Password = ObjLogin.txtPassword.Text;
+            DAOData.Password = ObjEncriptar.Encriptar(ObjLogin.txtPassword.Text);
             // Invocando al método Login contenido en el DAO
             int answer = DAOData.Login();
 

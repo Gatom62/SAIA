@@ -51,6 +51,7 @@ namespace AgroServicios.Controlador.CuentasContralador
         public void NuevoRegistro(object sender, EventArgs e)
         {
             DAOAdminUsers DaoInsert = new DAOAdminUsers();
+            Encryp ObjEncriptar = new Encryp();
 
             //Asignamos los getters y setters a los botones del form crear usuario.
             DaoInsert.Nombre1 = ObjUsers.txtNewFirstName.Text.Trim();
@@ -61,7 +62,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             DaoInsert.Direccion1 = ObjUsers.txtNewDireccion.Text.Trim();
             //Usurio
             DaoInsert.Usuario1 = ObjUsers.txtNewUser.Text.Trim();
-            DaoInsert.Contraseña1 = ObjUsers.txtNewPassword.Text.Trim();
+            DaoInsert.Contraseña1 = ObjEncriptar.Encriptar(ObjUsers.txtNewPassword.Text);
             DaoInsert.IdCategoria = int.Parse(ObjUsers.DropRole.SelectedValue.ToString());
             int valorRetornado = DaoInsert.RegistrarUsuario();
             if (valorRetornado == 1)
