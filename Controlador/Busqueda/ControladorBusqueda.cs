@@ -25,15 +25,22 @@ namespace AgroServicios.Controlador.Busqueda
        public ControladorBusqueda(VistaBusqueda Busqueda)
         {
             ObjBusqueda = Busqueda;
-            ObjBusqueda.txtBuscar.TextChanged += new EventHandler(BuscarProducto);
+            ObjBusqueda.txtBuscar.KeyPress += new KeyPressEventHandler(BuscarProducto_KeyPress);
+
         }
 
-        private void BuscarProducto(object sender, EventArgs e)
+        private void BuscarProducto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            string criterio = ObjBusqueda.txtBuscar.Text.Trim();
-            DAOAdminUsers daoBuscar = new DAOAdminUsers();
-            DataTable dataTable = daoBuscar.BuscarProducto(criterio);
-            ObjBusqueda.GriewViewBuscar.DataSource = dataTable;
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                string criterio = ObjBusqueda.txtBuscar.Text.Trim();
+                DAOAdminUsers daoBuscar = new DAOAdminUsers();
+                DataTable dataTable = daoBuscar.BuscarProducto(criterio);
+                ObjBusqueda.GriewViewBuscar.DataSource = dataTable;
+
+                // Prevenir el sonido de "ding"
+                e.Handled = true;
+            }
         }
     }
 }
