@@ -136,11 +136,23 @@
     <Compile Include="Vista\Cuentas\VistaDeleteUsuario.Designer.cs">
       <DependentUpon>VistaDeleteUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Estadisticas\VistaProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Estadisticas\VistaProveedores.Designer.cs">
+      <DependentUpon>VistaProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Estadisticas\VistaStats.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\Estadisticas\VistaStats.Designer.cs">
       <DependentUpon>VistaStats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Estadisticas\VistaSuministros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Estadisticas\VistaSuministros.Designer.cs">
+      <DependentUpon>VistaSuministros.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Login\Bienvenida.cs">
       <SubType>Form</SubType>
