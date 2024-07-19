@@ -50,6 +50,7 @@
             this.menuTest = new System.Windows.Forms.ToolStripMenuItem();
             this.integrantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.lkRecuperar = new System.Windows.Forms.LinkLabel();
             this.PasswordHide = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.PasswordVisible = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.BtnStart = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -139,6 +140,7 @@
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.BorderRadius = 33;
+            this.bunifuGradientPanel1.Controls.Add(this.lkRecuperar);
             this.bunifuGradientPanel1.Controls.Add(this.PasswordHide);
             this.bunifuGradientPanel1.Controls.Add(this.PasswordVisible);
             this.bunifuGradientPanel1.Controls.Add(this.BtnStart);
@@ -153,6 +155,18 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1127, 604);
             this.bunifuGradientPanel1.TabIndex = 13;
+            // 
+            // lkRecuperar
+            // 
+            this.lkRecuperar.AutoSize = true;
+            this.lkRecuperar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lkRecuperar.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.lkRecuperar.Location = new System.Drawing.Point(438, 494);
+            this.lkRecuperar.Name = "lkRecuperar";
+            this.lkRecuperar.Size = new System.Drawing.Size(262, 29);
+            this.lkRecuperar.TabIndex = 5;
+            this.lkRecuperar.TabStop = true;
+            this.lkRecuperar.Text = "¿Olvido su contraseña?";
             // 
             // PasswordHide
             // 
@@ -475,6 +489,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.bunifuGradientPanel1.ResumeLayout(false);
+            this.bunifuGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -496,5 +511,6 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 BtnStart;
         public Bunifu.UI.WinForms.BunifuButton.BunifuIconButton PasswordVisible;
         public Bunifu.UI.WinForms.BunifuButton.BunifuIconButton PasswordHide;
+        public System.Windows.Forms.LinkLabel lkRecuperar;
     }
 }

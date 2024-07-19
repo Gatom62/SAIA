@@ -706,6 +706,8 @@
             this.Controls.Add(this.txtNewFirstName);
             this.Controls.Add(this.txtNewPassword);
             this.Controls.Add(this.txtNewUser);
+            this.MaximumSize = new System.Drawing.Size(972, 685);
+            this.MinimumSize = new System.Drawing.Size(972, 685);
             this.Name = "CreateUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateUser";

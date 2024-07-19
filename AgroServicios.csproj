@@ -104,6 +104,7 @@
     <Compile Include="Controlador\CuentasContralador\ControladorCuentas.cs" />
     <Compile Include="Controlador\Encryp.cs" />
     <Compile Include="Controlador\Login\ControladorLogin.cs" />
+    <Compile Include="Controlador\Login\ControlerBasicMetodosRecuperar.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorMenuPrincipal.cs" />
     <Compile Include="Modelo\DAO\DAOAdminUsers.cs" />
     <Compile Include="Modelo\DAO\DAOLogin.cs" />
@@ -160,11 +161,23 @@
     <Compile Include="Vista\Login\Bienvenida.Designer.cs">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Login\VistaForEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Login\VistaForEmail.Designer.cs">
+      <DependentUpon>VistaForEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Login\VistaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\Login\VistaLogin.Designer.cs">
       <DependentUpon>VistaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Login\VistaMetodosDeRecuperacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Login\VistaMetodosDeRecuperacion.Designer.cs">
+      <DependentUpon>VistaMetodosDeRecuperacion.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\MenuPrincipal\VistaMenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -197,8 +210,14 @@
     <EmbeddedResource Include="Vista\Login\Bienvenida.resx">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Login\VistaForEmail.resx">
+      <DependentUpon>VistaForEmail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Login\VistaLogin.resx">
       <DependentUpon>VistaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Login\VistaMetodosDeRecuperacion.resx">
+      <DependentUpon>VistaMetodosDeRecuperacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaMenuPrincipal.resx">
       <DependentUpon>VistaMenuPrincipal.cs</DependentUpon>

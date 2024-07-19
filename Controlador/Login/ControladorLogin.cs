@@ -24,6 +24,7 @@ namespace AgroServicios.Controlador.Login
             ObjLogin.menuTest.Click += new EventHandler(TestConnection);
             ObjLogin.PasswordVisible.Click += new EventHandler(ShowPassword);
             ObjLogin.PasswordHide.Click += new EventHandler(HidePassword);
+            ObjLogin.lkRecuperar.Click += new EventHandler(RecuperarPass);
         }
 
         private void TestConnection(object sender, EventArgs e)
@@ -92,6 +93,13 @@ namespace AgroServicios.Controlador.Login
             ObjLogin.txtPassword.UseSystemPasswordChar = true;
             ObjLogin.PasswordVisible.Visible = true;
             ObjLogin.PasswordHide.Visible = false;
+        }
+
+        private void RecuperarPass(Object sender, EventArgs e)
+        {
+            ObjLogin.Hide();
+            VistaMetodosDeRecuperacion recuperacion = new VistaMetodosDeRecuperacion();
+            recuperacion.Show();
         }
 
     }
