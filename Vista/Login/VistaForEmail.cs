@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AgroServicios.Controlador.Login;
+using AgroServicios.Modelo.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,13 @@ namespace AgroServicios.Vista.Login
         public VistaForEmail()
         {
             InitializeComponent();
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            var user = new DAORecuperarPass();
+            var result = user.recoverPassword(txtUser.Text);
+            lblResult.Text = result;
         }
     }
 }

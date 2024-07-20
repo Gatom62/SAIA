@@ -103,13 +103,17 @@
     <Compile Include="Controlador\CuentasContralador\ControladorCreateUser.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorCuentas.cs" />
     <Compile Include="Controlador\Encryp.cs" />
+    <Compile Include="Controlador\Login\ControladorForEmail.cs" />
     <Compile Include="Controlador\Login\ControladorLogin.cs" />
     <Compile Include="Controlador\Login\ControlerBasicMetodosRecuperar.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorMenuPrincipal.cs" />
     <Compile Include="Modelo\DAO\DAOAdminUsers.cs" />
     <Compile Include="Modelo\DAO\DAOLogin.cs" />
+    <Compile Include="Modelo\DAO\DAORecuperarPass.cs" />
     <Compile Include="Modelo\dbContext.cs" />
+    <Compile Include="Modelo\DTO\DCorreoSoporte.cs" />
     <Compile Include="Modelo\DTO\DTOAdminUsers.cs" />
+    <Compile Include="Modelo\DTO\DTOCorreoRecuperacion.cs" />
     <Compile Include="Modelo\DTO\DTOLogin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

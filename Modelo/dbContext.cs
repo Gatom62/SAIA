@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgroServicios.Modelo
 {
-    internal class dbContext
+    public class dbContext
     {
         public static SqlConnection getConnection()
         {
