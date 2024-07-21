@@ -17,13 +17,8 @@ namespace AgroServicios.Vista.Login
         public VistaForEmail()
         {
             InitializeComponent();
+            ControladorForEmail control = new ControladorForEmail(this);
         }
 
-        private void btnEnviar_Click(object sender, EventArgs e)
-        {
-            var user = new DAORecuperarPass();
-            var result = user.recoverPassword(txtUser.Text);
-            lblResult.Text = result;
-        }
     }
 }

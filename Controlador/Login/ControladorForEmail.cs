@@ -10,26 +10,24 @@ namespace AgroServicios.Controlador.Login
 {
     internal class ControladorForEmail
     {
-        VistaForEmail Objforemail;
+        private readonly VistaForEmail _vistaForEmail;
 
         /// <summary>
-        /// Constructor de la clase ControllerLogin que inicia los eventos de la vista
+        /// Constructor de la clase ControladorForEmail que inicia los eventos de la vista
         /// </summary>
-        /// <param name="EmailRec"></param>
-        /// 
-        
-        public ControladorForEmail(VistaForEmail EmailRec)
+        /// <param name="vistaForEmail"></param>
+        public ControladorForEmail(VistaForEmail vistaForEmail)
         {
-            Objforemail = EmailRec;
-            Objforemail.btnEnviar.Click += new EventHandler(EnviarCorreo); 
+            _vistaForEmail = vistaForEmail;
+            _vistaForEmail.btnEnviar.Click += EnviarCorreo;
         }
 
         private void EnviarCorreo(object sender, EventArgs e)
         {
-            Objforemail = new VistaForEmail();
             var user = new DAORecuperarPass();
-            var result = user.recoverPassword(Objforemail.txtUser.Text);
-            Objforemail.lblResult.Text = result;
+            var result = user.recoverPassword(_vistaForEmail.txtUser.Text);
+            _vistaForEmail.lblResult.Text = result;
         }
     }
 }
+

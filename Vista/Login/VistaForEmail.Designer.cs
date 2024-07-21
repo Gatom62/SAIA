@@ -38,7 +38,9 @@
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.btnEnviar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblResult = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
+            this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtUser
@@ -221,22 +223,38 @@
             this.btnEnviar.TextMarginLeft = 0;
             this.btnEnviar.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnEnviar.UseDefaultRadiusAndThickness = true;
-            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // lblResult
             // 
             this.lblResult.AllowParentOverrides = false;
+            this.lblResult.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblResult.AutoEllipsis = false;
+            this.lblResult.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblResult.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblResult.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblResult.Location = new System.Drawing.Point(94, 378);
+            this.lblResult.Location = new System.Drawing.Point(12, 12);
             this.lblResult.Name = "lblResult";
             this.lblResult.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblResult.Size = new System.Drawing.Size(66, 20);
+            this.lblResult.Size = new System.Drawing.Size(0, 0);
             this.lblResult.TabIndex = 3;
-            this.lblResult.Text = "Resultado";
             this.lblResult.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblResult.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuPanel1
+            // 
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BorderRadius = 3;
+            this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.lblResult);
+            this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bunifuPanel1.Location = new System.Drawing.Point(0, 379);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(925, 171);
+            this.bunifuPanel1.TabIndex = 4;
             // 
             // VistaForEmail
             // 
@@ -244,7 +262,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(925, 550);
-            this.Controls.Add(this.lblResult);
+            this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.btnEnviar);
             this.Controls.Add(this.bunifuPictureBox1);
             this.Controls.Add(this.txtUser);
@@ -252,8 +270,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VistaForEmail";
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
+            this.bunifuPanel1.ResumeLayout(false);
+            this.bunifuPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -262,5 +281,6 @@
         public Bunifu.UI.WinForms.BunifuTextBox txtUser;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnEnviar;
         public Bunifu.UI.WinForms.BunifuLabel lblResult;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
     }
 }
