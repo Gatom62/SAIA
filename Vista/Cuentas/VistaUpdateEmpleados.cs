@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace AgroServicios.Vista.Cuentas
 {
-    public partial class VistaUpdateEmpleado : Form
+    public partial class VistaUpdateEmpleados : Form
     {
-        public VistaUpdateEmpleado()
+        public VistaUpdateEmpleados()
         {
             InitializeComponent();
         }
+
     }
 }

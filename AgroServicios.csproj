@@ -102,6 +102,7 @@
     <Compile Include="Controlador\ControladorStats\ControladorStats.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorCreateUser.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorCuentas.cs" />
+    <Compile Include="Controlador\CuentasContralador\ControladorUpdateEmpleados.cs" />
     <Compile Include="Controlador\Encryp.cs" />
     <Compile Include="Controlador\Login\ControladorForEmail.cs" />
     <Compile Include="Controlador\Login\ControladorLogin.cs" />
@@ -140,6 +141,12 @@
     </Compile>
     <Compile Include="Vista\Cuentas\VistaDeleteUsuario.Designer.cs">
       <DependentUpon>VistaDeleteUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Cuentas\VistaUpdateEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Cuentas\VistaUpdateEmpleados.Designer.cs">
+      <DependentUpon>VistaUpdateEmpleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Estadisticas\VistaProveedores.cs">
       <SubType>Form</SubType>
@@ -207,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Cuentas\VistaCuentas.resx">
       <DependentUpon>VistaCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Cuentas\VistaUpdateEmpleados.resx">
+      <DependentUpon>VistaUpdateEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Estadisticas\VistaStats.resx">
       <DependentUpon>VistaStats.cs</DependentUpon>
