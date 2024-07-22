@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AgroServicios.Vista.Estadisticas;
-using AgroServicios.Vista.MenuPrincipal;
-using AgroServicios.Vista.Busqueda;
 
 namespace AgroServicios.Controlador.ControladorStats
 {
