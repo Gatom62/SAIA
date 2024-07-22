@@ -112,7 +112,7 @@
             this.DropRole.ItemTopMargin = 3;
             this.DropRole.Location = new System.Drawing.Point(558, 287);
             this.DropRole.Name = "DropRole";
-            this.DropRole.Size = new System.Drawing.Size(229, 32);
+            this.DropRole.Size = new System.Drawing.Size(239, 32);
             this.DropRole.TabIndex = 10;
             this.DropRole.Text = null;
             this.DropRole.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
@@ -456,10 +456,10 @@
             this.PickerBirth.IconColor = System.Drawing.Color.Gray;
             this.PickerBirth.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.PickerBirth.LeftTextMargin = 5;
-            this.PickerBirth.Location = new System.Drawing.Point(192, 287);
+            this.PickerBirth.Location = new System.Drawing.Point(176, 287);
             this.PickerBirth.MinimumSize = new System.Drawing.Size(4, 32);
             this.PickerBirth.Name = "PickerBirth";
-            this.PickerBirth.Size = new System.Drawing.Size(220, 32);
+            this.PickerBirth.Size = new System.Drawing.Size(236, 32);
             this.PickerBirth.TabIndex = 5;
             // 
             // txtNewFirstName
