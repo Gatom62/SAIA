@@ -46,7 +46,6 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            this.DropRoleUpdate = new Bunifu.UI.WinForms.BunifuDropdown();
             this.maskedDuiUpdate = new System.Windows.Forms.MaskedTextBox();
             this.txtUpdateDireccion = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtUpdateCorreo = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -54,55 +53,14 @@
             this.PickerBirthUpdate = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.txtUpdateNombre = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnUpdateEmpleado = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.txtid = new System.Windows.Forms.ToolStripTextBox();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // DropRoleUpdate
-            // 
-            this.DropRoleUpdate.BackColor = System.Drawing.Color.Transparent;
-            this.DropRoleUpdate.BackgroundColor = System.Drawing.Color.White;
-            this.DropRoleUpdate.BorderColor = System.Drawing.Color.Silver;
-            this.DropRoleUpdate.BorderRadius = 1;
-            this.DropRoleUpdate.Color = System.Drawing.Color.Silver;
-            this.DropRoleUpdate.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.DropRoleUpdate.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.DropRoleUpdate.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.DropRoleUpdate.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.DropRoleUpdate.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.DropRoleUpdate.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.DropRoleUpdate.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.DropRoleUpdate.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.DropRoleUpdate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DropRoleUpdate.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.DropRoleUpdate.FillDropDown = true;
-            this.DropRoleUpdate.FillIndicator = false;
-            this.DropRoleUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DropRoleUpdate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.DropRoleUpdate.ForeColor = System.Drawing.Color.Black;
-            this.DropRoleUpdate.FormattingEnabled = true;
-            this.DropRoleUpdate.Icon = null;
-            this.DropRoleUpdate.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.DropRoleUpdate.IndicatorColor = System.Drawing.Color.DarkGray;
-            this.DropRoleUpdate.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.DropRoleUpdate.IndicatorThickness = 2;
-            this.DropRoleUpdate.IsDropdownOpened = false;
-            this.DropRoleUpdate.ItemBackColor = System.Drawing.Color.White;
-            this.DropRoleUpdate.ItemBorderColor = System.Drawing.Color.White;
-            this.DropRoleUpdate.ItemForeColor = System.Drawing.Color.Black;
-            this.DropRoleUpdate.ItemHeight = 26;
-            this.DropRoleUpdate.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.DropRoleUpdate.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.DropRoleUpdate.ItemTopMargin = 3;
-            this.DropRoleUpdate.Location = new System.Drawing.Point(553, 191);
-            this.DropRoleUpdate.Name = "DropRoleUpdate";
-            this.DropRoleUpdate.Size = new System.Drawing.Size(229, 32);
-            this.DropRoleUpdate.TabIndex = 18;
-            this.DropRoleUpdate.Text = null;
-            this.DropRoleUpdate.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.DropRoleUpdate.TextLeftMargin = 5;
             // 
             // maskedDuiUpdate
             // 
-            this.maskedDuiUpdate.Location = new System.Drawing.Point(430, 196);
+            this.maskedDuiUpdate.Location = new System.Drawing.Point(515, 197);
             this.maskedDuiUpdate.Mask = "00000000-0";
             this.maskedDuiUpdate.Name = "maskedDuiUpdate";
             this.maskedDuiUpdate.Size = new System.Drawing.Size(92, 22);
@@ -355,7 +313,7 @@
             this.PickerBirthUpdate.IconColor = System.Drawing.Color.Gray;
             this.PickerBirthUpdate.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.PickerBirthUpdate.LeftTextMargin = 5;
-            this.PickerBirthUpdate.Location = new System.Drawing.Point(171, 191);
+            this.PickerBirthUpdate.Location = new System.Drawing.Point(208, 191);
             this.PickerBirthUpdate.MinimumSize = new System.Drawing.Size(4, 32);
             this.PickerBirthUpdate.Name = "PickerBirthUpdate";
             this.PickerBirthUpdate.Size = new System.Drawing.Size(236, 32);
@@ -528,6 +486,23 @@
             this.btnUpdateEmpleado.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnUpdateEmpleado.UseDefaultRadiusAndThickness = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.txtid});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(954, 31);
+            this.menuStrip1.TabIndex = 22;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // txtid
+            // 
+            this.txtid.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(100, 27);
+            // 
             // VistaUpdateEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -537,15 +512,17 @@
             this.Controls.Add(this.btnUpdateEmpleado);
             this.Controls.Add(this.txtUpdateNombre);
             this.Controls.Add(this.txtUpdateDireccion);
-            this.Controls.Add(this.DropRoleUpdate);
             this.Controls.Add(this.maskedDuiUpdate);
             this.Controls.Add(this.txtUpdateCorreo);
             this.Controls.Add(this.txtUpdatePhone);
             this.Controls.Add(this.PickerBirthUpdate);
+            this.Controls.Add(this.menuStrip1);
             this.MaximumSize = new System.Drawing.Size(972, 685);
             this.MinimumSize = new System.Drawing.Size(972, 685);
             this.Name = "VistaUpdateEmpleados";
             this.Text = "VistaUpdateEmpleados";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -554,12 +531,13 @@
         #endregion
 
         public Bunifu.UI.WinForms.BunifuTextBox txtUpdateDireccion;
-        public Bunifu.UI.WinForms.BunifuDropdown DropRoleUpdate;
         public System.Windows.Forms.MaskedTextBox maskedDuiUpdate;
         public Bunifu.UI.WinForms.BunifuTextBox txtUpdateCorreo;
         public Bunifu.UI.WinForms.BunifuTextBox txtUpdatePhone;
         public Bunifu.UI.WinForms.BunifuDatePicker PickerBirthUpdate;
         public Bunifu.UI.WinForms.BunifuTextBox txtUpdateNombre;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnUpdateEmpleado;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        public System.Windows.Forms.ToolStripTextBox txtid;
     }
 }

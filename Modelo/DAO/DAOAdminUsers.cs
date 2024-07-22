@@ -198,6 +198,36 @@ namespace AgroServicios.Modelo.DAO
 
             return dataTable;
         }
+        public int ActualizarEmpleado()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+
+                string query = "UPDATE Empleados SET Nombre = @nombre, FechaDeNacimiento = @fechaDeNacimiento, Telefono = @telefono, Correo = @correo, DUI = @dui, Direccion = @direccion WHERE idEmpleado = @idEmpleado";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+
+                cmd.Parameters.AddWithValue("@idEmpleado", IdEmpleado);
+                cmd.Parameters.AddWithValue("@nombre", Nombre1);
+                cmd.Parameters.AddWithValue("@fechaDeNacimiento", FechaDeNacimiento1);
+                cmd.Parameters.AddWithValue("@telefono", Telefono1);
+                cmd.Parameters.AddWithValue("@correo", Correo1);
+                cmd.Parameters.AddWithValue("@dui", DUI1);
+                cmd.Parameters.AddWithValue("@direccion", Direccion1);
+
+                int respuesta = cmd.ExecuteNonQuery();
+                return respuesta;
+            }
+            catch (Exception)
+            {
+                return -1;
+            }
+            finally
+            {
+                Command.Connection.Close();
+            }
+        }
+
     }
 }
 

@@ -20,6 +20,27 @@ namespace AgroServicios.Controlador.CuentasContralador
             ObjEmpleados.Load += new EventHandler(LoadData);
             ObjEmpleados.btnAgregar.Click += new EventHandler(OpenFormCreateUser);
             ObjEmpleados.cmsEliminar.Click += new EventHandler(EliminarEmpleado);
+            ObjEmpleados.cmsUpdate.Click += new EventHandler (UpdateEmpleado);
+        }
+        private void UpdateEmpleado(object sender, EventArgs e)
+        {
+            int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
+            int id;
+            string Name, phone, email, dni, address;
+            DateTime birthday;
+
+            id = int.Parse(ObjEmpleados.GriewEmpleados[0, pos].Value.ToString());
+            Name = ObjEmpleados.GriewEmpleados[1, pos].Value.ToString();
+            birthday = DateTime.Parse(ObjEmpleados.GriewEmpleados[2, pos].Value.ToString());
+            phone = ObjEmpleados.GriewEmpleados[3, pos].Value.ToString();
+            email = ObjEmpleados.GriewEmpleados[4, pos].Value.ToString();
+            dni = ObjEmpleados.GriewEmpleados[5, pos].Value.ToString();
+            address = ObjEmpleados.GriewEmpleados[6, pos].Value.ToString();
+
+
+           VistaUpdateEmpleados vistaUpdate = new VistaUpdateEmpleados(1, id, Name, phone, email, dni, address, birthday);
+            vistaUpdate.ShowDialog();
+            RefrescarData();
         }
 
         private void LoadData(object sender, EventArgs e)

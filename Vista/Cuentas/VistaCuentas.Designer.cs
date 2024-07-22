@@ -36,10 +36,10 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.GriewEmpleados = new System.Windows.Forms.DataGridView();
             this.contextGriewEmpleados = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.btnAgregar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.cmsEliminar = new System.Windows.Forms.ToolStripMenuItem();
-            this.actualizarDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.informaciónDelEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAgregar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GriewEmpleados)).BeginInit();
             this.contextGriewEmpleados.SuspendLayout();
@@ -89,10 +89,31 @@
             this.contextGriewEmpleados.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextGriewEmpleados.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmsEliminar,
-            this.actualizarDatosToolStripMenuItem,
+            this.cmsUpdate,
             this.informaciónDelEmpleadoToolStripMenuItem});
             this.contextGriewEmpleados.Name = "contextMenuStrip1";
-            this.contextGriewEmpleados.Size = new System.Drawing.Size(260, 110);
+            this.contextGriewEmpleados.Size = new System.Drawing.Size(260, 82);
+            // 
+            // cmsEliminar
+            // 
+            this.cmsEliminar.Image = global::AgroServicios.Properties.Resources.borrar;
+            this.cmsEliminar.Name = "cmsEliminar";
+            this.cmsEliminar.Size = new System.Drawing.Size(259, 26);
+            this.cmsEliminar.Text = "Eliminar";
+            // 
+            // cmsUpdate
+            // 
+            this.cmsUpdate.Image = global::AgroServicios.Properties.Resources.actualizar;
+            this.cmsUpdate.Name = "cmsUpdate";
+            this.cmsUpdate.Size = new System.Drawing.Size(259, 26);
+            this.cmsUpdate.Text = "Actualizar Datos";
+            // 
+            // informaciónDelEmpleadoToolStripMenuItem
+            // 
+            this.informaciónDelEmpleadoToolStripMenuItem.Image = global::AgroServicios.Properties.Resources.informacion;
+            this.informaciónDelEmpleadoToolStripMenuItem.Name = "informaciónDelEmpleadoToolStripMenuItem";
+            this.informaciónDelEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(259, 26);
+            this.informaciónDelEmpleadoToolStripMenuItem.Text = "Información del Empleado";
             // 
             // btnAgregar
             // 
@@ -184,27 +205,6 @@
             this.btnAgregar.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnAgregar.UseDefaultRadiusAndThickness = true;
             // 
-            // cmsEliminar
-            // 
-            this.cmsEliminar.Image = global::AgroServicios.Properties.Resources.borrar;
-            this.cmsEliminar.Name = "cmsEliminar";
-            this.cmsEliminar.Size = new System.Drawing.Size(259, 26);
-            this.cmsEliminar.Text = "Eliminar";
-            // 
-            // actualizarDatosToolStripMenuItem
-            // 
-            this.actualizarDatosToolStripMenuItem.Image = global::AgroServicios.Properties.Resources.actualizar;
-            this.actualizarDatosToolStripMenuItem.Name = "actualizarDatosToolStripMenuItem";
-            this.actualizarDatosToolStripMenuItem.Size = new System.Drawing.Size(259, 26);
-            this.actualizarDatosToolStripMenuItem.Text = "Actualizar Datos";
-            // 
-            // informaciónDelEmpleadoToolStripMenuItem
-            // 
-            this.informaciónDelEmpleadoToolStripMenuItem.Image = global::AgroServicios.Properties.Resources.informacion;
-            this.informaciónDelEmpleadoToolStripMenuItem.Name = "informaciónDelEmpleadoToolStripMenuItem";
-            this.informaciónDelEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(259, 26);
-            this.informaciónDelEmpleadoToolStripMenuItem.Text = "Información del Empleado";
-            // 
             // VistaCuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -227,8 +227,8 @@
         public System.Windows.Forms.DataGridView GriewEmpleados;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAgregar;
         private System.Windows.Forms.ContextMenuStrip contextGriewEmpleados;
-        private System.Windows.Forms.ToolStripMenuItem actualizarDatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informaciónDelEmpleadoToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem cmsEliminar;
+        public System.Windows.Forms.ToolStripMenuItem cmsUpdate;
     }
 }
