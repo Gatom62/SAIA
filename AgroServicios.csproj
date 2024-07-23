@@ -331,5 +331,35 @@
   <ItemGroup>
     <None Include="Resources\informacion.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Candado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Telefono logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo telefono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo telefono1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Telefono logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Correo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo casa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo de casa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Casa logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Casa Logo2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

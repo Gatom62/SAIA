@@ -12,5 +12,6 @@ namespace AgroServicios.Vista.Cuentas
            ControladorCreateUser ObjUsers = new ControladorCreateUser(this, accion);
 
         }
+
     }
 }
