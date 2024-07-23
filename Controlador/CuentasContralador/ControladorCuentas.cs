@@ -55,7 +55,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             //Declarando nuevo DataSet para que obtenga los datos del metodo ObtenerPersonas
             DataSet ds = objAdmin.ObtenerPersonas();
             ////Llenar DataGridView
-            ObjEmpleados.GriewEmpleados.DataSource = ds.Tables["Empleados"];
+            ObjEmpleados.GriewEmpleados.DataSource = ds.Tables["viewEmpleados"];
         }
 
         private void OpenFormCreateUser(object sender, EventArgs e)

@@ -159,9 +159,9 @@
             this.bunifuGradientPanel2.Controls.Add(this.bunifuPanel1);
             this.bunifuGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(242)))), ((int)(((byte)(32)))));
-            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
-            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(226)))), ((int)(((byte)(28)))));
+            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
+            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
+            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(242)))), ((int)(((byte)(32)))));
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
@@ -319,16 +319,16 @@
             this.PickerBirth.IconColor = System.Drawing.Color.Black;
             this.PickerBirth.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.PickerBirth.LeftTextMargin = 5;
-            this.PickerBirth.Location = new System.Drawing.Point(50, 506);
+            this.PickerBirth.Location = new System.Drawing.Point(19, 506);
             this.PickerBirth.MinimumSize = new System.Drawing.Size(4, 32);
             this.PickerBirth.Name = "PickerBirth";
-            this.PickerBirth.Size = new System.Drawing.Size(203, 32);
+            this.PickerBirth.Size = new System.Drawing.Size(255, 32);
             this.PickerBirth.TabIndex = 5;
             this.PickerBirth.Value = new System.DateTime(2024, 7, 22, 15, 26, 0, 0);
             // 
             // maskedDui
             // 
-            this.maskedDui.Location = new System.Drawing.Point(506, 512);
+            this.maskedDui.Location = new System.Drawing.Point(514, 512);
             this.maskedDui.Mask = "00000000-0";
             this.maskedDui.Name = "maskedDui";
             this.maskedDui.Size = new System.Drawing.Size(85, 22);
@@ -370,7 +370,7 @@
             this.DropRole.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.DropRole.ItemHighLightForeColor = System.Drawing.Color.White;
             this.DropRole.ItemTopMargin = 3;
-            this.DropRole.Location = new System.Drawing.Point(280, 506);
+            this.DropRole.Location = new System.Drawing.Point(296, 506);
             this.DropRole.Name = "DropRole";
             this.DropRole.Size = new System.Drawing.Size(183, 32);
             this.DropRole.TabIndex = 10;
@@ -854,7 +854,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(763, 510);
+            this.ClientSize = new System.Drawing.Size(954, 638);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
