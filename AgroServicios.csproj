@@ -109,6 +109,8 @@
     <Compile Include="Controlador\Login\ControlerBasicMetodosRecuperar.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorMenuPrincipal.cs" />
     <Compile Include="Modelo\DAO\DAOAdminUsers.cs" />
+    <Compile Include="Modelo\DAO\DAOCorreoRecuperacion.cs" />
+    <Compile Include="Modelo\DAO\DAODCSoporte.cs" />
     <Compile Include="Modelo\DAO\DAOLogin.cs" />
     <Compile Include="Modelo\DAO\DAORecuperarPass.cs" />
     <Compile Include="Modelo\dbContext.cs" />

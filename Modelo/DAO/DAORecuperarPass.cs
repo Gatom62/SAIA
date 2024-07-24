@@ -11,7 +11,7 @@ namespace AgroServicios.Modelo.DAO
     {
         public string recoverPassword(string userRequesting)
         {
-            return new DTOCorreoRecuperacion().recoverPassword(userRequesting);
+            return new DAOCorreoRecuperacion().recoverPassword(userRequesting);
         }
     }
 }
