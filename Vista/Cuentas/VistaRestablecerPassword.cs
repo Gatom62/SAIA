@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgroServicios.Controlador.CuentasContralador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,17 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AgroServicios.Controlador.CuentasContralador;
 
 namespace AgroServicios.Vista.Cuentas
 {
-    public partial class VistaCuentas : Form
+    public partial class VistaRestablecerPassword : Form
     {
-        public VistaCuentas()
+        public VistaRestablecerPassword(string usuario)
         {
             InitializeComponent();
-            ControladorCuentas control = new ControladorCuentas(this);
+            ControladorRestUser control = new ControladorRestUser(this, usuario);
         }
-
     }
 }

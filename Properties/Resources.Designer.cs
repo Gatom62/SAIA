@@ -73,6 +73,36 @@ namespace AgroServicios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bloqueo_de_rotacion {
+            get {
+                object obj = ResourceManager.GetObject("bloqueo-de-rotacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bloqueo_de_rotacion__1_ {
+            get {
+                object obj = ResourceManager.GetObject("bloqueo-de-rotacion (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bloqueo_de_rotacion__2_ {
+            get {
+                object obj = ResourceManager.GetObject("bloqueo-de-rotacion (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bolsita {
             get {
                 object obj = ResourceManager.GetObject("bolsita", resourceCulture);

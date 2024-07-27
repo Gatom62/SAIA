@@ -21,6 +21,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             ObjEmpleados.btnAgregar.Click += new EventHandler(OpenFormCreateUser);
             ObjEmpleados.cmsEliminar.Click += new EventHandler(EliminarEmpleado);
             ObjEmpleados.cmsUpdate.Click += new EventHandler (UpdateEmpleado);
+            ObjEmpleados.cmsRestablecer.Click += new EventHandler(RestEmpleado);
         }
         private void UpdateEmpleado(object sender, EventArgs e)
         {
@@ -42,7 +43,16 @@ namespace AgroServicios.Controlador.CuentasContralador
             vistaUpdate.ShowDialog();
             RefrescarData();
         }
+        private void RestEmpleado(object sender, EventArgs e)
+        {
+            int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
+            string usuario;
 
+            usuario = ObjEmpleados.GriewEmpleados[7, pos].Value.ToString();
+
+            VistaRestablecerPassword vistaRestablecer = new VistaRestablecerPassword(usuario);
+            vistaRestablecer.ShowDialog();
+        }
         private void LoadData(object sender, EventArgs e)
         {
             RefrescarData();

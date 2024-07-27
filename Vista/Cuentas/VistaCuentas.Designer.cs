@@ -39,6 +39,7 @@
             this.cmsEliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.informaciónDelEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsRestablecer = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAgregar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GriewEmpleados)).BeginInit();
@@ -90,9 +91,10 @@
             this.contextGriewEmpleados.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmsEliminar,
             this.cmsUpdate,
-            this.informaciónDelEmpleadoToolStripMenuItem});
+            this.informaciónDelEmpleadoToolStripMenuItem,
+            this.cmsRestablecer});
             this.contextGriewEmpleados.Name = "contextMenuStrip1";
-            this.contextGriewEmpleados.Size = new System.Drawing.Size(260, 82);
+            this.contextGriewEmpleados.Size = new System.Drawing.Size(260, 136);
             // 
             // cmsEliminar
             // 
@@ -114,6 +116,13 @@
             this.informaciónDelEmpleadoToolStripMenuItem.Name = "informaciónDelEmpleadoToolStripMenuItem";
             this.informaciónDelEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(259, 26);
             this.informaciónDelEmpleadoToolStripMenuItem.Text = "Información del Empleado";
+            // 
+            // cmsRestablecer
+            // 
+            this.cmsRestablecer.Image = global::AgroServicios.Properties.Resources.bloqueo_de_rotacion__2_;
+            this.cmsRestablecer.Name = "cmsRestablecer";
+            this.cmsRestablecer.Size = new System.Drawing.Size(259, 26);
+            this.cmsRestablecer.Text = "Restablecer Empleado";
             // 
             // btnAgregar
             // 
@@ -230,5 +239,6 @@
         private System.Windows.Forms.ToolStripMenuItem informaciónDelEmpleadoToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem cmsEliminar;
         public System.Windows.Forms.ToolStripMenuItem cmsUpdate;
+        public System.Windows.Forms.ToolStripMenuItem cmsRestablecer;
     }
 }
