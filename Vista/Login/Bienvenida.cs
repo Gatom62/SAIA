@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AgroServicios.Controlador;
 using System.Windows.Forms;
-using AgroServicios.Modelo.DAO;
-using AgroServicios.Modelo.DTO;
 
 namespace AgroServicios.Vista.Login
 {
@@ -43,6 +35,11 @@ namespace AgroServicios.Vista.Login
 
         private void Bienvenida_Load(object sender, EventArgs e)
         {
+            if (ControladorIdioma.idioma == 1)
+            {
+                lblbienvenido.Text = Ingles.bienvenida;
+            }
+
             this.Opacity = 0.0;
             //Inicializamos estas propiedades de la barra de progreso, mediante codigo.(Opcional)
             BarradeProgeso.Value = 0;

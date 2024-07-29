@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaCuentas));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnAgregar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.GriewEmpleados = new System.Windows.Forms.DataGridView();
             this.contextGriewEmpleados = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsEliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.informaciónDelEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsRestablecer = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAgregar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GriewEmpleados)).BeginInit();
             this.contextGriewEmpleados.SuspendLayout();
@@ -55,74 +55,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1394, 64);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // GriewEmpleados
-            // 
-            this.GriewEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GriewEmpleados.BackgroundColor = System.Drawing.Color.White;
-            this.GriewEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GriewEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.GriewEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GriewEmpleados.ContextMenuStrip = this.contextGriewEmpleados;
-            this.GriewEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GriewEmpleados.EnableHeadersVisualStyles = false;
-            this.GriewEmpleados.Location = new System.Drawing.Point(0, 64);
-            this.GriewEmpleados.Name = "GriewEmpleados";
-            this.GriewEmpleados.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.GriewEmpleados.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.GriewEmpleados.RowTemplate.Height = 24;
-            this.GriewEmpleados.Size = new System.Drawing.Size(1394, 297);
-            this.GriewEmpleados.TabIndex = 2;
-            // 
-            // contextGriewEmpleados
-            // 
-            this.contextGriewEmpleados.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextGriewEmpleados.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cmsEliminar,
-            this.cmsUpdate,
-            this.informaciónDelEmpleadoToolStripMenuItem,
-            this.cmsRestablecer});
-            this.contextGriewEmpleados.Name = "contextMenuStrip1";
-            this.contextGriewEmpleados.Size = new System.Drawing.Size(260, 136);
-            // 
-            // cmsEliminar
-            // 
-            this.cmsEliminar.Image = global::AgroServicios.Properties.Resources.borrar;
-            this.cmsEliminar.Name = "cmsEliminar";
-            this.cmsEliminar.Size = new System.Drawing.Size(259, 26);
-            this.cmsEliminar.Text = "Eliminar";
-            // 
-            // cmsUpdate
-            // 
-            this.cmsUpdate.Image = global::AgroServicios.Properties.Resources.actualizar;
-            this.cmsUpdate.Name = "cmsUpdate";
-            this.cmsUpdate.Size = new System.Drawing.Size(259, 26);
-            this.cmsUpdate.Text = "Actualizar Datos";
-            // 
-            // informaciónDelEmpleadoToolStripMenuItem
-            // 
-            this.informaciónDelEmpleadoToolStripMenuItem.Image = global::AgroServicios.Properties.Resources.informacion;
-            this.informaciónDelEmpleadoToolStripMenuItem.Name = "informaciónDelEmpleadoToolStripMenuItem";
-            this.informaciónDelEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(259, 26);
-            this.informaciónDelEmpleadoToolStripMenuItem.Text = "Información del Empleado";
-            // 
-            // cmsRestablecer
-            // 
-            this.cmsRestablecer.Image = global::AgroServicios.Properties.Resources.bloqueo_de_rotacion__2_;
-            this.cmsRestablecer.Name = "cmsRestablecer";
-            this.cmsRestablecer.Size = new System.Drawing.Size(259, 26);
-            this.cmsRestablecer.Text = "Restablecer Empleado";
             // 
             // btnAgregar
             // 
@@ -214,6 +146,74 @@
             this.btnAgregar.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnAgregar.UseDefaultRadiusAndThickness = true;
             // 
+            // GriewEmpleados
+            // 
+            this.GriewEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GriewEmpleados.BackgroundColor = System.Drawing.Color.White;
+            this.GriewEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GriewEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.GriewEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GriewEmpleados.ContextMenuStrip = this.contextGriewEmpleados;
+            this.GriewEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GriewEmpleados.EnableHeadersVisualStyles = false;
+            this.GriewEmpleados.Location = new System.Drawing.Point(0, 64);
+            this.GriewEmpleados.Name = "GriewEmpleados";
+            this.GriewEmpleados.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.GriewEmpleados.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.GriewEmpleados.RowTemplate.Height = 24;
+            this.GriewEmpleados.Size = new System.Drawing.Size(1394, 297);
+            this.GriewEmpleados.TabIndex = 2;
+            // 
+            // contextGriewEmpleados
+            // 
+            this.contextGriewEmpleados.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextGriewEmpleados.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsEliminar,
+            this.cmsUpdate,
+            this.informaciónDelEmpleadoToolStripMenuItem,
+            this.cmsRestablecer});
+            this.contextGriewEmpleados.Name = "contextMenuStrip1";
+            this.contextGriewEmpleados.Size = new System.Drawing.Size(260, 108);
+            // 
+            // cmsEliminar
+            // 
+            this.cmsEliminar.Image = global::AgroServicios.Properties.Resources.borrar;
+            this.cmsEliminar.Name = "cmsEliminar";
+            this.cmsEliminar.Size = new System.Drawing.Size(259, 26);
+            this.cmsEliminar.Text = "Eliminar";
+            // 
+            // cmsUpdate
+            // 
+            this.cmsUpdate.Image = global::AgroServicios.Properties.Resources.actualizar;
+            this.cmsUpdate.Name = "cmsUpdate";
+            this.cmsUpdate.Size = new System.Drawing.Size(259, 26);
+            this.cmsUpdate.Text = "Actualizar Datos";
+            // 
+            // informaciónDelEmpleadoToolStripMenuItem
+            // 
+            this.informaciónDelEmpleadoToolStripMenuItem.Image = global::AgroServicios.Properties.Resources.informacion;
+            this.informaciónDelEmpleadoToolStripMenuItem.Name = "informaciónDelEmpleadoToolStripMenuItem";
+            this.informaciónDelEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(259, 26);
+            this.informaciónDelEmpleadoToolStripMenuItem.Text = "Información del Empleado";
+            // 
+            // cmsRestablecer
+            // 
+            this.cmsRestablecer.Image = global::AgroServicios.Properties.Resources.bloqueo_de_rotacion__2_;
+            this.cmsRestablecer.Name = "cmsRestablecer";
+            this.cmsRestablecer.Size = new System.Drawing.Size(259, 26);
+            this.cmsRestablecer.Text = "Restablecer Empleado";
+            // 
             // VistaCuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -223,6 +223,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "VistaCuentas";
             this.Text = "VistaCuentas";
+            this.Load += new System.EventHandler(this.VistaCuentas_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GriewEmpleados)).EndInit();
             this.contextGriewEmpleados.ResumeLayout(false);

@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using System.Globalization;
 using System.Windows.Forms;
+using AgroServicios.Controlador.Login;
 using AgroServicios.Controlador.MenuPrincipal;
+using AgroServicios.Controlador;
 
 namespace AgroServicios.Vista.MenuPrincipal
 {
@@ -27,7 +24,16 @@ namespace AgroServicios.Vista.MenuPrincipal
         private void horafecha_Tick(object sender, EventArgs e)
         {
             lblhora.Text = DateTime.Now.ToString("hh:mm:ss");
-            lblfecha.Text = DateTime.Now.ToLongDateString();
+
+            if (ControladorIdioma.idioma == 1) // Inglés
+            {
+                CultureInfo cultureInfo = new CultureInfo("en-US");
+                lblfecha.Text = DateTime.Now.ToString("D", cultureInfo);
+            }
+            else // Español
+            {
+                lblfecha.Text = DateTime.Now.ToLongDateString();
+            }
         }
 
     }

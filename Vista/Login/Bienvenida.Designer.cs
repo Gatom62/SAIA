@@ -32,7 +32,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblbienvenido = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
@@ -45,7 +45,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(197)))), ((int)(((byte)(28)))));
             this.panel1.Controls.Add(this.bunifuPictureBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -82,21 +82,21 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "SAIA";
             // 
-            // label1
+            // lblbienvenido
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(523, 149);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(590, 117);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bienvenido";
+            this.lblbienvenido.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblbienvenido.AutoSize = true;
+            this.lblbienvenido.Font = new System.Drawing.Font("Century Gothic", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblbienvenido.ForeColor = System.Drawing.Color.White;
+            this.lblbienvenido.Location = new System.Drawing.Point(523, 149);
+            this.lblbienvenido.Name = "lblbienvenido";
+            this.lblbienvenido.Size = new System.Drawing.Size(590, 117);
+            this.lblbienvenido.TabIndex = 0;
+            this.lblbienvenido.Text = "Bienvenido";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(195)))), ((int)(((byte)(26)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(218)))), ((int)(((byte)(50)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 116);
             this.panel2.Name = "panel2";
@@ -153,8 +153,8 @@
             // 
             this.bunifuColorTransition1.AutoTransition = true;
             this.bunifuColorTransition1.ColorArray = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))))};
+        System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))))};
             this.bunifuColorTransition1.EndColor = System.Drawing.Color.White;
             this.bunifuColorTransition1.Interval = 10;
             this.bunifuColorTransition1.ProgessValue = 0;
@@ -165,8 +165,8 @@
             // 
             this.bunifuColorTransition2.AutoTransition = true;
             this.bunifuColorTransition2.ColorArray = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))))};
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))))};
             this.bunifuColorTransition2.EndColor = System.Drawing.Color.White;
             this.bunifuColorTransition2.Interval = 10;
             this.bunifuColorTransition2.ProgessValue = 0;
@@ -181,7 +181,7 @@
             this.ClientSize = new System.Drawing.Size(1410, 663);
             this.Controls.Add(this.BarradeProgeso);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblbienvenido);
             this.Controls.Add(this.panel1);
             this.Name = "Bienvenida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -198,7 +198,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
@@ -207,5 +206,6 @@
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
         private Bunifu.UI.WinForms.BunifuColorTransition bunifuColorTransition1;
         private Bunifu.UI.WinForms.BunifuColorTransition bunifuColorTransition2;
+        public System.Windows.Forms.Label lblbienvenido;
     }
 }

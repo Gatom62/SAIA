@@ -5,6 +5,7 @@ using AgroServicios.Vista.Login;
 using AgroServicios.Modelo.DTO;
 using AgroServicios.Modelo;
 using AgroServicios.Vista.MenuPrincipal;
+using System.Diagnostics.Eventing.Reader;
 
 namespace AgroServicios.Controlador.Login
 {
@@ -17,6 +18,8 @@ namespace AgroServicios.Controlador.Login
         /// Constructor de la clase ControllerLogin que inicia los eventos de la vista
         /// </summary>
         /// <param name="Vista"></param>
+        /// 
+
         public ControladorLogin(VistaLogin Vista)
         {
             ObjLogin = Vista;
@@ -24,7 +27,7 @@ namespace AgroServicios.Controlador.Login
             ObjLogin.menuTest.Click += new EventHandler(TestConnection);
             ObjLogin.PasswordVisible.Click += new EventHandler(ShowPassword);
             ObjLogin.PasswordHide.Click += new EventHandler(HidePassword);
-            ObjLogin.lkRecuperar.Click += new EventHandler(RecuperarPass);
+            ObjLogin.lblRecuperar.Click += new EventHandler(RecuperarPass);
         }
 
         private void TestConnection(object sender, EventArgs e)
@@ -32,24 +35,41 @@ namespace AgroServicios.Controlador.Login
             //Se hace referencia a la clase dbContext y su método getConnection y se evalúa
             // si el retorno es nulo o no, en caso de ser nulo se mostrará el primer mensaje
             //de lo contrario se mostrará el código del segmento else.
-            if (dbContext.getConnection() == null)
+            if (ControladorIdioma.idioma == 1)
             {
-                MessageBox.Show("No fue posible realizar la conexión al servidor y/o la base de datos.", "Conexión fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (dbContext.getConnection() == null)
+                {
+                    MessageBox.Show("It was not possible to connect to the server and/or database.", "Connection failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                else
+                {
+                    MessageBox.Show("The connection to the server and database was successful.", "Connection successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
             }
             else
             {
-                MessageBox.Show("La conexión al servidor y la base de datos se ha ejecutado correctamente.", "Conexión exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (dbContext.getConnection() == null)
+                {
+                    MessageBox.Show("No fue posible realizar la conexión al servidor y/o la base de datos.", "Conexión fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                else
+                {
+                    MessageBox.Show("La conexión al servidor y la base de datos se ha ejecutado correctamente.", "Conexión exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
 
-        private void DataAccess(object sender, EventArgs e)
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="sender"></param>
+            /// <param name="e"></param>
+
+            private void DataAccess(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(ObjLogin.txtUsername.Text) || string.IsNullOrWhiteSpace(ObjLogin.txtPassword.Text))
             {

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AgroServicios.Controlador;
 
 namespace AgroServicios.Vista.Cuentas
 {
@@ -19,5 +20,17 @@ namespace AgroServicios.Vista.Cuentas
             ControladorUpdateEmpleados control = new ControladorUpdateEmpleados(this, accion, id, Name, phone, email, dni, address, birthday);  
         }
 
+        private void VistaUpdateEmpleados_Load(object sender, EventArgs e)
+        {
+            if(ControladorIdioma.idioma == 1)
+            {
+                bunifuLabel1.Text = Ingles.tituloactualizar;
+                txtUpdateNombre.PlaceholderText = Ingles.Nombre;
+                txtUpdatePhone.PlaceholderText = Ingles.Celular;
+                txtUpdateCorreo.PlaceholderText = Ingles.Correo;
+                txtUpdateDireccion.PlaceholderText = Ingles.Direccion;
+                btnUpdateEmpleado.Text = Ingles.btnactempleado;
+            }
+        }
     }
 }

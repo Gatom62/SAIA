@@ -15,8 +15,8 @@ namespace AgroServicios.Controlador.ControladorStats
         public ControladorStats(VistaStats Estadisticas)
         {
             ObjStats = Estadisticas;
-            ObjStats.btnAbrirProveedores.Click += new EventHandler(OpenProveedores);
-            ObjStats.btnAbrirSuministros.Click += new EventHandler(OpenSuministros);
+            ObjStats.btnProveedores.Click += new EventHandler(OpenProveedores);
+            ObjStats.btnSuministros.Click += new EventHandler(OpenSuministros);
         }
 
         private void OpenProveedores(object sender, EventArgs e)
