@@ -33,17 +33,18 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnAgregar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.GriewEmpleados = new System.Windows.Forms.DataGridView();
             this.contextGriewEmpleados = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsEliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.informaciónDelEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsRestablecer = new System.Windows.Forms.ToolStripMenuItem();
+            this.GriewEmpleados = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GriewEmpleados)).BeginInit();
             this.contextGriewEmpleados.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GriewEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -146,35 +147,6 @@
             this.btnAgregar.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnAgregar.UseDefaultRadiusAndThickness = true;
             // 
-            // GriewEmpleados
-            // 
-            this.GriewEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GriewEmpleados.BackgroundColor = System.Drawing.Color.White;
-            this.GriewEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GriewEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.GriewEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GriewEmpleados.ContextMenuStrip = this.contextGriewEmpleados;
-            this.GriewEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GriewEmpleados.EnableHeadersVisualStyles = false;
-            this.GriewEmpleados.Location = new System.Drawing.Point(0, 64);
-            this.GriewEmpleados.Name = "GriewEmpleados";
-            this.GriewEmpleados.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.GriewEmpleados.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.GriewEmpleados.RowTemplate.Height = 24;
-            this.GriewEmpleados.Size = new System.Drawing.Size(1394, 297);
-            this.GriewEmpleados.TabIndex = 2;
-            // 
             // contextGriewEmpleados
             // 
             this.contextGriewEmpleados.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -214,6 +186,72 @@
             this.cmsRestablecer.Size = new System.Drawing.Size(259, 26);
             this.cmsRestablecer.Text = "Restablecer Empleado";
             // 
+            // GriewEmpleados
+            // 
+            this.GriewEmpleados.AllowCustomTheming = false;
+            this.GriewEmpleados.AllowUserToAddRows = false;
+            this.GriewEmpleados.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.GriewEmpleados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.GriewEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GriewEmpleados.BackgroundColor = System.Drawing.Color.White;
+            this.GriewEmpleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GriewEmpleados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.GriewEmpleados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GriewEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.GriewEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GriewEmpleados.ContextMenuStrip = this.contextGriewEmpleados;
+            this.GriewEmpleados.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.GriewEmpleados.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.GriewEmpleados.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.GriewEmpleados.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.GriewEmpleados.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.GriewEmpleados.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.GriewEmpleados.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.GriewEmpleados.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.GriewEmpleados.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.GriewEmpleados.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.GriewEmpleados.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.GriewEmpleados.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.GriewEmpleados.CurrentTheme.Name = null;
+            this.GriewEmpleados.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.GriewEmpleados.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.GriewEmpleados.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.GriewEmpleados.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.GriewEmpleados.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GriewEmpleados.DefaultCellStyle = dataGridViewCellStyle3;
+            this.GriewEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GriewEmpleados.EnableHeadersVisualStyles = false;
+            this.GriewEmpleados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.GriewEmpleados.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.GriewEmpleados.HeaderBgColor = System.Drawing.Color.Empty;
+            this.GriewEmpleados.HeaderForeColor = System.Drawing.Color.White;
+            this.GriewEmpleados.Location = new System.Drawing.Point(0, 64);
+            this.GriewEmpleados.Name = "GriewEmpleados";
+            this.GriewEmpleados.ReadOnly = true;
+            this.GriewEmpleados.RowHeadersVisible = false;
+            this.GriewEmpleados.RowHeadersWidth = 51;
+            this.GriewEmpleados.RowTemplate.Height = 40;
+            this.GriewEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GriewEmpleados.Size = new System.Drawing.Size(1394, 297);
+            this.GriewEmpleados.TabIndex = 1;
+            this.GriewEmpleados.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
             // VistaCuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -225,8 +263,8 @@
             this.Text = "VistaCuentas";
             this.Load += new System.EventHandler(this.VistaCuentas_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GriewEmpleados)).EndInit();
             this.contextGriewEmpleados.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GriewEmpleados)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -234,12 +272,12 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        public System.Windows.Forms.DataGridView GriewEmpleados;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAgregar;
         private System.Windows.Forms.ContextMenuStrip contextGriewEmpleados;
         private System.Windows.Forms.ToolStripMenuItem informaciónDelEmpleadoToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem cmsEliminar;
         public System.Windows.Forms.ToolStripMenuItem cmsUpdate;
         public System.Windows.Forms.ToolStripMenuItem cmsRestablecer;
+        public Bunifu.UI.WinForms.BunifuDataGridView GriewEmpleados;
     }
 }

@@ -35,13 +35,14 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.txtBuscar = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.GriewViewBuscar = new System.Windows.Forms.DataGridView();
+            this.GriewViewBuscar = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -204,31 +205,68 @@
             // 
             // GriewViewBuscar
             // 
+            this.GriewViewBuscar.AllowCustomTheming = false;
+            this.GriewViewBuscar.AllowUserToAddRows = false;
+            this.GriewViewBuscar.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.GriewViewBuscar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.GriewViewBuscar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GriewViewBuscar.BackgroundColor = System.Drawing.Color.White;
             this.GriewViewBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GriewViewBuscar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.GriewViewBuscar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GriewViewBuscar.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.GriewViewBuscar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GriewViewBuscar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.GriewViewBuscar.ColumnHeadersHeight = 40;
+            this.GriewViewBuscar.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.GriewViewBuscar.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.GriewViewBuscar.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.GriewViewBuscar.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.GriewViewBuscar.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.GriewViewBuscar.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.GriewViewBuscar.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.GriewViewBuscar.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.GriewViewBuscar.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.GriewViewBuscar.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.GriewViewBuscar.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.GriewViewBuscar.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.GriewViewBuscar.CurrentTheme.Name = null;
+            this.GriewViewBuscar.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.GriewViewBuscar.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.GriewViewBuscar.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.GriewViewBuscar.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.GriewViewBuscar.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GriewViewBuscar.DefaultCellStyle = dataGridViewCellStyle3;
             this.GriewViewBuscar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GriewViewBuscar.EnableHeadersVisualStyles = false;
+            this.GriewViewBuscar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.GriewViewBuscar.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.GriewViewBuscar.HeaderBgColor = System.Drawing.Color.Empty;
+            this.GriewViewBuscar.HeaderForeColor = System.Drawing.Color.White;
             this.GriewViewBuscar.Location = new System.Drawing.Point(0, 100);
             this.GriewViewBuscar.Name = "GriewViewBuscar";
+            this.GriewViewBuscar.ReadOnly = true;
+            this.GriewViewBuscar.RowHeadersVisible = false;
             this.GriewViewBuscar.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.GriewViewBuscar.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.GriewViewBuscar.RowTemplate.Height = 24;
+            this.GriewViewBuscar.RowTemplate.Height = 40;
+            this.GriewViewBuscar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GriewViewBuscar.Size = new System.Drawing.Size(1410, 563);
             this.GriewViewBuscar.TabIndex = 30;
+            this.GriewViewBuscar.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // VistaBusqueda
             // 
@@ -258,6 +296,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         public Bunifu.UI.WinForms.BunifuTextBox txtBuscar;
-        public System.Windows.Forms.DataGridView GriewViewBuscar;
+        public Bunifu.UI.WinForms.BunifuDataGridView GriewViewBuscar;
     }
 }
