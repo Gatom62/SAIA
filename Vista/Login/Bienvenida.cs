@@ -1,6 +1,7 @@
 ﻿using System;
 using AgroServicios.Controlador;
 using System.Windows.Forms;
+using AgroServicios.Controlador.Helper;
 
 namespace AgroServicios.Vista.Login
 {
@@ -40,6 +41,7 @@ namespace AgroServicios.Vista.Login
                 lblbienvenido.Text = Ingles.bienvenida;
             }
 
+            bunifuLabel1.Text = StaticSession.Username;
             this.Opacity = 0.0;
             //Inicializamos estas propiedades de la barra de progreso, mediante codigo.(Opcional)
             BarradeProgeso.Value = 0;

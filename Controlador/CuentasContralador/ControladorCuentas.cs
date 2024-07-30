@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AgroServicios.Controlador.Helper;
 using AgroServicios.Modelo.DAO;
 using AgroServicios.Vista.Cuentas;
 
@@ -56,6 +57,23 @@ namespace AgroServicios.Controlador.CuentasContralador
         private void LoadData(object sender, EventArgs e)
         {
             RefrescarData();
+            Acceso();
+        }
+        public void Acceso()
+        {
+            switch (StaticSession.Categorianame1)
+            {
+                case "Manager":
+                    break;
+                case "Empleado":
+                ObjEmpleados.btnAgregar.Enabled = false;
+                ObjEmpleados.cmsEliminar.Enabled = false;
+                ObjEmpleados.cmsRestablecer.Enabled = false;
+                ObjEmpleados.cmsUpdate.Enabled = false;
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void RefrescarData()
