@@ -126,6 +126,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Ingles.resx</DependentUpon>
     </Compile>
+    <Compile Include="Spanish.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Spanish.resx</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Busqueda\VistaBusqueda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +228,10 @@
     <EmbeddedResource Include="Ingles.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Ingles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spanish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Spanish.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Busqueda\VistaBusqueda.resx">
       <DependentUpon>VistaBusqueda.cs</DependentUpon>

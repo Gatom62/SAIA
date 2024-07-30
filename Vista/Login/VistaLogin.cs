@@ -55,6 +55,19 @@ namespace AgroServicios.Vista.Login
                 menuTest.Text = Ingles.Conexion;
 
             }
+            else
+            {
+                lblinicio.Text = Spanish.BotonInicio;
+                LblUsername.Text = Spanish.user;
+                LblPassword.Text = Spanish.contraseña;
+                BtnStart.Text = Spanish.BotonInicio;
+                txtPassword.PlaceholderText = Spanish.contraseña;
+                txtUsername.PlaceholderText= Spanish.user;
+                menu.Text= Spanish.Menu;
+                menuIntegrantes.Text = Spanish.integrantes;
+                menuTest.Text = Spanish.conexion;
+                lblRecuperar.Text = Spanish.recuperar;
+            }
 
         }
     }
