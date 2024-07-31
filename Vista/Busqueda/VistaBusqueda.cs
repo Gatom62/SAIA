@@ -27,6 +27,11 @@ namespace AgroServicios.Vista.Busqueda
                 label1.Text = Ingles.labelbuscar;
                 txtBuscar.PlaceholderText = Ingles.Busqueda;
             }
+            if(ControladorTema.IsDarkMode == true)
+            {
+                GriewViewBuscar.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
+                GriewViewBuscar.BackgroundColor = Color.FromArgb(50, 56, 62);
+            }
         }
     }
 }

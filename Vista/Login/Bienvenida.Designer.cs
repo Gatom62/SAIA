@@ -38,8 +38,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.BarradeProgeso = new Bunifu.UI.WinForms.BunifuCircleProgress();
-            this.bunifuColorTransition1 = new Bunifu.UI.WinForms.BunifuColorTransition(this.components);
-            this.bunifuColorTransition2 = new Bunifu.UI.WinForms.BunifuColorTransition(this.components);
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
@@ -47,7 +45,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
             this.panel1.Controls.Add(this.bunifuPictureBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -98,7 +96,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(197)))), ((int)(((byte)(28)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 116);
             this.panel2.Name = "panel2";
@@ -151,34 +149,11 @@
             this.BarradeProgeso.ValueByTransition = 30;
             this.BarradeProgeso.ValueMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             // 
-            // bunifuColorTransition1
-            // 
-            this.bunifuColorTransition1.AutoTransition = true;
-            this.bunifuColorTransition1.ColorArray = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))))};
-            this.bunifuColorTransition1.EndColor = System.Drawing.Color.White;
-            this.bunifuColorTransition1.Interval = 10;
-            this.bunifuColorTransition1.ProgessValue = 0;
-            this.bunifuColorTransition1.StartColor = System.Drawing.Color.White;
-            this.bunifuColorTransition1.TransitionControl = this.panel1;
-            // 
-            // bunifuColorTransition2
-            // 
-            this.bunifuColorTransition2.AutoTransition = true;
-            this.bunifuColorTransition2.ColorArray = new System.Drawing.Color[] {
-        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19))))),
-        System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))))};
-            this.bunifuColorTransition2.EndColor = System.Drawing.Color.White;
-            this.bunifuColorTransition2.Interval = 10;
-            this.bunifuColorTransition2.ProgessValue = 0;
-            this.bunifuColorTransition2.StartColor = System.Drawing.Color.White;
-            this.bunifuColorTransition2.TransitionControl = this.panel2;
-            // 
             // bunifuLabel1
             // 
             this.bunifuLabel1.AllowParentOverrides = false;
             this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
@@ -223,8 +198,6 @@
         private System.Windows.Forms.Timer timer2;
         private Bunifu.UI.WinForms.BunifuCircleProgress BarradeProgeso;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
-        private Bunifu.UI.WinForms.BunifuColorTransition bunifuColorTransition1;
-        private Bunifu.UI.WinForms.BunifuColorTransition bunifuColorTransition2;
         public System.Windows.Forms.Label lblbienvenido;
         public Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
     }

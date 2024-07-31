@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using AgroServicios.Controlador.Login;
 using AgroServicios.Controlador;
+using System.Drawing;
 
 namespace AgroServicios.Vista.Login
 {
@@ -69,6 +70,26 @@ namespace AgroServicios.Vista.Login
                 lblRecuperar.Text = Spanish.recuperar;
             }
 
+        }
+
+        private void DarkMode_CheckedChanged(object sender, System.EventArgs e)
+        {
+            if (DarkMode.Checked)
+            {
+                ControladorTema.IsDarkMode = true;
+            }
+            else
+            {
+                ControladorTema.IsDarkMode= false;
+            }
+            if (DarkMode.Checked == true)
+            {
+                this.BackColor = Color.FromArgb(34, 36, 49);
+            }
+            else
+            {
+                this.BackColor = Color.LightSkyBlue;
+            }
         }
     }
 }

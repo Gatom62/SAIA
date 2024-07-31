@@ -101,6 +101,7 @@
     <Compile Include="Controlador\Busqueda\ControladorBusqueda.cs" />
     <Compile Include="Controlador\ControladorIdioma.cs" />
     <Compile Include="Controlador\ControladorStats\ControladorStats.cs" />
+    <Compile Include="Controlador\ControladorTema.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorCreateUser.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorCuentas.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorRestUser.cs" />

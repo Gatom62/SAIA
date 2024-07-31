@@ -26,6 +26,12 @@ namespace AgroServicios.Vista.Cuentas
             {
                 btnAgregar.Text = Ingles.btnañadir;
             }
+
+            if(ControladorTema.IsDarkMode == true)
+            {
+                GriewEmpleados.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
+                GriewEmpleados.BackgroundColor = Color.FromArgb(50, 56, 62);
+            }
         }
     }
 }

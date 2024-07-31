@@ -2,6 +2,7 @@
 using AgroServicios.Controlador;
 using System.Windows.Forms;
 using AgroServicios.Controlador.Helper;
+using System.Drawing;
 
 namespace AgroServicios.Vista.Login
 {
@@ -49,6 +50,17 @@ namespace AgroServicios.Vista.Login
             BarradeProgeso.Maximum = 100;
             //Iniciamos el temporizador 1.
             timer1.Start();
+
+            if(ControladorTema.IsDarkMode == true)
+            {
+                BarradeProgeso.ForeColor = Color.White;
+                this.BackColor = Color.FromArgb(34, 36, 49);
+                panel1.BackColor = Color.FromArgb(230, 119, 11);
+                panel2.BackColor = Color.FromArgb(118, 88, 152);
+                BarradeProgeso.ProgressColor = Color.FromArgb(211, 41, 15);
+                BarradeProgeso.ProgressColor2 = Color.FromArgb(211, 41, 15);
+
+            }
         }
 
     }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using AgroServicios.Controlador;
 using AgroServicios.Controlador.ControladorStats;
@@ -21,6 +22,14 @@ namespace AgroServicios.Vista.Estadisticas
                 btnProveedores.Text = Ingles.Proveedores;
                 btnRegistroVentas.Text = Ingles.RegistroVentas;
                 btnSuministros.Text = Ingles.Suministros;
+            }
+            if(ControladorTema.IsDarkMode == true)
+            {
+                Panel1.BackColor = Color.FromArgb(18, 18, 18);
+                btnHistorial.IdleFillColor = Color.FromArgb(118, 88, 152);
+                btnProveedores.IdleFillColor = Color.FromArgb(118, 88, 152);
+                btnRegistroVentas.IdleFillColor = Color.FromArgb(118, 88, 152);
+                btnSuministros.IdleFillColor = Color.FromArgb(118, 88, 152);
             }
         }
     }

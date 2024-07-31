@@ -61,6 +61,7 @@
             // 
             // Panel1
             // 
+            this.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
             this.Panel1.Controls.Add(this.tableLayoutPanel1);
             this.Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel1.Location = new System.Drawing.Point(0, 0);
