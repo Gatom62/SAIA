@@ -30,6 +30,10 @@ namespace AgroServicios.Vista.Estadisticas
                 btnProveedores.IdleFillColor = Color.FromArgb(118, 88, 152);
                 btnRegistroVentas.IdleFillColor = Color.FromArgb(118, 88, 152);
                 btnSuministros.IdleFillColor = Color.FromArgb(118, 88, 152);
+                btnHistorial.ForeColor = Color.White;
+                btnProveedores.ForeColor = Color.White;
+                btnRegistroVentas.ForeColor = Color.White;
+                btnSuministros.ForeColor = Color.White;
             }
         }
     }
