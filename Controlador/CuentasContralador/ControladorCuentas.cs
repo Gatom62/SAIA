@@ -101,6 +101,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             {
                 DAOAdminUsers daodelete = new DAOAdminUsers();
                 daodelete.IdEmpleado = int.Parse(ObjEmpleados.GriewEmpleados[0, pos].Value.ToString());
+                daodelete.Usuario1 = ObjEmpleados.GriewEmpleados[7, pos].Value.ToString();
                 int valorretornado = daodelete.DeteleEmpleado();
                 if (valorretornado == 1)
                 {

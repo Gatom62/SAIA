@@ -159,7 +159,21 @@ namespace AgroServicios.Modelo.DAO
 
                 int respuesta = cmd.ExecuteNonQuery();
 
-                return respuesta;
+                if (respuesta == 1)
+                {
+                    string query2 = "DELETE FROM Usuarios WHERE Usuario = @param2";
+
+                    SqlCommand cmd2 = new SqlCommand( query2, Command.Connection);
+
+                    cmd2.Parameters.AddWithValue("param2", Usuario1);
+
+                    respuesta = cmd2.ExecuteNonQuery();
+                    return respuesta;
+                }
+                else
+                {
+                    return 0;
+                }
             }
             catch (Exception)
             {
