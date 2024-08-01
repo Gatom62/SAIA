@@ -8,6 +8,8 @@ using AgroServicios.Vista.MenuPrincipal;
 using AgroServicios.Vista.Estadisticas;
 using AgroServicios.Vista.Busqueda;
 using AgroServicios.Vista.Cuentas;
+using AgroServicios.Vista.Login;
+using AgroServicios.Controlador.Helper;
 
 namespace AgroServicios.Controlador.MenuPrincipal
 {
@@ -26,7 +28,7 @@ namespace AgroServicios.Controlador.MenuPrincipal
             ObjMenu.btnStats.Click += new EventHandler(OpenStats);
             ObjMenu.btnBusqueda.Click += new EventHandler(OpenBusqueda);
             ObjMenu.btnInicio.Click += new EventHandler(OpenInicio);
-            ObjMenu.btnExit.Click += new EventHandler(CloseProgram);
+            ObjMenu.btnExit.Click += new EventHandler(CerrarSesion);
             ObjMenu.btnAccounts.Click += new EventHandler(OpenCuentas);
         }
  
@@ -40,9 +42,23 @@ namespace AgroServicios.Controlador.MenuPrincipal
             AbrirPanel<VistaStats>();
         }
 
-        private void CloseProgram(object sender, EventArgs e)
+        private void CerrarSesion(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            if (MessageBox.Show("¿Desea cerrar sesión?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                LimpiarVariablesSesion();
+                VistaLogin backForm = new VistaLogin();
+                backForm.Show();
+                ObjMenu.Dispose();
+            }
+        }
+        void LimpiarVariablesSesion()
+        {
+            StaticSession.Categorianame1 = string.Empty;
+            StaticSession.IdCategoria = 0;
+            StaticSession.Username = string.Empty;
+            ControladorIdioma.idioma = 0;
+            ControladorTema.IsDarkMode = false;
         }
 
         private void AbrirPanel<MiForm>() where MiForm : Form, new()
