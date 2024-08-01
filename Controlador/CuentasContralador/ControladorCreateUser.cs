@@ -3,6 +3,7 @@ using AgroServicios.Vista.Cuentas;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,18 +34,43 @@ namespace AgroServicios.Controlador.CuentasContralador
 
         public void InitialCharge(object sender, EventArgs e)
         {
-            //Objeto de la clase DAOAdminUsuarios
-            DAOAdminUsers objAdmin = new DAOAdminUsers();
-            //Declarando nuevo DataSet para que obtenga los datos del metodo LlenarCombo
-            DataSet ds = objAdmin.LlenarCombo();
-            //Llenar combobox tbRole
-            ObjUsers.DropRole.DataSource = ds.Tables["Categorias"];
-            ObjUsers.DropRole.ValueMember = "idCategoria";
-            ObjUsers.DropRole.DisplayMember = "Nombre";
-            //La condición sirve para que al actualizar un registro, el valor del registro aparezca seleccionado.
-            if (accion == 2)
+            DAOLogin dAOLogin = new DAOLogin();
+            if (dAOLogin.PrimerUso() == false)
             {
-                ObjUsers.DropRole.Text = role;
+                ObjUsers.DropRole.Enabled = false;
+                ObjUsers.LabelPrin.Text = "Creación de primer usuario";
+                ObjUsers.bunifuGradientPanel2.GradientBottomLeft = Color.FromArgb(34, 36, 49);
+                ObjUsers.bunifuGradientPanel2.GradientTopRight = Color.FromArgb(34,36,49);
+                ObjUsers.bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(88, 118, 152);
+                ObjUsers.bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(88, 118, 152);
+                DAOAdminUsers objAdmin = new DAOAdminUsers();
+                //Declarando nuevo DataSet para que obtenga los datos del metodo LlenarCombo
+                DataSet ds = objAdmin.LlenarCombo();
+                //Llenar combobox tbRole
+                ObjUsers.DropRole.DataSource = ds.Tables["Categorias"];
+                ObjUsers.DropRole.ValueMember = "idCategoria";
+                ObjUsers.DropRole.DisplayMember = "Nombre";
+                //La condición sirve para que al actualizar un registro, el valor del registro aparezca seleccionado.
+                if (accion == 2)
+                {
+                    ObjUsers.DropRole.Text = role;
+                }
+            }
+            
+            if (dAOLogin.PrimerUso() == true) { 
+                //Objeto de la clase DAOAdminUsuarios
+                DAOAdminUsers objAdmin = new DAOAdminUsers();
+                //Declarando nuevo DataSet para que obtenga los datos del metodo LlenarCombo
+                DataSet ds = objAdmin.LlenarCombo();
+                //Llenar combobox tbRole
+                ObjUsers.DropRole.DataSource = ds.Tables["Categorias"];
+                ObjUsers.DropRole.ValueMember = "idCategoria";
+                ObjUsers.DropRole.DisplayMember = "Nombre";
+                //La condición sirve para que al actualizar un registro, el valor del registro aparezca seleccionado.
+                if (accion == 2)
+                {
+                    ObjUsers.DropRole.Text = role;
+                }
             }
         }
         public void NuevoRegistro(object sender, EventArgs e)

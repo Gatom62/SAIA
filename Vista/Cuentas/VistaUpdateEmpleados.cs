@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AgroServicios.Controlador;
+using Bunifu.UI.WinForms;
 
 namespace AgroServicios.Vista.Cuentas
 {
@@ -30,6 +31,13 @@ namespace AgroServicios.Vista.Cuentas
                 txtUpdateCorreo.PlaceholderText = Ingles.Correo;
                 txtUpdateDireccion.PlaceholderText = Ingles.Direccion;
                 btnUpdateEmpleado.Text = Ingles.btnactempleado;
+            }
+            if (ControladorTema.IsDarkMode == true)
+            {
+                bunifuGradientPanel1.GradientBottomLeft = Color.FromArgb(118, 88, 152);
+                bunifuGradientPanel1.GradientTopRight = Color.FromArgb(118, 88, 152);
+                bunifuGradientPanel1.GradientBottomRight = Color.FromArgb(34, 36, 49);
+                bunifuGradientPanel1.GradientTopLeft = Color.FromArgb(34, 36, 49);
             }
         }
     }

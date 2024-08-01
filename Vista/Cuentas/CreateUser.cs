@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 using AgroServicios.Controlador;
 using AgroServicios.Controlador.CuentasContralador;
 
@@ -17,7 +18,7 @@ namespace AgroServicios.Vista.Cuentas
         {
             if (ControladorIdioma.idioma == 1)
             {
-                bunifuLabel2.Text = Ingles.tituloingresar;
+                LabelPrin.Text = Ingles.tituloingresar;
                 txtNewUser.PlaceholderText = Ingles.Usuario;
                 txtNewFirstName.PlaceholderText = Ingles.Nombre;
                 txtNewPassword.PlaceholderText = Ingles.contraseña;
@@ -25,6 +26,13 @@ namespace AgroServicios.Vista.Cuentas
                 txtNewCorreo.PlaceholderText = Ingles.Correo;
                 txtNewDireccion.PlaceholderText = Ingles.Direccion;
                 btnCrearUsuario.Text = Ingles.btningresarempleado;
+            }
+            if (ControladorTema.IsDarkMode == true)
+            {
+                bunifuGradientPanel2.GradientBottomLeft = Color.FromArgb(118, 88, 152);
+                bunifuGradientPanel2.GradientTopRight = Color.FromArgb(118,88, 152);
+                bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(34, 36, 49);
+                bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(34, 36, 49);
             }
         }
     }

@@ -62,7 +62,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnCrearUsuario = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.PickerBirth = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.maskedDui = new System.Windows.Forms.MaskedTextBox();
@@ -74,6 +73,8 @@
             this.txtNewPassword = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtNewCorreo = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.LabelPrin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -82,6 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox6
@@ -176,7 +178,6 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Black;
             this.bunifuPanel1.BorderRadius = 30;
             this.bunifuPanel1.BorderThickness = 2;
-            this.bunifuPanel1.Controls.Add(this.bunifuLabel2);
             this.bunifuPanel1.Controls.Add(this.btnCrearUsuario);
             this.bunifuPanel1.Controls.Add(this.PickerBirth);
             this.bunifuPanel1.Controls.Add(this.maskedDui);
@@ -187,27 +188,12 @@
             this.bunifuPanel1.Controls.Add(this.txtNewPhone);
             this.bunifuPanel1.Controls.Add(this.txtNewPassword);
             this.bunifuPanel1.Controls.Add(this.txtNewCorreo);
+            this.bunifuPanel1.Controls.Add(this.tableLayoutPanel1);
             this.bunifuPanel1.Location = new System.Drawing.Point(56, 44);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(846, 566);
             this.bunifuPanel1.TabIndex = 13;
-            // 
-            // bunifuLabel2
-            // 
-            this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel2.Location = new System.Drawing.Point(286, 27);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(275, 37);
-            this.bunifuLabel2.TabIndex = 13;
-            this.bunifuLabel2.Text = "Ingresar Empleado";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // btnCrearUsuario
             // 
@@ -849,6 +835,32 @@
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.LabelPrin, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(846, 64);
+            this.tableLayoutPanel1.TabIndex = 14;
+            // 
+            // LabelPrin
+            // 
+            this.LabelPrin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LabelPrin.AutoSize = true;
+            this.LabelPrin.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelPrin.Location = new System.Drawing.Point(267, 13);
+            this.LabelPrin.Name = "LabelPrin";
+            this.LabelPrin.Size = new System.Drawing.Size(292, 37);
+            this.LabelPrin.TabIndex = 0;
+            this.LabelPrin.Text = "Ingresar Empleado";
+            // 
             // CreateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -877,6 +889,8 @@
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -888,7 +902,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel2;
         public Bunifu.UI.WinForms.BunifuDatePicker PickerBirth;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCrearUsuario;
         public Bunifu.UI.WinForms.BunifuTextBox txtNewFirstName;
@@ -901,6 +914,8 @@
         public Bunifu.UI.WinForms.BunifuTextBox txtNewUser;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        public System.Windows.Forms.Label LabelPrin;
+        public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel2;
     }
 }

@@ -1,4 +1,5 @@
-﻿using AgroServicios.Controlador.CuentasContralador;
+﻿using AgroServicios.Controlador;
+using AgroServicios.Controlador.CuentasContralador;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,17 @@ namespace AgroServicios.Vista.Cuentas
         {
             InitializeComponent();
             ControladorRestUser control = new ControladorRestUser(this, usuario);
+        }
+
+        private void VistaRestablecerPassword_Load(object sender, EventArgs e)
+        {
+            if (ControladorTema.IsDarkMode == true)
+            {
+                bunifuGradientPanel2.GradientBottomLeft = Color.FromArgb(118, 88, 152);
+                bunifuGradientPanel2.GradientTopRight = Color.FromArgb(34, 36, 49);
+                bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(118, 88, 152);
+                bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(34, 36, 49);
+            }
         }
     }
 }

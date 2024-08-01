@@ -780,9 +780,6 @@
         p+rejn3ze5p+lHnz3vHYrDMzMzMzM7OnsNdjf3ssAQAA7KBnz/4Nia8SPFpUweQAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
-  </data>
   <data name="btnCrearUsuario.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAALcAAAAwCAYAAABT2+v/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

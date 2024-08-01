@@ -670,6 +670,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
+        public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
     }
 }
