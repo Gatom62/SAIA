@@ -91,14 +91,14 @@
             // 
             this.menuTest.Image = global::AgroServicios.Properties.Resources.wifi;
             this.menuTest.Name = "menuTest";
-            this.menuTest.Size = new System.Drawing.Size(224, 26);
+            this.menuTest.Size = new System.Drawing.Size(200, 26);
             this.menuTest.Text = "Probar conexión";
             // 
             // menuIntegrantes
             // 
             this.menuIntegrantes.Image = global::AgroServicios.Properties.Resources.silueta_de_multiples_usuarios;
             this.menuIntegrantes.Name = "menuIntegrantes";
-            this.menuIntegrantes.Size = new System.Drawing.Size(224, 26);
+            this.menuIntegrantes.Size = new System.Drawing.Size(200, 26);
             this.menuIntegrantes.Text = "Integrantes";
             // 
             // switchidioma

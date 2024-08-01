@@ -175,7 +175,7 @@
             this.btnEnviar.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btnEnviar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnEnviar.IconSize = 25;
-            this.btnEnviar.IdleBorderColor = System.Drawing.Color.LawnGreen;
+            this.btnEnviar.IdleBorderColor = System.Drawing.Color.Transparent;
             this.btnEnviar.IdleBorderRadius = 33;
             this.btnEnviar.IdleBorderThickness = 1;
             this.btnEnviar.IdleFillColor = System.Drawing.Color.LawnGreen;
@@ -200,7 +200,7 @@
             this.btnEnviar.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnEnviar.onHoverState.IconLeftImage = null;
             this.btnEnviar.onHoverState.IconRightImage = null;
-            this.btnEnviar.OnIdleState.BorderColor = System.Drawing.Color.LawnGreen;
+            this.btnEnviar.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
             this.btnEnviar.OnIdleState.BorderRadius = 33;
             this.btnEnviar.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnEnviar.OnIdleState.BorderThickness = 1;
@@ -269,6 +269,7 @@
             this.Name = "VistaForEmail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VistaForEmail";
+            this.Load += new System.EventHandler(this.VistaForEmail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();

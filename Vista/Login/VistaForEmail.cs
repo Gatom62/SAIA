@@ -1,4 +1,5 @@
-﻿using AgroServicios.Controlador.Login;
+﻿using AgroServicios.Controlador;
+using AgroServicios.Controlador.Login;
 using AgroServicios.Modelo.DAO;
 using System;
 using System.Collections.Generic;
@@ -20,5 +21,15 @@ namespace AgroServicios.Vista.Login
             ControladorForEmail control = new ControladorForEmail(this);
         }
 
+        private void VistaForEmail_Load(object sender, EventArgs e)
+        {
+            if(ControladorTema.IsDarkMode == true)
+            {
+                btnEnviar.IdleFillColor = Color.FromArgb(188, 88, 152);
+                this.BackColor = Color.FromArgb(34, 36, 49);
+                btnEnviar.ForeColor = Color.White;
+                lblResult.ForeColor = Color.White;
+            }
+        }
     }
 }

@@ -52,11 +52,12 @@ namespace AgroServicios.Modelo.DAO
             using (var command = new SqlCommand())
             {
                 command.Connection = getConnection();
-                command.CommandText = "SELECT e.Nombre, e.Correo, u.Contraseña FROM Empleados e INNER JOIN Usuarios u ON e.Usuario = u.Usuario WHERE u.Usuario = @username OR e.Correo = @correo";
+                command.CommandText = @" SELECT e.Nombre, e.Correo, u.Contraseña FROM Empleados e  INNER JOIN Usuarios u ON e.Usuario = u.Usuario WHERE u.Usuario COLLATE SQL_Latin1_General_CP1_CS_AS = @username OR e.Correo COLLATE SQL_Latin1_General_CP1_CS_AS = @correo";
                 command.Parameters.AddWithValue("@username", usuarioSolicitado);
                 command.Parameters.AddWithValue("@correo", usuarioSolicitado);
                 command.CommandType = System.Data.CommandType.Text;
                 SqlDataReader reader = command.ExecuteReader();
+
                 if (reader.Read())
                 {
                     string nombreUsuario = reader.GetString(0);

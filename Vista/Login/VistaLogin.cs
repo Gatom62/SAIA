@@ -85,11 +85,38 @@ namespace AgroServicios.Vista.Login
             if (DarkMode.Checked == true)
             {
                 this.BackColor = Color.FromArgb(34, 36, 49);
+                LblPassword.ForeColor = Color.FromArgb(188, 88, 152);
+                LblUsername.ForeColor = Color.FromArgb(188, 88, 152);
+                lblinicio.ForeColor = Color.FromArgb(230, 119, 11);
+                BtnStart.IdleFillColor = Color.FromArgb(82, 208, 83);
+                Firstpanel.BorderColor = Color.FromArgb(211, 41, 15);
+                txtPassword.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtUsername.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtPassword.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtUsername.BorderColorActive = Color.FromArgb(211, 41, 15);
+                BtnStart.onHoverState.FillColor = Color.FromArgb(211, 41, 15);
+                BtnStart.onHoverState.BorderColor = Color.FromArgb(211, 41, 15);
+                BtnStart.OnPressedState.FillColor = Color.Red;
+                BtnStart.OnPressedState.BorderColor = Color.Red;
             }
             else
             {
                 this.BackColor = Color.LightSkyBlue;
+                LblPassword.ForeColor = Color.FromArgb(68, 197, 197);
+                LblUsername.ForeColor = Color.FromArgb(68, 197, 197);
+                lblinicio.ForeColor = Color.FromArgb(228, 174, 34);
+                BtnStart.IdleFillColor = Color.LawnGreen;
+                Firstpanel.BorderColor = Color.Black;
+                txtPassword.BorderColorHover = Color.FromArgb(105, 181, 255);
+                txtUsername.BorderColorHover = Color.FromArgb(105, 181, 255);
+                txtPassword.BorderColorActive = Color.FromArgb(105, 181, 255);
+                txtUsername.BorderColorActive = Color.FromArgb(105, 181, 255);
+                BtnStart.onHoverState.FillColor = Color.FromArgb(105, 181, 255);
+                BtnStart.onHoverState.BorderColor = Color.FromArgb(105, 181, 255);
+                BtnStart.OnPressedState.FillColor = Color.FromArgb(40, 96, 144);
+                BtnStart.OnPressedState.BorderColor = Color.FromArgb(40, 96, 144);
             }
         }
+
     }
 }

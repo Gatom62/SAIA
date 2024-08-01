@@ -211,19 +211,17 @@
   <data name="btnEnviar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAUkAAAAnCAYAAACCA7o2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKySURBVHhe7d2tcxNRFMbhIyuRyMrKSiSy/wAzGDyGGQSC
-        ZMOHxIHGoaux2AhEZF1dpzNtQxto2iSbTHnP5pSQzbKTQAXJ/Z2ZZ3ZmP6PeOXd3s9dWrcbAdrKRvZTP
-        rbF1wg0A/IeKjMrG9iXL7W1zaLsRZXdbb25sS6H4Qhc7kp4ulscPAIB1ciGnrYm9V67dj4j7t2qM7JlO
-        2pXLVl55UQBYK81R0eidqeF7p7C8F3G3WvmBOom3qt9vTwwAm0Rhea3m71B5tx3Rt1z5AX5g1UkBYKNM
-        R8gnCswHEYH1VQTk2I4ZWgNISTa2robfDyMKq6sYYnsHSUACSNPJH4fe2rClHb6WDgCAdHiDOL1Hufgw
-        J17xuVw4CAAS0hxa3prYx4jGaUUX6a/5VB4EAInpKRdn71HSRQLAzEI3qZWn5Z0AIGVZbtc+yjZ/N0gr
-        zss7AEDKFJI9LR+b/4cx/qJTuSMApMo/5GP+dYyqjQAAO/T7kQellQAA8SE3D20AoIaHZOUGAAAhCQC1
-        CEkAqEFIAkANQhIAali8VV65EQBS550k0zQAQAU1kVceku3yBgBI3nSGhiN7NbFPSsvFHQAAbb8nuZfx
-        FSAAmKNc7DdH9rT4KrmCkrm1AeA3ysX+r6+Ta8i9X7UTACSsUwSkV2NgO1rBHDcAIOoiz2V+Dm6fz6GY
-        16HiAABIiX9nN6JxVj721sbj8s4AkJiuj64jGufL57tRi8n3JQEkSR1k9/XYHkUkVpfvwCtBAFIT9yE/
-        RBTWl4LyCR0lgIR8WzogbyummuUeJYDNltuZN4YRfauVP8zxKRV1oouFEwPAGovbip3m0HYj8v6+/CT+
-        SFztaF/LfvliALAWchto+UMOlGd7EXF3V95Z+n8ZdYG2LsB3KAGsBeXVlZYd5ddz5dh2RNoSZfYT8ERe
-        giliLl0AAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAI7SURBVHhe7d0vcBNBFAfglZXISiQSiaysRFZWRkZCAgMO
+        iUQiKyuRyMhKZGVlZSF/puw7diaQbq6lmc4k2e/NfJO2u5dzv3l7e3dNj623P9OL8SwdFR8BtlCXUaNf
+        6WWJrqerD7fp4N08nYyn6Ww0TTf551uAXTKap/P8eZrz7FmJts0rwjGH4jC7Wj0hwC7qGr1F+rRxWJZW
+        9bJ2EoBdl8PyOhuUyPu/igNrXwqwdxbpc4m+h1Vc8Kx+EcCeiuuVJQL7SwcJNOu+jjJ3kMfVAwEasfYa
+        ZdnFtoMNNC3n4E3Ow8MSjcvKA8PaAQDNWV126yIBlu50k/mPp6uTAFoWd/mUiOxC8tvqBICmzdKPLiDj
+        sZxoLauTABoWL/JJ8XaM2iBA82bptXsjAdbIq+yBTRuANbrNG89pA9QJSYAeQhKgh5AE6CEkAXp0IRlb
+        3LVBgNZ1IRk3S9YGAVqXm8hhdJKvaoMApJN4dvuwMgDQvGgiu5dc5F8mq4MALcsBedUFZNR4mt7UJgG0
+        arxIX0pEdq9Le16bBNCq8SwdlYj8U+8X6WttIkCDvpdoXFZs4OQ1uJfvAs2L9+yWaPy3PH0DtC5W1SUS
+        6zWap/PagQANmORV9UGJw3rFhJi4ciDAXssr6cvYxC5R2F8RlDpKoCEXDw7Iv8s1SmDfjafp7N4ldl/F
+        v1TUVQJ7aHLnXshNKrbE4w70eFSncjKArZfz6zp2r3M4Hpdoe5qKh76zQSzHAbZdzqth/nxE15jSb0km
+        xUzLYfblAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="lblResult.BaseStylesheet" xml:space="preserve">

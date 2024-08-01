@@ -106,6 +106,12 @@ namespace AgroServicios.Controlador.Login
             ObjLogin.txtPassword.UseSystemPasswordChar = false;
             ObjLogin.PasswordVisible.Visible = false;
             ObjLogin.PasswordHide.Visible = true;
+            // Forzar la actualización del TextBox
+            string tempText = ObjLogin.txtPassword.Text;
+            ObjLogin.txtPassword.Text = string.Empty;
+            ObjLogin.txtPassword.Text = tempText;
+
+            ObjLogin.ResumeLayout();  // Reanudar el redibujado
         }
 
         private void HidePassword(object sender, EventArgs e)
@@ -113,6 +119,12 @@ namespace AgroServicios.Controlador.Login
             ObjLogin.txtPassword.UseSystemPasswordChar = true;
             ObjLogin.PasswordVisible.Visible = true;
             ObjLogin.PasswordHide.Visible = false;
+            // Forzar la actualización del TextBox
+            string tempText = ObjLogin.txtPassword.Text;
+            ObjLogin.txtPassword.Text = string.Empty;
+            ObjLogin.txtPassword.Text = tempText;
+
+            ObjLogin.ResumeLayout();  // Reanudar el redibujado
         }
 
         private void RecuperarPass(Object sender, EventArgs e)
