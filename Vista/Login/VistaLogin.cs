@@ -118,5 +118,25 @@ namespace AgroServicios.Vista.Login
             }
         }
 
+        private void VistaLogin_Load(object sender, System.EventArgs e)
+        {
+            if(ControladorIdioma.idioma == 0)
+            {
+                switchidioma.Checked = false;
+            }
+            else 
+            { 
+                switchidioma.Checked = true;
+            }
+
+            if(ControladorTema.IsDarkMode == false)
+            {
+                DarkMode.Checked = false;
+            }
+            else
+            {
+                DarkMode.Checked = true;
+            }
+        }
     }
 }

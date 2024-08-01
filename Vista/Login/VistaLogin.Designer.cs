@@ -592,6 +592,7 @@
             this.Name = "VistaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VistaLogin";
+            this.Load += new System.EventHandler(this.VistaLogin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.Firstpanel.ResumeLayout(false);
@@ -610,7 +611,6 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         public Bunifu.UI.WinForms.BunifuToggleSwitch switchidioma;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.UI.WinForms.BunifuToggleSwitch2 DarkMode;
         private System.Windows.Forms.Label lblinicio;
         public System.Windows.Forms.Label LblUsername;
         public System.Windows.Forms.Label LblPassword;
@@ -622,5 +622,6 @@
         public Bunifu.UI.WinForms.BunifuTextBox txtPassword;
         public Bunifu.UI.WinForms.BunifuTextBox txtUsername;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        public Bunifu.UI.WinForms.BunifuToggleSwitch2 DarkMode;
     }
 }

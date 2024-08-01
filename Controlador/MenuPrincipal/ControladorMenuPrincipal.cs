@@ -57,8 +57,6 @@ namespace AgroServicios.Controlador.MenuPrincipal
             StaticSession.Categorianame1 = string.Empty;
             StaticSession.IdCategoria = 0;
             StaticSession.Username = string.Empty;
-            ControladorIdioma.idioma = 0;
-            ControladorTema.IsDarkMode = false;
         }
 
         private void AbrirPanel<MiForm>() where MiForm : Form, new()
