@@ -161,7 +161,7 @@
             this.btnSuministros.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnSuministros.IconSize = 25;
             this.btnSuministros.IdleBorderColor = System.Drawing.Color.White;
-            this.btnSuministros.IdleBorderRadius = 100;
+            this.btnSuministros.IdleBorderRadius = 50;
             this.btnSuministros.IdleBorderThickness = 1;
             this.btnSuministros.IdleFillColor = System.Drawing.Color.White;
             this.btnSuministros.IdleIconLeftImage = global::AgroServicios.Properties.Resources.Caja;
@@ -170,7 +170,7 @@
             this.btnSuministros.Location = new System.Drawing.Point(3, 62);
             this.btnSuministros.Name = "btnSuministros";
             this.btnSuministros.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnSuministros.OnDisabledState.BorderRadius = 100;
+            this.btnSuministros.OnDisabledState.BorderRadius = 50;
             this.btnSuministros.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnSuministros.OnDisabledState.BorderThickness = 1;
             this.btnSuministros.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -178,7 +178,7 @@
             this.btnSuministros.OnDisabledState.IconLeftImage = null;
             this.btnSuministros.OnDisabledState.IconRightImage = null;
             this.btnSuministros.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnSuministros.onHoverState.BorderRadius = 100;
+            this.btnSuministros.onHoverState.BorderRadius = 50;
             this.btnSuministros.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnSuministros.onHoverState.BorderThickness = 1;
             this.btnSuministros.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -186,7 +186,7 @@
             this.btnSuministros.onHoverState.IconLeftImage = null;
             this.btnSuministros.onHoverState.IconRightImage = null;
             this.btnSuministros.OnIdleState.BorderColor = System.Drawing.Color.White;
-            this.btnSuministros.OnIdleState.BorderRadius = 100;
+            this.btnSuministros.OnIdleState.BorderRadius = 50;
             this.btnSuministros.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnSuministros.OnIdleState.BorderThickness = 1;
             this.btnSuministros.OnIdleState.FillColor = System.Drawing.Color.White;
@@ -194,7 +194,7 @@
             this.btnSuministros.OnIdleState.IconLeftImage = global::AgroServicios.Properties.Resources.Caja;
             this.btnSuministros.OnIdleState.IconRightImage = null;
             this.btnSuministros.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnSuministros.OnPressedState.BorderRadius = 100;
+            this.btnSuministros.OnPressedState.BorderRadius = 50;
             this.btnSuministros.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnSuministros.OnPressedState.BorderThickness = 1;
             this.btnSuministros.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -203,10 +203,10 @@
             this.btnSuministros.OnPressedState.IconRightImage = null;
             this.btnSuministros.Size = new System.Drawing.Size(471, 173);
             this.btnSuministros.TabIndex = 5;
-            this.btnSuministros.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSuministros.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSuministros.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnSuministros.TextMarginLeft = 0;
-            this.btnSuministros.TextPadding = new System.Windows.Forms.Padding(0, 0, 80, 0);
+            this.btnSuministros.TextPadding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.btnSuministros.UseDefaultRadiusAndThickness = true;
             // 
             // tableLayoutPanel4
@@ -283,7 +283,7 @@
             this.btnProveedores.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnProveedores.IconSize = 25;
             this.btnProveedores.IdleBorderColor = System.Drawing.Color.White;
-            this.btnProveedores.IdleBorderRadius = 100;
+            this.btnProveedores.IdleBorderRadius = 50;
             this.btnProveedores.IdleBorderThickness = 1;
             this.btnProveedores.IdleFillColor = System.Drawing.Color.White;
             this.btnProveedores.IdleIconLeftImage = global::AgroServicios.Properties.Resources.VAn;
@@ -292,7 +292,7 @@
             this.btnProveedores.Location = new System.Drawing.Point(3, 62);
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnProveedores.OnDisabledState.BorderRadius = 100;
+            this.btnProveedores.OnDisabledState.BorderRadius = 50;
             this.btnProveedores.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnProveedores.OnDisabledState.BorderThickness = 1;
             this.btnProveedores.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -300,7 +300,7 @@
             this.btnProveedores.OnDisabledState.IconLeftImage = null;
             this.btnProveedores.OnDisabledState.IconRightImage = null;
             this.btnProveedores.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnProveedores.onHoverState.BorderRadius = 100;
+            this.btnProveedores.onHoverState.BorderRadius = 50;
             this.btnProveedores.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnProveedores.onHoverState.BorderThickness = 1;
             this.btnProveedores.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -308,7 +308,7 @@
             this.btnProveedores.onHoverState.IconLeftImage = null;
             this.btnProveedores.onHoverState.IconRightImage = null;
             this.btnProveedores.OnIdleState.BorderColor = System.Drawing.Color.White;
-            this.btnProveedores.OnIdleState.BorderRadius = 100;
+            this.btnProveedores.OnIdleState.BorderRadius = 50;
             this.btnProveedores.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnProveedores.OnIdleState.BorderThickness = 1;
             this.btnProveedores.OnIdleState.FillColor = System.Drawing.Color.White;
@@ -316,7 +316,7 @@
             this.btnProveedores.OnIdleState.IconLeftImage = global::AgroServicios.Properties.Resources.VAn;
             this.btnProveedores.OnIdleState.IconRightImage = null;
             this.btnProveedores.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnProveedores.OnPressedState.BorderRadius = 100;
+            this.btnProveedores.OnPressedState.BorderRadius = 50;
             this.btnProveedores.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnProveedores.OnPressedState.BorderThickness = 1;
             this.btnProveedores.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -325,10 +325,10 @@
             this.btnProveedores.OnPressedState.IconRightImage = null;
             this.btnProveedores.Size = new System.Drawing.Size(471, 172);
             this.btnProveedores.TabIndex = 4;
-            this.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnProveedores.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnProveedores.TextMarginLeft = 0;
-            this.btnProveedores.TextPadding = new System.Windows.Forms.Padding(0, 0, 80, 0);
+            this.btnProveedores.TextPadding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.btnProveedores.UseDefaultRadiusAndThickness = true;
             // 
             // tableLayoutPanel3
@@ -405,7 +405,7 @@
             this.btnHistorial.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnHistorial.IconSize = 25;
             this.btnHistorial.IdleBorderColor = System.Drawing.Color.White;
-            this.btnHistorial.IdleBorderRadius = 100;
+            this.btnHistorial.IdleBorderRadius = 50;
             this.btnHistorial.IdleBorderThickness = 1;
             this.btnHistorial.IdleFillColor = System.Drawing.Color.White;
             this.btnHistorial.IdleIconLeftImage = global::AgroServicios.Properties.Resources.tdesign_money;
@@ -414,7 +414,7 @@
             this.btnHistorial.Location = new System.Drawing.Point(3, 62);
             this.btnHistorial.Name = "btnHistorial";
             this.btnHistorial.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnHistorial.OnDisabledState.BorderRadius = 100;
+            this.btnHistorial.OnDisabledState.BorderRadius = 50;
             this.btnHistorial.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnHistorial.OnDisabledState.BorderThickness = 1;
             this.btnHistorial.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -422,7 +422,7 @@
             this.btnHistorial.OnDisabledState.IconLeftImage = null;
             this.btnHistorial.OnDisabledState.IconRightImage = null;
             this.btnHistorial.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnHistorial.onHoverState.BorderRadius = 100;
+            this.btnHistorial.onHoverState.BorderRadius = 50;
             this.btnHistorial.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnHistorial.onHoverState.BorderThickness = 1;
             this.btnHistorial.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -430,7 +430,7 @@
             this.btnHistorial.onHoverState.IconLeftImage = null;
             this.btnHistorial.onHoverState.IconRightImage = null;
             this.btnHistorial.OnIdleState.BorderColor = System.Drawing.Color.White;
-            this.btnHistorial.OnIdleState.BorderRadius = 100;
+            this.btnHistorial.OnIdleState.BorderRadius = 50;
             this.btnHistorial.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnHistorial.OnIdleState.BorderThickness = 1;
             this.btnHistorial.OnIdleState.FillColor = System.Drawing.Color.White;
@@ -438,7 +438,7 @@
             this.btnHistorial.OnIdleState.IconLeftImage = global::AgroServicios.Properties.Resources.tdesign_money;
             this.btnHistorial.OnIdleState.IconRightImage = null;
             this.btnHistorial.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnHistorial.OnPressedState.BorderRadius = 100;
+            this.btnHistorial.OnPressedState.BorderRadius = 50;
             this.btnHistorial.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnHistorial.OnPressedState.BorderThickness = 1;
             this.btnHistorial.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -447,10 +447,10 @@
             this.btnHistorial.OnPressedState.IconRightImage = null;
             this.btnHistorial.Size = new System.Drawing.Size(471, 172);
             this.btnHistorial.TabIndex = 3;
-            this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHistorial.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnHistorial.TextMarginLeft = 0;
-            this.btnHistorial.TextPadding = new System.Windows.Forms.Padding(0, 0, 40, 0);
+            this.btnHistorial.TextPadding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.btnHistorial.UseDefaultRadiusAndThickness = true;
             // 
             // tableLayoutPanel2
@@ -527,7 +527,7 @@
             this.btnRegistroVentas.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnRegistroVentas.IconSize = 25;
             this.btnRegistroVentas.IdleBorderColor = System.Drawing.Color.White;
-            this.btnRegistroVentas.IdleBorderRadius = 100;
+            this.btnRegistroVentas.IdleBorderRadius = 50;
             this.btnRegistroVentas.IdleBorderThickness = 1;
             this.btnRegistroVentas.IdleFillColor = System.Drawing.Color.White;
             this.btnRegistroVentas.IdleIconLeftImage = global::AgroServicios.Properties.Resources.hugeicons_shopping_basket_01;
@@ -536,7 +536,7 @@
             this.btnRegistroVentas.Location = new System.Drawing.Point(3, 62);
             this.btnRegistroVentas.Name = "btnRegistroVentas";
             this.btnRegistroVentas.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnRegistroVentas.OnDisabledState.BorderRadius = 100;
+            this.btnRegistroVentas.OnDisabledState.BorderRadius = 50;
             this.btnRegistroVentas.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnRegistroVentas.OnDisabledState.BorderThickness = 1;
             this.btnRegistroVentas.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -544,7 +544,7 @@
             this.btnRegistroVentas.OnDisabledState.IconLeftImage = null;
             this.btnRegistroVentas.OnDisabledState.IconRightImage = null;
             this.btnRegistroVentas.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnRegistroVentas.onHoverState.BorderRadius = 100;
+            this.btnRegistroVentas.onHoverState.BorderRadius = 50;
             this.btnRegistroVentas.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnRegistroVentas.onHoverState.BorderThickness = 1;
             this.btnRegistroVentas.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -552,7 +552,7 @@
             this.btnRegistroVentas.onHoverState.IconLeftImage = null;
             this.btnRegistroVentas.onHoverState.IconRightImage = null;
             this.btnRegistroVentas.OnIdleState.BorderColor = System.Drawing.Color.White;
-            this.btnRegistroVentas.OnIdleState.BorderRadius = 100;
+            this.btnRegistroVentas.OnIdleState.BorderRadius = 50;
             this.btnRegistroVentas.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnRegistroVentas.OnIdleState.BorderThickness = 1;
             this.btnRegistroVentas.OnIdleState.FillColor = System.Drawing.Color.White;
@@ -560,7 +560,7 @@
             this.btnRegistroVentas.OnIdleState.IconLeftImage = global::AgroServicios.Properties.Resources.hugeicons_shopping_basket_01;
             this.btnRegistroVentas.OnIdleState.IconRightImage = null;
             this.btnRegistroVentas.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnRegistroVentas.OnPressedState.BorderRadius = 100;
+            this.btnRegistroVentas.OnPressedState.BorderRadius = 50;
             this.btnRegistroVentas.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnRegistroVentas.OnPressedState.BorderThickness = 1;
             this.btnRegistroVentas.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -569,10 +569,10 @@
             this.btnRegistroVentas.OnPressedState.IconRightImage = null;
             this.btnRegistroVentas.Size = new System.Drawing.Size(471, 173);
             this.btnRegistroVentas.TabIndex = 4;
-            this.btnRegistroVentas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRegistroVentas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRegistroVentas.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnRegistroVentas.TextMarginLeft = 0;
-            this.btnRegistroVentas.TextPadding = new System.Windows.Forms.Padding(0, 0, 40, 0);
+            this.btnRegistroVentas.TextPadding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.btnRegistroVentas.UseDefaultRadiusAndThickness = true;
             // 
             // VistaStats

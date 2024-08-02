@@ -149,7 +149,7 @@
             this.btn5.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btn5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn5.BackgroundImage")));
             this.btn5.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btn5.ButtonText = "bunifuButton27";
+            this.btn5.ButtonText = "Abonos";
             this.btn5.ButtonTextMarginLeft = 0;
             this.btn5.ColorContrastOnClick = 45;
             this.btn5.ColorContrastOnHover = 45;
@@ -244,7 +244,7 @@
             this.btn8.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btn8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn8.BackgroundImage")));
             this.btn8.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btn8.ButtonText = "bunifuButton28";
+            this.btn8.ButtonText = "Ventas semanales";
             this.btn8.ButtonTextMarginLeft = 0;
             this.btn8.ColorContrastOnClick = 45;
             this.btn8.ColorContrastOnHover = 45;
@@ -339,7 +339,7 @@
             this.btn3.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btn3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn3.BackgroundImage")));
             this.btn3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btn3.ButtonText = "bunifuButton25";
+            this.btn3.ButtonText = "Ropa";
             this.btn3.ButtonTextMarginLeft = 0;
             this.btn3.ColorContrastOnClick = 45;
             this.btn3.ColorContrastOnHover = 45;
@@ -434,7 +434,7 @@
             this.btn6.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btn6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn6.BackgroundImage")));
             this.btn6.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btn6.ButtonText = "bunifuButton23";
+            this.btn6.ButtonText = "Herbicidas";
             this.btn6.ButtonTextMarginLeft = 0;
             this.btn6.ColorContrastOnClick = 45;
             this.btn6.ColorContrastOnHover = 45;
@@ -529,7 +529,7 @@
             this.btn7.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btn7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn7.BackgroundImage")));
             this.btn7.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btn7.ButtonText = "bunifuButton26";
+            this.btn7.ButtonText = "Cierre de caja";
             this.btn7.ButtonTextMarginLeft = 0;
             this.btn7.ColorContrastOnClick = 45;
             this.btn7.ColorContrastOnHover = 45;
@@ -624,7 +624,7 @@
             this.btn2.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btn2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn2.BackgroundImage")));
             this.btn2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btn2.ButtonText = "bunifuButton24";
+            this.btn2.ButtonText = "Comida";
             this.btn2.ButtonTextMarginLeft = 0;
             this.btn2.ColorContrastOnClick = 45;
             this.btn2.ColorContrastOnHover = 45;
@@ -719,7 +719,7 @@
             this.btn1.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btn1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn1.BackgroundImage")));
             this.btn1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btn1.ButtonText = "bunifuButton22";
+            this.btn1.ButtonText = "Medicina";
             this.btn1.ButtonTextMarginLeft = 0;
             this.btn1.ColorContrastOnClick = 45;
             this.btn1.ColorContrastOnHover = 45;
@@ -814,7 +814,7 @@
             this.btn4.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btn4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn4.BackgroundImage")));
             this.btn4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btn4.ButtonText = "bunifuButton21";
+            this.btn4.ButtonText = "Herramientas";
             this.btn4.ButtonTextMarginLeft = 0;
             this.btn4.ColorContrastOnClick = 45;
             this.btn4.ColorContrastOnHover = 45;
@@ -922,7 +922,7 @@
             this.btnprin1.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
             this.btnprin1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnprin1.BackgroundImage")));
             this.btnprin1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnprin1.ButtonText = "bunifuButton211";
+            this.btnprin1.ButtonText = "Procesos";
             this.btnprin1.ButtonTextMarginLeft = 0;
             this.btnprin1.ColorContrastOnClick = 45;
             this.btnprin1.ColorContrastOnHover = 45;
@@ -937,7 +937,7 @@
             this.btnprin1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnprin1.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnprin1.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnprin1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnprin1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnprin1.ForeColor = System.Drawing.Color.White;
             this.btnprin1.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnprin1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -1027,7 +1027,7 @@
             this.btnExit.BackColor1 = System.Drawing.Color.Red;
             this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
             this.btnExit.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnExit.ButtonText = "Salir";
+            this.btnExit.ButtonText = "Cerrar sesión";
             this.btnExit.ButtonTextMarginLeft = 0;
             this.btnExit.ColorContrastOnClick = 45;
             this.btnExit.ColorContrastOnHover = 45;
@@ -1042,7 +1042,7 @@
             this.btnExit.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnExit.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnExit.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -1132,7 +1132,7 @@
             this.btnprin2.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
             this.btnprin2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnprin2.BackgroundImage")));
             this.btnprin2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnprin2.ButtonText = "bunifuButton29";
+            this.btnprin2.ButtonText = "Productos";
             this.btnprin2.ButtonTextMarginLeft = 0;
             this.btnprin2.ColorContrastOnClick = 45;
             this.btnprin2.ColorContrastOnHover = 45;
@@ -1147,7 +1147,7 @@
             this.btnprin2.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnprin2.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnprin2.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnprin2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnprin2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnprin2.ForeColor = System.Drawing.Color.White;
             this.btnprin2.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnprin2.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -1232,11 +1232,11 @@
             // 
             this.lblfecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblfecha.AutoSize = true;
-            this.lblfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfecha.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblfecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
-            this.lblfecha.Location = new System.Drawing.Point(442, 81);
+            this.lblfecha.Location = new System.Drawing.Point(431, 81);
             this.lblfecha.Name = "lblfecha";
-            this.lblfecha.Size = new System.Drawing.Size(147, 54);
+            this.lblfecha.Size = new System.Drawing.Size(164, 56);
             this.lblfecha.TabIndex = 33;
             this.lblfecha.Text = "label2";
             // 
@@ -1244,10 +1244,10 @@
             // 
             this.lblhora.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblhora.AutoSize = true;
-            this.lblhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhora.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblhora.Location = new System.Drawing.Point(560, 12);
             this.lblhora.Name = "lblhora";
-            this.lblhora.Size = new System.Drawing.Size(194, 69);
+            this.lblhora.Size = new System.Drawing.Size(210, 70);
             this.lblhora.TabIndex = 32;
             this.lblhora.Text = "label1";
             // 
