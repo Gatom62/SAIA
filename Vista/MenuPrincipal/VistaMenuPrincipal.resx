@@ -300,21 +300,37 @@
   </data>
   <data name="btnExit.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAOIAAAAyCAYAAABBLgf4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALySURBVHhe7d0hd9pQGMbxyEokMrISWYmcRFbyESqRuMnJ
-        ysrKycl+BCRysnKyam2fB96eZNmlGyH3Ziv/95zfgZLkJoKnNyQ3SZWrnqvq6qWq5rKUNfAf83fY3+V5
-        fL3/zdIGzrzBP6tqo9cX4KPTd30rX/R+3HBqA2ptyK18b28gcG6UgR9yp/eziEf+0som/k8gT+2NAbAL
-        5b1epxGXPKUVrJz+9ooB/MqdlHzW+4uIzjClBt0LfmuvDMD7lBkfMxmmd1RD/i3IQRigB2Xn0WcQIk79
-        Sg3N1BC7osAJlKEnhfE6YnVcqQH3hIQQGIDDqNfjTnVoAf8m3LYbAnCa6NguI2Z/Li3AgRkgA2XL590n
-        EbXDpZlW7QUBDEth/BpxS5dmmmomTtQD+R0ehaMQeuxcaiEAAzrYK2riJb0hUM5zVX2K+DWlEHrQanIB
-        AMNT5h4ifk3pw8fUzADyiD3Q5giq/vBFj8mZAWS1jBjuekOPFE/NBCAjZe8+YrgLIqNogBEoex5ts79c
-        qjsRQFG1Q1h3PgRQ1vztbmupiQAK2F0ipTeL7gQA5SiIN+4Rb1ITARSzdo/I1RbAuNbuEa8TEwCUs2JU
-        DTC+JacvgPHNHcSLzocAytrfxyaG2aRmAJDf/goMBZFrEYERKHvNNYkcOQVGs4oY6i/9TlQyuU0GUF4d
-        MdyXgsi9TIGClLltxK8pTWDMKVDQboxpqugVgTLcG+o1/fxETfCz8JMLAhjUImKXLiWVUxlARsrYJuJ2
-        uDSjnwTlB2UkGwHQn7LlsxOHb7ffLs3IXb+BPN7fJe2WF+g0AOA0zcn7Y8oLdhoC0IOPvUSs+pWHv7Gb
-        CpxkHXE6rRTGK4WRKzSAI7gDc0cWMRqm1HCthh+6KwPwO2Vlo9e/Ozrap9T4IlaS3ADgnCkbPvXXPFgm
-        d8VvR56ZAYgD6LGjep8etpa7tOLaG6ANYbcVZyX2DNeSbxe0T2mDJuK7wplPfXgjgY/k7fs9ja/9AFVV
-        r0Y85bINHTV7AAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAMIAAAAsCAYAAAA3r2fDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKqSURBVHhe7Z0reBNBFIVHRlZGVlZGIiORlZGRSGRlHBKJ
+        rERWViKRSCQSWVlFyznLLbsNtyUJCenO/Pf7/k66O48V5+7M7LzKPu2ulFf3pczFUqwADoC1ZY3NQ3bH
+        NT3I1A/1o5Qrcavf9wDHQPq71kv4jX6fhjwPbypsroI/Dx8E4KUgbX5VeB5y3b8p8zO//YeFArxUpNVP
+        bqqHfPdjyvhivSCAMSCH+KBwElLezZyBMvo4zBhgbLh2UHgSst7OnFAZ0BeAKpCWvymchbw3MyVwTYAT
+        QFVI098Vbv5lSQloDkGVSNtfFP69z6BIHrRIMwGoATnDVcg9N0WarScCqJSnxxrsKUkCgOqQ1t15/rOJ
+        pIvnw4gAtXNXytuQf2/RiUgTANSINO+vSH2toH9OhxEAGqKfxeoqIokAUD2qFd6HG3TNIg9BpxEBasad
+        5nCDzhFYTwAtM6V/AOB+QiyvzG4CNIF8YMH4ATRPN57AFyOAsnKNwOozaJ2Va4RFcgOgJS5cI3iPmOwm
+        QCss+XwK4M+n+jNZuwjQGmcPI8vMPIUmkfZvOiew6QLLM6FJ5AiX4Qa/N+9NIwLUTDeqPDR5hhcppJEB
+        aiQmmz7e+IsRZmgNOUK/FuHBdMObetFphiaI2mAa8n9susEEPGgCt4BC9rnJU66zhAC1II37DIXnd7tT
+        BG/+64hpJgBjRtq+UbjZ/qeOGAnSzADGippEr0Pmm5kS+YgonAFqYhny3s6UcCZn8NZ4WaYAo8Av9K1r
+        gnVTRhwYAqNF2nV/99ekun81ZTTx5yaaSjAWpFWPE3gO3W5HRj1nzlQFvItC0gcAODbSpw8QzAfL9mkq
+        5EQ1xEIFXgpqCTgqfjELn/LkU/kP7wBPmZzCs1e95NMbAbg6AvgfWHP9Jr47Wyk/AQTHekZI8x2rAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAL8AAAAnCAYAAABe35koAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAKfSURBVHhe7d2xTxRBGMbhKykpKa+0vJKS0srQ2FsSEjr+
+        AAsKChM7CztrEjsSm9s7KkoKChIKEhMSjCcBQdRIoe9791HcOJgDPL2d/X3J43E7s7MW7y7DHju07lu9
+        Xm9Jnvf7/S3ZCz+BKbvJ2pbzJ8sRyemWDrQYB/2q1zPJ/eeAf+lcrpXJ7amcCBq0LZUOQuAxy3wi7Cmr
+        nYjuw0oDvdCAhB51cq7cvpW5iPHdyjvKOw10mQwMzDxl94de9/W6EJGerLSDpzmHMUB2cKAmTpTjyaZB
+        6ugr/mFmEKCWlOeP0o6I317qtCNc8VEUX9Dl9p8B1Ogfbpnjozi+oMtORH281NBRp0/pTkBBfBfo988C
+        tNH38XM7AMVQzo8i8qPShiU1cC8fTXChvK9F9Ifh3850Akp1cBP8Ob35ljQCJbtU7tsO/2O9YcqDJrlS
+        7lcc/jeZRqBoyn3l8HOXB0100PI/yUagCQYO/yDZCDSCw59tAErnOf/nXANQOof/KNcAlMwXfU97dtMG
+        oHS+6Dv8Xnok2wEo2K6nPc/0Bb/DjybxUicbDv+83nxPGoGS+ff6R8/16g2rraFJBsPgu3QWrGjDVdIB
+        KE5VVdd6fRnRH5VOAG55onjKuVdymI/Yj0obltXo5d6yOwEF+KKcr0fkx0uNzP1RMi9glV++xN8O1OE4
+        2QEowQfl+1FEPV/u4I7JjkCdncrTiPifq9vtPlFn1vBBCU6rqlqNaE9W+g7gRazeJwMBdXIik13x09IJ
+        sKCd/aTXRQwG1IFXIzn2BTyifP/SIGsazPMmljjBzIoPsM6U100Zv5f/kNJgXrp8U4P7scfh30HyAYEZ
+        4MD7oazXfzX0udIBOrKhg/lzAZ4Bxv/g3Dl/r5TFxYjmHarV+gUGmuBP+ifSnAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="btnprin2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

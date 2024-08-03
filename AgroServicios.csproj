@@ -107,6 +107,7 @@
     <Compile Include="Controlador\CuentasContralador\ControladorRestUser.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorUpdateEmpleados.cs" />
     <Compile Include="Controlador\Encryp.cs" />
+    <Compile Include="Controlador\Helper\CommonClasses.cs" />
     <Compile Include="Controlador\Helper\StaticSession.cs" />
     <Compile Include="Controlador\Login\ControladorForEmail.cs" />
     <Compile Include="Controlador\Login\ControladorLogin.cs" />
@@ -211,6 +212,12 @@
     <Compile Include="Vista\Login\VistaMetodosDeRecuperacion.Designer.cs">
       <DependentUpon>VistaMetodosDeRecuperacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\MenuPrincipal\VistaAjustes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\MenuPrincipal\VistaAjustes.Designer.cs">
+      <DependentUpon>VistaAjustes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\MenuPrincipal\VistaMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Login\VistaMetodosDeRecuperacion.resx">
       <DependentUpon>VistaMetodosDeRecuperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\MenuPrincipal\VistaAjustes.resx">
+      <DependentUpon>VistaAjustes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaMenuPrincipal.resx">
       <DependentUpon>VistaMenuPrincipal.cs</DependentUpon>

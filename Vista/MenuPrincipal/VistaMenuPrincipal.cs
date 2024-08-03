@@ -68,5 +68,12 @@ namespace AgroServicios.Vista.MenuPrincipal
                 btnBusqueda.BackColor = Color.FromArgb(230, 119, 11);
             }
         }
+
+        private void bunifuButton21_Click(object sender, EventArgs e)
+        {
+            VistaAjustes vistaAjustes = new VistaAjustes();
+            vistaAjustes.ShowDialog();
+            this.Close();
+        }
     }
 }
