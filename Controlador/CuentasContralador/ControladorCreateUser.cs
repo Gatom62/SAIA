@@ -16,6 +16,7 @@ namespace AgroServicios.Controlador.CuentasContralador
         CreateUser ObjUsers;
         private int accion;
         private string role;
+        bool verificacion;
 
         /// <summary>
         /// Constructor para inserción de datos
@@ -121,23 +122,37 @@ namespace AgroServicios.Controlador.CuentasContralador
             DaoInsert.Contraseña1 = ObjEncriptar.Encriptar(ObjUsers.txtNewPassword.Text);
             DaoInsert.IdCategoria = int.Parse(ObjUsers.DropRole.SelectedValue.ToString());
 
-            int valorRetornado = DaoInsert.RegistrarUsuario();
-            if (valorRetornado == 1)
+            verificacion = ValidarCorreo();
+            if (verificacion == true)
             {
-                MessageBox.Show("Los datos han sido registrados exitosamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                ObjUsers.Close();
-            }
-            else
-            {
-                MessageBox.Show("Los datos no pudieron ser registrados",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                int valorRetornado = DaoInsert.RegistrarUsuario();
+                if (valorRetornado == 1)
+                {
+                    MessageBox.Show("Los datos han sido registrados exitosamente",
+                                    "Proceso completado",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                    ObjUsers.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Los datos no pudieron ser registrados",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
             }
         }
 
+        bool ValidarCorreo()
+        {
+            string email = ObjUsers.txtNewCorreo.Text.Trim();
+            if (!(email.Contains("@")))
+            {
+                MessageBox.Show("Formato de correo invalido, verifica que contiene @.", "Formato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
     }
 }

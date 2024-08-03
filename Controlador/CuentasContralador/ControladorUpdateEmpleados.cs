@@ -11,6 +11,7 @@ namespace AgroServicios.Controlador.CuentasContralador
         VistaUpdateEmpleados Objupdate;
         private int accion;
         private string role;
+        bool verificacion;
 
         public ControladorUpdateEmpleados(VistaUpdateEmpleados Vista, int accion, int id, string Name, string phone, string email, string dni, string address, DateTime birthday)
         {
@@ -76,22 +77,26 @@ namespace AgroServicios.Controlador.CuentasContralador
             DaoUpdate.DUI1 = Objupdate.maskedDuiUpdate.Text;
             DaoUpdate.Direccion1 = Objupdate.txtUpdateDireccion.Text.Trim();
 
-            int valorRetornado = DaoUpdate.ActualizarEmpleado();
+            verificacion = ValidarCorreo();
+            if (verificacion == true)
+            {
+                int valorRetornado = DaoUpdate.ActualizarEmpleado();
 
-            if (valorRetornado == 1)
-            {
-                MessageBox.Show("Los datos han sido actualizados exitosamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                Objupdate.Close();
-            }
-            else
-            {
-                MessageBox.Show("Los datos no pudieron ser actualizados",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                if (valorRetornado == 1)
+                {
+                    MessageBox.Show("Los datos han sido actualizados exitosamente",
+                                    "Proceso completado",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                    Objupdate.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Los datos no pudieron ser actualizados",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -106,5 +111,15 @@ namespace AgroServicios.Controlador.CuentasContralador
             Objupdate.PickerBirthUpdate.Value = birthday;
         }
 
+        bool ValidarCorreo()
+        {
+            string email = Objupdate.txtUpdateCorreo.Text.Trim();
+            if (!(email.Contains("@")))
+            {
+                MessageBox.Show("Formato de correo invalido, verifica que contiene @.", "Formato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
     }
 }
