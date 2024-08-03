@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AgroServicios.Controlador;
 using System.Windows.Forms;
-using AgroServicios.Modelo.DAO;
-using AgroServicios.Modelo.DTO;
+using AgroServicios.Controlador.Helper;
+using System.Drawing;
 
 namespace AgroServicios.Vista.Login
 {
@@ -22,9 +16,9 @@ namespace AgroServicios.Vista.Login
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (this.Opacity < 1) this.Opacity += 0.05;
-            circularProgressBar1.Value += 1;
-            circularProgressBar1.Text = circularProgressBar1.Value.ToString();
-            if (circularProgressBar1.Value == 100)
+            BarradeProgeso.Value += 1;
+            BarradeProgeso.Text = BarradeProgeso.Value.ToString();
+            if (BarradeProgeso.Value == 100)
             {
                 timer1.Stop();
                 timer2.Start();
@@ -43,13 +37,30 @@ namespace AgroServicios.Vista.Login
 
         private void Bienvenida_Load(object sender, EventArgs e)
         {
+            if (ControladorIdioma.idioma == 1)
+            {
+                lblbienvenido.Text = Ingles.bienvenida;
+            }
+
+            bunifuLabel1.Text = StaticSession.Username;
             this.Opacity = 0.0;
             //Inicializamos estas propiedades de la barra de progreso, mediante codigo.(Opcional)
-            circularProgressBar1.Value = 0;
-            circularProgressBar1.Minimum = 0;
-            circularProgressBar1.Maximum = 100;
+            BarradeProgeso.Value = 0;
+            BarradeProgeso.Minimum = 0;
+            BarradeProgeso.Maximum = 100;
             //Iniciamos el temporizador 1.
             timer1.Start();
+
+            if(ControladorTema.IsDarkMode == true)
+            {
+                BarradeProgeso.ForeColor = Color.White;
+                this.BackColor = Color.FromArgb(34, 36, 49);
+                panel1.BackColor = Color.FromArgb(230, 119, 11);
+                panel2.BackColor = Color.FromArgb(118, 88, 152);
+                BarradeProgeso.ProgressColor = Color.FromArgb(211, 41, 15);
+                BarradeProgeso.ProgressColor2 = Color.FromArgb(211, 41, 15);
+
+            }
         }
 
     }

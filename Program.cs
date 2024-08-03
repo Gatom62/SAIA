@@ -1,27 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using AgroServicios.Vista.Login;
-using AgroServicios.Modelo;
-using System.Data.SqlClient;
-using AgroServicios.Vista.MenuPrincipal;
+using AgroServicios.Vista.Cuentas;
+using AgroServicios.Modelo.DAO;
 
 namespace AgroServicios
 {
     internal static class Program
     {
-        /// <summary>
-        /// Punto de entrada principal para la aplicación.
-        /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VistaLogin());
 
+            // Verificación de Primer Uso
+            DAOLogin Verificacion = new DAOLogin();
+
+            if (Verificacion.PrimerUso() == true)
+            {
+                Application.Run(new VistaLogin());
+            }
+            else
+            {
+                // Crear un formulario CreateUser
+                CreateUser createUserForm = new CreateUser(accion: 1);
+
+                // Mostrar CreateUser como un formulario modal
+                createUserForm.ShowDialog();
+
+                // Una vez que CreateUser se cierra, abrir VistaLogin
+                Application.Run(new VistaLogin());
+            }
         }
     }
+
 }

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AgroServicios.Vista.Estadisticas;
-using AgroServicios.Vista.MenuPrincipal;
-using AgroServicios.Vista.Busqueda;
 
 namespace AgroServicios.Controlador.ControladorStats
 {
@@ -21,20 +15,20 @@ namespace AgroServicios.Controlador.ControladorStats
         public ControladorStats(VistaStats Estadisticas)
         {
             ObjStats = Estadisticas;
+            ObjStats.btnProveedores.Click += new EventHandler(OpenProveedores);
+            ObjStats.btnSuministros.Click += new EventHandler(OpenSuministros);
         }
 
-        private void OpenInicio(object sender, EventArgs e)
+        private void OpenProveedores(object sender, EventArgs e)
         {
-            VistaMenuPrincipal vistaMenuPrincipal = new VistaMenuPrincipal();
-            vistaMenuPrincipal.Show();
-            ObjStats.Hide();
+            VistaProveedores vistaProveedores = new VistaProveedores();
+            vistaProveedores.ShowDialog();
         }
 
-        private void OpenBusqueda(object sender, EventArgs e)
+        private void OpenSuministros(object sender, EventArgs e)
         {
-            VistaBusqueda vistaBusqueda = new VistaBusqueda();
-            vistaBusqueda.Show();
-            ObjStats.Hide();
+          VistaSuministros vistaSuministros = new VistaSuministros();
+            vistaSuministros.ShowDialog();
         }
     }
 }

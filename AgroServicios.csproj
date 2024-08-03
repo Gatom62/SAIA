@@ -36,11 +36,54 @@
     <Reference Include="AltoControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\AltoControls.1.0.1\lib\AltoControls.dll</HintPath>
     </Reference>
-    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
-      <HintPath>packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.Licensing.6.0.2\lib\net48\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>packages\Bunifu.UI.WinForms.7.0.0\lib\net48\Bunifu.UI.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=110.2.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.CodeDom.8.0.0\lib\net462\System.CodeDom.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.7.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,21 +99,52 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlador\Busqueda\ControladorBusqueda.cs" />
+    <Compile Include="Controlador\ControladorIdioma.cs" />
     <Compile Include="Controlador\ControladorStats\ControladorStats.cs" />
+    <Compile Include="Controlador\ControladorTema.cs" />
+    <Compile Include="Controlador\CuentasContralador\ControladorCreateUser.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorCuentas.cs" />
+    <Compile Include="Controlador\CuentasContralador\ControladorRestUser.cs" />
+    <Compile Include="Controlador\CuentasContralador\ControladorUpdateEmpleados.cs" />
+    <Compile Include="Controlador\Encryp.cs" />
+    <Compile Include="Controlador\Helper\CommonClasses.cs" />
+    <Compile Include="Controlador\Helper\StaticSession.cs" />
+    <Compile Include="Controlador\Login\ControladorForEmail.cs" />
     <Compile Include="Controlador\Login\ControladorLogin.cs" />
+    <Compile Include="Controlador\Login\ControlerBasicMetodosRecuperar.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorMenuPrincipal.cs" />
-    <Compile Include="Helpers\AESEncryption.cs" />
+    <Compile Include="Modelo\DAO\DAOAdminUsers.cs" />
+    <Compile Include="Modelo\DAO\DAOCorreoRecuperacion.cs" />
+    <Compile Include="Modelo\DAO\DAODCSoporte.cs" />
     <Compile Include="Modelo\DAO\DAOLogin.cs" />
+    <Compile Include="Modelo\DAO\DAORecuperarPass.cs" />
     <Compile Include="Modelo\dbContext.cs" />
+    <Compile Include="Modelo\DTO\DTOAdminUsers.cs" />
+    <Compile Include="Modelo\DTO\DTOCorreoRecuperacion.cs" />
     <Compile Include="Modelo\DTO\DTOLogin.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ingles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ingles.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Spanish.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Spanish.resx</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Busqueda\VistaBusqueda.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\Busqueda\VistaBusqueda.Designer.cs">
       <DependentUpon>VistaBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Cuentas\CreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Cuentas\CreateUser.Designer.cs">
+      <DependentUpon>CreateUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Cuentas\VistaCuentas.cs">
       <SubType>Form</SubType>
@@ -78,11 +152,41 @@
     <Compile Include="Vista\Cuentas\VistaCuentas.Designer.cs">
       <DependentUpon>VistaCuentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Cuentas\VistaDeleteUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Cuentas\VistaDeleteUsuario.Designer.cs">
+      <DependentUpon>VistaDeleteUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Cuentas\VistaRestablecerPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Cuentas\VistaRestablecerPassword.Designer.cs">
+      <DependentUpon>VistaRestablecerPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Cuentas\VistaUpdateEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Cuentas\VistaUpdateEmpleados.Designer.cs">
+      <DependentUpon>VistaUpdateEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Estadisticas\VistaProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Estadisticas\VistaProveedores.Designer.cs">
+      <DependentUpon>VistaProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Estadisticas\VistaStats.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\Estadisticas\VistaStats.Designer.cs">
       <DependentUpon>VistaStats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Estadisticas\VistaSuministros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Estadisticas\VistaSuministros.Designer.cs">
+      <DependentUpon>VistaSuministros.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Login\Bienvenida.cs">
       <SubType>Form</SubType>
@@ -90,11 +194,29 @@
     <Compile Include="Vista\Login\Bienvenida.Designer.cs">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Login\VistaForEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Login\VistaForEmail.Designer.cs">
+      <DependentUpon>VistaForEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Login\VistaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\Login\VistaLogin.Designer.cs">
       <DependentUpon>VistaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Login\VistaMetodosDeRecuperacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Login\VistaMetodosDeRecuperacion.Designer.cs">
+      <DependentUpon>VistaMetodosDeRecuperacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\MenuPrincipal\VistaAjustes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\MenuPrincipal\VistaAjustes.Designer.cs">
+      <DependentUpon>VistaAjustes.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\MenuPrincipal\VistaMenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -112,11 +234,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Ingles.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Ingles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spanish.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Spanish.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Busqueda\VistaBusqueda.resx">
       <DependentUpon>VistaBusqueda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Cuentas\CreateUser.resx">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Cuentas\VistaCuentas.resx">
       <DependentUpon>VistaCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Cuentas\VistaRestablecerPassword.resx">
+      <DependentUpon>VistaRestablecerPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Cuentas\VistaUpdateEmpleados.resx">
+      <DependentUpon>VistaUpdateEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Estadisticas\VistaStats.resx">
       <DependentUpon>VistaStats.cs</DependentUpon>
@@ -124,11 +263,21 @@
     <EmbeddedResource Include="Vista\Login\Bienvenida.resx">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Login\VistaForEmail.resx">
+      <DependentUpon>VistaForEmail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Login\VistaLogin.resx">
       <DependentUpon>VistaLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Login\VistaMetodosDeRecuperacion.resx">
+      <DependentUpon>VistaMetodosDeRecuperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\MenuPrincipal\VistaAjustes.resx">
+      <DependentUpon>VistaAjustes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaMenuPrincipal.resx">
       <DependentUpon>VistaMenuPrincipal.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -201,6 +350,68 @@
   <ItemGroup>
     <None Include="Resources\Imagen_de_WhatsApp_2024-07-08_a_las_17.27.06_487df51c-removebg-preview1.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Installing Updates.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Show.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Candado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Telefono logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo telefono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo telefono1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Telefono logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo Correo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo casa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo de casa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Casa logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Casa Logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloqueo-de-rotacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloqueo-de-rotacion %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bloqueo-de-rotacion %282%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

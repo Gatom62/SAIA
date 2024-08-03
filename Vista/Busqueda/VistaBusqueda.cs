@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AgroServicios.Controlador;
 using AgroServicios.Controlador.Busqueda;
 
 namespace AgroServicios.Vista.Busqueda
@@ -19,5 +20,18 @@ namespace AgroServicios.Vista.Busqueda
             ControladorBusqueda controladorBusqueda = new ControladorBusqueda(this);
         }
 
+        private void VistaBusqueda_Load(object sender, EventArgs e)
+        {
+            if(ControladorIdioma.idioma == 1)
+            {
+                label1.Text = Ingles.labelbuscar;
+                txtBuscar.PlaceholderText = Ingles.Busqueda;
+            }
+            if(ControladorTema.IsDarkMode == true)
+            {
+                GriewViewBuscar.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
+                GriewViewBuscar.BackgroundColor = Color.FromArgb(50, 56, 62);
+            }
+        }
     }
 }

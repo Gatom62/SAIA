@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using AgroServicios.Vista.Busqueda;
 using AgroServicios.Vista.MenuPrincipal;
 using AgroServicios.Vista.Estadisticas;
+using System.Data;
+using System.Windows.Forms;
+using AgroServicios.Modelo.DAO;
 
 namespace AgroServicios.Controlador.Busqueda
 {
@@ -22,20 +25,22 @@ namespace AgroServicios.Controlador.Busqueda
        public ControladorBusqueda(VistaBusqueda Busqueda)
         {
             ObjBusqueda = Busqueda;
+            ObjBusqueda.txtBuscar.KeyPress += new KeyPressEventHandler(BuscarProducto_KeyPress);
+
         }
 
-        private void OpenInicio(object sender, EventArgs e)
+        private void BuscarProducto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            VistaMenuPrincipal vistaMenuPrincipal = new VistaMenuPrincipal();
-            vistaMenuPrincipal.Show();
-            ObjBusqueda.Hide();
-        }
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                string criterio = ObjBusqueda.txtBuscar.Text.Trim();
+                DAOAdminUsers daoBuscar = new DAOAdminUsers();
+                DataTable dataTable = daoBuscar.BuscarProducto(criterio);
+                ObjBusqueda.GriewViewBuscar.DataSource = dataTable;
 
-        private void OpenStats(object sender, EventArgs e)
-        {
-            VistaStats vistaStats = new VistaStats();
-            vistaStats.Show();
-            ObjBusqueda.Hide();
+                // Prevenir el sonido de "ding"
+                e.Handled = true;
+            }
         }
     }
 }

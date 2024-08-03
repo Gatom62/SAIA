@@ -8,6 +8,8 @@ using AgroServicios.Vista.MenuPrincipal;
 using AgroServicios.Vista.Estadisticas;
 using AgroServicios.Vista.Busqueda;
 using AgroServicios.Vista.Cuentas;
+using AgroServicios.Vista.Login;
+using AgroServicios.Controlador.Helper;
 
 namespace AgroServicios.Controlador.MenuPrincipal
 {
@@ -26,7 +28,7 @@ namespace AgroServicios.Controlador.MenuPrincipal
             ObjMenu.btnStats.Click += new EventHandler(OpenStats);
             ObjMenu.btnBusqueda.Click += new EventHandler(OpenBusqueda);
             ObjMenu.btnInicio.Click += new EventHandler(OpenInicio);
-            ObjMenu.btnExit.Click += new EventHandler(CloseProgram);
+            ObjMenu.btnExit.Click += new EventHandler(CerrarSesion);
             ObjMenu.btnAccounts.Click += new EventHandler(OpenCuentas);
         }
  
@@ -40,16 +42,28 @@ namespace AgroServicios.Controlador.MenuPrincipal
             AbrirPanel<VistaStats>();
         }
 
-        private void CloseProgram(object sender, EventArgs e)
+        private void CerrarSesion(object sender, EventArgs e)
         {
-            Environment.Exit(0);
+            if (MessageBox.Show("¿Desea cerrar sesión?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                LimpiarVariablesSesion();
+                VistaLogin backForm = new VistaLogin();
+                backForm.Show();
+                ObjMenu.Dispose();
+            }
+        }
+        void LimpiarVariablesSesion()
+        {
+            StaticSession.Categorianame1 = string.Empty;
+            StaticSession.IdCategoria = 0;
+            StaticSession.Username = string.Empty;
         }
 
         private void AbrirPanel<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
 
-            formulario = ObjMenu.PanelView.Controls.OfType<MiForm>().FirstOrDefault();
+            formulario = ObjMenu.PanelContenedor.Controls.OfType<MiForm>().FirstOrDefault();
 
             if (formulario == null)
             {
@@ -69,14 +83,14 @@ namespace AgroServicios.Controlador.MenuPrincipal
                     //Se cierra el formulario actual para mostrar el nuevo formulario
                     currentForm.Close();
                     //Se eliminan del panel contenedor todos los controles del formulario que se cerrará
-                    ObjMenu.PanelView.Controls.Remove(currentForm);
+                    ObjMenu.PanelContenedor.Controls.Remove(currentForm);
                 }
                 //Se establece como nuevo formulario actual el formulario que se está abriendo
                 currentForm = formulario;
                 //Se agregan los controles del nuevo formulario al panel contenedor
-                ObjMenu.PanelView.Controls.Add(formulario);
+                ObjMenu.PanelContenedor.Controls.Add(formulario);
                 //Tag es una propiedad genérica disponible para la mayoría de los controles en aplicaciones .NET, incluyendo los paneles.
-                ObjMenu.PanelView.Tag = formulario;
+                ObjMenu.PanelContenedor.Tag = formulario;
                 //Se muestra el formulario en el panel contenedor
                 formulario.Show();
                 //Se trae al frente el formulario armado
@@ -100,12 +114,12 @@ namespace AgroServicios.Controlador.MenuPrincipal
 
         private void RestablecerPanelOriginal()
         {
-            ObjMenu.PanelView.Controls.Clear(); // Limpia el panel
+            ObjMenu.PanelContenedor.Controls.Clear(); // Limpia el panel
 
             // Clona los controles originales en PanelView
             foreach (Control control in ObjMenu.OriginalControls)
             {
-                ObjMenu.PanelView.Controls.Add(control);
+                ObjMenu.PanelContenedor.Controls.Add(control);
             }
         }
     }
