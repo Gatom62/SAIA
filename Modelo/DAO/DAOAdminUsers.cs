@@ -23,7 +23,7 @@ namespace AgroServicios.Modelo.DAO
                 //Accedemos a la conexión que ya se tiene
                 Command.Connection = getConnection();
                 //Instrucción que se hará hacia la base de datos
-                string query = "SELECT * FROM viewEmpleados";
+                string query = "SELECT * FROM VistaEmpleadosConRol";
                 //Comando sql en el cual se pasa la instrucción y la conexión
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 //Se ejecuta el comando y con ExecuteNonQuery se verifica su retorno
@@ -34,7 +34,7 @@ namespace AgroServicios.Modelo.DAO
                 //Se crea un objeto Dataset que es donde se devolverán los resultados
                 DataSet ds = new DataSet();
                 //Rellenamos con el Adaptador el DataSet diciendole de que tabla provienen los datos
-                adp.Fill(ds, "viewEmpleados");
+                adp.Fill(ds, "VistaEmpleadosConRol");
                 //Devolvemos el Dataset
                 return ds;
             }
@@ -255,6 +255,19 @@ namespace AgroServicios.Modelo.DAO
                 cmd.Parameters.AddWithValue("@pass", Contraseña1);
 
                 int respuesta = cmd.ExecuteNonQuery();
+                if (respuesta == 1)
+                {
+                    string query2 = "UPDATE Usuarios SET idCategoria = @idcat WHERE Usuario = @user";
+                                    //"idCategoria = @idcat" +
+                                    //"WHERE Usuario = @user";
+
+                    SqlCommand cmd2 = new SqlCommand(query2, getConnection());
+
+                    cmd2.Parameters.AddWithValue("idcat", IdCategoria);
+                    cmd2.Parameters.AddWithValue("user", Usuario1);
+                    respuesta = cmd2.ExecuteNonQuery();
+                    respuesta = 2;
+                }
                 return respuesta;
             }
             catch (Exception)

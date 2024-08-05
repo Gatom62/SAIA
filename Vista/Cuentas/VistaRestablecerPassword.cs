@@ -14,10 +14,10 @@ namespace AgroServicios.Vista.Cuentas
 {
     public partial class VistaRestablecerPassword : Form
     {
-        public VistaRestablecerPassword(string usuario)
+        public VistaRestablecerPassword(string usuario, string role)
         {
             InitializeComponent();
-            ControladorRestUser control = new ControladorRestUser(this, usuario);
+            ControladorRestUser control = new ControladorRestUser(this, usuario, role);
         }
 
         private void VistaRestablecerPassword_Load(object sender, EventArgs e)
@@ -28,6 +28,10 @@ namespace AgroServicios.Vista.Cuentas
                 bunifuGradientPanel2.GradientTopRight = Color.FromArgb(34, 36, 49);
                 bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(118, 88, 152);
                 bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(34, 36, 49);
+            }
+            if(ControladorIdioma.idioma == 1)
+            {
+                label1.Text = Ingles.LabelRestUser;
             }
         }
     }

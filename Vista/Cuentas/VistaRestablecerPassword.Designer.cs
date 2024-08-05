@@ -40,6 +40,9 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.DropRole = new Bunifu.UI.WinForms.BunifuDropdown();
             this.btnRestablecer = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -47,6 +50,7 @@
             this.txtRest = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +70,7 @@
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(800, 450);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(851, 515);
             this.bunifuGradientPanel2.TabIndex = 22;
             // 
             // bunifuPanel1
@@ -77,6 +81,8 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Black;
             this.bunifuPanel1.BorderRadius = 30;
             this.bunifuPanel1.BorderThickness = 2;
+            this.bunifuPanel1.Controls.Add(this.tableLayoutPanel1);
+            this.bunifuPanel1.Controls.Add(this.DropRole);
             this.bunifuPanel1.Controls.Add(this.btnRestablecer);
             this.bunifuPanel1.Controls.Add(this.pictureBox1);
             this.bunifuPanel1.Controls.Add(this.pictureBox3);
@@ -85,8 +91,78 @@
             this.bunifuPanel1.Location = new System.Drawing.Point(49, 48);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(694, 372);
+            this.bunifuPanel1.Size = new System.Drawing.Size(767, 429);
             this.bunifuPanel1.TabIndex = 0;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(767, 81);
+            this.tableLayoutPanel1.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(197, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(371, 44);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Restablecer usuario";
+            // 
+            // DropRole
+            // 
+            this.DropRole.BackColor = System.Drawing.Color.Transparent;
+            this.DropRole.BackgroundColor = System.Drawing.Color.White;
+            this.DropRole.BorderColor = System.Drawing.Color.Silver;
+            this.DropRole.BorderRadius = 17;
+            this.DropRole.Color = System.Drawing.Color.Silver;
+            this.DropRole.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.DropRole.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.DropRole.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.DropRole.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.DropRole.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.DropRole.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.DropRole.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.DropRole.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.DropRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DropRole.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.DropRole.FillDropDown = true;
+            this.DropRole.FillIndicator = false;
+            this.DropRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DropRole.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DropRole.ForeColor = System.Drawing.Color.Black;
+            this.DropRole.FormattingEnabled = true;
+            this.DropRole.Icon = null;
+            this.DropRole.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.DropRole.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.DropRole.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.DropRole.IndicatorThickness = 2;
+            this.DropRole.IsDropdownOpened = false;
+            this.DropRole.ItemBackColor = System.Drawing.Color.White;
+            this.DropRole.ItemBorderColor = System.Drawing.Color.White;
+            this.DropRole.ItemForeColor = System.Drawing.Color.Black;
+            this.DropRole.ItemHeight = 26;
+            this.DropRole.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.DropRole.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.DropRole.ItemTopMargin = 3;
+            this.DropRole.Location = new System.Drawing.Point(286, 292);
+            this.DropRole.Name = "DropRole";
+            this.DropRole.Size = new System.Drawing.Size(183, 32);
+            this.DropRole.TabIndex = 20;
+            this.DropRole.Text = null;
+            this.DropRole.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.DropRole.TextLeftMargin = 5;
             // 
             // btnRestablecer
             // 
@@ -135,7 +211,7 @@
             this.btnRestablecer.IdleIconLeftImage = null;
             this.btnRestablecer.IdleIconRightImage = null;
             this.btnRestablecer.IndicateFocus = false;
-            this.btnRestablecer.Location = new System.Drawing.Point(235, 291);
+            this.btnRestablecer.Location = new System.Drawing.Point(272, 358);
             this.btnRestablecer.Name = "btnRestablecer";
             this.btnRestablecer.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnRestablecer.OnDisabledState.BorderRadius = 1;
@@ -181,7 +257,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::AgroServicios.Properties.Resources.Logo_Candado;
-            this.pictureBox1.Location = new System.Drawing.Point(38, 191);
+            this.pictureBox1.Location = new System.Drawing.Point(90, 210);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(56, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -192,7 +268,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = global::AgroServicios.Properties.Resources.Rectangle_32;
-            this.pictureBox3.Location = new System.Drawing.Point(38, 70);
+            this.pictureBox3.Location = new System.Drawing.Point(90, 108);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(56, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -228,7 +304,7 @@
             this.txtRestPass.IconRight = null;
             this.txtRestPass.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRestPass.Lines = new string[0];
-            this.txtRestPass.Location = new System.Drawing.Point(100, 191);
+            this.txtRestPass.Location = new System.Drawing.Point(152, 210);
             this.txtRestPass.MaxLength = 32767;
             this.txtRestPass.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtRestPass.Modified = false;
@@ -304,7 +380,7 @@
             this.txtRest.IconRight = null;
             this.txtRest.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRest.Lines = new string[0];
-            this.txtRest.Location = new System.Drawing.Point(100, 70);
+            this.txtRest.Location = new System.Drawing.Point(152, 108);
             this.txtRest.MaxLength = 32767;
             this.txtRest.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtRest.Modified = false;
@@ -355,13 +431,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(851, 515);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Name = "VistaRestablecerPassword";
             this.Text = "VistaRestablecerPassword";
             this.Load += new System.EventHandler(this.VistaRestablecerPassword_Load);
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
@@ -376,5 +454,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnRestablecer;
         public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel2;
+        public Bunifu.UI.WinForms.BunifuDropdown DropRole;
+        public System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

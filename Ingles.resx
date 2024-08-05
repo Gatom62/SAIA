@@ -162,6 +162,9 @@
   <data name="LabeldeInicio" xml:space="preserve">
     <value>User Login</value>
   </data>
+  <data name="LabelRestUser" xml:space="preserve">
+    <value>Rest user</value>
+  </data>
   <data name="Menu" xml:space="preserve">
     <value>Options</value>
   </data>

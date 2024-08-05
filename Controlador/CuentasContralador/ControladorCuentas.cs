@@ -47,12 +47,14 @@ namespace AgroServicios.Controlador.CuentasContralador
         private void RestEmpleado(object sender, EventArgs e)
         {
             int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
-            string usuario;
+            string usuario, role;
 
             usuario = ObjEmpleados.GriewEmpleados[7, pos].Value.ToString();
+            role = ObjEmpleados.GriewEmpleados[8, pos].Value.ToString();
 
-            VistaRestablecerPassword vistaRestablecer = new VistaRestablecerPassword(usuario);
+            VistaRestablecerPassword vistaRestablecer = new VistaRestablecerPassword(usuario, role);
             vistaRestablecer.ShowDialog();
+            RefrescarData();
         }
         private void LoadData(object sender, EventArgs e)
         {
@@ -83,7 +85,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             //Declarando nuevo DataSet para que obtenga los datos del metodo ObtenerPersonas
             DataSet ds = objAdmin.ObtenerPersonas();
             ////Llenar DataGridView
-            ObjEmpleados.GriewEmpleados.DataSource = ds.Tables["viewEmpleados"];
+            ObjEmpleados.GriewEmpleados.DataSource = ds.Tables["VistaEmpleadosConRol"];
         }
 
         private void OpenFormCreateUser(object sender, EventArgs e)
