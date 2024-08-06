@@ -63,17 +63,34 @@ namespace AgroServicios.Controlador.Login
         }
 
 
-            /// <summary>
-            /// 
-            /// </summary>
-            /// <param name="sender"></param>
-            /// <param name="e"></param>
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
-            private void DataAccess(object sender, EventArgs e)
+        private void DataAccess(object sender, EventArgs e)
         {
+            string mensajeCampos, tituloCampos, mensajeError, tituloError;
+
+            if (ControladorIdioma.idioma == 1)
+            {
+                mensajeCampos = "You must fill in all the fields.";
+                tituloCampos = "Validation error";
+                mensajeError = "Incorrect data";
+                tituloError = "Login error";
+            }
+            else
+            {
+                mensajeCampos = "Debe rellenar todos los campos.";
+                tituloCampos = "Error de validación";
+                mensajeError = "Datos incorrectos";
+                tituloError = "Error al iniciar sesión";
+            }
+
             if (string.IsNullOrWhiteSpace(ObjLogin.txtUsername.Text) || string.IsNullOrWhiteSpace(ObjLogin.txtPassword.Text))
             {
-                MessageBox.Show("Debe rellenar todos los campos.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(mensajeCampos, tituloCampos, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -97,9 +114,10 @@ namespace AgroServicios.Controlador.Login
             }
             else
             {
-                MessageBox.Show("Datos incorrectos", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(mensajeError, tituloError, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
 
         private void ShowPassword(object sender, EventArgs e)
         {
