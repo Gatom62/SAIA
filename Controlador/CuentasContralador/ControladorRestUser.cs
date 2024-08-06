@@ -20,8 +20,9 @@ namespace AgroServicios.Controlador.CuentasContralador
         {
             objrest = Vista;
             this.role = role;
-            ChargeValues(usuario);
             objrest.Load += new EventHandler(InitialCharge);
+            ChargeValues(usuario);
+            
 
             objrest.btnRestablecer.Click += new EventHandler(RestablecerContraseña);
         }
