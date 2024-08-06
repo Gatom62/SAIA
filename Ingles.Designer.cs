@@ -196,6 +196,15 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Employee information.
+        /// </summary>
+        internal static string LabelFicha {
+            get {
+                return ResourceManager.GetString("LabelFicha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Rest user.
         /// </summary>
         internal static string LabelRestUser {

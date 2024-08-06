@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using AgroServicios.Controlador.Helper;
 using AgroServicios.Modelo.DAO;
 using AgroServicios.Vista.Cuentas;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace AgroServicios.Controlador.CuentasContralador
 {
@@ -23,6 +26,26 @@ namespace AgroServicios.Controlador.CuentasContralador
             ObjEmpleados.cmsEliminar.Click += new EventHandler(EliminarEmpleado);
             ObjEmpleados.cmsUpdate.Click += new EventHandler (UpdateEmpleado);
             ObjEmpleados.cmsRestablecer.Click += new EventHandler(RestEmpleado);
+            ObjEmpleados.cmsinfo.Click += new EventHandler(Infoempleado);
+        }
+        private void Infoempleado(object sender, EventArgs e)
+        {
+            int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
+            int id;
+            string Name, phone, email, dni, address;
+            DateTime birthday;
+
+            id = int.Parse(ObjEmpleados.GriewEmpleados[0, pos].Value.ToString());
+            Name = ObjEmpleados.GriewEmpleados[1, pos].Value.ToString();
+            birthday = DateTime.Parse(ObjEmpleados.GriewEmpleados[2, pos].Value.ToString());
+            phone = ObjEmpleados.GriewEmpleados[3, pos].Value.ToString();
+            email = ObjEmpleados.GriewEmpleados[4, pos].Value.ToString();
+            dni = ObjEmpleados.GriewEmpleados[5, pos].Value.ToString();
+            address = ObjEmpleados.GriewEmpleados[6, pos].Value.ToString();
+
+            VistaUpdateEmpleados vistaInfo = new VistaUpdateEmpleados(2, id, Name, phone, email, dni, address, birthday);
+            vistaInfo.ShowDialog();
+            RefrescarData();
         }
         private void UpdateEmpleado(object sender, EventArgs e)
         {

@@ -115,6 +115,15 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Información del empleado.
+        /// </summary>
+        internal static string LabelFicha {
+            get {
+                return ResourceManager.GetString("LabelFicha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Opciones.
         /// </summary>
         internal static string Menu {

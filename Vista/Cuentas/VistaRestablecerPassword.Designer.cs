@@ -372,6 +372,7 @@
             this.txtRest.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRest.DefaultFont = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRest.DefaultText = "";
+            this.txtRest.Enabled = false;
             this.txtRest.FillColor = System.Drawing.Color.White;
             this.txtRest.HideSelection = true;
             this.txtRest.IconLeft = null;
@@ -410,7 +411,7 @@
             this.txtRest.PasswordChar = '\0';
             this.txtRest.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtRest.PlaceholderText = "Usuario";
-            this.txtRest.ReadOnly = true;
+            this.txtRest.ReadOnly = false;
             this.txtRest.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtRest.SelectedText = "";
             this.txtRest.SelectionLength = 0;

@@ -23,9 +23,9 @@ namespace AgroServicios.Vista.Cuentas
 
         private void VistaUpdateEmpleados_Load(object sender, EventArgs e)
         {
+   
             if(ControladorIdioma.idioma == 1)
             {
-                bunifuLabel1.Text = Ingles.tituloactualizar;
                 txtUpdateNombre.PlaceholderText = Ingles.Nombre;
                 txtUpdatePhone.PlaceholderText = Ingles.Celular;
                 txtUpdateCorreo.PlaceholderText = Ingles.Correo;

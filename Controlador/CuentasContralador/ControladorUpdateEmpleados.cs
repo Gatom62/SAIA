@@ -18,6 +18,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             Objupdate = Vista;
             this.accion = accion;
             //Objupdate.Load += new EventHandler(InitialCharge);
+            verificarAccion();
             ChargeValues(id, Name, phone, email, dni, address, birthday);
 
             Objupdate.btnUpdateEmpleado.Click += new EventHandler(ActualizarRegistro);
@@ -37,7 +38,33 @@ namespace AgroServicios.Controlador.CuentasContralador
         //        Objupdate.DropRoleUpdate.Text = role;
         //    }
         //}
+        public void verificarAccion()
+        {
+            if (accion == 2)
+            {
+                Objupdate.bunifuLabel1.Text = Spanish.LabelFicha;
 
+                Objupdate.btnUpdateEmpleado.Visible = false;
+                if(ControladorIdioma.idioma == 1)
+                {
+                    Objupdate.bunifuLabel1.Text = Ingles.LabelFicha;
+                }
+           
+                Objupdate.txtUpdateNombre.Enabled = false;
+                Objupdate.txtUpdateCorreo.Enabled = false;
+                Objupdate.txtUpdateDireccion.Enabled = false;
+                Objupdate.txtUpdatePhone.Enabled = false;
+                Objupdate.maskedDuiUpdate.Enabled = false;
+                Objupdate.PickerBirthUpdate.Enabled = false;
+            }
+            if(accion == 1)
+            {
+                if(ControladorIdioma.idioma == 1)
+                {
+                    Objupdate.bunifuLabel1.Text = Ingles.tituloactualizar;
+                }
+            }
+        }
         private void ActualizarRegistro(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(Objupdate.txtUpdateNombre.Text) ||
