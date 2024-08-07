@@ -239,7 +239,6 @@
             this.GriewEmpleados.EnableHeadersVisualStyles = false;
             this.GriewEmpleados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.GriewEmpleados.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.GriewEmpleados.HeaderBgColor = System.Drawing.Color.Empty;
             this.GriewEmpleados.HeaderForeColor = System.Drawing.Color.White;
             this.GriewEmpleados.Location = new System.Drawing.Point(0, 64);
             this.GriewEmpleados.Name = "GriewEmpleados";

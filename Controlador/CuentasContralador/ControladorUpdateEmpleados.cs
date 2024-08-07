@@ -10,7 +10,6 @@ namespace AgroServicios.Controlador.CuentasContralador
     {
         VistaUpdateEmpleados Objupdate;
         private int accion;
-        private string role;
         bool verificacion;
 
         public ControladorUpdateEmpleados(VistaUpdateEmpleados Vista, int accion, int id, string Name, string phone, string email, string dni, string address, DateTime birthday)

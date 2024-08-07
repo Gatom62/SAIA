@@ -42,11 +42,7 @@ namespace AgroServicios.Vista.MenuPrincipal
         {
             if (ControladorTema.IsDarkMode == true)
             {
-                bunifuGradientPanel1.BackColor = Color.FromArgb(34, 36, 49);
-                bunifuGradientPanel1.GradientTopLeft = Color.FromArgb(34, 36, 49);
-                bunifuGradientPanel1.GradientBottomLeft = Color.FromArgb(34, 36, 49);
-                bunifuGradientPanel1.GradientBottomRight = Color.FromArgb(34, 36, 49);
-                bunifuGradientPanel1.GradientTopRight = Color.FromArgb(34, 36, 49);
+                panel1.BackColor = Color.FromArgb(34, 36, 49);
                 lblhora.ForeColor = Color.White;
                 lblfecha.ForeColor = Color.FromArgb(68, 197, 197);
                 PanelContenedor.BackColor = Color.FromArgb(18,18,18);
@@ -68,8 +64,7 @@ namespace AgroServicios.Vista.MenuPrincipal
                 btnBusqueda.BackColor = Color.FromArgb(230, 119, 11);
             }
         }
-
-        private void bunifuButton21_Click(object sender, EventArgs e)
+        private void btnConfi_Click_1(object sender, EventArgs e)
         {
             VistaAjustes vistaAjustes = new VistaAjustes();
             vistaAjustes.ShowDialog();
