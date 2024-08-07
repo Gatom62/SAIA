@@ -16,22 +16,6 @@ namespace AgroServicios.Vista.Login
 
         }
 
-        private void inglesToolStripMenuItem_Click(object sender, System.EventArgs e)
-        {
-            if (switchidioma.Checked)
-            {
-                ControladorIdioma.idioma = 1;
-            }
-            else
-            {
-                ControladorIdioma.idioma = 0;
-            }
-            if(ControladorIdioma.idioma == 1)
-            {
-                lblinicio.Text = Ingles.LabeldeInicio;
-            }
-        }
-
         private void switchidioma_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs e)
         {
             if (switchidioma.Checked)
