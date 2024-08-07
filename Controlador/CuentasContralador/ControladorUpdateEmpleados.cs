@@ -2,6 +2,7 @@
 using AgroServicios.Vista.Cuentas;
 using System;
 using System.Data;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace AgroServicios.Controlador.CuentasContralador
@@ -79,6 +80,16 @@ namespace AgroServicios.Controlador.CuentasContralador
                 return;
             }
 
+            // Validar el formato del número de teléfono
+            if (!ValidarTelefono(Objupdate.txtUpdatePhone.Text))
+            {
+                MessageBox.Show("El formato del número de teléfono es incorrecto. Debe ser +XXX XXXX-XXXX o XXXX-XXXX.",
+                                "Error de validación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
             DateTime fechaNacimiento = Objupdate.PickerBirthUpdate.Value.Date;
             DateTime fechaActual = DateTime.Today;
             int edad = fechaActual.Year - fechaNacimiento.Year;
@@ -137,6 +148,12 @@ namespace AgroServicios.Controlador.CuentasContralador
             Objupdate.PickerBirthUpdate.Value = birthday;
         }
 
+        bool ValidarTelefono(string phoneNumber)
+        {
+            // Expresión regular para validar números de teléfono en los formatos: +XXX XXXX-XXXX o XXXX-XXXX
+            string pattern = @"^(\+\d{1,3}\s\d{4}-\d{4}|\d{4}-\d{4})$";
+            return Regex.IsMatch(phoneNumber, pattern);
+        }
         bool ValidarCorreo()
         {
             string email = Objupdate.txtUpdateCorreo.Text.Trim();

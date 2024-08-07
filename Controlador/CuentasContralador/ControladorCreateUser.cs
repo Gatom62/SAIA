@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -93,6 +94,16 @@ namespace AgroServicios.Controlador.CuentasContralador
                 return;
             }
 
+            // Validar el formato del número de teléfono
+            if (!ValidarTelefono(ObjUsers.txtNewPhone.Text))
+            {
+                MessageBox.Show("El formato del número de teléfono es incorrecto. Debe ser +XXX XXXX-XXXX o XXXX-XXXX.",
+                                "Error de validación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
             // Validar que la fecha de nacimiento sea mayor de 18 años
             DateTime fechaNacimiento = ObjUsers.PickerBirth.Value.Date;
             DateTime fechaActual = DateTime.Today;
@@ -142,6 +153,13 @@ namespace AgroServicios.Controlador.CuentasContralador
                                     MessageBoxIcon.Error);
                 }
             }
+        }
+
+        bool ValidarTelefono(string phoneNumber)
+        {
+            // Expresión regular para validar números de teléfono en los formatos: +XXX XXXX-XXXX o XXXX-XXXX
+            string pattern = @"^(\+\d{1,3}\s\d{4}-\d{4}|\d{4}-\d{4})$";
+            return Regex.IsMatch(phoneNumber, pattern);
         }
 
         bool ValidarCorreo()
