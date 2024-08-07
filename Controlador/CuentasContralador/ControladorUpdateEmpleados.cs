@@ -150,7 +150,7 @@ namespace AgroServicios.Controlador.CuentasContralador
 
         bool ValidarTelefono(string phoneNumber)
         {
-            // Expresión regular para validar números de teléfono en los formatos: +XXX XXXX-XXXX o XXXX-XXXX
+            //validar números de teléfono en los formatos: +XXX XXXX-XXXX o XXXX-XXXX
             string pattern = @"^(\+\d{1,3}\s\d{4}-\d{4}|\d{4}-\d{4})$";
             return Regex.IsMatch(phoneNumber, pattern);
         }
