@@ -35,10 +35,5 @@ namespace AgroServicios.Vista.Cuentas
                 bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(34, 36, 49);
             }
         }
-
-        private void bunifuPanel1_Click(object sender, System.EventArgs e)
-        {
-
-        }
     }
 }

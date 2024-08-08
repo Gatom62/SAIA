@@ -34,7 +34,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             ObjUsers.Load += new EventHandler(InitialCharge);
 
             ObjUsers.btnCrearUsuario.Click += new EventHandler(NuevoRegistro);
-            ObjUsers.Zamparimg.Click += AgregarImagen;
+            ObjUsers.cmsimgsubir.Click += AgregarImagen;
         }
         void AgregarImagen(object sender, EventArgs e)
         {
@@ -45,7 +45,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 string rutaImagen = ofd.FileName;
-                ObjUsers.ptbImgProducto.Image = Image.FromFile(rutaImagen);
+                ObjUsers.ptbImgUser.Image = Image.FromFile(rutaImagen);
             }
         }
 
@@ -134,7 +134,7 @@ namespace AgroServicios.Controlador.CuentasContralador
                 return;
             }
 
-            Image imagen = ObjUsers.ptbImgProducto.Image;
+            Image imagen = ObjUsers.ptbImgUser.Image;
             byte[] imageBytes;
             if (imagen == null)
             {

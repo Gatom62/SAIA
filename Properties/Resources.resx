@@ -124,6 +124,9 @@
   <data name="Casa Logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Casa Logo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Logo telefono" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo telefono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="silueta-de-multiples-usuarios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\silueta-de-multiples-usuarios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -135,6 +138,9 @@
   </data>
   <data name="ph_house-bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ph_house-bold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo Candado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo Candado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Installing Updates" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Installing Updates.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,17 +169,14 @@
   <data name="wifi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wifi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tdesign_money" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tdesign_money.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="hugeicons_shopping-basket-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hugeicons_shopping-basket-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Vector (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Vector (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Group" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Group.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bloqueo-de-rotacion (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bloqueo-de-rotacion (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="button-7284379_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\button-7284379_1280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,23 +208,23 @@
   <data name="VAn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\VAn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Lupa 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lupa 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="bloqueo-de-rotacion (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bloqueo-de-rotacion (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo telefono" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo telefono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Vector (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vector (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tdesign_money" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tdesign_money.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="borrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\borrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Caja" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Caja.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo Candado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo Candado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="carro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\carro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,10 +235,10 @@
   <data name="informacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\informacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="borrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\borrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Lupa 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Lupa 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bloqueo-de-rotacion (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bloqueo-de-rotacion (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="image-" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image-.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

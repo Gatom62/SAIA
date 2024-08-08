@@ -35,6 +35,7 @@
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
+            this.ptbicon = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.label7 = new System.Windows.Forms.Label();
-            this.ptbicon = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbicon)).BeginInit();
@@ -200,6 +200,22 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Configuración del sistema";
             // 
+            // ptbicon
+            // 
+            this.ptbicon.AllowFocused = false;
+            this.ptbicon.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ptbicon.AutoSizeHeight = true;
+            this.ptbicon.BorderRadius = 35;
+            this.ptbicon.Image = ((System.Drawing.Image)(resources.GetObject("ptbicon.Image")));
+            this.ptbicon.IsCircle = true;
+            this.ptbicon.Location = new System.Drawing.Point(793, 3);
+            this.ptbicon.Name = "ptbicon";
+            this.ptbicon.Size = new System.Drawing.Size(70, 70);
+            this.ptbicon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbicon.TabIndex = 1;
+            this.ptbicon.TabStop = false;
+            this.ptbicon.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -297,22 +313,6 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 39);
             this.label7.TabIndex = 10;
-            // 
-            // ptbicon
-            // 
-            this.ptbicon.AllowFocused = false;
-            this.ptbicon.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ptbicon.AutoSizeHeight = true;
-            this.ptbicon.BorderRadius = 35;
-            this.ptbicon.Image = ((System.Drawing.Image)(resources.GetObject("ptbicon.Image")));
-            this.ptbicon.IsCircle = true;
-            this.ptbicon.Location = new System.Drawing.Point(793, 3);
-            this.ptbicon.Name = "ptbicon";
-            this.ptbicon.Size = new System.Drawing.Size(70, 70);
-            this.ptbicon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbicon.TabIndex = 1;
-            this.ptbicon.TabStop = false;
-            this.ptbicon.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
             // VistaAjustes
             // 

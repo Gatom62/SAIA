@@ -407,5 +407,8 @@
   <ItemGroup>
     <None Include="Resources\bloqueo-de-rotacion %282%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
