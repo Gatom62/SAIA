@@ -18,6 +18,7 @@ namespace AgroServicios.Modelo.DTO
         private string Contraseña;
         private int IntentosUsuario;
         private int idCategoria;
+        private byte[] img;
 
         public int IdEmpleado { get => idEmpleado; set => idEmpleado = value; }
         public string Nombre1 { get => Nombre; set => Nombre = value; }
@@ -31,5 +32,6 @@ namespace AgroServicios.Modelo.DTO
         public string Contraseña1 { get => Contraseña; set => Contraseña = value; }
         public int IntentosUsuario1 { get => IntentosUsuario; set => IntentosUsuario = value; }
         public int IdCategoria { get => idCategoria; set => idCategoria = value; }
+        public byte[] Img { get => img; set => img = value; }
     }
 }

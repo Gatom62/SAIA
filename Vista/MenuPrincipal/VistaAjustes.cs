@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,7 @@ namespace AgroServicios.Vista.MenuPrincipal
             this.FormBorderStyle = FormBorderStyle.None;
             Region = Region.FromHrgn(CommonClasses.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
-
+     
         private void DarkMode_CheckedChanged(object sender, EventArgs e)
         {
             if (DarkMode.Checked)
@@ -74,6 +75,10 @@ namespace AgroServicios.Vista.MenuPrincipal
                 tableLayoutPanel1.BackColor = Color.FromArgb(230, 119, 11);
                 this.BackColor = Color.FromArgb(34, 36, 49);
 
+            }
+            using (MemoryStream ms = new MemoryStream(StaticSession.Picture))
+            {
+                ptbicon.Image = Image.FromStream(ms);
             }
         }
 

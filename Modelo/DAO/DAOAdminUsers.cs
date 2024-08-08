@@ -95,7 +95,7 @@ namespace AgroServicios.Modelo.DAO
                 //**
                 //Se crea el query que indica la acción que el sistema desea realizar con la base de datos
                 //el query posee parametros para evitar algún tipo de ataque como SQL Injection
-                string query2 = "INSERT INTO Usuarios(Usuario, Contraseña, IntentosUsuario, idCategoria) VALUES (@username, @password, @userAttempts, @roleId)";
+                string query2 = "INSERT INTO Usuarios(Usuario, Contraseña, IntentosUsuario, idCategoria, picprofile) VALUES (@username, @password, @userAttempts, @roleId, @picture)";
                 //Se crea un comando de tipo sql al cual se le pasa el query y la conexión, esto para que el sistema sepa que hacer y donde hacerlo.
                 SqlCommand cmd2 = new SqlCommand(query2, Command.Connection);
                 //Se le da un valor a los parametros contenidos en el query, es importante mencionar que lo que esta entre comillas es el nombre del parametro y lo que esta después de la coma es el valor que se le asignará al parametro, estos valores vienen del DTO respectivo.
@@ -103,6 +103,7 @@ namespace AgroServicios.Modelo.DAO
                 cmd2.Parameters.AddWithValue("password", Contraseña1);
                 cmd2.Parameters.AddWithValue("userAttempts", IntentosUsuario1);
                 cmd2.Parameters.AddWithValue("roleId", IdCategoria);
+                cmd2.Parameters.AddWithValue("picture", Img);
                 //Se ejecuta el comando ya con todos los valores de sus parametros.
                 //ExecuteNonQuery indicará cuantos filas fueron afectadas, es decir, cuantas filas de datos se ingresaron, por lo general devolvera 1 porque se hace una inserción a la vez.
                 int respuesta = cmd2.ExecuteNonQuery();

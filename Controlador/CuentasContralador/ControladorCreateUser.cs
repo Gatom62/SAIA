@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -32,6 +34,19 @@ namespace AgroServicios.Controlador.CuentasContralador
             ObjUsers.Load += new EventHandler(InitialCharge);
 
             ObjUsers.btnCrearUsuario.Click += new EventHandler(NuevoRegistro);
+            ObjUsers.Zamparimg.Click += AgregarImagen;
+        }
+        void AgregarImagen(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png| Todos los archivos(*.*)| *.* ";
+            ofd.Title = "Seleccionar imagen";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                string rutaImagen = ofd.FileName;
+                ObjUsers.ptbImgProducto.Image = Image.FromFile(rutaImagen);
+            }
         }
 
         public void InitialCharge(object sender, EventArgs e)
@@ -119,10 +134,24 @@ namespace AgroServicios.Controlador.CuentasContralador
                 return;
             }
 
+            Image imagen = ObjUsers.ptbImgProducto.Image;
+            byte[] imageBytes;
+            if (imagen == null)
+            {
+                imageBytes = null;
+            }
+            else
+            {
+                MemoryStream ms = new MemoryStream();
+                imagen.Save(ms, ImageFormat.Jpeg);
+                imageBytes = ms.ToArray();
+            }
+
             DAOAdminUsers DaoInsert = new DAOAdminUsers();
             Encryp ObjEncriptar = new Encryp();
 
-            // Asignar los valores a las propiedades de DaoInsert
+            // Asignar los valores a las propiedades
+            DaoInsert.Img = imageBytes;
             DaoInsert.Nombre1 = ObjUsers.txtNewFirstName.Text.Trim();
             DaoInsert.FechaDeNacimiento1 = fechaNacimiento;
             DaoInsert.Telefono1 = ObjUsers.txtNewPhone.Text.Trim();

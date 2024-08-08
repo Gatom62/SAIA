@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaAjustes));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.DarkMode = new Bunifu.UI.WinForms.BunifuToggleSwitch2();
             this.bunifuButton21 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -43,8 +43,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.label7 = new System.Windows.Forms.Label();
+            this.ptbicon = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbicon)).BeginInit();
             this.SuspendLayout();
             // 
             // DarkMode
@@ -83,11 +85,11 @@
             this.bunifuButton21.ColorContrastOnClick = 45;
             this.bunifuButton21.ColorContrastOnHover = 45;
             this.bunifuButton21.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.bunifuButton21.CustomizableEdges = borderEdges2;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.bunifuButton21.CustomizableEdges = borderEdges1;
             this.bunifuButton21.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton21.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton21.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -178,6 +180,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.ptbicon, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -295,6 +298,22 @@
             this.label7.Size = new System.Drawing.Size(0, 39);
             this.label7.TabIndex = 10;
             // 
+            // ptbicon
+            // 
+            this.ptbicon.AllowFocused = false;
+            this.ptbicon.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ptbicon.AutoSizeHeight = true;
+            this.ptbicon.BorderRadius = 35;
+            this.ptbicon.Image = ((System.Drawing.Image)(resources.GetObject("ptbicon.Image")));
+            this.ptbicon.IsCircle = true;
+            this.ptbicon.Location = new System.Drawing.Point(793, 3);
+            this.ptbicon.Name = "ptbicon";
+            this.ptbicon.Size = new System.Drawing.Size(70, 70);
+            this.ptbicon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbicon.TabIndex = 1;
+            this.ptbicon.TabStop = false;
+            this.ptbicon.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
             // VistaAjustes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -318,6 +337,7 @@
             this.bunifuPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbicon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,5 +358,6 @@
         public System.Windows.Forms.Label label6;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
         public System.Windows.Forms.Label label7;
+        public Bunifu.UI.WinForms.BunifuPictureBox ptbicon;
     }
 }
