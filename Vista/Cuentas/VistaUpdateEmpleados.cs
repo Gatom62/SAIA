@@ -15,10 +15,10 @@ namespace AgroServicios.Vista.Cuentas
 {
     public partial class VistaUpdateEmpleados : Form
     {
-        public VistaUpdateEmpleados(int accion, int id, string Name, string phone, string email, string dni, string address, DateTime birthday)
+        public VistaUpdateEmpleados(int accion, int id, string Name, string phone, string email, string dni, string address, DateTime birthday, byte[] img)
         {
             InitializeComponent();
-            ControladorUpdateEmpleados control = new ControladorUpdateEmpleados(this, accion, id, Name, phone, email, dni, address, birthday);  
+            ControladorUpdateEmpleados control = new ControladorUpdateEmpleados(this, accion, id, Name, phone, email, dni, address, birthday, img);  
         }
 
         private void VistaUpdateEmpleados_Load(object sender, EventArgs e)
@@ -40,5 +40,6 @@ namespace AgroServicios.Vista.Cuentas
                 bunifuGradientPanel1.GradientTopLeft = Color.FromArgb(34, 36, 49);
             }
         }
+
     }
 }

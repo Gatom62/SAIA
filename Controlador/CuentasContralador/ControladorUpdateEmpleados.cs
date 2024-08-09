@@ -1,7 +1,8 @@
 ﻿using AgroServicios.Modelo.DAO;
 using AgroServicios.Vista.Cuentas;
 using System;
-using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -13,13 +14,13 @@ namespace AgroServicios.Controlador.CuentasContralador
         private int accion;
         bool verificacion;
 
-        public ControladorUpdateEmpleados(VistaUpdateEmpleados Vista, int accion, int id, string Name, string phone, string email, string dni, string address, DateTime birthday)
+        public ControladorUpdateEmpleados(VistaUpdateEmpleados Vista, int accion, int id, string Name, string phone, string email, string dni, string address, DateTime birthday, byte[] img)
         {
             Objupdate = Vista;
             this.accion = accion;
             //Objupdate.Load += new EventHandler(InitialCharge);
             verificarAccion();
-            ChargeValues(id, Name, phone, email, dni, address, birthday);
+            ChargeValues(id, Name, phone, email, dni, address, birthday, img);
 
             Objupdate.btnUpdateEmpleado.Click += new EventHandler(ActualizarRegistro);
         }
@@ -137,7 +138,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             }
         }
 
-        public void ChargeValues(int id, string Name, string phone, string email, string dni, string address, DateTime birthday)
+        public void ChargeValues(int id, string Name, string phone, string email, string dni, string address, DateTime birthday, byte[] img)
         {
             Objupdate.txtid.Text = id.ToString();
             Objupdate.txtUpdateNombre.Text = Name;
@@ -146,6 +147,10 @@ namespace AgroServicios.Controlador.CuentasContralador
             Objupdate.maskedDuiUpdate.Text = dni;
             Objupdate.txtUpdateDireccion.Text = address;
             Objupdate.PickerBirthUpdate.Value = birthday;
+            using (MemoryStream ms = new MemoryStream(img))
+            {
+                Objupdate.ptbactimg.Image = Image.FromStream(ms);
+            }
         }
 
         bool ValidarTelefono(string phoneNumber)

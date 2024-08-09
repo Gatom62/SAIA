@@ -34,6 +34,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             int id;
             string Name, phone, email, dni, address;
             DateTime birthday;
+            byte[] img;
 
             id = int.Parse(ObjEmpleados.GriewEmpleados[0, pos].Value.ToString());
             Name = ObjEmpleados.GriewEmpleados[1, pos].Value.ToString();
@@ -42,8 +43,9 @@ namespace AgroServicios.Controlador.CuentasContralador
             email = ObjEmpleados.GriewEmpleados[4, pos].Value.ToString();
             dni = ObjEmpleados.GriewEmpleados[5, pos].Value.ToString();
             address = ObjEmpleados.GriewEmpleados[6, pos].Value.ToString();
+            img = (byte[])ObjEmpleados.GriewEmpleados[9, pos].Value;
 
-            VistaUpdateEmpleados vistaInfo = new VistaUpdateEmpleados(2, id, Name, phone, email, dni, address, birthday);
+            VistaUpdateEmpleados vistaInfo = new VistaUpdateEmpleados(2, id, Name, phone, email, dni, address, birthday, img);
             vistaInfo.ShowDialog();
             RefrescarData();
         }
@@ -53,6 +55,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             int id;
             string Name, phone, email, dni, address;
             DateTime birthday;
+            byte[] img;
 
             id = int.Parse(ObjEmpleados.GriewEmpleados[0, pos].Value.ToString());
             Name = ObjEmpleados.GriewEmpleados[1, pos].Value.ToString();
@@ -61,9 +64,10 @@ namespace AgroServicios.Controlador.CuentasContralador
             email = ObjEmpleados.GriewEmpleados[4, pos].Value.ToString();
             dni = ObjEmpleados.GriewEmpleados[5, pos].Value.ToString();
             address = ObjEmpleados.GriewEmpleados[6, pos].Value.ToString();
+            img = (byte[])ObjEmpleados.GriewEmpleados[9, pos].Value;
 
 
-           VistaUpdateEmpleados vistaUpdate = new VistaUpdateEmpleados(1, id, Name, phone, email, dni, address, birthday);
+            VistaUpdateEmpleados vistaUpdate = new VistaUpdateEmpleados(1, id, Name, phone, email, dni, address, birthday, img);
             vistaUpdate.ShowDialog();
             RefrescarData();
         }

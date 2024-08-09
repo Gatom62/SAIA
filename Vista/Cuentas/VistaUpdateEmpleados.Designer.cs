@@ -60,22 +60,24 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuLabel1 = new System.Windows.Forms.Label();
+            this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.ptbactimg = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
-            this.bunifuGradientPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbactimg)).BeginInit();
             this.SuspendLayout();
             // 
             // maskedDuiUpdate
             // 
-            this.maskedDuiUpdate.Location = new System.Drawing.Point(447, 431);
+            this.maskedDuiUpdate.Location = new System.Drawing.Point(455, 512);
             this.maskedDuiUpdate.Mask = "00000000-0";
             this.maskedDuiUpdate.Name = "maskedDuiUpdate";
             this.maskedDuiUpdate.Size = new System.Drawing.Size(82, 22);
@@ -110,7 +112,7 @@
             this.txtUpdateDireccion.IconRight = null;
             this.txtUpdateDireccion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUpdateDireccion.Lines = new string[0];
-            this.txtUpdateDireccion.Location = new System.Drawing.Point(120, 347);
+            this.txtUpdateDireccion.Location = new System.Drawing.Point(128, 428);
             this.txtUpdateDireccion.MaxLength = 32767;
             this.txtUpdateDireccion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUpdateDireccion.Modified = false;
@@ -186,7 +188,7 @@
             this.txtUpdateCorreo.IconRight = null;
             this.txtUpdateCorreo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUpdateCorreo.Lines = new string[0];
-            this.txtUpdateCorreo.Location = new System.Drawing.Point(120, 269);
+            this.txtUpdateCorreo.Location = new System.Drawing.Point(128, 350);
             this.txtUpdateCorreo.MaxLength = 32767;
             this.txtUpdateCorreo.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUpdateCorreo.Modified = false;
@@ -262,7 +264,7 @@
             this.txtUpdatePhone.IconRight = null;
             this.txtUpdatePhone.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUpdatePhone.Lines = new string[0];
-            this.txtUpdatePhone.Location = new System.Drawing.Point(120, 186);
+            this.txtUpdatePhone.Location = new System.Drawing.Point(128, 267);
             this.txtUpdatePhone.MaxLength = 32767;
             this.txtUpdatePhone.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUpdatePhone.Modified = false;
@@ -328,7 +330,7 @@
             this.PickerBirthUpdate.IconColor = System.Drawing.Color.Black;
             this.PickerBirthUpdate.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.PickerBirthUpdate.LeftTextMargin = 5;
-            this.PickerBirthUpdate.Location = new System.Drawing.Point(161, 427);
+            this.PickerBirthUpdate.Location = new System.Drawing.Point(169, 508);
             this.PickerBirthUpdate.MinimumSize = new System.Drawing.Size(4, 32);
             this.PickerBirthUpdate.Name = "PickerBirthUpdate";
             this.PickerBirthUpdate.Size = new System.Drawing.Size(250, 32);
@@ -364,7 +366,7 @@
             this.txtUpdateNombre.IconRight = null;
             this.txtUpdateNombre.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUpdateNombre.Lines = new string[0];
-            this.txtUpdateNombre.Location = new System.Drawing.Point(120, 100);
+            this.txtUpdateNombre.Location = new System.Drawing.Point(128, 181);
             this.txtUpdateNombre.MaxLength = 32767;
             this.txtUpdateNombre.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUpdateNombre.Modified = false;
@@ -460,7 +462,7 @@
             this.btnUpdateEmpleado.IdleIconLeftImage = null;
             this.btnUpdateEmpleado.IdleIconRightImage = null;
             this.btnUpdateEmpleado.IndicateFocus = false;
-            this.btnUpdateEmpleado.Location = new System.Drawing.Point(295, 484);
+            this.btnUpdateEmpleado.Location = new System.Drawing.Point(303, 565);
             this.btnUpdateEmpleado.Name = "btnUpdateEmpleado";
             this.btnUpdateEmpleado.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnUpdateEmpleado.OnDisabledState.BorderRadius = 51;
@@ -518,7 +520,6 @@
             // txtid
             // 
             this.txtid.BackColor = System.Drawing.Color.White;
-            this.txtid.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtid.ForeColor = System.Drawing.Color.White;
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
@@ -528,7 +529,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = global::AgroServicios.Properties.Resources.Rectangle_32;
-            this.pictureBox3.Location = new System.Drawing.Point(58, 100);
+            this.pictureBox3.Location = new System.Drawing.Point(66, 181);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(56, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -539,7 +540,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.White;
             this.pictureBox5.Image = global::AgroServicios.Properties.Resources.Logo_Correo;
-            this.pictureBox5.Location = new System.Drawing.Point(58, 269);
+            this.pictureBox5.Location = new System.Drawing.Point(66, 350);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(56, 50);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -550,7 +551,7 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.White;
             this.pictureBox6.Image = global::AgroServicios.Properties.Resources.Casa_Logo2;
-            this.pictureBox6.Location = new System.Drawing.Point(58, 347);
+            this.pictureBox6.Location = new System.Drawing.Point(66, 428);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(56, 50);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -561,7 +562,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
             this.pictureBox4.Image = global::AgroServicios.Properties.Resources.Telefono_logo1;
-            this.pictureBox4.Location = new System.Drawing.Point(58, 186);
+            this.pictureBox4.Location = new System.Drawing.Point(66, 267);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(56, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -576,6 +577,7 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Black;
             this.bunifuPanel1.BorderRadius = 30;
             this.bunifuPanel1.BorderThickness = 2;
+            this.bunifuPanel1.Controls.Add(this.ptbactimg);
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel1);
             this.bunifuPanel1.Controls.Add(this.pictureBox3);
             this.bunifuPanel1.Controls.Add(this.pictureBox4);
@@ -588,11 +590,37 @@
             this.bunifuPanel1.Controls.Add(this.btnUpdateEmpleado);
             this.bunifuPanel1.Controls.Add(this.PickerBirthUpdate);
             this.bunifuPanel1.Controls.Add(this.maskedDuiUpdate);
-            this.bunifuPanel1.Location = new System.Drawing.Point(99, 37);
+            this.bunifuPanel1.Location = new System.Drawing.Point(59, 38);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(769, 561);
+            this.bunifuPanel1.Size = new System.Drawing.Size(798, 633);
             this.bunifuPanel1.TabIndex = 28;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.Controls.Add(this.bunifuLabel1, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(798, 66);
+            this.tableLayoutPanel1.TabIndex = 29;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuLabel1.AutoSize = true;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.Location = new System.Drawing.Point(238, 14);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.Size = new System.Drawing.Size(320, 37);
+            this.bunifuLabel1.TabIndex = 0;
+            this.bunifuLabel1.Text = "Actualizar Empleado";
             // 
             // bunifuGradientPanel1
             // 
@@ -609,45 +637,33 @@
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(954, 638);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(960, 708);
             this.bunifuGradientPanel1.TabIndex = 29;
             // 
-            // tableLayoutPanel1
+            // ptbactimg
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel1.Controls.Add(this.bunifuLabel1, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(769, 66);
-            this.tableLayoutPanel1.TabIndex = 29;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuLabel1.AutoSize = true;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(224, 14);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.Size = new System.Drawing.Size(320, 37);
-            this.bunifuLabel1.TabIndex = 0;
-            this.bunifuLabel1.Text = "Actualizar Empleado";
+            this.ptbactimg.AllowFocused = false;
+            this.ptbactimg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ptbactimg.AutoSizeHeight = true;
+            this.ptbactimg.BorderRadius = 45;
+            this.ptbactimg.Image = ((System.Drawing.Image)(resources.GetObject("ptbactimg.Image")));
+            this.ptbactimg.IsCircle = true;
+            this.ptbactimg.Location = new System.Drawing.Point(342, 79);
+            this.ptbactimg.Name = "ptbactimg";
+            this.ptbactimg.Size = new System.Drawing.Size(90, 90);
+            this.ptbactimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbactimg.TabIndex = 30;
+            this.ptbactimg.TabStop = false;
+            this.ptbactimg.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
             // VistaUpdateEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(954, 638);
+            this.ClientSize = new System.Drawing.Size(960, 708);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Controls.Add(this.menuStrip1);
-            this.MaximumSize = new System.Drawing.Size(972, 685);
-            this.MinimumSize = new System.Drawing.Size(972, 685);
             this.Name = "VistaUpdateEmpleados";
             this.Text = "VistaUpdateEmpleados";
             this.Load += new System.EventHandler(this.VistaUpdateEmpleados_Load);
@@ -659,9 +675,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
-            this.bunifuGradientPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.bunifuGradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbactimg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -686,5 +703,6 @@
         public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         public System.Windows.Forms.Label bunifuLabel1;
+        public Bunifu.UI.WinForms.BunifuPictureBox ptbactimg;
     }
 }
