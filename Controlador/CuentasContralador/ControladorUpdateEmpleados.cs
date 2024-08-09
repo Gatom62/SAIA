@@ -2,6 +2,7 @@
 using AgroServicios.Vista.Cuentas;
 using System;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -14,17 +15,30 @@ namespace AgroServicios.Controlador.CuentasContralador
         private int accion;
         bool verificacion;
 
-        public ControladorUpdateEmpleados(VistaUpdateEmpleados Vista, int accion, int id, string Name, string phone, string email, string dni, string address, DateTime birthday, byte[] img)
+        public ControladorUpdateEmpleados(VistaUpdateEmpleados Vista, int accion, int id, string Name, string phone, string email, string dni, string address, DateTime birthday, byte[] img, string user)
         {
             Objupdate = Vista;
             this.accion = accion;
             //Objupdate.Load += new EventHandler(InitialCharge);
             verificarAccion();
-            ChargeValues(id, Name, phone, email, dni, address, birthday, img);
+            ChargeValues(id, Name, phone, email, dni, address, birthday, img, user);
 
             Objupdate.btnUpdateEmpleado.Click += new EventHandler(ActualizarRegistro);
+            Objupdate.cmsactimg.Click += AgregarImagen;
         }
 
+        void AgregarImagen(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png| Todos los archivos(*.*)| *.* ";
+            ofd.Title = "Seleccionar imagen";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                string rutaImagen = ofd.FileName;
+                Objupdate.ptbactimg.Image = Image.FromFile(rutaImagen);
+            }
+        }
         //public void InitialCharge(object sender, EventArgs e)
         //{
         //    DAOAdminUsers objAdmin = new DAOAdminUsers();
@@ -105,8 +119,22 @@ namespace AgroServicios.Controlador.CuentasContralador
                 return;
             }
 
-            DAOAdminUsers DaoUpdate = new DAOAdminUsers();
+            Image imagen = Objupdate.ptbactimg.Image;
+            byte[] imageBytes;
+            if (imagen == null)
+            {
+                imageBytes = null;
+            }
+            else
+            {
+                MemoryStream ms = new MemoryStream();
+                imagen.Save(ms, ImageFormat.Jpeg);
+                imageBytes = ms.ToArray();
+            }
 
+            DAOAdminUsers DaoUpdate = new DAOAdminUsers();
+            DaoUpdate.Usuario1 = Objupdate.txtUser.Text.Trim();
+            DaoUpdate.Img = imageBytes;
             DaoUpdate.IdEmpleado = int.Parse(Objupdate.txtid.Text.Trim());
             DaoUpdate.Nombre1 = Objupdate.txtUpdateNombre.Text.Trim();
             DaoUpdate.FechaDeNacimiento1 = Objupdate.PickerBirthUpdate.Value;
@@ -138,7 +166,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             }
         }
 
-        public void ChargeValues(int id, string Name, string phone, string email, string dni, string address, DateTime birthday, byte[] img)
+        public void ChargeValues(int id, string Name, string phone, string email, string dni, string address, DateTime birthday, byte[] img, string user)
         {
             Objupdate.txtid.Text = id.ToString();
             Objupdate.txtUpdateNombre.Text = Name;
@@ -147,6 +175,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             Objupdate.maskedDuiUpdate.Text = dni;
             Objupdate.txtUpdateDireccion.Text = address;
             Objupdate.PickerBirthUpdate.Value = birthday;
+            Objupdate.txtUser.Text = user;
             using (MemoryStream ms = new MemoryStream(img))
             {
                 Objupdate.ptbactimg.Image = Image.FromStream(ms);

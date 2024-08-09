@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Security;
@@ -219,19 +220,37 @@ namespace AgroServicios.Modelo.DAO
             {
                 Command.Connection = getConnection();
 
-                string query = "UPDATE Empleados SET Nombre = @nombre, FechaDeNacimiento = @fechaDeNacimiento, Telefono = @telefono, Correo = @correo, DUI = @dui, Direccion = @direccion WHERE idEmpleado = @idEmpleado";
-                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                string query2 = "UPDATE Usuarios SET picprofile = @img WHERE Usuario = @user";
+                SqlCommand cmd2 = new SqlCommand(query2, Command.Connection);
 
-                cmd.Parameters.AddWithValue("@idEmpleado", IdEmpleado);
-                cmd.Parameters.AddWithValue("@nombre", Nombre1);
-                cmd.Parameters.AddWithValue("@fechaDeNacimiento", FechaDeNacimiento1);
-                cmd.Parameters.AddWithValue("@telefono", Telefono1);
-                cmd.Parameters.AddWithValue("@correo", Correo1);
-                cmd.Parameters.AddWithValue("@dui", DUI1);
-                cmd.Parameters.AddWithValue("@direccion", Direccion1);
+                cmd2.Parameters.AddWithValue("img", Img);
+                cmd2.Parameters.AddWithValue("user", Usuario1);
 
-                int respuesta = cmd.ExecuteNonQuery();
-                return respuesta;
+                int respuesta = cmd2.ExecuteNonQuery();
+
+                if (respuesta == 1)
+                {
+
+
+                    string query = "UPDATE Empleados SET Nombre = @nombre, FechaDeNacimiento = @fechaDeNacimiento, Telefono = @telefono, Correo = @correo, DUI = @dui, Direccion = @direccion WHERE idEmpleado = @idEmpleado";
+                    SqlCommand cmd = new SqlCommand(query, Command.Connection);
+
+                    cmd.Parameters.AddWithValue("@idEmpleado", IdEmpleado);
+                    cmd.Parameters.AddWithValue("@nombre", Nombre1);
+                    cmd.Parameters.AddWithValue("@fechaDeNacimiento", FechaDeNacimiento1);
+                    cmd.Parameters.AddWithValue("@telefono", Telefono1);
+                    cmd.Parameters.AddWithValue("@correo", Correo1);
+                    cmd.Parameters.AddWithValue("@dui", DUI1);
+                    cmd.Parameters.AddWithValue("@direccion", Direccion1);
+
+                    respuesta = cmd.ExecuteNonQuery();
+                    return respuesta;
+                }
+                else
+                {
+                    //Se retorna cero si sus valores no pudieron ser ingresados
+                    return 0;
+                }
             }
             catch (Exception)
             {

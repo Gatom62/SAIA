@@ -32,10 +32,11 @@ namespace AgroServicios.Controlador.CuentasContralador
         {
             int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
             int id;
-            string Name, phone, email, dni, address;
+            string Name, phone, email, dni, address, user;
             DateTime birthday;
             byte[] img;
 
+            user = ObjEmpleados.GriewEmpleados[7, pos].Value.ToString();
             id = int.Parse(ObjEmpleados.GriewEmpleados[0, pos].Value.ToString());
             Name = ObjEmpleados.GriewEmpleados[1, pos].Value.ToString();
             birthday = DateTime.Parse(ObjEmpleados.GriewEmpleados[2, pos].Value.ToString());
@@ -45,7 +46,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             address = ObjEmpleados.GriewEmpleados[6, pos].Value.ToString();
             img = (byte[])ObjEmpleados.GriewEmpleados[9, pos].Value;
 
-            VistaUpdateEmpleados vistaInfo = new VistaUpdateEmpleados(2, id, Name, phone, email, dni, address, birthday, img);
+            VistaUpdateEmpleados vistaInfo = new VistaUpdateEmpleados(2, id, Name, phone, email, dni, address, birthday, img, user);
             vistaInfo.ShowDialog();
             RefrescarData();
         }
@@ -53,10 +54,11 @@ namespace AgroServicios.Controlador.CuentasContralador
         {
             int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
             int id;
-            string Name, phone, email, dni, address;
+            string Name, phone, email, dni, address, user;
             DateTime birthday;
             byte[] img;
 
+            user = ObjEmpleados.GriewEmpleados[7, pos].Value.ToString();
             id = int.Parse(ObjEmpleados.GriewEmpleados[0, pos].Value.ToString());
             Name = ObjEmpleados.GriewEmpleados[1, pos].Value.ToString();
             birthday = DateTime.Parse(ObjEmpleados.GriewEmpleados[2, pos].Value.ToString());
@@ -67,7 +69,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             img = (byte[])ObjEmpleados.GriewEmpleados[9, pos].Value;
 
 
-            VistaUpdateEmpleados vistaUpdate = new VistaUpdateEmpleados(1, id, Name, phone, email, dni, address, birthday, img);
+            VistaUpdateEmpleados vistaUpdate = new VistaUpdateEmpleados(1, id, Name, phone, email, dni, address, birthday, img, user);
             vistaUpdate.ShowDialog();
             RefrescarData();
         }
