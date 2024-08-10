@@ -118,10 +118,18 @@
     <Compile Include="Modelo\DAO\DAODCSoporte.cs" />
     <Compile Include="Modelo\DAO\DAOLogin.cs" />
     <Compile Include="Modelo\DAO\DAORecuperarPass.cs" />
+    <Compile Include="Modelo\DAO\DAOTargproductos.cs" />
     <Compile Include="Modelo\dbContext.cs" />
     <Compile Include="Modelo\DTO\DTOAdminUsers.cs" />
     <Compile Include="Modelo\DTO\DTOCorreoRecuperacion.cs" />
     <Compile Include="Modelo\DTO\DTOLogin.cs" />
+    <Compile Include="Modelo\DTO\DTOTargproductos.cs" />
+    <Compile Include="ProductosTarg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProductosTarg.Designer.cs">
+      <DependentUpon>ProductosTarg.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ingles.Designer.cs">
@@ -224,6 +232,9 @@
     <Compile Include="Vista\MenuPrincipal\VistaProductos.Designer.cs">
       <DependentUpon>VistaProductos.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ProductosTarg.resx">
+      <DependentUpon>ProductosTarg.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

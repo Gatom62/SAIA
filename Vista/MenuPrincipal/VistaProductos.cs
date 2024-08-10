@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgroServicios.Modelo.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace AgroServicios.Vista.MenuPrincipal
         public VistaProductos()
         {
             InitializeComponent();
+            RellenarProductos();
+        }
+        private void RellenarProductos()
+        {
+            DAOTargproductos obj = new DAOTargproductos();
+            obj.RellenarTargetas(flowLayoutPanel1);
         }
     }
 }
