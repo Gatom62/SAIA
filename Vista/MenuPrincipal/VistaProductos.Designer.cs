@@ -98,6 +98,7 @@
             this.Controls.Add(this.bunifuPanel1);
             this.Name = "VistaProductos";
             this.Text = "VistaProductos";
+            this.Load += new System.EventHandler(this.VistaProductos_Load);
             this.bunifuPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

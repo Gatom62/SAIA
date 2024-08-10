@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgroServicios.Controlador;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,14 @@ namespace AgroServicios
         public ProductosTarg()
         {
             InitializeComponent();
+            if(ControladorTema.IsDarkMode == true)
+            {
+                bunifuPanel1.BackgroundColor = Color.FromArgb(118, 88, 152);
+                lblcodigo.ForeColor = Color.White;
+                lbldesc.ForeColor = Color.White;
+                lblname.ForeColor = Color.White;
+                lblPrecio.ForeColor = Color.White;
+            }
         }
         public int Id {  get { return id; } set {  id = value; } }
         public string Descripcion { 
@@ -41,5 +50,6 @@ namespace AgroServicios
             get { return lblcodigo.Text; }
             set { lblcodigo.Text = value; }
         }
+
     }
 }
