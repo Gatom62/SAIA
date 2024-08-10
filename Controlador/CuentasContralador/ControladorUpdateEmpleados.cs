@@ -71,6 +71,7 @@ namespace AgroServicios.Controlador.CuentasContralador
                 Objupdate.txtUpdatePhone.Enabled = false;
                 Objupdate.maskedDuiUpdate.Enabled = false;
                 Objupdate.PickerBirthUpdate.Enabled = false;
+                Objupdate.cmsactimg.Visible = false;
             }
             if(accion == 1)
             {

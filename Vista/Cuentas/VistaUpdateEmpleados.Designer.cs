@@ -65,25 +65,25 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuLabel1 = new System.Windows.Forms.Label();
-            this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.txtUser = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ptbactimg = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsactimg = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtUser = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.bunifuLabel1 = new System.Windows.Forms.Label();
+            this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbactimg)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // maskedDuiUpdate
@@ -531,7 +531,6 @@
             // txtid
             // 
             this.txtid.BackColor = System.Drawing.Color.White;
-            this.txtid.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtid.ForeColor = System.Drawing.Color.White;
             this.txtid.Name = "txtid";
             this.txtid.ReadOnly = true;
@@ -610,93 +609,6 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(798, 684);
             this.bunifuPanel1.TabIndex = 28;
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel1.Controls.Add(this.bunifuLabel1, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(798, 66);
-            this.tableLayoutPanel1.TabIndex = 29;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuLabel1.AutoSize = true;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(238, 14);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.Size = new System.Drawing.Size(320, 37);
-            this.bunifuLabel1.TabIndex = 0;
-            this.bunifuLabel1.Text = "Actualizar Empleado";
-            // 
-            // bunifuGradientPanel1
-            // 
-            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.BorderRadius = 1;
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuPanel1);
-            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(242)))), ((int)(((byte)(32)))));
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(242)))), ((int)(((byte)(32)))));
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(935, 738);
-            this.bunifuGradientPanel1.TabIndex = 29;
-            // 
-            // ptbactimg
-            // 
-            this.ptbactimg.AllowFocused = false;
-            this.ptbactimg.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ptbactimg.AutoSizeHeight = true;
-            this.ptbactimg.BorderRadius = 45;
-            this.ptbactimg.ContextMenuStrip = this.contextMenuStrip1;
-            this.ptbactimg.Image = ((System.Drawing.Image)(resources.GetObject("ptbactimg.Image")));
-            this.ptbactimg.IsCircle = true;
-            this.ptbactimg.Location = new System.Drawing.Point(342, 79);
-            this.ptbactimg.Name = "ptbactimg";
-            this.ptbactimg.Size = new System.Drawing.Size(90, 90);
-            this.ptbactimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbactimg.TabIndex = 30;
-            this.ptbactimg.TabStop = false;
-            this.ptbactimg.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cmsactimg});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(206, 30);
-            // 
-            // cmsactimg
-            // 
-            this.cmsactimg.Image = global::AgroServicios.Properties.Resources.image_;
-            this.cmsactimg.Name = "cmsactimg";
-            this.cmsactimg.Size = new System.Drawing.Size(205, 26);
-            this.cmsactimg.Text = "Actualizar imagén.";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::AgroServicios.Properties.Resources.Rectangle_32;
-            this.pictureBox1.Location = new System.Drawing.Point(66, 194);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
-            // 
             // txtUser
             // 
             this.txtUser.AcceptsReturn = false;
@@ -774,6 +686,93 @@
             this.txtUser.UseSystemPasswordChar = false;
             this.txtUser.WordWrap = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::AgroServicios.Properties.Resources.Rectangle_32;
+            this.pictureBox1.Location = new System.Drawing.Point(66, 194);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
+            // ptbactimg
+            // 
+            this.ptbactimg.AllowFocused = false;
+            this.ptbactimg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ptbactimg.AutoSizeHeight = true;
+            this.ptbactimg.BorderRadius = 45;
+            this.ptbactimg.ContextMenuStrip = this.contextMenuStrip1;
+            this.ptbactimg.Image = ((System.Drawing.Image)(resources.GetObject("ptbactimg.Image")));
+            this.ptbactimg.IsCircle = true;
+            this.ptbactimg.Location = new System.Drawing.Point(342, 79);
+            this.ptbactimg.Name = "ptbactimg";
+            this.ptbactimg.Size = new System.Drawing.Size(90, 90);
+            this.ptbactimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbactimg.TabIndex = 30;
+            this.ptbactimg.TabStop = false;
+            this.ptbactimg.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsactimg});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 58);
+            // 
+            // cmsactimg
+            // 
+            this.cmsactimg.Image = global::AgroServicios.Properties.Resources.image_;
+            this.cmsactimg.Name = "cmsactimg";
+            this.cmsactimg.Size = new System.Drawing.Size(214, 26);
+            this.cmsactimg.Text = "Actualizar imagén.";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.Controls.Add(this.bunifuLabel1, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(798, 66);
+            this.tableLayoutPanel1.TabIndex = 29;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuLabel1.AutoSize = true;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.Location = new System.Drawing.Point(238, 14);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.Size = new System.Drawing.Size(320, 37);
+            this.bunifuLabel1.TabIndex = 0;
+            this.bunifuLabel1.Text = "Actualizar Empleado";
+            // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.BorderRadius = 1;
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuPanel1);
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(242)))), ((int)(((byte)(32)))));
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(242)))), ((int)(((byte)(32)))));
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(935, 738);
+            this.bunifuGradientPanel1.TabIndex = 29;
+            // 
             // VistaUpdateEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -793,12 +792,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbactimg)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.bunifuGradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbactimg)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -824,9 +823,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         public System.Windows.Forms.Label bunifuLabel1;
         public Bunifu.UI.WinForms.BunifuPictureBox ptbactimg;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         public System.Windows.Forms.ToolStripMenuItem cmsactimg;
         public Bunifu.UI.WinForms.BunifuTextBox txtUser;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
