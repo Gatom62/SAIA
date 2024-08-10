@@ -113,6 +113,7 @@
     <Compile Include="Controlador\Login\ControladorLogin.cs" />
     <Compile Include="Controlador\Login\ControlerBasicMetodosRecuperar.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorMenuPrincipal.cs" />
+    <Compile Include="Controlador\MenuPrincipal\ControladorVistaProductos.cs" />
     <Compile Include="Modelo\DAO\DAOAdminUsers.cs" />
     <Compile Include="Modelo\DAO\DAOCorreoRecuperacion.cs" />
     <Compile Include="Modelo\DAO\DAODCSoporte.cs" />
