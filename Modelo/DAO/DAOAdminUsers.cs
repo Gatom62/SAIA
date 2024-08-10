@@ -223,38 +223,41 @@ namespace AgroServicios.Modelo.DAO
             try
             {
                 Command.Connection = getConnection();
+                int respuesta = 0;
 
-                string query2 = "UPDATE Usuarios SET picprofile = @img WHERE Usuario = @user";
-                SqlCommand cmd2 = new SqlCommand(query2, Command.Connection);
-
-                cmd2.Parameters.AddWithValue("img", Img);
-                cmd2.Parameters.AddWithValue("user", Usuario1);
-
-                int respuesta = cmd2.ExecuteNonQuery();
-
-                if (respuesta == 1)
+                // Si Img no es null, se actualiza la imagen en la tabla Usuarios
+                if (Img != null)
                 {
+                    string query2 = "UPDATE Usuarios SET picprofile = @img WHERE Usuario = @user";
+                    SqlCommand cmd2 = new SqlCommand(query2, Command.Connection);
 
+                    cmd2.Parameters.AddWithValue("img", Img);
+                    cmd2.Parameters.AddWithValue("user", Usuario1);
 
-                    string query = "UPDATE Empleados SET Nombre = @nombre, FechaDeNacimiento = @fechaDeNacimiento, Telefono = @telefono, Correo = @correo, DUI = @dui, Direccion = @direccion WHERE idEmpleado = @idEmpleado";
-                    SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                    respuesta = cmd2.ExecuteNonQuery();
 
-                    cmd.Parameters.AddWithValue("@idEmpleado", IdEmpleado);
-                    cmd.Parameters.AddWithValue("@nombre", Nombre1);
-                    cmd.Parameters.AddWithValue("@fechaDeNacimiento", FechaDeNacimiento1);
-                    cmd.Parameters.AddWithValue("@telefono", Telefono1);
-                    cmd.Parameters.AddWithValue("@correo", Correo1);
-                    cmd.Parameters.AddWithValue("@dui", DUI1);
-                    cmd.Parameters.AddWithValue("@direccion", Direccion1);
-
-                    respuesta = cmd.ExecuteNonQuery();
-                    return respuesta;
+                    // Si la actualización de la imagen no fue exitosa, retorna 0
+                    if (respuesta != 1)
+                    {
+                        return 0;
+                    }
                 }
-                else
-                {
-                    //Se retorna cero si sus valores no pudieron ser ingresados
-                    return 0;
-                }
+
+                // Actualización de los demás datos en la tabla Empleados
+                string query = "UPDATE Empleados SET Nombre = @nombre, FechaDeNacimiento = @fechaDeNacimiento, Telefono = @telefono, Correo = @correo, DUI = @dui, Direccion = @direccion WHERE idEmpleado = @idEmpleado";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+
+                cmd.Parameters.AddWithValue("@idEmpleado", IdEmpleado);
+                cmd.Parameters.AddWithValue("@nombre", Nombre1);
+                cmd.Parameters.AddWithValue("@fechaDeNacimiento", FechaDeNacimiento1);
+                cmd.Parameters.AddWithValue("@telefono", Telefono1);
+                cmd.Parameters.AddWithValue("@correo", Correo1);
+                cmd.Parameters.AddWithValue("@dui", DUI1);
+                cmd.Parameters.AddWithValue("@direccion", Direccion1);
+
+                respuesta = cmd.ExecuteNonQuery();
+
+                return respuesta;
             }
             catch (Exception)
             {
@@ -265,6 +268,7 @@ namespace AgroServicios.Modelo.DAO
                 Command.Connection.Close();
             }
         }
+
 
         public int restablecerEmpleado()
         {

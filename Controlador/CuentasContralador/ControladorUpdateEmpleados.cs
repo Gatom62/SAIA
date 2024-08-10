@@ -27,7 +27,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             Objupdate.cmsactimg.Click += AgregarImagen;
         }
 
-        void AgregarImagen(object sender, EventArgs e)
+        private void AgregarImagen(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png| Todos los archivos(*.*)| *.* ";
@@ -37,6 +37,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             {
                 string rutaImagen = ofd.FileName;
                 Objupdate.ptbactimg.Image = Image.FromFile(rutaImagen);
+                Objupdate.ptbactimg.Tag = rutaImagen; // Marcar que se ha cargado una nueva imagen
             }
         }
         //public void InitialCharge(object sender, EventArgs e)
@@ -120,17 +121,16 @@ namespace AgroServicios.Controlador.CuentasContralador
                 return;
             }
 
-            Image imagen = Objupdate.ptbactimg.Image;
-            byte[] imageBytes;
-            if (imagen == null)
+            byte[] imageBytes = null;
+            if (Objupdate.ptbactimg.Tag != null)
             {
-                imageBytes = null;
-            }
-            else
-            {
-                MemoryStream ms = new MemoryStream();
-                imagen.Save(ms, ImageFormat.Jpeg);
-                imageBytes = ms.ToArray();
+                // Solo convertir a bytes si la imagen ha cambiado (según el Tag)
+                Image imagen = Objupdate.ptbactimg.Image;
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    imagen.Save(ms, ImageFormat.Jpeg);
+                    imageBytes = ms.ToArray();
+                }
             }
 
             DAOAdminUsers DaoUpdate = new DAOAdminUsers();
