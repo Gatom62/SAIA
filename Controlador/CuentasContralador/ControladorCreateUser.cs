@@ -134,17 +134,14 @@ namespace AgroServicios.Controlador.CuentasContralador
                 return;
             }
 
-            Image imagen = ObjUsers.ptbImgUser.Image;
-            byte[] imageBytes;
-            if (imagen == null)
+            byte[] imageBytes = null;
+            if (ObjUsers.ptbImgUser.Image != null)
             {
-                imageBytes = null;
-            }
-            else
-            {
-                MemoryStream ms = new MemoryStream();
-                imagen.Save(ms, ImageFormat.Jpeg);
-                imageBytes = ms.ToArray();
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    ObjUsers.ptbImgUser.Image.Save(ms, ImageFormat.Jpeg);
+                    imageBytes = ms.ToArray();
+                }
             }
 
             DAOAdminUsers DaoInsert = new DAOAdminUsers();

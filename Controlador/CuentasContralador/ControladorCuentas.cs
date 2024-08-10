@@ -117,6 +117,8 @@ namespace AgroServicios.Controlador.CuentasContralador
             ObjEmpleados.GriewEmpleados.DataSource = ds.Tables["VistaEmpleadosConRol"];
             // Traducir encabezados de las columnas
             TraducirEncabezados(ObjEmpleados.GriewEmpleados);
+
+            ObjEmpleados.GriewEmpleados.Columns["Image"].Visible = false;
         }
         private void TraducirEncabezados(DataGridView dgv)
         {
