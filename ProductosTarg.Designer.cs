@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductosTarg));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lbldesc = new System.Windows.Forms.RichTextBox();
             this.ptbimg = new System.Windows.Forms.PictureBox();
@@ -102,11 +102,11 @@
             this.btnadd.ColorContrastOnClick = 45;
             this.btnadd.ColorContrastOnHover = 45;
             this.btnadd.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnadd.CustomizableEdges = borderEdges1;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.btnadd.CustomizableEdges = borderEdges6;
             this.btnadd.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnadd.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnadd.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -223,7 +223,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.bunifuPanel1);
-            this.Margin = new System.Windows.Forms.Padding(12);
+            this.Margin = new System.Windows.Forms.Padding(8, 15, 8, 15);
             this.Name = "ProductosTarg";
             this.Size = new System.Drawing.Size(487, 285);
             this.Load += new System.EventHandler(this.ProductosTarg_Load);
