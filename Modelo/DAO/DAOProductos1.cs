@@ -276,7 +276,28 @@ namespace AgroServicios.Modelo.DAO
             try
             {
                 Command.Connection = getConnection();
-                string query2 = "UPDATE Productos SET Nombre = @nombre, Precio = @price, Stock = @stock, idMarca = @marc ,Descripcion = @description, Codigo = @code, imgNombre = @img WHERE idProducto = @idProduc";
+
+                int respuesta = 0;
+
+                // Si Img no es null, se actualiza la imagen en la tabla Usuarios
+                if (Img != null)
+                {
+                    string query = "UPDATE Productos SET imgNombre = @img WHERE idProducto = @id";
+                    SqlCommand cmd = new SqlCommand(query, Command.Connection);
+
+                    cmd.Parameters.AddWithValue("img", Img);
+                    cmd.Parameters.AddWithValue("id", IdProducto);
+
+                    respuesta = cmd.ExecuteNonQuery();
+
+                    // Si la actualización de la imagen no fue exitosa, retorna 0
+                    if (respuesta != 1)
+                    {
+                        return 0;
+                    }
+                }
+
+                string query2 = "UPDATE Productos SET Nombre = @nombre, Precio = @price, Stock = @stock, idMarca = @marc ,Descripcion = @description, Codigo = @code WHERE idProducto = @idProduc";
                 SqlCommand cmd2 = new SqlCommand(query2, Command.Connection);
 
                 cmd2.Parameters.AddWithValue("@idProduc", IdProducto);
@@ -286,8 +307,7 @@ namespace AgroServicios.Modelo.DAO
                 cmd2.Parameters.AddWithValue("@description", Descripcion1);
                 cmd2.Parameters.AddWithValue("@code", Codigo1);
                 cmd2.Parameters.AddWithValue("@marc", IdMarca);
-                cmd2.Parameters.AddWithValue("@img", Img);
-                int respuesta = cmd2.ExecuteNonQuery();
+                respuesta = cmd2.ExecuteNonQuery();
 
                 return respuesta;
             }

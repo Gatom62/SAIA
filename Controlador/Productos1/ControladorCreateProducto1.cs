@@ -35,15 +35,26 @@ namespace AgroServicios.Controlador.Productos1
             ObjCreateProducto1.btnImagenProducto.Click += AgregarImagen;
         }
 
-        public void AgregarImagen(object sender, EventArgs e) 
+        void AgregarImagen(object sender, EventArgs e)
         {
+            // Crea una instancia del cuadro de diálogo para seleccionar archivos.
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png| Todos los archivos(*.*)| *.* ";
-            ofd.Title = "Seleccionar Imagen";
 
-            if (ofd.ShowDialog() == DialogResult.OK) 
+            // Define el filtro para el cuadro de diálogo, limitando la selección a archivos de imagen
+            // con extensiones .jpg, .jpeg, y .png. También incluye una opción para mostrar todos los archivos.
+            ofd.Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png| Todos los archivos(*.*)| *.* ";
+
+            // Establece el título del cuadro de diálogo.
+            ofd.Title = "Seleccionar imagen";
+
+            // Muestra el cuadro de diálogo y verifica si el usuario selecciona un archivo y presiona "OK".
+            if (ofd.ShowDialog() == DialogResult.OK)
             {
+                // Obtiene la ruta completa del archivo de imagen seleccionado.
                 string rutaImagen = ofd.FileName;
+
+                // Asigna la imagen seleccionada al PictureBox (ptbImgUser) del objeto ObjUsers.
+                // Carga la imagen desde la ruta del archivo.
                 ObjCreateProducto1.ptbImagenProducto.Image = Image.FromFile(rutaImagen);
             }
         }
@@ -72,12 +83,13 @@ namespace AgroServicios.Controlador.Productos1
                 string.IsNullOrWhiteSpace(ObjCreateProducto1.txtCantidad.Text) ||
                 string.IsNullOrWhiteSpace(ObjCreateProducto1.txtPrecio.Text) ||
                 string.IsNullOrWhiteSpace(ObjCreateProducto1.txtDescripcion.Text) ||
-                ObjCreateProducto1.DropMarca.SelectedValue == null)
+                ObjCreateProducto1.DropMarca.SelectedValue == null ||
+                ObjCreateProducto1.ptbImagenProducto.Image == null)
             {
-                MessageBox.Show("Todos los campos son obligatorios.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBox.Show("Todos los campos son obligatorios, incluyendo la imagen del producto.",
+                   "Error de validación",
+                   MessageBoxButtons.OK,
+                   MessageBoxIcon.Error);
                 return;
             }
 

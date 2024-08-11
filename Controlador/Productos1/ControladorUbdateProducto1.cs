@@ -34,16 +34,30 @@ namespace AgroServicios.Controlador.Productos1
             Objupdate.btnUbdateImagen.Click += AgregarImagen;
         }
 
-        void AgregarImagen(object sender, EventArgs e)
+        private void AgregarImagen(object sender, EventArgs e)
         {
+            // Crea una instancia de OpenFileDialog, que permite al usuario seleccionar un archivo.
             OpenFileDialog ofd = new OpenFileDialog();
+
+            // Establece un filtro para el cuadro de diálogo, limitando la selección a archivos de imagen
+            // con extensiones .jpg, .jpeg, y .png, además de permitir seleccionar todos los archivos.
             ofd.Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png| Todos los archivos(*.*)| *.* ";
+
+            // Establece el título del cuadro de diálogo que se mostrará al usuario.
             ofd.Title = "Seleccionar imagen";
 
+            // Abre el cuadro de diálogo y verifica si el usuario selecciona un archivo y presiona "OK".
             if (ofd.ShowDialog() == DialogResult.OK)
             {
+                // Almacena la ruta completa del archivo de imagen seleccionado en una variable string.
                 string rutaImagen = ofd.FileName;
+
+                // Carga la imagen desde la ruta del archivo y la asigna al PictureBox (ptbactimg) del objeto Objupdate.
                 Objupdate.ptbImagenProducto.Image = Image.FromFile(rutaImagen);
+
+                // Asigna la ruta de la imagen al Tag del PictureBox, marcando que se ha cargado una nueva imagen.
+                // Esto es útil para identificar que se ha actualizado la imagen en el formulario.
+                Objupdate.ptbImagenProducto.Tag = rutaImagen;
             }
         }
 
@@ -79,17 +93,29 @@ namespace AgroServicios.Controlador.Productos1
                 return;
             }
 
-            Image imagen = Objupdate.ptbImagenProducto.Image;
-            byte[] imageBytes;
-            if (imagen == null)
+            // Declara una variable byte[] llamada imageBytes y la inicializa como null.
+            // Esta variable almacenará los bytes de la imagen si se ha cargado una nueva imagen.
+            byte[] imageBytes = null;
+
+            // Verifica si el Tag del PictureBox (ptbactimg) en Objupdate no es null.
+            // El Tag se usa para marcar si se ha cargado una nueva imagen.
+            if (Objupdate.ptbImagenProducto.Tag != null)
             {
-                imageBytes = null;
-            }
-            else
-            {
-                MemoryStream ms = new MemoryStream();
-                imagen.Save(ms, ImageFormat.Jpeg);
-                imageBytes = ms.ToArray();
+                // Solo convierte la imagen a un array de bytes si se ha detectado que la imagen ha cambiado.
+                // Obtiene la imagen actual del PictureBox.
+                Image imagen = Objupdate.ptbImagenProducto.Image;
+
+                // Crea un objeto MemoryStream para trabajar con datos en memoria.
+                // 'using' asegura que el MemoryStream se libere correctamente después de su uso.
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    // Guarda la imagen en el MemoryStream en formato JPEG.
+                    imagen.Save(ms, ImageFormat.Jpeg);
+
+                    // Convierte los datos de la imagen en el MemoryStream a un array de bytes
+                    // y los asigna a la variable imageBytes.
+                    imageBytes = ms.ToArray();
+                }
             }
 
             DAOProductos1 DaoUpdate = new DAOProductos1();
@@ -140,8 +166,8 @@ namespace AgroServicios.Controlador.Productos1
             Objupdate.txtid.Text = id.ToString();
             Objupdate.txtIdMarca.Text = idMarca.ToString();
             Objupdate.txtUbdateProducto.Text = Name;
-            Objupdate.txtUbdatePrecio.Text = price;
-            Objupdate.txtUbdateCantidad.Text = stock;
+            Objupdate.txtUbdateCantidad.Text = price;
+            Objupdate.txtUbdatePrecio.Text = stock;
             Objupdate.txtUbdateDescripcion.Text = description;
             Objupdate.txtUbdateCodigo.Text = code;
             Objupdate.DropUbdateMarca.Text = marc;
