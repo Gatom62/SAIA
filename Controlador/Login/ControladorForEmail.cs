@@ -20,6 +20,7 @@ namespace AgroServicios.Controlador.Login
         {
             _vistaForEmail = vistaForEmail;
             _vistaForEmail.btnEnviar.Click += EnviarCorreo;
+            _vistaForEmail.ptbback.Click += VolverForm;
         }
 
         private void EnviarCorreo(object sender, EventArgs e)
@@ -27,6 +28,10 @@ namespace AgroServicios.Controlador.Login
             var user = new DAORecuperarPass();
             var result = user.recoverPassword(_vistaForEmail.txtUser.Text);
             _vistaForEmail.lblResult.Text = result;
+        }
+        private void VolverForm(object sender, EventArgs e)
+        {
+            _vistaForEmail.Close();
         }
     }
 }

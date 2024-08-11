@@ -433,6 +433,16 @@ namespace AgroServicios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap turn_left_11044726 {
+            get {
+                object obj = ResourceManager.GetObject("turn-left_11044726", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap VAn {
             get {
                 object obj = ResourceManager.GetObject("VAn", resourceCulture);

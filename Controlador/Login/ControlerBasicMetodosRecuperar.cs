@@ -21,12 +21,20 @@ namespace AgroServicios.Controlador.Login
         {
             ObjRecuperacion = MetodosRecuperar;
             ObjRecuperacion.btnEmail.Click += new EventHandler(MetodoCorreo);
+            ObjRecuperacion.ptbback.Click += VolverForm;
         }
 
         private void MetodoCorreo(Object sender, EventArgs e)
         {
             VistaForEmail vistaForEmail = new VistaForEmail();
             vistaForEmail.ShowDialog();
+        }
+        private void VolverForm(object sender, EventArgs e)
+        {
+            ObjRecuperacion.Close();
+
+            VistaLogin vistaLogin = new VistaLogin();
+            vistaLogin.Show();
         }
 
     }
