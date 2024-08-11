@@ -37,6 +37,7 @@ namespace AgroServicios.Controlador.Busqueda
                 DAOAdminUsers daoBuscar = new DAOAdminUsers();
                 DataTable dataTable = daoBuscar.BuscarProducto(criterio);
                 ObjBusqueda.GriewViewBuscar.DataSource = dataTable;
+                ObjBusqueda.GriewViewBuscar.Columns["imgNombre"].Visible = false;
 
                 // Prevenir el sonido de "ding"
                 e.Handled = true;

@@ -4,8 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -31,7 +34,32 @@ namespace AgroServicios.Controlador.CuentasContralador
             ObjUsers.Load += new EventHandler(InitialCharge);
 
             ObjUsers.btnCrearUsuario.Click += new EventHandler(NuevoRegistro);
+            ObjUsers.cmsimgsubir.Click += AgregarImagen;
         }
+        void AgregarImagen(object sender, EventArgs e)
+        {
+            // Crea una instancia del cuadro de diálogo para seleccionar archivos.
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            // Define el filtro para el cuadro de diálogo, limitando la selección a archivos de imagen
+            // con extensiones .jpg, .jpeg, y .png. También incluye una opción para mostrar todos los archivos.
+            ofd.Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png| Todos los archivos(*.*)| *.* ";
+
+            // Establece el título del cuadro de diálogo.
+            ofd.Title = "Seleccionar imagen";
+
+            // Muestra el cuadro de diálogo y verifica si el usuario selecciona un archivo y presiona "OK".
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                // Obtiene la ruta completa del archivo de imagen seleccionado.
+                string rutaImagen = ofd.FileName;
+
+                // Asigna la imagen seleccionada al PictureBox (ptbImgUser) del objeto ObjUsers.
+                // Carga la imagen desde la ruta del archivo.
+                ObjUsers.ptbImgUser.Image = Image.FromFile(rutaImagen);
+            }
+        }
+
 
         public void InitialCharge(object sender, EventArgs e)
         {
@@ -93,6 +121,16 @@ namespace AgroServicios.Controlador.CuentasContralador
                 return;
             }
 
+            // Validar el formato del número de teléfono
+            if (!ValidarTelefono(ObjUsers.txtNewPhone.Text))
+            {
+                MessageBox.Show("El formato del número de teléfono es incorrecto. Debe ser +XXX XXXX-XXXX o XXXX-XXXX.",
+                                "Error de validación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
             // Validar que la fecha de nacimiento sea mayor de 18 años
             DateTime fechaNacimiento = ObjUsers.PickerBirth.Value.Date;
             DateTime fechaActual = DateTime.Today;
@@ -108,10 +146,33 @@ namespace AgroServicios.Controlador.CuentasContralador
                 return;
             }
 
+            // Declara una variable byte[] llamada imageBytes y la inicializa como null.
+            // Esta variable almacenará los bytes de la imagen si hay una imagen en el PictureBox.
+            byte[] imageBytes = null;
+
+            // Verifica si la propiedad Image del PictureBox (ptbImgUser) de ObjUsers no es null,
+            // es decir, si hay una imagen cargada en el PictureBox.
+            if (ObjUsers.ptbImgUser.Image != null)
+            {
+                // Crea un objeto MemoryStream para trabajar con datos en memoria.
+                // El uso de 'using' asegura que el MemoryStream se libere correctamente después de su uso.
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    // Guarda la imagen que está en el PictureBox en el MemoryStream en formato JPEG.
+                    ObjUsers.ptbImgUser.Image.Save(ms, ImageFormat.Jpeg);
+
+                    // Convierte los datos de la imagen en el MemoryStream a un array de bytes
+                    // y los asigna a la variable imageBytes.
+                    imageBytes = ms.ToArray();
+                }
+            }
+
+
             DAOAdminUsers DaoInsert = new DAOAdminUsers();
             Encryp ObjEncriptar = new Encryp();
 
-            // Asignar los valores a las propiedades de DaoInsert
+            // Asignar los valores a las propiedades
+            DaoInsert.Img = imageBytes;
             DaoInsert.Nombre1 = ObjUsers.txtNewFirstName.Text.Trim();
             DaoInsert.FechaDeNacimiento1 = fechaNacimiento;
             DaoInsert.Telefono1 = ObjUsers.txtNewPhone.Text.Trim();
@@ -142,6 +203,13 @@ namespace AgroServicios.Controlador.CuentasContralador
                                     MessageBoxIcon.Error);
                 }
             }
+        }
+
+        bool ValidarTelefono(string phoneNumber)
+        {
+            // Expresión regular para validar números de teléfono en los formatos: +XXX XXXX-XXXX o XXXX-XXXX
+            string pattern = @"^(\+\d{1,3}\s\d{4}-\d{4}|\d{4}-\d{4})$";
+            return Regex.IsMatch(phoneNumber, pattern);
         }
 
         bool ValidarCorreo()

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgroServicios.Controlador.ControladorStats;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace AgroServicios.Vista.Estadisticas
         public VistaProveedores()
         {
             InitializeComponent();
+            ControladorProveedores controladorProveedores = new ControladorProveedores(this);
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contextGriewProveedores_Opening(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

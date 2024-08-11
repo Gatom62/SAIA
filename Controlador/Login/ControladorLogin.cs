@@ -11,11 +11,10 @@ namespace AgroServicios.Controlador.Login
 {
     internal class ControladorLogin
     {
-        //Objeto de la vista ViewLogin
+       
         VistaLogin ObjLogin;
 
         /// <summary>
-        /// Constructor de la clase ControllerLogin que inicia los eventos de la vista
         /// </summary>
         /// <param name="Vista"></param>
         /// 
@@ -32,9 +31,7 @@ namespace AgroServicios.Controlador.Login
 
         private void TestConnection(object sender, EventArgs e)
         {
-            //Se hace referencia a la clase dbContext y su método getConnection y se evalúa
-            // si el retorno es nulo o no, en caso de ser nulo se mostrará el primer mensaje
-            //de lo contrario se mostrará el código del segmento else.
+            //Verificar la propiedad idioma para cambiar el idioma
             if (ControladorIdioma.idioma == 1)
             {
                 if (dbContext.getConnection() == null)
@@ -63,17 +60,34 @@ namespace AgroServicios.Controlador.Login
         }
 
 
-            /// <summary>
-            /// 
-            /// </summary>
-            /// <param name="sender"></param>
-            /// <param name="e"></param>
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
-            private void DataAccess(object sender, EventArgs e)
+        private void DataAccess(object sender, EventArgs e)
         {
+            string mensajeCampos, tituloCampos, mensajeError, tituloError;
+
+            if (ControladorIdioma.idioma == 1)
+            {
+                mensajeCampos = "You must fill in all the fields.";
+                tituloCampos = "Validation error";
+                mensajeError = "Incorrect data";
+                tituloError = "Login error";
+            }
+            else
+            {
+                mensajeCampos = "Debe rellenar todos los campos.";
+                tituloCampos = "Error de validación";
+                mensajeError = "Datos incorrectos";
+                tituloError = "Error al iniciar sesión";
+            }
+
             if (string.IsNullOrWhiteSpace(ObjLogin.txtUsername.Text) || string.IsNullOrWhiteSpace(ObjLogin.txtPassword.Text))
             {
-                MessageBox.Show("Debe rellenar todos los campos.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(mensajeCampos, tituloCampos, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -97,9 +111,10 @@ namespace AgroServicios.Controlador.Login
             }
             else
             {
-                MessageBox.Show("Datos incorrectos", "Error al iniciar sesión", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(mensajeError, tituloError, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
 
         private void ShowPassword(object sender, EventArgs e)
         {

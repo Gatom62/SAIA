@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Security;
@@ -23,7 +24,7 @@ namespace AgroServicios.Modelo.DAO
                 //Accedemos a la conexión que ya se tiene
                 Command.Connection = getConnection();
                 //Instrucción que se hará hacia la base de datos
-                string query = "SELECT * FROM viewEmpleados";
+                string query = "SELECT * FROM VistaEmpleadosConRol";
                 //Comando sql en el cual se pasa la instrucción y la conexión
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 //Se ejecuta el comando y con ExecuteNonQuery se verifica su retorno
@@ -34,7 +35,7 @@ namespace AgroServicios.Modelo.DAO
                 //Se crea un objeto Dataset que es donde se devolverán los resultados
                 DataSet ds = new DataSet();
                 //Rellenamos con el Adaptador el DataSet diciendole de que tabla provienen los datos
-                adp.Fill(ds, "viewEmpleados");
+                adp.Fill(ds, "VistaEmpleadosConRol");
                 //Devolvemos el Dataset
                 return ds;
             }
@@ -95,7 +96,8 @@ namespace AgroServicios.Modelo.DAO
                 //**
                 //Se crea el query que indica la acción que el sistema desea realizar con la base de datos
                 //el query posee parametros para evitar algún tipo de ataque como SQL Injection
-                string query2 = "INSERT INTO Usuarios(Usuario, Contraseña, IntentosUsuario, idCategoria) VALUES (@username, @password, @userAttempts, @roleId)";
+                string query2 = "INSERT INTO Usuarios(Usuario, Contraseña, IntentosUsuario, idCategoria, picprofile) " +
+                                "VALUES (@username, @password, @userAttempts, @roleId, @picture)";
                 //Se crea un comando de tipo sql al cual se le pasa el query y la conexión, esto para que el sistema sepa que hacer y donde hacerlo.
                 SqlCommand cmd2 = new SqlCommand(query2, Command.Connection);
                 //Se le da un valor a los parametros contenidos en el query, es importante mencionar que lo que esta entre comillas es el nombre del parametro y lo que esta después de la coma es el valor que se le asignará al parametro, estos valores vienen del DTO respectivo.
@@ -103,6 +105,8 @@ namespace AgroServicios.Modelo.DAO
                 cmd2.Parameters.AddWithValue("password", Contraseña1);
                 cmd2.Parameters.AddWithValue("userAttempts", IntentosUsuario1);
                 cmd2.Parameters.AddWithValue("roleId", IdCategoria);
+                cmd2.Parameters.AddWithValue("picture", Img ?? (object)DBNull.Value);  // Inserta NULL si Img es null
+
                 //Se ejecuta el comando ya con todos los valores de sus parametros.
                 //ExecuteNonQuery indicará cuantos filas fueron afectadas, es decir, cuantas filas de datos se ingresaron, por lo general devolvera 1 porque se hace una inserción a la vez.
                 int respuesta = cmd2.ExecuteNonQuery();
@@ -110,7 +114,8 @@ namespace AgroServicios.Modelo.DAO
                 if (respuesta == 1)
                 {
                     //Si el valor de respuesta es 1, se procede a la inserción de los datos de la persona, como se puede observar en el diagrama de base de datos, primero es el usuario y despues la persona.
-                    string query = "INSERT INTO Empleados (Nombre, FechaDeNacimiento, Telefono, Correo, DUI, Direccion, Usuario) VALUES (@param1, @param2, @param3, @param4, @param5, @param6, @param7)";
+                    string query = "INSERT INTO Empleados (Nombre, FechaDeNacimiento, Telefono, Correo, DUI, Direccion, Usuario) " +
+                                   "VALUES (@param1, @param2, @param3, @param4, @param5, @param6, @param7)";
                     //Se crea un comando de tipo sql al cual se le pasa el query y la conexión, esto para que el sistema sepa que hacer y donde hacerlo.
                     SqlCommand cmd = new SqlCommand(query, Command.Connection);
                     //Se le da un valor a los parametros contenidos en el query, es importante mencionar que lo que esta entre comillas es el nombre del parametro y lo que esta después de la coma es el valor que se le asignará al parametro, estos valores vienen del DTO
@@ -144,6 +149,7 @@ namespace AgroServicios.Modelo.DAO
                 Command.Connection.Close();
             }
         }
+
 
         public int DeteleEmpleado()
         {
@@ -217,7 +223,27 @@ namespace AgroServicios.Modelo.DAO
             try
             {
                 Command.Connection = getConnection();
+                int respuesta = 0;
 
+                // Si Img no es null, se actualiza la imagen en la tabla Usuarios
+                if (Img != null)
+                {
+                    string query2 = "UPDATE Usuarios SET picprofile = @img WHERE Usuario = @user";
+                    SqlCommand cmd2 = new SqlCommand(query2, Command.Connection);
+
+                    cmd2.Parameters.AddWithValue("img", Img);
+                    cmd2.Parameters.AddWithValue("user", Usuario1);
+
+                    respuesta = cmd2.ExecuteNonQuery();
+
+                    // Si la actualización de la imagen no fue exitosa, retorna 0
+                    if (respuesta != 1)
+                    {
+                        return 0;
+                    }
+                }
+
+                // Actualización de los demás datos en la tabla Empleados
                 string query = "UPDATE Empleados SET Nombre = @nombre, FechaDeNacimiento = @fechaDeNacimiento, Telefono = @telefono, Correo = @correo, DUI = @dui, Direccion = @direccion WHERE idEmpleado = @idEmpleado";
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
 
@@ -229,7 +255,8 @@ namespace AgroServicios.Modelo.DAO
                 cmd.Parameters.AddWithValue("@dui", DUI1);
                 cmd.Parameters.AddWithValue("@direccion", Direccion1);
 
-                int respuesta = cmd.ExecuteNonQuery();
+                respuesta = cmd.ExecuteNonQuery();
+
                 return respuesta;
             }
             catch (Exception)
@@ -241,6 +268,7 @@ namespace AgroServicios.Modelo.DAO
                 Command.Connection.Close();
             }
         }
+
 
         public int restablecerEmpleado()
         {
@@ -255,6 +283,19 @@ namespace AgroServicios.Modelo.DAO
                 cmd.Parameters.AddWithValue("@pass", Contraseña1);
 
                 int respuesta = cmd.ExecuteNonQuery();
+                if (respuesta == 1)
+                {
+                    string query2 = "UPDATE Usuarios SET idCategoria = @idcat WHERE Usuario = @user";
+                                    //"idCategoria = @idcat" +
+                                    //"WHERE Usuario = @user";
+
+                    SqlCommand cmd2 = new SqlCommand(query2, getConnection());
+
+                    cmd2.Parameters.AddWithValue("idcat", IdCategoria);
+                    cmd2.Parameters.AddWithValue("user", Usuario1);
+                    respuesta = cmd2.ExecuteNonQuery();
+                    respuesta = 2;
+                }
                 return respuesta;
             }
             catch (Exception)

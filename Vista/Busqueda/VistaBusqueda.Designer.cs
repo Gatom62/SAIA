@@ -255,7 +255,6 @@
             this.GriewViewBuscar.EnableHeadersVisualStyles = false;
             this.GriewViewBuscar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.GriewViewBuscar.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.GriewViewBuscar.HeaderBgColor = System.Drawing.Color.Empty;
             this.GriewViewBuscar.HeaderForeColor = System.Drawing.Color.White;
             this.GriewViewBuscar.Location = new System.Drawing.Point(0, 100);
             this.GriewViewBuscar.Name = "GriewViewBuscar";

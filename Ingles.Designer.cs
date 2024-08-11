@@ -124,6 +124,42 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Delete.
+        /// </summary>
+        internal static string CMSELIMINAR {
+            get {
+                return ResourceManager.GetString("CMSELIMINAR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Employee information.
+        /// </summary>
+        internal static string CMSINFO {
+            get {
+                return ResourceManager.GetString("CMSINFO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Reset employee.
+        /// </summary>
+        internal static string CMSREST {
+            get {
+                return ResourceManager.GetString("CMSREST", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Update data.
+        /// </summary>
+        internal static string CMSUPDT {
+            get {
+                return ResourceManager.GetString("CMSUPDT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Test connection.
         /// </summary>
         internal static string Conexion {
@@ -192,6 +228,24 @@ namespace AgroServicios {
         internal static string LabeldeInicio {
             get {
                 return ResourceManager.GetString("LabeldeInicio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Employee information.
+        /// </summary>
+        internal static string LabelFicha {
+            get {
+                return ResourceManager.GetString("LabelFicha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Rest user.
+        /// </summary>
+        internal static string LabelRestUser {
+            get {
+                return ResourceManager.GetString("LabelRestUser", resourceCulture);
             }
         }
         

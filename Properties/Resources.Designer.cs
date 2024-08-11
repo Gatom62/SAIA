@@ -213,6 +213,16 @@ namespace AgroServicios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap image_ {
+            get {
+                object obj = ResourceManager.GetObject("image-", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap image_49 {
             get {
                 object obj = ResourceManager.GetObject("image 49", resourceCulture);
@@ -416,6 +426,16 @@ namespace AgroServicios.Properties {
         internal static System.Drawing.Bitmap Telefono_logo1 {
             get {
                 object obj = ResourceManager.GetObject("Telefono logo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap turn_left_11044726 {
+            get {
+                object obj = ResourceManager.GetObject("turn-left_11044726", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

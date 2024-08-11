@@ -135,6 +135,9 @@
   <data name="integrantes" xml:space="preserve">
     <value>Integrantes</value>
   </data>
+  <data name="LabelFicha" xml:space="preserve">
+    <value>Información del empleado</value>
+  </data>
   <data name="Menu" xml:space="preserve">
     <value>Opciones</value>
   </data>

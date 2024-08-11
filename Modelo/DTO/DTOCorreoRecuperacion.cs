@@ -14,7 +14,6 @@ namespace AgroServicios.Modelo.DTO
     {
         SqlCommand Command = new SqlCommand();
 
-        private SmtpClient smtpClient;
 
         protected string remintenteCorreo { get; set; }
         protected string password { get; set; }

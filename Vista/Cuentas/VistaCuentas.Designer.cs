@@ -39,7 +39,7 @@
             this.contextGriewEmpleados = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsEliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsUpdate = new System.Windows.Forms.ToolStripMenuItem();
-            this.informaciónDelEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsinfo = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsRestablecer = new System.Windows.Forms.ToolStripMenuItem();
             this.GriewEmpleados = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.flowLayoutPanel1.SuspendLayout();
@@ -153,10 +153,10 @@
             this.contextGriewEmpleados.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmsEliminar,
             this.cmsUpdate,
-            this.informaciónDelEmpleadoToolStripMenuItem,
+            this.cmsinfo,
             this.cmsRestablecer});
             this.contextGriewEmpleados.Name = "contextMenuStrip1";
-            this.contextGriewEmpleados.Size = new System.Drawing.Size(260, 108);
+            this.contextGriewEmpleados.Size = new System.Drawing.Size(260, 136);
             // 
             // cmsEliminar
             // 
@@ -172,12 +172,12 @@
             this.cmsUpdate.Size = new System.Drawing.Size(259, 26);
             this.cmsUpdate.Text = "Actualizar Datos";
             // 
-            // informaciónDelEmpleadoToolStripMenuItem
+            // cmsinfo
             // 
-            this.informaciónDelEmpleadoToolStripMenuItem.Image = global::AgroServicios.Properties.Resources.informacion;
-            this.informaciónDelEmpleadoToolStripMenuItem.Name = "informaciónDelEmpleadoToolStripMenuItem";
-            this.informaciónDelEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(259, 26);
-            this.informaciónDelEmpleadoToolStripMenuItem.Text = "Información del Empleado";
+            this.cmsinfo.Image = global::AgroServicios.Properties.Resources.informacion;
+            this.cmsinfo.Name = "cmsinfo";
+            this.cmsinfo.Size = new System.Drawing.Size(259, 26);
+            this.cmsinfo.Text = "Información del Empleado";
             // 
             // cmsRestablecer
             // 
@@ -239,7 +239,6 @@
             this.GriewEmpleados.EnableHeadersVisualStyles = false;
             this.GriewEmpleados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.GriewEmpleados.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-           
             this.GriewEmpleados.HeaderForeColor = System.Drawing.Color.White;
             this.GriewEmpleados.Location = new System.Drawing.Point(0, 64);
             this.GriewEmpleados.Name = "GriewEmpleados";
@@ -274,10 +273,10 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAgregar;
         private System.Windows.Forms.ContextMenuStrip contextGriewEmpleados;
-        private System.Windows.Forms.ToolStripMenuItem informaciónDelEmpleadoToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem cmsEliminar;
         public System.Windows.Forms.ToolStripMenuItem cmsUpdate;
         public System.Windows.Forms.ToolStripMenuItem cmsRestablecer;
         public Bunifu.UI.WinForms.BunifuDataGridView GriewEmpleados;
+        public System.Windows.Forms.ToolStripMenuItem cmsinfo;
     }
 }

@@ -25,6 +25,10 @@ namespace AgroServicios.Vista.Cuentas
             if(ControladorIdioma.idioma == 1)
             {
                 btnAgregar.Text = Ingles.btnañadir;
+                cmsEliminar.Text = Ingles.CMSELIMINAR;
+                cmsinfo.Text = Ingles.CMSINFO;
+                cmsRestablecer.Text = Ingles.CMSREST;
+                cmsUpdate.Text = Ingles.CMSUPDT;
             }
 
             if(ControladorTema.IsDarkMode == true)

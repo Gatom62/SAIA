@@ -28,10 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaMetodosDeRecuperacion));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            this.ptbback = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.btnEmail = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.SuspendLayout();
+            // 
+            // ptbback
+            // 
+            this.ptbback.AllowAnimations = true;
+            this.ptbback.AllowBorderColorChanges = true;
+            this.ptbback.AllowMouseEffects = true;
+            this.ptbback.AnimationSpeed = 200;
+            this.ptbback.BackColor = System.Drawing.Color.Transparent;
+            this.ptbback.BackgroundColor = System.Drawing.Color.Transparent;
+            this.ptbback.BorderColor = System.Drawing.Color.Transparent;
+            this.ptbback.BorderRadius = 1;
+            this.ptbback.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
+            this.ptbback.BorderThickness = 1;
+            this.ptbback.ColorContrastOnClick = 30;
+            this.ptbback.ColorContrastOnHover = 30;
+            this.ptbback.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.ptbback.CustomizableEdges = borderEdges1;
+            this.ptbback.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ptbback.Image = global::AgroServicios.Properties.Resources.turn_left_11044726;
+            this.ptbback.ImageMargin = new System.Windows.Forms.Padding(0);
+            this.ptbback.Location = new System.Drawing.Point(22, 582);
+            this.ptbback.Name = "ptbback";
+            this.ptbback.RoundBorders = false;
+            this.ptbback.ShowBorders = false;
+            this.ptbback.Size = new System.Drawing.Size(49, 44);
+            this.ptbback.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Flat;
+            this.ptbback.TabIndex = 1;
             // 
             // btnEmail
             // 
@@ -52,11 +85,11 @@
             this.btnEmail.ColorContrastOnClick = 45;
             this.btnEmail.ColorContrastOnHover = 45;
             this.btnEmail.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnEmail.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnEmail.CustomizableEdges = borderEdges2;
             this.btnEmail.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnEmail.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnEmail.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -128,6 +161,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(954, 638);
+            this.Controls.Add(this.ptbback);
             this.Controls.Add(this.btnEmail);
             this.MaximumSize = new System.Drawing.Size(972, 685);
             this.MinimumSize = new System.Drawing.Size(972, 685);
@@ -142,5 +176,6 @@
         #endregion
 
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnEmail;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuIconButton ptbback;
     }
 }
