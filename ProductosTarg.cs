@@ -1,4 +1,5 @@
 ﻿using AgroServicios.Controlador;
+using AgroServicios.Vista.MenuPrincipal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,5 +55,33 @@ namespace AgroServicios
             }
         }
 
+        private void ptbimg_Click_1(object sender, EventArgs e)
+        {
+            using (VistaZoomProduct mm = new VistaZoomProduct())
+            {
+                Form form = new Form();
+                form.StartPosition = FormStartPosition.Manual;
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Opacity = .70d;
+                form.BackColor = Color.Black;
+                form.WindowState = FormWindowState.Maximized;
+                form.TopMost = true;
+                form.Location = this.Location;
+                form.ShowInTaskbar = false;
+                form.Show();
+
+                mm.Owner = form;
+
+                // Asigna los valores antes de mostrar el formulario
+                mm.ptbimg.Image = this.ImgProducto;
+                mm.lblname.Text = this.nameProduct;
+                mm.lbldescripcion.Text = this.Descripcion;
+                mm.lblcodigo.Text = this.Code;
+                mm.lblprecio.Text = this.Precio;
+
+                mm.ShowDialog();
+                form.Dispose();
+            }
+        }
     }
 }

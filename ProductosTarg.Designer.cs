@@ -32,11 +32,11 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lbldesc = new System.Windows.Forms.RichTextBox();
-            this.ptbimg = new System.Windows.Forms.PictureBox();
             this.btnadd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblcodigo = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblPrecio = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblname = new Bunifu.UI.WinForms.BunifuLabel();
+            this.ptbimg = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbimg)).BeginInit();
             this.SuspendLayout();
@@ -49,8 +49,8 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Black;
             this.bunifuPanel1.BorderRadius = 30;
             this.bunifuPanel1.BorderThickness = 2;
-            this.bunifuPanel1.Controls.Add(this.lbldesc);
             this.bunifuPanel1.Controls.Add(this.ptbimg);
+            this.bunifuPanel1.Controls.Add(this.lbldesc);
             this.bunifuPanel1.Controls.Add(this.btnadd);
             this.bunifuPanel1.Controls.Add(this.lblcodigo);
             this.bunifuPanel1.Controls.Add(this.lblPrecio);
@@ -73,16 +73,6 @@
             this.lbldesc.Size = new System.Drawing.Size(177, 96);
             this.lbldesc.TabIndex = 7;
             this.lbldesc.Text = "";
-            // 
-            // ptbimg
-            // 
-            this.ptbimg.Image = global::AgroServicios.Properties.Resources.Group;
-            this.ptbimg.Location = new System.Drawing.Point(16, 20);
-            this.ptbimg.Name = "ptbimg";
-            this.ptbimg.Size = new System.Drawing.Size(219, 245);
-            this.ptbimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbimg.TabIndex = 6;
-            this.ptbimg.TabStop = false;
             // 
             // btnadd
             // 
@@ -218,6 +208,23 @@
             this.lblname.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblname.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // ptbimg
+            // 
+            this.ptbimg.AllowFocused = false;
+            this.ptbimg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ptbimg.AutoSizeHeight = false;
+            this.ptbimg.BorderRadius = 10;
+            this.ptbimg.Image = ((System.Drawing.Image)(resources.GetObject("ptbimg.Image")));
+            this.ptbimg.IsCircle = false;
+            this.ptbimg.Location = new System.Drawing.Point(19, 20);
+            this.ptbimg.Name = "ptbimg";
+            this.ptbimg.Size = new System.Drawing.Size(221, 245);
+            this.ptbimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbimg.TabIndex = 8;
+            this.ptbimg.TabStop = false;
+            this.ptbimg.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
+            this.ptbimg.Click += new System.EventHandler(this.ptbimg_Click_1);
+            // 
             // ProductosTarg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -242,7 +249,7 @@
         public Bunifu.UI.WinForms.BunifuLabel lblcodigo;
         public Bunifu.UI.WinForms.BunifuLabel lblPrecio;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnadd;
-        public System.Windows.Forms.PictureBox ptbimg;
         public System.Windows.Forms.RichTextBox lbldesc;
+        public Bunifu.UI.WinForms.BunifuPictureBox ptbimg;
     }
 }

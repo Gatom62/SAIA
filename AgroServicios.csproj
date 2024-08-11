@@ -257,6 +257,12 @@
     <Compile Include="Vista\MenuPrincipal\VistaProductos.Designer.cs">
       <DependentUpon>VistaProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\MenuPrincipal\VistaZoomProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\MenuPrincipal\VistaZoomProduct.Designer.cs">
+      <DependentUpon>VistaZoomProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Productos1\VistaCreateMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaProductos.resx">
       <DependentUpon>VistaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\MenuPrincipal\VistaZoomProduct.resx">
+      <DependentUpon>VistaZoomProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Productos1\VistaCreateMarca.resx">
       <DependentUpon>VistaCreateMarca.cs</DependentUpon>
