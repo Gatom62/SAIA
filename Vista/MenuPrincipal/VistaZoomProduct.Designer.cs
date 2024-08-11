@@ -50,10 +50,10 @@
             this.bunifuPanel1.BorderRadius = 20;
             this.bunifuPanel1.BorderThickness = 1;
             this.bunifuPanel1.Controls.Add(this.lblname);
-            this.bunifuPanel1.Location = new System.Drawing.Point(33, 13);
+            this.bunifuPanel1.Location = new System.Drawing.Point(30, 23);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(723, 73);
+            this.bunifuPanel1.Size = new System.Drawing.Size(739, 73);
             this.bunifuPanel1.TabIndex = 0;
             // 
             // lblname
@@ -83,10 +83,10 @@
             this.bunifuPanel2.Controls.Add(this.lbldescripcion);
             this.bunifuPanel2.Controls.Add(this.lblcodigo);
             this.bunifuPanel2.Controls.Add(this.lblprecio);
-            this.bunifuPanel2.Location = new System.Drawing.Point(329, 99);
+            this.bunifuPanel2.Location = new System.Drawing.Point(341, 126);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(427, 335);
+            this.bunifuPanel2.Size = new System.Drawing.Size(428, 335);
             this.bunifuPanel2.TabIndex = 1;
             // 
             // lbldescripcion
@@ -96,10 +96,10 @@
             this.lbldescripcion.AutoSize = false;
             this.lbldescripcion.CursorType = null;
             this.lbldescripcion.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.lbldescripcion.Location = new System.Drawing.Point(22, 166);
+            this.lbldescripcion.Location = new System.Drawing.Point(22, 157);
             this.lbldescripcion.Name = "lbldescripcion";
             this.lbldescripcion.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbldescripcion.Size = new System.Drawing.Size(402, 156);
+            this.lbldescripcion.Size = new System.Drawing.Size(393, 166);
             this.lbldescripcion.TabIndex = 3;
             this.lbldescripcion.Text = "bunifuLabel4";
             this.lbldescripcion.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -143,9 +143,9 @@
             this.ptbimg.BorderRadius = 20;
             this.ptbimg.Image = ((System.Drawing.Image)(resources.GetObject("ptbimg.Image")));
             this.ptbimg.IsCircle = false;
-            this.ptbimg.Location = new System.Drawing.Point(33, 97);
+            this.ptbimg.Location = new System.Drawing.Point(33, 126);
             this.ptbimg.Name = "ptbimg";
-            this.ptbimg.Size = new System.Drawing.Size(275, 335);
+            this.ptbimg.Size = new System.Drawing.Size(280, 335);
             this.ptbimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbimg.TabIndex = 2;
             this.ptbimg.TabStop = false;
@@ -155,13 +155,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 473);
             this.Controls.Add(this.ptbimg);
             this.Controls.Add(this.bunifuPanel2);
             this.Controls.Add(this.bunifuPanel1);
             this.Name = "VistaZoomProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VistaZoomProduct";
+            this.Text = "Info | Productos";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.VistaZoomProduct_Load);
             this.bunifuPanel1.ResumeLayout(false);

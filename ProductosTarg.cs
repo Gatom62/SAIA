@@ -71,7 +71,7 @@ namespace AgroServicios
                 form.Show();
 
                 mm.Owner = form;
-
+       
                 // Asigna los valores antes de mostrar el formulario
                 mm.ptbimg.Image = this.ImgProducto;
                 mm.lblname.Text = this.nameProduct;
