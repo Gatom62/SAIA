@@ -1,6 +1,9 @@
 ﻿using System;
 using AgroServicios.Vista.Estadisticas;
 
+using AgroServicios.Vista.Productos1;
+
+
 namespace AgroServicios.Controlador.ControladorStats
 {
     internal class ControladorStats
@@ -19,16 +22,15 @@ namespace AgroServicios.Controlador.ControladorStats
             ObjStats.btnSuministros.Click += new EventHandler(OpenSuministros);
         }
 
-        private void OpenProveedores(object sender, EventArgs e)
+        private void OpenSuministros(object sender, EventArgs e)
+        {
+            VistaProductos vistaProductos = new VistaProductos();
+            vistaProductos.ShowDialog();
+        }
+        public void OpenProveedores(object sender, EventArgs e)
         {
             VistaProveedores vistaProveedores = new VistaProveedores();
             vistaProveedores.ShowDialog();
-        }
-
-        private void OpenSuministros(object sender, EventArgs e)
-        {
-          VistaSuministros vistaSuministros = new VistaSuministros();
-            vistaSuministros.ShowDialog();
         }
     }
 }

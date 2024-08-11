@@ -100,6 +100,9 @@
   <ItemGroup>
     <Compile Include="Controlador\Busqueda\ControladorBusqueda.cs" />
     <Compile Include="Controlador\ControladorIdioma.cs" />
+    <Compile Include="Controlador\ControladorStats\ControladorActualizarProveedor.cs" />
+    <Compile Include="Controlador\ControladorStats\ControladorCrearProveedor.cs" />
+    <Compile Include="Controlador\ControladorStats\ControladorProveedores.cs" />
     <Compile Include="Controlador\ControladorStats\ControladorStats.cs" />
     <Compile Include="Controlador\ControladorTema.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorCreateUser.cs" />
@@ -114,16 +117,25 @@
     <Compile Include="Controlador\Login\ControlerBasicMetodosRecuperar.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorMenuPrincipal.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorVistaProductos.cs" />
+    <Compile Include="Controlador\Productos1\ControladorCreateMarca1.cs" />
+    <Compile Include="Controlador\Productos1\ControladorCreateProducto1.cs" />
+    <Compile Include="Controlador\Productos1\ControladorUbdateMarca1.cs" />
+    <Compile Include="Controlador\Productos1\ControladorUbdateProducto1.cs" />
+    <Compile Include="Controlador\Productos1\ControladorVistaProductos1.cs" />
     <Compile Include="Modelo\DAO\DAOAdminUsers.cs" />
     <Compile Include="Modelo\DAO\DAOCorreoRecuperacion.cs" />
     <Compile Include="Modelo\DAO\DAODCSoporte.cs" />
     <Compile Include="Modelo\DAO\DAOLogin.cs" />
+    <Compile Include="Modelo\DAO\DAOProductos1.cs" />
+    <Compile Include="Modelo\DAO\DAOProveedores.cs" />
     <Compile Include="Modelo\DAO\DAORecuperarPass.cs" />
     <Compile Include="Modelo\DAO\DAOTargproductos.cs" />
     <Compile Include="Modelo\dbContext.cs" />
     <Compile Include="Modelo\DTO\DTOAdminUsers.cs" />
     <Compile Include="Modelo\DTO\DTOCorreoRecuperacion.cs" />
     <Compile Include="Modelo\DTO\DTOLogin.cs" />
+    <Compile Include="Modelo\DTO\DTOProductos1.cs" />
+    <Compile Include="Modelo\DTO\DTOProveedores.cs" />
     <Compile Include="Modelo\DTO\DTOTargproductos.cs" />
     <Compile Include="ProductosTarg.cs">
       <SubType>UserControl</SubType>
@@ -172,6 +184,18 @@
     </Compile>
     <Compile Include="Vista\Cuentas\VistaUpdateEmpleados.Designer.cs">
       <DependentUpon>VistaUpdateEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Estadisticas\VistaActualizarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Estadisticas\VistaActualizarProveedor.Designer.cs">
+      <DependentUpon>VistaActualizarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Estadisticas\VistaAgregarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Estadisticas\VistaAgregarProveedor.Designer.cs">
+      <DependentUpon>VistaAgregarProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Estadisticas\VistaProveedores.cs">
       <SubType>Form</SubType>
@@ -233,6 +257,36 @@
     <Compile Include="Vista\MenuPrincipal\VistaProductos.Designer.cs">
       <DependentUpon>VistaProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Productos1\VistaCreateMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Productos1\VistaCreateMarca.Designer.cs">
+      <DependentUpon>VistaCreateMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Productos1\VistaCreateProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Productos1\VistaCreateProducto.Designer.cs">
+      <DependentUpon>VistaCreateProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Productos1\VistaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Productos1\VistaProductos.Designer.cs">
+      <DependentUpon>VistaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Productos1\VistaUbdateMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Productos1\VistaUbdateMarca.Designer.cs">
+      <DependentUpon>VistaUbdateMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Productos1\VistaUbdateProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Productos1\VistaUbdateProducto.Designer.cs">
+      <DependentUpon>VistaUbdateProducto.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ProductosTarg.resx">
       <DependentUpon>ProductosTarg.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,6 +323,15 @@
     <EmbeddedResource Include="Vista\Cuentas\VistaUpdateEmpleados.resx">
       <DependentUpon>VistaUpdateEmpleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Estadisticas\VistaActualizarProveedor.resx">
+      <DependentUpon>VistaActualizarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Estadisticas\VistaAgregarProveedor.resx">
+      <DependentUpon>VistaAgregarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Estadisticas\VistaProveedores.resx">
+      <DependentUpon>VistaProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Estadisticas\VistaStats.resx">
       <DependentUpon>VistaStats.cs</DependentUpon>
     </EmbeddedResource>
@@ -293,6 +356,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaProductos.resx">
       <DependentUpon>VistaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Productos1\VistaCreateMarca.resx">
+      <DependentUpon>VistaCreateMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Productos1\VistaCreateProducto.resx">
+      <DependentUpon>VistaCreateProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Productos1\VistaProductos.resx">
+      <DependentUpon>VistaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Productos1\VistaUbdateMarca.resx">
+      <DependentUpon>VistaUbdateMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Productos1\VistaUbdateProducto.resx">
+      <DependentUpon>VistaUbdateProducto.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

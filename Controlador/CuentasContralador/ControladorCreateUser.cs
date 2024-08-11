@@ -38,16 +38,28 @@ namespace AgroServicios.Controlador.CuentasContralador
         }
         void AgregarImagen(object sender, EventArgs e)
         {
+            // Crea una instancia del cuadro de diálogo para seleccionar archivos.
             OpenFileDialog ofd = new OpenFileDialog();
+
+            // Define el filtro para el cuadro de diálogo, limitando la selección a archivos de imagen
+            // con extensiones .jpg, .jpeg, y .png. También incluye una opción para mostrar todos los archivos.
             ofd.Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png| Todos los archivos(*.*)| *.* ";
+
+            // Establece el título del cuadro de diálogo.
             ofd.Title = "Seleccionar imagen";
 
+            // Muestra el cuadro de diálogo y verifica si el usuario selecciona un archivo y presiona "OK".
             if (ofd.ShowDialog() == DialogResult.OK)
             {
+                // Obtiene la ruta completa del archivo de imagen seleccionado.
                 string rutaImagen = ofd.FileName;
+
+                // Asigna la imagen seleccionada al PictureBox (ptbImgUser) del objeto ObjUsers.
+                // Carga la imagen desde la ruta del archivo.
                 ObjUsers.ptbImgUser.Image = Image.FromFile(rutaImagen);
             }
         }
+
 
         public void InitialCharge(object sender, EventArgs e)
         {
@@ -134,15 +146,27 @@ namespace AgroServicios.Controlador.CuentasContralador
                 return;
             }
 
+            // Declara una variable byte[] llamada imageBytes y la inicializa como null.
+            // Esta variable almacenará los bytes de la imagen si hay una imagen en el PictureBox.
             byte[] imageBytes = null;
+
+            // Verifica si la propiedad Image del PictureBox (ptbImgUser) de ObjUsers no es null,
+            // es decir, si hay una imagen cargada en el PictureBox.
             if (ObjUsers.ptbImgUser.Image != null)
             {
+                // Crea un objeto MemoryStream para trabajar con datos en memoria.
+                // El uso de 'using' asegura que el MemoryStream se libere correctamente después de su uso.
                 using (MemoryStream ms = new MemoryStream())
                 {
+                    // Guarda la imagen que está en el PictureBox en el MemoryStream en formato JPEG.
                     ObjUsers.ptbImgUser.Image.Save(ms, ImageFormat.Jpeg);
+
+                    // Convierte los datos de la imagen en el MemoryStream a un array de bytes
+                    // y los asigna a la variable imageBytes.
                     imageBytes = ms.ToArray();
                 }
             }
+
 
             DAOAdminUsers DaoInsert = new DAOAdminUsers();
             Encryp ObjEncriptar = new Encryp();

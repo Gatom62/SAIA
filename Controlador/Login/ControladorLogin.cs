@@ -11,11 +11,10 @@ namespace AgroServicios.Controlador.Login
 {
     internal class ControladorLogin
     {
-        //Objeto de la vista ViewLogin
+       
         VistaLogin ObjLogin;
 
         /// <summary>
-        /// Constructor de la clase ControllerLogin que inicia los eventos de la vista
         /// </summary>
         /// <param name="Vista"></param>
         /// 
@@ -32,9 +31,7 @@ namespace AgroServicios.Controlador.Login
 
         private void TestConnection(object sender, EventArgs e)
         {
-            //Se hace referencia a la clase dbContext y su método getConnection y se evalúa
-            // si el retorno es nulo o no, en caso de ser nulo se mostrará el primer mensaje
-            //de lo contrario se mostrará el código del segmento else.
+            //Verificar la propiedad idioma para cambiar el idioma
             if (ControladorIdioma.idioma == 1)
             {
                 if (dbContext.getConnection() == null)

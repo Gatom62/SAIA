@@ -166,7 +166,7 @@
             this.bunifuPanel1.Controls.Add(this.txtNewPassword);
             this.bunifuPanel1.Controls.Add(this.txtNewCorreo);
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel1);
-            this.bunifuPanel1.Location = new System.Drawing.Point(53, 29);
+            this.bunifuPanel1.Location = new System.Drawing.Point(54, 29);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(918, 668);

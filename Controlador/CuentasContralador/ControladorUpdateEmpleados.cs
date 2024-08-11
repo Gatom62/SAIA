@@ -29,17 +29,31 @@ namespace AgroServicios.Controlador.CuentasContralador
 
         private void AgregarImagen(object sender, EventArgs e)
         {
+            // Crea una instancia de OpenFileDialog, que permite al usuario seleccionar un archivo.
             OpenFileDialog ofd = new OpenFileDialog();
+
+            // Establece un filtro para el cuadro de diálogo, limitando la selección a archivos de imagen
+            // con extensiones .jpg, .jpeg, y .png, además de permitir seleccionar todos los archivos.
             ofd.Filter = "Archivos de imagen (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png| Todos los archivos(*.*)| *.* ";
+
+            // Establece el título del cuadro de diálogo que se mostrará al usuario.
             ofd.Title = "Seleccionar imagen";
 
+            // Abre el cuadro de diálogo y verifica si el usuario selecciona un archivo y presiona "OK".
             if (ofd.ShowDialog() == DialogResult.OK)
             {
+                // Almacena la ruta completa del archivo de imagen seleccionado en una variable string.
                 string rutaImagen = ofd.FileName;
+
+                // Carga la imagen desde la ruta del archivo y la asigna al PictureBox (ptbactimg) del objeto Objupdate.
                 Objupdate.ptbactimg.Image = Image.FromFile(rutaImagen);
-                Objupdate.ptbactimg.Tag = rutaImagen; // Marcar que se ha cargado una nueva imagen
+
+                // Asigna la ruta de la imagen al Tag del PictureBox, marcando que se ha cargado una nueva imagen.
+                // Esto es útil para identificar que se ha actualizado la imagen en el formulario.
+                Objupdate.ptbactimg.Tag = rutaImagen;
             }
         }
+
         //public void InitialCharge(object sender, EventArgs e)
         //{
         //    DAOAdminUsers objAdmin = new DAOAdminUsers();
@@ -121,14 +135,27 @@ namespace AgroServicios.Controlador.CuentasContralador
                 return;
             }
 
+            // Declara una variable byte[] llamada imageBytes y la inicializa como null.
+            // Esta variable almacenará los bytes de la imagen si se ha cargado una nueva imagen.
             byte[] imageBytes = null;
+
+            // Verifica si el Tag del PictureBox (ptbactimg) en Objupdate no es null.
+            // El Tag se usa para marcar si se ha cargado una nueva imagen.
             if (Objupdate.ptbactimg.Tag != null)
             {
-                // Solo convertir a bytes si la imagen ha cambiado (según el Tag)
+                // Solo convierte la imagen a un array de bytes si se ha detectado que la imagen ha cambiado.
+                // Obtiene la imagen actual del PictureBox.
                 Image imagen = Objupdate.ptbactimg.Image;
+
+                // Crea un objeto MemoryStream para trabajar con datos en memoria.
+                // 'using' asegura que el MemoryStream se libere correctamente después de su uso.
                 using (MemoryStream ms = new MemoryStream())
                 {
+                    // Guarda la imagen en el MemoryStream en formato JPEG.
                     imagen.Save(ms, ImageFormat.Jpeg);
+
+                    // Convierte los datos de la imagen en el MemoryStream a un array de bytes
+                    // y los asigna a la variable imageBytes.
                     imageBytes = ms.ToArray();
                 }
             }

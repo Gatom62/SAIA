@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductosTarg));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lbldesc = new System.Windows.Forms.RichTextBox();
             this.ptbimg = new System.Windows.Forms.PictureBox();
@@ -64,6 +64,7 @@
             // 
             // lbldesc
             // 
+            this.lbldesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbldesc.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldesc.Location = new System.Drawing.Point(257, 130);
             this.lbldesc.Name = "lbldesc";
@@ -94,7 +95,7 @@
             this.btnadd.AutoSizeLeftIcon = true;
             this.btnadd.AutoSizeRightIcon = true;
             this.btnadd.BackColor = System.Drawing.Color.Transparent;
-            this.btnadd.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.btnadd.BackColor1 = System.Drawing.Color.LimeGreen;
             this.btnadd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnadd.BackgroundImage")));
             this.btnadd.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnadd.ButtonText = "Añadir a la cesta";
@@ -102,11 +103,11 @@
             this.btnadd.ColorContrastOnClick = 45;
             this.btnadd.ColorContrastOnHover = 45;
             this.btnadd.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.btnadd.CustomizableEdges = borderEdges6;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnadd.CustomizableEdges = borderEdges1;
             this.btnadd.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnadd.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnadd.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -123,10 +124,10 @@
             this.btnadd.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btnadd.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnadd.IconSize = 25;
-            this.btnadd.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnadd.IdleBorderColor = System.Drawing.Color.LimeGreen;
             this.btnadd.IdleBorderRadius = 31;
             this.btnadd.IdleBorderThickness = 1;
-            this.btnadd.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.btnadd.IdleFillColor = System.Drawing.Color.LimeGreen;
             this.btnadd.IdleIconLeftImage = null;
             this.btnadd.IdleIconRightImage = null;
             this.btnadd.IndicateFocus = false;
@@ -148,11 +149,11 @@
             this.btnadd.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnadd.onHoverState.IconLeftImage = null;
             this.btnadd.onHoverState.IconRightImage = null;
-            this.btnadd.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnadd.OnIdleState.BorderColor = System.Drawing.Color.LimeGreen;
             this.btnadd.OnIdleState.BorderRadius = 1;
             this.btnadd.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnadd.OnIdleState.BorderThickness = 1;
-            this.btnadd.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnadd.OnIdleState.FillColor = System.Drawing.Color.LimeGreen;
             this.btnadd.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnadd.OnIdleState.IconLeftImage = null;
             this.btnadd.OnIdleState.IconRightImage = null;
