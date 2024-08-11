@@ -1,4 +1,5 @@
-﻿using AgroServicios.Controlador.ControladorStats;
+﻿using AgroServicios.Controlador;
+using AgroServicios.Controlador.ControladorStats;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,16 @@ namespace AgroServicios.Vista.Estadisticas
         private void contextGriewProveedores_Opening(object sender, CancelEventArgs e)
         {
 
+        }
+
+        private void VistaProveedores_Load(object sender, EventArgs e)
+        {
+            if (ControladorIdioma.idioma ==1)
+            {
+                btnAgregarProv.Text = Ingles.btnAñadirP;
+                cmsActualizar.Text = Ingles.CMSUPP;
+                cmsEliminar.Text = Ingles.CMSELIP;
+            }
         }
     }
 }

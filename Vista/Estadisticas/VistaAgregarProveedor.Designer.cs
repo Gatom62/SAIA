@@ -52,7 +52,12 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.AñaP = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnAgregarProv = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtNewCompany = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtNewFirstName = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -61,6 +66,11 @@
             this.txtNewCorreo = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel2
@@ -90,7 +100,12 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Black;
             this.bunifuPanel1.BorderRadius = 30;
             this.bunifuPanel1.BorderThickness = 2;
-            this.bunifuPanel1.Controls.Add(this.bunifuLabel2);
+            this.bunifuPanel1.Controls.Add(this.pictureBox5);
+            this.bunifuPanel1.Controls.Add(this.pictureBox4);
+            this.bunifuPanel1.Controls.Add(this.pictureBox3);
+            this.bunifuPanel1.Controls.Add(this.pictureBox2);
+            this.bunifuPanel1.Controls.Add(this.pictureBox1);
+            this.bunifuPanel1.Controls.Add(this.AñaP);
             this.bunifuPanel1.Controls.Add(this.btnAgregarProv);
             this.bunifuPanel1.Controls.Add(this.txtNewCompany);
             this.bunifuPanel1.Controls.Add(this.txtNewFirstName);
@@ -104,22 +119,70 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(634, 460);
             this.bunifuPanel1.TabIndex = 13;
             // 
-            // bunifuLabel2
+            // pictureBox5
             // 
-            this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel2.Location = new System.Drawing.Point(214, 42);
-            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(203, 28);
-            this.bunifuLabel2.TabIndex = 13;
-            this.bunifuLabel2.Text = "Añadir Proveedor";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.pictureBox5.Image = global::AgroServicios.Properties.Resources.Vector;
+            this.pictureBox5.Location = new System.Drawing.Point(109, 312);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(65, 47);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 39;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::AgroServicios.Properties.Resources.Logo_Correo;
+            this.pictureBox4.Location = new System.Drawing.Point(109, 247);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(65, 59);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 38;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::AgroServicios.Properties.Resources.Rectangle_32;
+            this.pictureBox3.Location = new System.Drawing.Point(109, 135);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(65, 50);
+            this.pictureBox3.TabIndex = 36;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::AgroServicios.Properties.Resources.Telefono_logo;
+            this.pictureBox2.Location = new System.Drawing.Point(109, 191);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(65, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 37;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AgroServicios.Properties.Resources.Rectangle_32;
+            this.pictureBox1.Location = new System.Drawing.Point(109, 79);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(65, 50);
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
+            // AñaP
+            // 
+            this.AñaP.AllowParentOverrides = false;
+            this.AñaP.AutoEllipsis = false;
+            this.AñaP.Cursor = System.Windows.Forms.Cursors.Default;
+            this.AñaP.CursorType = System.Windows.Forms.Cursors.Default;
+            this.AñaP.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.AñaP.Location = new System.Drawing.Point(214, 31);
+            this.AñaP.Margin = new System.Windows.Forms.Padding(2);
+            this.AñaP.Name = "AñaP";
+            this.AñaP.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.AñaP.Size = new System.Drawing.Size(203, 28);
+            this.AñaP.TabIndex = 13;
+            this.AñaP.Text = "Añadir Proveedor";
+            this.AñaP.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.AñaP.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // btnAgregarProv
             // 
@@ -170,7 +233,7 @@
             this.btnAgregarProv.IdleIconLeftImage = null;
             this.btnAgregarProv.IdleIconRightImage = null;
             this.btnAgregarProv.IndicateFocus = false;
-            this.btnAgregarProv.Location = new System.Drawing.Point(244, 386);
+            this.btnAgregarProv.Location = new System.Drawing.Point(256, 381);
             this.btnAgregarProv.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarProv.Name = "btnAgregarProv";
             this.btnAgregarProv.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -242,7 +305,7 @@
             this.txtNewCompany.IconRight = null;
             this.txtNewCompany.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewCompany.Lines = new string[0];
-            this.txtNewCompany.Location = new System.Drawing.Point(118, 331);
+            this.txtNewCompany.Location = new System.Drawing.Point(179, 312);
             this.txtNewCompany.Margin = new System.Windows.Forms.Padding(2);
             this.txtNewCompany.MaxLength = 32767;
             this.txtNewCompany.MinimumSize = new System.Drawing.Size(1, 1);
@@ -279,7 +342,7 @@
             this.txtNewCompany.SelectionLength = 0;
             this.txtNewCompany.SelectionStart = 0;
             this.txtNewCompany.ShortcutsEnabled = true;
-            this.txtNewCompany.Size = new System.Drawing.Size(425, 41);
+            this.txtNewCompany.Size = new System.Drawing.Size(389, 41);
             this.txtNewCompany.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNewCompany.TabIndex = 12;
             this.txtNewCompany.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -319,7 +382,7 @@
             this.txtNewFirstName.IconRight = null;
             this.txtNewFirstName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewFirstName.Lines = new string[0];
-            this.txtNewFirstName.Location = new System.Drawing.Point(118, 90);
+            this.txtNewFirstName.Location = new System.Drawing.Point(179, 79);
             this.txtNewFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.txtNewFirstName.MaxLength = 32767;
             this.txtNewFirstName.MinimumSize = new System.Drawing.Size(1, 1);
@@ -356,7 +419,7 @@
             this.txtNewFirstName.SelectionLength = 0;
             this.txtNewFirstName.SelectionStart = 0;
             this.txtNewFirstName.ShortcutsEnabled = true;
-            this.txtNewFirstName.Size = new System.Drawing.Size(425, 41);
+            this.txtNewFirstName.Size = new System.Drawing.Size(389, 41);
             this.txtNewFirstName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNewFirstName.TabIndex = 3;
             this.txtNewFirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -396,7 +459,7 @@
             this.txtNewPhone.IconRight = null;
             this.txtNewPhone.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewPhone.Lines = new string[0];
-            this.txtNewPhone.Location = new System.Drawing.Point(118, 212);
+            this.txtNewPhone.Location = new System.Drawing.Point(179, 191);
             this.txtNewPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtNewPhone.MaxLength = 32767;
             this.txtNewPhone.MinimumSize = new System.Drawing.Size(1, 1);
@@ -433,7 +496,7 @@
             this.txtNewPhone.SelectionLength = 0;
             this.txtNewPhone.SelectionStart = 0;
             this.txtNewPhone.ShortcutsEnabled = true;
-            this.txtNewPhone.Size = new System.Drawing.Size(425, 41);
+            this.txtNewPhone.Size = new System.Drawing.Size(389, 41);
             this.txtNewPhone.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNewPhone.TabIndex = 7;
             this.txtNewPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -473,7 +536,7 @@
             this.txtNewID.IconRight = null;
             this.txtNewID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewID.Lines = new string[0];
-            this.txtNewID.Location = new System.Drawing.Point(118, 153);
+            this.txtNewID.Location = new System.Drawing.Point(179, 135);
             this.txtNewID.Margin = new System.Windows.Forms.Padding(2);
             this.txtNewID.MaxLength = 32767;
             this.txtNewID.MinimumSize = new System.Drawing.Size(1, 1);
@@ -510,7 +573,7 @@
             this.txtNewID.SelectionLength = 0;
             this.txtNewID.SelectionStart = 0;
             this.txtNewID.ShortcutsEnabled = true;
-            this.txtNewID.Size = new System.Drawing.Size(425, 41);
+            this.txtNewID.Size = new System.Drawing.Size(389, 41);
             this.txtNewID.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNewID.TabIndex = 2;
             this.txtNewID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -550,7 +613,7 @@
             this.txtNewCorreo.IconRight = null;
             this.txtNewCorreo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewCorreo.Lines = new string[0];
-            this.txtNewCorreo.Location = new System.Drawing.Point(118, 270);
+            this.txtNewCorreo.Location = new System.Drawing.Point(179, 254);
             this.txtNewCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtNewCorreo.MaxLength = 32767;
             this.txtNewCorreo.MinimumSize = new System.Drawing.Size(1, 1);
@@ -587,7 +650,7 @@
             this.txtNewCorreo.SelectionLength = 0;
             this.txtNewCorreo.SelectionStart = 0;
             this.txtNewCorreo.ShortcutsEnabled = true;
-            this.txtNewCorreo.Size = new System.Drawing.Size(425, 41);
+            this.txtNewCorreo.Size = new System.Drawing.Size(389, 41);
             this.txtNewCorreo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNewCorreo.TabIndex = 8;
             this.txtNewCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -606,15 +669,21 @@
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Name = "VistaAgregarProveedor";
             this.Text = "AgregarProveedor";
+            this.Load += new System.EventHandler(this.VistaAgregarProveedor_Load);
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private Bunifu.UI.WinForms.BunifuLabel AñaP;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAgregarProv;
         public Bunifu.UI.WinForms.BunifuTextBox txtNewCompany;
         public Bunifu.UI.WinForms.BunifuTextBox txtNewFirstName;
@@ -623,5 +692,10 @@
         public Bunifu.UI.WinForms.BunifuTextBox txtNewCorreo;
         public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel2;
         public Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
