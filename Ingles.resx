@@ -117,6 +117,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Actualizar" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Agregar" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AgregarImagen" xml:space="preserve">
+    <value>Add image</value>
+  </data>
+  <data name="AgregarMarca" xml:space="preserve">
+    <value>Add brand</value>
+  </data>
+  <data name="AgregarProducto" xml:space="preserve">
+    <value>Add product</value>
+  </data>
   <data name="bienvenida" xml:space="preserve">
     <value>Welcome</value>
   </data>
@@ -144,6 +159,9 @@
   <data name="Busqueda" xml:space="preserve">
     <value>Search product</value>
   </data>
+  <data name="CantidadProducto" xml:space="preserve">
+    <value>Product quantity</value>
+  </data>
   <data name="Celular" xml:space="preserve">
     <value>Cell phone number</value>
   </data>
@@ -165,6 +183,9 @@
   <data name="CMSUPP" xml:space="preserve">
     <value>Update</value>
   </data>
+  <data name="Codigo" xml:space="preserve">
+    <value>Code</value>
+  </data>
   <data name="Conexion" xml:space="preserve">
     <value>Test connection</value>
   </data>
@@ -174,11 +195,41 @@
   <data name="Correo" xml:space="preserve">
     <value>e-mail</value>
   </data>
+  <data name="CreateMarca" xml:space="preserve">
+    <value>Create new brand</value>
+  </data>
+  <data name="Descripcion" xml:space="preserve">
+    <value>Description</value>
+  </data>
   <data name="Direccion" xml:space="preserve">
     <value>Address</value>
   </data>
+  <data name="EditarDatos" xml:space="preserve">
+    <value>Edit Data</value>
+  </data>
+  <data name="EditarImagen" xml:space="preserve">
+    <value>Edit image</value>
+  </data>
+  <data name="EditarMarca" xml:space="preserve">
+    <value>Edit Brand</value>
+  </data>
+  <data name="EditarProducto" xml:space="preserve">
+    <value>Edit Product</value>
+  </data>
+  <data name="Eliminar" xml:space="preserve">
+    <value>Delete</value>
+  </data>
   <data name="HistorialVentas" xml:space="preserve">
     <value>Sales history</value>
+  </data>
+  <data name="Informacion" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="IngresarProducto" xml:space="preserve">
+    <value>Enter Product</value>
+  </data>
+  <data name="Integragrantes" xml:space="preserve">
+    <value>Members</value>
   </data>
   <data name="Integrantes" xml:space="preserve">
     <value>Members</value>
@@ -195,11 +246,23 @@
   <data name="LabelRestUser" xml:space="preserve">
     <value>Rest user</value>
   </data>
+  <data name="LabelTitulo" xml:space="preserve">
+    <value>Product table</value>
+  </data>
+  <data name="Marca" xml:space="preserve">
+    <value>Marc</value>
+  </data>
   <data name="Menu" xml:space="preserve">
     <value>Options</value>
   </data>
   <data name="Nombre" xml:space="preserve">
     <value>Full name</value>
+  </data>
+  <data name="NombreMarca" xml:space="preserve">
+    <value>Brand Name</value>
+  </data>
+  <data name="NombreProducto" xml:space="preserve">
+    <value>Product Name</value>
   </data>
   <data name="Proveedores" xml:space="preserve">
     <value>Suppliers</value>
@@ -212,6 +275,9 @@
   </data>
   <data name="Suministros" xml:space="preserve">
     <value>Supplies</value>
+  </data>
+  <data name="TablaMarcas" xml:space="preserve">
+    <value>Brand Table</value>
   </data>
   <data name="tituloactualizar" xml:space="preserve">
     <value>Update employee</value>
