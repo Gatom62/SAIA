@@ -127,7 +127,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::AgroServicios.Properties.Resources.Vector;
-            this.pictureBox5.Location = new System.Drawing.Point(68, 318);
+            this.pictureBox5.Location = new System.Drawing.Point(47, 318);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(65, 47);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -137,7 +137,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::AgroServicios.Properties.Resources.Logo_Correo;
-            this.pictureBox4.Location = new System.Drawing.Point(68, 253);
+            this.pictureBox4.Location = new System.Drawing.Point(47, 253);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(65, 59);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -147,7 +147,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::AgroServicios.Properties.Resources.Rectangle_32;
-            this.pictureBox3.Location = new System.Drawing.Point(68, 141);
+            this.pictureBox3.Location = new System.Drawing.Point(47, 141);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(65, 50);
             this.pictureBox3.TabIndex = 32;
@@ -156,7 +156,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::AgroServicios.Properties.Resources.Telefono_logo;
-            this.pictureBox2.Location = new System.Drawing.Point(68, 197);
+            this.pictureBox2.Location = new System.Drawing.Point(47, 197);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(65, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -166,7 +166,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AgroServicios.Properties.Resources.Rectangle_32;
-            this.pictureBox1.Location = new System.Drawing.Point(68, 85);
+            this.pictureBox1.Location = new System.Drawing.Point(47, 85);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(65, 50);
             this.pictureBox1.TabIndex = 31;
@@ -224,7 +224,7 @@
             this.txtUpdateCompany.IconRight = null;
             this.txtUpdateCompany.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUpdateCompany.Lines = new string[0];
-            this.txtUpdateCompany.Location = new System.Drawing.Point(138, 324);
+            this.txtUpdateCompany.Location = new System.Drawing.Point(126, 320);
             this.txtUpdateCompany.Margin = new System.Windows.Forms.Padding(2);
             this.txtUpdateCompany.MaxLength = 32767;
             this.txtUpdateCompany.MinimumSize = new System.Drawing.Size(1, 1);
@@ -279,7 +279,7 @@
             this.txtAcP.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtAcP.CursorType = System.Windows.Forms.Cursors.Default;
             this.txtAcP.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.txtAcP.Location = new System.Drawing.Point(186, 42);
+            this.txtAcP.Location = new System.Drawing.Point(174, 38);
             this.txtAcP.Margin = new System.Windows.Forms.Padding(2);
             this.txtAcP.Name = "txtAcP";
             this.txtAcP.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -319,7 +319,7 @@
             this.txtUpdateNombre.IconRight = null;
             this.txtUpdateNombre.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUpdateNombre.Lines = new string[0];
-            this.txtUpdateNombre.Location = new System.Drawing.Point(138, 94);
+            this.txtUpdateNombre.Location = new System.Drawing.Point(126, 90);
             this.txtUpdateNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtUpdateNombre.MaxLength = 32767;
             this.txtUpdateNombre.MinimumSize = new System.Drawing.Size(1, 1);
@@ -396,7 +396,7 @@
             this.txtUpdatePhone.IconRight = null;
             this.txtUpdatePhone.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUpdatePhone.Lines = new string[0];
-            this.txtUpdatePhone.Location = new System.Drawing.Point(138, 206);
+            this.txtUpdatePhone.Location = new System.Drawing.Point(126, 202);
             this.txtUpdatePhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtUpdatePhone.MaxLength = 32767;
             this.txtUpdatePhone.MinimumSize = new System.Drawing.Size(1, 1);
@@ -473,7 +473,7 @@
             this.txtUpdateCorreo.IconRight = null;
             this.txtUpdateCorreo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUpdateCorreo.Lines = new string[0];
-            this.txtUpdateCorreo.Location = new System.Drawing.Point(138, 262);
+            this.txtUpdateCorreo.Location = new System.Drawing.Point(126, 258);
             this.txtUpdateCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtUpdateCorreo.MaxLength = 32767;
             this.txtUpdateCorreo.MinimumSize = new System.Drawing.Size(1, 1);
@@ -550,7 +550,7 @@
             this.txtUpdateID.IconRight = null;
             this.txtUpdateID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUpdateID.Lines = new string[0];
-            this.txtUpdateID.Location = new System.Drawing.Point(138, 150);
+            this.txtUpdateID.Location = new System.Drawing.Point(126, 146);
             this.txtUpdateID.Margin = new System.Windows.Forms.Padding(2);
             this.txtUpdateID.MaxLength = 32767;
             this.txtUpdateID.MinimumSize = new System.Drawing.Size(1, 1);
@@ -647,7 +647,7 @@
             this.btnUpdateProveedor.IdleIconLeftImage = null;
             this.btnUpdateProveedor.IdleIconRightImage = null;
             this.btnUpdateProveedor.IndicateFocus = false;
-            this.btnUpdateProveedor.Location = new System.Drawing.Point(237, 386);
+            this.btnUpdateProveedor.Location = new System.Drawing.Point(225, 382);
             this.btnUpdateProveedor.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateProveedor.Name = "btnUpdateProveedor";
             this.btnUpdateProveedor.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));

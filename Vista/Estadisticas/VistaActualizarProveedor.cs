@@ -49,6 +49,14 @@ namespace AgroServicios.Vista.Estadisticas
                 txtUpdateCompany.PlaceholderText = Ingles.txtEM;
                 btnUpdateProveedor.Text = Ingles.btnUP;
             }
+            if (ControladorTema.IsDarkMode == true)
+            {
+                bunifuGradientPanel1.GradientBottomLeft = Color.FromArgb(118, 88, 152);
+                bunifuGradientPanel1.GradientTopRight = Color.FromArgb(118, 88, 152);
+                bunifuGradientPanel1.GradientBottomRight = Color.FromArgb(34, 36, 49);
+                bunifuGradientPanel1.GradientTopLeft = Color.FromArgb(34, 36, 49);
+                bunifuPanel1.BackgroundColor = Color.FromArgb(34, 36, 49);
+            }
         }
     }
 }

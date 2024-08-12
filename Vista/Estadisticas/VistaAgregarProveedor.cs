@@ -1,5 +1,6 @@
 ﻿using AgroServicios.Controlador;
 using AgroServicios.Controlador.ControladorStats;
+using Bunifu.UI.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,8 +31,15 @@ namespace AgroServicios.Vista.Estadisticas
                 txtNewPhone.PlaceholderText = Ingles.txtTe;
                 txtNewCorreo.PlaceholderText = Ingles.txtCR;
                 txtNewCompany.PlaceholderText = Ingles.txtEM;
-                btnAgregarProv.Text = Ingles.btnAP;
-                   
+                btnAgregarProv.Text = Ingles.btnAP;      
+            }
+            if (ControladorTema.IsDarkMode == true)
+            {
+                bunifuGradientPanel2.GradientBottomLeft = Color.FromArgb(118, 88, 152);
+                bunifuGradientPanel2.GradientTopRight = Color.FromArgb(118, 88, 152);
+                bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(34, 36, 49);
+                bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(34, 36, 49);
+                bunifuPanel1.BackgroundColor = Color.FromArgb(34, 36, 49);
             }
         }
     }

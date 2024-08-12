@@ -32,11 +32,18 @@ namespace AgroServicios.Vista.Estadisticas
 
         private void VistaProveedores_Load(object sender, EventArgs e)
         {
-            if (ControladorIdioma.idioma ==1)
+            if (ControladorIdioma.idioma == 1)
             {
                 btnAgregarProv.Text = Ingles.btnAñadirP;
                 cmsActualizar.Text = Ingles.CMSUPP;
                 cmsEliminar.Text = Ingles.CMSELIP;
+            } 
+            if (ControladorTema.IsDarkMode) 
+            {
+                {
+                    GriewProveedores.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
+                    GriewProveedores.BackgroundColor = Color.FromArgb(50, 56, 62);
+                }
             }
         }
     }

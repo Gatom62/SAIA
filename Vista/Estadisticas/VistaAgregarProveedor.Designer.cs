@@ -122,7 +122,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::AgroServicios.Properties.Resources.Vector;
-            this.pictureBox5.Location = new System.Drawing.Point(109, 312);
+            this.pictureBox5.Location = new System.Drawing.Point(57, 308);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(65, 47);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,7 +132,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::AgroServicios.Properties.Resources.Logo_Correo;
-            this.pictureBox4.Location = new System.Drawing.Point(109, 247);
+            this.pictureBox4.Location = new System.Drawing.Point(57, 243);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(65, 59);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -142,7 +142,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::AgroServicios.Properties.Resources.Rectangle_32;
-            this.pictureBox3.Location = new System.Drawing.Point(109, 135);
+            this.pictureBox3.Location = new System.Drawing.Point(57, 131);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(65, 50);
             this.pictureBox3.TabIndex = 36;
@@ -151,7 +151,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::AgroServicios.Properties.Resources.Telefono_logo;
-            this.pictureBox2.Location = new System.Drawing.Point(109, 191);
+            this.pictureBox2.Location = new System.Drawing.Point(57, 187);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(65, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -161,7 +161,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AgroServicios.Properties.Resources.Rectangle_32;
-            this.pictureBox1.Location = new System.Drawing.Point(109, 79);
+            this.pictureBox1.Location = new System.Drawing.Point(57, 75);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(65, 50);
             this.pictureBox1.TabIndex = 35;
@@ -174,7 +174,7 @@
             this.AñaP.Cursor = System.Windows.Forms.Cursors.Default;
             this.AñaP.CursorType = System.Windows.Forms.Cursors.Default;
             this.AñaP.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.AñaP.Location = new System.Drawing.Point(214, 31);
+            this.AñaP.Location = new System.Drawing.Point(208, 27);
             this.AñaP.Margin = new System.Windows.Forms.Padding(2);
             this.AñaP.Name = "AñaP";
             this.AñaP.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -233,7 +233,7 @@
             this.btnAgregarProv.IdleIconLeftImage = null;
             this.btnAgregarProv.IdleIconRightImage = null;
             this.btnAgregarProv.IndicateFocus = false;
-            this.btnAgregarProv.Location = new System.Drawing.Point(256, 381);
+            this.btnAgregarProv.Location = new System.Drawing.Point(236, 378);
             this.btnAgregarProv.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarProv.Name = "btnAgregarProv";
             this.btnAgregarProv.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -305,7 +305,7 @@
             this.txtNewCompany.IconRight = null;
             this.txtNewCompany.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewCompany.Lines = new string[0];
-            this.txtNewCompany.Location = new System.Drawing.Point(179, 312);
+            this.txtNewCompany.Location = new System.Drawing.Point(146, 308);
             this.txtNewCompany.Margin = new System.Windows.Forms.Padding(2);
             this.txtNewCompany.MaxLength = 32767;
             this.txtNewCompany.MinimumSize = new System.Drawing.Size(1, 1);
@@ -382,7 +382,7 @@
             this.txtNewFirstName.IconRight = null;
             this.txtNewFirstName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewFirstName.Lines = new string[0];
-            this.txtNewFirstName.Location = new System.Drawing.Point(179, 79);
+            this.txtNewFirstName.Location = new System.Drawing.Point(146, 75);
             this.txtNewFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.txtNewFirstName.MaxLength = 32767;
             this.txtNewFirstName.MinimumSize = new System.Drawing.Size(1, 1);
@@ -459,7 +459,7 @@
             this.txtNewPhone.IconRight = null;
             this.txtNewPhone.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewPhone.Lines = new string[0];
-            this.txtNewPhone.Location = new System.Drawing.Point(179, 191);
+            this.txtNewPhone.Location = new System.Drawing.Point(146, 187);
             this.txtNewPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtNewPhone.MaxLength = 32767;
             this.txtNewPhone.MinimumSize = new System.Drawing.Size(1, 1);
@@ -536,7 +536,7 @@
             this.txtNewID.IconRight = null;
             this.txtNewID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewID.Lines = new string[0];
-            this.txtNewID.Location = new System.Drawing.Point(179, 135);
+            this.txtNewID.Location = new System.Drawing.Point(146, 131);
             this.txtNewID.Margin = new System.Windows.Forms.Padding(2);
             this.txtNewID.MaxLength = 32767;
             this.txtNewID.MinimumSize = new System.Drawing.Size(1, 1);
@@ -613,7 +613,7 @@
             this.txtNewCorreo.IconRight = null;
             this.txtNewCorreo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewCorreo.Lines = new string[0];
-            this.txtNewCorreo.Location = new System.Drawing.Point(179, 254);
+            this.txtNewCorreo.Location = new System.Drawing.Point(146, 250);
             this.txtNewCorreo.Margin = new System.Windows.Forms.Padding(2);
             this.txtNewCorreo.MaxLength = 32767;
             this.txtNewCorreo.MinimumSize = new System.Drawing.Size(1, 1);
