@@ -126,11 +126,20 @@
   <data name="btnactempleado" xml:space="preserve">
     <value>Update</value>
   </data>
+  <data name="btnAP" xml:space="preserve">
+    <value>Add Supplier</value>
+  </data>
   <data name="btnañadir" xml:space="preserve">
     <value>Add employee</value>
   </data>
+  <data name="btnAñadirP" xml:space="preserve">
+    <value>Add</value>
+  </data>
   <data name="btningresarempleado" xml:space="preserve">
     <value>Create user</value>
+  </data>
+  <data name="btnUP" xml:space="preserve">
+    <value>Update Suplier</value>
   </data>
   <data name="Busqueda" xml:space="preserve">
     <value>Search product</value>
@@ -141,6 +150,9 @@
   <data name="CMSELIMINAR" xml:space="preserve">
     <value>Delete</value>
   </data>
+  <data name="CMSELIP" xml:space="preserve">
+    <value>Delete</value>
+  </data>
   <data name="CMSINFO" xml:space="preserve">
     <value>Employee information</value>
   </data>
@@ -149,6 +161,9 @@
   </data>
   <data name="CMSUPDT" xml:space="preserve">
     <value>Update data</value>
+  </data>
+  <data name="CMSUPP" xml:space="preserve">
+    <value>Update</value>
   </data>
   <data name="Conexion" xml:space="preserve">
     <value>Test connection</value>
@@ -203,6 +218,27 @@
   </data>
   <data name="tituloingresar" xml:space="preserve">
     <value>Enter employee</value>
+  </data>
+  <data name="txtAñaP" xml:space="preserve">
+    <value>Add Supplier</value>
+  </data>
+  <data name="txtCR" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="txtDUI" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="txtEM" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="txtFN" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="txtTe" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="txtUp" xml:space="preserve">
+    <value>Update Supplier</value>
   </data>
   <data name="user" xml:space="preserve">
     <value>Username</value>

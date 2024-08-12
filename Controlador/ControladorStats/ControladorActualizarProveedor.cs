@@ -2,6 +2,8 @@
 using AgroServicios.Vista.Estadisticas;
 using System;
 using System.Data;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace AgroServicios.Controlador.ControladorStats
@@ -10,93 +12,100 @@ namespace AgroServicios.Controlador.ControladorStats
         {
             VistaActualizarProveedor Objupdate;
             private int accion;
-            private string role;
+            bool verificacion;
 
             public ControladorActualizarProveedor(VistaActualizarProveedor Vista, int accion, int id, string Name, string phone, string email, string Dui, string Company)
             {
                 Objupdate = Vista;
                 this.accion = accion;
-                //Objupdate.Load += new EventHandler(InitialCharge);
                 ChargeValues(id, Name, Dui, phone, email, Company);
 
                 Objupdate.btnUpdateProveedor.Click += new EventHandler(ActualizarRegistro);
             }
 
-            //public void InitialCharge(object sender, EventArgs e)
-            //{
-            //    DAOAdminUsers objAdmin = new DAOAdminUsers();
-            //    DataSet ds = objAdmin.LlenarCombo();
-
-            //    Objupdate.DropRoleUpdate.DataSource = ds.Tables["Categorias"];
-            //    Objupdate.DropRoleUpdate.ValueMember = "idCategoria";
-            //    Objupdate.DropRoleUpdate.DisplayMember = "Nombre";
-
-            //    if (accion == 2)
-            //    {
-            //        Objupdate.DropRoleUpdate.Text = role;
-            //    }
-            //}
-
-            private void ActualizarRegistro(object sender, EventArgs e)
+        private void ActualizarRegistro(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(Objupdate.txtUpdateNombre.Text) ||
+                string.IsNullOrWhiteSpace(Objupdate.txtUpdateID.Text) ||
+                string.IsNullOrWhiteSpace(Objupdate.txtUpdatePhone.Text) ||
+                string.IsNullOrWhiteSpace(Objupdate.txtUpdateCorreo.Text) ||
+                string.IsNullOrWhiteSpace(Objupdate.txtUpdateCompany.Text))
             {
-                /*if (string.IsNullOrWhiteSpace(Objupdate.txtUpdateNombre.Text) ||
-                    string.IsNullOrWhiteSpace(Objupdate.txtUpdatePhone.Text) ||
-                    string.IsNullOrWhiteSpace(Objupdate.txtUpdateCorreo.Text) ||
-                    string.IsNullOrWhiteSpace(Objupdate.maskedDuiUpdate.Text) ||
-                    string.IsNullOrWhiteSpace(Objupdate.txtUpdateDireccion.Text))
-                {
-                    MessageBox.Show("Todos los campos son obligatorios.",
-                                    "Error de validación",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
-                    return;
-                }
-                
-                DateTime fechaNacimiento = Objupdate.PickerBirthUpdate.Value.Date;
-                DateTime fechaActual = DateTime.Today;
-                int edad = fechaActual.Year - fechaNacimiento.Year;
-                if (fechaNacimiento > fechaActual.AddYears(-edad)) edad--;
-
-                if (edad < 18)
-                {
-                    MessageBox.Show("La fecha de nacimiento debe ser mayor de 18 años.",
-                                    "Error de validación",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
-                    return;
-                }
-                */
-
-
-                DAOProveedores DaoUpdate = new DAOProveedores();
-
-                DaoUpdate.IdProveedor = int.Parse(Objupdate.txtid.Text.Trim());
-                DaoUpdate.Nombre1 = Objupdate.txtUpdateNombre.Text.Trim();
-                DaoUpdate.DUI1 = Objupdate.txtUpdateID.Text;
-                DaoUpdate.Teléfono1 = Objupdate.txtUpdatePhone.Text.Trim();
-                DaoUpdate.Correo1 = Objupdate.txtUpdateCorreo.Text.Trim();
-                DaoUpdate.Empresa1 = Objupdate.txtUpdateCompany.Text.Trim();
-
-                int valorRetornado = DaoUpdate.ActualizarProveedor();
-
-                if (valorRetornado == 1)
-                {
-                    MessageBox.Show("Los datos han sido actualizados exitosamente",
-                                    "Proceso completado",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
-                    Objupdate.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Los datos no pudieron ser actualizados",
-                                    "Proceso interrumpido",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
-                }
+                MessageBox.Show("Todos los campos son obligatorios.",
+                                "Error de validación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
             }
 
-            public void ChargeValues(int id, string Name, string Dui, string phone, string email, string Company)
+            if (!ValidarTelefono(Objupdate.txtUpdatePhone.Text))
+            {
+                MessageBox.Show("El formato del número de teléfono es incorrecto. Debe ser +XXX XXXX-XXXX o XXXX-XXXX.",
+                                "Error de validación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            DAOProveedores DaoUpdate = new DAOProveedores();
+
+            DaoUpdate.IdProveedor = int.Parse(Objupdate.txtid.Text.Trim());
+            DaoUpdate.Nombre1 = Objupdate.txtUpdateNombre.Text.Trim();
+            DaoUpdate.DUI1 = Objupdate.txtUpdateID.Text;
+            DaoUpdate.Teléfono1 = Objupdate.txtUpdatePhone.Text.Trim();
+            DaoUpdate.Correo1 = Objupdate.txtUpdateCorreo.Text.Trim();
+            DaoUpdate.Empresa1 = Objupdate.txtUpdateCompany.Text.Trim();
+
+            int valorRetornado = DaoUpdate.ActualizarProveedor();
+            verificacion = ValidarCorreo();
+
+            if (verificacion == true) 
+            {
+                int ValorRetornado = DaoUpdate.ActualizarProveedor();
+
+                            if (valorRetornado == 1)
+            {
+                MessageBox.Show("Los datos han sido actualizados exitosamente",
+                                "Proceso completado",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+                Objupdate.Close();
+            }
+            else
+            {
+                MessageBox.Show("Los datos no pudieron ser actualizados",
+                                "Proceso interrumpido",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+            }
+
+        }
+        bool ValidarTelefono(string PhoneNumber)
+        {
+            string pattern = @"^(\+\d{1,3}\s\d{4}-\d{4}|\d{4}-\d{4})$";
+            return Regex.IsMatch(PhoneNumber, pattern);
+        }
+
+        bool ValidarCorreo()
+        {
+            string email = Objupdate.txtUpdateCorreo.Text.Trim();
+
+            if (!(email.Contains("@"))) 
+            {
+                MessageBox.Show("Formato de correo invalido, verifica que contiene @.", "Formato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (!(email.Contains(".com")))
+            {
+                MessageBox.Show("Formato de correo invalido, verifica que contiene com.", "Formato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
+
+        public void ChargeValues(int id, string Name, string Dui, string phone, string email, string Company)
             {
                 Objupdate.txtid.Text = id.ToString();
                 Objupdate.txtUpdateNombre.Text = Name;
@@ -107,4 +116,4 @@ namespace AgroServicios.Controlador.ControladorStats
             }
 
         }
-    }
+}

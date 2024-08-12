@@ -97,11 +97,38 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Add.
+        /// </summary>
+        internal static string btnAñadirP {
+            get {
+                return ResourceManager.GetString("btnAñadirP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Add Supplier.
+        /// </summary>
+        internal static string btnAP {
+            get {
+                return ResourceManager.GetString("btnAP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Create user.
         /// </summary>
         internal static string btningresarempleado {
             get {
                 return ResourceManager.GetString("btningresarempleado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Update Suplier.
+        /// </summary>
+        internal static string btnUP {
+            get {
+                return ResourceManager.GetString("btnUP", resourceCulture);
             }
         }
         
@@ -133,6 +160,15 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Delete.
+        /// </summary>
+        internal static string CMSELIP {
+            get {
+                return ResourceManager.GetString("CMSELIP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Employee information.
         /// </summary>
         internal static string CMSINFO {
@@ -156,6 +192,15 @@ namespace AgroServicios {
         internal static string CMSUPDT {
             get {
                 return ResourceManager.GetString("CMSUPDT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Update.
+        /// </summary>
+        internal static string CMSUPP {
+            get {
+                return ResourceManager.GetString("CMSUPP", resourceCulture);
             }
         }
         
@@ -318,6 +363,69 @@ namespace AgroServicios {
         internal static string tituloingresar {
             get {
                 return ResourceManager.GetString("tituloingresar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Add Supplier.
+        /// </summary>
+        internal static string txtAñaP {
+            get {
+                return ResourceManager.GetString("txtAñaP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a E-mail.
+        /// </summary>
+        internal static string txtCR {
+            get {
+                return ResourceManager.GetString("txtCR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a ID.
+        /// </summary>
+        internal static string txtDUI {
+            get {
+                return ResourceManager.GetString("txtDUI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Company.
+        /// </summary>
+        internal static string txtEM {
+            get {
+                return ResourceManager.GetString("txtEM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Full Name.
+        /// </summary>
+        internal static string txtFN {
+            get {
+                return ResourceManager.GetString("txtFN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Phone Number.
+        /// </summary>
+        internal static string txtTe {
+            get {
+                return ResourceManager.GetString("txtTe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Update Supplier.
+        /// </summary>
+        internal static string txtUp {
+            get {
+                return ResourceManager.GetString("txtUp", resourceCulture);
             }
         }
         

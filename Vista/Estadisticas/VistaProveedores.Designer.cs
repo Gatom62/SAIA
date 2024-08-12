@@ -197,6 +197,7 @@
             this.GriewProveedores.EnableHeadersVisualStyles = false;
             this.GriewProveedores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.GriewProveedores.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.GriewProveedores.HeaderBgColor = System.Drawing.Color.Empty;
             this.GriewProveedores.HeaderForeColor = System.Drawing.Color.White;
             this.GriewProveedores.Location = new System.Drawing.Point(0, 52);
             this.GriewProveedores.Name = "GriewProveedores";
@@ -213,14 +214,14 @@
             this.cmsEliminar,
             this.cmsActualizar});
             this.contextGriewProveedores.Name = "contextMenuStrip1";
-            this.contextGriewProveedores.Size = new System.Drawing.Size(181, 70);
+            this.contextGriewProveedores.Size = new System.Drawing.Size(127, 48);
             this.contextGriewProveedores.Opening += new System.ComponentModel.CancelEventHandler(this.contextGriewProveedores_Opening);
             // 
             // cmsEliminar
             // 
             this.cmsEliminar.Image = global::AgroServicios.Properties.Resources.borrar;
             this.cmsEliminar.Name = "cmsEliminar";
-            this.cmsEliminar.Size = new System.Drawing.Size(180, 22);
+            this.cmsEliminar.Size = new System.Drawing.Size(126, 22);
             this.cmsEliminar.Text = "Eliminar";
             this.cmsEliminar.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
@@ -228,7 +229,7 @@
             // 
             this.cmsActualizar.Image = global::AgroServicios.Properties.Resources.actualizar;
             this.cmsActualizar.Name = "cmsActualizar";
-            this.cmsActualizar.Size = new System.Drawing.Size(180, 22);
+            this.cmsActualizar.Size = new System.Drawing.Size(126, 22);
             this.cmsActualizar.Text = "Actualizar";
             // 
             // VistaProveedores
@@ -240,6 +241,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "VistaProveedores";
             this.Text = "VistaProveedores";
+            this.Load += new System.EventHandler(this.VistaProveedores_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GriewProveedores)).EndInit();
             this.contextGriewProveedores.ResumeLayout(false);
