@@ -51,9 +51,9 @@
             this.flowLayoutPanel1.Controls.Add(this.btnAgregarProv);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 52);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1035, 64);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // btnAgregarProv
@@ -98,14 +98,14 @@
             this.btnAgregarProv.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnAgregarProv.IconSize = 25;
             this.btnAgregarProv.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(242)))), ((int)(((byte)(32)))));
-            this.btnAgregarProv.IdleBorderRadius = 43;
+            this.btnAgregarProv.IdleBorderRadius = 53;
             this.btnAgregarProv.IdleBorderThickness = 1;
             this.btnAgregarProv.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(242)))), ((int)(((byte)(32)))));
             this.btnAgregarProv.IdleIconLeftImage = null;
             this.btnAgregarProv.IdleIconRightImage = null;
             this.btnAgregarProv.IndicateFocus = true;
-            this.btnAgregarProv.Location = new System.Drawing.Point(2, 2);
-            this.btnAgregarProv.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregarProv.Location = new System.Drawing.Point(3, 2);
+            this.btnAgregarProv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarProv.Name = "btnAgregarProv";
             this.btnAgregarProv.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAgregarProv.OnDisabledState.BorderRadius = 1;
@@ -139,7 +139,7 @@
             this.btnAgregarProv.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnAgregarProv.OnPressedState.IconLeftImage = null;
             this.btnAgregarProv.OnPressedState.IconRightImage = null;
-            this.btnAgregarProv.Size = new System.Drawing.Size(162, 45);
+            this.btnAgregarProv.Size = new System.Drawing.Size(216, 55);
             this.btnAgregarProv.TabIndex = 1;
             this.btnAgregarProv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAgregarProv.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -199,29 +199,33 @@
             this.GriewProveedores.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.GriewProveedores.HeaderBgColor = System.Drawing.Color.Empty;
             this.GriewProveedores.HeaderForeColor = System.Drawing.Color.White;
-            this.GriewProveedores.Location = new System.Drawing.Point(0, 52);
+            this.GriewProveedores.Location = new System.Drawing.Point(0, 64);
+            this.GriewProveedores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GriewProveedores.Name = "GriewProveedores";
+            this.GriewProveedores.ReadOnly = true;
             this.GriewProveedores.RowHeadersVisible = false;
+            this.GriewProveedores.RowHeadersWidth = 51;
             this.GriewProveedores.RowTemplate.Height = 40;
             this.GriewProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GriewProveedores.Size = new System.Drawing.Size(776, 398);
+            this.GriewProveedores.Size = new System.Drawing.Size(1035, 490);
             this.GriewProveedores.TabIndex = 2;
             this.GriewProveedores.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // contextGriewProveedores
             // 
+            this.contextGriewProveedores.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextGriewProveedores.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmsEliminar,
             this.cmsActualizar});
             this.contextGriewProveedores.Name = "contextMenuStrip1";
-            this.contextGriewProveedores.Size = new System.Drawing.Size(127, 48);
+            this.contextGriewProveedores.Size = new System.Drawing.Size(149, 56);
             this.contextGriewProveedores.Opening += new System.ComponentModel.CancelEventHandler(this.contextGriewProveedores_Opening);
             // 
             // cmsEliminar
             // 
             this.cmsEliminar.Image = global::AgroServicios.Properties.Resources.borrar;
             this.cmsEliminar.Name = "cmsEliminar";
-            this.cmsEliminar.Size = new System.Drawing.Size(126, 22);
+            this.cmsEliminar.Size = new System.Drawing.Size(148, 26);
             this.cmsEliminar.Text = "Eliminar";
             this.cmsEliminar.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
@@ -229,16 +233,17 @@
             // 
             this.cmsActualizar.Image = global::AgroServicios.Properties.Resources.actualizar;
             this.cmsActualizar.Name = "cmsActualizar";
-            this.cmsActualizar.Size = new System.Drawing.Size(126, 22);
+            this.cmsActualizar.Size = new System.Drawing.Size(148, 26);
             this.cmsActualizar.Text = "Actualizar";
             // 
             // VistaProveedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 450);
+            this.ClientSize = new System.Drawing.Size(1035, 554);
             this.Controls.Add(this.GriewProveedores);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "VistaProveedores";
             this.Text = "VistaProveedores";
             this.Load += new System.EventHandler(this.VistaProveedores_Load);
