@@ -114,18 +114,19 @@
             this.PanelView.Controls.Add(this.tableLayoutPanel1);
             this.PanelView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelView.Location = new System.Drawing.Point(0, 0);
-            this.PanelView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PanelView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PanelView.Name = "PanelView";
-            this.PanelView.Size = new System.Drawing.Size(1412, 671);
+            this.PanelView.Size = new System.Drawing.Size(1059, 545);
             this.PanelView.TabIndex = 25;
             // 
             // PanelContenedor
             // 
             this.PanelContenedor.Controls.Add(this.tableLayoutPanel2);
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenedor.Location = new System.Drawing.Point(0, 222);
+            this.PanelContenedor.Location = new System.Drawing.Point(0, 181);
+            this.PanelContenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1412, 449);
+            this.PanelContenedor.Size = new System.Drawing.Size(1059, 364);
             this.PanelContenedor.TabIndex = 31;
             // 
             // tableLayoutPanel2
@@ -154,8 +155,8 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.31579F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.31579F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.31579F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1412, 449);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1059, 364);
             this.tableLayoutPanel2.TabIndex = 32;
             // 
             // tableLayoutPanel14
@@ -166,11 +167,12 @@
             this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel14.Controls.Add(this.btn1, 1, 0);
             this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(473, 333);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(355, 268);
+            this.tableLayoutPanel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(464, 113);
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(349, 94);
             this.tableLayoutPanel14.TabIndex = 24;
             // 
             // btn1
@@ -217,16 +219,16 @@
             this.btn1.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btn1.IconSize = 25;
             this.btn1.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btn1.IdleBorderRadius = 41;
+            this.btn1.IdleBorderRadius = 36;
             this.btn1.IdleBorderThickness = 1;
             this.btn1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btn1.IdleIconLeftImage = null;
             this.btn1.IdleIconRightImage = null;
             this.btn1.IndicateFocus = true;
-            this.btn1.Location = new System.Drawing.Point(23, 35);
-            this.btn1.Margin = new System.Windows.Forms.Padding(0, 35, 0, 35);
-            this.btn1.MaximumSize = new System.Drawing.Size(600, 125);
-            this.btn1.MinimumSize = new System.Drawing.Size(413, 35);
+            this.btn1.Location = new System.Drawing.Point(17, 28);
+            this.btn1.Margin = new System.Windows.Forms.Padding(0, 28, 0, 28);
+            this.btn1.MaximumSize = new System.Drawing.Size(450, 102);
+            this.btn1.MinimumSize = new System.Drawing.Size(310, 28);
             this.btn1.Name = "btn1";
             this.btn1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn1.OnDisabledState.BorderRadius = 1;
@@ -260,7 +262,7 @@
             this.btn1.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn1.OnPressedState.IconLeftImage = null;
             this.btn1.OnPressedState.IconRightImage = null;
-            this.btn1.Size = new System.Drawing.Size(417, 43);
+            this.btn1.Size = new System.Drawing.Size(314, 38);
             this.btn1.TabIndex = 3;
             this.btn1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -276,11 +278,12 @@
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel13.Controls.Add(this.btn3, 1, 0);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 333);
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(2, 268);
+            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 1;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(464, 113);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(349, 94);
             this.tableLayoutPanel13.TabIndex = 23;
             // 
             // btn3
@@ -327,16 +330,16 @@
             this.btn3.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btn3.IconSize = 25;
             this.btn3.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btn3.IdleBorderRadius = 41;
+            this.btn3.IdleBorderRadius = 36;
             this.btn3.IdleBorderThickness = 1;
             this.btn3.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btn3.IdleIconLeftImage = null;
             this.btn3.IdleIconRightImage = null;
             this.btn3.IndicateFocus = true;
-            this.btn3.Location = new System.Drawing.Point(23, 35);
-            this.btn3.Margin = new System.Windows.Forms.Padding(0, 35, 0, 35);
-            this.btn3.MaximumSize = new System.Drawing.Size(600, 125);
-            this.btn3.MinimumSize = new System.Drawing.Size(413, 35);
+            this.btn3.Location = new System.Drawing.Point(17, 28);
+            this.btn3.Margin = new System.Windows.Forms.Padding(0, 28, 0, 28);
+            this.btn3.MaximumSize = new System.Drawing.Size(450, 102);
+            this.btn3.MinimumSize = new System.Drawing.Size(310, 28);
             this.btn3.Name = "btn3";
             this.btn3.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn3.OnDisabledState.BorderRadius = 1;
@@ -370,7 +373,7 @@
             this.btn3.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn3.OnPressedState.IconLeftImage = null;
             this.btn3.OnPressedState.IconRightImage = null;
-            this.btn3.Size = new System.Drawing.Size(417, 43);
+            this.btn3.Size = new System.Drawing.Size(314, 38);
             this.btn3.TabIndex = 11;
             this.btn3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn3.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -386,11 +389,12 @@
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel12.Controls.Add(this.btn5, 1, 0);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(473, 215);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(355, 173);
+            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 1;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(464, 112);
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(349, 91);
             this.tableLayoutPanel12.TabIndex = 22;
             // 
             // btn5
@@ -437,16 +441,16 @@
             this.btn5.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btn5.IconSize = 25;
             this.btn5.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btn5.IdleBorderRadius = 40;
+            this.btn5.IdleBorderRadius = 33;
             this.btn5.IdleBorderThickness = 1;
             this.btn5.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btn5.IdleIconLeftImage = null;
             this.btn5.IdleIconRightImage = null;
             this.btn5.IndicateFocus = true;
-            this.btn5.Location = new System.Drawing.Point(23, 35);
-            this.btn5.Margin = new System.Windows.Forms.Padding(0, 35, 0, 35);
-            this.btn5.MaximumSize = new System.Drawing.Size(600, 125);
-            this.btn5.MinimumSize = new System.Drawing.Size(413, 35);
+            this.btn5.Location = new System.Drawing.Point(17, 28);
+            this.btn5.Margin = new System.Windows.Forms.Padding(0, 28, 0, 28);
+            this.btn5.MaximumSize = new System.Drawing.Size(450, 102);
+            this.btn5.MinimumSize = new System.Drawing.Size(310, 28);
             this.btn5.Name = "btn5";
             this.btn5.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn5.OnDisabledState.BorderRadius = 1;
@@ -480,7 +484,7 @@
             this.btn5.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn5.OnPressedState.IconLeftImage = null;
             this.btn5.OnPressedState.IconRightImage = null;
-            this.btn5.Size = new System.Drawing.Size(417, 42);
+            this.btn5.Size = new System.Drawing.Size(314, 35);
             this.btn5.TabIndex = 9;
             this.btn5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn5.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -496,11 +500,12 @@
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel11.Controls.Add(this.btn4, 1, 0);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(473, 97);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(355, 78);
+            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(464, 112);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(349, 91);
             this.tableLayoutPanel11.TabIndex = 21;
             // 
             // btn4
@@ -547,16 +552,16 @@
             this.btn4.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btn4.IconSize = 25;
             this.btn4.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btn4.IdleBorderRadius = 40;
+            this.btn4.IdleBorderRadius = 33;
             this.btn4.IdleBorderThickness = 1;
             this.btn4.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btn4.IdleIconLeftImage = null;
             this.btn4.IdleIconRightImage = null;
             this.btn4.IndicateFocus = true;
-            this.btn4.Location = new System.Drawing.Point(23, 35);
-            this.btn4.Margin = new System.Windows.Forms.Padding(0, 35, 0, 35);
-            this.btn4.MaximumSize = new System.Drawing.Size(600, 125);
-            this.btn4.MinimumSize = new System.Drawing.Size(413, 35);
+            this.btn4.Location = new System.Drawing.Point(17, 28);
+            this.btn4.Margin = new System.Windows.Forms.Padding(0, 28, 0, 28);
+            this.btn4.MaximumSize = new System.Drawing.Size(450, 102);
+            this.btn4.MinimumSize = new System.Drawing.Size(310, 28);
             this.btn4.Name = "btn4";
             this.btn4.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn4.OnDisabledState.BorderRadius = 1;
@@ -590,7 +595,7 @@
             this.btn4.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn4.OnPressedState.IconLeftImage = null;
             this.btn4.OnPressedState.IconRightImage = null;
-            this.btn4.Size = new System.Drawing.Size(417, 42);
+            this.btn4.Size = new System.Drawing.Size(314, 35);
             this.btn4.TabIndex = 4;
             this.btn4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn4.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -606,11 +611,12 @@
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel10.Controls.Add(this.btn8, 1, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(943, 215);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(708, 173);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(466, 112);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(349, 91);
             this.tableLayoutPanel10.TabIndex = 20;
             // 
             // btn8
@@ -657,16 +663,16 @@
             this.btn8.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btn8.IconSize = 25;
             this.btn8.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btn8.IdleBorderRadius = 40;
+            this.btn8.IdleBorderRadius = 33;
             this.btn8.IdleBorderThickness = 1;
             this.btn8.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btn8.IdleIconLeftImage = null;
             this.btn8.IdleIconRightImage = null;
             this.btn8.IndicateFocus = true;
-            this.btn8.Location = new System.Drawing.Point(23, 35);
-            this.btn8.Margin = new System.Windows.Forms.Padding(0, 35, 0, 35);
-            this.btn8.MaximumSize = new System.Drawing.Size(600, 125);
-            this.btn8.MinimumSize = new System.Drawing.Size(413, 35);
+            this.btn8.Location = new System.Drawing.Point(17, 28);
+            this.btn8.Margin = new System.Windows.Forms.Padding(0, 28, 0, 28);
+            this.btn8.MaximumSize = new System.Drawing.Size(450, 102);
+            this.btn8.MinimumSize = new System.Drawing.Size(310, 28);
             this.btn8.Name = "btn8";
             this.btn8.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn8.OnDisabledState.BorderRadius = 1;
@@ -700,7 +706,7 @@
             this.btn8.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn8.OnPressedState.IconLeftImage = null;
             this.btn8.OnPressedState.IconRightImage = null;
-            this.btn8.Size = new System.Drawing.Size(419, 42);
+            this.btn8.Size = new System.Drawing.Size(314, 35);
             this.btn8.TabIndex = 10;
             this.btn8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn8.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -716,11 +722,12 @@
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel9.Controls.Add(this.btn7, 1, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(943, 97);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(708, 78);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(466, 112);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(349, 91);
             this.tableLayoutPanel9.TabIndex = 19;
             // 
             // btn7
@@ -767,16 +774,16 @@
             this.btn7.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btn7.IconSize = 25;
             this.btn7.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btn7.IdleBorderRadius = 40;
+            this.btn7.IdleBorderRadius = 33;
             this.btn7.IdleBorderThickness = 1;
             this.btn7.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btn7.IdleIconLeftImage = null;
             this.btn7.IdleIconRightImage = null;
             this.btn7.IndicateFocus = true;
-            this.btn7.Location = new System.Drawing.Point(23, 35);
-            this.btn7.Margin = new System.Windows.Forms.Padding(0, 35, 0, 35);
-            this.btn7.MaximumSize = new System.Drawing.Size(600, 125);
-            this.btn7.MinimumSize = new System.Drawing.Size(413, 35);
+            this.btn7.Location = new System.Drawing.Point(17, 28);
+            this.btn7.Margin = new System.Windows.Forms.Padding(0, 28, 0, 28);
+            this.btn7.MaximumSize = new System.Drawing.Size(450, 102);
+            this.btn7.MinimumSize = new System.Drawing.Size(310, 28);
             this.btn7.Name = "btn7";
             this.btn7.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn7.OnDisabledState.BorderRadius = 1;
@@ -810,7 +817,7 @@
             this.btn7.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn7.OnPressedState.IconLeftImage = null;
             this.btn7.OnPressedState.IconRightImage = null;
-            this.btn7.Size = new System.Drawing.Size(419, 42);
+            this.btn7.Size = new System.Drawing.Size(314, 35);
             this.btn7.TabIndex = 8;
             this.btn7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn7.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -824,12 +831,13 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.btnprin2, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 88F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(464, 88);
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 72F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(349, 72);
             this.tableLayoutPanel4.TabIndex = 17;
             // 
             // btnprin2
@@ -876,15 +884,15 @@
             this.btnprin2.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnprin2.IconSize = 25;
             this.btnprin2.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btnprin2.IdleBorderRadius = 46;
+            this.btnprin2.IdleBorderRadius = 38;
             this.btnprin2.IdleBorderThickness = 1;
             this.btnprin2.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
             this.btnprin2.IdleIconLeftImage = null;
             this.btnprin2.IdleIconRightImage = null;
             this.btnprin2.IndicateFocus = true;
-            this.btnprin2.Location = new System.Drawing.Point(20, 20);
-            this.btnprin2.Margin = new System.Windows.Forms.Padding(20);
-            this.btnprin2.MaximumSize = new System.Drawing.Size(625, 85);
+            this.btnprin2.Location = new System.Drawing.Point(15, 16);
+            this.btnprin2.Margin = new System.Windows.Forms.Padding(15, 16, 15, 16);
+            this.btnprin2.MaximumSize = new System.Drawing.Size(469, 69);
             this.btnprin2.Name = "btnprin2";
             this.btnprin2.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnprin2.OnDisabledState.BorderRadius = 1;
@@ -918,7 +926,7 @@
             this.btnprin2.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnprin2.OnPressedState.IconLeftImage = null;
             this.btnprin2.OnPressedState.IconRightImage = null;
-            this.btnprin2.Size = new System.Drawing.Size(424, 48);
+            this.btnprin2.Size = new System.Drawing.Size(319, 40);
             this.btnprin2.TabIndex = 0;
             this.btnprin2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnprin2.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -934,11 +942,12 @@
             this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel15.Controls.Add(this.btn6, 1, 0);
             this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 215);
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(2, 173);
+            this.tableLayoutPanel15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel15.Name = "tableLayoutPanel15";
             this.tableLayoutPanel15.RowCount = 1;
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(464, 112);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(349, 91);
             this.tableLayoutPanel15.TabIndex = 25;
             // 
             // btn6
@@ -985,16 +994,16 @@
             this.btn6.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btn6.IconSize = 25;
             this.btn6.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btn6.IdleBorderRadius = 40;
+            this.btn6.IdleBorderRadius = 33;
             this.btn6.IdleBorderThickness = 1;
             this.btn6.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btn6.IdleIconLeftImage = null;
             this.btn6.IdleIconRightImage = null;
             this.btn6.IndicateFocus = true;
-            this.btn6.Location = new System.Drawing.Point(23, 35);
-            this.btn6.Margin = new System.Windows.Forms.Padding(0, 35, 0, 35);
-            this.btn6.MaximumSize = new System.Drawing.Size(600, 125);
-            this.btn6.MinimumSize = new System.Drawing.Size(413, 35);
+            this.btn6.Location = new System.Drawing.Point(17, 28);
+            this.btn6.Margin = new System.Windows.Forms.Padding(0, 28, 0, 28);
+            this.btn6.MaximumSize = new System.Drawing.Size(450, 102);
+            this.btn6.MinimumSize = new System.Drawing.Size(310, 28);
             this.btn6.Name = "btn6";
             this.btn6.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn6.OnDisabledState.BorderRadius = 1;
@@ -1028,7 +1037,7 @@
             this.btn6.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn6.OnPressedState.IconLeftImage = null;
             this.btn6.OnPressedState.IconRightImage = null;
-            this.btn6.Size = new System.Drawing.Size(417, 42);
+            this.btn6.Size = new System.Drawing.Size(314, 35);
             this.btn6.TabIndex = 13;
             this.btn6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn6.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1044,11 +1053,12 @@
             this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel16.Controls.Add(this.btn2, 1, 0);
             this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 97);
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(2, 78);
+            this.tableLayoutPanel16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel16.Name = "tableLayoutPanel16";
             this.tableLayoutPanel16.RowCount = 1;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(464, 112);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(349, 91);
             this.tableLayoutPanel16.TabIndex = 26;
             // 
             // btn2
@@ -1095,16 +1105,16 @@
             this.btn2.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btn2.IconSize = 25;
             this.btn2.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btn2.IdleBorderRadius = 40;
+            this.btn2.IdleBorderRadius = 33;
             this.btn2.IdleBorderThickness = 1;
             this.btn2.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btn2.IdleIconLeftImage = null;
             this.btn2.IdleIconRightImage = null;
             this.btn2.IndicateFocus = true;
-            this.btn2.Location = new System.Drawing.Point(23, 35);
-            this.btn2.Margin = new System.Windows.Forms.Padding(0, 35, 0, 35);
-            this.btn2.MaximumSize = new System.Drawing.Size(600, 125);
-            this.btn2.MinimumSize = new System.Drawing.Size(413, 35);
+            this.btn2.Location = new System.Drawing.Point(17, 28);
+            this.btn2.Margin = new System.Windows.Forms.Padding(0, 28, 0, 28);
+            this.btn2.MaximumSize = new System.Drawing.Size(450, 102);
+            this.btn2.MinimumSize = new System.Drawing.Size(310, 28);
             this.btn2.Name = "btn2";
             this.btn2.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn2.OnDisabledState.BorderRadius = 1;
@@ -1138,7 +1148,7 @@
             this.btn2.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn2.OnPressedState.IconLeftImage = null;
             this.btn2.OnPressedState.IconRightImage = null;
-            this.btn2.Size = new System.Drawing.Size(417, 42);
+            this.btn2.Size = new System.Drawing.Size(314, 35);
             this.btn2.TabIndex = 6;
             this.btn2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn2.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1152,11 +1162,12 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Controls.Add(this.btnprin1, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(943, 3);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(708, 2);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(466, 88);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(349, 72);
             this.tableLayoutPanel6.TabIndex = 27;
             // 
             // btnprin1
@@ -1203,15 +1214,15 @@
             this.btnprin1.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnprin1.IconSize = 25;
             this.btnprin1.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btnprin1.IdleBorderRadius = 46;
+            this.btnprin1.IdleBorderRadius = 38;
             this.btnprin1.IdleBorderThickness = 1;
             this.btnprin1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
             this.btnprin1.IdleIconLeftImage = null;
             this.btnprin1.IdleIconRightImage = null;
             this.btnprin1.IndicateFocus = true;
-            this.btnprin1.Location = new System.Drawing.Point(20, 20);
-            this.btnprin1.Margin = new System.Windows.Forms.Padding(20);
-            this.btnprin1.MaximumSize = new System.Drawing.Size(625, 85);
+            this.btnprin1.Location = new System.Drawing.Point(15, 16);
+            this.btnprin1.Margin = new System.Windows.Forms.Padding(15, 16, 15, 16);
+            this.btnprin1.MaximumSize = new System.Drawing.Size(469, 69);
             this.btnprin1.Name = "btnprin1";
             this.btnprin1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnprin1.OnDisabledState.BorderRadius = 1;
@@ -1245,7 +1256,7 @@
             this.btnprin1.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnprin1.OnPressedState.IconLeftImage = null;
             this.btnprin1.OnPressedState.IconRightImage = null;
-            this.btnprin1.Size = new System.Drawing.Size(426, 48);
+            this.btnprin1.Size = new System.Drawing.Size(319, 40);
             this.btnprin1.TabIndex = 0;
             this.btnprin1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnprin1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1261,11 +1272,12 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(943, 333);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(708, 268);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(466, 113);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(349, 94);
             this.tableLayoutPanel3.TabIndex = 28;
             // 
             // tableLayoutPanel5
@@ -1275,12 +1287,13 @@
             this.tableLayoutPanel5.Controls.Add(this.btnConfi, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.btnExit, 0, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(119, 3);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(89, 2);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(227, 107);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(170, 90);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
             // btnConfi
@@ -1325,13 +1338,14 @@
             this.btnConfi.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnConfi.IconSize = 25;
             this.btnConfi.IdleBorderColor = System.Drawing.Color.Silver;
-            this.btnConfi.IdleBorderRadius = 37;
+            this.btnConfi.IdleBorderRadius = 30;
             this.btnConfi.IdleBorderThickness = 1;
             this.btnConfi.IdleFillColor = System.Drawing.Color.Silver;
             this.btnConfi.IdleIconLeftImage = null;
             this.btnConfi.IdleIconRightImage = null;
             this.btnConfi.IndicateFocus = false;
-            this.btnConfi.Location = new System.Drawing.Point(18, 11);
+            this.btnConfi.Location = new System.Drawing.Point(13, 11);
+            this.btnConfi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConfi.Name = "btnConfi";
             this.btnConfi.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnConfi.OnDisabledState.BorderRadius = 1;
@@ -1365,7 +1379,7 @@
             this.btnConfi.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnConfi.OnPressedState.IconLeftImage = null;
             this.btnConfi.OnPressedState.IconRightImage = null;
-            this.btnConfi.Size = new System.Drawing.Size(191, 39);
+            this.btnConfi.Size = new System.Drawing.Size(143, 32);
             this.btnConfi.TabIndex = 20;
             this.btnConfi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnConfi.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1416,13 +1430,14 @@
             this.btnExit.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnExit.IconSize = 25;
             this.btnExit.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btnExit.IdleBorderRadius = 42;
+            this.btnExit.IdleBorderRadius = 34;
             this.btnExit.IdleBorderThickness = 1;
             this.btnExit.IdleFillColor = System.Drawing.Color.Red;
             this.btnExit.IdleIconLeftImage = null;
             this.btnExit.IdleIconRightImage = null;
             this.btnExit.IndicateFocus = false;
-            this.btnExit.Location = new System.Drawing.Point(16, 56);
+            this.btnExit.Location = new System.Drawing.Point(12, 47);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnExit.OnDisabledState.BorderRadius = 1;
@@ -1456,7 +1471,7 @@
             this.btnExit.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnExit.OnPressedState.IconLeftImage = null;
             this.btnExit.OnPressedState.IconRightImage = null;
-            this.btnExit.Size = new System.Drawing.Size(194, 44);
+            this.btnExit.Size = new System.Drawing.Size(146, 36);
             this.btnExit.TabIndex = 1;
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnExit.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1469,9 +1484,10 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.tableLayoutPanel7);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 76);
+            this.panel1.Location = new System.Drawing.Point(0, 62);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1412, 146);
+            this.panel1.Size = new System.Drawing.Size(1059, 119);
             this.panel1.TabIndex = 29;
             // 
             // tableLayoutPanel7
@@ -1483,10 +1499,11 @@
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1412, 146);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1059, 119);
             this.tableLayoutPanel7.TabIndex = 3;
             // 
             // tableLayoutPanel8
@@ -1496,12 +1513,13 @@
             this.tableLayoutPanel8.Controls.Add(this.lblfecha, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.lblhora, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(356, 3);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(266, 2);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 2;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(700, 140);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(525, 115);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // lblfecha
@@ -1510,9 +1528,10 @@
             this.lblfecha.AutoSize = true;
             this.lblfecha.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblfecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
-            this.lblfecha.Location = new System.Drawing.Point(268, 77);
+            this.lblfecha.Location = new System.Drawing.Point(197, 64);
+            this.lblfecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblfecha.Name = "lblfecha";
-            this.lblfecha.Size = new System.Drawing.Size(164, 56);
+            this.lblfecha.Size = new System.Drawing.Size(131, 44);
             this.lblfecha.TabIndex = 34;
             this.lblfecha.Text = "label2";
             // 
@@ -1521,9 +1540,10 @@
             this.lblhora.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblhora.AutoSize = true;
             this.lblhora.Font = new System.Drawing.Font("Century Gothic", 34.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhora.Location = new System.Drawing.Point(249, 1);
+            this.lblhora.Location = new System.Drawing.Point(182, 1);
+            this.lblhora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblhora.Name = "lblhora";
-            this.lblhora.Size = new System.Drawing.Size(201, 67);
+            this.lblhora.Size = new System.Drawing.Size(161, 55);
             this.lblhora.TabIndex = 32;
             this.lblhora.Text = "label1";
             // 
@@ -1543,11 +1563,11 @@
             this.tableLayoutPanel1.Controls.Add(this.btnInicio, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1412, 76);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1059, 62);
             this.tableLayoutPanel1.TabIndex = 28;
             // 
             // btnBusqueda
@@ -1574,11 +1594,12 @@
             this.btnBusqueda.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnBusqueda.Image = global::AgroServicios.Properties.Resources.Lupa_1;
             this.btnBusqueda.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.btnBusqueda.Location = new System.Drawing.Point(1242, 10);
+            this.btnBusqueda.Location = new System.Drawing.Point(931, 8);
+            this.btnBusqueda.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBusqueda.Name = "btnBusqueda";
             this.btnBusqueda.RoundBorders = false;
             this.btnBusqueda.ShowBorders = true;
-            this.btnBusqueda.Size = new System.Drawing.Size(55, 55);
+            this.btnBusqueda.Size = new System.Drawing.Size(41, 45);
             this.btnBusqueda.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
             this.btnBusqueda.TabIndex = 38;
             // 
@@ -1606,11 +1627,12 @@
             this.btnAccounts.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnAccounts.Image = global::AgroServicios.Properties.Resources.silueta_de_multiples_usuarios;
             this.btnAccounts.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.btnAccounts.Location = new System.Drawing.Point(957, 8);
+            this.btnAccounts.Location = new System.Drawing.Point(716, 6);
+            this.btnAccounts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAccounts.Name = "btnAccounts";
             this.btnAccounts.RoundBorders = false;
             this.btnAccounts.ShowBorders = true;
-            this.btnAccounts.Size = new System.Drawing.Size(60, 60);
+            this.btnAccounts.Size = new System.Drawing.Size(45, 49);
             this.btnAccounts.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
             this.btnAccounts.TabIndex = 37;
             // 
@@ -1638,11 +1660,12 @@
             this.btnStats.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnStats.Image = global::AgroServicios.Properties.Resources.image_49;
             this.btnStats.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.btnStats.Location = new System.Drawing.Point(675, 8);
+            this.btnStats.Location = new System.Drawing.Point(505, 6);
+            this.btnStats.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStats.Name = "btnStats";
             this.btnStats.RoundBorders = false;
             this.btnStats.ShowBorders = true;
-            this.btnStats.Size = new System.Drawing.Size(60, 60);
+            this.btnStats.Size = new System.Drawing.Size(45, 49);
             this.btnStats.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
             this.btnStats.TabIndex = 36;
             // 
@@ -1670,11 +1693,12 @@
             this.btnShop.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnShop.Image = global::AgroServicios.Properties.Resources.Vector__1_;
             this.btnShop.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.btnShop.Location = new System.Drawing.Point(395, 10);
+            this.btnShop.Location = new System.Drawing.Point(296, 8);
+            this.btnShop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnShop.Name = "btnShop";
             this.btnShop.RoundBorders = false;
             this.btnShop.ShowBorders = true;
-            this.btnShop.Size = new System.Drawing.Size(55, 55);
+            this.btnShop.Size = new System.Drawing.Size(41, 45);
             this.btnShop.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
             this.btnShop.TabIndex = 35;
             // 
@@ -1702,11 +1726,12 @@
             this.btnInicio.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnInicio.Image = global::AgroServicios.Properties.Resources.Vector;
             this.btnInicio.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.btnInicio.Location = new System.Drawing.Point(113, 10);
+            this.btnInicio.Location = new System.Drawing.Point(85, 8);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.RoundBorders = false;
             this.btnInicio.ShowBorders = true;
-            this.btnInicio.Size = new System.Drawing.Size(55, 55);
+            this.btnInicio.Size = new System.Drawing.Size(41, 45);
             this.btnInicio.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
             this.btnInicio.TabIndex = 34;
             // 
@@ -1717,13 +1742,13 @@
             // 
             // VistaMenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.ClientSize = new System.Drawing.Size(1412, 671);
+            this.ClientSize = new System.Drawing.Size(1059, 545);
             this.Controls.Add(this.PanelView);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1427, 708);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(1074, 583);
             this.Name = "VistaMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VistaMenuPrincipal";
@@ -1775,7 +1800,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btn4;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnprin1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnprin2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Label lblfecha;
@@ -1793,5 +1817,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnConfi;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnExit;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnprin2;
     }
 }

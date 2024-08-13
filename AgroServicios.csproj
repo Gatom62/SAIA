@@ -245,6 +245,12 @@
     <Compile Include="Vista\MenuPrincipal\VistaAjustes.Designer.cs">
       <DependentUpon>VistaAjustes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\MenuPrincipal\VistaCarrito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\MenuPrincipal\VistaCarrito.Designer.cs">
+      <DependentUpon>VistaCarrito.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\MenuPrincipal\VistaMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -355,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaAjustes.resx">
       <DependentUpon>VistaAjustes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\MenuPrincipal\VistaCarrito.resx">
+      <DependentUpon>VistaCarrito.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaMenuPrincipal.resx">
       <DependentUpon>VistaMenuPrincipal.cs</DependentUpon>
