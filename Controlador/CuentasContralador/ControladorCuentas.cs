@@ -119,6 +119,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             TraducirEncabezados(ObjEmpleados.GriewEmpleados);
 
             ObjEmpleados.GriewEmpleados.Columns["Image"].Visible = false;
+            ObjEmpleados.GriewEmpleados.Columns["ID del empleado"].Visible = false;
         }
         private void TraducirEncabezados(DataGridView dgv)
         {

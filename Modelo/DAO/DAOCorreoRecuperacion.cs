@@ -13,54 +13,58 @@ namespace AgroServicios.Modelo.DAO
     // Clase DAOCorreoRecuperacion que hereda de DTOCorreoRecuperacion
     public class DAOCorreoRecuperacion : DTOCorreoRecuperacion
     {
-        // Declaración de un cliente SMTP privado
+        // Declaración de un cliente SMTP privado para enviar correos electrónicos
         private SmtpClient smtpClient;
 
         // Método protegido para inicializar el cliente SMTP
         protected void inicializeSmtpClient()
         {
+            // Crear una nueva instancia de SmtpClient
             smtpClient = new SmtpClient();
-            // Configura las credenciales del cliente SMTP (correo y contraseña)
+            // Configura las credenciales del cliente SMTP (correo del remitente y contraseña)
             smtpClient.Credentials = new NetworkCredential(remintenteCorreo, password);
-            // Configura el servidor SMTP (host)
+            // Configura el servidor SMTP (host) que se utilizará para enviar el correo
             smtpClient.Host = host;
             // Configura el puerto del servidor SMTP
             smtpClient.Port = port;
-            // Habilita SSL para la seguridad en el envío de correos
+            // Habilita SSL para asegurar la conexión al servidor SMTP
             smtpClient.EnableSsl = ssl;
         }
 
         // Método público para enviar un correo electrónico
         public void sendMail(string subject, string body, List<string> destinatarioCorreo)
         {
-            // Crea un nuevo mensaje de correo
+            // Crear una nueva instancia de MailMessage para el correo a enviar
             var mailMessage = new MailMessage();
             try
             {
-                // Establece la dirección del remitente
+                // Establece la dirección del remitente del correo
                 mailMessage.From = new MailAddress(remintenteCorreo);
-                // Agrega cada destinatario al mensaje
+
+                // Añade cada destinatario al mensaje de correo
                 foreach (string mail in destinatarioCorreo)
                 {
                     mailMessage.To.Add(mail);
                 }
+
                 // Configura el asunto del correo
                 mailMessage.Subject = subject;
                 // Configura el cuerpo del correo
                 mailMessage.Body = body;
-                // Establece la prioridad del correo (normal)
+                // Establece la prioridad del correo como normal
                 mailMessage.Priority = MailPriority.Normal;
-                // Envía el correo usando el cliente SMTP
+
+                // Envía el correo utilizando el cliente SMTP configurado previamente
                 smtpClient.Send(mailMessage);
             }
             catch (Exception ex)
             {
-                // Muestra un mensaje de error si ocurre una excepción
+                // Muestra un mensaje de error si ocurre una excepción durante el envío del correo
                 MessageBox.Show("Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
-                // Libera los recursos utilizados por el mensaje y el cliente SMTP
+                // Libera los recursos utilizados por el mensaje de correo y el cliente SMTP
                 mailMessage.Dispose();
                 smtpClient.Dispose();
             }
@@ -71,7 +75,7 @@ namespace AgroServicios.Modelo.DAO
         {
             using (var command = new SqlCommand())
             {
-                // Configura la conexión de SQL
+                // Configura la conexión SQL para el comando
                 command.Connection = getConnection();
                 // Configura la consulta SQL para obtener el nombre, correo y contraseña del usuario
                 command.CommandText = @"SELECT e.Nombre, e.Correo, u.Contraseña FROM Empleados e  
@@ -86,21 +90,24 @@ namespace AgroServicios.Modelo.DAO
                 // Ejecuta la consulta y lee los resultados
                 SqlDataReader reader = command.ExecuteReader();
 
+                // Si se encuentra un registro coincidente
                 if (reader.Read())
                 {
-                    // Obtiene el nombre y correo del usuario
+                    // Obtiene el nombre y el correo del usuario desde la base de datos
                     string nombreUsuario = reader.GetString(0);
                     string correoUsuario = reader.GetString(1);
 
-                    // Genera una nueva contraseña temporal
+                    // Genera una nueva contraseña temporal aleatoria
                     string contraseñaTemporal = GenerarContraseñaTemporal();
 
                     // Crea una instancia de la clase Encryp para encriptar la contraseña
                     Encryp encryp = new Encryp();
                     string contraseñaTemporalEncriptada = encryp.Encriptar(contraseñaTemporal);
 
-                    // Actualiza la base de datos con la nueva contraseña encriptada
+                    // Cierra el reader antes de ejecutar otra consulta
                     reader.Close();
+
+                    // Actualiza la base de datos con la nueva contraseña encriptada
                     command.CommandText = "UPDATE Usuarios SET Contraseña = @newPassword WHERE Usuario = @username";
                     command.Parameters.AddWithValue("@newPassword", contraseñaTemporalEncriptada);
 
@@ -116,8 +123,11 @@ namespace AgroServicios.Modelo.DAO
                             destinatarioCorreo: new List<string> { correoUsuario }
                         );
 
-                        // Retorna un mensaje indicando que el correo fue enviado
-                        return $"Hola, {nombreUsuario}\nUsted solicitó recuperar su contraseña. Por favor revise su correo: {correoUsuario}";
+                        // Censura el correo del usuario antes de mostrarlo en el mensaje
+                        string correoCensurado = CensurarCorreo(correoUsuario);
+
+                        // Retorna un mensaje indicando que el correo fue enviado y muestra el correo censurado
+                        return $"Hola, {nombreUsuario}\nUsted solicitó recuperar su contraseña. Por favor revise su correo: {correoCensurado}";
                     }
                     else
                     {
@@ -131,6 +141,31 @@ namespace AgroServicios.Modelo.DAO
                     return "Lo sentimos, no tiene una cuenta con ese correo o nombre de usuario.";
                 }
             }
+        }
+
+        // Método privado para censurar un correo electrónico
+        private string CensurarCorreo(string correo)
+        {
+            // Divide el correo en dos partes: antes y después del símbolo '@'
+            var partesCorreo = correo.Split('@');
+
+            // Verifica si el correo tiene un formato válido (debe tener dos partes)
+            if (partesCorreo.Length != 2)
+            {
+                throw new ArgumentException("El correo no es válido.");
+            }
+
+            // Obtén los primeros tres caracteres antes del '@'
+            string primerosCaracteres = partesCorreo[0].Substring(0, 3);
+
+            // Crea la parte censurada del correo con asteriscos, cubriendo el resto de los caracteres
+            string parteCensurada = new string('*', partesCorreo[0].Length - 3);
+
+            // Reconstruye el correo censurado
+            string correoCensurado = primerosCaracteres + parteCensurada + "@" + partesCorreo[1];
+
+            // Retorna el correo censurado
+            return correoCensurado;
         }
 
         // Método privado para generar una contraseña temporal aleatoria

@@ -47,6 +47,7 @@ namespace AgroServicios.Controlador.ControladorStats
             DataSet ds = objAdmin.ObtenerPersonas();
             ObjProv.GriewProveedores.DataSource = ds.Tables["Proveedores"];
             TraducirEncabezados(ObjProv.GriewProveedores);
+            ObjProv.GriewProveedores.Columns["idProveedor"].Visible = false;
         }
         private void DeleteProv (object sender, EventArgs e)
         {
