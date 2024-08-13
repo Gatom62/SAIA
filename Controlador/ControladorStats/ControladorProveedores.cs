@@ -46,6 +46,8 @@ namespace AgroServicios.Controlador.ControladorStats
             DAOProveedores objAdmin = new DAOProveedores();
             DataSet ds = objAdmin.ObtenerPersonas();
             ObjProv.GriewProveedores.DataSource = ds.Tables["Proveedores"];
+            TraducirEncabezados(ObjProv.GriewProveedores);
+            ObjProv.GriewProveedores.Columns["idProveedor"].Visible = false;
         }
         private void DeleteProv (object sender, EventArgs e)
         {
@@ -83,6 +85,27 @@ namespace AgroServicios.Controlador.ControladorStats
             VistaActualizarProveedor vistaUpdate = new VistaActualizarProveedor(1, id, Name, phone, email, Dui, company);
             vistaUpdate.ShowDialog();
             RefrescarData();
+        }
+        private void TraducirEncabezados(DataGridView dgv)
+        {
+            if (ControladorIdioma.idioma == 1)
+            {
+                dgv.Columns["idProveedor"].HeaderText = "Supplier ID";
+                dgv.Columns["Nombre"].HeaderText = "Name";
+                dgv.Columns["DUI"].HeaderText = "ID";
+                dgv.Columns["Teléfono"].HeaderText = "Phone";
+                dgv.Columns["Correo"].HeaderText = "Email";
+                dgv.Columns["Empresa"].HeaderText = "Company";
+            }
+            else
+            {
+                dgv.Columns["idProveedor"].HeaderText = "idProveedor";
+                dgv.Columns["Nombre"].HeaderText = "Nombre";
+                dgv.Columns["DUI"].HeaderText = "DUI";
+                dgv.Columns["Teléfono"].HeaderText = "Teléfono";
+                dgv.Columns["Correo"].HeaderText = "Correo";
+                dgv.Columns["Empresa"].HeaderText = "Empresa";
+            }
         }
     }
 }

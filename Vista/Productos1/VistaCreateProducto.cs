@@ -30,6 +30,19 @@ namespace AgroServicios.Vista.Productos1
                 bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(34, 36, 49);
                 bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(34, 36, 49);
             }
+
+            if (ControladorIdioma.idioma == 1)
+            {
+                bunifuLabel1.Text = Ingles.btnañadir;
+                txtNombreProducto.PlaceholderText = Ingles.NombreProducto;
+                txtCodigo.PlaceholderText = Ingles.Codigo;
+                txtCantidad.PlaceholderText = Ingles.CantidadProducto;
+                btnImagenProducto.Text = Ingles.AgregarImagen;
+                btnCrearProducto.Text = Ingles.Agregar;
+                bunifuLabel3.Text = Ingles.Marca;
+                bunifuLabel2.Text = Ingles.Descripcion;
+            }
+
         }
 
         private void ptbImgProducto_Click(object sender, EventArgs e)

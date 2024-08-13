@@ -24,9 +24,29 @@ namespace AgroServicios.Vista.Productos1
 
         private void VistaProductos_Load(object sender, EventArgs e)
         {
-            if (ControladorTema.IsDarkMode == true) 
+            if (ControladorTema.IsDarkMode == true)
             {
-              this.BackColor = Color.Black;
+                this.BackColor = Color.Black;
+                bunifuLabel1.BackColor = Color.Transparent;
+                bunifuLabel1.ForeColor = Color.White;
+                GriewViewProductos.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
+                GriewViewProductos.BackgroundColor = Color.FromArgb(50, 56, 62);
+                bunifuGradientPanel1.GradientBottomLeft = Color.FromArgb(118, 88, 152);
+                bunifuGradientPanel1.GradientTopRight = Color.FromArgb(118, 88, 152);
+                bunifuGradientPanel1.GradientBottomRight = Color.FromArgb(34, 36, 49);
+                bunifuGradientPanel1.GradientTopLeft = Color.FromArgb(34, 36, 49);
+                btnAgregarProducto.IdleFillColor = Color.DarkViolet;
+                btnAgregarProducto.ForeColor = Color.White;
+            }
+
+            if (ControladorIdioma.idioma == 1)
+            {
+                bunifuLabel1.Text = Ingles.LabelTitulo;
+                btnAgregarMarca.Text = Ingles.AgregarMarca;
+                btnAgregarProducto.Text = Ingles.AgregarProducto;
+                cmsEditarProducto.Text = Ingles.EditarProducto;
+                cmsElimarProducto.Text = Ingles.Eliminar;
+                cmsInformacion.Text = Ingles.Informacion;
             }
         }
 
