@@ -10,6 +10,7 @@ using System.Xml.Linq;
 using AgroServicios.Controlador.Helper;
 using AgroServicios.Modelo.DAO;
 using AgroServicios.Vista.Cuentas;
+using AgroServicios.Vista.Login;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace AgroServicios.Controlador.CuentasContralador
@@ -27,6 +28,18 @@ namespace AgroServicios.Controlador.CuentasContralador
             ObjEmpleados.cmsUpdate.Click += new EventHandler (UpdateEmpleado);
             ObjEmpleados.cmsRestablecer.Click += new EventHandler(RestEmpleado);
             ObjEmpleados.cmsinfo.Click += new EventHandler(Infoempleado);
+            ObjEmpleados.cmsPreguntas.Click += new EventHandler(PreguntasEmp);
+        }
+
+        private void PreguntasEmp(object sender, EventArgs e)
+        {
+            int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
+            string user;
+
+            user = ObjEmpleados.GriewEmpleados[7, pos].Value.ToString();
+
+            VistaPreguntas vpre = new VistaPreguntas(user);
+            vpre.ShowDialog();
         }
         private void Infoempleado(object sender, EventArgs e)
         {

@@ -42,6 +42,7 @@
             this.cmsinfo = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsRestablecer = new System.Windows.Forms.ToolStripMenuItem();
             this.GriewEmpleados = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.cmsPreguntas = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1.SuspendLayout();
             this.contextGriewEmpleados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GriewEmpleados)).BeginInit();
@@ -154,9 +155,10 @@
             this.cmsEliminar,
             this.cmsUpdate,
             this.cmsinfo,
-            this.cmsRestablecer});
+            this.cmsRestablecer,
+            this.cmsPreguntas});
             this.contextGriewEmpleados.Name = "contextMenuStrip1";
-            this.contextGriewEmpleados.Size = new System.Drawing.Size(260, 136);
+            this.contextGriewEmpleados.Size = new System.Drawing.Size(260, 134);
             // 
             // cmsEliminar
             // 
@@ -239,6 +241,7 @@
             this.GriewEmpleados.EnableHeadersVisualStyles = false;
             this.GriewEmpleados.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.GriewEmpleados.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.GriewEmpleados.HeaderBgColor = System.Drawing.Color.Empty;
             this.GriewEmpleados.HeaderForeColor = System.Drawing.Color.White;
             this.GriewEmpleados.Location = new System.Drawing.Point(0, 64);
             this.GriewEmpleados.Name = "GriewEmpleados";
@@ -250,6 +253,12 @@
             this.GriewEmpleados.Size = new System.Drawing.Size(1394, 297);
             this.GriewEmpleados.TabIndex = 1;
             this.GriewEmpleados.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            // 
+            // cmsPreguntas
+            // 
+            this.cmsPreguntas.Name = "cmsPreguntas";
+            this.cmsPreguntas.Size = new System.Drawing.Size(259, 26);
+            this.cmsPreguntas.Text = "Preguntas de seguridad.";
             // 
             // VistaCuentas
             // 
@@ -278,5 +287,6 @@
         public System.Windows.Forms.ToolStripMenuItem cmsRestablecer;
         public Bunifu.UI.WinForms.BunifuDataGridView GriewEmpleados;
         public System.Windows.Forms.ToolStripMenuItem cmsinfo;
+        public System.Windows.Forms.ToolStripMenuItem cmsPreguntas;
     }
 }

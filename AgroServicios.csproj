@@ -114,6 +114,8 @@
     <Compile Include="Controlador\Helper\StaticSession.cs" />
     <Compile Include="Controlador\Login\ControladorForEmail.cs" />
     <Compile Include="Controlador\Login\ControladorLogin.cs" />
+    <Compile Include="Controlador\Login\ControladorPreguntasLogin.cs" />
+    <Compile Include="Controlador\Login\ControladorPreguntasRec.cs" />
     <Compile Include="Controlador\Login\ControlerBasicMetodosRecuperar.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorMenuPrincipal.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorVistaProductos.cs" />
@@ -126,6 +128,7 @@
     <Compile Include="Modelo\DAO\DAOCorreoRecuperacion.cs" />
     <Compile Include="Modelo\DAO\DAODCSoporte.cs" />
     <Compile Include="Modelo\DAO\DAOLogin.cs" />
+    <Compile Include="Modelo\DAO\DAOPreguntasRec.cs" />
     <Compile Include="Modelo\DAO\DAOProductos1.cs" />
     <Compile Include="Modelo\DAO\DAOProveedores.cs" />
     <Compile Include="Modelo\DAO\DAORecuperarPass.cs" />
@@ -134,6 +137,7 @@
     <Compile Include="Modelo\DTO\DTOAdminUsers.cs" />
     <Compile Include="Modelo\DTO\DTOCorreoRecuperacion.cs" />
     <Compile Include="Modelo\DTO\DTOLogin.cs" />
+    <Compile Include="Modelo\DTO\DTOPreguntasRec.cs" />
     <Compile Include="Modelo\DTO\DTOProductos1.cs" />
     <Compile Include="Modelo\DTO\DTOProveedores.cs" />
     <Compile Include="Modelo\DTO\DTOTargproductos.cs" />
@@ -221,6 +225,12 @@
     <Compile Include="Vista\Login\Bienvenida.Designer.cs">
       <DependentUpon>Bienvenida.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Login\VistaPreguntas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Login\VistaPreguntas.Designer.cs">
+      <DependentUpon>VistaPreguntas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Login\VistaForEmail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +248,12 @@
     </Compile>
     <Compile Include="Vista\Login\VistaMetodosDeRecuperacion.Designer.cs">
       <DependentUpon>VistaMetodosDeRecuperacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Login\VistaPreguntasLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Login\VistaPreguntasLogin.Designer.cs">
+      <DependentUpon>VistaPreguntasLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\MenuPrincipal\VistaAjustes.cs">
       <SubType>Form</SubType>
@@ -358,6 +374,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Login\VistaMetodosDeRecuperacion.resx">
       <DependentUpon>VistaMetodosDeRecuperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Login\VistaPreguntas.resx">
+      <DependentUpon>VistaPreguntas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Login\VistaPreguntasLogin.resx">
+      <DependentUpon>VistaPreguntasLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaAjustes.resx">
       <DependentUpon>VistaAjustes.cs</DependentUpon>

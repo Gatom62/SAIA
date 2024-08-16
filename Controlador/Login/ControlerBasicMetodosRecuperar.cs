@@ -22,6 +22,7 @@ namespace AgroServicios.Controlador.Login
             ObjRecuperacion = MetodosRecuperar;
             ObjRecuperacion.btnEmail.Click += new EventHandler(MetodoCorreo);
             ObjRecuperacion.ptbback.Click += VolverForm;
+            ObjRecuperacion.btnPreguntas.Click += PreguntasSec;
         }
 
         private void MetodoCorreo(Object sender, EventArgs e)
@@ -35,6 +36,11 @@ namespace AgroServicios.Controlador.Login
 
             VistaLogin vistaLogin = new VistaLogin();
             vistaLogin.Show();
+        }
+        private void PreguntasSec(object sender, EventArgs e)
+        {
+            VistaPreguntasLogin vistaPreguntasLogin = new VistaPreguntasLogin();
+            vistaPreguntasLogin.ShowDialog();
         }
 
     }
