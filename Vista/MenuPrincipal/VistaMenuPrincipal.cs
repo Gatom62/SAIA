@@ -25,7 +25,7 @@ namespace AgroServicios.Vista.MenuPrincipal
 
         private void horafecha_Tick(object sender, EventArgs e)
         {
-            lblhora.Text = DateTime.Now.ToString("hh:mm:ss");
+            lblhora.Text = DateTime.Now.ToString("hh:mm:ss tt"); // "tt" agrega AM/PM
 
             if (ControladorIdioma.idioma == 1) // Inglés
             {
@@ -38,6 +38,7 @@ namespace AgroServicios.Vista.MenuPrincipal
             }
         }
 
+
         private void VistaMenuPrincipal_Load(object sender, EventArgs e)
         {
             if (ControladorTema.IsDarkMode == true)
@@ -47,21 +48,17 @@ namespace AgroServicios.Vista.MenuPrincipal
                 lblfecha.ForeColor = Color.FromArgb(68, 197, 197);
                 PanelContenedor.BackColor = Color.FromArgb(18,18,18);
                 btnprin2.IdleFillColor = Color.FromArgb(82, 208, 83);
-                btnprin1.IdleFillColor = Color.FromArgb(82, 208, 83);
-                btn1.IdleFillColor = Color.FromArgb(118, 88, 152);
-                btn2.IdleFillColor = Color.FromArgb(118, 88, 152);
-                btn3.IdleFillColor = Color.FromArgb(118, 88, 152);
-                btn4.IdleFillColor = Color.FromArgb(118, 88, 152);
-                btn5.IdleFillColor = Color.FromArgb(118, 88, 152);
-                btn6.IdleFillColor = Color.FromArgb(118, 88, 152);
-                btn7.IdleFillColor = Color.FromArgb(118, 88, 152);
-                btn8.IdleFillColor = Color.FromArgb(118, 88, 152);
+               
                 tableLayoutPanel1.BackColor = Color.FromArgb(230, 119, 11);
                 btnInicio.BackColor = Color.FromArgb(230, 119, 11);
                 btnShop.BackColor = Color.FromArgb(230, 119, 11);
                 btnStats.BackColor = Color.FromArgb(230, 119, 11);
                 btnAccounts.BackColor = Color.FromArgb(230, 119, 11);
                 btnBusqueda.BackColor = Color.FromArgb(230, 119, 11);
+
+                bunifuPanel2.BackgroundColor = Color.FromArgb(34, 36, 49);
+                label1.ForeColor = Color.White;
+                label2.ForeColor = Color.FromArgb(68, 197, 197);
             }
         }
         private void btnConfi_Click_1(object sender, EventArgs e)

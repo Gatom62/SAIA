@@ -61,8 +61,6 @@ namespace AgroServicios.Vista.MenuPrincipal
                 switchidioma.Checked = true;
             }
 
-            label7.Text = StaticSession.Username;
-
             if (ControladorTema.IsDarkMode == true)
             {
                 label1.ForeColor = Color.White;
@@ -70,15 +68,9 @@ namespace AgroServicios.Vista.MenuPrincipal
                 label3.ForeColor = Color.White;
                 label4.ForeColor = Color.White;
                 label5.ForeColor = Color.White;
-                label6.ForeColor = Color.White;
-                label7.ForeColor = Color.White;
                 tableLayoutPanel1.BackColor = Color.FromArgb(230, 119, 11);
                 this.BackColor = Color.FromArgb(34, 36, 49);
 
-            }
-            using (MemoryStream ms = new MemoryStream(StaticSession.Picture))
-            {
-                ptbicon.Image = Image.FromStream(ms);
             }
         }
 

@@ -35,18 +35,14 @@
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.ptbicon = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.switchidioma = new Bunifu.UI.WinForms.BunifuToggleSwitch2();
-            this.label6 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.label7 = new System.Windows.Forms.Label();
             this.bunifuPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbicon)).BeginInit();
             this.SuspendLayout();
             // 
             // DarkMode
@@ -56,10 +52,11 @@
             this.DarkMode.CheckedBackColor = System.Drawing.Color.DodgerBlue;
             this.DarkMode.CheckedSwitchColor = System.Drawing.Color.White;
             this.DarkMode.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
-            this.DarkMode.Location = new System.Drawing.Point(276, 135);
+            this.DarkMode.Location = new System.Drawing.Point(207, 110);
+            this.DarkMode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DarkMode.Name = "DarkMode";
             this.DarkMode.OutlineThickness = 2;
-            this.DarkMode.Size = new System.Drawing.Size(100, 40);
+            this.DarkMode.Size = new System.Drawing.Size(75, 32);
             this.DarkMode.TabIndex = 0;
             this.DarkMode.UncheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
             this.DarkMode.UncheckedSwitchColor = System.Drawing.Color.White;
@@ -113,7 +110,8 @@
             this.bunifuButton21.IdleIconLeftImage = null;
             this.bunifuButton21.IdleIconRightImage = null;
             this.bunifuButton21.IndicateFocus = false;
-            this.bunifuButton21.Location = new System.Drawing.Point(675, 433);
+            this.bunifuButton21.Location = new System.Drawing.Point(506, 352);
+            this.bunifuButton21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuButton21.Name = "bunifuButton21";
             this.bunifuButton21.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton21.OnDisabledState.BorderRadius = 33;
@@ -147,7 +145,7 @@
             this.bunifuButton21.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bunifuButton21.OnPressedState.IconLeftImage = null;
             this.bunifuButton21.OnPressedState.IconRightImage = null;
-            this.bunifuButton21.Size = new System.Drawing.Size(205, 39);
+            this.bunifuButton21.Size = new System.Drawing.Size(154, 32);
             this.bunifuButton21.TabIndex = 1;
             this.bunifuButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton21.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -167,9 +165,10 @@
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel1);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(896, 73);
+            this.bunifuPanel1.Size = new System.Drawing.Size(672, 59);
             this.bunifuPanel1.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -180,13 +179,13 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.ptbicon, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(896, 73);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(672, 59);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label2
@@ -194,36 +193,22 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(183, 13);
+            this.label2.Location = new System.Drawing.Point(125, 10);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(529, 47);
+            this.label2.Size = new System.Drawing.Size(420, 38);
             this.label2.TabIndex = 0;
             this.label2.Text = "Configuración del sistema";
-            // 
-            // ptbicon
-            // 
-            this.ptbicon.AllowFocused = false;
-            this.ptbicon.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ptbicon.AutoSizeHeight = true;
-            this.ptbicon.BorderRadius = 35;
-            this.ptbicon.Image = ((System.Drawing.Image)(resources.GetObject("ptbicon.Image")));
-            this.ptbicon.IsCircle = true;
-            this.ptbicon.Location = new System.Drawing.Point(793, 3);
-            this.ptbicon.Name = "ptbicon";
-            this.ptbicon.Size = new System.Drawing.Size(70, 70);
-            this.ptbicon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbicon.TabIndex = 1;
-            this.ptbicon.TabStop = false;
-            this.ptbicon.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(2, 135);
+            this.label1.Location = new System.Drawing.Point(2, 110);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 40);
+            this.label1.Size = new System.Drawing.Size(187, 33);
             this.label1.TabIndex = 3;
             this.label1.Text = "Tema normal";
             // 
@@ -232,9 +217,10 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(421, 135);
+            this.label3.Location = new System.Drawing.Point(316, 110);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(201, 40);
+            this.label3.Size = new System.Drawing.Size(172, 33);
             this.label3.TabIndex = 4;
             this.label3.Text = "Alter Theme";
             // 
@@ -243,9 +229,10 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(357, 325);
+            this.label4.Location = new System.Drawing.Point(268, 264);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 40);
+            this.label4.Size = new System.Drawing.Size(89, 33);
             this.label4.TabIndex = 7;
             this.label4.Text = "Ingles";
             // 
@@ -254,9 +241,10 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(2, 325);
+            this.label5.Location = new System.Drawing.Point(2, 264);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 40);
+            this.label5.Size = new System.Drawing.Size(115, 33);
             this.label5.TabIndex = 6;
             this.label5.Text = "Español";
             // 
@@ -267,26 +255,16 @@
             this.switchidioma.CheckedBackColor = System.Drawing.Color.DodgerBlue;
             this.switchidioma.CheckedSwitchColor = System.Drawing.Color.White;
             this.switchidioma.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
-            this.switchidioma.Location = new System.Drawing.Point(191, 325);
+            this.switchidioma.Location = new System.Drawing.Point(143, 264);
+            this.switchidioma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.switchidioma.Name = "switchidioma";
             this.switchidioma.OutlineThickness = 2;
-            this.switchidioma.Size = new System.Drawing.Size(100, 40);
+            this.switchidioma.Size = new System.Drawing.Size(75, 32);
             this.switchidioma.TabIndex = 5;
             this.switchidioma.UncheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
             this.switchidioma.UncheckedSwitchColor = System.Drawing.Color.White;
             this.switchidioma.UncheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
             this.switchidioma.CheckedChanged += new System.EventHandler(this.switchidioma_CheckedChanged);
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(2, 432);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(142, 40);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Usuario:";
             // 
             // bunifuSeparator1
             // 
@@ -297,31 +275,18 @@
             this.bunifuSeparator1.LineColor = System.Drawing.Color.Black;
             this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.DoubleEdgeFaded;
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(0, 226);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(0, 184);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator1.Size = new System.Drawing.Size(896, 51);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(672, 41);
             this.bunifuSeparator1.TabIndex = 9;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(150, 433);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 39);
-            this.label7.TabIndex = 10;
             // 
             // VistaAjustes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(896, 502);
-            this.Controls.Add(this.label7);
+            this.ClientSize = new System.Drawing.Size(672, 408);
             this.Controls.Add(this.bunifuSeparator1);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.switchidioma);
@@ -330,6 +295,7 @@
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.bunifuButton21);
             this.Controls.Add(this.DarkMode);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "VistaAjustes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VistaAjustes";
@@ -337,7 +303,6 @@
             this.bunifuPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbicon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,9 +320,6 @@
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label label5;
         public Bunifu.UI.WinForms.BunifuToggleSwitch2 switchidioma;
-        public System.Windows.Forms.Label label6;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
-        public System.Windows.Forms.Label label7;
-        public Bunifu.UI.WinForms.BunifuPictureBox ptbicon;
     }
 }

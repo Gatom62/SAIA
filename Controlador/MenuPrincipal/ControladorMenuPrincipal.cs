@@ -10,6 +10,8 @@ using AgroServicios.Vista.Busqueda;
 using AgroServicios.Vista.Cuentas;
 using AgroServicios.Vista.Login;
 using AgroServicios.Controlador.Helper;
+using System.IO;
+using System.Drawing;
 
 namespace AgroServicios.Controlador.MenuPrincipal
 {
@@ -25,6 +27,7 @@ namespace AgroServicios.Controlador.MenuPrincipal
         public ControladorMenuPrincipal(VistaMenuPrincipal Menu)
         {
             ObjMenu = Menu;
+            ObjMenu.Load += LoadUser;
             ObjMenu.btnStats.Click += new EventHandler(OpenStats);
             ObjMenu.btnBusqueda.Click += new EventHandler(OpenBusqueda);
             ObjMenu.btnInicio.Click += new EventHandler(OpenInicio);
@@ -33,7 +36,15 @@ namespace AgroServicios.Controlador.MenuPrincipal
             ObjMenu.btnShop.Click += new EventHandler(OpenCarrito);
             ObjMenu.btnprin2.Click += new EventHandler(OpenShop);
         }
+        private void LoadUser(object sender, EventArgs e)
+        {
+            ObjMenu.label2.Text = StaticSession.Username;
+            using (MemoryStream ms = new MemoryStream(StaticSession.Picture))
+            {
+                ObjMenu.ptbimg.Image = Image.FromStream(ms);
+            }
 
+        }
         private void OpenCarrito(object sender, EventArgs e)
         {
             AbrirPanel<VistaCarrito>();
