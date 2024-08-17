@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AgroServicios.Controlador.Helper;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,7 +33,7 @@ namespace AgroServicios.Vista.MenuPrincipal
         private VistaCarrito()
         {
             InitializeComponent();
-
+            ControladorCarrito controladorCarrito = new ControladorCarrito(this);
             // Configura las columnas de ambos DataGridViews al inicializar el formulario
             ConfigurarDataGridViews();
         }

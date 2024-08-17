@@ -101,10 +101,11 @@ namespace AgroServicios
 
                 // Mensaje o notificación de que el producto se ha añadido
                 MessageBox.Show("Producto añadido al carrito.");
+                numericUpDown1.Value = numericUpDown1.Value = 0;
             }
             else
             {
-                MessageBox.Show("La cantidad de productos debe ser mayor a cero.");
+                MessageBox.Show("La cantidad de productos debe ser mayor a cero.", "Error",MessageBoxButtons.OK ,MessageBoxIcon.Warning);
             }
         }
     }

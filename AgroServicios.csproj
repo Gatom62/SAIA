@@ -112,6 +112,7 @@
     <Compile Include="Controlador\CuentasContralador\ControladorUpdateEmpleados.cs" />
     <Compile Include="Controlador\Encryp.cs" />
     <Compile Include="Controlador\Helper\CommonClasses.cs" />
+    <Compile Include="Controlador\Helper\ControladorCarrito.cs" />
     <Compile Include="Controlador\Helper\StaticSession.cs" />
     <Compile Include="Controlador\Login\ControladorForEmail.cs" />
     <Compile Include="Controlador\Login\ControladorLogin.cs" />
