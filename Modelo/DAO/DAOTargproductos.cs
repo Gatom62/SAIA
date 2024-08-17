@@ -28,15 +28,15 @@ namespace AgroServicios.Modelo.DAO
                 Id = Convert.ToInt32(reader[0]);
                 Nameproduct = reader[1].ToString();
                 Descriptionproduct = reader[5].ToString();
-                Codeproduct = reader[6].ToString();
-                Precioproduct = reader[3].ToString();
+                Codeproduct = Convert.ToInt32(reader[6]);
+                Precioproduct = Convert.ToDecimal(reader[3]);
                 Imagen = ((byte[])reader[7]);
 
                 ProductosTarg targ = new ProductosTarg();
                 targ.Id = Id;
                 targ.nameProduct = Nameproduct;
-                targ.Code = Codeproduct;
-                targ.Precio = Precioproduct;
+                targ.Code = Codeproduct.ToString();
+                targ.Precio = "$" + Precioproduct.ToString("N2");
                 targ.Descripcion = Descriptionproduct;
                 MemoryStream ms = new MemoryStream(Imagen);
                 targ.ImgProducto = Image.FromStream(ms);
