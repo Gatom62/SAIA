@@ -47,7 +47,7 @@ namespace AgroServicios.Controlador.MenuPrincipal
         }
         private void OpenCarrito(object sender, EventArgs e)
         {
-            AbrirPanel<VistaCarrito>();
+            VistaCarrito.Instance.ShowDialog();
         }
         private void OpenShop(object sender, EventArgs e)
         {

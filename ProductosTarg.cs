@@ -83,5 +83,29 @@ namespace AgroServicios
                 form.Dispose();
             }
         }
+
+        private void btnadd_Click(object sender, EventArgs e)
+        {
+            if (numericUpDown1.Value > 0)
+            {
+
+
+                // Datos del producto a añadir
+                string producto = lblname.Text;
+                int cantidad = int.Parse(numericUpDown1.Value.ToString());
+                decimal precioUnitario = decimal.Parse(lblPrecio.Text, System.Globalization.NumberStyles.Currency);
+                decimal precioTotal = cantidad * precioUnitario;
+
+                // Agrega el producto al DataGridView de VistaCarrito sin mostrar el formulario
+                VistaCarrito.Instance.AgregarProductoAlCarrito(producto, cantidad, precioUnitario, precioTotal);
+
+                // Mensaje o notificación de que el producto se ha añadido
+                MessageBox.Show("Producto añadido al carrito.");
+            }
+            else
+            {
+                MessageBox.Show("La cantidad de productos debe ser mayor a cero.");
+            }
+        }
     }
 }
