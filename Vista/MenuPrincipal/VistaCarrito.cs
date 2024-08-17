@@ -38,12 +38,37 @@ namespace AgroServicios.Vista.MenuPrincipal
 
         public void AgregarProductoAlCarrito(string producto, int cantidad, decimal precioUnitario, decimal precioTotal)
         {
-            // Agrega una fila al DataGridView con los detalles del producto
+            // Verifica si el producto ya existe en el carrito
+            foreach (DataGridViewRow row in dgvCarrito.Rows)
+            {
+                // Asegúrate de que la celda no sea nula y que tenga un valor
+                if (row.Cells["Producto"].Value != null &&
+                    row.Cells["Producto"].Value.ToString() == producto)
+                {
+                    // Producto ya existe, actualiza la cantidad y el precio total
+                    int cantidadExistente = int.Parse(row.Cells["Cantidad"].Value.ToString());
+                    decimal precioTotalExistente = decimal.Parse(row.Cells["PrecioTotal"].Value.ToString(), System.Globalization.NumberStyles.Currency);
+
+                    int nuevaCantidad = cantidadExistente + cantidad;
+                    decimal nuevoPrecioTotal = precioTotalExistente + precioTotal;
+
+                    row.Cells["Cantidad"].Value = nuevaCantidad;
+                    row.Cells["PrecioTotal"].Value = nuevoPrecioTotal.ToString("C");
+
+                    // Actualiza el total general
+                    ActualizarTotal();
+                    return;
+                }
+            }
+
+            // Si el producto no existe, agrega una nueva fila
             dgvCarrito.Rows.Add(producto, cantidad, precioUnitario.ToString("C"), precioTotal.ToString("C"));
 
-            // Actualiza el total
+            // Actualiza el total general
             ActualizarTotal();
         }
+
+
 
         private void ActualizarTotal()
         {
