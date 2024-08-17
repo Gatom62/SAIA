@@ -108,6 +108,7 @@
     <Compile Include="Controlador\CuentasContralador\ControladorCreateUser.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorCuentas.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorRestUser.cs" />
+    <Compile Include="Controlador\CuentasContralador\ControladorResUserViaPreguntas.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorUpdateEmpleados.cs" />
     <Compile Include="Controlador\Encryp.cs" />
     <Compile Include="Controlador\Helper\CommonClasses.cs" />
@@ -279,6 +280,12 @@
     <Compile Include="Vista\MenuPrincipal\VistaProductos.Designer.cs">
       <DependentUpon>VistaProductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\MenuPrincipal\VistaRestContraPreguntas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\MenuPrincipal\VistaRestContraPreguntas.Designer.cs">
+      <DependentUpon>VistaRestContraPreguntas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\MenuPrincipal\VistaZoomProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -393,6 +400,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaProductos.resx">
       <DependentUpon>VistaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\MenuPrincipal\VistaRestContraPreguntas.resx">
+      <DependentUpon>VistaRestContraPreguntas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaZoomProduct.resx">
       <DependentUpon>VistaZoomProduct.cs</DependentUpon>

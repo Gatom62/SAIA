@@ -1,5 +1,6 @@
 ﻿using AgroServicios.Modelo.DAO;
 using AgroServicios.Vista.Login;
+using AgroServicios.Vista.MenuPrincipal;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -77,6 +78,9 @@ namespace AgroServicios.Controlador.Login
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
 
+                string user = objpre.txtUsuario.Text;
+                VistaRestContraPreguntas vista = new VistaRestContraPreguntas(user);
+                vista.ShowDialog();
             }
             else
             {

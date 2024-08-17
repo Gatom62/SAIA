@@ -269,6 +269,31 @@ namespace AgroServicios.Modelo.DAO
             }
         }
 
+        public int restablecerEmpleadov2()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+
+                string query = "UPDATE Usuarios SET Contraseña = @pass WHERE Usuario = @user";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+
+                cmd.Parameters.AddWithValue("@user", Usuario1);
+                cmd.Parameters.AddWithValue("@pass", Contraseña1);
+
+                int respuesta = cmd.ExecuteNonQuery();
+                
+                return respuesta;
+            }
+            catch (Exception)
+            {
+                return -1;
+            }
+            finally
+            {
+                Command.Connection.Close();
+            }
+        }
 
         public int restablecerEmpleado()
         {
