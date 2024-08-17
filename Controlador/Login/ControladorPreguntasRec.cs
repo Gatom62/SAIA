@@ -15,8 +15,6 @@ namespace AgroServicios.Controlador.Login
     internal class ControladorPreguntasRec
     {
         VistaPreguntas objpre;
-        private string role1;
-        private string role2;
 
         public ControladorPreguntasRec(VistaPreguntas Vista, string user)
         {
@@ -74,15 +72,16 @@ namespace AgroServicios.Controlador.Login
 
         private void InsertarRespuestas(object sender, EventArgs e)
         {
-       
+            if (ValidarEntradas())
+            {
                 DAOPreguntasRec dAO = new DAOPreguntasRec();
-                
-                 dAO.Usuario = objpre.txtUsuario.Text.Trim();
-                 dAO.Pregunta1 = int.Parse(objpre.droprole1.SelectedValue.ToString());
-                 dAO.Pregunta2 = int.Parse(objpre.droprole2.SelectedValue.ToString());
-                 dAO.Res1 = objpre.txtRes1.Text.Trim();
-                 dAO.Res2 = objpre.txtRes2.Text.Trim();
-                
+
+                dAO.Usuario = objpre.txtUsuario.Text.Trim();
+                dAO.Pregunta1 = int.Parse(objpre.droprole1.SelectedValue.ToString());
+                dAO.Pregunta2 = int.Parse(objpre.droprole2.SelectedValue.ToString());
+                dAO.Res1 = objpre.txtRes1.Text.Trim();
+                dAO.Res2 = objpre.txtRes2.Text.Trim();
+
                 int resultado = dAO.InsertarRespuestasSeguridad();
 
                 if (resultado > 0)
@@ -94,10 +93,10 @@ namespace AgroServicios.Controlador.Login
                 }
                 else if (resultado == -2)
                 {
-                MessageBox.Show("El usuario ya tiene dos preguntas de seguridad asignadas. No se pueden agregar más.",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
+                    MessageBox.Show("El usuario ya tiene dos preguntas de seguridad asignadas. No se pueden agregar más.",
+                                    "Proceso interrumpido",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -106,33 +105,33 @@ namespace AgroServicios.Controlador.Login
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
                 }
-            
+            }
         }
 
 
 
-        //private bool ValidarEntradas()
-        //{
-        //    if (string.IsNullOrWhiteSpace(objpre.txtRes1.Text) || string.IsNullOrWhiteSpace(objpre.txtRes2.Text))
-        //    {
-        //        MessageBox.Show("Por favor, complete ambas respuestas de seguridad.",
-        //                        "Error de validación",
-        //                        MessageBoxButtons.OK,
-        //                        MessageBoxIcon.Error);
-        //        return false;
-        //    }
+        private bool ValidarEntradas()
+        {
+            if (string.IsNullOrWhiteSpace(objpre.txtRes1.Text) || string.IsNullOrWhiteSpace(objpre.txtRes2.Text))
+            {
+                MessageBox.Show("Por favor, complete ambas respuestas de seguridad.",
+                                "Error de validación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return false;
+            }
 
-        //    if (objpre.droprole1.SelectedValue.ToString() == objpre.droprole2.SelectedValue.ToString())
-        //    {
-        //        MessageBox.Show("Las preguntas de seguridad no pueden ser iguales.",
-        //                        "Error de validación",
-        //                        MessageBoxButtons.OK,
-        //                        MessageBoxIcon.Error);
-        //        return false;
-        //    }
+            if (objpre.droprole1.SelectedValue.ToString() == objpre.droprole2.SelectedValue.ToString())
+            {
+                MessageBox.Show("Las preguntas de seguridad no pueden ser iguales.",
+                                "Error de validación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return false;
+            }
 
-        //    return true;
-        //}
+            return true;
+        }
 
         //private string CifrarRespuesta(string respuesta)
         //{
