@@ -34,27 +34,6 @@ namespace AgroServicios.Vista.MenuPrincipal
         {
             InitializeComponent();
             ControladorCarrito controladorCarrito = new ControladorCarrito(this);
-            // Configura las columnas de ambos DataGridViews al inicializar el formulario
-            ConfigurarDataGridViews();
-        }
-
-        private void ConfigurarDataGridViews()
-        {
-            // Configuración de dgvCarrito
-            if (dgvCarrito.Columns.Count == 0)
-            {
-                dgvCarrito.Columns.Add("Producto", "Producto");
-                dgvCarrito.Columns.Add("Cantidad", "Cantidad");
-                dgvCarrito.Columns.Add("PrecioUnitario", "Precio Unitario");
-                dgvCarrito.Columns.Add("PrecioTotal", "Precio Total");
-            }
-
-            // Configuración de dgvTotal
-            if (dgvTotal.Columns.Count == 0)
-            {
-                dgvTotal.Columns.Add("Total", "Total");
-            }
-            dgvTotal.Rows.Add();  // Añade una fila vacía para mostrar el total
         }
 
         public void AgregarProductoAlCarrito(string producto, int cantidad, decimal precioUnitario, decimal precioTotal)
