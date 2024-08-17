@@ -47,9 +47,38 @@ namespace AgroServicios.Modelo.DAO
                 getConnection().Close();
             }
         }
+        public bool UsuarioTieneDosPreguntas()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+
+                string query = "SELECT COUNT(*) FROM RespuestasSeguridad WHERE Usuario = @Usuario";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.Parameters.AddWithValue("Usuario", Usuario);
+
+                int count = (int)cmd.ExecuteScalar();
+                return count >= 2;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al verificar las preguntas del usuario: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                getConnection().Close();
+            }
+        }
+
 
         public int InsertarRespuestasSeguridad()
         {
+            if (UsuarioTieneDosPreguntas())
+            {
+                // Usuario ya tiene dos preguntas, no permitir más inserciones
+                return -2;
+            }
             try
             {
                 // Conectar a la base de datos

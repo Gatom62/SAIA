@@ -92,6 +92,13 @@ namespace AgroServicios.Controlador.Login
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
                 }
+                else if (resultado == -2)
+                {
+                MessageBox.Show("El usuario ya tiene dos preguntas de seguridad asignadas. No se pueden agregar más.",
+                                "Proceso interrumpido",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                }
                 else
                 {
                     MessageBox.Show("Ocurrió un error al guardar las respuestas de seguridad.",
