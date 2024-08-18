@@ -8,24 +8,73 @@ using System.Windows.Forms;
 
 namespace AgroServicios.Controlador.Helper
 {
-    internal class ControladorCarrito
+    public class ControladorCarrito
     {
-        VistaCarrito objcarrito;
+        private VistaCarrito objCarrito;
 
-        public ControladorCarrito (VistaCarrito Vista)
+        public ControladorCarrito(VistaCarrito vistaCarrito)
         {
-            objcarrito = Vista;
-            objcarrito.btneliminar.Click += Borrarcompra;
+            objCarrito = vistaCarrito;
+            objCarrito.btneliminar.Click += Borrarcompra;
+        }
 
+        public void AgregarProductoAlCarrito(string producto, int cantidad, decimal precioUnitario, decimal precioTotal)
+        {
+            // Verifica si el producto ya existe en el carrito
+            foreach (DataGridViewRow row in objCarrito.dgvCarrito.Rows)
+            {
+                if (row.Cells["Producto"].Value != null &&
+                    row.Cells["Producto"].Value.ToString() == producto)
+                {
+                    // Producto ya existe, actualiza la cantidad y el precio total
+                    int cantidadExistente = int.Parse(row.Cells["Cantidad"].Value.ToString());
+                    decimal precioTotalExistente = decimal.Parse(row.Cells["PrecioTotal"].Value.ToString(), System.Globalization.NumberStyles.Currency);
+
+                    int nuevaCantidad = cantidadExistente + cantidad;
+                    decimal nuevoPrecioTotal = precioTotalExistente + precioTotal;
+
+                    row.Cells["Cantidad"].Value = nuevaCantidad;
+                    row.Cells["PrecioTotal"].Value = nuevoPrecioTotal.ToString("C");
+
+                    // Actualiza el total general
+                    ActualizarTotal();
+                    return;
+                }
+            }
+
+            // Si el producto no existe, agrega una nueva fila
+            objCarrito.dgvCarrito.Rows.Add(producto, cantidad, precioUnitario.ToString("C"), precioTotal.ToString("C"));
+
+            // Actualiza el total general
+            ActualizarTotal();
+        }
+
+        private void ActualizarTotal()
+        {
+            decimal total = 0m;
+
+            // Suma el precio total de todos los productos en el carrito
+            foreach (DataGridViewRow row in objCarrito.dgvCarrito.Rows)
+            {
+                if (row.Cells["PrecioTotal"].Value != null &&
+                    !string.IsNullOrWhiteSpace(row.Cells["PrecioTotal"].Value.ToString()))
+                {
+                    total += decimal.Parse(row.Cells["PrecioTotal"].Value.ToString(), System.Globalization.NumberStyles.Currency);
+                }
+            }
+
+            // Muestra el total en el dgvTotal
+            objCarrito.dgvTotal.Rows[0].Cells[0].Value = total.ToString("C");
         }
         private void Borrarcompra(object sender, EventArgs e)
         {
-            if(MessageBox.Show("¿Esta seguro que desea eliminar está compra?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Esta seguro que desea eliminar está compra?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                objcarrito.dgvCarrito.Rows.Clear();
-                objcarrito.dgvTotal.Rows.Clear();
+                objCarrito.dgvCarrito.Rows.Clear();
+                objCarrito.dgvTotal.Rows.Clear();
             }
-            
+
         }
+
     }
 }
