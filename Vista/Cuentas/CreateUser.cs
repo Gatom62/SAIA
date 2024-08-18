@@ -26,6 +26,10 @@ namespace AgroServicios.Vista.Cuentas
                 txtNewCorreo.PlaceholderText = Ingles.Correo;
                 txtNewDireccion.PlaceholderText = Ingles.Direccion;
                 btnCrearUsuario.Text = Ingles.btningresarempleado;
+                bunifuToolTip1.SetToolTip(ptbImgUser, "Picture profile (optional)");
+                bunifuToolTip1.SetToolTip(PickerBirth, "Birthdate");
+                bunifuToolTip1.SetToolTip(maskedDui, "Employee DUI");
+                bunifuToolTip1.SetToolTip(DropRole, "Employee Role");
             }
             if (ControladorTema.IsDarkMode == true)
             {
