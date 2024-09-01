@@ -44,7 +44,6 @@ namespace AgroServicios.Vista.Productos1
             {
                 lbCrearNuevaMarca.Text = Ingles.CreateMarca;
                 txtNombreMarca.Text = Ingles.NombreMarca;
-                bunifuLabel1.Text = Ingles.TablaMarcas;
                 btnIngresarMarca.Text = Ingles.Agregar;
                 cmsElimarProducto.Text = Ingles.Eliminar;
                 cmsEditarMarca.Text = Ingles.EditarDatos;

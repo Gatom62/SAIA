@@ -12,39 +12,63 @@ using System.Windows.Forms;
 
 namespace AgroServicios.Modelo.DAO
 {
-    public class DAOTargproductos: DTOTargproductos
+    public class DAOTargproductos : DTOTargproductos
     {
         readonly SqlCommand Command = new SqlCommand();
-        public void RellenarTargetas(FlowLayoutPanel Contenedor)
+
+        public void RellenarTargetas(FlowLayoutPanel Contenedor, string filtro = "")
         {
             Command.Connection = getConnection();
-            string transactSql = "SELECT * FROM Productos";
-            SqlCommand comando = new SqlCommand(transactSql, Command.Connection);
+            StringBuilder transactSql = new StringBuilder("SELECT * FROM Productos");
+
+            // Verificamos si hay un filtro y lo agregamos a la consulta
+            if (!string.IsNullOrEmpty(filtro))
+            {
+                transactSql.Append(" WHERE Nombre LIKE @filtro OR Codigo LIKE @filtro");
+            }
+
+            SqlCommand comando = new SqlCommand(transactSql.ToString(), Command.Connection);
             comando.CommandType = CommandType.Text;
+
+            // Agregamos el parámetro del filtro si es necesario
+            if (!string.IsNullOrEmpty(filtro))
+            {
+                comando.Parameters.AddWithValue("@filtro", "%" + filtro + "%");
+            }
+
             SqlDataReader reader = comando.ExecuteReader();
+
+            Contenedor.Controls.Clear(); // Limpiar los controles antes de agregar los nuevos filtrados
 
             while (reader.Read())
             {
-                Id = Convert.ToInt32(reader[0]);
-                Nameproduct = reader[1].ToString();
-                Descriptionproduct = reader[5].ToString();
-                Codeproduct = Convert.ToInt32(reader[6]);
-                Precioproduct = Convert.ToDecimal(reader[3]);
-                Imagen = ((byte[])reader[7]);
+                // Asignación de datos del producto
+                Id = Convert.ToInt32(reader["idProducto"]);
+                Nameproduct = reader["Nombre"].ToString();
+                Descriptionproduct = reader["Descripcion"].ToString();
+                Codeproduct = Convert.ToInt32(reader["Codigo"]);
+                Precioproduct = Convert.ToDecimal(reader["Precio"]);
+                Imagen = (byte[])reader["imgNombre"];
 
-                ProductosTarg targ = new ProductosTarg();
-                targ.Id = Id;
-                targ.nameProduct = Nameproduct;
-                targ.Code = Codeproduct.ToString();
-                targ.Precio = "$" + Precioproduct.ToString("N2");
-                targ.Descripcion = Descriptionproduct;
-                MemoryStream ms = new MemoryStream(Imagen);
-                targ.ImgProducto = Image.FromStream(ms);
+                // Creación del control personalizado
+                ProductosTarg targ = new ProductosTarg
+                {
+                    Id = Id,
+                    nameProduct = Nameproduct,
+                    Code = Codeproduct.ToString(),
+                    Precio = "$" + Precioproduct.ToString("N2"),
+                    Descripcion = Descriptionproduct,
+                    ImgProducto = Image.FromStream(new MemoryStream(Imagen))
+                };
+
+                // Agregar el control al contenedor
                 Contenedor.Controls.Add(targ);
             }
+
+            reader.Close();
             getConnection().Close();
             getConnection().Dispose();
         }
-
     }
+
 }

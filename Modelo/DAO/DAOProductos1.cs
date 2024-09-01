@@ -13,6 +13,43 @@ namespace AgroServicios.Modelo.DAO
     {
         readonly SqlCommand Command = new SqlCommand();
 
+        public DataSet BuscarProducto(string valor)
+        {
+            try
+            {
+                // Accedemos a la conexión que ya se tiene
+                Command.Connection = getConnection();
+
+                // Instrucción que se hará hacia la base de datos
+                string query = $"SELECT * FROM Productos WHERE Nombre LIKE '%{valor}%' OR Codigo LIKE '%{valor}%'";
+
+                // Comando sql en el cual se pasa la instrucción y la conexión
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+
+                // Se utiliza un adaptador sql para rellenar el dataset
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+                // Se crea un objeto Dataset que es donde se devolverán los resultados
+                DataSet ds = new DataSet();
+
+                // Rellenamos con el Adaptador el DataSet diciéndole de qué tabla provienen los datos
+                adp.Fill(ds, "Productos"); // Nombre correcto de la tabla
+
+                // Devolvemos el Dataset
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                // Retornamos null si existiera algún error durante la ejecución
+                Console.WriteLine("Error: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                // Independientemente se haga o no el proceso cerramos la conexión
+                Command.Connection.Close();
+            }
+        }
         public DataSet ObtenerProductos()
         {
             try
@@ -235,7 +272,6 @@ namespace AgroServicios.Modelo.DAO
             {
                 getConnection().Close();
             }
-
         }
         public int DeleteProducto()
         {

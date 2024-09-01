@@ -59,6 +59,16 @@ namespace AgroServicios.Controlador.Productos1
                 return;
             }
 
+            // Validar que el nombre del producto no exceda 15 caracteres
+            if (!ValidarNombre(ObjCreateMarca.txtNombreMarca.Text))
+            {
+                MessageBox.Show("El nombre la marca no debe exceder los 15 caracteres.",
+                                "Error de validación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
             DAOProductos1 DaoInsert = new DAOProductos1();
             // Asignar los valores a las propiedades de DaoInsert
             DaoInsert.NombreMarca1 = ObjCreateMarca.txtNombreMarca.Text.Trim();
@@ -78,6 +88,12 @@ namespace AgroServicios.Controlador.Productos1
                                 "Proceso interrumpido",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
+            }
+
+            // Método para validar que el nombre de la marca no exceda los 15 caracteres
+            bool ValidarNombre(string nombre)
+            {
+                return nombre.Length <= 15;
             }
         }
 

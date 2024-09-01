@@ -31,5 +31,10 @@ namespace AgroServicios.Vista.Login
                 lblResult.ForeColor = Color.White;
             }
         }
+
+        private void ptbback_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

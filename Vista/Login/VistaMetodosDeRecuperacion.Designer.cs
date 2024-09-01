@@ -32,9 +32,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaMetodosDeRecuperacion));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.ptbback = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.btnEmail = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnPreguntas = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.btnRecuperacionAdmin = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.bunifuPictureBox3 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).BeginInit();
+            this.bunifuGradientPanel2.SuspendLayout();
+            this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ptbback
@@ -60,11 +74,12 @@
             this.ptbback.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ptbback.Image = global::AgroServicios.Properties.Resources.turn_left_11044726;
             this.ptbback.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.ptbback.Location = new System.Drawing.Point(22, 582);
+            this.ptbback.Location = new System.Drawing.Point(11, 454);
+            this.ptbback.Margin = new System.Windows.Forms.Padding(2);
             this.ptbback.Name = "ptbback";
             this.ptbback.RoundBorders = false;
             this.ptbback.ShowBorders = false;
-            this.ptbback.Size = new System.Drawing.Size(49, 44);
+            this.ptbback.Size = new System.Drawing.Size(63, 60);
             this.ptbback.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Flat;
             this.ptbback.TabIndex = 1;
             // 
@@ -79,7 +94,7 @@
             this.btnEmail.AutoSizeLeftIcon = true;
             this.btnEmail.AutoSizeRightIcon = true;
             this.btnEmail.BackColor = System.Drawing.Color.Transparent;
-            this.btnEmail.BackColor1 = System.Drawing.Color.LawnGreen;
+            this.btnEmail.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btnEmail.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEmail.BackgroundImage")));
             this.btnEmail.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnEmail.ButtonText = "Recuperación por medio de Gmail.";
@@ -97,7 +112,7 @@
             this.btnEmail.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnEmail.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnEmail.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnEmail.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmail.ForeColor = System.Drawing.Color.White;
             this.btnEmail.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmail.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -109,13 +124,14 @@
             this.btnEmail.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnEmail.IconSize = 25;
             this.btnEmail.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btnEmail.IdleBorderRadius = 58;
+            this.btnEmail.IdleBorderRadius = 47;
             this.btnEmail.IdleBorderThickness = 1;
-            this.btnEmail.IdleFillColor = System.Drawing.Color.LawnGreen;
+            this.btnEmail.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btnEmail.IdleIconLeftImage = null;
             this.btnEmail.IdleIconRightImage = null;
             this.btnEmail.IndicateFocus = true;
-            this.btnEmail.Location = new System.Drawing.Point(259, 51);
+            this.btnEmail.Location = new System.Drawing.Point(123, 46);
+            this.btnEmail.Margin = new System.Windows.Forms.Padding(2);
             this.btnEmail.Name = "btnEmail";
             this.btnEmail.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnEmail.OnDisabledState.BorderRadius = 1;
@@ -137,7 +153,7 @@
             this.btnEmail.OnIdleState.BorderRadius = 1;
             this.btnEmail.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnEmail.OnIdleState.BorderThickness = 1;
-            this.btnEmail.OnIdleState.FillColor = System.Drawing.Color.LawnGreen;
+            this.btnEmail.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btnEmail.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnEmail.OnIdleState.IconLeftImage = null;
             this.btnEmail.OnIdleState.IconRightImage = null;
@@ -149,7 +165,7 @@
             this.btnEmail.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnEmail.OnPressedState.IconLeftImage = null;
             this.btnEmail.OnPressedState.IconRightImage = null;
-            this.btnEmail.Size = new System.Drawing.Size(398, 60);
+            this.btnEmail.Size = new System.Drawing.Size(298, 49);
             this.btnEmail.TabIndex = 0;
             this.btnEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEmail.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -168,7 +184,7 @@
             this.btnPreguntas.AutoSizeLeftIcon = true;
             this.btnPreguntas.AutoSizeRightIcon = true;
             this.btnPreguntas.BackColor = System.Drawing.Color.Transparent;
-            this.btnPreguntas.BackColor1 = System.Drawing.Color.LawnGreen;
+            this.btnPreguntas.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btnPreguntas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPreguntas.BackgroundImage")));
             this.btnPreguntas.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnPreguntas.ButtonText = "Recuperación por preguntas.";
@@ -186,7 +202,7 @@
             this.btnPreguntas.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnPreguntas.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnPreguntas.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnPreguntas.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPreguntas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPreguntas.ForeColor = System.Drawing.Color.White;
             this.btnPreguntas.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPreguntas.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -198,13 +214,14 @@
             this.btnPreguntas.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnPreguntas.IconSize = 25;
             this.btnPreguntas.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btnPreguntas.IdleBorderRadius = 58;
+            this.btnPreguntas.IdleBorderRadius = 47;
             this.btnPreguntas.IdleBorderThickness = 1;
-            this.btnPreguntas.IdleFillColor = System.Drawing.Color.LawnGreen;
+            this.btnPreguntas.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btnPreguntas.IdleIconLeftImage = null;
             this.btnPreguntas.IdleIconRightImage = null;
             this.btnPreguntas.IndicateFocus = true;
-            this.btnPreguntas.Location = new System.Drawing.Point(259, 165);
+            this.btnPreguntas.Location = new System.Drawing.Point(123, 146);
+            this.btnPreguntas.Margin = new System.Windows.Forms.Padding(2);
             this.btnPreguntas.Name = "btnPreguntas";
             this.btnPreguntas.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnPreguntas.OnDisabledState.BorderRadius = 1;
@@ -226,7 +243,7 @@
             this.btnPreguntas.OnIdleState.BorderRadius = 1;
             this.btnPreguntas.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnPreguntas.OnIdleState.BorderThickness = 1;
-            this.btnPreguntas.OnIdleState.FillColor = System.Drawing.Color.LawnGreen;
+            this.btnPreguntas.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btnPreguntas.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnPreguntas.OnIdleState.IconLeftImage = null;
             this.btnPreguntas.OnIdleState.IconRightImage = null;
@@ -238,7 +255,7 @@
             this.btnPreguntas.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnPreguntas.OnPressedState.IconLeftImage = null;
             this.btnPreguntas.OnPressedState.IconRightImage = null;
-            this.btnPreguntas.Size = new System.Drawing.Size(398, 60);
+            this.btnPreguntas.Size = new System.Drawing.Size(298, 49);
             this.btnPreguntas.TabIndex = 2;
             this.btnPreguntas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPreguntas.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -246,21 +263,238 @@
             this.btnPreguntas.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnPreguntas.UseDefaultRadiusAndThickness = true;
             // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
+            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.Black;
+            this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.DoubleEdgeFaded;
+            this.bunifuSeparator1.LineThickness = 1;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(0, 118);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator1.Size = new System.Drawing.Size(566, 21);
+            this.bunifuSeparator1.TabIndex = 26;
+            // 
+            // bunifuSeparator2
+            // 
+            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator2.BackgroundImage")));
+            this.bunifuSeparator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator2.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
+            this.bunifuSeparator2.LineColor = System.Drawing.Color.Black;
+            this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.DoubleEdgeFaded;
+            this.bunifuSeparator2.LineThickness = 1;
+            this.bunifuSeparator2.Location = new System.Drawing.Point(0, 215);
+            this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuSeparator2.Name = "bunifuSeparator2";
+            this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator2.Size = new System.Drawing.Size(566, 21);
+            this.bunifuSeparator2.TabIndex = 28;
+            this.bunifuSeparator2.Click += new System.EventHandler(this.bunifuSeparator2_Click);
+            // 
+            // btnRecuperacionAdmin
+            // 
+            this.btnRecuperacionAdmin.AllowAnimations = true;
+            this.btnRecuperacionAdmin.AllowMouseEffects = true;
+            this.btnRecuperacionAdmin.AllowToggling = true;
+            this.btnRecuperacionAdmin.AnimationSpeed = 200;
+            this.btnRecuperacionAdmin.AutoGenerateColors = false;
+            this.btnRecuperacionAdmin.AutoRoundBorders = true;
+            this.btnRecuperacionAdmin.AutoSizeLeftIcon = true;
+            this.btnRecuperacionAdmin.AutoSizeRightIcon = true;
+            this.btnRecuperacionAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.btnRecuperacionAdmin.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
+            this.btnRecuperacionAdmin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRecuperacionAdmin.BackgroundImage")));
+            this.btnRecuperacionAdmin.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnRecuperacionAdmin.ButtonText = "Recuperación del administrador";
+            this.btnRecuperacionAdmin.ButtonTextMarginLeft = 0;
+            this.btnRecuperacionAdmin.ColorContrastOnClick = 45;
+            this.btnRecuperacionAdmin.ColorContrastOnHover = 45;
+            this.btnRecuperacionAdmin.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnRecuperacionAdmin.CustomizableEdges = borderEdges4;
+            this.btnRecuperacionAdmin.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnRecuperacionAdmin.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnRecuperacionAdmin.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnRecuperacionAdmin.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnRecuperacionAdmin.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnRecuperacionAdmin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecuperacionAdmin.ForeColor = System.Drawing.Color.White;
+            this.btnRecuperacionAdmin.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRecuperacionAdmin.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnRecuperacionAdmin.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnRecuperacionAdmin.IconMarginLeft = 11;
+            this.btnRecuperacionAdmin.IconPadding = 10;
+            this.btnRecuperacionAdmin.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRecuperacionAdmin.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnRecuperacionAdmin.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnRecuperacionAdmin.IconSize = 25;
+            this.btnRecuperacionAdmin.IdleBorderColor = System.Drawing.Color.Transparent;
+            this.btnRecuperacionAdmin.IdleBorderRadius = 53;
+            this.btnRecuperacionAdmin.IdleBorderThickness = 1;
+            this.btnRecuperacionAdmin.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
+            this.btnRecuperacionAdmin.IdleIconLeftImage = null;
+            this.btnRecuperacionAdmin.IdleIconRightImage = null;
+            this.btnRecuperacionAdmin.IndicateFocus = true;
+            this.btnRecuperacionAdmin.Location = new System.Drawing.Point(123, 242);
+            this.btnRecuperacionAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRecuperacionAdmin.Name = "btnRecuperacionAdmin";
+            this.btnRecuperacionAdmin.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnRecuperacionAdmin.OnDisabledState.BorderRadius = 1;
+            this.btnRecuperacionAdmin.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnRecuperacionAdmin.OnDisabledState.BorderThickness = 1;
+            this.btnRecuperacionAdmin.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnRecuperacionAdmin.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnRecuperacionAdmin.OnDisabledState.IconLeftImage = null;
+            this.btnRecuperacionAdmin.OnDisabledState.IconRightImage = null;
+            this.btnRecuperacionAdmin.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnRecuperacionAdmin.onHoverState.BorderRadius = 1;
+            this.btnRecuperacionAdmin.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnRecuperacionAdmin.onHoverState.BorderThickness = 1;
+            this.btnRecuperacionAdmin.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnRecuperacionAdmin.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnRecuperacionAdmin.onHoverState.IconLeftImage = null;
+            this.btnRecuperacionAdmin.onHoverState.IconRightImage = null;
+            this.btnRecuperacionAdmin.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnRecuperacionAdmin.OnIdleState.BorderRadius = 1;
+            this.btnRecuperacionAdmin.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnRecuperacionAdmin.OnIdleState.BorderThickness = 1;
+            this.btnRecuperacionAdmin.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
+            this.btnRecuperacionAdmin.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnRecuperacionAdmin.OnIdleState.IconLeftImage = null;
+            this.btnRecuperacionAdmin.OnIdleState.IconRightImage = null;
+            this.btnRecuperacionAdmin.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnRecuperacionAdmin.OnPressedState.BorderRadius = 1;
+            this.btnRecuperacionAdmin.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnRecuperacionAdmin.OnPressedState.BorderThickness = 1;
+            this.btnRecuperacionAdmin.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnRecuperacionAdmin.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnRecuperacionAdmin.OnPressedState.IconLeftImage = null;
+            this.btnRecuperacionAdmin.OnPressedState.IconRightImage = null;
+            this.btnRecuperacionAdmin.Size = new System.Drawing.Size(340, 55);
+            this.btnRecuperacionAdmin.TabIndex = 27;
+            this.btnRecuperacionAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRecuperacionAdmin.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnRecuperacionAdmin.TextMarginLeft = 0;
+            this.btnRecuperacionAdmin.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnRecuperacionAdmin.UseDefaultRadiusAndThickness = true;
+            // 
+            // bunifuPictureBox1
+            // 
+            this.bunifuPictureBox1.AllowFocused = false;
+            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox1.AutoSizeHeight = true;
+            this.bunifuPictureBox1.BorderRadius = 35;
+            this.bunifuPictureBox1.Image = global::AgroServicios.Properties.Resources.Logo_Correo;
+            this.bunifuPictureBox1.IsCircle = true;
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(48, 46);
+            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(70, 70);
+            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox1.TabIndex = 29;
+            this.bunifuPictureBox1.TabStop = false;
+            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // bunifuPictureBox2
+            // 
+            this.bunifuPictureBox2.AllowFocused = false;
+            this.bunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox2.AutoSizeHeight = true;
+            this.bunifuPictureBox2.BorderRadius = 35;
+            this.bunifuPictureBox2.Image = global::AgroServicios.Properties.Resources.Signo_de_interrogacion;
+            this.bunifuPictureBox2.IsCircle = true;
+            this.bunifuPictureBox2.Location = new System.Drawing.Point(48, 146);
+            this.bunifuPictureBox2.Name = "bunifuPictureBox2";
+            this.bunifuPictureBox2.Size = new System.Drawing.Size(70, 70);
+            this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox2.TabIndex = 30;
+            this.bunifuPictureBox2.TabStop = false;
+            this.bunifuPictureBox2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // bunifuPictureBox3
+            // 
+            this.bunifuPictureBox3.AllowFocused = false;
+            this.bunifuPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuPictureBox3.AutoSizeHeight = true;
+            this.bunifuPictureBox3.BorderRadius = 35;
+            this.bunifuPictureBox3.Image = global::AgroServicios.Properties.Resources.Ceo;
+            this.bunifuPictureBox3.IsCircle = true;
+            this.bunifuPictureBox3.Location = new System.Drawing.Point(48, 242);
+            this.bunifuPictureBox3.Name = "bunifuPictureBox3";
+            this.bunifuPictureBox3.Size = new System.Drawing.Size(70, 70);
+            this.bunifuPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuPictureBox3.TabIndex = 31;
+            this.bunifuPictureBox3.TabStop = false;
+            this.bunifuPictureBox3.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // bunifuGradientPanel2
+            // 
+            this.bunifuGradientPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
+            this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel2.BorderRadius = 1;
+            this.bunifuGradientPanel2.Controls.Add(this.ptbback);
+            this.bunifuGradientPanel2.Controls.Add(this.bunifuPanel1);
+            this.bunifuGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(242)))), ((int)(((byte)(32)))));
+            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(242)))), ((int)(((byte)(32)))));
+            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
+            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
+            this.bunifuGradientPanel2.Quality = 10;
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(717, 525);
+            this.bunifuGradientPanel2.TabIndex = 32;
+            // 
+            // bunifuPanel1
+            // 
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.White;
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.Black;
+            this.bunifuPanel1.BorderRadius = 20;
+            this.bunifuPanel1.BorderThickness = 2;
+            this.bunifuPanel1.Controls.Add(this.bunifuPictureBox2);
+            this.bunifuPanel1.Controls.Add(this.bunifuPictureBox3);
+            this.bunifuPanel1.Controls.Add(this.bunifuPictureBox1);
+            this.bunifuPanel1.Controls.Add(this.btnRecuperacionAdmin);
+            this.bunifuPanel1.Controls.Add(this.bunifuSeparator2);
+            this.bunifuPanel1.Controls.Add(this.btnEmail);
+            this.bunifuPanel1.Controls.Add(this.btnPreguntas);
+            this.bunifuPanel1.Controls.Add(this.bunifuSeparator1);
+            this.bunifuPanel1.Location = new System.Drawing.Point(81, 47);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(566, 369);
+            this.bunifuPanel1.TabIndex = 29;
+            // 
             // VistaMetodosDeRecuperacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(954, 638);
-            this.Controls.Add(this.btnPreguntas);
-            this.Controls.Add(this.ptbback);
-            this.Controls.Add(this.btnEmail);
-            this.MaximumSize = new System.Drawing.Size(972, 685);
-            this.MinimumSize = new System.Drawing.Size(972, 685);
+            this.ClientSize = new System.Drawing.Size(717, 525);
+            this.Controls.Add(this.bunifuGradientPanel2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(733, 564);
+            this.MinimumSize = new System.Drawing.Size(733, 564);
             this.Name = "VistaMetodosDeRecuperacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VistaMetodosDeRecuperacion";
             this.Load += new System.EventHandler(this.VistaMetodosDeRecuperacion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox3)).EndInit();
+            this.bunifuGradientPanel2.ResumeLayout(false);
+            this.bunifuPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -270,5 +504,13 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnEmail;
         public Bunifu.UI.WinForms.BunifuButton.BunifuIconButton ptbback;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnPreguntas;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnRecuperacionAdmin;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox2;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox3;
+        public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel2;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
     }
 }

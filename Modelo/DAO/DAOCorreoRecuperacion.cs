@@ -7,6 +7,7 @@ using System.Net;
 using System.Text;
 using System;
 using System.Windows.Forms;
+using System.IO;
 
 namespace AgroServicios.Modelo.DAO
 {
@@ -19,17 +20,23 @@ namespace AgroServicios.Modelo.DAO
         // Método protegido para inicializar el cliente SMTP
         protected void inicializeSmtpClient()
         {
+           
             // Crear una nueva instancia de SmtpClient
             smtpClient = new SmtpClient();
+
             // Configura las credenciales del cliente SMTP (correo del remitente y contraseña)
             smtpClient.Credentials = new NetworkCredential(remintenteCorreo, password);
+
             // Configura el servidor SMTP (host) que se utilizará para enviar el correo
             smtpClient.Host = host;
+
             // Configura el puerto del servidor SMTP
             smtpClient.Port = port;
+
             // Habilita SSL para asegurar la conexión al servidor SMTP
             smtpClient.EnableSsl = ssl;
         }
+
 
         // Método público para enviar un correo electrónico
         public void sendMail(string subject, string body, List<string> destinatarioCorreo)
@@ -142,6 +149,73 @@ namespace AgroServicios.Modelo.DAO
                 }
             }
         }
+        public void sendMailWithAttachment(string subject, string body, List<string> destinatarioCorreo, string attachmentPath)
+        {
+            if (destinatarioCorreo == null || destinatarioCorreo.Count == 0)
+            {
+                // No hay destinatarios, no se realiza el envío
+                return;
+            }
+
+            var mailMessage = new MailMessage();
+            try
+            {
+                mailMessage.From = new MailAddress(remintenteCorreo);
+
+                foreach (string mail in destinatarioCorreo)
+                {
+                    if (IsValidEmail(mail))
+                    {
+                        mailMessage.To.Add(mail);
+                    }
+                }
+
+                if (mailMessage.To.Count == 0)
+                {
+                    // No se añadieron destinatarios válidos, no se realiza el envío
+                    return;
+                }
+
+                mailMessage.Subject = subject;
+                mailMessage.Body = body;
+                mailMessage.Priority = MailPriority.Normal;
+
+                // Añadir el archivo adjunto
+                if (!string.IsNullOrEmpty(attachmentPath) && File.Exists(attachmentPath))
+                {
+                    Attachment attachment = new Attachment(attachmentPath);
+                    mailMessage.Attachments.Add(attachment);
+                }
+
+                smtpClient.Send(mailMessage);
+            }
+            catch (Exception ex)
+            {
+                // Solo se muestra el mensaje si hay un error real
+                MessageBox.Show("Ocurrió un error al enviar el correo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                mailMessage.Dispose();
+                smtpClient.Dispose();
+            }
+        }
+
+        // Método auxiliar para validar correos electrónicos
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
 
         // Método privado para censurar un correo electrónico
         private string CensurarCorreo(string correo)

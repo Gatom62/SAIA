@@ -6,12 +6,46 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AgroServicios.Modelo.DAO
 {
     internal class DAOPreguntasRec: DTOPreguntasRec
     {
         readonly SqlCommand Command = new SqlCommand();
+        public DataTable ObtenerRespuestaIDs(string usuario)
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                // Asignar la conexión de base de datos existente
+                Command.Connection = getConnection();
+
+                // Query para obtener los RespuestaID del usuario
+                string query = "SELECT RespuestaID FROM RespuestasSeguridad WHERE Usuario = @Usuario ORDER BY RespuestaID ASC";
+                SqlCommand command = new SqlCommand(query, Command.Connection);
+                command.Parameters.AddWithValue("@Usuario", usuario);
+
+                // Crear el SqlDataAdapter con el comando y llenar el DataTable
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                // Manejo de errores
+                MessageBox.Show("Error al obtener los RespuestaID: " + ex.Message,
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Command.Connection.Close();
+            }
+
+            return dt;
+        }
 
         public DataSet LlenarCombo()
         {
@@ -168,6 +202,71 @@ namespace AgroServicios.Modelo.DAO
             finally
             {
                 getConnection().Close();
+            }
+        }
+
+        public int ActualizarPreguntasYRespuestas()
+        {
+            SqlTransaction transaction = null; // Variable para la transacción
+
+            try
+            {
+                Command.Connection = getConnection(); // Obtener la conexión
+
+                // Iniciar la transacción
+                transaction = Command.Connection.BeginTransaction();
+
+                // Asignar la transacción al comando
+                Command.Transaction = transaction;
+
+                // Query para actualizar la primera pregunta y respuesta
+                string query1 = "UPDATE RespuestasSeguridad SET PreguntaID = @Pregunta1, RespuestaCifrada = @Res1 WHERE Usuario = @Usuario AND RespuestaID = @RespuestaID1";
+                SqlCommand cmd1 = new SqlCommand(query1, Command.Connection, transaction);
+                cmd1.Parameters.AddWithValue("@Usuario", Usuario);
+                cmd1.Parameters.AddWithValue("@Pregunta1", Pregunta1); // Parámetro para PreguntaID
+                cmd1.Parameters.AddWithValue("@Res1", Res1); // Parámetro para RespuestaCifrada
+                cmd1.Parameters.AddWithValue("@RespuestaID1", RespuestaID1); // Parámetro para RespuestaID1
+
+                // Ejecutar el primer comando de actualización
+                int respuesta1 = cmd1.ExecuteNonQuery();
+
+                // Query para actualizar la segunda pregunta y respuesta
+                string query2 = "UPDATE RespuestasSeguridad SET PreguntaID = @Pregunta2, RespuestaCifrada = @Res2 WHERE Usuario = @Usuario AND RespuestaID = @RespuestaID2";
+                SqlCommand cmd2 = new SqlCommand(query2, Command.Connection, transaction);
+                cmd2.Parameters.AddWithValue("@Usuario", Usuario);
+                cmd2.Parameters.AddWithValue("@Pregunta2", Pregunta2); // Parámetro para PreguntaID
+                cmd2.Parameters.AddWithValue("@Res2", Res2); // Parámetro para RespuestaCifrada
+                cmd2.Parameters.AddWithValue("@RespuestaID2", RespuestaID2); // Parámetro para RespuestaID2
+
+                // Ejecutar el segundo comando de actualización
+                int respuesta2 = cmd2.ExecuteNonQuery();
+
+                // Verificar si ambas actualizaciones fueron exitosas
+                if (respuesta1 == 1 && respuesta2 == 1)
+                {
+                    transaction.Commit(); // Confirmar la transacción si ambas actualizaciones fueron exitosas
+                    return 1; // Éxito
+                }
+                else
+                {
+                    transaction.Rollback(); // Revertir la transacción si una actualización falló
+                    return 0; // Fallo en una de las actualizaciones
+                }
+            }
+            catch (Exception ex)
+            {
+                if (transaction != null)
+                {
+                    transaction.Rollback(); // Revertir la transacción en caso de una excepción
+                }
+
+                MessageBox.Show("No se pudieron actualizar los datos en la base de datos", "Error lógico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex.Message); // Imprimir el mensaje de error
+                return -1; // Indicar error
+            }
+            finally
+            {
+                Command.Connection.Close(); // Cerrar la conexión
             }
         }
     }

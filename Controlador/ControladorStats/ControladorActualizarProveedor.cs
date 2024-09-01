@@ -13,23 +13,37 @@ namespace AgroServicios.Controlador.ControladorStats
             VistaActualizarProveedor Objupdate;
             private int accion;
             bool verificacion;
+            private string Marca;
+        
 
-            public ControladorActualizarProveedor(VistaActualizarProveedor Vista, int accion, int id, string Name, string phone, string email, string Dui, string Company)
+            public ControladorActualizarProveedor(VistaActualizarProveedor Vista, int accion, int id, string Name, string phone, string email, string Dui, string marca)
             {
+                this.Marca = marca;
                 Objupdate = Vista;
                 this.accion = accion;
-                ChargeValues(id, Name, Dui, phone, email, Company);
-
+                ChargeValues(id, Name, Dui, phone, email);
+                Objupdate.Load += CargaInicial;
                 Objupdate.btnUpdateProveedor.Click += new EventHandler(ActualizarRegistro);
             }
 
+        public void CargaInicial(object sender, EventArgs e)
+        {
+            DAOProductos1 objmarcas = new DAOProductos1();
+            //Declarando nuevo DataSet para que obtenga los datos del metodo LlenarCombo
+            DataSet ds = objmarcas.LlenarCombo();
+            //Llenar combobox tbRole
+            Objupdate.cmbMarca.DataSource = ds.Tables["Marcas"];
+            Objupdate.cmbMarca.ValueMember = "idMarca";
+            Objupdate.cmbMarca.DisplayMember = "NombreMarca";
+
+            Objupdate.cmbMarca.Text = Marca;
+        }
         private void ActualizarRegistro(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(Objupdate.txtUpdateNombre.Text) ||
                 string.IsNullOrWhiteSpace(Objupdate.txtUpdateID.Text) ||
                 string.IsNullOrWhiteSpace(Objupdate.txtUpdatePhone.Text) ||
-                string.IsNullOrWhiteSpace(Objupdate.txtUpdateCorreo.Text) ||
-                string.IsNullOrWhiteSpace(Objupdate.txtUpdateCompany.Text))
+                string.IsNullOrWhiteSpace(Objupdate.txtUpdateCorreo.Text))
             {
                 MessageBox.Show("Todos los campos son obligatorios.",
                                 "Error de validación",
@@ -54,7 +68,7 @@ namespace AgroServicios.Controlador.ControladorStats
             DaoUpdate.DUI1 = Objupdate.txtUpdateID.Text;
             DaoUpdate.Teléfono1 = Objupdate.txtUpdatePhone.Text.Trim();
             DaoUpdate.Correo1 = Objupdate.txtUpdateCorreo.Text.Trim();
-            DaoUpdate.Empresa1 = Objupdate.txtUpdateCompany.Text.Trim();
+            DaoUpdate.Marca1 = int.Parse(Objupdate.cmbMarca.SelectedValue.ToString());
 
             int valorRetornado = DaoUpdate.ActualizarProveedor();
             verificacion = ValidarCorreo();
@@ -105,14 +119,13 @@ namespace AgroServicios.Controlador.ControladorStats
         }
 
 
-        public void ChargeValues(int id, string Name, string Dui, string phone, string email, string Company)
+        public void ChargeValues(int id, string Name, string Dui, string phone, string email)
             {
                 Objupdate.txtid.Text = id.ToString();
                 Objupdate.txtUpdateNombre.Text = Name;
                 Objupdate.txtUpdateID.Text = Dui;
                 Objupdate.txtUpdatePhone.Text = phone;
                 Objupdate.txtUpdateCorreo.Text = email;
-                Objupdate.txtUpdateCompany.Text = Company;
             }
 
         }

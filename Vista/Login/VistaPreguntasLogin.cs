@@ -18,5 +18,10 @@ namespace AgroServicios.Vista.Login
             InitializeComponent();
             ControladorPreguntasLogin controlador = new ControladorPreguntasLogin(this);
         }
+
+        private void bunifuPanel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

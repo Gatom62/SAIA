@@ -21,26 +21,6 @@ namespace AgroServicios.Vista.MenuPrincipal
             this.FormBorderStyle = FormBorderStyle.None;
             Region = Region.FromHrgn(CommonClasses.CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
-     
-        private void DarkMode_CheckedChanged(object sender, EventArgs e)
-        {
-            if (DarkMode.Checked)
-            {
-                ControladorTema.IsDarkMode = true;
-            }
-            else
-            {
-                ControladorTema.IsDarkMode = false;
-            }
-        }
-
-        private void bunifuButton21_Click(object sender, EventArgs e)
-        {
-            VistaMenuPrincipal vistaMenuPrincipal = new VistaMenuPrincipal();
-            vistaMenuPrincipal.Show();
-            this.Close();
-        }
-
         private void VistaAjustes_Load(object sender, EventArgs e)
         {
             if (ControladorTema.IsDarkMode == false)
@@ -74,7 +54,14 @@ namespace AgroServicios.Vista.MenuPrincipal
             }
         }
 
-        private void switchidioma_CheckedChanged(object sender, EventArgs e)
+        private void btnGuardarConfi_Click(object sender, EventArgs e)
+        {
+            VistaMenuPrincipal vistaMenuPrincipal = new VistaMenuPrincipal();
+            vistaMenuPrincipal.Show();
+            this.Close();
+        }
+
+        private void switchidioma_CheckedChanged_1(object sender, EventArgs e)
         {
             if (switchidioma.Checked)
             {
@@ -83,6 +70,18 @@ namespace AgroServicios.Vista.MenuPrincipal
             else
             {
                 ControladorIdioma.idioma = 0;
+            }
+        }
+
+        private void DarkMode_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (DarkMode.Checked)
+            {
+                ControladorTema.IsDarkMode = true;
+            }
+            else
+            {
+                ControladorTema.IsDarkMode = false;
             }
         }
     }

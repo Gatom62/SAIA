@@ -1,4 +1,5 @@
 ﻿using System;
+using AgroServicios.Vista.Clientes;
 using AgroServicios.Vista.Estadisticas;
 
 using AgroServicios.Vista.Productos1;
@@ -20,6 +21,14 @@ namespace AgroServicios.Controlador.ControladorStats
             ObjStats = Estadisticas;
             ObjStats.btnProveedores.Click += new EventHandler(OpenProveedores);
             ObjStats.btnSuministros.Click += new EventHandler(OpenSuministros);
+            ObjStats.btnHistorial.Click += OpenHistorialVentas;
+            ObjStats.btnClientes.Click += OpenClientes;
+
+        }
+        private void OpenClientes(object sender, EventArgs e)
+        {
+            VistaClientes vistaClientes = new VistaClientes();
+            vistaClientes.ShowDialog();
         }
 
         private void OpenSuministros(object sender, EventArgs e)
@@ -31,6 +40,11 @@ namespace AgroServicios.Controlador.ControladorStats
         {
             VistaProveedores vistaProveedores = new VistaProveedores();
             vistaProveedores.ShowDialog();
+        }
+        private void OpenHistorialVentas(object sender, EventArgs e)
+        {
+            VistaHistorialVenta vista = new VistaHistorialVenta();
+            vista.ShowDialog();
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -93,17 +94,65 @@ namespace AgroServicios.Controlador.Productos1
                 return;
             }
 
-            Image imagen = ObjCreateProducto1.ptbImagenProducto.Image;
-            byte[] imageBytes;
-            if (imagen == null)
+            // Validar que el nombre del producto no exceda 80 caracteres
+            if (!ValidarNombre(ObjCreateProducto1.txtNombreProducto.Text))
             {
-                imageBytes = null;
+                MessageBox.Show("El nombre del producto no debe exceder los 80 caracteres.",
+                                "Error de validación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
             }
-            else
+
+            if (!ValidarDescripcion(ObjCreateProducto1.txtDescripcion.Text))
             {
-                MemoryStream ms = new MemoryStream();
-                imagen.Save(ms, ImageFormat.Jpeg);
-                imageBytes = ms.ToArray();
+                MessageBox.Show("El nombre del producto no debe exceder los 150 caracteres.",
+                                "Error de validación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validar que la cantidad del producto contenga solo números
+            if (!ValidarNumero(ObjCreateProducto1.txtCodigo.Text)||
+                !ValidarNumero(ObjCreateProducto1.txtCantidad.Text))
+            {
+                MessageBox.Show("La cantidad del producto solo debe contener números enteros, como 1, 2, 3..",
+                                "Error de al ingresar la cantidad",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            // Validar que el precio del producto contenga solo decimales
+            if (!ValidarDecimales(ObjCreateProducto1.txtPrecio.Text))
+            {
+                MessageBox.Show("El precio del producto solo debe contener números decimales o no debe de exeder la cantidad de 10000000.00",
+                                "Error de al ingresar el precio",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return;
+            }
+
+            // Declara una variable byte[] llamada imageBytes y la inicializa como null.
+            // Esta variable almacenará los bytes de la imagen si hay una imagen en el PictureBox.
+            byte[] imageBytes = null;
+
+            // Verifica si la propiedad Image del PictureBox (ptbImgUser) de ObjUsers no es null,
+            // es decir, si hay una imagen cargada en el PictureBox.
+            if (ObjCreateProducto1.ptbImagenProducto.Image != null)
+            {
+                // Crea un objeto MemoryStream para trabajar con datos en memoria.
+                // El uso de 'using' asegura que el MemoryStream se libere correctamente después de su uso.
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    // Guarda la imagen que está en el PictureBox en el MemoryStream en formato JPEG.
+                    ObjCreateProducto1.ptbImagenProducto.Image.Save(ms, ImageFormat.Jpeg);
+
+                    // Convierte los datos de la imagen en el MemoryStream a un array de bytes
+                    // y los asigna a la variable imageBytes.
+                    imageBytes = ms.ToArray();
+                }
             }
 
             DAOProductos1 DaoInsert = new DAOProductos1();
@@ -130,6 +179,44 @@ namespace AgroServicios.Controlador.Productos1
                                 "Proceso interrumpido",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
+            }
+
+            // Método para validar que el nombre del producto no exceda los 80 caracteres
+            bool ValidarNombre(string nombre)
+            {
+                return nombre.Length <= 80;
+            }
+
+            // Método para validar la descripcion del producto y que este no exceda los 150 caracteres
+            bool ValidarDescripcion(string descripcion)
+            {
+                return descripcion.Length <= 150;
+            }
+
+            bool ValidarNumero(string numero)
+            {
+                // Aquí asumimos que el DUI debe contener solo dígitos (sin guiones o espacios)
+                // Se puede ajustar según el formato requerido, por ejemplo, permitir un guion
+                string pattern = @"^\d+$"; // Solo dígitos
+                return Regex.IsMatch(numero, pattern);
+            }
+
+            bool ValidarDecimales(string Decimal) 
+            {
+                // Validar formato decimal: hasta 8 dígitos enteros y 2 decimales
+                string pattern = @"^\d{1,8}(\.\d{1,2})?$";
+                if (!Regex.IsMatch(Decimal, pattern))
+                {
+                    return false; // Si no cumple con el formato, retornar false
+                }
+
+                // Validar que no exceda DECIMAL(10,2) - valor numérico
+                if (decimal.TryParse(Decimal, out decimal valorDecimal))
+                {
+                    return valorDecimal <= 99999999.99m; // Asegurar que no exceda 99999999.99
+                }
+
+                return false; // Si no se puede parsear a decimal, retornar false
             }
         }
     }

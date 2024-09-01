@@ -27,10 +27,8 @@ namespace AgroServicios.Vista.Estadisticas
             {
                 AñaP.Text = Ingles.txtAñaP;
                 txtNewFirstName.PlaceholderText = Ingles.txtFN;
-                txtNewID.PlaceholderText = Ingles.txtDUI;
                 txtNewPhone.PlaceholderText = Ingles.txtTe;
                 txtNewCorreo.PlaceholderText = Ingles.txtCR;
-                txtNewCompany.PlaceholderText = Ingles.txtEM;
                 btnAgregarProv.Text = Ingles.btnAP;      
             }
             if (ControladorTema.IsDarkMode == true)

@@ -15,10 +15,10 @@ namespace AgroServicios.Vista.Estadisticas
     public partial class VistaActualizarProveedor : Form
     {
 
-        public VistaActualizarProveedor(int accion, int id, string Name, string Dui, string phone, string email, string company)
+        public VistaActualizarProveedor(int accion, int id, string Name, string Dui, string phone, string email,  string marca)
         {
             InitializeComponent();
-            ControladorActualizarProveedor control = new ControladorActualizarProveedor(this, accion, id, Name, Dui, phone, email, company);
+            ControladorActualizarProveedor control = new ControladorActualizarProveedor(this, accion, id, Name, Dui, phone, email, marca);
         }
 
 
@@ -46,7 +46,7 @@ namespace AgroServicios.Vista.Estadisticas
                 txtUpdateID.PlaceholderText = Ingles.txtDUI;
                 txtUpdatePhone.PlaceholderText = Ingles.txtTe;
                 txtUpdateCorreo.PlaceholderText = Ingles.txtCR;
-                txtUpdateCompany.PlaceholderText = Ingles.txtEM;
+            
                 btnUpdateProveedor.Text = Ingles.btnUP;
             }
             if (ControladorTema.IsDarkMode == true)

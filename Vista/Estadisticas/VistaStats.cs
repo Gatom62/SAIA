@@ -20,7 +20,7 @@ namespace AgroServicios.Vista.Estadisticas
             {
                 btnHistorial.Text = Ingles.HistorialVentas;
                 btnProveedores.Text = Ingles.Proveedores;
-                btnRegistroVentas.Text = Ingles.RegistroVentas;
+                btnClientes.Text = Ingles.RegistroVentas;
                 btnSuministros.Text = Ingles.Suministros;
             }
             if(ControladorTema.IsDarkMode == true)
@@ -28,11 +28,11 @@ namespace AgroServicios.Vista.Estadisticas
                 Panel1.BackColor = Color.FromArgb(18, 18, 18);
                 btnHistorial.IdleFillColor = Color.FromArgb(118, 88, 152);
                 btnProveedores.IdleFillColor = Color.FromArgb(118, 88, 152);
-                btnRegistroVentas.IdleFillColor = Color.FromArgb(118, 88, 152);
+                btnClientes.IdleFillColor = Color.FromArgb(118, 88, 152);
                 btnSuministros.IdleFillColor = Color.FromArgb(118, 88, 152);
                 btnHistorial.ForeColor = Color.White;
                 btnProveedores.ForeColor = Color.White;
-                btnRegistroVentas.ForeColor = Color.White;
+                btnClientes.ForeColor = Color.White;
                 btnSuministros.ForeColor = Color.White;
             }
         }

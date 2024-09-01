@@ -19,7 +19,7 @@ namespace AgroServicios.Modelo.DAO
 
                 // Define la consulta SQL para seleccionar el usuario, idCategoria y nombre de la vista
                 // Utiliza COLLATE para hacer que la comparación de Usuario y Contraseña sea sensible a mayúsculas y minúsculas
-                Command.CommandText = "SELECT Usuario, idCategoria, Nombre, picprofile FROM VistaUsuariosCategorias WHERE Usuario COLLATE SQL_Latin1_General_CP1_CS_AS = @username AND Contraseña = @password COLLATE SQL_Latin1_General_CP1_CS_AS";
+                Command.CommandText = "SELECT idEmpleado, Usuario, idCategoria, Nombre ,picprofile FROM VistaUsuariosCategoriasV2 WHERE Usuario COLLATE SQL_Latin1_General_CP1_CS_AS = @username AND Contraseña COLLATE SQL_Latin1_General_CP1_CS_AS = @password";
 
                 // Limpia cualquier parámetro existente en el objeto Command
                 Command.Parameters.Clear();
@@ -38,9 +38,10 @@ namespace AgroServicios.Modelo.DAO
                         while (rd.Read())
                         {
                             // Asigna los valores leídos a las variables de sesión estáticas
-                            StaticSession.Username = rd.GetString(0); // Usuario
-                            StaticSession.IdCategoria = rd.GetInt32(1); // idCategoria
-                            StaticSession.Categorianame1 = rd.GetString(2); // Nombre de la categoría
+                            StaticSession.Id = rd.GetInt32(0);
+                            StaticSession.Username = rd.GetString(1); // Usuario
+                            StaticSession.IdCategoria = rd.GetInt32(2); // idCategoria
+                            StaticSession.Categorianame1 = rd.GetString(3); // Nombre de la categoría
                             StaticSession.Picture = rd["picprofile"] as byte[]; // Imagen del usuario
 
                         }
@@ -73,21 +74,65 @@ namespace AgroServicios.Modelo.DAO
             }
         }
 
-        public bool PrimerUso()
+        public int PrimerUso()
         {
-            Command.Connection = getConnection();
-            Command.CommandText = "SELECT * FROM Usuarios";
-            object  users = Command.ExecuteScalar();
-            if (users != null)
+            try
             {
-                return true;
+                Command.Connection = getConnection();
+                Command.CommandText = "SELECT * FROM Usuarios";
+                object users = Command.ExecuteScalar();
+                if (users != null)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
             }
-            else
+            catch (Exception)
             {
-                return false;
+                MessageBox.Show("No se pudo establecer conexón con la base de datos", "Error");
+                return -1;
             }
 
         }
 
+        public int VerificarAdmin()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                string query = "SELECT COUNT(*) FROM Usuarios WHERE Usuario = @username AND Contraseña = @password";
+                // Crear un comando SQL con la consulta y la conexión
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                // Limpia cualquier parámetro existente en el objeto Command
+                Command.Parameters.Clear();
+                // Asignar valores a los parámetros del query
+                cmd.Parameters.AddWithValue("username", Username);
+                cmd.Parameters.AddWithValue("password", Password);
+
+                // Ejecutar el comando y obtener el resultado
+                int respuesta = (int)cmd.ExecuteScalar();
+
+                if (respuesta > 0)
+                {
+                    // El usuario fue autenticado correctamente
+                    return 1;
+                }
+                else 
+                {
+                    return -1;
+                }
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+            finally
+            {
+                Command.Connection.Close();
+            }
+        }
     }
 }

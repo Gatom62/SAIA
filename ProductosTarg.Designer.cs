@@ -31,16 +31,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductosTarg));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.ptbimg = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.lbldesc = new System.Windows.Forms.RichTextBox();
             this.btnadd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lblcodigo = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblPrecio = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblname = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbimg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuPanel1
@@ -48,11 +48,11 @@
             this.bunifuPanel1.BackgroundColor = System.Drawing.Color.White;
             this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
             this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.Black;
-            this.bunifuPanel1.BorderRadius = 30;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BorderRadius = 1;
             this.bunifuPanel1.BorderThickness = 2;
-            this.bunifuPanel1.Controls.Add(this.numericUpDown1);
             this.bunifuPanel1.Controls.Add(this.ptbimg);
+            this.bunifuPanel1.Controls.Add(this.numericUpDown1);
             this.bunifuPanel1.Controls.Add(this.lbldesc);
             this.bunifuPanel1.Controls.Add(this.btnadd);
             this.bunifuPanel1.Controls.Add(this.lblcodigo);
@@ -60,19 +60,11 @@
             this.bunifuPanel1.Controls.Add(this.lblname);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(583, 292);
+            this.bunifuPanel1.Size = new System.Drawing.Size(346, 358);
             this.bunifuPanel1.TabIndex = 0;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(468, 249);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(68, 22);
-            this.numericUpDown1.TabIndex = 9;
             // 
             // ptbimg
             // 
@@ -82,29 +74,41 @@
             this.ptbimg.BorderRadius = 10;
             this.ptbimg.Image = ((System.Drawing.Image)(resources.GetObject("ptbimg.Image")));
             this.ptbimg.IsCircle = false;
-            this.ptbimg.Location = new System.Drawing.Point(17, 20);
-            this.ptbimg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ptbimg.Location = new System.Drawing.Point(21, 16);
+            this.ptbimg.Margin = new System.Windows.Forms.Padding(2);
             this.ptbimg.Name = "ptbimg";
-            this.ptbimg.Size = new System.Drawing.Size(223, 257);
+            this.ptbimg.Size = new System.Drawing.Size(307, 331);
             this.ptbimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbimg.TabIndex = 8;
             this.ptbimg.TabStop = false;
             this.ptbimg.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Custom;
             this.ptbimg.Click += new System.EventHandler(this.ptbimg_Click_1);
+            this.ptbimg.MouseEnter += new System.EventHandler(this.ptbimg_MouseEnter);
+            this.ptbimg.MouseLeave += new System.EventHandler(this.ptbimg_MouseLeave);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(180, 148);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(10, 20);
+            this.numericUpDown1.TabIndex = 9;
+            this.numericUpDown1.Visible = false;
             // 
             // lbldesc
             // 
             this.lbldesc.BackColor = System.Drawing.Color.White;
             this.lbldesc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbldesc.Enabled = false;
             this.lbldesc.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldesc.Location = new System.Drawing.Point(271, 130);
-            this.lbldesc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lbldesc.Location = new System.Drawing.Point(114, 97);
+            this.lbldesc.Margin = new System.Windows.Forms.Padding(2);
             this.lbldesc.Name = "lbldesc";
             this.lbldesc.ReadOnly = true;
             this.lbldesc.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.lbldesc.Size = new System.Drawing.Size(217, 96);
+            this.lbldesc.Size = new System.Drawing.Size(149, 78);
             this.lbldesc.TabIndex = 7;
             this.lbldesc.Text = "";
+            this.lbldesc.Visible = false;
             // 
             // btnadd
             // 
@@ -147,14 +151,14 @@
             this.btnadd.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnadd.IconSize = 25;
             this.btnadd.IdleBorderColor = System.Drawing.Color.LimeGreen;
-            this.btnadd.IdleBorderRadius = 31;
+            this.btnadd.IdleBorderRadius = 25;
             this.btnadd.IdleBorderThickness = 1;
             this.btnadd.IdleFillColor = System.Drawing.Color.LimeGreen;
             this.btnadd.IdleIconLeftImage = null;
             this.btnadd.IdleIconRightImage = null;
             this.btnadd.IndicateFocus = false;
-            this.btnadd.Location = new System.Drawing.Point(271, 244);
-            this.btnadd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnadd.Location = new System.Drawing.Point(236, 148);
+            this.btnadd.Margin = new System.Windows.Forms.Padding(2);
             this.btnadd.Name = "btnadd";
             this.btnadd.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnadd.OnDisabledState.BorderRadius = 1;
@@ -188,13 +192,14 @@
             this.btnadd.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnadd.OnPressedState.IconLeftImage = null;
             this.btnadd.OnPressedState.IconRightImage = null;
-            this.btnadd.Size = new System.Drawing.Size(177, 33);
+            this.btnadd.Size = new System.Drawing.Size(83, 27);
             this.btnadd.TabIndex = 5;
             this.btnadd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnadd.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnadd.TextMarginLeft = 0;
             this.btnadd.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnadd.UseDefaultRadiusAndThickness = true;
+            this.btnadd.Visible = false;
             this.btnadd.Click += new System.EventHandler(this.btnadd_Click);
             // 
             // lblcodigo
@@ -203,15 +208,16 @@
             this.lblcodigo.AutoEllipsis = false;
             this.lblcodigo.CursorType = null;
             this.lblcodigo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcodigo.Location = new System.Drawing.Point(271, 105);
-            this.lblcodigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblcodigo.Location = new System.Drawing.Point(52, 147);
+            this.lblcodigo.Margin = new System.Windows.Forms.Padding(2);
             this.lblcodigo.Name = "lblcodigo";
             this.lblcodigo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblcodigo.Size = new System.Drawing.Size(55, 20);
+            this.lblcodigo.Size = new System.Drawing.Size(44, 17);
             this.lblcodigo.TabIndex = 3;
             this.lblcodigo.Text = "Codígo";
             this.lblcodigo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblcodigo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblcodigo.Visible = false;
             // 
             // lblPrecio
             // 
@@ -219,46 +225,48 @@
             this.lblPrecio.AutoEllipsis = false;
             this.lblPrecio.CursorType = null;
             this.lblPrecio.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(271, 63);
-            this.lblPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblPrecio.Location = new System.Drawing.Point(52, 158);
+            this.lblPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPrecio.Size = new System.Drawing.Size(47, 20);
+            this.lblPrecio.Size = new System.Drawing.Size(38, 17);
             this.lblPrecio.TabIndex = 2;
             this.lblPrecio.Text = "Precio";
             this.lblPrecio.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblPrecio.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblPrecio.Visible = false;
             // 
             // lblname
             // 
             this.lblname.AllowParentOverrides = false;
             this.lblname.AutoEllipsis = false;
             this.lblname.CursorType = null;
-            this.lblname.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblname.Location = new System.Drawing.Point(271, 20);
-            this.lblname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblname.Location = new System.Drawing.Point(21, 124);
+            this.lblname.Margin = new System.Windows.Forms.Padding(2);
             this.lblname.Name = "lblname";
             this.lblname.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblname.Size = new System.Drawing.Size(177, 19);
+            this.lblname.Size = new System.Drawing.Size(168, 19);
             this.lblname.TabIndex = 1;
             this.lblname.Text = "Nombre del producto";
             this.lblname.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblname.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblname.Visible = false;
             // 
             // ProductosTarg
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.bunifuPanel1);
-            this.Margin = new System.Windows.Forms.Padding(8, 15, 8, 15);
+            this.Margin = new System.Windows.Forms.Padding(41, 12, 0, 12);
             this.Name = "ProductosTarg";
-            this.Size = new System.Drawing.Size(583, 292);
+            this.Size = new System.Drawing.Size(346, 358);
             this.Load += new System.EventHandler(this.ProductosTarg_Load);
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbimg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -266,12 +274,12 @@
         #endregion
 
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        public Bunifu.UI.WinForms.BunifuLabel lblname;
-        public Bunifu.UI.WinForms.BunifuLabel lblcodigo;
-        public Bunifu.UI.WinForms.BunifuLabel lblPrecio;
-        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnadd;
-        public System.Windows.Forms.RichTextBox lbldesc;
         public Bunifu.UI.WinForms.BunifuPictureBox ptbimg;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
+        public System.Windows.Forms.RichTextBox lbldesc;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnadd;
+        public Bunifu.UI.WinForms.BunifuLabel lblcodigo;
+        public Bunifu.UI.WinForms.BunifuLabel lblPrecio;
+        public Bunifu.UI.WinForms.BunifuLabel lblname;
     }
 }

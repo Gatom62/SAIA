@@ -143,6 +143,16 @@ namespace AgroServicios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2024_09_01_092302 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2024-09-01 092302", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap carro {
             get {
                 object obj = ResourceManager.GetObject("carro", resourceCulture);
@@ -173,10 +183,60 @@ namespace AgroServicios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ceo {
+            get {
+                object obj = ResourceManager.GetObject("Ceo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ceo2 {
+            get {
+                object obj = ResourceManager.GetObject("ceo2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Delete {
             get {
                 object obj = ResourceManager.GetObject("Delete", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a &lt;html&gt;
+        ///&lt;head&gt;
+        ///    
+        ///    &lt;title&gt;Factura&lt;/title&gt;
+        ///    &lt;style&gt;
+        ///        body {
+        ///            font-family: &apos;Segoe UI&apos;, Tahoma, Geneva, Verdana, sans-serif;
+        ///            margin: 0;
+        ///            padding: 20px;
+        ///            background-color: #f0f0f0;
+        ///        }
+        ///
+        ///        .container {
+        ///            background-color: white;
+        ///            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        ///            border-radius: 5px;
+        ///            overflow: hidden;
+        ///        }
+        ///
+        ///        .header {
+        ///            background-color: #40E0D0;
+        ///    [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string Factura_Plantilla {
+            get {
+                return ResourceManager.GetString("Factura_Plantilla", resourceCulture);
             }
         }
         
@@ -386,6 +446,36 @@ namespace AgroServicios.Properties {
         internal static System.Drawing.Bitmap Show {
             get {
                 object obj = ResourceManager.GetObject("Show", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Signo_de_interrogacion {
+            get {
+                object obj = ResourceManager.GetObject("Signo de interrogacion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Signo_de_interrogacion_2 {
+            get {
+                object obj = ResourceManager.GetObject("Signo de interrogacion 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Signo_de_interrogacion1 {
+            get {
+                object obj = ResourceManager.GetObject("Signo de interrogacion1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

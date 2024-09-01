@@ -102,7 +102,7 @@
             this.bunifuLabel1.Location = new System.Drawing.Point(224, -22);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(327, 44);
+            this.bunifuLabel1.Size = new System.Drawing.Size(264, 36);
             this.bunifuLabel1.TabIndex = 0;
             this.bunifuLabel1.Text = "Ingresar Empleado";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -117,7 +117,7 @@
             this.cmsImagen.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmsimgsubir});
             this.cmsImagen.Name = "contextMenuStrip1";
-            this.cmsImagen.Size = new System.Drawing.Size(171, 30);
+            this.cmsImagen.Size = new System.Drawing.Size(149, 30);
             this.bunifuToolTip1.SetToolTip(this.cmsImagen, "");
             this.bunifuToolTip1.SetToolTipIcon(this.cmsImagen, null);
             this.bunifuToolTip1.SetToolTipTitle(this.cmsImagen, "");
@@ -126,7 +126,7 @@
             // 
             this.cmsimgsubir.Image = global::AgroServicios.Properties.Resources.image_;
             this.cmsimgsubir.Name = "cmsimgsubir";
-            this.cmsimgsubir.Size = new System.Drawing.Size(170, 26);
+            this.cmsimgsubir.Size = new System.Drawing.Size(148, 26);
             this.cmsimgsubir.Text = "Subir imagén";
             // 
             // bunifuGradientPanel2
@@ -142,10 +142,11 @@
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(242)))), ((int)(((byte)(32)))));
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(1026, 724);
-            this.bunifuGradientPanel2.TabIndex = 21;
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(770, 588);
+            this.bunifuGradientPanel2.TabIndex = 0;
             this.bunifuToolTip1.SetToolTip(this.bunifuGradientPanel2, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuGradientPanel2, null);
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuGradientPanel2, "");
@@ -176,11 +177,12 @@
             this.bunifuPanel1.Controls.Add(this.txtNewPassword);
             this.bunifuPanel1.Controls.Add(this.txtNewCorreo);
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel1);
-            this.bunifuPanel1.Location = new System.Drawing.Point(54, 29);
+            this.bunifuPanel1.Location = new System.Drawing.Point(40, 24);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(918, 668);
-            this.bunifuPanel1.TabIndex = 13;
+            this.bunifuPanel1.Size = new System.Drawing.Size(688, 543);
+            this.bunifuPanel1.TabIndex = 0;
             this.bunifuToolTip1.SetToolTip(this.bunifuPanel1, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuPanel1, null);
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuPanel1, "");
@@ -190,13 +192,14 @@
             this.ptbImgUser.AllowFocused = false;
             this.ptbImgUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ptbImgUser.AutoSizeHeight = true;
-            this.ptbImgUser.BorderRadius = 42;
+            this.ptbImgUser.BorderRadius = 32;
             this.ptbImgUser.ContextMenuStrip = this.cmsImagen;
             this.ptbImgUser.Image = ((System.Drawing.Image)(resources.GetObject("ptbImgUser.Image")));
             this.ptbImgUser.IsCircle = true;
-            this.ptbImgUser.Location = new System.Drawing.Point(419, 76);
+            this.ptbImgUser.Location = new System.Drawing.Point(314, 62);
+            this.ptbImgUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ptbImgUser.Name = "ptbImgUser";
-            this.ptbImgUser.Size = new System.Drawing.Size(85, 85);
+            this.ptbImgUser.Size = new System.Drawing.Size(64, 64);
             this.ptbImgUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbImgUser.TabIndex = 22;
             this.ptbImgUser.TabStop = false;
@@ -209,9 +212,10 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = global::AgroServicios.Properties.Resources.Rectangle_32;
-            this.pictureBox3.Location = new System.Drawing.Point(102, 175);
+            this.pictureBox3.Location = new System.Drawing.Point(76, 142);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(56, 50);
+            this.pictureBox3.Size = new System.Drawing.Size(42, 41);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 16;
             this.pictureBox3.TabStop = false;
@@ -248,7 +252,7 @@
             this.btnCrearUsuario.DisabledFillColor = System.Drawing.Color.Empty;
             this.btnCrearUsuario.DisabledForecolor = System.Drawing.Color.Empty;
             this.btnCrearUsuario.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnCrearUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCrearUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearUsuario.ForeColor = System.Drawing.Color.White;
             this.btnCrearUsuario.IconLeft = null;
             this.btnCrearUsuario.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -268,10 +272,11 @@
             this.btnCrearUsuario.IdleIconLeftImage = null;
             this.btnCrearUsuario.IdleIconRightImage = null;
             this.btnCrearUsuario.IndicateFocus = false;
-            this.btnCrearUsuario.Location = new System.Drawing.Point(675, 588);
+            this.btnCrearUsuario.Location = new System.Drawing.Point(506, 478);
+            this.btnCrearUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCrearUsuario.Name = "btnCrearUsuario";
             this.btnCrearUsuario.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnCrearUsuario.OnDisabledState.BorderRadius = 48;
+            this.btnCrearUsuario.OnDisabledState.BorderRadius = 20;
             this.btnCrearUsuario.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnCrearUsuario.OnDisabledState.BorderThickness = 1;
             this.btnCrearUsuario.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -279,7 +284,7 @@
             this.btnCrearUsuario.OnDisabledState.IconLeftImage = null;
             this.btnCrearUsuario.OnDisabledState.IconRightImage = null;
             this.btnCrearUsuario.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
-            this.btnCrearUsuario.onHoverState.BorderRadius = 48;
+            this.btnCrearUsuario.onHoverState.BorderRadius = 20;
             this.btnCrearUsuario.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnCrearUsuario.onHoverState.BorderThickness = 1;
             this.btnCrearUsuario.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(150)))), ((int)(((byte)(255)))));
@@ -287,7 +292,7 @@
             this.btnCrearUsuario.onHoverState.IconLeftImage = null;
             this.btnCrearUsuario.onHoverState.IconRightImage = null;
             this.btnCrearUsuario.OnIdleState.BorderColor = System.Drawing.Color.LimeGreen;
-            this.btnCrearUsuario.OnIdleState.BorderRadius = 48;
+            this.btnCrearUsuario.OnIdleState.BorderRadius = 20;
             this.btnCrearUsuario.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Dash;
             this.btnCrearUsuario.OnIdleState.BorderThickness = 1;
             this.btnCrearUsuario.OnIdleState.FillColor = System.Drawing.Color.LimeGreen;
@@ -295,15 +300,15 @@
             this.btnCrearUsuario.OnIdleState.IconLeftImage = null;
             this.btnCrearUsuario.OnIdleState.IconRightImage = null;
             this.btnCrearUsuario.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnCrearUsuario.OnPressedState.BorderRadius = 48;
+            this.btnCrearUsuario.OnPressedState.BorderRadius = 20;
             this.btnCrearUsuario.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnCrearUsuario.OnPressedState.BorderThickness = 1;
             this.btnCrearUsuario.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btnCrearUsuario.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnCrearUsuario.OnPressedState.IconLeftImage = null;
             this.btnCrearUsuario.OnPressedState.IconRightImage = null;
-            this.btnCrearUsuario.Size = new System.Drawing.Size(183, 48);
-            this.btnCrearUsuario.TabIndex = 11;
+            this.btnCrearUsuario.Size = new System.Drawing.Size(150, 39);
+            this.btnCrearUsuario.TabIndex = 10;
             this.btnCrearUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCrearUsuario.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnCrearUsuario.TextMarginLeft = 0;
@@ -317,9 +322,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::AgroServicios.Properties.Resources.Rectangle_32;
-            this.pictureBox1.Location = new System.Drawing.Point(102, 238);
+            this.pictureBox1.Location = new System.Drawing.Point(76, 193);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(42, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
@@ -331,9 +337,10 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = global::AgroServicios.Properties.Resources.Logo_Candado;
-            this.pictureBox2.Location = new System.Drawing.Point(102, 307);
+            this.pictureBox2.Location = new System.Drawing.Point(76, 249);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(56, 50);
+            this.pictureBox2.Size = new System.Drawing.Size(42, 41);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
@@ -345,9 +352,10 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
             this.pictureBox4.Image = global::AgroServicios.Properties.Resources.Telefono_logo1;
-            this.pictureBox4.Location = new System.Drawing.Point(102, 377);
+            this.pictureBox4.Location = new System.Drawing.Point(76, 306);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(56, 50);
+            this.pictureBox4.Size = new System.Drawing.Size(42, 41);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
@@ -359,9 +367,10 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.White;
             this.pictureBox5.Image = global::AgroServicios.Properties.Resources.Logo_Correo;
-            this.pictureBox5.Location = new System.Drawing.Point(102, 443);
+            this.pictureBox5.Location = new System.Drawing.Point(76, 360);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(56, 50);
+            this.pictureBox5.Size = new System.Drawing.Size(42, 41);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 18;
             this.pictureBox5.TabStop = false;
@@ -373,9 +382,10 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.White;
             this.pictureBox6.Image = global::AgroServicios.Properties.Resources.Casa_Logo2;
-            this.pictureBox6.Location = new System.Drawing.Point(102, 511);
+            this.pictureBox6.Location = new System.Drawing.Point(76, 415);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(56, 50);
+            this.pictureBox6.Size = new System.Drawing.Size(42, 41);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 19;
             this.pictureBox6.TabStop = false;
@@ -402,11 +412,12 @@
             this.PickerBirth.IconColor = System.Drawing.Color.Black;
             this.PickerBirth.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.PickerBirth.LeftTextMargin = 5;
-            this.PickerBirth.Location = new System.Drawing.Point(66, 601);
+            this.PickerBirth.Location = new System.Drawing.Point(45, 488);
+            this.PickerBirth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PickerBirth.MinimumSize = new System.Drawing.Size(4, 32);
             this.PickerBirth.Name = "PickerBirth";
-            this.PickerBirth.Size = new System.Drawing.Size(255, 32);
-            this.PickerBirth.TabIndex = 5;
+            this.PickerBirth.Size = new System.Drawing.Size(197, 32);
+            this.PickerBirth.TabIndex = 7;
             this.bunifuToolTip1.SetToolTip(this.PickerBirth, "Fecha de nacimiento.\r\n");
             this.bunifuToolTip1.SetToolTipIcon(this.PickerBirth, null);
             this.bunifuToolTip1.SetToolTipTitle(this.PickerBirth, "");
@@ -414,10 +425,11 @@
             // 
             // maskedDui
             // 
-            this.maskedDui.Location = new System.Drawing.Point(561, 607);
+            this.maskedDui.Location = new System.Drawing.Point(421, 493);
+            this.maskedDui.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.maskedDui.Mask = "00000000-0";
             this.maskedDui.Name = "maskedDui";
-            this.maskedDui.Size = new System.Drawing.Size(85, 22);
+            this.maskedDui.Size = new System.Drawing.Size(65, 20);
             this.maskedDui.TabIndex = 9;
             this.bunifuToolTip1.SetToolTip(this.maskedDui, "DUI del empleado.");
             this.bunifuToolTip1.SetToolTipIcon(this.maskedDui, null);
@@ -459,10 +471,11 @@
             this.DropRole.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
             this.DropRole.ItemHighLightForeColor = System.Drawing.Color.White;
             this.DropRole.ItemTopMargin = 3;
-            this.DropRole.Location = new System.Drawing.Point(343, 601);
+            this.DropRole.Location = new System.Drawing.Point(257, 488);
+            this.DropRole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DropRole.Name = "DropRole";
-            this.DropRole.Size = new System.Drawing.Size(183, 32);
-            this.DropRole.TabIndex = 10;
+            this.DropRole.Size = new System.Drawing.Size(138, 32);
+            this.DropRole.TabIndex = 8;
             this.DropRole.Text = null;
             this.DropRole.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.DropRole.TextLeftMargin = 5;
@@ -489,7 +502,7 @@
             this.txtNewDireccion.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtNewDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtNewDireccion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNewDireccion.DefaultFont = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewDireccion.DefaultFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewDireccion.DefaultText = "";
             this.txtNewDireccion.FillColor = System.Drawing.Color.White;
             this.txtNewDireccion.HideSelection = true;
@@ -499,7 +512,8 @@
             this.txtNewDireccion.IconRight = null;
             this.txtNewDireccion.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewDireccion.Lines = new string[0];
-            this.txtNewDireccion.Location = new System.Drawing.Point(188, 511);
+            this.txtNewDireccion.Location = new System.Drawing.Point(141, 415);
+            this.txtNewDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNewDireccion.MaxLength = 32767;
             this.txtNewDireccion.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNewDireccion.Modified = false;
@@ -525,7 +539,7 @@
             stateProperties28.ForeColor = System.Drawing.Color.Empty;
             stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtNewDireccion.OnIdleState = stateProperties28;
-            this.txtNewDireccion.Padding = new System.Windows.Forms.Padding(3);
+            this.txtNewDireccion.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNewDireccion.PasswordChar = '\0';
             this.txtNewDireccion.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtNewDireccion.PlaceholderText = "Dirección";
@@ -535,9 +549,9 @@
             this.txtNewDireccion.SelectionLength = 0;
             this.txtNewDireccion.SelectionStart = 0;
             this.txtNewDireccion.ShortcutsEnabled = true;
-            this.txtNewDireccion.Size = new System.Drawing.Size(622, 50);
+            this.txtNewDireccion.Size = new System.Drawing.Size(466, 38);
             this.txtNewDireccion.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtNewDireccion.TabIndex = 12;
+            this.txtNewDireccion.TabIndex = 6;
             this.txtNewDireccion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNewDireccion.TextMarginBottom = 0;
             this.txtNewDireccion.TextMarginLeft = 3;
@@ -568,7 +582,7 @@
             this.txtNewUser.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtNewUser.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtNewUser.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNewUser.DefaultFont = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewUser.DefaultFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewUser.DefaultText = "";
             this.txtNewUser.FillColor = System.Drawing.Color.White;
             this.txtNewUser.HideSelection = true;
@@ -578,7 +592,8 @@
             this.txtNewUser.IconRight = null;
             this.txtNewUser.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewUser.Lines = new string[0];
-            this.txtNewUser.Location = new System.Drawing.Point(188, 175);
+            this.txtNewUser.Location = new System.Drawing.Point(141, 142);
+            this.txtNewUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNewUser.MaxLength = 32767;
             this.txtNewUser.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNewUser.Modified = false;
@@ -604,7 +619,7 @@
             stateProperties32.ForeColor = System.Drawing.Color.Empty;
             stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtNewUser.OnIdleState = stateProperties32;
-            this.txtNewUser.Padding = new System.Windows.Forms.Padding(3);
+            this.txtNewUser.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNewUser.PasswordChar = '\0';
             this.txtNewUser.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtNewUser.PlaceholderText = "Usuario";
@@ -614,7 +629,7 @@
             this.txtNewUser.SelectionLength = 0;
             this.txtNewUser.SelectionStart = 0;
             this.txtNewUser.ShortcutsEnabled = true;
-            this.txtNewUser.Size = new System.Drawing.Size(622, 50);
+            this.txtNewUser.Size = new System.Drawing.Size(466, 38);
             this.txtNewUser.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtNewUser.TabIndex = 1;
             this.txtNewUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -647,7 +662,7 @@
             this.txtNewFirstName.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtNewFirstName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtNewFirstName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNewFirstName.DefaultFont = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewFirstName.DefaultFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewFirstName.DefaultText = "";
             this.txtNewFirstName.FillColor = System.Drawing.Color.White;
             this.txtNewFirstName.HideSelection = true;
@@ -657,7 +672,8 @@
             this.txtNewFirstName.IconRight = null;
             this.txtNewFirstName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewFirstName.Lines = new string[0];
-            this.txtNewFirstName.Location = new System.Drawing.Point(188, 238);
+            this.txtNewFirstName.Location = new System.Drawing.Point(141, 193);
+            this.txtNewFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNewFirstName.MaxLength = 32767;
             this.txtNewFirstName.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNewFirstName.Modified = false;
@@ -683,7 +699,7 @@
             stateProperties36.ForeColor = System.Drawing.Color.Empty;
             stateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtNewFirstName.OnIdleState = stateProperties36;
-            this.txtNewFirstName.Padding = new System.Windows.Forms.Padding(3);
+            this.txtNewFirstName.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNewFirstName.PasswordChar = '\0';
             this.txtNewFirstName.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtNewFirstName.PlaceholderText = "Nombre completo";
@@ -693,9 +709,9 @@
             this.txtNewFirstName.SelectionLength = 0;
             this.txtNewFirstName.SelectionStart = 0;
             this.txtNewFirstName.ShortcutsEnabled = true;
-            this.txtNewFirstName.Size = new System.Drawing.Size(622, 50);
+            this.txtNewFirstName.Size = new System.Drawing.Size(466, 38);
             this.txtNewFirstName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtNewFirstName.TabIndex = 3;
+            this.txtNewFirstName.TabIndex = 2;
             this.txtNewFirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNewFirstName.TextMarginBottom = 0;
             this.txtNewFirstName.TextMarginLeft = 3;
@@ -726,7 +742,7 @@
             this.txtNewPhone.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtNewPhone.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtNewPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNewPhone.DefaultFont = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPhone.DefaultFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewPhone.DefaultText = "";
             this.txtNewPhone.FillColor = System.Drawing.Color.White;
             this.txtNewPhone.HideSelection = true;
@@ -736,7 +752,8 @@
             this.txtNewPhone.IconRight = null;
             this.txtNewPhone.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewPhone.Lines = new string[0];
-            this.txtNewPhone.Location = new System.Drawing.Point(188, 377);
+            this.txtNewPhone.Location = new System.Drawing.Point(141, 306);
+            this.txtNewPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNewPhone.MaxLength = 32767;
             this.txtNewPhone.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNewPhone.Modified = false;
@@ -762,7 +779,7 @@
             stateProperties40.ForeColor = System.Drawing.Color.Empty;
             stateProperties40.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtNewPhone.OnIdleState = stateProperties40;
-            this.txtNewPhone.Padding = new System.Windows.Forms.Padding(3);
+            this.txtNewPhone.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNewPhone.PasswordChar = '\0';
             this.txtNewPhone.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtNewPhone.PlaceholderText = "Numero celular";
@@ -772,9 +789,9 @@
             this.txtNewPhone.SelectionLength = 0;
             this.txtNewPhone.SelectionStart = 0;
             this.txtNewPhone.ShortcutsEnabled = true;
-            this.txtNewPhone.Size = new System.Drawing.Size(622, 50);
+            this.txtNewPhone.Size = new System.Drawing.Size(466, 38);
             this.txtNewPhone.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtNewPhone.TabIndex = 7;
+            this.txtNewPhone.TabIndex = 4;
             this.txtNewPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNewPhone.TextMarginBottom = 0;
             this.txtNewPhone.TextMarginLeft = 3;
@@ -805,7 +822,7 @@
             this.txtNewPassword.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtNewPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtNewPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNewPassword.DefaultFont = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewPassword.DefaultFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewPassword.DefaultText = "";
             this.txtNewPassword.FillColor = System.Drawing.Color.White;
             this.txtNewPassword.HideSelection = true;
@@ -815,7 +832,8 @@
             this.txtNewPassword.IconRight = null;
             this.txtNewPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewPassword.Lines = new string[0];
-            this.txtNewPassword.Location = new System.Drawing.Point(188, 307);
+            this.txtNewPassword.Location = new System.Drawing.Point(141, 249);
+            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNewPassword.MaxLength = 32767;
             this.txtNewPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNewPassword.Modified = false;
@@ -841,7 +859,7 @@
             stateProperties44.ForeColor = System.Drawing.Color.Empty;
             stateProperties44.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtNewPassword.OnIdleState = stateProperties44;
-            this.txtNewPassword.Padding = new System.Windows.Forms.Padding(3);
+            this.txtNewPassword.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNewPassword.PasswordChar = '\0';
             this.txtNewPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtNewPassword.PlaceholderText = "Contraseña";
@@ -851,9 +869,9 @@
             this.txtNewPassword.SelectionLength = 0;
             this.txtNewPassword.SelectionStart = 0;
             this.txtNewPassword.ShortcutsEnabled = true;
-            this.txtNewPassword.Size = new System.Drawing.Size(622, 50);
+            this.txtNewPassword.Size = new System.Drawing.Size(466, 38);
             this.txtNewPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtNewPassword.TabIndex = 2;
+            this.txtNewPassword.TabIndex = 3;
             this.txtNewPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNewPassword.TextMarginBottom = 0;
             this.txtNewPassword.TextMarginLeft = 3;
@@ -884,7 +902,7 @@
             this.txtNewCorreo.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtNewCorreo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtNewCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNewCorreo.DefaultFont = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNewCorreo.DefaultFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewCorreo.DefaultText = "";
             this.txtNewCorreo.FillColor = System.Drawing.Color.White;
             this.txtNewCorreo.HideSelection = true;
@@ -894,7 +912,8 @@
             this.txtNewCorreo.IconRight = null;
             this.txtNewCorreo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNewCorreo.Lines = new string[0];
-            this.txtNewCorreo.Location = new System.Drawing.Point(188, 443);
+            this.txtNewCorreo.Location = new System.Drawing.Point(141, 360);
+            this.txtNewCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNewCorreo.MaxLength = 32767;
             this.txtNewCorreo.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNewCorreo.Modified = false;
@@ -920,7 +939,7 @@
             stateProperties48.ForeColor = System.Drawing.Color.Empty;
             stateProperties48.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtNewCorreo.OnIdleState = stateProperties48;
-            this.txtNewCorreo.Padding = new System.Windows.Forms.Padding(3);
+            this.txtNewCorreo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNewCorreo.PasswordChar = '\0';
             this.txtNewCorreo.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtNewCorreo.PlaceholderText = "Correo eléctronico";
@@ -930,9 +949,9 @@
             this.txtNewCorreo.SelectionLength = 0;
             this.txtNewCorreo.SelectionStart = 0;
             this.txtNewCorreo.ShortcutsEnabled = true;
-            this.txtNewCorreo.Size = new System.Drawing.Size(622, 50);
+            this.txtNewCorreo.Size = new System.Drawing.Size(466, 38);
             this.txtNewCorreo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtNewCorreo.TabIndex = 8;
+            this.txtNewCorreo.TabIndex = 5;
             this.txtNewCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNewCorreo.TextMarginBottom = 0;
             this.txtNewCorreo.TextMarginLeft = 3;
@@ -953,11 +972,12 @@
             this.tableLayoutPanel1.Controls.Add(this.LabelPrin, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(918, 64);
-            this.tableLayoutPanel1.TabIndex = 14;
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(688, 52);
+            this.tableLayoutPanel1.TabIndex = 0;
             this.bunifuToolTip1.SetToolTip(this.tableLayoutPanel1, "");
             this.bunifuToolTip1.SetToolTipIcon(this.tableLayoutPanel1, null);
             this.bunifuToolTip1.SetToolTipTitle(this.tableLayoutPanel1, "");
@@ -967,9 +987,10 @@
             this.LabelPrin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LabelPrin.AutoSize = true;
             this.LabelPrin.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelPrin.Location = new System.Drawing.Point(312, 13);
+            this.LabelPrin.Location = new System.Drawing.Point(226, 12);
+            this.LabelPrin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelPrin.Name = "LabelPrin";
-            this.LabelPrin.Size = new System.Drawing.Size(292, 37);
+            this.LabelPrin.Size = new System.Drawing.Size(233, 28);
             this.LabelPrin.TabIndex = 0;
             this.LabelPrin.Text = "Ingresar Empleado";
             this.bunifuToolTip1.SetToolTip(this.LabelPrin, "");
@@ -1013,11 +1034,13 @@
             // 
             // CreateUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(1026, 724);
+            this.ClientSize = new System.Drawing.Size(770, 588);
             this.Controls.Add(this.bunifuGradientPanel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CreateUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateUser";

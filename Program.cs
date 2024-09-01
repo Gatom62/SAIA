@@ -17,7 +17,7 @@ namespace AgroServicios
             // Verificación de Primer Uso
             DAOLogin Verificacion = new DAOLogin();
 
-            if (Verificacion.PrimerUso() == true)
+            if (Verificacion.PrimerUso() == 1)
             {
                 Application.Run(new VistaLogin());
             }

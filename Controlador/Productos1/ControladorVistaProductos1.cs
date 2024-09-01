@@ -28,8 +28,25 @@ namespace AgroServicios.Controlador.Productos1
             ObjProductos.cmsElimarProducto.Click += new EventHandler(EliminarProducto);
             ObjProductos.cmsEditarProducto.Click += new EventHandler(EditarProducto);
             ObjProductos.cmsInformacion.Click += new EventHandler(InformacionProducto);
+            objProductos.txtBuscarP.KeyPress += new KeyPressEventHandler(Search);
         }
-
+        private void Search(object sender, KeyPressEventArgs e)
+        {
+            // Verifica que la tecla presionada sea Enter antes de buscar
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                BuscarPro();
+                e.Handled = true;
+            }
+        }
+        void BuscarPro()
+        {
+           DAOProductos1 dao = new DAOProductos1();
+            //Declarando nuevo DataSet para que obtenga los datos del metodo ObtenerPersonas
+            DataSet ds = dao.BuscarProducto(ObjProductos.txtBuscarP.Text.Trim());
+            //Llenar DataGridView
+            ObjProductos.GriewViewProductos.DataSource = ds.Tables["Productos"];
+        }
         public void LoadData(object sender, EventArgs e)
         {
             RefrescarData();
@@ -63,6 +80,12 @@ namespace AgroServicios.Controlador.Productos1
 
         private void InformacionProducto(object sender, EventArgs e)
         {
+            if (ObjProductos.GriewViewProductos.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado ningún producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Salir del método si no hay ninguna fila seleccionada
+            }
+
             int pos = ObjProductos.GriewViewProductos.CurrentRow.Index;
             int id, idMarc;
             string Name, code, stock, price, description, marc;
@@ -86,6 +109,12 @@ namespace AgroServicios.Controlador.Productos1
 
         private void EditarProducto(object sender, EventArgs e)
         {
+            if (ObjProductos.GriewViewProductos.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado ningún producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Salir del método si no hay ninguna fila seleccionada
+            }
+
             int pos = ObjProductos.GriewViewProductos.CurrentRow.Index;
             int id, idMarc;
             string Name, code, stock, price, description, marc;
@@ -108,6 +137,12 @@ namespace AgroServicios.Controlador.Productos1
 
         private void EliminarProducto(object sender, EventArgs e)
         {
+            if (ObjProductos.GriewViewProductos.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado ningún producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Salir del método si no hay ninguna fila seleccionada
+            }
+
             int pos = ObjProductos.GriewViewProductos.CurrentRow.Index;
 
             if (MessageBox.Show($"¿Seguro que deseas eliminar a: \n {ObjProductos.GriewViewProductos[1, pos].Value.ToString()}\nLa eliminación sera permanente.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

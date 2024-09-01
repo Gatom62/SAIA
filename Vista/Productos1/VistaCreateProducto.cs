@@ -44,10 +44,5 @@ namespace AgroServicios.Vista.Productos1
             }
 
         }
-
-        private void ptbImgProducto_Click(object sender, EventArgs e)
-        {
-             
-        }
     }
 }

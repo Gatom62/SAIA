@@ -15,9 +15,18 @@ namespace AgroServicios
     public partial class ProductosTarg : UserControl
     {
         private int id = 0;
+        private Size originalSize;
         public ProductosTarg()
         {
             InitializeComponent();
+            //Metodos para hacer que la imagen cresca cuando el mause pase por heya
+            //Para el btnInicio
+            // Cargar la imagen desde los recursos
+            ptbimg.Image = ImgProducto;
+            originalSize = ptbimg.Size;
+            // Eventos para cuando el mouse entra y sale del PictureBox
+            ptbimg.MouseEnter += ptbimg_MouseEnter;
+            ptbimg.MouseLeave += ptbimg_MouseLeave;
         }
         public int Id {  get { return id; } set {  id = value; } }
         public string Descripcion { 
@@ -71,7 +80,7 @@ namespace AgroServicios
                 form.Show();
 
                 mm.Owner = form;
-       
+
                 // Asigna los valores antes de mostrar el formulario
                 mm.ptbimg.Image = this.ImgProducto;
                 mm.lblname.Text = this.nameProduct;
@@ -105,6 +114,20 @@ namespace AgroServicios
             {
                 MessageBox.Show("La cantidad de productos debe ser mayor a cero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void ptbimg_MouseEnter(object sender, EventArgs e)
+        {
+            // Aumentar el tamaño del PictureBox cuando el cursor está sobre la imagen
+            ptbimg.Size = new Size(originalSize.Width + 10, originalSize.Height + 10);
+            ptbimg.Location = new Point(ptbimg.Location.X - 10, ptbimg.Location.Y - 10); // Ajustar la posición
+        }
+
+        private void ptbimg_MouseLeave(object sender, EventArgs e)
+        {
+            // Restaurar el tamaño original del PictureBox cuando el cursor sale de la imagen
+            ptbimg.Size = originalSize;
+            ptbimg.Location = new Point(ptbimg.Location.X + 10, ptbimg.Location.Y + 10); // Restaurar la posición
         }
     }
 }

@@ -31,12 +31,9 @@ namespace AgroServicios.Vista.Productos1
                 bunifuLabel1.ForeColor = Color.White;
                 GriewViewProductos.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
                 GriewViewProductos.BackgroundColor = Color.FromArgb(50, 56, 62);
-                bunifuGradientPanel1.GradientBottomLeft = Color.FromArgb(118, 88, 152);
-                bunifuGradientPanel1.GradientTopRight = Color.FromArgb(118, 88, 152);
-                bunifuGradientPanel1.GradientBottomRight = Color.FromArgb(34, 36, 49);
-                bunifuGradientPanel1.GradientTopLeft = Color.FromArgb(34, 36, 49);
                 btnAgregarProducto.IdleFillColor = Color.DarkViolet;
                 btnAgregarProducto.ForeColor = Color.White;
+                tableLayoutPanel1.BackColor = Color.FromArgb(118, 88, 152);
             }
 
             if (ControladorIdioma.idioma == 1)
@@ -47,15 +44,6 @@ namespace AgroServicios.Vista.Productos1
                 cmsEditarProducto.Text = Ingles.EditarProducto;
                 cmsElimarProducto.Text = Ingles.Eliminar;
                 cmsInformacion.Text = Ingles.Informacion;
-            }
-        }
-
-        private void GriewViewProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (ControladorTema.IsDarkMode == true)
-            {
-                GriewViewProductos.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
-                GriewViewProductos.BackgroundColor = Color.FromArgb(50, 56, 62);
             }
         }
     }

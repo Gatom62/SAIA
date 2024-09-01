@@ -29,5 +29,10 @@ namespace AgroServicios.Vista.Login
                 btnEmail.ForeColor = Color.White;
             }
         }
+
+        private void bunifuSeparator2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

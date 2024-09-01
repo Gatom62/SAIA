@@ -29,12 +29,17 @@ namespace AgroServicios.Controlador.MenuPrincipal
             ObjMenu = Menu;
             ObjMenu.Load += LoadUser;
             ObjMenu.btnStats.Click += new EventHandler(OpenStats);
-            ObjMenu.btnBusqueda.Click += new EventHandler(OpenBusqueda);
             ObjMenu.btnInicio.Click += new EventHandler(OpenInicio);
             ObjMenu.btnExit.Click += new EventHandler(CerrarSesion);
             ObjMenu.btnAccounts.Click += new EventHandler(OpenCuentas);
             ObjMenu.btnShop.Click += new EventHandler(OpenCarrito);
             ObjMenu.btnprin2.Click += new EventHandler(OpenShop);
+            ObjMenu.btnVentas.Click += new EventHandler(OpenVentas);
+        }
+        private void OpenVentas(object sender, EventArgs e)
+        {
+            VistaVentasPorFecha vistaVentasPorFecha = new VistaVentasPorFecha();
+            vistaVentasPorFecha.ShowDialog();
         }
         private void LoadUser(object sender, EventArgs e)
         {
@@ -79,6 +84,8 @@ namespace AgroServicios.Controlador.MenuPrincipal
             StaticSession.Categorianame1 = string.Empty;
             StaticSession.IdCategoria = 0;
             StaticSession.Username = string.Empty;
+            // Usar el método ResetInstance para limpiar la instancia de VistaCarrito
+            VistaCarrito.ResetInstance();
         }
 
         private void AbrirPanel<MiForm>() where MiForm : Form, new()
@@ -86,7 +93,6 @@ namespace AgroServicios.Controlador.MenuPrincipal
             Form formulario;
 
             formulario = ObjMenu.PanelContenedor.Controls.OfType<MiForm>().FirstOrDefault();
-
             if (formulario == null)
             {
                 //Se define un nuevo formulario para guardarse como nuevo objeto MiForm
@@ -122,11 +128,6 @@ namespace AgroServicios.Controlador.MenuPrincipal
             {
                 formulario.BringToFront();
             }
-        }
-
-        private void OpenBusqueda(object sender, EventArgs e)
-        {
-            AbrirPanel<VistaBusqueda>();
         }
 
         private void OpenInicio(object sender, EventArgs e)

@@ -11,7 +11,6 @@ namespace AgroServicios.Vista.Cuentas
         {
             InitializeComponent();
            ControladorCreateUser ObjUsers = new ControladorCreateUser(this, accion);
-
         }
 
         private void CreateUser_Load(object sender, System.EventArgs e)

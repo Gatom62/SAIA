@@ -1,48 +1,90 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Linq;
-using AgroServicios.Controlador.Helper;
+﻿using AgroServicios.Controlador.Helper;
 using AgroServicios.Modelo.DAO;
 using AgroServicios.Vista.Cuentas;
 using AgroServicios.Vista.Login;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System;
+using System.Data;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 namespace AgroServicios.Controlador.CuentasContralador
 {
     class ControladorCuentas
     {
         VistaCuentas ObjEmpleados;
-
         public ControladorCuentas(VistaCuentas Vista)
         {
             ObjEmpleados = Vista;
             ObjEmpleados.Load += new EventHandler(LoadData);
+            //Verificacion();
             ObjEmpleados.btnAgregar.Click += new EventHandler(OpenFormCreateUser);
             ObjEmpleados.cmsEliminar.Click += new EventHandler(EliminarEmpleado);
-            ObjEmpleados.cmsUpdate.Click += new EventHandler (UpdateEmpleado);
+            ObjEmpleados.cmsUpdate.Click += new EventHandler(UpdateEmpleado);
             ObjEmpleados.cmsRestablecer.Click += new EventHandler(RestEmpleado);
             ObjEmpleados.cmsinfo.Click += new EventHandler(Infoempleado);
-            ObjEmpleados.cmsPreguntas.Click += new EventHandler(PreguntasEmp);
+
+            ObjEmpleados.txtBuscarP.KeyPress += new KeyPressEventHandler(Search);
+            ObjEmpleados.cmsPreguntas.Click += new EventHandler(PreguntasEmpAct);
+        }
+        private void Search(object sender, KeyPressEventArgs e)
+        {
+            // Verifica que la tecla presionada sea Enter antes de buscar
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                BuscarEmpleado();
+                e.Handled = true;
+            }
+        }
+        private void BuscarEmpleado()
+        {
+            DAOAdminUsers objAdmin = new DAOAdminUsers();
+            //Declarando nuevo DataSet para que obtenga los datos del metodo ObtenerPersonas
+            DataSet ds = objAdmin.BuscarPersonas(ObjEmpleados.txtBuscarP.Text.Trim());
+            //Llenar DataGridView
+            ObjEmpleados.GriewEmpleados.DataSource = ds.Tables["VistaEmpleadosConRol"];
         }
 
         private void PreguntasEmp(object sender, EventArgs e)
         {
+            if (ObjEmpleados.GriewEmpleados.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado ningún empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Salir del método si no hay ninguna fila seleccionada
+            }
+
             int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
             string user;
 
             user = ObjEmpleados.GriewEmpleados[7, pos].Value.ToString();
 
-            VistaPreguntas vpre = new VistaPreguntas(user);
-            vpre.ShowDialog();
+            DAOPreguntasRec rec = new DAOPreguntasRec();
+
+            // Obtener los RespuestaID del usuario
+            DataTable dtRespuestas = rec.ObtenerRespuestaIDs(user);
+
+            // Verificar que se obtuvieron exactamente dos RespuestaID
+            if (dtRespuestas.Rows.Count < 2)
+            {
+                MessageBox.Show("El usuario no tiene niguna pregunta de seguridad asignada.",
+                                   "Error",
+                                   MessageBoxButtons.OK,
+                                   MessageBoxIcon.Error);
+            }
+            else
+            {
+                VistaPreguntas vpre = new VistaPreguntas(user, 2);
+                vpre.ShowDialog();
+            }
         }
         private void Infoempleado(object sender, EventArgs e)
         {
+            if (ObjEmpleados.GriewEmpleados.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado ningún empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Salir del método si no hay ninguna fila seleccionada
+            }
+
             int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
             int id;
             string Name, phone, email, dni, address, user;
@@ -65,6 +107,12 @@ namespace AgroServicios.Controlador.CuentasContralador
         }
         private void UpdateEmpleado(object sender, EventArgs e)
         {
+            if (ObjEmpleados.GriewEmpleados.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado ningún empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Salir del método si no hay ninguna fila seleccionada
+            }
+
             int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
             int id;
             string Name, phone, email, dni, address, user;
@@ -88,6 +136,12 @@ namespace AgroServicios.Controlador.CuentasContralador
         }
         private void RestEmpleado(object sender, EventArgs e)
         {
+            if (ObjEmpleados.GriewEmpleados.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado ningún empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Salir del método si no hay ninguna fila seleccionada
+            }
+
             int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
             string usuario, role;
 
@@ -110,16 +164,15 @@ namespace AgroServicios.Controlador.CuentasContralador
                 case "Manager":
                     break;
                 case "Empleado":
-                ObjEmpleados.btnAgregar.Enabled = false;
-                ObjEmpleados.cmsEliminar.Enabled = false;
-                ObjEmpleados.cmsRestablecer.Enabled = false;
-                ObjEmpleados.cmsUpdate.Enabled = false;
+                    ObjEmpleados.btnAgregar.Enabled = false;
+                    ObjEmpleados.cmsEliminar.Enabled = false;
+                    ObjEmpleados.cmsRestablecer.Enabled = false;
+                    ObjEmpleados.cmsUpdate.Enabled = false;
                     break;
                 default:
                     break;
             }
         }
-
         private void RefrescarData()
         {
             //Objeto de la clase DAOAdminUsuarios
@@ -171,24 +224,69 @@ namespace AgroServicios.Controlador.CuentasContralador
 
         private void EliminarEmpleado(object sender, EventArgs e)
         {
+            if (ObjEmpleados.GriewEmpleados.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado ningún empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Salir del método si no hay ninguna fila seleccionada
+            }
+
             int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
 
-            if (MessageBox.Show($"¿Seguro que deseas eliminar a: \n {ObjEmpleados.GriewEmpleados[1, pos].Value.ToString()}\nLa eliminación sera permanente.","Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show($"¿Seguro que deseas eliminar a: {ObjEmpleados.GriewEmpleados[1, pos].Value.ToString()} La eliminación sera permanente.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 DAOAdminUsers daodelete = new DAOAdminUsers();
                 daodelete.IdEmpleado = int.Parse(ObjEmpleados.GriewEmpleados[0, pos].Value.ToString());
                 daodelete.Usuario1 = ObjEmpleados.GriewEmpleados[7, pos].Value.ToString();
                 int valorretornado = daodelete.DeteleEmpleado();
-                if (valorretornado == 1)
+                if (valorretornado > 0)
                 {
                     MessageBox.Show("Empleado eliminado", "Se ha eliminado correctamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     RefrescarData();
                 }
+                else if (valorretornado == -2)
+                {
+                    MessageBox.Show("No se ha podido eliminar el empleado/usuario", "Eliminación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    RefrescarData();
+                }
                 else
                 {
-                    MessageBox.Show("Eliminación fallida", "No seb ha podido eliminar el empleado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se ha podido eliminar el empleado", "Eliminación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    RefrescarData();
                 }
             }
+        }
+        private void PreguntasEmpAct(object sender, EventArgs e)
+        {
+            if (ObjEmpleados.GriewEmpleados.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado ningún empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Salir del método si no hay ninguna fila seleccionada
+            }
+
+            int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
+            string user;
+
+            user = ObjEmpleados.GriewEmpleados[7, pos].Value.ToString();
+
+            DAOPreguntasRec rec = new DAOPreguntasRec();
+
+            // Obtener los RespuestaID del usuario
+            DataTable dtRespuestas = rec.ObtenerRespuestaIDs(user);
+
+            // Verificar que se obtuvieron exactamente dos RespuestaID
+            if (dtRespuestas.Rows.Count < 2)
+            {
+                MessageBox.Show("El usuario no tiene niguna pregunta de seguridad asignada.",
+                                   "Error",
+                                   MessageBoxButtons.OK,
+                                   MessageBoxIcon.Error);
+            }
+            else
+            {
+                VistaPreguntas vpre = new VistaPreguntas(user, 2);
+                vpre.ShowDialog();
+            }
+
         }
     }
 }

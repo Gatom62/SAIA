@@ -28,6 +28,7 @@ namespace AgroServicios.Controlador.ControladorStats
             //
             ObjProv.cmsEliminar.Click += new EventHandler(DeleteProv);
             ObjProv.cmsActualizar.Click += new EventHandler(ActualizarProv);
+            ObjProv.txtBuscarP.KeyPress += new KeyPressEventHandler(Search);
         }
         private void OpenVistaAgregarProveedores(object sender, EventArgs e)
         {
@@ -35,7 +36,23 @@ namespace AgroServicios.Controlador.ControladorStats
             vistaAgregarProveedor.ShowDialog();
             RefrescarData();
         }
-
+        private void Search(object sender, KeyPressEventArgs e)
+        {
+            // Verifica que la tecla presionada sea Enter antes de buscar
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                BuscarProv();
+                e.Handled = true;
+            }
+        }
+        void BuscarProv()
+        {
+            DAOProveedores daoprv = new DAOProveedores();
+            //Declarando nuevo DataSet para que obtenga los datos del metodo ObtenerPersonas
+            DataSet ds = daoprv.BuscarProv(ObjProv.txtBuscarP.Text.Trim());
+            //Llenar DataGridView
+            ObjProv.GriewProveedores.DataSource = ds.Tables["VistaProveedoresConMarcas"];
+        }
         private void LoadData(object sender, EventArgs e)
         {
             RefrescarData();
@@ -45,12 +62,17 @@ namespace AgroServicios.Controlador.ControladorStats
         {
             DAOProveedores objAdmin = new DAOProveedores();
             DataSet ds = objAdmin.ObtenerPersonas();
-            ObjProv.GriewProveedores.DataSource = ds.Tables["Proveedores"];
+            ObjProv.GriewProveedores.DataSource = ds.Tables["VistaProveedoresConMarcas"];
             TraducirEncabezados(ObjProv.GriewProveedores);
-            ObjProv.GriewProveedores.Columns["idProveedor"].Visible = false;
         }
         private void DeleteProv (object sender, EventArgs e)
         {
+            if (ObjProv.GriewProveedores.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado ningún proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Salir del método si no hay ninguna fila seleccionada
+            }
+
             int pos = ObjProv.GriewProveedores.CurrentRow.Index;
             if (MessageBox.Show($"¿Seguro que deseas eliminar a: \n {ObjProv.GriewProveedores[1, pos].Value.ToString()}\nLa eliminación sera permanente.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -70,19 +92,26 @@ namespace AgroServicios.Controlador.ControladorStats
         }
         private void ActualizarProv(object sender, EventArgs e)
         {
+            if (ObjProv.GriewProveedores.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado ningún proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Salir del método si no hay ninguna fila seleccionada
+            }
+
             int pos = ObjProv.GriewProveedores.CurrentRow.Index;
             int id;
-            string Name, Dui, phone, email, company;
+            string Name, Dui, phone, email, marca;
 
             id = int.Parse(ObjProv.GriewProveedores[0, pos].Value.ToString());
             Name = ObjProv.GriewProveedores[1, pos].Value.ToString();
             Dui = ObjProv.GriewProveedores[2, pos].Value.ToString();
             phone = ObjProv.GriewProveedores[3, pos].Value.ToString();
             email = ObjProv.GriewProveedores[4, pos].Value.ToString();
-            company = ObjProv.GriewProveedores[5, pos].Value.ToString();
+            marca = ObjProv.GriewProveedores[5, pos].Value.ToString();
+            
 
 
-            VistaActualizarProveedor vistaUpdate = new VistaActualizarProveedor(1, id, Name, phone, email, Dui, company);
+            VistaActualizarProveedor vistaUpdate = new VistaActualizarProveedor(1, id, Name, phone, email, Dui, marca);
             vistaUpdate.ShowDialog();
             RefrescarData();
         }
@@ -95,16 +124,18 @@ namespace AgroServicios.Controlador.ControladorStats
                 dgv.Columns["DUI"].HeaderText = "ID";
                 dgv.Columns["Teléfono"].HeaderText = "Phone";
                 dgv.Columns["Correo"].HeaderText = "Email";
-                dgv.Columns["Empresa"].HeaderText = "Company";
+                dgv.Columns["NombreMarca"].HeaderText = "Brand name";
+
+
             }
             else
             {
-                dgv.Columns["idProveedor"].HeaderText = "idProveedor";
+                dgv.Columns["idProveedor"].HeaderText = "ID del Proveedor";
                 dgv.Columns["Nombre"].HeaderText = "Nombre";
                 dgv.Columns["DUI"].HeaderText = "DUI";
                 dgv.Columns["Teléfono"].HeaderText = "Teléfono";
                 dgv.Columns["Correo"].HeaderText = "Correo";
-                dgv.Columns["Empresa"].HeaderText = "Empresa";
+                dgv.Columns["NombreMarca"].HeaderText = "Nombre de la marca";
             }
         }
     }

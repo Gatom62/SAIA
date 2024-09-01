@@ -17,6 +17,45 @@ namespace AgroServicios.Modelo.DAO
     {
         readonly SqlCommand Command = new SqlCommand();
 
+        public DataSet BuscarPersonas(string valor)
+        {
+            try
+            {
+                // Accedemos a la conexión que ya se tiene
+                Command.Connection = getConnection();
+
+                // Instrucción que se hará hacia la base de datos
+                string query = $"SELECT * FROM VistaEmpleadosConRol WHERE [ID del empleado] LIKE '%{valor}%' OR Nombre LIKE '%{valor}%' OR Usuario LIKE '%{valor}%'";
+
+                // Comando sql en el cual se pasa la instrucción y la conexión
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+
+                // Se utiliza un adaptador sql para rellenar el dataset
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+                // Se crea un objeto Dataset que es donde se devolverán los resultados
+                DataSet ds = new DataSet();
+
+                // Rellenamos con el Adaptador el DataSet diciéndole de qué tabla provienen los datos
+                adp.Fill(ds, "VistaEmpleadosConRol"); // Nombre correcto de la tabla
+
+                // Devolvemos el Dataset
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                // Retornamos null si existiera algún error durante la ejecución
+                Console.WriteLine("Error: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                // Independientemente se haga o no el proceso cerramos la conexión
+                Command.Connection.Close();
+            }
+        }
+
+
         public DataSet ObtenerPersonas()
         {
             try
@@ -165,20 +204,44 @@ namespace AgroServicios.Modelo.DAO
 
                 int respuesta = cmd.ExecuteNonQuery();
 
-                if (respuesta == 1)
+                if (respuesta > 0)
                 {
-                    string query2 = "DELETE FROM Usuarios WHERE Usuario = @param2";
+                    string query1 = "DELETE FROM RespuestasSeguridad WHERE Usuario = @param3";
 
-                    SqlCommand cmd2 = new SqlCommand( query2, Command.Connection);
+                    SqlCommand cmd2 = new SqlCommand(query1, Command.Connection);
 
-                    cmd2.Parameters.AddWithValue("param2", Usuario1);
+                    cmd2.Parameters.AddWithValue("param3", Usuario1);
 
-                    respuesta = cmd2.ExecuteNonQuery();
-                    return respuesta;
+                    int respuestav2 = cmd2.ExecuteNonQuery();
+
+
+                    if (respuestav2 > 0)
+                    {
+                        string query3 = "DELETE FROM Usuarios WHERE Usuario = @param2";
+
+                        SqlCommand cmd3 = new SqlCommand(query3, Command.Connection);
+
+                        cmd3.Parameters.AddWithValue("param2", Usuario1);
+
+                        int respuestav3 = cmd3.ExecuteNonQuery();
+
+                        if (respuestav3 > 0)
+                        {
+                            return respuestav3;
+                        }
+                        else
+                        {
+                            return 0;
+                        }
+                    }
+                    else
+                    {
+                        return 0;
+                    }
                 }
                 else
                 {
-                    return 0;
+                    return -2;
                 }
             }
             catch (Exception)
@@ -187,9 +250,8 @@ namespace AgroServicios.Modelo.DAO
             }
             finally
             {
-                getConnection().Close();
+                Command.Connection.Close();
             }
-
         }
 
         public DataTable BuscarProducto(string criterio)

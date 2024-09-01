@@ -14,12 +14,16 @@ namespace AgroServicios.Controlador.Login
     internal class ControladorPreguntasLogin
     {
         VistaPreguntasLogin objpre;
-
         public ControladorPreguntasLogin(VistaPreguntasLogin Vista)
         {
             objpre = Vista;
             objpre.Load += InitialCharge;
+            objpre.ptbback.Click += VolverFomr;
             objpre.btnGuardar.Click += VerificarRespuestas;
+        }
+        private void VolverFomr(object sender, EventArgs e) 
+        {
+            objpre.Close();
         }
         public void InitialCharge(object sender, EventArgs e)
         {
@@ -73,12 +77,13 @@ namespace AgroServicios.Controlador.Login
 
             if (daoPreguntas.VerificarRespuestas())
             {
+                string user = objpre.txtUsuario.Text;
                 MessageBox.Show("Respuestas correctas. Puede restablecer su contraseña.",
                                 "Verificación completada",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
+                objpre.Close();
 
-                string user = objpre.txtUsuario.Text;
                 VistaRestContraPreguntas vista = new VistaRestContraPreguntas(user);
                 vista.ShowDialog();
             }
@@ -89,6 +94,28 @@ namespace AgroServicios.Controlador.Login
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
             }
+        }
+        private bool ValidarEntradas()
+        {
+            if (string.IsNullOrWhiteSpace(objpre.txtRes1.Text) || string.IsNullOrWhiteSpace(objpre.txtRes2.Text))
+            {
+                MessageBox.Show("Por favor, complete ambas respuestas de seguridad.",
+                                "Error de validación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (objpre.droprole1.SelectedValue.ToString() == objpre.droprole2.SelectedValue.ToString())
+            {
+                MessageBox.Show("Las preguntas de seguridad no pueden ser iguales.",
+                                "Error de validación",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
         }
     }
 }

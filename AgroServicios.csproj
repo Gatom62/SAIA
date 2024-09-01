@@ -36,11 +36,20 @@
     <Reference Include="AltoControls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\AltoControls.1.0.1\lib\AltoControls.dll</HintPath>
     </Reference>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
       <HintPath>packages\Bunifu.Licensing.6.0.2\lib\net48\Bunifu.Licensing.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <HintPath>packages\Bunifu.UI.WinForms.7.0.0\lib\net48\Bunifu.UI.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itextsharp.xmlworker.5.5.13.4\lib\net461\itextsharp.xmlworker.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -99,14 +108,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlador\Busqueda\ControladorBusqueda.cs" />
+    <Compile Include="Controlador\Clientes\ControladorCreateCliente.cs" />
+    <Compile Include="Controlador\Clientes\ControladorUbdateCliente.cs" />
+    <Compile Include="Controlador\Clientes\ControladorVistaClientes.cs" />
     <Compile Include="Controlador\ControladorIdioma.cs" />
     <Compile Include="Controlador\ControladorStats\ControladorActualizarProveedor.cs" />
     <Compile Include="Controlador\ControladorStats\ControladorCrearProveedor.cs" />
+    <Compile Include="Controlador\ControladorStats\ControladorHistorialVenta.cs" />
     <Compile Include="Controlador\ControladorStats\ControladorProveedores.cs" />
     <Compile Include="Controlador\ControladorStats\ControladorStats.cs" />
     <Compile Include="Controlador\ControladorTema.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorCreateUser.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorCuentas.cs" />
+    <Compile Include="Controlador\CuentasContralador\ControladorCuentasAdminUser.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorRestUser.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorResUserViaPreguntas.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorUpdateEmpleados.cs" />
@@ -114,11 +128,13 @@
     <Compile Include="Controlador\Helper\CommonClasses.cs" />
     <Compile Include="Controlador\Helper\ControladorCarrito.cs" />
     <Compile Include="Controlador\Helper\StaticSession.cs" />
+    <Compile Include="Controlador\Login\ControladorAdministracionUser.cs" />
     <Compile Include="Controlador\Login\ControladorForEmail.cs" />
     <Compile Include="Controlador\Login\ControladorLogin.cs" />
     <Compile Include="Controlador\Login\ControladorPreguntasLogin.cs" />
     <Compile Include="Controlador\Login\ControladorPreguntasRec.cs" />
     <Compile Include="Controlador\Login\ControlerBasicMetodosRecuperar.cs" />
+    <Compile Include="Controlador\MenuPrincipal\ControladorFiltroVentas.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorMenuPrincipal.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorVistaProductos.cs" />
     <Compile Include="Controlador\Productos1\ControladorCreateMarca1.cs" />
@@ -127,8 +143,12 @@
     <Compile Include="Controlador\Productos1\ControladorUbdateProducto1.cs" />
     <Compile Include="Controlador\Productos1\ControladorVistaProductos1.cs" />
     <Compile Include="Modelo\DAO\DAOAdminUsers.cs" />
+    <Compile Include="Modelo\DAO\DAOCarrito.cs" />
+    <Compile Include="Modelo\DAO\DAOClientes.cs" />
     <Compile Include="Modelo\DAO\DAOCorreoRecuperacion.cs" />
     <Compile Include="Modelo\DAO\DAODCSoporte.cs" />
+    <Compile Include="Modelo\DAO\DAOFiltroVentas.cs" />
+    <Compile Include="Modelo\DAO\DAOHistorialVenta.cs" />
     <Compile Include="Modelo\DAO\DAOLogin.cs" />
     <Compile Include="Modelo\DAO\DAOPreguntasRec.cs" />
     <Compile Include="Modelo\DAO\DAOProductos1.cs" />
@@ -137,7 +157,10 @@
     <Compile Include="Modelo\DAO\DAOTargproductos.cs" />
     <Compile Include="Modelo\dbContext.cs" />
     <Compile Include="Modelo\DTO\DTOAdminUsers.cs" />
+    <Compile Include="Modelo\DTO\DTOCarrito.cs" />
+    <Compile Include="Modelo\DTO\DTOClientes.cs" />
     <Compile Include="Modelo\DTO\DTOCorreoRecuperacion.cs" />
+    <Compile Include="Modelo\DTO\DTOFiltroVentas.cs" />
     <Compile Include="Modelo\DTO\DTOLogin.cs" />
     <Compile Include="Modelo\DTO\DTOPreguntasRec.cs" />
     <Compile Include="Modelo\DTO\DTOProductos1.cs" />
@@ -167,11 +190,35 @@
     <Compile Include="Vista\Busqueda\VistaBusqueda.Designer.cs">
       <DependentUpon>VistaBusqueda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Clientes\VistaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Clientes\VistaClientes.Designer.cs">
+      <DependentUpon>VistaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Clientes\VistaCreateCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Clientes\VistaCreateCliente.Designer.cs">
+      <DependentUpon>VistaCreateCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Clientes\VistaUbdateCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Clientes\VistaUbdateCliente.Designer.cs">
+      <DependentUpon>VistaUbdateCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Cuentas\CreateUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\Cuentas\CreateUser.Designer.cs">
       <DependentUpon>CreateUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Cuentas\VistaCuentasAdminUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Cuentas\VistaCuentasAdminUser.Designer.cs">
+      <DependentUpon>VistaCuentasAdminUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Cuentas\VistaCuentas.cs">
       <SubType>Form</SubType>
@@ -203,6 +250,12 @@
     <Compile Include="Vista\Estadisticas\VistaAgregarProveedor.Designer.cs">
       <DependentUpon>VistaAgregarProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Estadisticas\VistaHistorialVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Estadisticas\VistaHistorialVenta.Designer.cs">
+      <DependentUpon>VistaHistorialVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Estadisticas\VistaProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -226,6 +279,12 @@
     </Compile>
     <Compile Include="Vista\Login\Bienvenida.Designer.cs">
       <DependentUpon>Bienvenida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Login\VistaMetodoRecuperacionAdminUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Login\VistaMetodoRecuperacionAdminUser.Designer.cs">
+      <DependentUpon>VistaMetodoRecuperacionAdminUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Login\VistaPreguntas.cs">
       <SubType>Form</SubType>
@@ -287,6 +346,12 @@
     <Compile Include="Vista\MenuPrincipal\VistaRestContraPreguntas.Designer.cs">
       <DependentUpon>VistaRestContraPreguntas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\MenuPrincipal\VistaVentasPorFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\MenuPrincipal\VistaVentasPorFecha.Designer.cs">
+      <DependentUpon>VistaVentasPorFecha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\MenuPrincipal\VistaZoomProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -347,11 +412,23 @@
     <EmbeddedResource Include="Vista\Busqueda\VistaBusqueda.resx">
       <DependentUpon>VistaBusqueda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Clientes\VistaClientes.resx">
+      <DependentUpon>VistaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Clientes\VistaCreateCliente.resx">
+      <DependentUpon>VistaCreateCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Clientes\VistaUbdateCliente.resx">
+      <DependentUpon>VistaUbdateCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Cuentas\CreateUser.resx">
       <DependentUpon>CreateUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Cuentas\VistaCuentas.resx">
       <DependentUpon>VistaCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Cuentas\VistaCuentasAdminUser.resx">
+      <DependentUpon>VistaCuentasAdminUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Cuentas\VistaRestablecerPassword.resx">
       <DependentUpon>VistaRestablecerPassword.cs</DependentUpon>
@@ -364,6 +441,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Estadisticas\VistaAgregarProveedor.resx">
       <DependentUpon>VistaAgregarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Estadisticas\VistaHistorialVenta.resx">
+      <DependentUpon>VistaHistorialVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Estadisticas\VistaProveedores.resx">
       <DependentUpon>VistaProveedores.cs</DependentUpon>
@@ -379,6 +459,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Login\VistaLogin.resx">
       <DependentUpon>VistaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Login\VistaMetodoRecuperacionAdminUser.resx">
+      <DependentUpon>VistaMetodoRecuperacionAdminUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Login\VistaMetodosDeRecuperacion.resx">
       <DependentUpon>VistaMetodosDeRecuperacion.cs</DependentUpon>
@@ -404,6 +487,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaRestContraPreguntas.resx">
       <DependentUpon>VistaRestContraPreguntas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\MenuPrincipal\VistaVentasPorFecha.resx">
+      <DependentUpon>VistaVentasPorFecha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaZoomProduct.resx">
       <DependentUpon>VistaZoomProduct.cs</DependentUpon>
@@ -562,6 +648,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\turn-left_11044726.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Factura_Plantilla.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Signo de interrogacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Signo de interrogacion 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ceo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ceo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Signo de interrogacion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2024-09-01 092302.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
