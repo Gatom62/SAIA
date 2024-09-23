@@ -3,17 +3,20 @@ using System.Windows.Forms;
 using AgroServicios.Controlador.Login;
 using AgroServicios.Controlador;
 using System.Drawing;
+using System.Runtime.InteropServices;
+using System;
+using Bunifu.UI.WinForms;
 
 namespace AgroServicios.Vista.Login
 {
     public partial class VistaLogin : Form
     {
+        private Size originalSize;
         public VistaLogin()
         {
             InitializeComponent();
             ControladorLogin control = new ControladorLogin(this);
             PasswordVisible.Visible = false;
-
         }
 
         private void switchidioma_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs e)
@@ -32,6 +35,7 @@ namespace AgroServicios.Vista.Login
                 LblUsername.Text = Ingles.user;
                 LblPassword.Text = Ingles.contraseña;
                 BtnStart.Text = Ingles.BotonInicio;
+                cmsConecarBase.Text = Ingles.ConexcionBase;
                 txtPassword.PlaceholderText = Ingles.contraseña;
                 txtUsername.PlaceholderText = Ingles.user;
                 lblRecuperar.Text = Ingles.recuperar;
@@ -82,6 +86,17 @@ namespace AgroServicios.Vista.Login
                 BtnStart.onHoverState.BorderColor = Color.FromArgb(211, 41, 15);
                 BtnStart.OnPressedState.FillColor = Color.Red;
                 BtnStart.OnPressedState.BorderColor = Color.Red;
+                Firstpanel.BackgroundColor = Color.WhiteSmoke;
+                LblUsername.BackColor = Color.WhiteSmoke;
+                LblPassword.BackColor = Color.WhiteSmoke;
+                lblinicio.BackColor = Color.WhiteSmoke;
+                lblRecuperar.BackColor = Color.WhiteSmoke;
+                menuStrip1.BackColor = Color.WhiteSmoke;
+                //Esto es para cambiar el color de los gradientes del panel cuando se active el modo oscuro
+                bunifuGradientPanel1.GradientBottomLeft = Color.Black;
+                bunifuGradientPanel1.GradientTopRight = Color.Black;
+                bunifuGradientPanel1.GradientBottomRight = Color.DarkViolet;
+                bunifuGradientPanel1.GradientTopLeft = Color.DarkViolet;
             }
             else
             {
@@ -90,7 +105,6 @@ namespace AgroServicios.Vista.Login
                 LblUsername.ForeColor = Color.FromArgb(68, 197, 197);
                 lblinicio.ForeColor = Color.FromArgb(228, 174, 34);
                 BtnStart.IdleFillColor = Color.LawnGreen;
-                Firstpanel.BorderColor = Color.Black;
                 txtPassword.BorderColorHover = Color.FromArgb(105, 181, 255);
                 txtUsername.BorderColorHover = Color.FromArgb(105, 181, 255);
                 txtPassword.BorderColorActive = Color.FromArgb(105, 181, 255);
@@ -99,6 +113,17 @@ namespace AgroServicios.Vista.Login
                 BtnStart.onHoverState.BorderColor = Color.FromArgb(105, 181, 255);
                 BtnStart.OnPressedState.FillColor = Color.FromArgb(40, 96, 144);
                 BtnStart.OnPressedState.BorderColor = Color.FromArgb(40, 96, 144);
+                Firstpanel.BackgroundColor = Color.White;
+                LblUsername.BackColor = Color.White;
+                LblPassword.BackColor = Color.White;
+                lblinicio.BackColor = Color.White;
+                lblRecuperar.BackColor = Color.White;
+                menuStrip1.BackColor = Color.White;
+                //Esto es para cuando se desactive el modo oscuro, se devuelvan sus colores originales
+                bunifuGradientPanel1.GradientBottomLeft = Color.DeepSkyBlue;
+                bunifuGradientPanel1.GradientTopRight = Color.White;
+                bunifuGradientPanel1.GradientBottomRight = Color.DeepSkyBlue;
+                bunifuGradientPanel1.GradientTopLeft = Color.White;
             }
         }
 

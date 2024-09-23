@@ -1,8 +1,11 @@
 ﻿using AgroServicios.Modelo.DAO;
 using AgroServicios.Vista.Clientes;
+using AgroServicios.Vista.Login;
+using AgroServicios.Vista.Notificación;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,16 +22,31 @@ namespace AgroServicios.Controlador.Clientes
             ObjClientes = objClientes;
             ObjClientes.Load += new EventHandler(LoadData);
             //Evento click de botones
+            ObjClientes.ptbback.Click += new EventHandler(VolverForm);
             ObjClientes.txtBuscarClientes.KeyPress += new KeyPressEventHandler(BuscarCliente_KeyPress);
             ObjClientes.btnCrearCliente.Click += new EventHandler(NuevoCliente);
             ObjClientes.cmsEliminarCliente.Click += new EventHandler(EliminarCliente);
             ObjClientes.cmsEditarCliente.Click += new EventHandler(UbdateCliente);
             ObjClientes.cmsInformacionCliente.Click += new EventHandler(InformacionCLiente);
         }
-
+        void MandarValoresAlerta(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            MessagePersonal message = new MessagePersonal();
+            message.BackColorAlert = backcolor;
+            message.ColorAlertBox = color;
+            message.TittlAlertBox = title;
+            message.TextAlertBox = text;
+            message.IconeAlertBox = icon;
+            message.ShowDialog();
+        }
         public void LoadData(object sender, EventArgs e)
         {
             RefrescarData();
+        }
+        private void VolverForm(object sender, EventArgs e)
+        {
+            // Cierra la vista actual
+            ObjClientes.Close();
         }
 
         public void RefrescarData()
@@ -68,12 +86,14 @@ namespace AgroServicios.Controlador.Clientes
 
                 if (valorretornado == 1)
                 {
-                    MessageBox.Show("Cliente eliminado", "Se ha eliminado correctamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Proceso realizado", "El cliente se elimino correctamente", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
                     RefrescarData();
                 }
                 else
                 {
-                    MessageBox.Show("Eliminación fallida", "No se ha podido eliminar el cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique si el cliente esta asociado a otros registros", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
                 }
             }
         }

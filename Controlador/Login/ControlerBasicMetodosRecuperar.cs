@@ -34,12 +34,12 @@ namespace AgroServicios.Controlador.Login
         private void VolverForm(object sender, EventArgs e)
         {
             ObjRecuperacion.Close();
-
             VistaLogin vistaLogin = new VistaLogin();
             vistaLogin.Show();
         }
         private void PreguntasSec(object sender, EventArgs e)
         {
+            ObjRecuperacion.Close();
             VistaPreguntasLogin vistaPreguntasLogin = new VistaPreguntasLogin();
             vistaPreguntasLogin.ShowDialog();
         }
@@ -47,6 +47,7 @@ namespace AgroServicios.Controlador.Login
         {
             VistaMetodoRecuperacionAdminUser vistaAdministracionUser = new VistaMetodoRecuperacionAdminUser();
             vistaAdministracionUser.ShowDialog();
+            ObjRecuperacion.Close();
         }
 
     }

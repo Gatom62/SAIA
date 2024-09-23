@@ -14,6 +14,7 @@ namespace AgroServicios.Vista.Cuentas
 {
     public partial class VistaCuentas : Form
     {
+        private Size originalSize;
         public VistaCuentas()
         {
             InitializeComponent();
@@ -33,8 +34,19 @@ namespace AgroServicios.Vista.Cuentas
 
             if(ControladorTema.IsDarkMode == true)
             {
+                tableLayoutPanel1.BackColor = Color.FromArgb(118, 88, 152);
                 GriewEmpleados.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
                 GriewEmpleados.BackgroundColor = Color.FromArgb(50, 56, 62);
+
+                btnAgregar.IdleFillColor = Color.DarkBlue;
+                btnAgregar.onHoverState.FillColor = Color.DarkViolet;
+                btnAgregar.onHoverState.BorderColor = Color.DarkViolet;
+                btnAgregar.OnPressedState.FillColor = Color.DodgerBlue;
+                btnAgregar.OnPressedState.BorderColor = Color.DodgerBlue;
+                btnAgregar.DisabledFillColor = Color.DarkViolet;
+
+                btnAgregar.DisabledFillColor = Color.FromArgb(118, 88, 152);
+                btnAgregar.ForeColor = Color.White;
             }
         }
     }

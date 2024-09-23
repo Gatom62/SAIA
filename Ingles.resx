@@ -132,6 +132,12 @@
   <data name="AgregarProducto" xml:space="preserve">
     <value>Add product</value>
   </data>
+  <data name="BaseDatos" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="bc" xml:space="preserve">
+    <value>Search Clients</value>
+  </data>
   <data name="bienvenida" xml:space="preserve">
     <value>Welcome</value>
   </data>
@@ -162,6 +168,9 @@
   <data name="CantidadProducto" xml:space="preserve">
     <value>Product quantity</value>
   </data>
+  <data name="Carri" xml:space="preserve">
+    <value>Cart</value>
+  </data>
   <data name="Celular" xml:space="preserve">
     <value>Cell phone number</value>
   </data>
@@ -186,17 +195,35 @@
   <data name="Codigo" xml:space="preserve">
     <value>Code</value>
   </data>
+  <data name="Comp" xml:space="preserve">
+    <value>Buy</value>
+  </data>
+  <data name="ConexcionBase" xml:space="preserve">
+    <value>Connecting to the database</value>
+  </data>
   <data name="Conexion" xml:space="preserve">
     <value>Test connection</value>
   </data>
+  <data name="Contrasena" xml:space="preserve">
+    <value>Password</value>
+  </data>
   <data name="contraseña" xml:space="preserve">
     <value>Password</value>
+  </data>
+  <data name="ContraseñaAdmin" xml:space="preserve">
+    <value>Administrator password</value>
+  </data>
+  <data name="ContraseñaAuthentication" xml:space="preserve">
+    <value>Password Authentication</value>
   </data>
   <data name="Correo" xml:space="preserve">
     <value>e-mail</value>
   </data>
   <data name="CreateMarca" xml:space="preserve">
     <value>Create new brand</value>
+  </data>
+  <data name="Del" xml:space="preserve">
+    <value>Eliminate</value>
   </data>
   <data name="Descripcion" xml:space="preserve">
     <value>Description</value>
@@ -219,6 +246,15 @@
   <data name="Eliminar" xml:space="preserve">
     <value>Delete</value>
   </data>
+  <data name="Guardar" xml:space="preserve">
+    <value>Keep</value>
+  </data>
+  <data name="HabilitarSql" xml:space="preserve">
+    <value>Enable SQL Integrated Security</value>
+  </data>
+  <data name="HabilitarWindows" xml:space="preserve">
+    <value>Enable Windows Integrated Security</value>
+  </data>
   <data name="HistorialVentas" xml:space="preserve">
     <value>Sales history</value>
   </data>
@@ -227,6 +263,9 @@
   </data>
   <data name="IngresarProducto" xml:space="preserve">
     <value>Enter Product</value>
+  </data>
+  <data name="IngreseSuUsuario" xml:space="preserve">
+    <value>Enter your username</value>
   </data>
   <data name="Integragrantes" xml:space="preserve">
     <value>Members</value>
@@ -243,6 +282,9 @@
   <data name="LabelFicha" xml:space="preserve">
     <value>Employee information</value>
   </data>
+  <data name="LabelRestContra" xml:space="preserve">
+    <value>Reset password</value>
+  </data>
   <data name="LabelRestUser" xml:space="preserve">
     <value>Rest user</value>
   </data>
@@ -251,6 +293,24 @@
   </data>
   <data name="Marca" xml:space="preserve">
     <value>Marc</value>
+  </data>
+  <data name="mbc" xml:space="preserve">
+    <value>Cash Closing</value>
+  </data>
+  <data name="mbcf" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="mbe" xml:space="preserve">
+    <value>Long Out</value>
+  </data>
+  <data name="mbf" xml:space="preserve">
+    <value>Product Sheet </value>
+  </data>
+  <data name="mbp" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="mbv" xml:space="preserve">
+    <value>Weekly Sales Report</value>
   </data>
   <data name="Menu" xml:space="preserve">
     <value>Options</value>
@@ -264,6 +324,9 @@
   <data name="NombreProducto" xml:space="preserve">
     <value>Product Name</value>
   </data>
+  <data name="procesos" xml:space="preserve">
+    <value>Procesos</value>
+  </data>
   <data name="Proveedores" xml:space="preserve">
     <value>Suppliers</value>
   </data>
@@ -272,6 +335,18 @@
   </data>
   <data name="RegistroVentas" xml:space="preserve">
     <value>Sales record</value>
+  </data>
+  <data name="RespuestaDos" xml:space="preserve">
+    <value>Second answe</value>
+  </data>
+  <data name="RespuestaUno" xml:space="preserve">
+    <value>First answer</value>
+  </data>
+  <data name="ServidorURL" xml:space="preserve">
+    <value>Server URL</value>
+  </data>
+  <data name="SqlAuthentication" xml:space="preserve">
+    <value>SQL Authentication</value>
   </data>
   <data name="Suministros" xml:space="preserve">
     <value>Supplies</value>
@@ -309,7 +384,16 @@
   <data name="user" xml:space="preserve">
     <value>Username</value>
   </data>
+  <data name="UserAdmin" xml:space="preserve">
+    <value>Administrator User</value>
+  </data>
   <data name="Usuario" xml:space="preserve">
     <value>User</value>
+  </data>
+  <data name="Verificar" xml:space="preserve">
+    <value>Verify</value>
+  </data>
+  <data name="welcome" xml:space="preserve">
+    <value>Welcome</value>
   </data>
 </root>

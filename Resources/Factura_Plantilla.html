@@ -1,6 +1,5 @@
 <html>
 <head>
-    
     <title>Factura</title>
     <style>
         body {
@@ -28,9 +27,9 @@
                 font-size: 24px;
             }
 
-        .cliente {
-            font-size: 16px;
-            margin-top: 5px;
+        .factura-info {
+            padding: 15px;
+            background-color: #f8f8f8;
         }
 
         table {
@@ -75,7 +74,13 @@
     <div class="container">
         <div class="header">
             <h1>Factura</h1>
-            <div class="cliente">Cliente: @Cliente</div>
+        </div>
+        <div class="factura-info">
+            <h2>Sistema de Administracion e Inventarios para Agroservicios "SAIA"</h2>
+            <p><strong>Direccion:</strong> Calle El Progreso, Colonia Escalon, San Salvador, El Salvador</p>
+            <p><strong>Correo:</strong> soporte.usuario.saia@gmail.com</p>
+            <p><strong>Fecha de compra:</strong> @FechaEmision</p>
+            <p><strong>Cliente:</strong> @Cliente</p>
         </div>
         <table>
             <thead>

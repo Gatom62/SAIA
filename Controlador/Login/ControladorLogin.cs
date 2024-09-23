@@ -6,6 +6,11 @@ using AgroServicios.Modelo.DTO;
 using AgroServicios.Modelo;
 using AgroServicios.Vista.MenuPrincipal;
 using System.Diagnostics.Eventing.Reader;
+using System.Runtime.InteropServices;
+using System.Drawing;
+using AgroServicios.Vista.Notificación;
+using AgroServicios.Vista.Server;
+using System.IO;
 
 namespace AgroServicios.Controlador.Login
 {
@@ -18,7 +23,6 @@ namespace AgroServicios.Controlador.Login
         /// </summary>
         /// <param name="Vista"></param>
         /// 
-
         public ControladorLogin(VistaLogin Vista)
         {
             ObjLogin = Vista;
@@ -27,6 +31,69 @@ namespace AgroServicios.Controlador.Login
             ObjLogin.PasswordVisible.Click += new EventHandler(ShowPassword);
             ObjLogin.PasswordHide.Click += new EventHandler(HidePassword);
             ObjLogin.lblRecuperar.Click += new EventHandler(RecuperarPass);
+            ObjLogin.cmsConecarBase.Click += new EventHandler(AbrirBase);
+            ObjLogin.cmsManualTecnico.Click += new EventHandler(AbrirManualTecnico);
+            ObjLogin.FormClosing += new FormClosingEventHandler(cerrarPrograma);
+        }
+        private void cerrarPrograma(Object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("¿Desea cerrar el programa?, Si lo cierra se estará cerrando en todos los planos", "Decida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
+        }
+
+        private void AbrirManualTecnico(object sender, EventArgs e)
+        {
+            // Nombre del archivo que quieres extraer de los recursos
+            string nombreArchivo = "Manual_de_SAIA_1_2.pdf";
+
+            // Ruta temporal donde se guardará el PDF extraído
+            string pdfTempPath = Path.Combine(Path.GetTempPath(), nombreArchivo);
+
+            // Escribe el contenido del archivo PDF desde los recursos a la ruta temporal
+            File.WriteAllBytes(pdfTempPath, Properties.Resources.Manual_de_SAIA_1_2);
+
+            // Abre el archivo PDF utilizando el visor predeterminado del sistema
+            System.Diagnostics.Process.Start(pdfTempPath);
+        }
+
+        private void AbrirBase(object sender, EventArgs e) 
+        {
+            VistaValidacionBase vistaValidacionBase = new VistaValidacionBase();
+            vistaValidacionBase.Show();
+        }
+
+        void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            AlertExito frm = new AlertExito();
+
+            frm.BackColorAlert = backcolor;
+
+            frm.ColorAlertBox = color;
+
+            frm.TittlAlertBox = title;
+
+            frm.TextAlertBox = text;
+
+            frm.IconeAlertBox = icon;
+
+            frm.ShowDialog();
+        }
+
+        void MandarValoresAlerta(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            MessagePersonal message = new MessagePersonal();
+            message.BackColorAlert = backcolor;
+            message.ColorAlertBox = color;
+            message.TittlAlertBox = title;
+            message.TextAlertBox = text;
+            message.IconeAlertBox = icon;
+            message.ShowDialog();
+        }
+        private void CerrarForm(object sender, EventArgs e) 
+        {
+            Application.Exit();
         }
 
         private void TestConnection(object sender, EventArgs e)
@@ -36,12 +103,14 @@ namespace AgroServicios.Controlador.Login
             {
                 if (dbContext.getConnection() == null)
                 {
-                    MessageBox.Show("It was not possible to connect to the server and/or database.", "Connection failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Connection failed", "It was not possible to connect to the server and/or database.", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
 
                 }
                 else
                 {
-                    MessageBox.Show("The connection to the server and database was successful.", "Connection successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Conexión exitosa", "La conexión al servidor y la base de datos se ha ejecutado correctamente.", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
                 }
 
             }
@@ -49,12 +118,13 @@ namespace AgroServicios.Controlador.Login
             {
                 if (dbContext.getConnection() == null)
                 {
-                    MessageBox.Show("No fue posible realizar la conexión al servidor y/o la base de datos.", "Conexión fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Conexión fallida", "No fue posible realizar la conexión al servidor y/o la base de datos.", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
                 }
                 else
                 {
-                    MessageBox.Show("La conexión al servidor y la base de datos se ha ejecutado correctamente.", "Conexión exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Conexión exitosa", "La conexión al servidor y la base de datos se ha ejecutado correctamente.", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
                 }
             }
         }
@@ -100,18 +170,47 @@ namespace AgroServicios.Controlador.Login
             // Invocando al método Login contenido en el DAO
             int answer = DAOData.Login();
 
-            if (answer == 0)
+            switch (answer)
             {
-                ObjLogin.Hide();
-                Bienvenida bienvenida = new Bienvenida();
-                bienvenida.ShowDialog();
-                VistaMenuPrincipal vistaMenuPrincipal = new VistaMenuPrincipal();
-                vistaMenuPrincipal.Show();
-                ObjLogin.Hide();
-            }
-            else
-            {
-                MessageBox.Show(mensajeError, tituloError, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                case 0:
+                    // Login exitoso y preguntas de seguridad configuradas
+                    ObjLogin.Hide();
+                    Bienvenida bienvenida = new Bienvenida();
+                    bienvenida.ShowDialog();
+                    VistaMenuPrincipal vistaMenuPrincipal = new VistaMenuPrincipal();
+                    vistaMenuPrincipal.Show();
+                    ObjLogin.Hide();
+                    break;
+
+                case -2:
+                    // Login exitoso pero faltan configurar preguntas de seguridad
+                    ObjLogin.Hide();
+                    VistaPreguntas formPreguntas = new VistaPreguntas(DAOData.Username, 1);
+                    if (formPreguntas.ShowDialog() == DialogResult.OK)
+                    {
+                        // Si el usuario configuró sus preguntas exitosamente, proceder al menú principal
+                        Bienvenida bienvenidaDespuesPreguntas = new Bienvenida();
+                        bienvenidaDespuesPreguntas.ShowDialog();
+                        VistaMenuPrincipal vistaMenuDespuesPreguntas = new VistaMenuPrincipal();
+                        vistaMenuDespuesPreguntas.Show();
+                    }
+                    else
+                    {
+                        // Si el usuario cancela la configuración de preguntas, volver al login
+                        MessageBox.Show("Debe configurar sus preguntas de seguridad para continuar.", "Configuración requerida", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ObjLogin.Show();
+                    }
+                    break;
+
+                case 1:
+                    // Usuario o contraseña incorrectos
+                    MessageBox.Show("Usuario o contraseña incorrectos.", "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    break;
+
+                default:
+                    // Error durante el proceso de login
+                    MessageBox.Show(mensajeError, tituloError, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    break;
             }
         }
 

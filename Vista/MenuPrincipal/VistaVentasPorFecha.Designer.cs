@@ -35,13 +35,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnBuscar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpinicio = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpfinal = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnBuscar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.GriewFiltroV = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -55,8 +55,9 @@
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1414, 84);
+            this.panel1.Size = new System.Drawing.Size(1663, 84);
             this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -65,120 +66,17 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.Controls.Add(this.btnBuscar, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnBuscar, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1414, 84);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1663, 84);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.label1);
-            this.flowLayoutPanel1.Controls.Add(this.dtpinicio);
-            this.flowLayoutPanel1.Controls.Add(this.label2);
-            this.flowLayoutPanel1.Controls.Add(this.dtpfinal);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(567, 3);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(844, 78);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(10, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(10, 20, 3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 27);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Fecha de inicio:";
-            // 
-            // dtpinicio
-            // 
-            this.dtpinicio.BackColor = System.Drawing.Color.Transparent;
-            this.dtpinicio.BorderColor = System.Drawing.Color.Silver;
-            this.dtpinicio.BorderRadius = 10;
-            this.dtpinicio.Color = System.Drawing.Color.Silver;
-            this.dtpinicio.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            this.dtpinicio.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.dtpinicio.DisabledColor = System.Drawing.Color.Gray;
-            this.dtpinicio.DisplayWeekNumbers = false;
-            this.dtpinicio.DPHeight = 0;
-            this.dtpinicio.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpinicio.FillDatePicker = false;
-            this.dtpinicio.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpinicio.ForeColor = System.Drawing.Color.Black;
-            this.dtpinicio.Icon = ((System.Drawing.Image)(resources.GetObject("dtpinicio.Icon")));
-            this.dtpinicio.IconColor = System.Drawing.Color.Gray;
-            this.dtpinicio.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.dtpinicio.LeftTextMargin = 5;
-            this.dtpinicio.Location = new System.Drawing.Point(210, 25);
-            this.dtpinicio.Margin = new System.Windows.Forms.Padding(3, 25, 3, 3);
-            this.dtpinicio.MinimumSize = new System.Drawing.Size(4, 32);
-            this.dtpinicio.Name = "dtpinicio";
-            this.dtpinicio.Size = new System.Drawing.Size(220, 32);
-            this.dtpinicio.TabIndex = 1;
-            this.dtpinicio.Value = new System.DateTime(2024, 8, 28, 17, 52, 0, 0);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(443, 26);
-            this.label2.Margin = new System.Windows.Forms.Padding(10, 20, 3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 27);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Fecha Final:";
-            // 
-            // dtpfinal
-            // 
-            this.dtpfinal.BackColor = System.Drawing.Color.Transparent;
-            this.dtpfinal.BorderColor = System.Drawing.Color.Silver;
-            this.dtpfinal.BorderRadius = 1;
-            this.dtpfinal.Color = System.Drawing.Color.Silver;
-            this.dtpfinal.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
-            this.dtpfinal.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.dtpfinal.DisabledColor = System.Drawing.Color.Gray;
-            this.dtpfinal.DisplayWeekNumbers = false;
-            this.dtpfinal.DPHeight = 0;
-            this.dtpfinal.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpfinal.FillDatePicker = false;
-            this.dtpfinal.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpfinal.ForeColor = System.Drawing.Color.Black;
-            this.dtpfinal.Icon = ((System.Drawing.Image)(resources.GetObject("dtpfinal.Icon")));
-            this.dtpfinal.IconColor = System.Drawing.Color.Gray;
-            this.dtpfinal.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.dtpfinal.LeftTextMargin = 5;
-            this.dtpfinal.Location = new System.Drawing.Point(597, 25);
-            this.dtpfinal.Margin = new System.Windows.Forms.Padding(3, 25, 3, 3);
-            this.dtpfinal.MinimumSize = new System.Drawing.Size(4, 32);
-            this.dtpfinal.Name = "dtpfinal";
-            this.dtpfinal.Size = new System.Drawing.Size(220, 32);
-            this.dtpfinal.TabIndex = 3;
-            this.dtpfinal.Value = new System.DateTime(2024, 8, 28, 17, 55, 0, 0);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(21, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(239, 44);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Filtrar ventas";
             // 
             // btnBuscar
             // 
@@ -210,7 +108,7 @@
             this.btnBuscar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnBuscar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnBuscar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -221,14 +119,15 @@
             this.btnBuscar.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btnBuscar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnBuscar.IconSize = 25;
-            this.btnBuscar.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnBuscar.IdleBorderColor = System.Drawing.Color.Transparent;
             this.btnBuscar.IdleBorderRadius = 15;
             this.btnBuscar.IdleBorderThickness = 1;
             this.btnBuscar.IdleFillColor = System.Drawing.Color.DodgerBlue;
             this.btnBuscar.IdleIconLeftImage = null;
             this.btnBuscar.IdleIconRightImage = null;
             this.btnBuscar.IndicateFocus = false;
-            this.btnBuscar.Location = new System.Drawing.Point(327, 17);
+            this.btnBuscar.Location = new System.Drawing.Point(374, 12);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnBuscar.OnDisabledState.BorderRadius = 15;
@@ -246,7 +145,7 @@
             this.btnBuscar.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.onHoverState.IconLeftImage = null;
             this.btnBuscar.onHoverState.IconRightImage = null;
-            this.btnBuscar.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnBuscar.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
             this.btnBuscar.OnIdleState.BorderRadius = 15;
             this.btnBuscar.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnBuscar.OnIdleState.BorderThickness = 1;
@@ -262,13 +161,119 @@
             this.btnBuscar.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.OnPressedState.IconLeftImage = null;
             this.btnBuscar.OnPressedState.IconRightImage = null;
-            this.btnBuscar.Size = new System.Drawing.Size(191, 49);
-            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Size = new System.Drawing.Size(248, 59);
+            this.btnBuscar.TabIndex = 34;
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBuscar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnBuscar.TextMarginLeft = 0;
             this.btnBuscar.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnBuscar.UseDefaultRadiusAndThickness = true;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.label1);
+            this.flowLayoutPanel1.Controls.Add(this.dtpinicio);
+            this.flowLayoutPanel1.Controls.Add(this.label2);
+            this.flowLayoutPanel1.Controls.Add(this.dtpfinal);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(667, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(993, 80);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(11, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(11, 20, 3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(198, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Fecha de inicio:";
+            // 
+            // dtpinicio
+            // 
+            this.dtpinicio.BackColor = System.Drawing.Color.Transparent;
+            this.dtpinicio.BorderColor = System.Drawing.Color.White;
+            this.dtpinicio.BorderRadius = 10;
+            this.dtpinicio.CalendarFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpinicio.Color = System.Drawing.Color.White;
+            this.dtpinicio.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.dtpinicio.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dtpinicio.DisabledColor = System.Drawing.Color.Gray;
+            this.dtpinicio.DisplayWeekNumbers = false;
+            this.dtpinicio.DPHeight = 0;
+            this.dtpinicio.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpinicio.FillDatePicker = false;
+            this.dtpinicio.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpinicio.ForeColor = System.Drawing.Color.Black;
+            this.dtpinicio.Icon = ((System.Drawing.Image)(resources.GetObject("dtpinicio.Icon")));
+            this.dtpinicio.IconColor = System.Drawing.Color.Gray;
+            this.dtpinicio.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dtpinicio.LeftTextMargin = 5;
+            this.dtpinicio.Location = new System.Drawing.Point(241, 25);
+            this.dtpinicio.Margin = new System.Windows.Forms.Padding(29, 25, 3, 2);
+            this.dtpinicio.MinimumSize = new System.Drawing.Size(4, 32);
+            this.dtpinicio.Name = "dtpinicio";
+            this.dtpinicio.Size = new System.Drawing.Size(328, 32);
+            this.dtpinicio.TabIndex = 1;
+            this.dtpinicio.Value = new System.DateTime(2024, 8, 28, 17, 52, 0, 0);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(601, 25);
+            this.label2.Margin = new System.Windows.Forms.Padding(29, 20, 3, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(152, 28);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Fecha Final:";
+            // 
+            // dtpfinal
+            // 
+            this.dtpfinal.BackColor = System.Drawing.Color.Transparent;
+            this.dtpfinal.BorderColor = System.Drawing.Color.Silver;
+            this.dtpfinal.BorderRadius = 1;
+            this.dtpfinal.Color = System.Drawing.Color.Silver;
+            this.dtpfinal.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.dtpfinal.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dtpfinal.DisabledColor = System.Drawing.Color.Gray;
+            this.dtpfinal.DisplayWeekNumbers = false;
+            this.dtpfinal.DPHeight = 0;
+            this.dtpfinal.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpfinal.FillDatePicker = false;
+            this.dtpfinal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpfinal.ForeColor = System.Drawing.Color.Black;
+            this.dtpfinal.Icon = ((System.Drawing.Image)(resources.GetObject("dtpfinal.Icon")));
+            this.dtpfinal.IconColor = System.Drawing.Color.Gray;
+            this.dtpfinal.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dtpfinal.LeftTextMargin = 5;
+            this.dtpfinal.Location = new System.Drawing.Point(759, 25);
+            this.dtpfinal.Margin = new System.Windows.Forms.Padding(3, 25, 3, 2);
+            this.dtpfinal.MinimumSize = new System.Drawing.Size(4, 32);
+            this.dtpfinal.Name = "dtpfinal";
+            this.dtpfinal.Size = new System.Drawing.Size(220, 32);
+            this.dtpfinal.TabIndex = 3;
+            this.dtpfinal.Value = new System.DateTime(2024, 8, 28, 17, 55, 0, 0);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(46, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(239, 44);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Filtrar ventas";
             // 
             // GriewFiltroV
             // 
@@ -290,7 +295,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.GriewFiltroV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.GriewFiltroV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GriewFiltroV.ColumnHeadersHeight = 40;
             this.GriewFiltroV.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.GriewFiltroV.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.GriewFiltroV.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
@@ -321,16 +326,16 @@
             this.GriewFiltroV.EnableHeadersVisualStyles = false;
             this.GriewFiltroV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.GriewFiltroV.HeaderBackColor = System.Drawing.Color.DodgerBlue;
-            this.GriewFiltroV.HeaderBgColor = System.Drawing.Color.Empty;
             this.GriewFiltroV.HeaderForeColor = System.Drawing.Color.White;
             this.GriewFiltroV.Location = new System.Drawing.Point(0, 84);
+            this.GriewFiltroV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GriewFiltroV.Name = "GriewFiltroV";
             this.GriewFiltroV.ReadOnly = true;
             this.GriewFiltroV.RowHeadersVisible = false;
             this.GriewFiltroV.RowHeadersWidth = 51;
             this.GriewFiltroV.RowTemplate.Height = 40;
             this.GriewFiltroV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GriewFiltroV.Size = new System.Drawing.Size(1414, 626);
+            this.GriewFiltroV.Size = new System.Drawing.Size(1663, 626);
             this.GriewFiltroV.TabIndex = 1;
             this.GriewFiltroV.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -338,11 +343,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1414, 710);
+            this.ClientSize = new System.Drawing.Size(1663, 710);
             this.Controls.Add(this.GriewFiltroV);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(1681, 757);
             this.Name = "VistaVentasPorFecha";
-            this.Text = "VistaVentasPorFecha";
+            this.Text = "Ventas por fecha";
+            this.Load += new System.EventHandler(this.VistaVentasPorFecha_Load);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -361,9 +371,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnBuscar;
         public Bunifu.UI.WinForms.BunifuDataGridView GriewFiltroV;
         public Bunifu.UI.WinForms.BunifuDatePicker dtpinicio;
         public Bunifu.UI.WinForms.BunifuDatePicker dtpfinal;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnBuscar;
     }
 }

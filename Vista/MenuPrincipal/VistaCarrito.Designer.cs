@@ -385,16 +385,19 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.btneliminar, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnComprar, 0, 0);
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 511F));
+            this.tableLayoutPanel1.Controls.Add(this.btneliminar, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnComprar, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 424);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.06849F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.9315F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1028, 94);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
@@ -429,7 +432,7 @@
             this.btneliminar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btneliminar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btneliminar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btneliminar.ForeColor = System.Drawing.Color.Black;
+            this.btneliminar.ForeColor = System.Drawing.Color.White;
             this.btneliminar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btneliminar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btneliminar.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -446,7 +449,7 @@
             this.btneliminar.IdleIconLeftImage = null;
             this.btneliminar.IdleIconRightImage = null;
             this.btneliminar.IndicateFocus = false;
-            this.btneliminar.Location = new System.Drawing.Point(267, 51);
+            this.btneliminar.Location = new System.Drawing.Point(546, 22);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btneliminar.OnDisabledState.BorderRadius = 20;
@@ -469,7 +472,7 @@
             this.btneliminar.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btneliminar.OnIdleState.BorderThickness = 1;
             this.btneliminar.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
-            this.btneliminar.OnIdleState.ForeColor = System.Drawing.Color.Black;
+            this.btneliminar.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btneliminar.OnIdleState.IconLeftImage = null;
             this.btneliminar.OnIdleState.IconRightImage = null;
             this.btneliminar.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -480,7 +483,7 @@
             this.btneliminar.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btneliminar.OnPressedState.IconLeftImage = null;
             this.btneliminar.OnPressedState.IconRightImage = null;
-            this.btneliminar.Size = new System.Drawing.Size(494, 39);
+            this.btneliminar.Size = new System.Drawing.Size(452, 39);
             this.btneliminar.TabIndex = 6;
             this.btneliminar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btneliminar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -519,7 +522,7 @@
             this.btnComprar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnComprar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.btnComprar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComprar.ForeColor = System.Drawing.Color.Black;
+            this.btnComprar.ForeColor = System.Drawing.Color.White;
             this.btnComprar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnComprar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
             this.btnComprar.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
@@ -536,7 +539,7 @@
             this.btnComprar.IdleIconLeftImage = null;
             this.btnComprar.IdleIconRightImage = null;
             this.btnComprar.IndicateFocus = false;
-            this.btnComprar.Location = new System.Drawing.Point(268, 4);
+            this.btnComprar.Location = new System.Drawing.Point(25, 22);
             this.btnComprar.Name = "btnComprar";
             this.btnComprar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnComprar.OnDisabledState.BorderRadius = 20;
@@ -559,7 +562,7 @@
             this.btnComprar.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnComprar.OnIdleState.BorderThickness = 1;
             this.btnComprar.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
-            this.btnComprar.OnIdleState.ForeColor = System.Drawing.Color.Black;
+            this.btnComprar.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnComprar.OnIdleState.IconLeftImage = null;
             this.btnComprar.OnIdleState.IconRightImage = null;
             this.btnComprar.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -570,7 +573,7 @@
             this.btnComprar.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnComprar.OnPressedState.IconLeftImage = null;
             this.btnComprar.OnPressedState.IconRightImage = null;
-            this.btnComprar.Size = new System.Drawing.Size(492, 39);
+            this.btnComprar.Size = new System.Drawing.Size(466, 39);
             this.btnComprar.TabIndex = 5;
             this.btnComprar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnComprar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -662,8 +665,9 @@
             this.Controls.Add(this.dgvCarrito);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VistaCarrito";
-            this.Text = "VistaCarrito";
+            this.Load += new System.EventHandler(this.VistaCarrito_Load);
             this.bunifuPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

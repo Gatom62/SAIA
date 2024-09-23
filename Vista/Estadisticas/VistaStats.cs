@@ -34,6 +34,12 @@ namespace AgroServicios.Vista.Estadisticas
                 btnProveedores.ForeColor = Color.White;
                 btnClientes.ForeColor = Color.White;
                 btnSuministros.ForeColor = Color.White;
+                tableLayoutPanel1.BackColor = Color.FromArgb(34, 36, 49);
+                //Esto es para cambiar el color de los gradientes del panel cuando se active el modo oscuro
+                bunifuGradientPanel1.GradientBottomLeft = Color.Black;
+                bunifuGradientPanel1.GradientTopRight = Color.Black;
+                bunifuGradientPanel1.GradientBottomRight = Color.DarkViolet;
+                bunifuGradientPanel1.GradientTopLeft = Color.DarkViolet;
             }
         }
     }

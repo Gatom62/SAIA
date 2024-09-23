@@ -1,8 +1,11 @@
 ﻿using AgroServicios.Modelo.DAO;
 using AgroServicios.Vista.Cuentas;
+using AgroServicios.Vista.Login;
+using AgroServicios.Vista.Notificación;
 using AgroServicios.Vista.Productos1;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,14 +29,48 @@ namespace AgroServicios.Controlador.Productos1
             Objupdate.btnUbdateMarca.Click += new EventHandler(ActualizarMarca);
         }
 
+        void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
+
+        {
+
+            AlertExito frm = new AlertExito();
+
+            frm.BackColorAlert = backcolor;
+
+            frm.ColorAlertBox = color;
+
+            frm.TittlAlertBox = title;
+
+            frm.TextAlertBox = text;
+
+            frm.IconeAlertBox = icon;
+
+            frm.ShowDialog();
+        }
+
+        void MandarValoresAlerta(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            MessagePersonal message = new MessagePersonal();
+            message.BackColorAlert = backcolor;
+            message.ColorAlertBox = color;
+            message.TittlAlertBox = title;
+            message.TextAlertBox = text;
+            message.IconeAlertBox = icon;
+            message.ShowDialog();
+        }
+
         private void ActualizarMarca(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(Objupdate.txtUbdateMarca.Text))
             {
-                MessageBox.Show("Todos los campos son obligatorios.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay campos vacios", Properties.Resources.MensajeWarning);
+                return;
+            }
+
+            // Validar que el nombre del producto no exceda 15 caracteres
+            if (!ValidarNombre(Objupdate.txtUbdateMarca.Text))
+            {
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 15 caragteres en el nombre", Properties.Resources.MensajeWarning);
                 return;
             }
 
@@ -46,18 +83,20 @@ namespace AgroServicios.Controlador.Productos1
 
             if (valorRetornado == 1)
             {
-                MessageBox.Show("Los datos han sido actualizados exitosamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Proceso realizado", "La marca se actualizo correctamente", Properties.Resources.comprobado);
+                VistaLogin backForm = new VistaLogin();
+
                 Objupdate.Close();
             }
             else
             {
-                MessageBox.Show("Los datos no pudieron ser actualizados",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBoxP(Color.Red, Color.DarkRed, "Error", "Verifique que los datos no esten duplicados", Properties.Resources.ErrorIcono);
+            }
+
+            // Método para validar que el nombre de la marca no exceda los 15 caracteres
+            bool ValidarNombre(string nombre)
+            {
+                return nombre.Length <= 15;
             }
         }
 

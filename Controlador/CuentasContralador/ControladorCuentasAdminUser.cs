@@ -1,8 +1,10 @@
 ﻿using AgroServicios.Modelo.DAO;
 using AgroServicios.Vista.Cuentas;
+using AgroServicios.Vista.Notificación;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,14 +20,47 @@ namespace AgroServicios.Controlador.CuentasContralador
         {
             ObjAdminUser = Vista;
             ObjAdminUser.Load += new EventHandler(LoadData);
+            ObjAdminUser.ptbback.Click += new EventHandler(VolverForm);
             ObjAdminUser.cmsinfo.Click += new EventHandler(Infoempleado);
             ObjAdminUser.cmsRestablecer.Click += new EventHandler(RestEmpleado);
+            ObjAdminUser.txtBuscarP.KeyPress += new KeyPressEventHandler(Search);
+        }
+
+        void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            AlertExito frm = new AlertExito();
+
+            frm.BackColorAlert = backcolor;
+
+            frm.ColorAlertBox = color;
+
+            frm.TittlAlertBox = title;
+
+            frm.TextAlertBox = text;
+
+            frm.IconeAlertBox = icon;
+
+            frm.ShowDialog();
+        }
+
+        void MandarValoresAlerta(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            MessagePersonal message = new MessagePersonal();
+            message.BackColorAlert = backcolor;
+            message.ColorAlertBox = color;
+            message.TittlAlertBox = title;
+            message.TextAlertBox = text;
+            message.IconeAlertBox = icon;
+            message.ShowDialog();
         }
         private void LoadData(object sender, EventArgs e)
         {
             RefrescarData();
         }
-
+        public void VolverForm(object sender, EventArgs e) 
+        {
+            ObjAdminUser.Close();
+        }
         private void RefrescarData()
         {
             //Objeto de la clase DAOAdminUsuarios
@@ -38,7 +73,6 @@ namespace AgroServicios.Controlador.CuentasContralador
 
             ObjAdminUser.GriewEmpleados.Columns["Image"].Visible = false;
             ObjAdminUser.GriewEmpleados.Columns["ID del empleado"].Visible = false;
-            ObjAdminUser.btnAgregar.Visible = false;
             ObjAdminUser.cmsEliminar.Visible = false;
             ObjAdminUser.cmsPreguntas.Visible = false;
             ObjAdminUser.cmsUpdate.Visible = false;
@@ -48,7 +82,7 @@ namespace AgroServicios.Controlador.CuentasContralador
         {
             if (ObjAdminUser.GriewEmpleados.CurrentRow == null)
             {
-                MessageBox.Show("No se ha seleccionado ningún empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "No se a seleccionado a ningun empleado", Properties.Resources.MensajeWarning);
                 return; // Salir del método si no hay ninguna fila seleccionada
             }
 
@@ -77,7 +111,7 @@ namespace AgroServicios.Controlador.CuentasContralador
         {
             if (ObjAdminUser.GriewEmpleados.CurrentRow == null)
             {
-                MessageBox.Show("No se ha seleccionado ningún empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "No se a seleccionado a ningun empleado", Properties.Resources.MensajeWarning);
                 return; // Salir del método si no hay ninguna fila seleccionada
             }
 
@@ -90,6 +124,25 @@ namespace AgroServicios.Controlador.CuentasContralador
             VistaRestablecerPassword vistaRestablecer = new VistaRestablecerPassword(usuario, role);
             vistaRestablecer.ShowDialog();
             RefrescarData();
+        }
+
+        private void Search(object sender, KeyPressEventArgs e)
+        {
+            // Verifica que la tecla presionada sea Enter antes de buscar
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                BuscarEmpleado();
+                e.Handled = true;
+            }
+        }
+
+        private void BuscarEmpleado()
+        {
+            DAOAdminUsers objAdmin = new DAOAdminUsers();
+            //Declarando nuevo DataSet para que obtenga los datos del metodo ObtenerPersonas
+            DataSet ds = objAdmin.BuscarPersonas(ObjAdminUser.txtBuscarP.Text.Trim());
+            //Llenar DataGridView
+            ObjAdminUser.GriewEmpleados.DataSource = ds.Tables["VistaEmpleadosConRol"];
         }
     }
 }

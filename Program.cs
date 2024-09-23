@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using AgroServicios.Vista.Login;
 using AgroServicios.Vista.Cuentas;
 using AgroServicios.Modelo.DAO;
+using AgroServicios.Controlador.Helper;
 
 namespace AgroServicios
 {
@@ -13,6 +14,9 @@ namespace AgroServicios
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            CommonClasses commonClasses = new CommonClasses();
+            commonClasses.LeerArchivoXMLConexion();
 
             // Verificación de Primer Uso
             DAOLogin Verificacion = new DAOLogin();

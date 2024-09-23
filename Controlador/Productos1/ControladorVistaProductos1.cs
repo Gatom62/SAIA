@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -9,6 +10,8 @@ using System.Windows.Forms;
 using AgroServicios.Modelo.DAO;
 using AgroServicios.Modelo.DTO;
 using AgroServicios.Vista.Cuentas;
+using AgroServicios.Vista.Login;
+using AgroServicios.Vista.Notificación;
 using AgroServicios.Vista.Productos1;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
@@ -23,12 +26,39 @@ namespace AgroServicios.Controlador.Productos1
             ObjProductos = objProductos;
             ObjProductos.Load += new EventHandler(LoadData);
             //Evento click de botones
+            ObjProductos.ptbback.Click += new EventHandler(VolverForm);
             ObjProductos.btnAgregarProducto.Click += new EventHandler(NuevoProducto);
             ObjProductos.btnAgregarMarca.Click += new EventHandler(NuevaMarca);
             ObjProductos.cmsElimarProducto.Click += new EventHandler(EliminarProducto);
             ObjProductos.cmsEditarProducto.Click += new EventHandler(EditarProducto);
             ObjProductos.cmsInformacion.Click += new EventHandler(InformacionProducto);
             objProductos.txtBuscarP.KeyPress += new KeyPressEventHandler(Search);
+        }
+        void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            AlertExito frm = new AlertExito();
+
+            frm.BackColorAlert = backcolor;
+
+            frm.ColorAlertBox = color;
+
+            frm.TittlAlertBox = title;
+
+            frm.TextAlertBox = text;
+
+            frm.IconeAlertBox = icon;
+
+            frm.ShowDialog();
+        }
+        void MandarValoresAlerta(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            MessagePersonal message = new MessagePersonal();
+            message.BackColorAlert = backcolor;
+            message.ColorAlertBox = color;
+            message.TittlAlertBox = title;
+            message.TextAlertBox = text;
+            message.IconeAlertBox = icon;
+            message.ShowDialog();
         }
         private void Search(object sender, KeyPressEventArgs e)
         {
@@ -38,6 +68,11 @@ namespace AgroServicios.Controlador.Productos1
                 BuscarPro();
                 e.Handled = true;
             }
+        }
+        private void VolverForm(object sender, EventArgs e)
+        {
+            // Cierra la vista actual
+            ObjProductos.Close();
         }
         void BuscarPro()
         {
@@ -61,7 +96,39 @@ namespace AgroServicios.Controlador.Productos1
             ////Llenar DataGridView
             ObjProductos.GriewViewProductos.DataSource = ds.Tables["Productos"];
 
+            //Para ocultar columnas que no creo que sehan nesesarias de ver
+            //ObjProductos.GriewViewProductos.Columns["ID del producto"].Visible = false;
             ObjProductos.GriewViewProductos.Columns["imgNombre"].Visible = false;
+            // Traducir encabezados de las columnas
+            //TraducirEncabezados(ObjProductos.GriewViewProductos);
+        }
+
+        private void TraducirEncabezados(DataGridView dgv)
+        {
+            if (ControladorIdioma.idioma == 1)
+            {
+                dgv.Columns["ID del producto"].HeaderText = "Employee ID";
+                dgv.Columns["Nombre del producto"].HeaderText = "Name";
+                dgv.Columns["Marca del producto"].HeaderText = "Birthdate";
+                dgv.Columns["Telefono"].HeaderText = "Phone";
+                dgv.Columns["Correo"].HeaderText = "Email";
+                dgv.Columns["DUI"].HeaderText = "DUI";
+                dgv.Columns["Dirección"].HeaderText = "Address";
+                dgv.Columns["Usuario"].HeaderText = "Username";
+                dgv.Columns["Rol"].HeaderText = "Role";
+            }
+            else
+            {
+                dgv.Columns["ID del empleado"].HeaderText = "ID del empleado";
+                dgv.Columns["Nombre"].HeaderText = "Nombre";
+                dgv.Columns["Fecha de nacimiento"].HeaderText = "Fecha de nacimiento";
+                dgv.Columns["Telefono"].HeaderText = "Teléfono";
+                dgv.Columns["Correo"].HeaderText = "Correo";
+                dgv.Columns["DUI"].HeaderText = "DUI";
+                dgv.Columns["Dirección"].HeaderText = "Dirección";
+                dgv.Columns["Usuario"].HeaderText = "Usuario";
+                dgv.Columns["Rol"].HeaderText = "Rol";
+            }
         }
 
         private void NuevoProducto(object sender, EventArgs e)
@@ -82,7 +149,7 @@ namespace AgroServicios.Controlador.Productos1
         {
             if (ObjProductos.GriewViewProductos.CurrentRow == null)
             {
-                MessageBox.Show("No se ha seleccionado ningún producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "No a seleccionado ningun producto", Properties.Resources.MensajeWarning);
                 return; // Salir del método si no hay ninguna fila seleccionada
             }
 
@@ -111,7 +178,7 @@ namespace AgroServicios.Controlador.Productos1
         {
             if (ObjProductos.GriewViewProductos.CurrentRow == null)
             {
-                MessageBox.Show("No se ha seleccionado ningún producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "No a seleccionado ningun producto", Properties.Resources.MensajeWarning);
                 return; // Salir del método si no hay ninguna fila seleccionada
             }
 
@@ -139,7 +206,7 @@ namespace AgroServicios.Controlador.Productos1
         {
             if (ObjProductos.GriewViewProductos.CurrentRow == null)
             {
-                MessageBox.Show("No se ha seleccionado ningún producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "No a seleccionado ningun producto", Properties.Resources.MensajeWarning);
                 return; // Salir del método si no hay ninguna fila seleccionada
             }
 
@@ -153,12 +220,14 @@ namespace AgroServicios.Controlador.Productos1
                 int valorretornado = daodelete.DeleteProducto();
                 if (valorretornado == 1)
                 {
-                    MessageBox.Show("Producto eliminado", "Se ha eliminado correctamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Proceso realizado", "El producto se elimino correctamente", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
                     RefrescarData();
                 }
                 else
                 {
-                    MessageBox.Show("Eliminación fallida", "No seb ha podido eliminar el producto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique si la marca esta asociada a otros registros", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
                 }
             }
         }

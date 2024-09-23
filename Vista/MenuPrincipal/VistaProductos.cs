@@ -27,6 +27,11 @@ namespace AgroServicios.Vista.MenuPrincipal
             {
                 this.BackColor = Color.FromArgb(18, 18, 18);
             }
+            if(ControladorIdioma.idioma == 1)
+            {
+                Productos.Text = "Products";
+                txtBuscarP.PlaceholderText = "Search product";
+            }
         }
     }
 }

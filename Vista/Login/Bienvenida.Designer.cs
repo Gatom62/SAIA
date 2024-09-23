@@ -50,8 +50,9 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1410, 116);
+            this.panel1.Size = new System.Drawing.Size(1028, 94);
             this.panel1.TabIndex = 0;
             // 
             // bunifuPictureBox1
@@ -62,9 +63,10 @@
             this.bunifuPictureBox1.BorderRadius = 0;
             this.bunifuPictureBox1.Image = global::AgroServicios.Properties.Resources.Imagen_de_WhatsApp_2024_07_08_a_las_17_27_06_487df51c_removebg_preview;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(71, 22);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(38, 18);
+            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(70, 70);
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(52, 52);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox1.TabIndex = 3;
             this.bunifuPictureBox1.TabStop = false;
@@ -76,9 +78,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(147, 9);
+            this.label2.Location = new System.Drawing.Point(95, 7);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(222, 93);
+            this.label2.Size = new System.Drawing.Size(178, 77);
             this.label2.TabIndex = 2;
             this.label2.Text = "SAIA";
             // 
@@ -88,9 +91,10 @@
             this.lblbienvenido.AutoSize = true;
             this.lblbienvenido.Font = new System.Drawing.Font("Century Gothic", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblbienvenido.ForeColor = System.Drawing.Color.White;
-            this.lblbienvenido.Location = new System.Drawing.Point(543, 139);
+            this.lblbienvenido.Location = new System.Drawing.Point(407, 113);
+            this.lblbienvenido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblbienvenido.Name = "lblbienvenido";
-            this.lblbienvenido.Size = new System.Drawing.Size(590, 117);
+            this.lblbienvenido.Size = new System.Drawing.Size(471, 93);
             this.lblbienvenido.TabIndex = 0;
             this.lblbienvenido.Text = "Bienvenido";
             // 
@@ -98,9 +102,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 116);
+            this.panel2.Location = new System.Drawing.Point(0, 94);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(315, 547);
+            this.panel2.Size = new System.Drawing.Size(236, 445);
             this.panel2.TabIndex = 1;
             // 
             // timer1
@@ -125,7 +130,8 @@
             this.BarradeProgeso.IsPercentage = true;
             this.BarradeProgeso.LineProgressThickness = 10;
             this.BarradeProgeso.LineThickness = 10;
-            this.BarradeProgeso.Location = new System.Drawing.Point(723, 343);
+            this.BarradeProgeso.Location = new System.Drawing.Point(542, 279);
+            this.BarradeProgeso.Margin = new System.Windows.Forms.Padding(2);
             this.BarradeProgeso.Name = "BarradeProgeso";
             this.BarradeProgeso.ProgressAnimationSpeed = 200;
             this.BarradeProgeso.ProgressBackColor = System.Drawing.Color.White;
@@ -135,7 +141,7 @@
             this.BarradeProgeso.ProgressFillStyle = Bunifu.UI.WinForms.BunifuCircleProgress.FillStyles.Solid;
             this.BarradeProgeso.ProgressStartCap = Bunifu.UI.WinForms.BunifuCircleProgress.CapStyles.Round;
             this.BarradeProgeso.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.BarradeProgeso.Size = new System.Drawing.Size(200, 200);
+            this.BarradeProgeso.Size = new System.Drawing.Size(150, 150);
             this.BarradeProgeso.SubScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.BarradeProgeso.SubScriptMargin = new System.Windows.Forms.Padding(5, -20, 0, 0);
             this.BarradeProgeso.SubScriptText = "";
@@ -157,10 +163,11 @@
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.White;
-            this.bunifuLabel1.Location = new System.Drawing.Point(763, 255);
+            this.bunifuLabel1.Location = new System.Drawing.Point(572, 207);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(124, 56);
+            this.bunifuLabel1.Size = new System.Drawing.Size(99, 44);
             this.bunifuLabel1.TabIndex = 17;
             this.bunifuLabel1.Text = "Label";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -168,15 +175,18 @@
             // 
             // Bienvenida
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(1410, 663);
+            this.ClientSize = new System.Drawing.Size(1028, 539);
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.BarradeProgeso);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblbienvenido);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Bienvenida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenida";

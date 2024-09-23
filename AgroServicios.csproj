@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props" Condition="Exists('packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,23 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -40,10 +58,10 @@
       <HintPath>packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
-      <HintPath>packages\Bunifu.Licensing.6.0.2\lib\net48\Bunifu.Licensing.dll</HintPath>
+      <HintPath>packages\Bunifu.Licensing.6.0.4\lib\net48\Bunifu.Licensing.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
-      <HintPath>packages\Bunifu.UI.WinForms.7.0.0\lib\net48\Bunifu.UI.WinForms.dll</HintPath>
+      <HintPath>packages\Bunifu.UI.WinForms.7.2.0\lib\net48\Bunifu.UI.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
@@ -51,8 +69,32 @@
     <Reference Include="itextsharp.xmlworker, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>packages\itextsharp.xmlworker.5.5.13.4\lib\net461\itextsharp.xmlworker.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -80,11 +122,11 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Json, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Text.Json.7.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    <Reference Include="System.Text.Json, Version=8.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.8.0.4\lib\net462\System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
@@ -114,6 +156,7 @@
     <Compile Include="Controlador\ControladorIdioma.cs" />
     <Compile Include="Controlador\ControladorStats\ControladorActualizarProveedor.cs" />
     <Compile Include="Controlador\ControladorStats\ControladorCrearProveedor.cs" />
+    <Compile Include="Controlador\ControladorStats\ControladorDevoluciones.cs" />
     <Compile Include="Controlador\ControladorStats\ControladorHistorialVenta.cs" />
     <Compile Include="Controlador\ControladorStats\ControladorProveedores.cs" />
     <Compile Include="Controlador\ControladorStats\ControladorStats.cs" />
@@ -124,15 +167,18 @@
     <Compile Include="Controlador\CuentasContralador\ControladorRestUser.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorResUserViaPreguntas.cs" />
     <Compile Include="Controlador\CuentasContralador\ControladorUpdateEmpleados.cs" />
+    <Compile Include="Controlador\Devoluciones\ControladorDevolucionesVista.cs" />
     <Compile Include="Controlador\Encryp.cs" />
     <Compile Include="Controlador\Helper\CommonClasses.cs" />
     <Compile Include="Controlador\Helper\ControladorCarrito.cs" />
     <Compile Include="Controlador\Helper\StaticSession.cs" />
     <Compile Include="Controlador\Login\ControladorAdministracionUser.cs" />
+    <Compile Include="Controlador\Login\ControladorAdminUserBase.cs" />
     <Compile Include="Controlador\Login\ControladorForEmail.cs" />
     <Compile Include="Controlador\Login\ControladorLogin.cs" />
     <Compile Include="Controlador\Login\ControladorPreguntasLogin.cs" />
     <Compile Include="Controlador\Login\ControladorPreguntasRec.cs" />
+    <Compile Include="Controlador\Login\ControladorZoom.cs" />
     <Compile Include="Controlador\Login\ControlerBasicMetodosRecuperar.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorFiltroVentas.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorMenuPrincipal.cs" />
@@ -142,11 +188,14 @@
     <Compile Include="Controlador\Productos1\ControladorUbdateMarca1.cs" />
     <Compile Include="Controlador\Productos1\ControladorUbdateProducto1.cs" />
     <Compile Include="Controlador\Productos1\ControladorVistaProductos1.cs" />
+    <Compile Include="Controlador\Server\ControladorServerPass.cs" />
+    <Compile Include="Controlador\Server\ControllerAdminConnection.cs" />
     <Compile Include="Modelo\DAO\DAOAdminUsers.cs" />
     <Compile Include="Modelo\DAO\DAOCarrito.cs" />
     <Compile Include="Modelo\DAO\DAOClientes.cs" />
     <Compile Include="Modelo\DAO\DAOCorreoRecuperacion.cs" />
     <Compile Include="Modelo\DAO\DAODCSoporte.cs" />
+    <Compile Include="Modelo\DAO\DAODevoluciones.cs" />
     <Compile Include="Modelo\DAO\DAOFiltroVentas.cs" />
     <Compile Include="Modelo\DAO\DAOHistorialVenta.cs" />
     <Compile Include="Modelo\DAO\DAOLogin.cs" />
@@ -160,12 +209,15 @@
     <Compile Include="Modelo\DTO\DTOCarrito.cs" />
     <Compile Include="Modelo\DTO\DTOClientes.cs" />
     <Compile Include="Modelo\DTO\DTOCorreoRecuperacion.cs" />
+    <Compile Include="Modelo\DTO\DTOdbContext.cs" />
+    <Compile Include="Modelo\DTO\DTODevoluciones.cs" />
     <Compile Include="Modelo\DTO\DTOFiltroVentas.cs" />
     <Compile Include="Modelo\DTO\DTOLogin.cs" />
     <Compile Include="Modelo\DTO\DTOPreguntasRec.cs" />
     <Compile Include="Modelo\DTO\DTOProductos1.cs" />
     <Compile Include="Modelo\DTO\DTOProveedores.cs" />
     <Compile Include="Modelo\DTO\DTOTargproductos.cs" />
+    <Compile Include="Modelo\DTO\DTOVenta.cs" />
     <Compile Include="ProductosTarg.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -237,6 +289,18 @@
     </Compile>
     <Compile Include="Vista\Cuentas\VistaUpdateEmpleados.Designer.cs">
       <DependentUpon>VistaUpdateEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Estadisticas\Devoluciones\VistaDetallesDevoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Estadisticas\Devoluciones\VistaDetallesDevoluciones.Designer.cs">
+      <DependentUpon>VistaDetallesDevoluciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Estadisticas\Devoluciones\VistaDevoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Estadisticas\Devoluciones\VistaDevoluciones.Designer.cs">
+      <DependentUpon>VistaDevoluciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Estadisticas\VistaActualizarProveedor.cs">
       <SubType>Form</SubType>
@@ -316,6 +380,12 @@
     <Compile Include="Vista\Login\VistaPreguntasLogin.Designer.cs">
       <DependentUpon>VistaPreguntasLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Login\VistaValidacionBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Login\VistaValidacionBase.Designer.cs">
+      <DependentUpon>VistaValidacionBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\MenuPrincipal\VistaAjustes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -358,6 +428,18 @@
     <Compile Include="Vista\MenuPrincipal\VistaZoomProduct.Designer.cs">
       <DependentUpon>VistaZoomProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Notificación\FRM_AlertBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Notificación\FRM_AlertBox.Designer.cs">
+      <DependentUpon>FRM_AlertBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Notificación\MessagePersonal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Notificación\MessagePersonal.Designer.cs">
+      <DependentUpon>MessagePersonal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Productos1\VistaCreateMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -387,6 +469,40 @@
     </Compile>
     <Compile Include="Vista\Productos1\VistaUbdateProducto.Designer.cs">
       <DependentUpon>VistaUbdateProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Reportes\ReporteProductos\DataSetProductos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetProductos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Reportes\ReporteProductos\VistaReporteProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Reportes\ReporteProductos\VistaReporteProductos.Designer.cs">
+      <DependentUpon>VistaReporteProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Reportes\ReporteVentas\DataSetVentas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetVentas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Reportes\ReporteVentas\VistaReporteVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Reportes\ReporteVentas\VistaReporteVenta.Designer.cs">
+      <DependentUpon>VistaReporteVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Server\VerificarContraServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Server\VerificarContraServer.Designer.cs">
+      <DependentUpon>VerificarContraServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Server\ViewAdminConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Server\ViewAdminConnection.Designer.cs">
+      <DependentUpon>ViewAdminConnection.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ProductosTarg.resx">
       <DependentUpon>ProductosTarg.cs</DependentUpon>
@@ -436,6 +552,12 @@
     <EmbeddedResource Include="Vista\Cuentas\VistaUpdateEmpleados.resx">
       <DependentUpon>VistaUpdateEmpleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Estadisticas\Devoluciones\VistaDetallesDevoluciones.resx">
+      <DependentUpon>VistaDetallesDevoluciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Estadisticas\Devoluciones\VistaDevoluciones.resx">
+      <DependentUpon>VistaDevoluciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Estadisticas\VistaActualizarProveedor.resx">
       <DependentUpon>VistaActualizarProveedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -472,6 +594,9 @@
     <EmbeddedResource Include="Vista\Login\VistaPreguntasLogin.resx">
       <DependentUpon>VistaPreguntasLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Login\VistaValidacionBase.resx">
+      <DependentUpon>VistaValidacionBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaAjustes.resx">
       <DependentUpon>VistaAjustes.cs</DependentUpon>
     </EmbeddedResource>
@@ -494,6 +619,12 @@
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaZoomProduct.resx">
       <DependentUpon>VistaZoomProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Notificación\FRM_AlertBox.resx">
+      <DependentUpon>FRM_AlertBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Notificación\MessagePersonal.resx">
+      <DependentUpon>MessagePersonal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Productos1\VistaCreateMarca.resx">
       <DependentUpon>VistaCreateMarca.cs</DependentUpon>
     </EmbeddedResource>
@@ -509,6 +640,20 @@
     <EmbeddedResource Include="Vista\Productos1\VistaUbdateProducto.resx">
       <DependentUpon>VistaUbdateProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Reportes\ReporteProductos\Report1.rdlc" />
+    <EmbeddedResource Include="Vista\Reportes\ReporteProductos\VistaReporteProductos.resx">
+      <DependentUpon>VistaReporteProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Reportes\ReporteVentas\info.rdlc" />
+    <EmbeddedResource Include="Vista\Reportes\ReporteVentas\VistaReporteVenta.resx">
+      <DependentUpon>VistaReporteVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Server\VerificarContraServer.resx">
+      <DependentUpon>VerificarContraServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Server\ViewAdminConnection.resx">
+      <DependentUpon>ViewAdminConnection.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -519,6 +664,29 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\Manual de SAIA 1.2.pdf" />
+    <None Include="Vista\Reportes\ReporteProductos\DataSetProductos.xsc">
+      <DependentUpon>DataSetProductos.xsd</DependentUpon>
+    </None>
+    <None Include="Vista\Reportes\ReporteProductos\DataSetProductos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetProductos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Vista\Reportes\ReporteProductos\DataSetProductos.xss">
+      <DependentUpon>DataSetProductos.xsd</DependentUpon>
+    </None>
+    <None Include="Vista\Reportes\ReporteVentas\DataSetVentas.xsc">
+      <DependentUpon>DataSetVentas.xsd</DependentUpon>
+    </None>
+    <None Include="Vista\Reportes\ReporteVentas\DataSetVentas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetVentas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Vista\Reportes\ReporteVentas\DataSetVentas.xss">
+      <DependentUpon>DataSetVentas.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -670,5 +838,74 @@
   <ItemGroup>
     <None Include="Resources\Captura de pantalla 2024-09-01 092302.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo de reporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MensajeWarning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ErrorIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comprobado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo base2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo base21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo base22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendario1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monedas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dar-dinero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DUIPng.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props'))" />
+  </Target>
 </Project>

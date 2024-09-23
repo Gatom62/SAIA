@@ -1,10 +1,14 @@
 ﻿using AgroServicios.Modelo.DAO;
 using AgroServicios.Vista.Cuentas;
+using AgroServicios.Vista.Login;
+using AgroServicios.Vista.Notificación;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web.Security;
 using System.Windows.Forms;
@@ -26,6 +30,34 @@ namespace AgroServicios.Controlador.CuentasContralador
 
             objrest.btnRestablecer.Click += new EventHandler(RestablecerContraseña);
         }
+
+        void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            AlertExito frm = new AlertExito();
+
+            frm.BackColorAlert = backcolor;
+
+            frm.ColorAlertBox = color;
+
+            frm.TittlAlertBox = title;
+
+            frm.TextAlertBox = text;
+
+            frm.IconeAlertBox = icon;
+
+            frm.ShowDialog();
+        }
+
+        void MandarValoresAlerta(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            MessagePersonal message = new MessagePersonal();
+            message.BackColorAlert = backcolor;
+            message.ColorAlertBox = color;
+            message.TittlAlertBox = title;
+            message.TextAlertBox = text;
+            message.IconeAlertBox = icon;
+            message.ShowDialog();
+        }
         public void InitialCharge(object sender, EventArgs e)
         {
             //Objeto de la clase DAOAdminUsuarios
@@ -44,10 +76,14 @@ namespace AgroServicios.Controlador.CuentasContralador
         {
             if (string.IsNullOrWhiteSpace(objrest.txtRestPass.Text))
             {
-                MessageBox.Show("Introduzca una contraseña valida.",
-                               "Error de validación",
-                               MessageBoxButtons.OK,
-                               MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error de validación", "Debe de ingresar una contraseña", Properties.Resources.MensajeWarning);
+                return;
+            }
+
+            // Validar que la contraseña del empleado no exceda 100 caracteres
+            if (!ValidarContraseña(objrest.txtRestPass.Text))
+            {
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "La contraseña debe tener al menos 8 caracteres", Properties.Resources.MensajeWarning);
                 return;
             }
 
@@ -61,25 +97,33 @@ namespace AgroServicios.Controlador.CuentasContralador
             int valorRetornado = daorest.restablecerEmpleado();
             if (valorRetornado == 2)
             {
-                MessageBox.Show("La contraseña se ha actualizado correctamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso completado", "La contraseña se ha actualizado correctamente", Properties.Resources.comprobado);
+                VistaLogin backForm = new VistaLogin();
                 objrest.Close();
             }
             else if (valorRetornado == 1)
             {
-                MessageBox.Show("Los datos no pudieron ser actualizados completamente",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
+                MandarValoresAlerta(Color.Red, Color.DarkRed, "Los datos no pudieron ser actualizados completamente",
+                                "Error", Properties.Resources.ErrorIcono);
+                VistaLogin backForm = new VistaLogin();
             }
             else
             {
-                MessageBox.Show("La contraseña no se ha podido actualizar.",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MandarValoresAlerta(Color.Red, Color.DarkRed, "La contraseña no se ha podido actualizar.",
+                                "Error", Properties.Resources.ErrorIcono);
+                VistaLogin backForm = new VistaLogin();
+            }
+
+            bool ValidarContraseña(string contraseña)
+            {
+                // Requiere más de 8 caracteres (letras, dígitos o caracteres especiales)
+                string pattern = @"^.{9,}$";  // Acepta cualquier carácter y al menos 9 de ellos
+
+                if (!Regex.IsMatch(contraseña, pattern))
+                {
+                    return false;
+                }
+                return true;
             }
         }
         public void ChargeValues(string usuario)

@@ -1,4 +1,5 @@
-﻿using AgroServicios.Controlador.Helper;
+﻿using AgroServicios.Controlador;
+using AgroServicios.Controlador.Helper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -59,6 +60,36 @@ namespace AgroServicios.Vista.MenuPrincipal
 
                 // Establece la instancia en null para permitir que el recolector de basura (GC) la limpie
                 _instance = null;
+            }
+        }
+
+        private void VistaCarrito_Load(object sender, EventArgs e)
+        {
+            if (ControladorTema.IsDarkMode == true)
+            {
+                tableLayoutPanel2.BackColor = Color.FromArgb(118, 88, 152);
+                dgvCarrito.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
+                dgvTotal.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
+                dgvTotal.BackgroundColor = Color.FromArgb(52, 54, 62);
+                tableLayoutPanel1.BackColor = Color.FromArgb(52, 54, 62);
+                dgvCarrito.BackgroundColor = Color.FromArgb(52, 54, 62);
+            }
+            else
+            {
+                tableLayoutPanel2.BackColor = Color.LightSkyBlue;
+                dgvCarrito.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+                dgvTotal.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+                dgvTotal.BackgroundColor = Color.White;
+                tableLayoutPanel1.BackColor = Color.White;
+                dgvCarrito.BackgroundColor = Color.White;
+            }
+
+            if (ControladorIdioma.idioma == 1)
+            {
+                label1.Text = Ingles.Carri;
+                btnComprar.Text = Ingles.Comp;
+                btneliminar.Text = Ingles.Del;
+                txtBuscarClientes.PlaceholderText = Ingles.bc;
             }
         }
     }

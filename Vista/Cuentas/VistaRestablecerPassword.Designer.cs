@@ -68,7 +68,7 @@
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(638, 418);
@@ -90,7 +90,7 @@
             this.bunifuPanel1.Controls.Add(this.txtRestPass);
             this.bunifuPanel1.Controls.Add(this.txtRest);
             this.bunifuPanel1.Location = new System.Drawing.Point(37, 39);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(575, 349);
@@ -101,10 +101,10 @@
             this.DropRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.DropRole.FormattingEnabled = true;
             this.DropRole.Location = new System.Drawing.Point(222, 238);
-            this.DropRole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DropRole.Margin = new System.Windows.Forms.Padding(2);
             this.DropRole.Name = "DropRole";
             this.DropRole.Size = new System.Drawing.Size(121, 21);
-            this.DropRole.TabIndex = 3;
+            this.DropRole.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
@@ -115,7 +115,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -163,7 +163,7 @@
             this.btnRestablecer.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnRestablecer.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnRestablecer.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnRestablecer.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestablecer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRestablecer.ForeColor = System.Drawing.Color.White;
             this.btnRestablecer.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRestablecer.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -175,14 +175,14 @@
             this.btnRestablecer.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnRestablecer.IconSize = 25;
             this.btnRestablecer.IdleBorderColor = System.Drawing.Color.White;
-            this.btnRestablecer.IdleBorderRadius = 35;
+            this.btnRestablecer.IdleBorderRadius = 50;
             this.btnRestablecer.IdleBorderThickness = 1;
             this.btnRestablecer.IdleFillColor = System.Drawing.Color.LimeGreen;
             this.btnRestablecer.IdleIconLeftImage = null;
             this.btnRestablecer.IdleIconRightImage = null;
             this.btnRestablecer.IndicateFocus = false;
-            this.btnRestablecer.Location = new System.Drawing.Point(169, 286);
-            this.btnRestablecer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRestablecer.Location = new System.Drawing.Point(174, 274);
+            this.btnRestablecer.Margin = new System.Windows.Forms.Padding(2);
             this.btnRestablecer.Name = "btnRestablecer";
             this.btnRestablecer.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnRestablecer.OnDisabledState.BorderRadius = 20;
@@ -216,8 +216,8 @@
             this.btnRestablecer.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnRestablecer.OnPressedState.IconLeftImage = null;
             this.btnRestablecer.OnPressedState.IconRightImage = null;
-            this.btnRestablecer.Size = new System.Drawing.Size(234, 37);
-            this.btnRestablecer.TabIndex = 4;
+            this.btnRestablecer.Size = new System.Drawing.Size(217, 52);
+            this.btnRestablecer.TabIndex = 3;
             this.btnRestablecer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRestablecer.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnRestablecer.TextMarginLeft = 0;
@@ -229,7 +229,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::AgroServicios.Properties.Resources.Logo_Candado;
             this.pictureBox1.Location = new System.Drawing.Point(68, 171);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(42, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -241,7 +241,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = global::AgroServicios.Properties.Resources.Rectangle_32;
             this.pictureBox3.Location = new System.Drawing.Point(68, 88);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(42, 41);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -278,7 +278,7 @@
             this.txtRestPass.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRestPass.Lines = new string[0];
             this.txtRestPass.Location = new System.Drawing.Point(114, 171);
-            this.txtRestPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRestPass.Margin = new System.Windows.Forms.Padding(2);
             this.txtRestPass.MaxLength = 32767;
             this.txtRestPass.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtRestPass.Modified = false;
@@ -304,7 +304,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtRestPass.OnIdleState = stateProperties12;
-            this.txtRestPass.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRestPass.Padding = new System.Windows.Forms.Padding(2);
             this.txtRestPass.PasswordChar = '\0';
             this.txtRestPass.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtRestPass.PlaceholderText = "Contraseña";
@@ -313,7 +313,7 @@
             this.txtRestPass.SelectedText = "";
             this.txtRestPass.SelectionLength = 0;
             this.txtRestPass.SelectionStart = 0;
-            this.txtRestPass.ShortcutsEnabled = true;
+            this.txtRestPass.ShortcutsEnabled = false;
             this.txtRestPass.Size = new System.Drawing.Size(386, 41);
             this.txtRestPass.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtRestPass.TabIndex = 2;
@@ -356,7 +356,7 @@
             this.txtRest.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtRest.Lines = new string[0];
             this.txtRest.Location = new System.Drawing.Point(114, 88);
-            this.txtRest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRest.Margin = new System.Windows.Forms.Padding(2);
             this.txtRest.MaxLength = 32767;
             this.txtRest.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtRest.Modified = false;
@@ -382,7 +382,7 @@
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtRest.OnIdleState = stateProperties16;
-            this.txtRest.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRest.Padding = new System.Windows.Forms.Padding(2);
             this.txtRest.PasswordChar = '\0';
             this.txtRest.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtRest.PlaceholderText = "Usuario";
@@ -391,7 +391,7 @@
             this.txtRest.SelectedText = "";
             this.txtRest.SelectionLength = 0;
             this.txtRest.SelectionStart = 0;
-            this.txtRest.ShortcutsEnabled = true;
+            this.txtRest.ShortcutsEnabled = false;
             this.txtRest.Size = new System.Drawing.Size(386, 41);
             this.txtRest.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtRest.TabIndex = 1;
@@ -410,9 +410,12 @@
             this.ClientSize = new System.Drawing.Size(638, 418);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(654, 457);
+            this.MinimumSize = new System.Drawing.Size(654, 457);
             this.Name = "VistaRestablecerPassword";
-            this.Text = "VistaRestablecerPassword";
+            this.Text = "Restablecer contraseña del Usuario";
             this.Load += new System.EventHandler(this.VistaRestablecerPassword_Load);
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);

@@ -42,8 +42,10 @@
             this.txtUser = new Bunifu.UI.WinForms.BunifuTextBox();
             this.ptbback = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
+            this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuPanel1
@@ -56,11 +58,11 @@
             this.bunifuPanel1.BorderThickness = 1;
             this.bunifuPanel1.Controls.Add(this.lblResult);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bunifuPanel1.Location = new System.Drawing.Point(0, 246);
+            this.bunifuPanel1.Location = new System.Drawing.Point(0, 285);
             this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(694, 139);
+            this.bunifuPanel1.Size = new System.Drawing.Size(710, 139);
             this.bunifuPanel1.TabIndex = 4;
             // 
             // lblResult
@@ -76,7 +78,7 @@
             this.lblResult.Margin = new System.Windows.Forms.Padding(2);
             this.lblResult.Name = "lblResult";
             this.lblResult.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblResult.Size = new System.Drawing.Size(694, 139);
+            this.lblResult.Size = new System.Drawing.Size(710, 139);
             this.lblResult.TabIndex = 3;
             this.lblResult.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblResult.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -128,7 +130,7 @@
             this.btnEnviar.IdleIconLeftImage = null;
             this.btnEnviar.IdleIconRightImage = null;
             this.btnEnviar.IndicateFocus = false;
-            this.btnEnviar.Location = new System.Drawing.Point(214, 199);
+            this.btnEnviar.Location = new System.Drawing.Point(211, 215);
             this.btnEnviar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -179,7 +181,7 @@
             this.bunifuPictureBox1.BorderRadius = 54;
             this.bunifuPictureBox1.Image = global::AgroServicios.Properties.Resources.Logo_Correo;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(283, 11);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(283, 22);
             this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(109, 109);
@@ -207,7 +209,7 @@
             this.txtUser.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtUser.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUser.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtUser.DefaultFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.DefaultText = "";
             this.txtUser.FillColor = System.Drawing.Color.White;
             this.txtUser.HideSelection = true;
@@ -217,7 +219,7 @@
             this.txtUser.IconRight = null;
             this.txtUser.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUser.Lines = new string[0];
-            this.txtUser.Location = new System.Drawing.Point(230, 133);
+            this.txtUser.Location = new System.Drawing.Point(226, 148);
             this.txtUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtUser.MaxLength = 32767;
             this.txtUser.MinimumSize = new System.Drawing.Size(1, 1);
@@ -254,7 +256,7 @@
             this.txtUser.SelectionLength = 0;
             this.txtUser.SelectionStart = 0;
             this.txtUser.ShortcutsEnabled = true;
-            this.txtUser.Size = new System.Drawing.Size(229, 35);
+            this.txtUser.Size = new System.Drawing.Size(229, 34);
             this.txtUser.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtUser.TabIndex = 0;
             this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -288,7 +290,7 @@
             this.ptbback.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ptbback.Image = global::AgroServicios.Properties.Resources.turn_left_11044726;
             this.ptbback.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.ptbback.Location = new System.Drawing.Point(11, 10);
+            this.ptbback.Location = new System.Drawing.Point(11, 11);
             this.ptbback.Margin = new System.Windows.Forms.Padding(2);
             this.ptbback.Name = "ptbback";
             this.ptbback.RoundBorders = false;
@@ -296,7 +298,8 @@
             this.ptbback.Size = new System.Drawing.Size(50, 48);
             this.ptbback.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Flat;
             this.ptbback.TabIndex = 5;
-            this.ptbback.Click += new System.EventHandler(this.ptbback_Click);
+            this.ptbback.MouseEnter += new System.EventHandler(this.ptbback_MouseEnter);
+            this.ptbback.MouseLeave += new System.EventHandler(this.ptbback_MouseLeave);
             // 
             // bunifuSeparator1
             // 
@@ -307,33 +310,55 @@
             this.bunifuSeparator1.LineColor = System.Drawing.Color.Black;
             this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.DoubleEdgeFaded;
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(74, 168);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(70, 188);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator1.Size = new System.Drawing.Size(566, 21);
             this.bunifuSeparator1.TabIndex = 27;
             // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.BorderRadius = 1;
+            this.bunifuGradientPanel1.Controls.Add(this.ptbback);
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuPictureBox1);
+            this.bunifuGradientPanel1.Controls.Add(this.txtUser);
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuSeparator1);
+            this.bunifuGradientPanel1.Controls.Add(this.btnEnviar);
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.DeepSkyBlue;
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.DeepSkyBlue;
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(710, 424);
+            this.bunifuGradientPanel1.TabIndex = 28;
+            // 
             // VistaForEmail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(694, 385);
-            this.Controls.Add(this.bunifuSeparator1);
-            this.Controls.Add(this.ptbback);
+            this.ClientSize = new System.Drawing.Size(710, 424);
             this.Controls.Add(this.bunifuPanel1);
-            this.Controls.Add(this.btnEnviar);
-            this.Controls.Add(this.bunifuPictureBox1);
-            this.Controls.Add(this.txtUser);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Controls.Add(this.bunifuGradientPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(710, 424);
+            this.MinimumSize = new System.Drawing.Size(710, 424);
             this.Name = "VistaForEmail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VistaForEmail";
+            this.Text = "Recuperar usuario - Correo";
             this.Load += new System.EventHandler(this.VistaForEmail_Load);
             this.bunifuPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
+            this.bunifuGradientPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -346,5 +371,6 @@
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         public Bunifu.UI.WinForms.BunifuButton.BunifuIconButton ptbback;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
+        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
     }
 }

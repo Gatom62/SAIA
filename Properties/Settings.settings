@@ -1,7 +1,30 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AgroServicios.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="db_aab115_siasbaseConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=SQL8006.site4now.net;Initial Catalog=db_aab115_siasbase;Persist Security Info=True;User ID=db_aab115_siasbase_admin;Password=MichI#12@3;Encrypt=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=SQL8006.site4now.net;Initial Catalog=db_aab115_siasbase;Persist Security Info=True;User ID=db_aab115_siasbase_admin;Password=MichI#12@3;Encrypt=True</Value>
+    </Setting>
+    <Setting Name="db_aace33_basesaias2ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=SQL8020.site4now.net;Initial Catalog=db_aace33_basesaias2;Persist Security Info=True;User ID=db_aace33_basesaias2_admin;Password=MichI123;Encrypt=False&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=SQL8020.site4now.net;Initial Catalog=db_aace33_basesaias2;Persist Security Info=True;User ID=db_aace33_basesaias2_admin;Password=MichI123;Encrypt=False</Value>
+    </Setting>
+    <Setting Name="db_aace33_saias3ConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=SQL8020.site4now.net;Initial Catalog=db_aace33_saias3;Persist Security Info=True;User ID=db_aace33_saias3_admin;Password=MichI123;TrustServerCertificate=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=SQL8020.site4now.net;Initial Catalog=db_aace33_saias3;Persist Security Info=True;User ID=db_aace33_saias3_admin;Password=MichI123;TrustServerCertificate=True</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

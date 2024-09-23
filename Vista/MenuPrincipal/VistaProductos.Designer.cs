@@ -60,10 +60,10 @@
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel1);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1028, 64);
+            this.bunifuPanel1.Size = new System.Drawing.Size(1371, 79);
             this.bunifuPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -80,11 +80,11 @@
             this.tableLayoutPanel1.Controls.Add(this.Productos, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1028, 64);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1371, 79);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -93,14 +93,14 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.txtBuscarP, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(330, 2);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(439, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(500, 60);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(666, 75);
             this.tableLayoutPanel2.TabIndex = 29;
             // 
             // txtBuscarP
@@ -135,8 +135,8 @@
             this.txtBuscarP.IconRight = null;
             this.txtBuscarP.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscarP.Lines = new string[0];
-            this.txtBuscarP.Location = new System.Drawing.Point(2, 11);
-            this.txtBuscarP.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscarP.Location = new System.Drawing.Point(3, 13);
+            this.txtBuscarP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBuscarP.MaxLength = 32767;
             this.txtBuscarP.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtBuscarP.Modified = false;
@@ -162,7 +162,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtBuscarP.OnIdleState = stateProperties4;
-            this.txtBuscarP.Padding = new System.Windows.Forms.Padding(2);
+            this.txtBuscarP.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBuscarP.PasswordChar = '\0';
             this.txtBuscarP.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtBuscarP.PlaceholderText = "Buscar";
@@ -172,7 +172,7 @@
             this.txtBuscarP.SelectionLength = 0;
             this.txtBuscarP.SelectionStart = 0;
             this.txtBuscarP.ShortcutsEnabled = true;
-            this.txtBuscarP.Size = new System.Drawing.Size(496, 38);
+            this.txtBuscarP.Size = new System.Drawing.Size(660, 48);
             this.txtBuscarP.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtBuscarP.TabIndex = 1;
             this.txtBuscarP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -187,23 +187,25 @@
             // 
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 56F));
             this.tableLayoutPanel3.Controls.Add(this.pictureBox1, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(835, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(1112, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(149, 58);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(199, 71);
             this.tableLayoutPanel3.TabIndex = 31;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::AgroServicios.Properties.Resources.Caja;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(60, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 52);
+            this.pictureBox1.Size = new System.Drawing.Size(79, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
@@ -211,15 +213,15 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = global::AgroServicios.Properties.Resources.Lupa_1;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(291, 13);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(386, 16);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 37);
+            this.button1.Size = new System.Drawing.Size(47, 46);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -229,10 +231,9 @@
             this.Productos.AutoSize = true;
             this.Productos.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Productos.ForeColor = System.Drawing.Color.White;
-            this.Productos.Location = new System.Drawing.Point(36, 11);
-            this.Productos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Productos.Location = new System.Drawing.Point(56, 15);
             this.Productos.Name = "Productos";
-            this.Productos.Size = new System.Drawing.Size(184, 41);
+            this.Productos.Size = new System.Drawing.Size(230, 49);
             this.Productos.TabIndex = 0;
             this.Productos.Text = "Productos";
             // 
@@ -242,22 +243,22 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 64);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 79);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1028, 254);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1371, 313);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // VistaProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 318);
+            this.ClientSize = new System.Drawing.Size(1371, 391);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.bunifuPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "VistaProductos";
-            this.Text = "VistaProductos";
             this.Load += new System.EventHandler(this.VistaProductos_Load);
             this.bunifuPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

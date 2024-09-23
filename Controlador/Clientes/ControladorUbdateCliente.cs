@@ -1,10 +1,14 @@
 ﻿using AgroServicios.Modelo.DAO;
 using AgroServicios.Vista.Clientes;
+using AgroServicios.Vista.Login;
+using AgroServicios.Vista.Notificación;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
@@ -15,7 +19,7 @@ namespace AgroServicios.Controlador.Clientes
     {
         VistaUbdateCliente ObjUbdateCliente;
         private int accion;
-        bool berificacion;
+        bool verificacion;
 
         public ControladorUbdateCliente(VistaUbdateCliente Vista, int accion,int id, string Name, string telefono, string correo, string direccion, string dui)
         {
@@ -27,7 +31,33 @@ namespace AgroServicios.Controlador.Clientes
 
             ObjUbdateCliente.btnUbdateCliente.Click += new EventHandler(ActualizarRegistro);
         }
+        void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
+        {
 
+            AlertExito frm = new AlertExito();
+
+            frm.BackColorAlert = backcolor;
+
+            frm.ColorAlertBox = color;
+
+            frm.TittlAlertBox = title;
+
+            frm.TextAlertBox = text;
+
+            frm.IconeAlertBox = icon;
+
+            frm.ShowDialog();
+        }
+        void MandarValoresAlerta(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            MessagePersonal message = new MessagePersonal();
+            message.BackColorAlert = backcolor;
+            message.ColorAlertBox = color;
+            message.TittlAlertBox = title;
+            message.TextAlertBox = text;
+            message.IconeAlertBox = icon;
+            message.ShowDialog();
+        }
         public void verificarAccion()
         {
             if (accion == 2)
@@ -37,7 +67,7 @@ namespace AgroServicios.Controlador.Clientes
                 ObjUbdateCliente.txtUbdateCorreoCliente.Enabled = false;
                 ObjUbdateCliente.txtUbdateTelefonoCliente.Enabled = false;
                 ObjUbdateCliente.txtUbdateDireccionCliente.Enabled = false;
-                ObjUbdateCliente.maskedUbdateDui.Enabled = false;
+                ObjUbdateCliente.masDUIUbdate.Enabled = false;
             }
         }
 
@@ -48,47 +78,132 @@ namespace AgroServicios.Controlador.Clientes
             ObjUbdateCliente.txtUbdateTelefonoCliente.Text = telefono;
             ObjUbdateCliente.txtUbdateCorreoCliente.Text = correo;
             ObjUbdateCliente.txtUbdateDireccionCliente.Text = direccion;
-            ObjUbdateCliente.maskedUbdateDui.Text = dui;
+            ObjUbdateCliente.masDUIUbdate.Text = dui;
         }
 
         private void ActualizarRegistro(object sender, EventArgs e)
         {
+            // Validar que los campos obligatorios no estén vacíos
             if (string.IsNullOrWhiteSpace(ObjUbdateCliente.txtUbdateNombreCliente.Text) ||
                 string.IsNullOrWhiteSpace(ObjUbdateCliente.txtUbdateTelefonoCliente.Text) ||
                 string.IsNullOrWhiteSpace(ObjUbdateCliente.txtUbdateCorreoCliente.Text) ||
                 string.IsNullOrWhiteSpace(ObjUbdateCliente.txtUbdateDireccionCliente.Text) ||
-                string.IsNullOrWhiteSpace(ObjUbdateCliente.maskedUbdateDui.Text))
+                string.IsNullOrWhiteSpace(ObjUbdateCliente.masDUIUbdate.Text))
             {
-                MessageBox.Show("Se han dejado espacios sin llenar",
-                                "Error de actualización",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay campos bacios", Properties.Resources.MensajeWarning);
                 return;
             }
 
-            DAOClientes DaoUpdate = new DAOClientes();
-            DaoUpdate.IdCliente = int.Parse(ObjUbdateCliente.txtid.Text.Trim());
-            DaoUpdate.Nombre1 = ObjUbdateCliente.txtUbdateNombreCliente.Text.Trim();
-            DaoUpdate.Telefono1 = ObjUbdateCliente.txtUbdateTelefonoCliente.Text.Trim();
-            DaoUpdate.Correo1 = ObjUbdateCliente.txtUbdateCorreoCliente.Text.Trim();
-            DaoUpdate.Dirreccion1 = ObjUbdateCliente.txtUbdateDireccionCliente.Text.Trim();
-            DaoUpdate.DUI1 = ObjUbdateCliente.maskedUbdateDui.Text;
-            int valorRetornado = DaoUpdate.ActualizarCliente();
-
-            if (valorRetornado == 1)
+            string nombreCliente = ObjUbdateCliente.txtUbdateNombreCliente.Text.Trim();
+            // Validar que el nombre solo contenga letras y no exceda 65 caracteres
+            if (!ValidarLetra(nombreCliente) || !ValidarNombre(nombreCliente))
             {
-                MessageBox.Show("Los datos han sido actualizados exitosamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El nombre nombre tiene numeros o tiene más de 50 letras", Properties.Resources.MensajeWarning);
+                return;
+            }
+
+            if (!ValidarTelefono(ObjUbdateCliente.txtUbdateTelefonoCliente.Text.Trim()))
+            {
+                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El telefono debe de ser de El Salvador", Properties.Resources.MensajeWarning);
+                return;
+            }
+
+            // Validar el formato y cantidad del correo solo si se ingresó uno
+            string correoCliente = ObjUbdateCliente.txtUbdateCorreoCliente.Text.Trim();
+            if (!ValidarCorreo(correoCliente) || !ValidarCorreoCantidad(correoCliente))
+            {
+                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Falta el @ o el dominio del correo o hay mas de 75 caragteres en el corréo", Properties.Resources.MensajeWarning);
+                return;
+            }
+
+            if (!ValidarDireccion(ObjUbdateCliente.txtUbdateDireccionCliente.Text.Trim()))
+            {
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 100 caragteres en la dirección", Properties.Resources.MensajeWarning);
+                return;
+            }
+
+            // Validar el formato del DUI 
+            if (!ValidarDUI(ObjUbdateCliente.masDUIUbdate.Text))
+            {
+                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Hay menos de 8 numeros en el dui", Properties.Resources.MensajeWarning);
+                return;
+            }
+
+            DAOClientes dAOClientes = new DAOClientes();
+            // Asignar los valores a las propiedades del objeto DaoUpdate
+            dAOClientes.IdCliente = int.Parse(ObjUbdateCliente.txtid.Text.Trim());
+            dAOClientes.Nombre1 = ObjUbdateCliente.txtUbdateNombreCliente.Text.Trim();
+            dAOClientes.Telefono1 = ObjUbdateCliente.txtUbdateTelefonoCliente.Text.Trim();
+            dAOClientes.Correo1 = ObjUbdateCliente.txtUbdateCorreoCliente.Text.Trim();
+            dAOClientes.Dirreccion1 = ObjUbdateCliente.txtUbdateDireccionCliente.Text.Trim();
+            dAOClientes.DUI1 = ObjUbdateCliente.masDUIUbdate.Text.Trim();
+            // Realizar la actualización del cliente
+            int valoRetornado = dAOClientes.ActualizarCliente();
+            if (valoRetornado > 0)
+            {
+                MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "El cliente fue actualizado", Properties.Resources.comprobado);
+                VistaLogin backForm = new VistaLogin();
                 ObjUbdateCliente.Close();
             }
             else
             {
-                MessageBox.Show("Los datos no pudieron ser actualizados",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el cliente no se este duplicando", Properties.Resources.ErrorIcono);
+                VistaLogin backForm = new VistaLogin();
+            }
+
+            bool ValidarCorreo(string email)
+            {
+                string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$|^[xX]{8}$"; // Formato básico de correo
+                return Regex.IsMatch(email, pattern);
+            }
+
+            // Método que valida si un carácter es una letra
+            bool ValidarLetra(string texto)
+            {
+                foreach (char c in texto)
+                {
+                    if (!char.IsLetter(c) && !char.IsWhiteSpace(c)) // Permite espacios
+                    {
+                        return false; // Si encuentra un carácter no válido, retorna false
+                    }
+                }
+                return true; // Si todos los caracteres son válidos, retorna true
+            }
+
+            // Método para validar el formato del DUI
+            bool ValidarDUI(string dui)
+            {
+                // Expresión regular para verificar 8 dígitos seguidos de un guion y luego 1 dígito
+                string pattern = @"^\d{8}-\d$";
+                if (!Regex.IsMatch(dui, pattern))
+                {
+                    return false;
+                }
+                return true;
+            }
+
+            bool ValidarTelefono(string phoneNumber)
+            {
+                string pattern = @"^[267]\d{7}$|^[xX]{8}$"; // Permite 8 dígitos empezando con 2, 6, o 7, o 8 'x'
+                return Regex.IsMatch(phoneNumber, pattern);
+            }
+
+            // Método para validar que el nombre del cliente no exceda los 50 caracteres
+            bool ValidarNombre(string nombre)
+            {
+                return nombre.Length <= 50;
+            }
+
+            // Método para validar la direccion del cliente la cual no exceda los 250 caracteres
+            bool ValidarDireccion(string direccion)
+            {
+                return direccion.Length <= 250;
+            }
+
+            // Método para validar que el nombre del proceedor no exceda los 25 caracteres
+            bool ValidarCorreoCantidad(string nombre)
+            {
+                return nombre.Length <= 75;
             }
         }
     }

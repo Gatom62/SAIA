@@ -7,6 +7,8 @@ using System.Data;
 using System.Web.UI.WebControls.WebParts;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using AgroServicios.Vista.Notificación;
+using System.Drawing;
 
 namespace AgroServicios.Controlador.CuentasContralador
 {
@@ -232,29 +234,41 @@ namespace AgroServicios.Controlador.CuentasContralador
 
             int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
 
-            if (MessageBox.Show($"¿Seguro que deseas eliminar a: {ObjEmpleados.GriewEmpleados[1, pos].Value.ToString()} La eliminación sera permanente.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            // Confirmación de la eliminación del empleado
+            if (MessageBox.Show($"¿Seguro que deseas eliminar a: {ObjEmpleados.GriewEmpleados[1, pos].Value.ToString()}? La eliminación será permanente.",
+                                "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                // Crear la instancia del DAO para eliminar el empleado
                 DAOAdminUsers daodelete = new DAOAdminUsers();
                 daodelete.IdEmpleado = int.Parse(ObjEmpleados.GriewEmpleados[0, pos].Value.ToString());
                 daodelete.Usuario1 = ObjEmpleados.GriewEmpleados[7, pos].Value.ToString();
-                int valorretornado = daodelete.DeteleEmpleado();
+
+                // Llamada al método de eliminación
+                int valorretornado = daodelete.DeleteEmpleado();
+
+                // Evaluación de los diferentes resultados
                 if (valorretornado > 0)
                 {
-                    MessageBox.Show("Empleado eliminado", "Se ha eliminado correctamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    RefrescarData();
+                    MessageBox.Show("Empleado eliminado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    RefrescarData(); // Refrescar los datos después de la eliminación exitosa
                 }
                 else if (valorretornado == -2)
                 {
-                    MessageBox.Show("No se ha podido eliminar el empleado/usuario", "Eliminación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se ha podido eliminar el empleado o el usuario asociado.", "Eliminación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     RefrescarData();
+                }
+                else if (valorretornado == -1)
+                {
+                    MessageBox.Show("Ocurrió un error inesperado durante la eliminación, esto puede deberse a que este empleado tiene asociado datos en otros registros.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("No se ha podido eliminar el empleado", "Eliminación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El empleado no se ha podido eliminar.", "Eliminación fallida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     RefrescarData();
                 }
             }
         }
+
         private void PreguntasEmpAct(object sender, EventArgs e)
         {
             if (ObjEmpleados.GriewEmpleados.CurrentRow == null)

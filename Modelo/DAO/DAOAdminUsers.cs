@@ -190,62 +190,54 @@ namespace AgroServicios.Modelo.DAO
         }
 
 
-        public int DeteleEmpleado()
+        public int DeleteEmpleado()
         {
+            SqlTransaction transaction = null;
             try
             {
                 Command.Connection = getConnection();
+                transaction = Command.Connection.BeginTransaction();
 
                 string query = "DELETE Empleados WHERE idEmpleado = @param1";
-
-                SqlCommand cmd = new SqlCommand(query, Command.Connection);
-
+                SqlCommand cmd = new SqlCommand(query, Command.Connection, transaction);
                 cmd.Parameters.AddWithValue("param1", IdEmpleado);
-
                 int respuesta = cmd.ExecuteNonQuery();
-
                 if (respuesta > 0)
                 {
                     string query1 = "DELETE FROM RespuestasSeguridad WHERE Usuario = @param3";
-
-                    SqlCommand cmd2 = new SqlCommand(query1, Command.Connection);
-
+                    SqlCommand cmd2 = new SqlCommand(query1, Command.Connection, transaction);
                     cmd2.Parameters.AddWithValue("param3", Usuario1);
-
                     int respuestav2 = cmd2.ExecuteNonQuery();
+                    // No verificamos si respuestav2 > 0, ya que puede no haber respuestas de seguridad
 
-
-                    if (respuestav2 > 0)
+                    string query3 = "DELETE FROM Usuarios WHERE Usuario = @param2";
+                    SqlCommand cmd3 = new SqlCommand(query3, Command.Connection, transaction);
+                    cmd3.Parameters.AddWithValue("param2", Usuario1);
+                    int respuestav3 = cmd3.ExecuteNonQuery();
+                    if (respuestav3 > 0)
                     {
-                        string query3 = "DELETE FROM Usuarios WHERE Usuario = @param2";
-
-                        SqlCommand cmd3 = new SqlCommand(query3, Command.Connection);
-
-                        cmd3.Parameters.AddWithValue("param2", Usuario1);
-
-                        int respuestav3 = cmd3.ExecuteNonQuery();
-
-                        if (respuestav3 > 0)
-                        {
-                            return respuestav3;
-                        }
-                        else
-                        {
-                            return 0;
-                        }
+                        transaction.Commit();
+                        return respuestav3;
                     }
                     else
                     {
+                        transaction.Rollback();
                         return 0;
                     }
                 }
                 else
                 {
+                    transaction.Rollback();
                     return -2;
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                if (transaction != null)
+                {
+                    transaction.Rollback();
+                }
+                Console.WriteLine("Error al eliminar empleado: " + ex.Message);
                 return -1;
             }
             finally

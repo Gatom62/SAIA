@@ -33,12 +33,31 @@ namespace AgroServicios.Vista.Estadisticas
             }
             if (ControladorTema.IsDarkMode == true)
             {
-                bunifuGradientPanel2.GradientBottomLeft = Color.FromArgb(118, 88, 152);
-                bunifuGradientPanel2.GradientTopRight = Color.FromArgb(118, 88, 152);
-                bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(34, 36, 49);
-                bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(34, 36, 49);
-                bunifuPanel1.BackgroundColor = Color.FromArgb(34, 36, 49);
+                this.BackColor = Color.FromArgb(34, 36, 49);
+                btnAgregarProv.IdleFillColor = Color.DarkBlue;
+                btnAgregarProv.onHoverState.FillColor = Color.DarkViolet;
+                btnAgregarProv.onHoverState.BorderColor = Color.DarkViolet;
+                btnAgregarProv.OnPressedState.FillColor = Color.DodgerBlue;
+                btnAgregarProv.OnPressedState.BorderColor = Color.DodgerBlue;
+                btnAgregarProv.DisabledFillColor = Color.DarkViolet;
+
+                btnAgregarProv.DisabledFillColor = Color.FromArgb(118, 88, 152);
+                btnAgregarProv.ForeColor = Color.White;
+
+                pnEstructura.BackgroundColor = Color.WhiteSmoke;
+
+                txtNewFirstName.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtNewFirstName.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtNewCorreo.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtNewCorreo.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtNewPhone.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtNewPhone.BorderColorActive = Color.FromArgb(211, 41, 15);
             }
+        }
+
+        private void bunifuToolTip1_Popup(object sender, BunifuToolTip.PopupEventArgs e)
+        {
+
         }
     }
 }

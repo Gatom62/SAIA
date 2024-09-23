@@ -143,6 +143,26 @@ namespace AgroServicios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calendario {
+            get {
+                object obj = ResourceManager.GetObject("calendario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calendario1 {
+            get {
+                object obj = ResourceManager.GetObject("calendario1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Captura_de_pantalla_2024_09_01_092302 {
             get {
                 object obj = ResourceManager.GetObject("Captura de pantalla 2024-09-01 092302", resourceCulture);
@@ -203,6 +223,26 @@ namespace AgroServicios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap comprobado {
+            get {
+                object obj = ResourceManager.GetObject("comprobado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dar_dinero {
+            get {
+                object obj = ResourceManager.GetObject("dar-dinero", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Delete {
             get {
                 object obj = ResourceManager.GetObject("Delete", resourceCulture);
@@ -211,9 +251,28 @@ namespace AgroServicios.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DUIPng {
+            get {
+                object obj = ResourceManager.GetObject("DUIPng", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ErrorIcono {
+            get {
+                object obj = ResourceManager.GetObject("ErrorIcono", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a &lt;html&gt;
         ///&lt;head&gt;
-        ///    
         ///    &lt;title&gt;Factura&lt;/title&gt;
         ///    &lt;style&gt;
         ///        body {
@@ -232,7 +291,7 @@ namespace AgroServicios.Properties {
         ///
         ///        .header {
         ///            background-color: #40E0D0;
-        ///    [resto de la cadena truncado]&quot;;.
+        ///          [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string Factura_Plantilla {
             get {
@@ -343,6 +402,36 @@ namespace AgroServicios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_base2 {
+            get {
+                object obj = ResourceManager.GetObject("Logo base2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_base21 {
+            get {
+                object obj = ResourceManager.GetObject("Logo base21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_base22 {
+            get {
+                object obj = ResourceManager.GetObject("Logo base22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_Candado {
             get {
                 object obj = ResourceManager.GetObject("Logo Candado", resourceCulture);
@@ -383,6 +472,16 @@ namespace AgroServicios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_de_reporte {
+            get {
+                object obj = ResourceManager.GetObject("Logo de reporte", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_telefono {
             get {
                 object obj = ResourceManager.GetObject("Logo telefono", resourceCulture);
@@ -406,6 +505,36 @@ namespace AgroServicios.Properties {
         internal static System.Drawing.Bitmap Lupa_1 {
             get {
                 object obj = ResourceManager.GetObject("Lupa 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] Manual_de_SAIA_1_2 {
+            get {
+                object obj = ResourceManager.GetObject("Manual_de_SAIA_1_2", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MensajeWarning {
+            get {
+                object obj = ResourceManager.GetObject("MensajeWarning", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap monedas {
+            get {
+                object obj = ResourceManager.GetObject("monedas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -436,6 +565,56 @@ namespace AgroServicios.Properties {
         internal static System.Drawing.Bitmap Rectangle_32 {
             get {
                 object obj = ResourceManager.GetObject("Rectangle 32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Report {
+            get {
+                object obj = ResourceManager.GetObject("Report", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Report__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Report (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Report__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Report (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Report1 {
+            get {
+                object obj = ResourceManager.GetObject("Report1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Report2 {
+            get {
+                object obj = ResourceManager.GetObject("Report2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

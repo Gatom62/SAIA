@@ -1,5 +1,7 @@
 ﻿using AgroServicios.Controlador;
 using AgroServicios.Controlador.Helper;
+using AgroServicios.Controlador.Login;
+using AgroServicios.Modelo.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +19,7 @@ namespace AgroServicios.Vista.MenuPrincipal
         public VistaZoomProduct()
         {
             InitializeComponent();
+            ControladorZoom controladorZoom = new ControladorZoom(this);
         }
 
         private void VistaZoomProduct_Load(object sender, EventArgs e)
@@ -24,37 +27,37 @@ namespace AgroServicios.Vista.MenuPrincipal
             if (ControladorTema.IsDarkMode == true)
             {
                 this.BackColor = Color.FromArgb(50, 56, 62);
-                bunifuPanel2.BackgroundColor = Color.FromArgb(147, 231, 64);
-                lblcodigo.ForeColor = Color.Black;
-                lbldescripcion.ForeColor = Color.Black;
+                lblcodigo.ForeColor = Color.White;
                 lblname.ForeColor = Color.White;
-                lblprecio.ForeColor = Color.Black;
+                lblprecio.ForeColor = Color.White;
                 btnadd.IdleFillColor = Color.DarkViolet;
                 btnadd.ForeColor = Color.White;
+                lbCaragteristica.ForeColor = Color.White;
+                lbCodigoProducto.ForeColor = Color.White;
+                lbPrecioProducto.ForeColor = Color.White;
+                lbCantidad.ForeColor = Color.White;
             }
         }
 
-        private void btnadd_Click(object sender, EventArgs e)
+        private void btnadd_Click_1(object sender, EventArgs e)
         {
             if (numericUpDown1.Value > 0)
             {
                 // Datos del producto a añadir
                 string producto = lblname.Text;
-                int cantidad = int.Parse(numericUpDown1.Value.ToString());
+                int cantidad = (int)numericUpDown1.Value;
                 decimal precioUnitario = decimal.Parse(lblprecio.Text, System.Globalization.NumberStyles.Currency);
                 decimal precioTotal = cantidad * precioUnitario;
 
                 // Usa el controlador para agregar el producto al carrito
                 VistaCarrito.Instance.ControladorCarrito.AgregarProductoAlCarrito(producto, cantidad, precioUnitario, precioTotal);
 
-
                 // Mensaje o notificación de que el producto se ha añadido
-                MessageBox.Show("Producto añadido al carrito", "Se agrego el producto correctamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 numericUpDown1.Value = 0;
             }
             else
             {
-                MessageBox.Show("La cantidad de productos debe ser mayor a cero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La cantidad de productos debe ser mayor a cero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

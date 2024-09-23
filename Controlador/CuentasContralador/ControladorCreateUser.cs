@@ -1,6 +1,7 @@
 ﻿using AgroServicios.Modelo.DAO;
 using AgroServicios.Vista.Cuentas;
 using AgroServicios.Vista.Login;
+using AgroServicios.Vista.Notificación;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -37,6 +38,36 @@ namespace AgroServicios.Controlador.CuentasContralador
             ObjUsers.btnCrearUsuario.Click += new EventHandler(NuevoRegistro);
             ObjUsers.cmsimgsubir.Click += AgregarImagen;
         }
+        void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
+
+        {
+
+            AlertExito frm = new AlertExito();
+
+            frm.BackColorAlert = backcolor;
+
+            frm.ColorAlertBox = color;
+
+            frm.TittlAlertBox = title;
+
+            frm.TextAlertBox = text;
+
+            frm.IconeAlertBox = icon;
+
+            frm.ShowDialog();
+
+        }
+
+        void MandarValoresAlerta(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            MessagePersonal message = new MessagePersonal();
+            message.BackColorAlert = backcolor;
+            message.ColorAlertBox = color;
+            message.TittlAlertBox = title;
+            message.TextAlertBox = text;
+            message.IconeAlertBox = icon;
+            message.ShowDialog();
+        }
         void AgregarImagen(object sender, EventArgs e)
         {
             // Crea una instancia del cuadro de diálogo para seleccionar archivos.
@@ -69,10 +100,6 @@ namespace AgroServicios.Controlador.CuentasContralador
             {
                 ObjUsers.DropRole.Enabled = false;
                 ObjUsers.LabelPrin.Text = "Creación de primer usuario";
-                ObjUsers.bunifuGradientPanel2.GradientBottomLeft = Color.FromArgb(34, 36, 49);
-                ObjUsers.bunifuGradientPanel2.GradientTopRight = Color.FromArgb(34,36,49);
-                ObjUsers.bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(88, 118, 152);
-                ObjUsers.bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(88, 118, 152);
                 DAOAdminUsers objAdmin = new DAOAdminUsers();
                 //Declarando nuevo DataSet para que obtenga los datos del metodo LlenarCombo
                 DataSet ds = objAdmin.LlenarCombo();
@@ -109,81 +136,63 @@ namespace AgroServicios.Controlador.CuentasContralador
             if (string.IsNullOrWhiteSpace(ObjUsers.txtNewFirstName.Text) ||
                 string.IsNullOrWhiteSpace(ObjUsers.txtNewPhone.Text) ||
                 string.IsNullOrWhiteSpace(ObjUsers.txtNewCorreo.Text) ||
-                string.IsNullOrWhiteSpace(ObjUsers.maskedDui.Text) ||
+                string.IsNullOrWhiteSpace(ObjUsers.maskDui.Text) ||
                 string.IsNullOrWhiteSpace(ObjUsers.txtNewDireccion.Text) ||
                 string.IsNullOrWhiteSpace(ObjUsers.txtNewUser.Text) ||
                 string.IsNullOrWhiteSpace(ObjUsers.txtNewPassword.Text) ||
                 ObjUsers.DropRole.SelectedValue == null)
             {
-                MessageBox.Show("Todos los campos son obligatorios.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay campos sin llenar", Properties.Resources.MensajeWarning);
+                return;
+            }
+            //Validamos que en el nombre del usuario que el manager ingrese o empleado no exeda los 50 caeagteres de longitud
+            if (!ValidarUsuario(ObjUsers.txtNewUser.Text))
+            {
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 50 caragteres en el usuario", Properties.Resources.MensajeWarning);
                 return;
             }
 
-            if (!ValidarLetra(ObjUsers.txtNewFirstName.Text))
+            string nombreCliente = ObjUsers.txtNewFirstName.Text.Trim();
+            // Validar que el nombre solo contenga letras y no exceda 65 caracteres
+            if (!ValidarLetra(nombreCliente) || !ValidarNombre(nombreCliente))
             {
-                MessageBox.Show("No se pude ingresar numeros en el nombre del empleado", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El nombre nombre tiene numeros o tiene más de 65 letras", Properties.Resources.MensajeWarning);
+                return;
             }
 
-            // Validar que el nombre del empleado no exceda 65 caracteres
-            if (!ValidarNombre(ObjUsers.txtNewFirstName.Text))
+            // Validar que la contraseña del empleado no exceda 100 caracteres
+            if (!ValidarContraseña(ObjUsers.txtNewPassword.Text))
             {
-                MessageBox.Show("El nombre del empleado no debe exceder los 65 caracteres.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "La contraseña debe tener al menos 8 caracteres", Properties.Resources.MensajeWarning);
+                return;
+            }
+
+            // Validar el formato del número de teléfono y que este tenga las caragteristicas de un numero de telefono salvadoreño
+            if (!ValidarTelefono(ObjUsers.txtNewPhone.Text))
+            {
+                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El telefono debe de ser de El Salvador", Properties.Resources.MensajeWarning);
+                return;
+            }
+
+            // Validar el formato y cantidad del correo solo si se ingresó uno
+            string correoCliente = ObjUsers.txtNewCorreo.Text.Trim();
+            if (!ValidarCorreo(correoCliente) || !ValidarCorreoCantidad(correoCliente))
+            {
+                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Falta el @ o el dominio del correo o hay mas de 75 caragteres en el corréo", Properties.Resources.MensajeWarning);
                 return;
             }
 
             // Validar que la direccion del empleado no exeda los 150 caracteres
             if (!ValidarDireccion(ObjUsers.txtNewDireccion.Text))
             {
-                MessageBox.Show("El nombre del empleadp no debe exceder los 150 caracteres.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 150 caragteres en la dirección", Properties.Resources.MensajeWarning);
                 return;
             }
 
-            // Validar el formato del número de teléfono
-            if (!ValidarTelefono(ObjUsers.txtNewPhone.Text))
+            // Validar el formato del DUI y que este no tenga menos de 8 numeros
+            if (!ValidarDUI(ObjUsers.maskDui.Text))
             {
-                MessageBox.Show("El formato del número de teléfono es incorrecto. Debe ser +XXX XXXX-XXXX o XXXX-XXXX.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                return;
-            }
-
-            // Validar que el telefono del empleado no exceda 25 caracteres
-            if (!ValidarTelefonoCantidad(ObjUsers.txtNewPhone.Text))
-            {
-                MessageBox.Show("El nombre del empleado no debe exceder los 25 caracteres.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                return;
-            }
-
-            // Validar que el coreo del empleado no exceda los 75 caracteres
-            if (!ValidarCorreoCantidad(ObjUsers.txtNewCorreo.Text))
-            {
-                MessageBox.Show("El nombre del empleado no debe exceder los 75 caracteres.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                return;
-            }
-
-            // Validar que el DUI contenga solo números
-            if (!ValidarDUI(ObjUsers.maskedDui.Text))
-            {
-                MessageBox.Show("El DUI solo debe contener números.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Hay menos de 8 numeros en el dui", Properties.Resources.MensajeWarning);
                 return;
             }
 
@@ -195,12 +204,11 @@ namespace AgroServicios.Controlador.CuentasContralador
 
             if (edad < 18)
             {
-                MessageBox.Show("La fecha de nacimiento debe ser mayor de 18 años.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El usuario debe de ser mayor de 18 años", Properties.Resources.MensajeWarning);
                 return;
             }
+
+            //Declaramos que el usuario puede tener una imagen nula, es decir, puede si o no ponerse una imagen de perfil
 
             // Declara una variable byte[] llamada imageBytes y la inicializa como null.
             // Esta variable almacenará los bytes de la imagen si hay una imagen en el PictureBox.
@@ -223,35 +231,31 @@ namespace AgroServicios.Controlador.CuentasContralador
                 }
             }
 
-
+            //Realizamos el proceso de inserción
             DAOAdminUsers DaoInsert = new DAOAdminUsers();
             Encryp ObjEncriptar = new Encryp();
-
             // Asignar los valores a las propiedades
             DaoInsert.Img = imageBytes;
             DaoInsert.Nombre1 = ObjUsers.txtNewFirstName.Text.Trim();
             DaoInsert.FechaDeNacimiento1 = fechaNacimiento;
             DaoInsert.Telefono1 = ObjUsers.txtNewPhone.Text.Trim();
             DaoInsert.Correo1 = ObjUsers.txtNewCorreo.Text.Trim();
-            DaoInsert.DUI1 = ObjUsers.maskedDui.Text;
+            DaoInsert.DUI1 = ObjUsers.maskDui.Text;
             DaoInsert.Direccion1 = ObjUsers.txtNewDireccion.Text.Trim();
             DaoInsert.Usuario1 = ObjUsers.txtNewUser.Text.Trim();
             DaoInsert.Contraseña1 = ObjEncriptar.Encriptar(ObjUsers.txtNewPassword.Text);
             DaoInsert.IdCategoria = int.Parse(ObjUsers.DropRole.SelectedValue.ToString());
-
-            verificacion = ValidarCorreo();
+            //Pedimos una contestación por parte de la base de datos, si nos manda un 1 es que si se logro realizar correctamente la insercción
+            verificacion = ValidarCorreo(ObjUsers.txtNewCorreo.Text.Trim());
             if (verificacion == true)
             {
                 int valorRetornado = DaoInsert.RegistrarUsuario();
-  
                 if (valorRetornado == 1)
                 {
+                    //Mensaje de afirmacion si se pudo realizar la inserccion
                     string newUser = DaoInsert.Usuario1;
-
-                    MessageBox.Show("Los datos han sido registrados exitosamente",
-                                    "Proceso completado",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "El usuario fue registrado", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
                     ObjUsers.Close();
 
                     VistaPreguntas pre = new VistaPreguntas(newUser, 1);
@@ -259,14 +263,31 @@ namespace AgroServicios.Controlador.CuentasContralador
                 }
                 else
                 {
-                    MessageBox.Show("Los datos no pudieron ser registrados",
-                                    "Proceso interrumpido",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
+                    //Mensaje de error si se no se pudo realizar la inserccion
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el usuario no se este duplicando", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
                 }
             }
 
-            // Método que valida si un carácter es una letra
+            // Método para validar que el usuario no excede los 50 caracteres
+            bool ValidarUsuario(string usuario)
+            {
+                return usuario.Length <= 50;
+            }
+
+            bool ValidarContraseña(string contraseña)
+            {
+                // Requiere más de 8 caracteres (letras, dígitos o caracteres especiales)
+                string pattern = @"^.{9,}$";  // Acepta cualquier carácter y al menos 9 de ellos
+
+                if (!Regex.IsMatch(contraseña, pattern))
+                {
+                    return false;
+                }
+                return true;
+            }
+
+            // Método para validar que el nombre contiene solo letras y espacios
             bool ValidarLetra(string texto)
             {
                 foreach (char c in texto)
@@ -279,22 +300,30 @@ namespace AgroServicios.Controlador.CuentasContralador
                 return true; // Si todos los caracteres son válidos, retorna true
             }
 
-            // Método para validar que el nombre del empleado no exceda los 65 caracteres
+            // Método para validar que el nombre no excede los 65 caracteres
             bool ValidarNombre(string nombre)
             {
                 return nombre.Length <= 65;
             }
 
-            // Método para validar la direccion del empleado la cual no exceda los 150 caracteres
-            bool ValidarDireccion(string nombre)
+            // Método para validar que la dirección no excede los 150 caracteres
+            bool ValidarDireccion(string direccion)
             {
-                return nombre.Length <= 150;
+                return direccion.Length <= 150;
             }
 
-            // Método para validar que el telefono del cliente no exceda los 20 caracteres
-            bool ValidarTelefonoCantidad(string nombre)
+            // Método para validar el formato del número de teléfono (El Salvador)
+            bool ValidarTelefono(string telefono)
             {
-                return nombre.Length <= 25;
+                string pattern = @"^[267]\d{7}$"; // 8 dígitos, empezando con 2, 6, o 7
+                return Regex.IsMatch(telefono, pattern);
+            }
+
+            // Método para validar el formato del correo electrónico
+            bool ValidarCorreo(string email)
+            {
+                string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$"; // Formato básico de correo
+                return Regex.IsMatch(email, pattern);
             }
 
             // Método para validar que el correo del empleado no exceda los 75 caracteres
@@ -303,31 +332,17 @@ namespace AgroServicios.Controlador.CuentasContralador
                 return nombre.Length <= 75;
             }
 
+            // Método para validar el formato del DUI
             bool ValidarDUI(string dui)
             {
-                // Aquí asumimos que el DUI debe contener solo dígitos (sin guiones o espacios)
-                // Se puede ajustar según el formato requerido, por ejemplo, permitir un guion
-                string pattern = @"^\d+-?\d*$"; // Solo dígitos
-                return Regex.IsMatch(dui, pattern);
+                // Expresión regular para verificar 8 dígitos seguidos de un guion y luego 1 dígito
+                string pattern = @"^\d{8}-\d$";
+                if (!Regex.IsMatch(dui, pattern))
+                {
+                    return false;
+                }
+                return true;
             }
-        }
-
-        bool ValidarTelefono(string phoneNumber)
-        {
-            // Expresión regular para validar números de teléfono en los formatos: +XXX XXXX-XXXX o XXXX-XXXX
-            string pattern = @"^(\+\d{1,3}\s\d{4}-\d{4}|\d{4}-\d{4})$";
-            return Regex.IsMatch(phoneNumber, pattern);
-        }
-
-        bool ValidarCorreo()
-        {
-            string email = ObjUsers.txtNewCorreo.Text.Trim();
-            if (!(email.Contains("@")))
-            {
-                MessageBox.Show("Formato de correo invalido, verifica que contiene @.", "Formato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
-            }
-            return true;
         }
     }
 }

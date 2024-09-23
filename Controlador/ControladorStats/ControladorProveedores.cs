@@ -1,9 +1,12 @@
 ﻿using AgroServicios.Modelo.DAO;
 using AgroServicios.Vista.Cuentas;
 using AgroServicios.Vista.Estadisticas;
+using AgroServicios.Vista.Login;
+using AgroServicios.Vista.Notificación;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -23,18 +26,52 @@ namespace AgroServicios.Controlador.ControladorStats
         public ControladorProveedores(VistaProveedores Proveedores)
         {
             ObjProv = Proveedores;
-            ObjProv.btnAgregarProv.Click += new EventHandler(OpenVistaAgregarProveedores);
             ObjProv.Load += new EventHandler(LoadData);
-            //
+            //Evento click de botones
+            ObjProv.ptbback.Click += new EventHandler(VolverForm);
+            ObjProv.btnAgregarProv.Click += new EventHandler(OpenVistaAgregarProveedores);
             ObjProv.cmsEliminar.Click += new EventHandler(DeleteProv);
             ObjProv.cmsActualizar.Click += new EventHandler(ActualizarProv);
+            ObjProv.cmsInformación.Click += new EventHandler(InformarProv);
             ObjProv.txtBuscarP.KeyPress += new KeyPressEventHandler(Search);
+        }
+
+        void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            AlertExito frm = new AlertExito();
+
+            frm.BackColorAlert = backcolor;
+
+            frm.ColorAlertBox = color;
+
+            frm.TittlAlertBox = title;
+
+            frm.TextAlertBox = text;
+
+            frm.IconeAlertBox = icon;
+
+            frm.ShowDialog();
+        }
+        void MandarValoresAlerta(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            MessagePersonal message = new MessagePersonal();
+            message.BackColorAlert = backcolor;
+            message.ColorAlertBox = color;
+            message.TittlAlertBox = title;
+            message.TextAlertBox = text;
+            message.IconeAlertBox = icon;
+            message.ShowDialog();
         }
         private void OpenVistaAgregarProveedores(object sender, EventArgs e)
         {
             VistaAgregarProveedor vistaAgregarProveedor = new VistaAgregarProveedor();
             vistaAgregarProveedor.ShowDialog();
             RefrescarData();
+        }
+        private void VolverForm(object sender, EventArgs e)
+        {
+            // Cierra la vista actual
+            ObjProv.Close();
         }
         private void Search(object sender, KeyPressEventArgs e)
         {
@@ -63,6 +100,7 @@ namespace AgroServicios.Controlador.ControladorStats
             DAOProveedores objAdmin = new DAOProveedores();
             DataSet ds = objAdmin.ObtenerPersonas();
             ObjProv.GriewProveedores.DataSource = ds.Tables["VistaProveedoresConMarcas"];
+            ObjProv.GriewProveedores.Columns["idProveedor"].Visible = false;
             TraducirEncabezados(ObjProv.GriewProveedores);
         }
         private void DeleteProv (object sender, EventArgs e)
@@ -81,12 +119,14 @@ namespace AgroServicios.Controlador.ControladorStats
                 int valorRetornado = daoDel.EliminarProv();
                 if (valorRetornado == 1) 
                 {
-                    MessageBox.Show("Proveedor eliminado", "Se ha eliminado correctamente",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Proceso realizado", "El proveedor se elimino correctamente", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
                     RefrescarData();
                 }
                 else
                 {
-                    MessageBox.Show("Eliminación fallida", "No se ha podido eliminar el proveedor", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique si el proveedor esta asociado a otros registros", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
                 }
             }
         }
@@ -109,9 +149,31 @@ namespace AgroServicios.Controlador.ControladorStats
             email = ObjProv.GriewProveedores[4, pos].Value.ToString();
             marca = ObjProv.GriewProveedores[5, pos].Value.ToString();
             
-
-
             VistaActualizarProveedor vistaUpdate = new VistaActualizarProveedor(1, id, Name, phone, email, Dui, marca);
+            vistaUpdate.ShowDialog();
+            RefrescarData();
+        }
+
+        private void InformarProv(object sender, EventArgs e)
+        {
+            if (ObjProv.GriewProveedores.CurrentRow == null)
+            {
+                MessageBox.Show("No se ha seleccionado ningún proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; // Salir del método si no hay ninguna fila seleccionada
+            }
+
+            int pos = ObjProv.GriewProveedores.CurrentRow.Index;
+            int id;
+            string Name, Dui, phone, email, marca;
+
+            id = int.Parse(ObjProv.GriewProveedores[0, pos].Value.ToString());
+            Name = ObjProv.GriewProveedores[1, pos].Value.ToString();
+            Dui = ObjProv.GriewProveedores[2, pos].Value.ToString();
+            phone = ObjProv.GriewProveedores[3, pos].Value.ToString();
+            email = ObjProv.GriewProveedores[4, pos].Value.ToString();
+            marca = ObjProv.GriewProveedores[5, pos].Value.ToString();
+
+            VistaActualizarProveedor vistaUpdate = new VistaActualizarProveedor(2, id, Name, phone, email, Dui, marca);
             vistaUpdate.ShowDialog();
             RefrescarData();
         }

@@ -12,6 +12,7 @@ using AgroServicios.Vista.Login;
 using AgroServicios.Controlador.Helper;
 using System.IO;
 using System.Drawing;
+using AgroServicios.Vista.Reportes.ReporteProductos;
 
 namespace AgroServicios.Controlador.MenuPrincipal
 {
@@ -35,6 +36,16 @@ namespace AgroServicios.Controlador.MenuPrincipal
             ObjMenu.btnShop.Click += new EventHandler(OpenCarrito);
             ObjMenu.btnprin2.Click += new EventHandler(OpenShop);
             ObjMenu.btnVentas.Click += new EventHandler(OpenVentas);
+            ObjMenu.btnFichaProductos.Click += new EventHandler(OpenFichaProductos);
+        }
+        private void SalirMenu(object sender, EventArgs e) 
+        {
+            ObjMenu.Close();
+        }
+        private void OpenFichaProductos(object sender, EventArgs e)
+        {
+            VistaReporteProductos reporteProductos = new VistaReporteProductos();
+            reporteProductos.ShowDialog();
         }
         private void OpenVentas(object sender, EventArgs e)
         {
@@ -129,7 +140,6 @@ namespace AgroServicios.Controlador.MenuPrincipal
                 formulario.BringToFront();
             }
         }
-
         private void OpenInicio(object sender, EventArgs e)
         {
             RestablecerPanelOriginal();

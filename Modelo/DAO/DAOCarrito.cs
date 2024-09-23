@@ -14,6 +14,47 @@ namespace AgroServicios.Modelo.DAO
     {
         SqlCommand command = new SqlCommand();
 
+        public int ObtenerStockDisponible(string producto)
+        {
+            try
+            {
+                // Abrimos la conexión a la base de datos
+                command.Connection = getConnection();
+
+                // Consulta para obtener el stock disponible del producto
+                string query = "SELECT Stock FROM Productos WHERE Nombre = @producto";
+
+                // Comando SQL con el query y la conexión
+                SqlCommand cmd = new SqlCommand(query, command.Connection);
+                cmd.Parameters.AddWithValue("@producto", producto);
+
+                // Ejecutar la consulta y obtener el resultado
+                object result = cmd.ExecuteScalar();
+
+                // Convertir el resultado a entero (el stock disponible)
+                if (result != null && int.TryParse(result.ToString(), out int stockDisponible))
+                {
+                    return stockDisponible;
+                }
+                else
+                {
+                    // Si no se encuentra el producto o el valor no es válido, devolvemos 0
+                    return 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                // En caso de error, mostramos el mensaje y devolvemos -1
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1;
+            }
+            finally
+            {
+                // Cerramos la conexión
+                command.Connection.Close();
+            }
+        }
+
         public int RegistrarVenta()
         {
             try
@@ -110,6 +151,34 @@ namespace AgroServicios.Modelo.DAO
             finally
             {
                 // Independientemente se haga o no el proceso cerramos la conexión
+                command.Connection.Close();
+            }
+        }
+        public void ActualizarStock(string producto, int cantidadVendida)
+        {
+            try
+            {
+                // Abrimos la conexión a la base de datos
+                command.Connection = getConnection();
+
+                // Consulta para actualizar el stock del producto
+                string query = "UPDATE Productos SET Stock = Stock - @cantidadVendida WHERE Nombre = @producto";
+
+                // Comando SQL con el query y la conexión
+                SqlCommand cmd = new SqlCommand(query, command.Connection);
+                cmd.Parameters.AddWithValue("@producto", producto);
+                cmd.Parameters.AddWithValue("@cantidadVendida", cantidadVendida);
+
+                // Ejecutar la consulta
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Cerramos la conexión
                 command.Connection.Close();
             }
         }

@@ -24,6 +24,13 @@ namespace AgroServicios.Controlador.MenuPrincipal
         {
             try
             {
+                // Validar que la fecha de inicio no sea mayor que la fecha final
+                if (objfecha.dtpinicio.Value.Date > objfecha.dtpfinal.Value.Date)
+                {
+                    MessageBox.Show("La fecha de inicio no puede ser mayor que la fecha final.", "Error de fechas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 // Crear una instancia del DAO y establecer las fechas
                 DAOFiltroVentas dao = new DAOFiltroVentas
                 {

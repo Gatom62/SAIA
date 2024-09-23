@@ -11,66 +11,77 @@ namespace AgroServicios.Modelo.DAO
         SqlCommand Command = new SqlCommand();
         public int Login()
         {
-            // Inicia el bloque try para capturar excepciones
             try
             {
-                // Asigna la conexión de la base de datos al objeto Command
                 Command.Connection = getConnection();
-
-                // Define la consulta SQL para seleccionar el usuario, idCategoria y nombre de la vista
-                // Utiliza COLLATE para hacer que la comparación de Usuario y Contraseña sea sensible a mayúsculas y minúsculas
-                Command.CommandText = "SELECT idEmpleado, Usuario, idCategoria, Nombre ,picprofile FROM VistaUsuariosCategoriasV2 WHERE Usuario COLLATE SQL_Latin1_General_CP1_CS_AS = @username AND Contraseña COLLATE SQL_Latin1_General_CP1_CS_AS = @password";
-
-                // Limpia cualquier parámetro existente en el objeto Command
+                Command.CommandText = "SELECT idEmpleado, Usuario, idCategoria, Nombre, picprofile, Contraseña FROM VistaUsuariosCategoriasV2 WHERE Usuario COLLATE SQL_Latin1_General_CP1_CS_AS = @username AND Contraseña COLLATE SQL_Latin1_General_CP1_CS_AS = @password";
                 Command.Parameters.Clear();
-
-                // Agrega los parámetros de username y password al objeto Command
                 Command.Parameters.AddWithValue("@username", Username);
                 Command.Parameters.AddWithValue("@password", Password);
 
-                // Ejecuta la consulta y obtiene los resultados usando un SqlDataReader
                 using (SqlDataReader rd = Command.ExecuteReader())
                 {
-                    // Verifica si hay filas en los resultados
                     if (rd.HasRows)
                     {
-                        // Lee los datos de cada fila
                         while (rd.Read())
                         {
-                            // Asigna los valores leídos a las variables de sesión estáticas
                             StaticSession.Id = rd.GetInt32(0);
-                            StaticSession.Username = rd.GetString(1); // Usuario
-                            StaticSession.IdCategoria = rd.GetInt32(2); // idCategoria
-                            StaticSession.Categorianame1 = rd.GetString(3); // Nombre de la categoría
-                            StaticSession.Picture = rd["picprofile"] as byte[]; // Imagen del usuario
-
+                            StaticSession.Username = rd.GetString(1);
+                            StaticSession.IdCategoria = rd.GetInt32(2);
+                            StaticSession.Categorianame1 = rd.GetString(3);
+                            StaticSession.Picture = rd["picprofile"] as byte[];
+                            StaticSession.Password = rd.GetString(5);
                         }
-                        // Devuelve 0 indicando que el usuario es correcto
-                        return 0;
+
+                        // Verificar si el usuario tiene dos preguntas de seguridad
+                        if (!UsuarioTieneDosPreguntas())
+                        {
+                            return -2; // Indicar que el usuario necesita configurar preguntas de seguridad
+                        }
+
+                        return 0; // Login exitoso y preguntas de seguridad configuradas
                     }
                     else
                     {
-                        // Devuelve 1 indicando que el usuario o la contraseña son incorrectos
-                        return 1;
+                        return 1; // Usuario o contraseña incorrectos
                     }
                 }
             }
-            // Captura cualquier excepción que ocurra durante el proceso
             catch (Exception ex)
             {
-                // Muestra un mensaje de error
                 MessageBox.Show(ex.Message);
-                // Devuelve -1 indicando que ocurrió un error
-                return -1;
+                return -1; // Error durante el proceso de login
             }
-            // Bloque finally que siempre se ejecuta al final, independientemente de si hubo una excepción o no
             finally
             {
-                // Verifica si la conexión está abierta y la cierra
                 if (Command.Connection != null && Command.Connection.State == System.Data.ConnectionState.Open)
                 {
                     Command.Connection.Close();
                 }
+            }
+        }
+
+        public bool UsuarioTieneDosPreguntas()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+
+                string query = "SELECT COUNT(*) FROM RespuestasSeguridad WHERE Usuario = @Usuario";
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                cmd.Parameters.AddWithValue("Usuario", StaticSession.Username);
+
+                int count = (int)cmd.ExecuteScalar();
+                return count >= 2;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al verificar las preguntas del usuario: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                getConnection().Close();
             }
         }
 

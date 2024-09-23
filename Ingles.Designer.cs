@@ -106,6 +106,24 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Database.
+        /// </summary>
+        internal static string BaseDatos {
+            get {
+                return ResourceManager.GetString("BaseDatos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Search Clients.
+        /// </summary>
+        internal static string bc {
+            get {
+                return ResourceManager.GetString("bc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Welcome.
         /// </summary>
         internal static string bienvenida {
@@ -196,6 +214,15 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Cart.
+        /// </summary>
+        internal static string Carri {
+            get {
+                return ResourceManager.GetString("Carri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Cell phone number.
         /// </summary>
         internal static string Celular {
@@ -268,6 +295,24 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Buy.
+        /// </summary>
+        internal static string Comp {
+            get {
+                return ResourceManager.GetString("Comp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Connecting to the database.
+        /// </summary>
+        internal static string ConexcionBase {
+            get {
+                return ResourceManager.GetString("ConexcionBase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Test connection.
         /// </summary>
         internal static string Conexion {
@@ -279,9 +324,36 @@ namespace AgroServicios {
         /// <summary>
         ///   Busca una cadena traducida similar a Password.
         /// </summary>
+        internal static string Contrasena {
+            get {
+                return ResourceManager.GetString("Contrasena", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Password.
+        /// </summary>
         internal static string contraseña {
             get {
                 return ResourceManager.GetString("contraseña", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Administrator password.
+        /// </summary>
+        internal static string ContraseñaAdmin {
+            get {
+                return ResourceManager.GetString("ContraseñaAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Password Authentication.
+        /// </summary>
+        internal static string ContraseñaAuthentication {
+            get {
+                return ResourceManager.GetString("ContraseñaAuthentication", resourceCulture);
             }
         }
         
@@ -300,6 +372,15 @@ namespace AgroServicios {
         internal static string CreateMarca {
             get {
                 return ResourceManager.GetString("CreateMarca", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Eliminate.
+        /// </summary>
+        internal static string Del {
+            get {
+                return ResourceManager.GetString("Del", resourceCulture);
             }
         }
         
@@ -367,6 +448,33 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Keep.
+        /// </summary>
+        internal static string Guardar {
+            get {
+                return ResourceManager.GetString("Guardar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enable SQL Integrated Security.
+        /// </summary>
+        internal static string HabilitarSql {
+            get {
+                return ResourceManager.GetString("HabilitarSql", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enable Windows Integrated Security.
+        /// </summary>
+        internal static string HabilitarWindows {
+            get {
+                return ResourceManager.GetString("HabilitarWindows", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Sales history.
         /// </summary>
         internal static string HistorialVentas {
@@ -390,6 +498,15 @@ namespace AgroServicios {
         internal static string IngresarProducto {
             get {
                 return ResourceManager.GetString("IngresarProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enter your username.
+        /// </summary>
+        internal static string IngreseSuUsuario {
+            get {
+                return ResourceManager.GetString("IngreseSuUsuario", resourceCulture);
             }
         }
         
@@ -439,6 +556,15 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Reset password.
+        /// </summary>
+        internal static string LabelRestContra {
+            get {
+                return ResourceManager.GetString("LabelRestContra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Rest user.
         /// </summary>
         internal static string LabelRestUser {
@@ -462,6 +588,60 @@ namespace AgroServicios {
         internal static string Marca {
             get {
                 return ResourceManager.GetString("Marca", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cash Closing.
+        /// </summary>
+        internal static string mbc {
+            get {
+                return ResourceManager.GetString("mbc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Settings.
+        /// </summary>
+        internal static string mbcf {
+            get {
+                return ResourceManager.GetString("mbcf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Long Out.
+        /// </summary>
+        internal static string mbe {
+            get {
+                return ResourceManager.GetString("mbe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Product Sheet .
+        /// </summary>
+        internal static string mbf {
+            get {
+                return ResourceManager.GetString("mbf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Products.
+        /// </summary>
+        internal static string mbp {
+            get {
+                return ResourceManager.GetString("mbp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Weekly Sales Report.
+        /// </summary>
+        internal static string mbv {
+            get {
+                return ResourceManager.GetString("mbv", resourceCulture);
             }
         }
         
@@ -502,6 +682,15 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Procesos.
+        /// </summary>
+        internal static string procesos {
+            get {
+                return ResourceManager.GetString("procesos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Suppliers.
         /// </summary>
         internal static string Proveedores {
@@ -525,6 +714,42 @@ namespace AgroServicios {
         internal static string RegistroVentas {
             get {
                 return ResourceManager.GetString("RegistroVentas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Second answe.
+        /// </summary>
+        internal static string RespuestaDos {
+            get {
+                return ResourceManager.GetString("RespuestaDos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a First answer.
+        /// </summary>
+        internal static string RespuestaUno {
+            get {
+                return ResourceManager.GetString("RespuestaUno", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Server URL.
+        /// </summary>
+        internal static string ServidorURL {
+            get {
+                return ResourceManager.GetString("ServidorURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a SQL Authentication.
+        /// </summary>
+        internal static string SqlAuthentication {
+            get {
+                return ResourceManager.GetString("SqlAuthentication", resourceCulture);
             }
         }
         
@@ -637,11 +862,38 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Administrator User.
+        /// </summary>
+        internal static string UserAdmin {
+            get {
+                return ResourceManager.GetString("UserAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a User.
         /// </summary>
         internal static string Usuario {
             get {
                 return ResourceManager.GetString("Usuario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Verify.
+        /// </summary>
+        internal static string Verificar {
+            get {
+                return ResourceManager.GetString("Verificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Welcome.
+        /// </summary>
+        internal static string welcome {
+            get {
+                return ResourceManager.GetString("welcome", resourceCulture);
             }
         }
     }

@@ -27,15 +27,36 @@ namespace AgroServicios.Vista.Cuentas
                 btnCrearUsuario.Text = Ingles.btningresarempleado;
                 bunifuToolTip1.SetToolTip(ptbImgUser, "Picture profile (optional)");
                 bunifuToolTip1.SetToolTip(PickerBirth, "Birthdate");
-                bunifuToolTip1.SetToolTip(maskedDui, "Employee DUI");
+                bunifuToolTip1.SetToolTip(maskDui, "Employee DUI");
                 bunifuToolTip1.SetToolTip(DropRole, "Employee Role");
             }
             if (ControladorTema.IsDarkMode == true)
             {
-                bunifuGradientPanel2.GradientBottomLeft = Color.FromArgb(118, 88, 152);
-                bunifuGradientPanel2.GradientTopRight = Color.FromArgb(118,88, 152);
-                bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(34, 36, 49);
-                bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(34, 36, 49);
+                this.BackColor = Color.FromArgb(34, 36, 49);
+                btnCrearUsuario.IdleFillColor = Color.DarkBlue;
+                btnCrearUsuario.onHoverState.FillColor = Color.DarkViolet;
+                btnCrearUsuario.onHoverState.BorderColor = Color.DarkViolet;
+                btnCrearUsuario.OnPressedState.FillColor = Color.DodgerBlue;
+                btnCrearUsuario.OnPressedState.BorderColor = Color.DodgerBlue;
+                btnCrearUsuario.DisabledFillColor = Color.DarkViolet;
+
+                btnCrearUsuario.DisabledFillColor = Color.FromArgb(118, 88, 152);
+                btnCrearUsuario.ForeColor = Color.White;
+
+                pnEstructura.BackgroundColor = Color.WhiteSmoke;
+
+                txtNewUser.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtNewUser.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtNewFirstName.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtNewFirstName.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtNewPassword.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtNewPassword.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtNewPhone.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtNewPhone.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtNewCorreo.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtNewCorreo.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtNewDireccion.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtNewDireccion.BorderColorActive = Color.FromArgb(211, 41, 15);
             }
         }
     }

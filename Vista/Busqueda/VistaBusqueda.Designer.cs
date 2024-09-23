@@ -57,9 +57,10 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(110, 27);
+            this.button1.Location = new System.Drawing.Point(79, 22);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 46);
+            this.button1.Size = new System.Drawing.Size(35, 37);
             this.button1.TabIndex = 25;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -70,9 +71,10 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(173, 35);
+            this.label1.Location = new System.Drawing.Point(120, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 29);
+            this.label1.Size = new System.Drawing.Size(104, 24);
             this.label1.TabIndex = 26;
             this.label1.Text = "Busqueda";
             // 
@@ -88,11 +90,12 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel1, 2, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1410, 100);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1028, 81);
             this.tableLayoutPanel2.TabIndex = 29;
             // 
             // tableLayoutPanel1
@@ -102,11 +105,12 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(319, 3);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(231, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1088, 94);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(795, 77);
             this.tableLayoutPanel1.TabIndex = 27;
             // 
             // tableLayoutPanel3
@@ -115,13 +119,14 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.txtBuscar, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.29412F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.70588F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(864, 88);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(632, 73);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // txtBuscar
@@ -156,7 +161,8 @@
             this.txtBuscar.IconRight = null;
             this.txtBuscar.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscar.Lines = new string[0];
-            this.txtBuscar.Location = new System.Drawing.Point(3, 27);
+            this.txtBuscar.Location = new System.Drawing.Point(2, 22);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBuscar.MaxLength = 32767;
             this.txtBuscar.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtBuscar.Modified = false;
@@ -182,7 +188,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtBuscar.OnIdleState = stateProperties4;
-            this.txtBuscar.Padding = new System.Windows.Forms.Padding(3);
+            this.txtBuscar.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBuscar.PasswordChar = '\0';
             this.txtBuscar.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtBuscar.PlaceholderText = "Buscar";
@@ -192,7 +198,7 @@
             this.txtBuscar.SelectionLength = 0;
             this.txtBuscar.SelectionStart = 0;
             this.txtBuscar.ShortcutsEnabled = true;
-            this.txtBuscar.Size = new System.Drawing.Size(858, 38);
+            this.txtBuscar.Size = new System.Drawing.Size(628, 32);
             this.txtBuscar.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtBuscar.TabIndex = 0;
             this.txtBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -255,29 +261,32 @@
             this.GriewViewBuscar.EnableHeadersVisualStyles = false;
             this.GriewViewBuscar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.GriewViewBuscar.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.GriewViewBuscar.HeaderBgColor = System.Drawing.Color.Empty;
             this.GriewViewBuscar.HeaderForeColor = System.Drawing.Color.White;
-            this.GriewViewBuscar.Location = new System.Drawing.Point(0, 100);
+            this.GriewViewBuscar.Location = new System.Drawing.Point(0, 81);
+            this.GriewViewBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GriewViewBuscar.Name = "GriewViewBuscar";
             this.GriewViewBuscar.ReadOnly = true;
             this.GriewViewBuscar.RowHeadersVisible = false;
             this.GriewViewBuscar.RowHeadersWidth = 51;
             this.GriewViewBuscar.RowTemplate.Height = 40;
             this.GriewViewBuscar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GriewViewBuscar.Size = new System.Drawing.Size(1410, 563);
+            this.GriewViewBuscar.Size = new System.Drawing.Size(1028, 464);
             this.GriewViewBuscar.TabIndex = 30;
             this.GriewViewBuscar.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // VistaBusqueda
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1410, 663);
+            this.ClientSize = new System.Drawing.Size(1028, 545);
             this.Controls.Add(this.GriewViewBuscar);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.MinimumSize = new System.Drawing.Size(1428, 710);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(1027, 584);
             this.Name = "VistaBusqueda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "VistaBusqueda";
+            this.Text = "Busqueda";
             this.Load += new System.EventHandler(this.VistaBusqueda_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

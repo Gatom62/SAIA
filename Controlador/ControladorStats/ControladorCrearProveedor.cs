@@ -9,6 +9,10 @@ using AgroServicios.Modelo.DAO;
 using System.Windows.Forms;
 using System.Data;
 using System.Text.RegularExpressions;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using AgroServicios.Vista.Notificación;
+using System.Drawing;
+using AgroServicios.Vista.Login;
 
 namespace AgroServicios.Controlador.ControladorStats
 {
@@ -22,7 +26,32 @@ namespace AgroServicios.Controlador.ControladorStats
             ObjProveedor.btnAgregarProv.Click += new EventHandler(AgregarProveedor);
             ObjProveedor.Load += CargaInicial;
         }
+        void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            AlertExito frm = new AlertExito();
 
+            frm.BackColorAlert = backcolor;
+
+            frm.ColorAlertBox = color;
+
+            frm.TittlAlertBox = title;
+
+            frm.TextAlertBox = text;
+
+            frm.IconeAlertBox = icon;
+
+            frm.ShowDialog();
+        }
+        void MandarValoresAlerta(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            MessagePersonal message = new MessagePersonal();
+            message.BackColorAlert = backcolor;
+            message.ColorAlertBox = color;
+            message.TittlAlertBox = title;
+            message.TextAlertBox = text;
+            message.IconeAlertBox = icon;
+            message.ShowDialog();
+        }
         public void CargaInicial(object sender, EventArgs e)
         {
             DAOProductos1 objmarcas = new DAOProductos1();
@@ -33,161 +62,126 @@ namespace AgroServicios.Controlador.ControladorStats
             ObjProveedor.cmbMarca.ValueMember = "idMarca";
             ObjProveedor.cmbMarca.DisplayMember = "NombreMarca";
         }
-
         public void AgregarProveedor (object sender, EventArgs e) 
         {
+            // Validar que los campos obligatorios no estén vacíos
             if (string.IsNullOrWhiteSpace(ObjProveedor.txtNewFirstName.Text) ||
-                string.IsNullOrWhiteSpace(ObjProveedor.maskedDui.Text) ||
                 string.IsNullOrWhiteSpace(ObjProveedor.txtNewPhone.Text) ||
-                string.IsNullOrWhiteSpace(ObjProveedor.txtNewCorreo.Text))
-                
+                string.IsNullOrEmpty(ObjProveedor.maskDui.Text) ||
+                ObjProveedor.cmbMarca.SelectedValue == null)
             {
-                MessageBox.Show("Todos los campos son obligatorios.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "El nombre, el teléfono y el dui son obligatorios", Properties.Resources.MensajeWarning);
                 return;
             }
 
-            if (!ValidarLetra(ObjProveedor.txtNewFirstName.Text))
+            // Validar que el nombre solo contenga letras y no exceda 65 caracteres
+            string nombreCliente = ObjProveedor.txtNewFirstName.Text.Trim();
+            if (!ValidarLetra(nombreCliente) || !ValidarNombre(nombreCliente))
             {
-                MessageBox.Show("No se pude ingresar numeros en el nombre del proveedor", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            // Validar que el nombre del proveedor no exceda 65 caracteres
-            if (!ValidarNombre(ObjProveedor.txtNewFirstName.Text))
-            {
-                MessageBox.Show("El nombre del proveedor no debe exceder los 65 caracteres.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El nombre nombre tiene numeros o tiene más de 50 letras", Properties.Resources.MensajeWarning);
                 return;
             }
 
-            // Validar el formato del número de teléfono
+            // Validar el formato del número de teléfono y que este tenga las caragteristicas de un numero de telefono salvadoreño
             if (!ValidarTelefono(ObjProveedor.txtNewPhone.Text))
             {
-                MessageBox.Show("El formato del número de teléfono es incorrecto. Debe ser +XXX XXXX-XXXX o XXXX-XXXX.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El telefono debe de ser de El Salvador", Properties.Resources.MensajeWarning);
                 return;
             }
 
-            // Validar que el telefono del proveedor no exceda 25 caracteres
-            if (!ValidarTelefonoCantidad(ObjProveedor.txtNewPhone.Text))
+            // Validar el formato del DUI y que este no tenga menos de 8 numeros
+            if (!ValidarDUI(ObjProveedor.maskDui.Text))
             {
-                MessageBox.Show("El telefono del proveedor no debe exceder los 25 caracteres.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Hay menos de 8 numeros en el dui", Properties.Resources.MensajeWarning);
                 return;
             }
 
-            // Validar que el DUI contenga solo números
-            if (!ValidarDUI(ObjProveedor.maskedDui.Text))
-            {
-                MessageBox.Show("El DUI solo debe contener números.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                return;
-            }
-
-            // Validar que el correo del provedor no exceda 75 caracteres
-            if (!ValidarCorreoCantidad(ObjProveedor.txtNewCorreo.Text))
-            {
-                MessageBox.Show("El correo del proveedor no debe exceder los 75 caracteres.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                return;
-            }
-
+            //Realizamos el proceso de inserción
+            // Asignación de valores a las propiedades del objeto DAOinsert
             DAOProveedores DAOinsert = new DAOProveedores();
             DAOinsert.Nombre1 = ObjProveedor.txtNewFirstName.Text.Trim();
-            DAOinsert.DUI1 = ObjProveedor.maskedDui.Text.Trim();
+            DAOinsert.DUI1 = ObjProveedor.maskDui.Text.Trim();
             DAOinsert.Teléfono1 = ObjProveedor.txtNewPhone.Text.Trim();
-            DAOinsert.Correo1 = ObjProveedor.txtNewCorreo.Text.Trim();
+            DAOinsert.Correo1 = string.IsNullOrWhiteSpace(ObjProveedor.txtNewCorreo.Text) ? "xxxxxxxx" : ObjProveedor.txtNewCorreo.Text;
             DAOinsert.Marca1 = int.Parse(ObjProveedor.cmbMarca.SelectedValue.ToString());
+            //En este caso no realizamos el proceso de inserccion por que es posible que el usuario no haya puesto nada en el correo del proveedor, a si que eso lo validamos antes de realizar la inserccion, si hay correo validamos si no ponemos 8 x (X)
 
-            verificacion = ValidarCorreo();
-            if (verificacion == true)
+            // Validar el formato del correo solo si se ingresó uno
+            if (!string.IsNullOrWhiteSpace(ObjProveedor.txtNewCorreo.Text))
             {
-                int valorRetornado = DAOinsert.RegistrarProveedor();
-                if (valorRetornado == 1)
+                // Validar el formato y cantidad del correo solo si se ingresó uno
+                string correoCliente = ObjProveedor.txtNewCorreo.Text.Trim();
+                if (!ValidarCorreo(correoCliente) || !ValidarCorreoCantidad(correoCliente))
                 {
-                    MessageBox.Show("Los datos han sido registrados exitosamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                    ObjProveedor.Close();
-
-                }
-                else
-                {
-                    MessageBox.Show("Los datos no pudieron ser registrados",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Notiene el @, el dominio o hay mas de 75 caragteres en el corréo", Properties.Resources.MensajeWarning);
+                    return;
                 }
             }
-            
-        }
-        bool ValidarTelefono(string phoneNumber)
-        {
-            // Expresión regular para validar números de teléfono en los formatos: +XXX XXXX-XXXX o XXXX-XXXX
-            string pattern = @"^(\+\d{1,3}\s\d{4}-\d{4}|\d{4}-\d{4})$";
-            return Regex.IsMatch(phoneNumber, pattern);
-        }
-
-        bool ValidarCorreo()
-        {
-            string email = ObjProveedor.txtNewCorreo.Text.Trim();
-            if (!(email.Contains("@")))
+            //Pedimos una contestación por parte de la base de datos, si nos manda un 1 es que si se logro realizar correctamente la insercción
+            int valorRetornado = DAOinsert.RegistrarProveedor();
+            if (valorRetornado == 1)
             {
-                MessageBox.Show("Formato de correo invalido, verifica que contiene @.", "Formato incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                //Mensaje de afirmacion si se pudo realizar la inserccion
+                MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "El proveedor fue registrado", Properties.Resources.comprobado);
+                VistaLogin backForm = new VistaLogin();
+                ObjProveedor.Close();
             }
-            return true;
-        }
-
-        // Método que valida si un carácter es una letra
-        bool ValidarLetra(string texto)
-        {
-            foreach (char c in texto)
+            else
             {
-                if (!char.IsLetter(c) && !char.IsWhiteSpace(c)) // Permite espacios
+                //Mensaje de error si se no se pudo realizar la inserccion
+                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el proveedor no se este duplicando", Properties.Resources.ErrorIcono);
+                VistaLogin backForm = new VistaLogin();
+            }
+
+            //Metodos para validar los datos ingresados por el usuario
+            bool ValidarCorreo(string email)
+            {
+                string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$|^[xX]{8}$"; // Formato básico de correo
+                return Regex.IsMatch(email, pattern);
+            }
+
+            // Método para validar que el correo del proceedor no exceda los 75 caracteres
+            bool ValidarCorreoCantidad(string nombre)
+            {
+                return nombre.Length <= 75;
+            }
+
+            // Método para validar que el nombre del proveedor no exceda los 50 caracteres
+            bool ValidarNombre(string nombre)
+            {
+                return nombre.Length <= 65;
+            }
+
+            // Método que valida si un carácter es una letra
+            bool ValidarLetra(string texto)
+            {
+                foreach (char c in texto)
                 {
-                    return false; // Si encuentra un carácter no válido, retorna false
+                    if (!char.IsLetter(c) && !char.IsWhiteSpace(c)) // Permite espacios
+                    {
+                        return false; // Si encuentra un carácter no válido, retorna false
+                    }
                 }
+                return true; // Si todos los caracteres son válidos, retorna true
             }
-            return true; // Si todos los caracteres son válidos, retorna true
-        }
 
-        // Método para validar que el nombre del proveedor no exceda los 65 caracteres
-        bool ValidarNombre(string nombre)
-        {
-            return nombre.Length <= 65;
-        }
-        bool ValidarDUI(string dui)
-        {
-            // Aquí asumimos que el DUI debe contener solo dígitos (sin guiones o espacios)
-            // Se puede ajustar según el formato requerido, por ejemplo, permitir un guion
-            string pattern = @"^\d+-?\d*$"; // Solo dígitos
-            return Regex.IsMatch(dui, pattern);
-        }
+            bool ValidarTelefono(string phoneNumber)
+            {
+                string pattern = @"^[267]\d{7}$"; // 8 dígitos, empezando con 2, 6, o 7
+                return Regex.IsMatch(phoneNumber, pattern);
+            }
 
-        // Método para validar que el nombre del proceedor no exceda los 25 caracteres
-        bool ValidarTelefonoCantidad(string nombre)
-        {
-            return nombre.Length <= 25;
-        }
-
-        // Método para validar que el correo del proveedor no exceda los 75 caracteres
-        bool ValidarCorreoCantidad(string nombre)
-        {
-            return nombre.Length <= 75;
+            // Método para validar el formato del DUI
+            bool ValidarDUI(string dui)
+            {
+                // Expresión regular para verificar 8 dígitos seguidos de un guion y luego 1 dígito
+                string pattern = @"^\d{8}-\d$";
+                if (!Regex.IsMatch(dui, pattern))
+                {
+                    return false;
+                }
+                return true;
+            }
         }
     }
 }

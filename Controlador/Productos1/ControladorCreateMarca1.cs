@@ -1,9 +1,12 @@
 ﻿using AgroServicios.Modelo.DAO;
 using AgroServicios.Vista.Cuentas;
+using AgroServicios.Vista.Login;
+using AgroServicios.Vista.Notificación;
 using AgroServicios.Vista.Productos1;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,12 +30,39 @@ namespace AgroServicios.Controlador.Productos1
             ObjCreateMarca = Vista;
             this.accion = accion;
             ObjCreateMarca.Load += new EventHandler(LoadData);
-            //ObjCreateProducto1.Load += new EventHandler(InitialCharge);
+
+            //Evento click de botones
             ObjCreateMarca.btnIngresarMarca.Click += new EventHandler(NuevoRegistro);
             ObjCreateMarca.cmsElimarProducto.Click += new EventHandler(EliminarMarca);
             ObjCreateMarca.cmsEditarMarca.Click += new EventHandler(UpdateMarca);
         }
+        void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            AlertExito frm = new AlertExito();
 
+            frm.BackColorAlert = backcolor;
+
+            frm.ColorAlertBox = color;
+
+            frm.TittlAlertBox = title;
+
+            frm.TextAlertBox = text;
+
+            frm.IconeAlertBox = icon;
+
+            frm.ShowDialog();
+        }
+
+        void MandarValoresAlerta(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            MessagePersonal message = new MessagePersonal();
+            message.BackColorAlert = backcolor;
+            message.ColorAlertBox = color;
+            message.TittlAlertBox = title;
+            message.TextAlertBox = text;
+            message.IconeAlertBox = icon;
+            message.ShowDialog();
+        }
         private void UpdateMarca(object sender, EventArgs e)
         {
             int pos = ObjCreateMarca.GriewViewMarcas.CurrentRow.Index;
@@ -50,44 +80,37 @@ namespace AgroServicios.Controlador.Productos1
         public void NuevoRegistro(object sender, EventArgs e)
         {
             // Validar que los campos no estén vacíos
-            if (ObjCreateMarca.txtNombreMarca.Text  == null)
+            if (ObjCreateMarca.txtNombreMarca.Text == null)
             {
-                MessageBox.Show("Todos los campos son obligatorios.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay campos vacios", Properties.Resources.MensajeWarning);
                 return;
             }
 
-            // Validar que el nombre del producto no exceda 15 caracteres
+            // Validar que el nombre de la marca no exceda 15 caracteres
             if (!ValidarNombre(ObjCreateMarca.txtNombreMarca.Text))
             {
-                MessageBox.Show("El nombre la marca no debe exceder los 15 caracteres.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 15 caragteres en el nombre", Properties.Resources.MensajeWarning);
                 return;
             }
 
+            //Realizamos el proceso de inserccion y de optencion de respuesta departe de la base de datos
             DAOProductos1 DaoInsert = new DAOProductos1();
             // Asignar los valores a las propiedades de DaoInsert
             DaoInsert.NombreMarca1 = ObjCreateMarca.txtNombreMarca.Text.Trim();
-
+            //Pedimos una contestación por parte de la base de datos, si nos manda un uno es que si se logro realizar correctamente la insercción
             int valorRetornado = DaoInsert.RegistrarMarca();
             if (valorRetornado == 1)
             {
-                MessageBox.Show("Los datos han sido registrados exitosamente",
-                                "Proceso completado",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                //Mensaje de afirmacion si se pudo realizar la inserccion
+                MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "La marca fue registrada", Properties.Resources.comprobado);
+                VistaLogin backForm = new VistaLogin();
                 ObjCreateMarca.Close();
             }
             else
             {
-                MessageBox.Show("Los datos no pudieron ser registrados",
-                                "Proceso interrumpido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                //Mensaje de error si se no se pudo realizar la inserccion
+                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que la marca no se este duplicando", Properties.Resources.ErrorIcono);
+                VistaLogin backForm = new VistaLogin();
             }
 
             // Método para validar que el nombre de la marca no exceda los 15 caracteres
@@ -109,7 +132,10 @@ namespace AgroServicios.Controlador.Productos1
             //Declarando nuevo DataSet para que obtenga los datos del metodo ObtenerMarcas
             DataSet ds = dAOProductos1.ObtenerMarcas();
             ////Llenar DataGridView
-            ObjCreateMarca.GriewViewMarcas.DataSource = ds.Tables["Marcas"];
+            ObjCreateMarca.GriewViewMarcas.DataSource = ds.Tables["ViewMarcas"];
+
+            //Para ocultar columnas que no creo que sehan nesesarias de ver
+            ObjCreateMarca.GriewViewMarcas.Columns["Codigo de la Marca"].Visible = false;
         }
 
         private void EliminarMarca(object sender, EventArgs e)
@@ -123,12 +149,14 @@ namespace AgroServicios.Controlador.Productos1
                 int valorretornado = daodelete.DeleteMarca();
                 if (valorretornado == 1)
                 {
-                    MessageBox.Show("Marca eliminada", "Se ha eliminado correctamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Proceso realizado", "La marca se elimino correctamente", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
                     RefrescarData();
                 }
                 else
                 {
-                    MessageBox.Show("Eliminación fallida", "No seb ha podido eliminar la marca", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique si la marca esta asociada a otros registros", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
                 }
             }
         }

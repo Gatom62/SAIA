@@ -26,10 +26,33 @@ namespace AgroServicios.Vista.Productos1
         {
             if (ControladorTema.IsDarkMode == true)
             {
-                bunifuGradientPanel2.GradientBottomLeft = Color.FromArgb(118, 88, 152);
-                bunifuGradientPanel2.GradientTopRight = Color.FromArgb(118, 88, 152);
-                bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(34, 36, 49);
-                bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(34, 36, 49);
+                this.BackColor = Color.FromArgb(34, 36, 49);
+                btnUbdateImagen.IdleFillColor = Color.FromArgb(230, 119, 11);
+                btnUbdateImagen.onHoverState.FillColor = Color.FromArgb(211, 41, 15);
+                btnUbdateImagen.onHoverState.BorderColor = Color.FromArgb(211, 41, 15);
+                btnUbdateImagen.OnPressedState.FillColor = Color.Red;
+                btnUbdateImagen.OnPressedState.BorderColor = Color.Red;
+                btnUbdateImagen.DisabledFillColor = Color.DarkOrange;
+
+                btnUbdateProducto.IdleFillColor = Color.FromArgb(230, 119, 11);
+                btnUbdateProducto.onHoverState.FillColor = Color.FromArgb(211, 41, 15);
+                btnUbdateProducto.onHoverState.BorderColor = Color.FromArgb(211, 41, 15);
+                btnUbdateProducto.OnPressedState.FillColor = Color.Red;
+                btnUbdateImagen.OnPressedState.BorderColor = Color.Red;
+                btnUbdateImagen.DisabledFillColor = Color.DarkOrange;
+
+                pnEstructura.BackgroundColor = Color.WhiteSmoke;
+
+                txtUbdateProducto.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtUbdateProducto.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtUbdateCodigo.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtUbdateCodigo.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtUbdateCantidad.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtUbdateCantidad.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtUbdatePrecio.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtUbdatePrecio.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtUbdateDescripcion.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtUbdateDescripcion.BorderColorActive = Color.FromArgb(211, 41, 15);
             }
 
             if (ControladorIdioma.idioma == 1)

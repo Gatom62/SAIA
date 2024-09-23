@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace AgroServicios.Modelo.DAO
 {
-    internal class DAOPreguntasRec: DTOPreguntasRec
+    internal class DAOPreguntasRec : DTOPreguntasRec
     {
         readonly SqlCommand Command = new SqlCommand();
+
         public DataTable ObtenerRespuestaIDs(string usuario)
         {
             DataTable dt = new DataTable();
@@ -46,6 +47,7 @@ namespace AgroServicios.Modelo.DAO
 
             return dt;
         }
+
 
         public DataSet LlenarCombo()
         {
@@ -106,6 +108,7 @@ namespace AgroServicios.Modelo.DAO
         }
 
 
+
         public int InsertarRespuestasSeguridad()
         {
             if (UsuarioTieneDosPreguntas())
@@ -159,52 +162,9 @@ namespace AgroServicios.Modelo.DAO
             finally
             {
                 // Cerrar la conexión
-                getConnection().Close();
+                Command.Connection.Close();
             }
         }
-
-        public bool VerificarRespuestas()
-        {
-            try
-            {
-                Command.Connection = getConnection();
-
-                // Consulta para verificar la primera respuesta
-                string query1 = "SELECT COUNT(*) FROM RespuestasSeguridad WHERE Usuario = @Usuario " +
-                                "AND PreguntaID = @Pregunta1 AND RespuestaCifrada = @Respuesta1";
-
-                SqlCommand cmd1 = new SqlCommand(query1, Command.Connection);
-                cmd1.Parameters.AddWithValue("Usuario", Usuario);
-                cmd1.Parameters.AddWithValue("Pregunta1", Pregunta1);
-                cmd1.Parameters.AddWithValue("Respuesta1", Res1);
-
-                int count1 = (int)cmd1.ExecuteScalar();
-
-                // Consulta para verificar la segunda respuesta
-                string query2 = "SELECT COUNT(*) FROM RespuestasSeguridad WHERE Usuario = @Usuario " +
-                                "AND PreguntaID = @Pregunta2 AND RespuestaCifrada = @Respuesta2";
-
-                SqlCommand cmd2 = new SqlCommand(query2, Command.Connection);
-                cmd2.Parameters.AddWithValue("Usuario", Usuario);
-                cmd2.Parameters.AddWithValue("Pregunta2", Pregunta2);
-                cmd2.Parameters.AddWithValue("Respuesta2", Res2);
-
-                int count2 = (int)cmd2.ExecuteScalar();
-
-                // Ambas respuestas deben ser correctas
-                return count1 > 0 && count2 > 0;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al verificar las respuestas de seguridad: " + ex.Message);
-                return false;
-            }
-            finally
-            {
-                getConnection().Close();
-            }
-        }
-
         public int ActualizarPreguntasYRespuestas()
         {
             SqlTransaction transaction = null; // Variable para la transacción
@@ -267,6 +227,48 @@ namespace AgroServicios.Modelo.DAO
             finally
             {
                 Command.Connection.Close(); // Cerrar la conexión
+            }
+        }
+
+        public bool VerificarRespuestas()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+
+                // Consulta para verificar la primera respuesta
+                string query1 = "SELECT COUNT(*) FROM RespuestasSeguridad WHERE Usuario COLLATE SQL_Latin1_General_CP1_CS_AS = @Usuario " +
+                                "AND PreguntaID = @Pregunta1 AND RespuestaCifrada = @Respuesta1";
+
+                SqlCommand cmd1 = new SqlCommand(query1, Command.Connection);
+                cmd1.Parameters.AddWithValue("Usuario", Usuario);
+                cmd1.Parameters.AddWithValue("Pregunta1", Pregunta1);
+                cmd1.Parameters.AddWithValue("Respuesta1", Res1);
+
+                int count1 = (int)cmd1.ExecuteScalar();
+
+                // Consulta para verificar la segunda respuesta
+                string query2 = "SELECT COUNT(*) FROM RespuestasSeguridad WHERE Usuario COLLATE SQL_Latin1_General_CP1_CS_AS = @Usuario " +
+                                "AND PreguntaID = @Pregunta2 AND RespuestaCifrada = @Respuesta2";
+
+                SqlCommand cmd2 = new SqlCommand(query2, Command.Connection);
+                cmd2.Parameters.AddWithValue("Usuario", Usuario);
+                cmd2.Parameters.AddWithValue("Pregunta2", Pregunta2);
+                cmd2.Parameters.AddWithValue("Respuesta2", Res2);
+
+                int count2 = (int)cmd2.ExecuteScalar();
+
+                // Ambas respuestas deben ser correctas
+                return count1 > 0 && count2 > 0;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al verificar las respuestas de seguridad: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                getConnection().Close();
             }
         }
     }

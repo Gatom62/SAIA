@@ -89,11 +89,27 @@ namespace AgroServicios.Vista.MenuPrincipal
                 btnInicio.BackColor = Color.FromArgb(230, 119, 11);
                 btnShop.BackColor = Color.FromArgb(230, 119, 11);
                 btnStats.BackColor = Color.FromArgb(230, 119, 11);
-                btnAccounts.BackColor = Color.FromArgb(230, 119, 11);
-
+               
                 bunifuPanel2.BackgroundColor = Color.FromArgb(34, 36, 49);
                 label1.ForeColor = Color.White;
                 label2.ForeColor = Color.FromArgb(68, 197, 197);
+                tableLayoutPanel2.BackColor = Color.FromArgb(34, 36, 49);
+                tableLayoutPanel3.BackColor = Color.FromArgb(34, 36, 49);
+                tableLayoutPanel4.BackColor = Color.FromArgb(34, 36, 49);
+                tableLayoutPanel5.BackColor = Color.FromArgb(34, 36, 49);
+                panel4.BackColor = Color.FromArgb(34, 36, 49);
+                panel5.BackColor = Color.FromArgb(34, 36, 49);
+            }
+            if (ControladorIdioma.idioma == 1)
+            {
+                btnprin2.Text = Ingles.mbp;
+                btnVentas.Text = Ingles.mbv;
+                btnprin3.Text = Ingles.mbc;
+                btnFichaProductos.Text = Ingles.mbf;
+                btnConfi.Text = Ingles.mbcf;
+                btnExit.Text = Ingles.mbe;
+                label1.Text = Ingles.welcome;
+                label3.Text = "Processes";
             }
         }
         private void btnConfi_Click_1(object sender, EventArgs e)

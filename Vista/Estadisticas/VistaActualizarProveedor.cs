@@ -21,29 +21,13 @@ namespace AgroServicios.Vista.Estadisticas
             ControladorActualizarProveedor control = new ControladorActualizarProveedor(this, accion, id, Name, Dui, phone, email, marca);
         }
 
-
-        private void PickerBirthUpdate_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuGradientPanel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void VistaActualizarProveedor_Load(object sender, EventArgs e)
         {
             if (ControladorIdioma.idioma == 1)
             {
-                txtAcP.Text = Ingles.txtUp;
+                cmbMarca.Text = Ingles.txtUp;
                 txtUpdateNombre.PlaceholderText = Ingles.txtFN;
-                txtUpdateID.PlaceholderText = Ingles.txtDUI;
+                //bunifuLabel2.PlaceholderText = Ingles.txtDUI;
                 txtUpdatePhone.PlaceholderText = Ingles.txtTe;
                 txtUpdateCorreo.PlaceholderText = Ingles.txtCR;
             
@@ -51,11 +35,22 @@ namespace AgroServicios.Vista.Estadisticas
             }
             if (ControladorTema.IsDarkMode == true)
             {
-                bunifuGradientPanel1.GradientBottomLeft = Color.FromArgb(118, 88, 152);
-                bunifuGradientPanel1.GradientTopRight = Color.FromArgb(118, 88, 152);
-                bunifuGradientPanel1.GradientBottomRight = Color.FromArgb(34, 36, 49);
-                bunifuGradientPanel1.GradientTopLeft = Color.FromArgb(34, 36, 49);
-                bunifuPanel1.BackgroundColor = Color.FromArgb(34, 36, 49);
+                this.BackColor = Color.FromArgb(34, 36, 49);
+                btnUpdateProveedor.IdleFillColor = Color.FromArgb(230, 119, 11);
+                btnUpdateProveedor.onHoverState.FillColor = Color.FromArgb(211, 41, 15);
+                btnUpdateProveedor.onHoverState.BorderColor = Color.FromArgb(211, 41, 15);
+                btnUpdateProveedor.OnPressedState.FillColor = Color.Red;
+                btnUpdateProveedor.OnPressedState.BorderColor = Color.Red;
+                btnUpdateProveedor.DisabledFillColor = Color.DarkOrange;
+
+                pnEstructura.BackgroundColor = Color.WhiteSmoke;
+
+                txtUpdateNombre.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtUpdateNombre.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtUpdatePhone.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtUpdatePhone.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtUpdateCorreo.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtUpdateCorreo.BorderColorActive = Color.FromArgb(211, 41, 15);
             }
         }
     }

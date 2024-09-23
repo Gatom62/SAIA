@@ -159,9 +159,22 @@ namespace AgroServicios.Controlador.Helper
             if (resp > 0)
             {
                 MessageBox.Show("Se ha hecho la compra", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Bucle para actualizar el stock de cada producto
+                foreach (DataGridViewRow row in objCarrito.dgvCarrito.Rows)
+                {
+                    string producto = row.Cells["Producto"].Value?.ToString();
+                    int cantidadComprada = int.Parse(row.Cells["Cantidad"].Value.ToString());
+
+                    // Llamada al método que actualiza el stock en la base de datos
+                    DAOCarrito dao = new DAOCarrito();
+                    dao.ActualizarStock(producto, cantidadComprada);
+                }
 
                 string pdfFilePath;
                 Imprimir(out pdfFilePath);
+
+                objCarrito.dgvCarrito.Rows.Clear();
+                ActualizarTotal();
 
                 // Verifica si el cliente tiene un correo electrónico antes de intentar enviar el PDF
                 if (!string.IsNullOrWhiteSpace(clienteEmail))
@@ -171,7 +184,7 @@ namespace AgroServicios.Controlador.Helper
                         var mailService = new DAODCSoporte();
                         mailService.sendMailWithAttachment(
                             subject: "Factura de Compra",
-                            body: $"Hola, {objCarrito.cmbCliente.Text}\nGracias por su compra. Adjuntamos la factura de su compra.",
+                            body: $"Hola, {objCarrito.cmbCliente.Text}\nGracias por su compra. Esperamos que vuelva a comprar en su agroservicio de confianza.",
                             destinatarioCorreo: new List<string> { clienteEmail },
                             attachmentPath: pdfFilePath
                         );
@@ -202,6 +215,8 @@ namespace AgroServicios.Controlador.Helper
                            : "0.00";
             string vendedor = StaticSession.Username;
 
+            string fechaEmision = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"); // Formato con fecha y hora
+            paginahtml_texto = paginahtml_texto.Replace("@FechaEmision", fechaEmision);
             paginahtml_texto = paginahtml_texto.Replace("@Cliente", cliente);
             paginahtml_texto = paginahtml_texto.Replace("@total", total);
             paginahtml_texto = paginahtml_texto.Replace("@vendedor", vendedor);
@@ -252,7 +267,30 @@ namespace AgroServicios.Controlador.Helper
 
         public void AgregarProductoAlCarrito(string producto, int cantidad, decimal precioUnitario, decimal precioTotal)
         {
-            // Verifica si el producto ya existe en el carrito
+            // Verifica el stock disponible
+            DAOCarrito dao = new DAOCarrito();
+            int stockDisponible = dao.ObtenerStockDisponible(producto);
+
+            // Verifica la cantidad total del producto en el carrito
+            int cantidadEnCarrito = 0;
+            foreach (DataGridViewRow row in objCarrito.dgvCarrito.Rows)
+            {
+                if (row.Cells["Producto"].Value != null &&
+                    row.Cells["Producto"].Value.ToString() == producto)
+                {
+                    cantidadEnCarrito = int.Parse(row.Cells["Cantidad"].Value.ToString());
+                    break;
+                }
+            }
+
+            // Verifica si la cantidad total en el carrito más la nueva cantidad excede el stock disponible
+            if (cantidadEnCarrito + cantidad > stockDisponible)
+            {
+                MessageBox.Show($"No hay suficiente stock disponible para {producto}. Stock disponible: {stockDisponible}. Cantidad en carrito: {cantidadEnCarrito}", "Stock Insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Si el producto ya existe, actualiza la cantidad y el precio total
             foreach (DataGridViewRow row in objCarrito.dgvCarrito.Rows)
             {
                 if (row.Cells["Producto"].Value != null &&
@@ -270,6 +308,9 @@ namespace AgroServicios.Controlador.Helper
 
                     // Actualiza el total general
                     ActualizarTotal();
+
+                    // Muestra el mensaje de confirmación
+                    MessageBox.Show($"Se ha añadido {cantidad} {producto} al carrito.", "Producto Añadido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
             }
@@ -279,6 +320,9 @@ namespace AgroServicios.Controlador.Helper
 
             // Actualiza el total general
             ActualizarTotal();
+
+            // Muestra el mensaje de confirmación
+            MessageBox.Show($"Se ha añadido {cantidad} {producto} al carrito.", "Producto Añadido", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void ActualizarTotal()
