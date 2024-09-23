@@ -665,6 +665,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="Resources\Manual de SAIA 1.2.pdf" />
+    <None Include="Resources\Manual de Usuario 1.2.pdf" />
+    <None Include="Resources\Manual Técnico de SAIA 1.5.pdf" />
     <None Include="Vista\Reportes\ReporteProductos\DataSetProductos.xsc">
       <DependentUpon>DataSetProductos.xsd</DependentUpon>
     </None>

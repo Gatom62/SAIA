@@ -33,7 +33,22 @@ namespace AgroServicios.Controlador.Login
             ObjLogin.lblRecuperar.Click += new EventHandler(RecuperarPass);
             ObjLogin.cmsConecarBase.Click += new EventHandler(AbrirBase);
             ObjLogin.cmsManualTecnico.Click += new EventHandler(AbrirManualTecnico);
+            ObjLogin.cmsManualUsuario.Click += new EventHandler(AbrirManualUsuario);
             ObjLogin.FormClosing += new FormClosingEventHandler(cerrarPrograma);
+        }
+        private void AbrirManualUsuario(object sender, EventArgs e)
+        {
+            // Nombre del archivo que quieres extraer de los recursos
+            string nombreArchivo = "Manual de Usuario";
+
+            // Ruta temporal donde se guardará el PDF extraído
+            string pdfTempPath = Path.Combine(Path.GetTempPath(), nombreArchivo);
+
+            // Escribe el contenido del archivo PDF desde los recursos a la ruta temporal
+            File.WriteAllBytes(pdfTempPath, Properties.Resources.Manual_de_Usuario_1_2);
+
+            // Abre el archivo PDF utilizando el visor predeterminado del sistema
+            System.Diagnostics.Process.Start(pdfTempPath);
         }
         private void cerrarPrograma(Object sender, FormClosingEventArgs e)
         {
@@ -46,13 +61,13 @@ namespace AgroServicios.Controlador.Login
         private void AbrirManualTecnico(object sender, EventArgs e)
         {
             // Nombre del archivo que quieres extraer de los recursos
-            string nombreArchivo = "Manual_de_SAIA_1_2.pdf";
+            string nombreArchivo = "Manual Técnico";
 
             // Ruta temporal donde se guardará el PDF extraído
             string pdfTempPath = Path.Combine(Path.GetTempPath(), nombreArchivo);
 
             // Escribe el contenido del archivo PDF desde los recursos a la ruta temporal
-            File.WriteAllBytes(pdfTempPath, Properties.Resources.Manual_de_SAIA_1_2);
+            File.WriteAllBytes(pdfTempPath, Properties.Resources.Manual_Técnico_de_SAIA_1_5);
 
             // Abre el archivo PDF utilizando el visor predeterminado del sistema
             System.Diagnostics.Process.Start(pdfTempPath);
