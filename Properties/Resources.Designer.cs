@@ -532,6 +532,16 @@ namespace AgroServicios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] Manual_de_Usuario_1_3 {
+            get {
+                object obj = ResourceManager.GetObject("Manual_de_Usuario_1_3", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] Manual_Técnico_de_SAIA_1_5 {
             get {
                 object obj = ResourceManager.GetObject("Manual_Técnico_de_SAIA_1_5", resourceCulture);
