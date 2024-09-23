@@ -37,10 +37,15 @@ namespace AgroServicios.Controlador.MenuPrincipal
             ObjMenu.btnprin2.Click += new EventHandler(OpenShop);
             ObjMenu.btnVentas.Click += new EventHandler(OpenVentas);
             ObjMenu.btnFichaProductos.Click += new EventHandler(OpenFichaProductos);
+            ObjMenu.FormClosing += new FormClosingEventHandler(cerrarPrograma);
         }
-        private void SalirMenu(object sender, EventArgs e) 
+
+        private void cerrarPrograma(Object sender, FormClosingEventArgs e)
         {
-            ObjMenu.Close();
+            if (MessageBox.Show("¿Desea cerrar el programa?, Si lo cierra se estará cerrando en todos los planos", "Decida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
         }
         private void OpenFichaProductos(object sender, EventArgs e)
         {

@@ -106,15 +106,15 @@
             this.dgvDevoluciones.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvDevoluciones.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDevoluciones.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvDevoluciones.Location = new System.Drawing.Point(0, 84);
-            this.dgvDevoluciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvDevoluciones.Location = new System.Drawing.Point(0, 68);
+            this.dgvDevoluciones.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDevoluciones.Name = "dgvDevoluciones";
             this.dgvDevoluciones.ReadOnly = true;
             this.dgvDevoluciones.RowHeadersVisible = false;
             this.dgvDevoluciones.RowHeadersWidth = 51;
             this.dgvDevoluciones.RowTemplate.Height = 40;
             this.dgvDevoluciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDevoluciones.Size = new System.Drawing.Size(1371, 626);
+            this.dgvDevoluciones.Size = new System.Drawing.Size(1028, 509);
             this.dgvDevoluciones.TabIndex = 3;
             this.dgvDevoluciones.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -125,13 +125,13 @@
             this.ContextMenuProductos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cmsInformacion});
             this.ContextMenuProductos.Name = "ContextMenuProductos";
-            this.ContextMenuProductos.Size = new System.Drawing.Size(200, 30);
+            this.ContextMenuProductos.Size = new System.Drawing.Size(176, 30);
             // 
             // cmsInformacion
             // 
             this.cmsInformacion.Image = global::AgroServicios.Properties.Resources.informacion;
             this.cmsInformacion.Name = "cmsInformacion";
-            this.cmsInformacion.Size = new System.Drawing.Size(199, 26);
+            this.cmsInformacion.Size = new System.Drawing.Size(175, 26);
             this.cmsInformacion.Text = "Informacion ";
             // 
             // panel1
@@ -140,9 +140,9 @@
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1371, 84);
+            this.panel1.Size = new System.Drawing.Size(1028, 68);
             this.panel1.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -157,11 +157,11 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1371, 84);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1028, 68);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // ptbback
@@ -188,12 +188,12 @@
             this.ptbback.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ptbback.Image = global::AgroServicios.Properties.Resources.turn_left_11044726;
             this.ptbback.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.ptbback.Location = new System.Drawing.Point(31, 13);
-            this.ptbback.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ptbback.Location = new System.Drawing.Point(23, 10);
+            this.ptbback.Margin = new System.Windows.Forms.Padding(2);
             this.ptbback.Name = "ptbback";
             this.ptbback.RoundBorders = false;
             this.ptbback.ShowBorders = false;
-            this.ptbback.Size = new System.Drawing.Size(67, 58);
+            this.ptbback.Size = new System.Drawing.Size(50, 47);
             this.ptbback.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Flat;
             this.ptbback.TabIndex = 41;
             this.ptbback.MouseEnter += new System.EventHandler(this.ptbback_MouseEnter);
@@ -202,10 +202,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AgroServicios.Properties.Resources.tdesign_money;
-            this.pictureBox1.Location = new System.Drawing.Point(132, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(99, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 78);
+            this.pictureBox1.Size = new System.Drawing.Size(84, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -213,18 +213,18 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.7971F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.2029F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.9697F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.0303F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 13F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnHacerDevolucion, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(250, 2);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(188, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1118, 80);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(838, 64);
             this.tableLayoutPanel2.TabIndex = 42;
             // 
             // label1
@@ -233,10 +233,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(307, 49);
+            this.label1.Size = new System.Drawing.Size(246, 41);
             this.label1.TabIndex = 1;
             this.label1.Text = "Devoluciónes";
             // 
@@ -245,6 +244,7 @@
             this.btnHacerDevolucion.AllowAnimations = true;
             this.btnHacerDevolucion.AllowMouseEffects = true;
             this.btnHacerDevolucion.AllowToggling = false;
+            this.btnHacerDevolucion.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnHacerDevolucion.AnimationSpeed = 200;
             this.btnHacerDevolucion.AutoGenerateColors = false;
             this.btnHacerDevolucion.AutoRoundBorders = false;
@@ -289,8 +289,7 @@
             this.btnHacerDevolucion.IdleIconLeftImage = null;
             this.btnHacerDevolucion.IdleIconRightImage = null;
             this.btnHacerDevolucion.IndicateFocus = false;
-            this.btnHacerDevolucion.Location = new System.Drawing.Point(895, 4);
-            this.btnHacerDevolucion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHacerDevolucion.Location = new System.Drawing.Point(649, 9);
             this.btnHacerDevolucion.Name = "btnHacerDevolucion";
             this.btnHacerDevolucion.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnHacerDevolucion.OnDisabledState.BorderRadius = 25;
@@ -324,7 +323,7 @@
             this.btnHacerDevolucion.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnHacerDevolucion.OnPressedState.IconLeftImage = null;
             this.btnHacerDevolucion.OnPressedState.IconRightImage = null;
-            this.btnHacerDevolucion.Size = new System.Drawing.Size(203, 71);
+            this.btnHacerDevolucion.Size = new System.Drawing.Size(161, 46);
             this.btnHacerDevolucion.TabIndex = 2;
             this.btnHacerDevolucion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHacerDevolucion.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -334,14 +333,13 @@
             // 
             // VistaDetallesDevoluciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1371, 710);
+            this.ClientSize = new System.Drawing.Size(1028, 577);
             this.Controls.Add(this.dgvDevoluciones);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "VistaDetallesDevoluciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tabla de devoluciónes";

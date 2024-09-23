@@ -56,10 +56,11 @@ namespace AgroServicios.Controlador.ControladorStats
         }
         private void CrearDevoluciones(object sender, EventArgs e)
         {
-            // Validación para la fecha de la devolución: no puede ser futura
-            if (objdev.pickerFechaDev.Value.Date > DateTime.Now.Date)
+            // Validación para la fecha de la devolución: debe ser hoy
+            DateTime fechaDev = objdev.pickerFechaDev.Value.Date;
+            if (fechaDev != DateTime.Now.Date)
             {
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "La fecha debe ser de hoy", Properties.Resources.ErrorIcono);
+                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "La fecha de devolución debe ser hoy", Properties.Resources.ErrorIcono);
                 return;
             }
 

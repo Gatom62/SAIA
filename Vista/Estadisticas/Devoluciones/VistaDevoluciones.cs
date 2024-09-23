@@ -24,10 +24,21 @@ namespace AgroServicios.Vista.Estadisticas.Devoluciones
         {
             if(ControladorTema.IsDarkMode == true)
             {
-                bunifuGradientPanel2.GradientBottomLeft = Color.FromArgb(34, 36, 49);
-                bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(34, 36, 49);
-                bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(34, 36, 49);
-                bunifuGradientPanel2.GradientTopRight = Color.FromArgb(34, 36, 49);
+                this.BackColor = Color.FromArgb(34, 36, 49);
+                btnCrearDevoluciones.IdleFillColor = Color.DarkBlue;
+                btnCrearDevoluciones.onHoverState.FillColor = Color.DarkViolet;
+                btnCrearDevoluciones.onHoverState.BorderColor = Color.DarkViolet;
+                btnCrearDevoluciones.OnPressedState.FillColor = Color.DodgerBlue;
+                btnCrearDevoluciones.OnPressedState.BorderColor = Color.DodgerBlue;
+                btnCrearDevoluciones.DisabledFillColor = Color.DarkViolet;
+
+                btnCrearDevoluciones.DisabledFillColor = Color.FromArgb(118, 88, 152);
+                btnCrearDevoluciones.ForeColor = Color.White;
+
+                pnEstructura.BackgroundColor = Color.WhiteSmoke;
+
+                txtMonto.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtMonto.BorderColorActive = Color.FromArgb(211, 41, 15);
             }
         }
     }
