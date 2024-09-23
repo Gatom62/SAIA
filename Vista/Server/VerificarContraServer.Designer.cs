@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerificarContraServer));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             this.txtContraseña = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.btnVerificar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -59,12 +59,12 @@
             this.txtContraseña.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtContraseña.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtContraseña.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtContraseña.BorderRadius = 33;
+            this.txtContraseña.BorderRadius = 25;
             this.txtContraseña.BorderThickness = 1;
             this.txtContraseña.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtContraseña.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtContraseña.DefaultFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.DefaultFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.DefaultText = "";
             this.txtContraseña.FillColor = System.Drawing.Color.White;
             this.txtContraseña.HideSelection = true;
@@ -81,26 +81,26 @@
             this.txtContraseña.Modified = false;
             this.txtContraseña.Multiline = false;
             this.txtContraseña.Name = "txtContraseña";
-            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtContraseña.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtContraseña.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtContraseña.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtContraseña.OnIdleState = stateProperties8;
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtContraseña.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtContraseña.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtContraseña.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtContraseña.OnIdleState = stateProperties4;
             this.txtContraseña.Padding = new System.Windows.Forms.Padding(2);
             this.txtContraseña.PasswordChar = '\0';
             this.txtContraseña.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -113,7 +113,7 @@
             this.txtContraseña.ShortcutsEnabled = true;
             this.txtContraseña.Size = new System.Drawing.Size(262, 35);
             this.txtContraseña.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtContraseña.TabIndex = 32;
+            this.txtContraseña.TabIndex = 1;
             this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtContraseña.TextMarginBottom = 0;
             this.txtContraseña.TextMarginLeft = 3;
@@ -136,7 +136,7 @@
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator1.Size = new System.Drawing.Size(374, 21);
-            this.bunifuSeparator1.TabIndex = 30;
+            this.bunifuSeparator1.TabIndex = 0;
             // 
             // btnVerificar
             // 
@@ -157,11 +157,11 @@
             this.btnVerificar.ColorContrastOnClick = 45;
             this.btnVerificar.ColorContrastOnHover = 45;
             this.btnVerificar.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnVerificar.CustomizableEdges = borderEdges3;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnVerificar.CustomizableEdges = borderEdges1;
             this.btnVerificar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnVerificar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVerificar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -179,7 +179,7 @@
             this.btnVerificar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnVerificar.IconSize = 25;
             this.btnVerificar.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btnVerificar.IdleBorderRadius = 33;
+            this.btnVerificar.IdleBorderRadius = 25;
             this.btnVerificar.IdleBorderThickness = 1;
             this.btnVerificar.IdleFillColor = System.Drawing.Color.DodgerBlue;
             this.btnVerificar.IdleIconLeftImage = null;
@@ -189,7 +189,7 @@
             this.btnVerificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerificar.Name = "btnVerificar";
             this.btnVerificar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnVerificar.OnDisabledState.BorderRadius = 33;
+            this.btnVerificar.OnDisabledState.BorderRadius = 25;
             this.btnVerificar.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnVerificar.OnDisabledState.BorderThickness = 1;
             this.btnVerificar.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -197,7 +197,7 @@
             this.btnVerificar.OnDisabledState.IconLeftImage = null;
             this.btnVerificar.OnDisabledState.IconRightImage = null;
             this.btnVerificar.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnVerificar.onHoverState.BorderRadius = 33;
+            this.btnVerificar.onHoverState.BorderRadius = 25;
             this.btnVerificar.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnVerificar.onHoverState.BorderThickness = 1;
             this.btnVerificar.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -205,7 +205,7 @@
             this.btnVerificar.onHoverState.IconLeftImage = null;
             this.btnVerificar.onHoverState.IconRightImage = null;
             this.btnVerificar.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnVerificar.OnIdleState.BorderRadius = 33;
+            this.btnVerificar.OnIdleState.BorderRadius = 25;
             this.btnVerificar.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnVerificar.OnIdleState.BorderThickness = 1;
             this.btnVerificar.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
@@ -213,7 +213,7 @@
             this.btnVerificar.OnIdleState.IconLeftImage = null;
             this.btnVerificar.OnIdleState.IconRightImage = null;
             this.btnVerificar.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnVerificar.OnPressedState.BorderRadius = 33;
+            this.btnVerificar.OnPressedState.BorderRadius = 25;
             this.btnVerificar.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnVerificar.OnPressedState.BorderThickness = 1;
             this.btnVerificar.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -221,7 +221,7 @@
             this.btnVerificar.OnPressedState.IconLeftImage = null;
             this.btnVerificar.OnPressedState.IconRightImage = null;
             this.btnVerificar.Size = new System.Drawing.Size(262, 32);
-            this.btnVerificar.TabIndex = 33;
+            this.btnVerificar.TabIndex = 2;
             this.btnVerificar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVerificar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnVerificar.TextMarginLeft = 0;
@@ -263,11 +263,11 @@
             this.ptbback.ColorContrastOnClick = 30;
             this.ptbback.ColorContrastOnHover = 30;
             this.ptbback.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.ptbback.CustomizableEdges = borderEdges4;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.ptbback.CustomizableEdges = borderEdges2;
             this.ptbback.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ptbback.Image = global::AgroServicios.Properties.Resources.turn_left_11044726;
             this.ptbback.ImageMargin = new System.Windows.Forms.Padding(0);
@@ -288,10 +288,10 @@
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.BorderRadius = 1;
+            this.bunifuGradientPanel1.Controls.Add(this.ptbback);
             this.bunifuGradientPanel1.Controls.Add(this.btnVerificar);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuSeparator1);
             this.bunifuGradientPanel1.Controls.Add(this.txtContraseña);
-            this.bunifuGradientPanel1.Controls.Add(this.ptbback);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuPictureBox1);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.DeepSkyBlue;
@@ -302,7 +302,7 @@
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(547, 372);
-            this.bunifuGradientPanel1.TabIndex = 36;
+            this.bunifuGradientPanel1.TabIndex = 0;
             // 
             // VerificarContraServer
             // 

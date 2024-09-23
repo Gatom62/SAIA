@@ -82,8 +82,8 @@
             this.menu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1368, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1026, 25);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -97,42 +97,42 @@
             this.cmsConecarBase});
             this.menu.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(94, 24);
+            this.menu.Size = new System.Drawing.Size(77, 21);
             this.menu.Text = "Opciones";
             // 
             // menuTest
             // 
             this.menuTest.Image = global::AgroServicios.Properties.Resources.wifi;
             this.menuTest.Name = "menuTest";
-            this.menuTest.Size = new System.Drawing.Size(334, 26);
+            this.menuTest.Size = new System.Drawing.Size(270, 22);
             this.menuTest.Text = "Probar conexión";
             // 
             // menuIntegrantes
             // 
             this.menuIntegrantes.Image = global::AgroServicios.Properties.Resources.silueta_de_multiples_usuarios;
             this.menuIntegrantes.Name = "menuIntegrantes";
-            this.menuIntegrantes.Size = new System.Drawing.Size(334, 26);
+            this.menuIntegrantes.Size = new System.Drawing.Size(270, 22);
             this.menuIntegrantes.Text = "Integrantes";
             // 
             // cmsManualUsuario
             // 
             this.cmsManualUsuario.Image = global::AgroServicios.Properties.Resources.Installing_Updates;
             this.cmsManualUsuario.Name = "cmsManualUsuario";
-            this.cmsManualUsuario.Size = new System.Drawing.Size(334, 26);
+            this.cmsManualUsuario.Size = new System.Drawing.Size(270, 22);
             this.cmsManualUsuario.Text = "Descargar manual de usuario";
             // 
             // cmsManualTecnico
             // 
             this.cmsManualTecnico.Image = global::AgroServicios.Properties.Resources.Installing_Updates;
             this.cmsManualTecnico.Name = "cmsManualTecnico";
-            this.cmsManualTecnico.Size = new System.Drawing.Size(334, 26);
+            this.cmsManualTecnico.Size = new System.Drawing.Size(270, 22);
             this.cmsManualTecnico.Text = "Descargar manual técnico";
             // 
             // cmsConecarBase
             // 
             this.cmsConecarBase.Image = global::AgroServicios.Properties.Resources.Logo_base21;
             this.cmsConecarBase.Name = "cmsConecarBase";
-            this.cmsConecarBase.Size = new System.Drawing.Size(334, 26);
+            this.cmsConecarBase.Size = new System.Drawing.Size(270, 22);
             this.cmsConecarBase.Text = "Conectarse a una base de datos";
             // 
             // switchidioma
@@ -144,10 +144,10 @@
             this.switchidioma.Checked = false;
             this.switchidioma.Cursor = System.Windows.Forms.Cursors.Hand;
             this.switchidioma.InnerCirclePadding = 3;
-            this.switchidioma.Location = new System.Drawing.Point(251, 7);
-            this.switchidioma.Margin = new System.Windows.Forms.Padding(5);
+            this.switchidioma.Location = new System.Drawing.Point(188, 6);
+            this.switchidioma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.switchidioma.Name = "switchidioma";
-            this.switchidioma.Size = new System.Drawing.Size(45, 16);
+            this.switchidioma.Size = new System.Drawing.Size(34, 13);
             this.switchidioma.TabIndex = 14;
             this.switchidioma.ThumbMargin = 3;
             toggleState1.BackColor = System.Drawing.Color.DarkGray;
@@ -188,11 +188,11 @@
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(188, 5);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuLabel1.Location = new System.Drawing.Point(141, 4);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(48, 20);
+            this.bunifuLabel1.Size = new System.Drawing.Size(39, 17);
             this.bunifuLabel1.TabIndex = 15;
             this.bunifuLabel1.Text = "English";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -205,11 +205,11 @@
             this.DarkMode.CheckedBackColor = System.Drawing.Color.DodgerBlue;
             this.DarkMode.CheckedSwitchColor = System.Drawing.Color.White;
             this.DarkMode.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
-            this.DarkMode.Location = new System.Drawing.Point(1149, 5);
-            this.DarkMode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DarkMode.Location = new System.Drawing.Point(862, 4);
+            this.DarkMode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DarkMode.Name = "DarkMode";
             this.DarkMode.OutlineThickness = 2;
-            this.DarkMode.Size = new System.Drawing.Size(45, 21);
+            this.DarkMode.Size = new System.Drawing.Size(34, 17);
             this.DarkMode.TabIndex = 16;
             this.DarkMode.UncheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
             this.DarkMode.UncheckedSwitchColor = System.Drawing.Color.WhiteSmoke;
@@ -223,9 +223,10 @@
             this.lblinicio.BackColor = System.Drawing.Color.White;
             this.lblinicio.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblinicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(174)))), ((int)(((byte)(34)))));
-            this.lblinicio.Location = new System.Drawing.Point(373, 20);
+            this.lblinicio.Location = new System.Drawing.Point(280, 16);
+            this.lblinicio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblinicio.Name = "lblinicio";
-            this.lblinicio.Size = new System.Drawing.Size(399, 74);
+            this.lblinicio.Size = new System.Drawing.Size(317, 58);
             this.lblinicio.TabIndex = 1;
             this.lblinicio.Text = "Iniciar Sesión";
             // 
@@ -236,9 +237,10 @@
             this.LblUsername.BackColor = System.Drawing.Color.White;
             this.LblUsername.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.LblUsername.Location = new System.Drawing.Point(64, 155);
+            this.LblUsername.Location = new System.Drawing.Point(48, 126);
+            this.LblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblUsername.Name = "LblUsername";
-            this.LblUsername.Size = new System.Drawing.Size(148, 44);
+            this.LblUsername.Size = new System.Drawing.Size(123, 37);
             this.LblUsername.TabIndex = 2;
             this.LblUsername.Text = "Usuario";
             // 
@@ -249,9 +251,10 @@
             this.LblPassword.BackColor = System.Drawing.Color.White;
             this.LblPassword.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.LblPassword.Location = new System.Drawing.Point(64, 337);
+            this.LblPassword.Location = new System.Drawing.Point(48, 274);
+            this.LblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblPassword.Name = "LblPassword";
-            this.LblPassword.Size = new System.Drawing.Size(229, 44);
+            this.LblPassword.Size = new System.Drawing.Size(187, 37);
             this.LblPassword.TabIndex = 9;
             this.LblPassword.Text = "Contraseña";
             // 
@@ -272,11 +275,11 @@
             this.Firstpanel.Controls.Add(this.BtnStart);
             this.Firstpanel.Controls.Add(this.txtPassword);
             this.Firstpanel.Controls.Add(this.txtUsername);
-            this.Firstpanel.Location = new System.Drawing.Point(24, 21);
-            this.Firstpanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Firstpanel.Location = new System.Drawing.Point(18, 17);
+            this.Firstpanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Firstpanel.Name = "Firstpanel";
             this.Firstpanel.ShowBorders = true;
-            this.Firstpanel.Size = new System.Drawing.Size(1127, 604);
+            this.Firstpanel.Size = new System.Drawing.Size(845, 491);
             this.Firstpanel.TabIndex = 17;
             // 
             // PasswordHide
@@ -302,12 +305,12 @@
             this.PasswordHide.DialogResult = System.Windows.Forms.DialogResult.None;
             this.PasswordHide.Image = global::AgroServicios.Properties.Resources.Show;
             this.PasswordHide.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.PasswordHide.Location = new System.Drawing.Point(1017, 404);
-            this.PasswordHide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PasswordHide.Location = new System.Drawing.Point(763, 328);
+            this.PasswordHide.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PasswordHide.Name = "PasswordHide";
             this.PasswordHide.RoundBorders = true;
             this.PasswordHide.ShowBorders = true;
-            this.PasswordHide.Size = new System.Drawing.Size(40, 40);
+            this.PasswordHide.Size = new System.Drawing.Size(30, 30);
             this.PasswordHide.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
             this.PasswordHide.TabIndex = 10;
             // 
@@ -334,12 +337,12 @@
             this.PasswordVisible.DialogResult = System.Windows.Forms.DialogResult.None;
             this.PasswordVisible.Image = global::AgroServicios.Properties.Resources.Hide;
             this.PasswordVisible.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.PasswordVisible.Location = new System.Drawing.Point(1017, 404);
-            this.PasswordVisible.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PasswordVisible.Location = new System.Drawing.Point(763, 328);
+            this.PasswordVisible.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PasswordVisible.Name = "PasswordVisible";
             this.PasswordVisible.RoundBorders = true;
             this.PasswordVisible.ShowBorders = true;
-            this.PasswordVisible.Size = new System.Drawing.Size(40, 40);
+            this.PasswordVisible.Size = new System.Drawing.Size(30, 30);
             this.PasswordVisible.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
             this.PasswordVisible.TabIndex = 9;
             // 
@@ -349,9 +352,10 @@
             this.lblRecuperar.BackColor = System.Drawing.Color.White;
             this.lblRecuperar.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRecuperar.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.lblRecuperar.Location = new System.Drawing.Point(416, 489);
+            this.lblRecuperar.Location = new System.Drawing.Point(312, 397);
+            this.lblRecuperar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRecuperar.Name = "lblRecuperar";
-            this.lblRecuperar.Size = new System.Drawing.Size(282, 27);
+            this.lblRecuperar.Size = new System.Drawing.Size(228, 22);
             this.lblRecuperar.TabIndex = 11;
             this.lblRecuperar.TabStop = true;
             this.lblRecuperar.Text = "¿Olvido su contraseña?";
@@ -403,8 +407,8 @@
             this.BtnStart.IdleIconLeftImage = null;
             this.BtnStart.IdleIconRightImage = null;
             this.BtnStart.IndicateFocus = true;
-            this.BtnStart.Location = new System.Drawing.Point(477, 535);
-            this.BtnStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnStart.Location = new System.Drawing.Point(358, 435);
+            this.BtnStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnStart.Name = "BtnStart";
             this.BtnStart.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnStart.OnDisabledState.BorderRadius = 33;
@@ -438,7 +442,7 @@
             this.BtnStart.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.BtnStart.OnPressedState.IconLeftImage = null;
             this.BtnStart.OnPressedState.IconRightImage = null;
-            this.BtnStart.Size = new System.Drawing.Size(211, 39);
+            this.BtnStart.Size = new System.Drawing.Size(158, 32);
             this.BtnStart.TabIndex = 8;
             this.BtnStart.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BtnStart.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -475,8 +479,8 @@
             this.txtPassword.IconRight = null;
             this.txtPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.Lines = new string[0];
-            this.txtPassword.Location = new System.Drawing.Point(53, 398);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Location = new System.Drawing.Point(40, 323);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPassword.Modified = false;
@@ -502,7 +506,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtPassword.OnIdleState = stateProperties4;
-            this.txtPassword.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtPassword.PlaceholderText = "Contraseña";
@@ -512,7 +516,7 @@
             this.txtPassword.SelectionLength = 0;
             this.txtPassword.SelectionStart = 0;
             this.txtPassword.ShortcutsEnabled = true;
-            this.txtPassword.Size = new System.Drawing.Size(1027, 50);
+            this.txtPassword.Size = new System.Drawing.Size(770, 42);
             this.txtPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPassword.TabIndex = 7;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -552,8 +556,8 @@
             this.txtUsername.IconRight = null;
             this.txtUsername.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.Lines = new string[0];
-            this.txtUsername.Location = new System.Drawing.Point(53, 226);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername.Location = new System.Drawing.Point(40, 184);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUsername.Modified = false;
@@ -579,7 +583,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtUsername.OnIdleState = stateProperties8;
-            this.txtUsername.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtUsername.PlaceholderText = "Usuario";
@@ -589,7 +593,7 @@
             this.txtUsername.SelectionLength = 0;
             this.txtUsername.SelectionStart = 0;
             this.txtUsername.ShortcutsEnabled = true;
-            this.txtUsername.Size = new System.Drawing.Size(1027, 50);
+            this.txtUsername.Size = new System.Drawing.Size(770, 42);
             this.txtUsername.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtUsername.TabIndex = 6;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -608,11 +612,11 @@
             this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel2.Location = new System.Drawing.Point(1200, 5);
-            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuLabel2.Location = new System.Drawing.Point(900, 4);
+            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(85, 20);
+            this.bunifuLabel2.Size = new System.Drawing.Size(71, 17);
             this.bunifuLabel2.TabIndex = 18;
             this.bunifuLabel2.Text = "Alter theme";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -627,8 +631,7 @@
             this.bunifuShadowPanel1.Controls.Add(this.Firstpanel);
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(88, 46);
-            this.bunifuShadowPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(66, 37);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.Transparent;
@@ -637,7 +640,7 @@
             this.bunifuShadowPanel1.ShadowDepth = 5;
             this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(1175, 652);
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(881, 530);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 12;
             // 
@@ -654,18 +657,17 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1368, 684);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1026, 556);
             this.bunifuGradientPanel1.TabIndex = 18;
             // 
             // VistaLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(1368, 684);
+            this.ClientSize = new System.Drawing.Size(1026, 556);
             this.Controls.Add(this.bunifuLabel2);
             this.Controls.Add(this.DarkMode);
             this.Controls.Add(this.switchidioma);
@@ -675,9 +677,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximumSize = new System.Drawing.Size(1386, 731);
-            this.MinimumSize = new System.Drawing.Size(1386, 731);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(1044, 601);
+            this.MinimumSize = new System.Drawing.Size(1027, 591);
             this.Name = "VistaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login / SAIA";

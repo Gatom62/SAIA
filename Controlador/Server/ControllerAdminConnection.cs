@@ -33,6 +33,32 @@ namespace AgroServicios.Controlador.Server
             View.ptbback.Click += CerrarForm;
             //ObjView.CerrarPrograma += new FormClosingEventHandler(cerrarPrograma);
         }
+        void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            AlertExito frm = new AlertExito();
+
+            frm.BackColorAlert = backcolor;
+
+            frm.ColorAlertBox = color;
+
+            frm.TittlAlertBox = title;
+
+            frm.TextAlertBox = text;
+
+            frm.IconeAlertBox = icon;
+
+            frm.ShowDialog();
+        }
+        void MandarValoresAlerta(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            MessagePersonal message = new MessagePersonal();
+            message.BackColorAlert = backcolor;
+            message.ColorAlertBox = color;
+            message.TittlAlertBox = title;
+            message.TextAlertBox = text;
+            message.IconeAlertBox = icon;
+            message.ShowDialog();
+        }
         private void CerrarForm(object sender, EventArgs e)
         {
             if(Origen == 1)
@@ -81,7 +107,7 @@ namespace AgroServicios.Controlador.Server
             // Validar si el servidor contiene doble pleca
             if (ObjView.txtServer.Text.Contains("\\\\"))
             {
-                MessageBox.Show("El nombre del servidor no puede contener dos plecas. Por favor corríjalo.", "Error de entrada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "El nombre del servidor no puede contener dos plecas. Por favor corríjalo.", Properties.Resources.MensajeWarning);
                 return; // Detener la ejecución si hay doble pleca
             }
 
@@ -143,14 +169,20 @@ namespace AgroServicios.Controlador.Server
                     DTOdbContext.Database = ObjView.txtDatabase.Text.Trim();
                     DTOdbContext.User = ObjView.txtSqlAuth.Text.Trim();
                     DTOdbContext.Password = ObjView.txtSqlPass.Text.Trim();
-                    MessageBox.Show($"El archivo fue creado exitosamente.", "Archivo de configuración", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //Mensaje de afirmacion si se pudo realizar la inserccion
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, $"El archivo fue creado exitosamente.", "Archivo de configuración", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+
+                    //MessageBox.Show($"El archivo fue creado exitosamente.", "Archivo de configuración", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ObjView.Dispose();
                 }
 
             }
             catch (XmlException ex)
             {
-                MessageBox.Show($"{ex.Message}, no se pudo crear el archivo de configuración.", "Consulte el manual técnico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Mensaje de error si se no se pudo realizar la inserccion
+                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", $"No se pudo crear el archivo de configuración", Properties.Resources.ErrorIcono);
+                VistaLogin backForm = new VistaLogin();
             }
 
         }

@@ -303,6 +303,8 @@
             this.ptbback.Size = new System.Drawing.Size(48, 48);
             this.ptbback.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
             this.ptbback.TabIndex = 13;
+            this.ptbback.MouseEnter += new System.EventHandler(this.ptbback_MouseEnter);
+            this.ptbback.MouseLeave += new System.EventHandler(this.ptbback_MouseLeave);
             // 
             // bunifuShadowPanel2
             // 
