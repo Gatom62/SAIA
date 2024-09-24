@@ -3,7 +3,6 @@ using AgroServicios.Controlador;
 using System.Windows.Forms;
 using AgroServicios.Controlador.Helper;
 using System.Drawing;
-
 namespace AgroServicios.Vista.Login
 {
     public partial class Bienvenida : Form
@@ -61,6 +60,9 @@ namespace AgroServicios.Vista.Login
                 BarradeProgeso.ProgressColor2 = Color.FromArgb(211, 41, 15);
 
             }
+
+            //Esto es para que el form haga ruidito
+
         }
 
     }

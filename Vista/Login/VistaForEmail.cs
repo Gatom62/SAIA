@@ -50,6 +50,7 @@ namespace AgroServicios.Vista.Login
         {
             if(ControladorTema.IsDarkMode == true)
             {
+                //Esto es para cambiar el color del boton de enviar respuesta
                 btnEnviar.IdleFillColor = Color.FromArgb(230, 119, 11);
                 btnEnviar.onHoverState.FillColor = Color.FromArgb(211, 41, 15);
                 btnEnviar.onHoverState.BorderColor = Color.FromArgb(211, 41, 15);
@@ -61,8 +62,12 @@ namespace AgroServicios.Vista.Login
                 bunifuGradientPanel1.GradientTopRight = Color.FromArgb(34, 36, 49);
                 bunifuGradientPanel1.GradientBottomRight = Color.FromArgb(118, 88, 152);
                 bunifuGradientPanel1.GradientTopLeft = Color.FromArgb(34, 36, 49);
+                //Esto es para cambiar el color del panel donde aparece el mensaje del correo
+                lblResult.ForeColor = Color.FromArgb(118, 88, 152);
+                //Esto es para hacer que el borde del txtUser cambie cuando sele pase el cursor ensima
+                txtUser.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtUser.BorderColorActive = Color.FromArgb(211, 41, 15);
             }
-
             if (ControladorIdioma.idioma == 1)
             {
                 txtUser.PlaceholderText = Ingles.IngreseSuUsuario;

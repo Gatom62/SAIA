@@ -76,7 +76,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Gainsboro;
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu});
@@ -145,7 +145,7 @@
             this.switchidioma.Cursor = System.Windows.Forms.Cursors.Hand;
             this.switchidioma.InnerCirclePadding = 3;
             this.switchidioma.Location = new System.Drawing.Point(188, 6);
-            this.switchidioma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.switchidioma.Margin = new System.Windows.Forms.Padding(4);
             this.switchidioma.Name = "switchidioma";
             this.switchidioma.Size = new System.Drawing.Size(34, 13);
             this.switchidioma.TabIndex = 14;
@@ -189,7 +189,7 @@
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel1.Location = new System.Drawing.Point(141, 4);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(39, 17);
@@ -200,13 +200,13 @@
             // 
             // DarkMode
             // 
-            this.DarkMode.BackColor = System.Drawing.Color.Gainsboro;
+            this.DarkMode.BackColor = System.Drawing.Color.White;
             this.DarkMode.Checked = false;
             this.DarkMode.CheckedBackColor = System.Drawing.Color.DodgerBlue;
             this.DarkMode.CheckedSwitchColor = System.Drawing.Color.White;
             this.DarkMode.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
             this.DarkMode.Location = new System.Drawing.Point(862, 4);
-            this.DarkMode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DarkMode.Margin = new System.Windows.Forms.Padding(2);
             this.DarkMode.Name = "DarkMode";
             this.DarkMode.OutlineThickness = 2;
             this.DarkMode.Size = new System.Drawing.Size(34, 17);
@@ -276,7 +276,7 @@
             this.Firstpanel.Controls.Add(this.txtPassword);
             this.Firstpanel.Controls.Add(this.txtUsername);
             this.Firstpanel.Location = new System.Drawing.Point(18, 17);
-            this.Firstpanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Firstpanel.Margin = new System.Windows.Forms.Padding(2);
             this.Firstpanel.Name = "Firstpanel";
             this.Firstpanel.ShowBorders = true;
             this.Firstpanel.Size = new System.Drawing.Size(845, 491);
@@ -306,7 +306,7 @@
             this.PasswordHide.Image = global::AgroServicios.Properties.Resources.Show;
             this.PasswordHide.ImageMargin = new System.Windows.Forms.Padding(0);
             this.PasswordHide.Location = new System.Drawing.Point(763, 328);
-            this.PasswordHide.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PasswordHide.Margin = new System.Windows.Forms.Padding(2);
             this.PasswordHide.Name = "PasswordHide";
             this.PasswordHide.RoundBorders = true;
             this.PasswordHide.ShowBorders = true;
@@ -338,7 +338,7 @@
             this.PasswordVisible.Image = global::AgroServicios.Properties.Resources.Hide;
             this.PasswordVisible.ImageMargin = new System.Windows.Forms.Padding(0);
             this.PasswordVisible.Location = new System.Drawing.Point(763, 328);
-            this.PasswordVisible.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PasswordVisible.Margin = new System.Windows.Forms.Padding(2);
             this.PasswordVisible.Name = "PasswordVisible";
             this.PasswordVisible.RoundBorders = true;
             this.PasswordVisible.ShowBorders = true;
@@ -408,7 +408,7 @@
             this.BtnStart.IdleIconRightImage = null;
             this.BtnStart.IndicateFocus = true;
             this.BtnStart.Location = new System.Drawing.Point(358, 435);
-            this.BtnStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnStart.Margin = new System.Windows.Forms.Padding(2);
             this.BtnStart.Name = "BtnStart";
             this.BtnStart.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.BtnStart.OnDisabledState.BorderRadius = 33;
@@ -480,7 +480,7 @@
             this.txtPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.Lines = new string[0];
             this.txtPassword.Location = new System.Drawing.Point(40, 323);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPassword.Modified = false;
@@ -506,7 +506,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtPassword.OnIdleState = stateProperties4;
-            this.txtPassword.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Padding = new System.Windows.Forms.Padding(2);
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtPassword.PlaceholderText = "Contraseña";
@@ -557,7 +557,7 @@
             this.txtUsername.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.Lines = new string[0];
             this.txtUsername.Location = new System.Drawing.Point(40, 184);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUsername.Modified = false;
@@ -583,7 +583,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtUsername.OnIdleState = stateProperties8;
-            this.txtUsername.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsername.Padding = new System.Windows.Forms.Padding(2);
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtUsername.PlaceholderText = "Usuario";
@@ -613,7 +613,7 @@
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel2.Location = new System.Drawing.Point(900, 4);
-            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(71, 17);
@@ -631,7 +631,7 @@
             this.bunifuShadowPanel1.Controls.Add(this.Firstpanel);
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(66, 37);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(78, 37);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.Transparent;
@@ -677,7 +677,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(1044, 601);
             this.MinimumSize = new System.Drawing.Size(1027, 591);
             this.Name = "VistaLogin";
