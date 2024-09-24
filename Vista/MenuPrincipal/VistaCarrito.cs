@@ -73,6 +73,16 @@ namespace AgroServicios.Vista.MenuPrincipal
                 dgvTotal.BackgroundColor = Color.FromArgb(52, 54, 62);
                 tableLayoutPanel1.BackColor = Color.FromArgb(52, 54, 62);
                 dgvCarrito.BackgroundColor = Color.FromArgb(52, 54, 62);
+
+                btnComprar.IdleFillColor = Color.DarkBlue;
+                btnComprar.onHoverState.FillColor = Color.DarkViolet;
+                btnComprar.onHoverState.BorderColor = Color.DarkViolet;
+                btnComprar.OnPressedState.FillColor = Color.DodgerBlue;
+                btnComprar.OnPressedState.BorderColor = Color.DodgerBlue;
+                btnComprar.DisabledFillColor = Color.DarkViolet;
+
+                btnComprar.DisabledFillColor = Color.FromArgb(118, 88, 152);
+                btnComprar.ForeColor = Color.White;
             }
             else
             {
@@ -82,6 +92,7 @@ namespace AgroServicios.Vista.MenuPrincipal
                 dgvTotal.BackgroundColor = Color.White;
                 tableLayoutPanel1.BackColor = Color.White;
                 dgvCarrito.BackgroundColor = Color.White;
+                btnComprar.IdleFillColor = Color.FromArgb(147, 231, 64);
             }
 
             if (ControladorIdioma.idioma == 1)

@@ -36,17 +36,17 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.pnEstructura = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnUbdateMarca = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.txtUbdateMarca = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnTitulo = new Bunifu.UI.WinForms.BunifuPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbCrearNuevaMarca = new Bunifu.UI.WinForms.BunifuLabel();
-            this.txtUbdateMarca = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.txtid = new System.Windows.Forms.ToolStripTextBox();
             this.pnEstructura.SuspendLayout();
+            this.bunifuShadowPanel2.SuspendLayout();
             this.pnTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.bunifuShadowPanel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -156,51 +156,6 @@
             this.btnUbdateMarca.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnUbdateMarca.UseDefaultRadiusAndThickness = true;
             // 
-            // pnTitulo
-            // 
-            this.pnTitulo.BackgroundColor = System.Drawing.Color.White;
-            this.pnTitulo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnTitulo.BackgroundImage")));
-            this.pnTitulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pnTitulo.BorderColor = System.Drawing.Color.Transparent;
-            this.pnTitulo.BorderRadius = 20;
-            this.pnTitulo.BorderThickness = 2;
-            this.pnTitulo.Controls.Add(this.pictureBox1);
-            this.pnTitulo.Controls.Add(this.lbCrearNuevaMarca);
-            this.pnTitulo.Location = new System.Drawing.Point(-3, 0);
-            this.pnTitulo.Name = "pnTitulo";
-            this.pnTitulo.ShowBorders = true;
-            this.pnTitulo.Size = new System.Drawing.Size(479, 63);
-            this.pnTitulo.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::AgroServicios.Properties.Resources.Imagen_de_WhatsApp_2024_07_08_a_las_17_27_06_487df51c_removebg_preview;
-            this.pictureBox1.Location = new System.Drawing.Point(309, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // lbCrearNuevaMarca
-            // 
-            this.lbCrearNuevaMarca.AllowParentOverrides = false;
-            this.lbCrearNuevaMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbCrearNuevaMarca.AutoEllipsis = false;
-            this.lbCrearNuevaMarca.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lbCrearNuevaMarca.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbCrearNuevaMarca.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold);
-            this.lbCrearNuevaMarca.Location = new System.Drawing.Point(133, 15);
-            this.lbCrearNuevaMarca.Name = "lbCrearNuevaMarca";
-            this.lbCrearNuevaMarca.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbCrearNuevaMarca.Size = new System.Drawing.Size(170, 36);
-            this.lbCrearNuevaMarca.TabIndex = 0;
-            this.lbCrearNuevaMarca.Text = "EditarMarca";
-            this.lbCrearNuevaMarca.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbCrearNuevaMarca.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // txtUbdateMarca
             // 
             this.txtUbdateMarca.AcceptsReturn = false;
@@ -300,6 +255,51 @@
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 0;
             // 
+            // pnTitulo
+            // 
+            this.pnTitulo.BackgroundColor = System.Drawing.Color.White;
+            this.pnTitulo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnTitulo.BackgroundImage")));
+            this.pnTitulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnTitulo.BorderColor = System.Drawing.Color.Transparent;
+            this.pnTitulo.BorderRadius = 20;
+            this.pnTitulo.BorderThickness = 2;
+            this.pnTitulo.Controls.Add(this.pictureBox1);
+            this.pnTitulo.Controls.Add(this.lbCrearNuevaMarca);
+            this.pnTitulo.Location = new System.Drawing.Point(0, 0);
+            this.pnTitulo.Name = "pnTitulo";
+            this.pnTitulo.ShowBorders = true;
+            this.pnTitulo.Size = new System.Drawing.Size(476, 63);
+            this.pnTitulo.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::AgroServicios.Properties.Resources.Imagen_de_WhatsApp_2024_07_08_a_las_17_27_06_487df51c_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(308, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(59, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lbCrearNuevaMarca
+            // 
+            this.lbCrearNuevaMarca.AllowParentOverrides = false;
+            this.lbCrearNuevaMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbCrearNuevaMarca.AutoEllipsis = false;
+            this.lbCrearNuevaMarca.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbCrearNuevaMarca.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lbCrearNuevaMarca.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold);
+            this.lbCrearNuevaMarca.Location = new System.Drawing.Point(132, 15);
+            this.lbCrearNuevaMarca.Name = "lbCrearNuevaMarca";
+            this.lbCrearNuevaMarca.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbCrearNuevaMarca.Size = new System.Drawing.Size(170, 36);
+            this.lbCrearNuevaMarca.TabIndex = 0;
+            this.lbCrearNuevaMarca.Text = "EditarMarca";
+            this.lbCrearNuevaMarca.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbCrearNuevaMarca.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.White;
@@ -340,10 +340,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.VistaUbdateMarca_Load);
             this.pnEstructura.ResumeLayout(false);
+            this.bunifuShadowPanel2.ResumeLayout(false);
             this.pnTitulo.ResumeLayout(false);
             this.pnTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.bunifuShadowPanel2.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

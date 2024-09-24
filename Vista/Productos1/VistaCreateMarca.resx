@@ -162,6 +162,27 @@
         nNPPpXON0uad+SCwTfr422nQrc7M0pu9/h4BbPVYn6VOjnM231YIH3iFzOXJdqNFAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="pnTitulo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAvMAAABHCAYAAACKwcidAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKwSURBVHhe7dytbhtBFIBRw8DCwkBDw8A8QmCgYWGgod+i
+        sI9RWFhYGFgYWBjkce94r2S160bunzNXOke6WmlndvCn1doLAAAAAABgRPv9fhlzG7OO2RpjjDHGGGP+
+        6fTO7r29ygT/e621h91u9xiHAgAAFxD9/TUuPfCvMst/Tzy4jEM+98MAAIDL6y/VW2s3mejniefW8eDz
+        dAQAAPDKNpnqL4uN/Y28kAcAgLHcZrL/mk9rAABgPNHpT3F5k9k+13/sOm0FAABGE0H/IdN9Lhb7r2YB
+        AIAB5efw87fzcXN12AEAAIzsLhP+qLV2n4sAAMC45v9s43t5AAAoYZsJf9RvTmsAAMDAxDwAABQl5gEA
+        oCgxDwAARYl5AAAoSswDAEBRYh4AAIoS8wAAUJSYBwCAosQ8AAAUJeYBAKAoMQ8AAEWJeQAAKErMAwBA
+        UWIeAACKEvMAAFCUmAcAgKLEPAAAFCXmAQCgKDEPAABFiXkAAChKzAMAQFFiHgAAihLzAABQlJgHAICi
+        xDwAABQl5gEAoCgxDwAARYl5AAAoSswDAEBRYh4AAIoS8wAAUJSYBwCAosQ8AAAUJeYBAKAoMQ8AAEWJ
+        eQAAKErMAwBAUWIeAACKEvMAAFCUmAcAgKLEPAAAFCXmAQCgKDEPAABFiXkAACjqZMxvpjUAAGBgJ2N+
+        Pa0BAAADm8d8a+0mFwEAgEFFt99nwh/F/avdbvdt2gIAAAzqOhP+RxHz73MDAAAwmOj1L5nuc7H+NjY8
+        TVsBAIBRRKc/x2WV6X5abLg77AYAAEayyWR/mc9tAABgHNHnHzPVzxPPrOMhP4gFAIBXkp/WnPdG/mfx
+        YP+G/tPhJAAA4GKiwx/738dnmv+5OOs6DnoX160xxhhjjDHm/01090Ncl5niAAAAAADAIBaL74qYp+G7
+        PL0VAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="lbCrearNuevaMarca.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21.75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
   <data name="txtNombreMarca.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAV4AAAAoCAYAAAC2J5JyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -184,27 +205,6 @@
   <metadata name="ContextMenuMarcas.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="pnTitulo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAvMAAABHCAYAAACKwcidAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKwSURBVHhe7dytbhtBFIBRw8DCwkBDw8A8QmCgYWGgod+i
-        sI9RWFhYGFgYWBjkce94r2S160bunzNXOke6WmlndvCn1doLAAAAAABgRPv9fhlzG7OO2RpjjDHGGGP+
-        6fTO7r29ygT/e621h91u9xiHAgAAFxD9/TUuPfCvMst/Tzy4jEM+98MAAIDL6y/VW2s3mejniefW8eDz
-        dAQAAPDKNpnqL4uN/Y28kAcAgLHcZrL/mk9rAABgPNHpT3F5k9k+13/sOm0FAABGE0H/IdN9Lhb7r2YB
-        AIAB5efw87fzcXN12AEAAIzsLhP+qLV2n4sAAMC45v9s43t5AAAoYZsJf9RvTmsAAMDAxDwAABQl5gEA
-        oCgxDwAARYl5AAAoSswDAEBRYh4AAIoS8wAAUJSYBwCAosQ8AAAUJeYBAKAoMQ8AAEWJeQAAKErMAwBA
-        UWIeAACKEvMAAFCUmAcAgKLEPAAAFCXmAQCgKDEPAABFiXkAAChKzAMAQFFiHgAAihLzAABQlJgHAICi
-        xDwAABQl5gEAoCgxDwAARYl5AAAoSswDAEBRYh4AAIoS8wAAUJSYBwCAosQ8AAAUJeYBAKAoMQ8AAEWJ
-        eQAAKErMAwBAUWIeAACKEvMAAFCUmAcAgKLEPAAAFCXmAQCgKDEPAABFiXkAACjqZMxvpjUAAGBgJ2N+
-        Pa0BAAADm8d8a+0mFwEAgEFFt99nwh/F/avdbvdt2gIAAAzqOhP+RxHz73MDAAAwmOj1L5nuc7H+NjY8
-        TVsBAIBRRKc/x2WV6X5abLg77AYAAEayyWR/mc9tAABgHNHnHzPVzxPPrOMhP4gFAIBXkp/WnPdG/mfx
-        YP+G/tPhJAAA4GKiwx/738dnmv+5OOs6DnoX160xxhhjjDHm/01090Ncl5niAAAAAADAIBaL74qYp+G7
-        PL0VAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="lbCrearNuevaMarca.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'Century Gothic'; font-size: 21.75pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAAAAAAEAIAAoIAQAFgAAACgAAAAAAQAAAAIAAAEAIAAAAAAAAAAEAMMOAADDDgAAAAAAAAAA

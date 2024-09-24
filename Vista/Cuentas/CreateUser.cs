@@ -43,7 +43,7 @@ namespace AgroServicios.Vista.Cuentas
                 btnCrearUsuario.DisabledFillColor = Color.FromArgb(118, 88, 152);
                 btnCrearUsuario.ForeColor = Color.White;
 
-                pnEstructura.BackgroundColor = Color.WhiteSmoke;
+                pnTitulo.BackgroundColor = Color.WhiteSmoke;
 
                 txtNewUser.BorderColorHover = Color.FromArgb(211, 41, 15);
                 txtNewUser.BorderColorActive = Color.FromArgb(211, 41, 15);

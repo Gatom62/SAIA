@@ -72,9 +72,9 @@
             this.ptbactimg = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsactimg = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnTitulo = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuLabel1 = new System.Windows.Forms.Label();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.pnTitulo = new Bunifu.UI.WinForms.BunifuPanel();
+            this.LabelPrin = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -85,6 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbactimg)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            this.bunifuShadowPanel2.SuspendLayout();
             this.pnTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -500,8 +501,9 @@
             this.pnEstructura.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnEstructura.BackgroundImage")));
             this.pnEstructura.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnEstructura.BorderColor = System.Drawing.Color.Transparent;
-            this.pnEstructura.BorderRadius = 1;
+            this.pnEstructura.BorderRadius = 25;
             this.pnEstructura.BorderThickness = 2;
+            this.pnEstructura.Controls.Add(this.bunifuShadowPanel2);
             this.pnEstructura.Controls.Add(this.btnUpdateEmpleado);
             this.pnEstructura.Controls.Add(this.pictureBox7);
             this.pnEstructura.Controls.Add(this.lnDUI);
@@ -509,7 +511,6 @@
             this.pnEstructura.Controls.Add(this.txtUser);
             this.pnEstructura.Controls.Add(this.pictureBox1);
             this.pnEstructura.Controls.Add(this.ptbactimg);
-            this.pnEstructura.Controls.Add(this.pnTitulo);
             this.pnEstructura.Controls.Add(this.pictureBox3);
             this.pnEstructura.Controls.Add(this.pictureBox4);
             this.pnEstructura.Controls.Add(this.txtUpdateNombre);
@@ -519,7 +520,6 @@
             this.pnEstructura.Controls.Add(this.txtUpdateCorreo);
             this.pnEstructura.Controls.Add(this.txtUpdateDireccion);
             this.pnEstructura.Controls.Add(this.PickerBirthUpdate);
-            this.pnEstructura.Controls.Add(this.bunifuShadowPanel2);
             this.pnEstructura.Location = new System.Drawing.Point(54, 25);
             this.pnEstructura.Margin = new System.Windows.Forms.Padding(2);
             this.pnEstructura.Name = "pnEstructura";
@@ -774,44 +774,17 @@
             this.cmsactimg.Size = new System.Drawing.Size(176, 26);
             this.cmsactimg.Text = "Actualizar imagén.";
             // 
-            // pnTitulo
-            // 
-            this.pnTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.pnTitulo.ColumnCount = 3;
-            this.pnTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.pnTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.pnTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.pnTitulo.Controls.Add(this.bunifuLabel1, 1, 0);
-            this.pnTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnTitulo.Location = new System.Drawing.Point(0, 0);
-            this.pnTitulo.Margin = new System.Windows.Forms.Padding(2);
-            this.pnTitulo.Name = "pnTitulo";
-            this.pnTitulo.RowCount = 1;
-            this.pnTitulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.pnTitulo.Size = new System.Drawing.Size(598, 54);
-            this.pnTitulo.TabIndex = 0;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuLabel1.AutoSize = true;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(170, 13);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.Size = new System.Drawing.Size(255, 28);
-            this.bunifuLabel1.TabIndex = 0;
-            this.bunifuLabel1.Text = "Actualizar Empleado";
-            // 
             // bunifuShadowPanel2
             // 
             this.bunifuShadowPanel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel2.BorderRadius = 25;
             this.bunifuShadowPanel2.BorderThickness = 1;
+            this.bunifuShadowPanel2.Controls.Add(this.pnTitulo);
+            this.bunifuShadowPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel2.Location = new System.Drawing.Point(3, 23);
+            this.bunifuShadowPanel2.Location = new System.Drawing.Point(0, 0);
             this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
             this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.Transparent;
@@ -820,9 +793,36 @@
             this.bunifuShadowPanel2.ShadowDepth = 5;
             this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel2.Size = new System.Drawing.Size(595, 43);
+            this.bunifuShadowPanel2.Size = new System.Drawing.Size(598, 72);
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel2.TabIndex = 35;
+            this.bunifuShadowPanel2.TabIndex = 37;
+            // 
+            // pnTitulo
+            // 
+            this.pnTitulo.BackgroundColor = System.Drawing.Color.White;
+            this.pnTitulo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnTitulo.BackgroundImage")));
+            this.pnTitulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnTitulo.BorderColor = System.Drawing.Color.Transparent;
+            this.pnTitulo.BorderRadius = 25;
+            this.pnTitulo.BorderThickness = 1;
+            this.pnTitulo.Controls.Add(this.LabelPrin);
+            this.pnTitulo.Location = new System.Drawing.Point(0, 0);
+            this.pnTitulo.Name = "pnTitulo";
+            this.pnTitulo.ShowBorders = true;
+            this.pnTitulo.Size = new System.Drawing.Size(598, 60);
+            this.pnTitulo.TabIndex = 0;
+            // 
+            // LabelPrin
+            // 
+            this.LabelPrin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LabelPrin.AutoSize = true;
+            this.LabelPrin.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelPrin.Location = new System.Drawing.Point(176, 14);
+            this.LabelPrin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelPrin.Name = "LabelPrin";
+            this.LabelPrin.Size = new System.Drawing.Size(258, 28);
+            this.LabelPrin.TabIndex = 0;
+            this.LabelPrin.Text = "Actualizar empleado";
             // 
             // VistaUpdateEmpleados
             // 
@@ -852,6 +852,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbactimg)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.bunifuShadowPanel2.ResumeLayout(false);
             this.pnTitulo.ResumeLayout(false);
             this.pnTitulo.PerformLayout();
             this.ResumeLayout(false);
@@ -873,8 +874,6 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Bunifu.UI.WinForms.BunifuPanel pnEstructura;
-        private System.Windows.Forms.TableLayoutPanel pnTitulo;
-        public System.Windows.Forms.Label bunifuLabel1;
         public Bunifu.UI.WinForms.BunifuPictureBox ptbactimg;
         public System.Windows.Forms.ToolStripMenuItem cmsactimg;
         public Bunifu.UI.WinForms.BunifuTextBox txtUser;
@@ -883,7 +882,9 @@
         private Bunifu.UI.WinForms.BunifuLabel lnDUI;
         public System.Windows.Forms.MaskedTextBox maskDuiUbdate;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnUpdateEmpleado;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
+        private Bunifu.UI.WinForms.BunifuPanel pnTitulo;
+        public System.Windows.Forms.Label LabelPrin;
     }
 }

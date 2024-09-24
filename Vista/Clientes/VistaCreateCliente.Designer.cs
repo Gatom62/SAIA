@@ -97,10 +97,10 @@
             this.pnEstructura.Controls.Add(this.pictureBox3);
             this.pnEstructura.Controls.Add(this.txtNombreCliente);
             this.pnEstructura.Controls.Add(this.pictureBox2);
-            this.pnEstructura.Location = new System.Drawing.Point(59, 19);
+            this.pnEstructura.Location = new System.Drawing.Point(44, 19);
             this.pnEstructura.Name = "pnEstructura";
             this.pnEstructura.ShowBorders = true;
-            this.pnEstructura.Size = new System.Drawing.Size(599, 406);
+            this.pnEstructura.Size = new System.Drawing.Size(490, 406);
             this.pnEstructura.TabIndex = 0;
             this.bunifuToolTip1.SetToolTip(this.pnEstructura, "");
             this.bunifuToolTip1.SetToolTipIcon(this.pnEstructura, null);
@@ -125,7 +125,7 @@
             this.bunifuShadowPanel2.ShadowDepth = 5;
             this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel2.Size = new System.Drawing.Size(599, 83);
+            this.bunifuShadowPanel2.Size = new System.Drawing.Size(490, 83);
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 18;
             this.bunifuToolTip1.SetToolTip(this.bunifuShadowPanel2, "");
@@ -145,7 +145,7 @@
             this.pnTitulo.Location = new System.Drawing.Point(0, 1);
             this.pnTitulo.Name = "pnTitulo";
             this.pnTitulo.ShowBorders = true;
-            this.pnTitulo.Size = new System.Drawing.Size(599, 66);
+            this.pnTitulo.Size = new System.Drawing.Size(490, 66);
             this.pnTitulo.TabIndex = 0;
             this.bunifuToolTip1.SetToolTip(this.pnTitulo, "");
             this.bunifuToolTip1.SetToolTipIcon(this.pnTitulo, null);
@@ -155,7 +155,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::AgroServicios.Properties.Resources.Rectangle_32;
-            this.pictureBox1.Location = new System.Drawing.Point(379, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(330, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(45, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -172,7 +172,7 @@
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel1.Location = new System.Drawing.Point(187, 22);
+            this.bunifuLabel1.Location = new System.Drawing.Point(138, 22);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel1.Size = new System.Drawing.Size(186, 28);
@@ -231,7 +231,7 @@
             this.btnAgregarCliente.IdleIconLeftImage = null;
             this.btnAgregarCliente.IdleIconRightImage = null;
             this.btnAgregarCliente.IndicateFocus = false;
-            this.btnAgregarCliente.Location = new System.Drawing.Point(226, 356);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(175, 356);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAgregarCliente.OnDisabledState.BorderRadius = 15;
@@ -283,7 +283,7 @@
             this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.bunifuLabel2.Location = new System.Drawing.Point(259, 314);
+            this.bunifuLabel2.Location = new System.Drawing.Point(208, 314);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(27, 20);
@@ -298,7 +298,7 @@
             // maskDui
             // 
             this.maskDui.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskDui.Location = new System.Drawing.Point(188, 314);
+            this.maskDui.Location = new System.Drawing.Point(137, 314);
             this.maskDui.Mask = "00000000-0";
             this.maskDui.Name = "maskDui";
             this.maskDui.Size = new System.Drawing.Size(65, 21);
@@ -311,7 +311,7 @@
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.White;
             this.pictureBox7.Image = global::AgroServicios.Properties.Resources.DUIPng;
-            this.pictureBox7.Location = new System.Drawing.Point(130, 304);
+            this.pictureBox7.Location = new System.Drawing.Point(79, 304);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(47, 44);
@@ -351,7 +351,7 @@
             this.txtDireccionCliente.IconRight = null;
             this.txtDireccionCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDireccionCliente.Lines = new string[0];
-            this.txtDireccionCliente.Location = new System.Drawing.Point(181, 252);
+            this.txtDireccionCliente.Location = new System.Drawing.Point(130, 252);
             this.txtDireccionCliente.MaxLength = 32767;
             this.txtDireccionCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDireccionCliente.Modified = false;
@@ -430,7 +430,7 @@
             this.txtCorreoCliente.IconRight = null;
             this.txtCorreoCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCorreoCliente.Lines = new string[0];
-            this.txtCorreoCliente.Location = new System.Drawing.Point(181, 196);
+            this.txtCorreoCliente.Location = new System.Drawing.Point(130, 196);
             this.txtCorreoCliente.MaxLength = 32767;
             this.txtCorreoCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtCorreoCliente.Modified = false;
@@ -509,7 +509,7 @@
             this.txtTelefonoCliente.IconRight = null;
             this.txtTelefonoCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTelefonoCliente.Lines = new string[0];
-            this.txtTelefonoCliente.Location = new System.Drawing.Point(181, 141);
+            this.txtTelefonoCliente.Location = new System.Drawing.Point(130, 141);
             this.txtTelefonoCliente.MaxLength = 32767;
             this.txtTelefonoCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtTelefonoCliente.Modified = false;
@@ -563,7 +563,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::AgroServicios.Properties.Resources.Casa_Logo2;
-            this.pictureBox5.Location = new System.Drawing.Point(130, 250);
+            this.pictureBox5.Location = new System.Drawing.Point(79, 250);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(45, 40);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -577,7 +577,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::AgroServicios.Properties.Resources.Logo_Correo;
-            this.pictureBox4.Location = new System.Drawing.Point(130, 196);
+            this.pictureBox4.Location = new System.Drawing.Point(79, 196);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(45, 40);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -591,7 +591,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::AgroServicios.Properties.Resources.Telefono_logo1;
-            this.pictureBox3.Location = new System.Drawing.Point(130, 141);
+            this.pictureBox3.Location = new System.Drawing.Point(79, 141);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(45, 40);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -630,7 +630,7 @@
             this.txtNombreCliente.IconRight = null;
             this.txtNombreCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombreCliente.Lines = new string[0];
-            this.txtNombreCliente.Location = new System.Drawing.Point(181, 92);
+            this.txtNombreCliente.Location = new System.Drawing.Point(130, 92);
             this.txtNombreCliente.MaxLength = 32767;
             this.txtNombreCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtNombreCliente.Modified = false;
@@ -684,7 +684,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::AgroServicios.Properties.Resources.Rectangle_32;
-            this.pictureBox2.Location = new System.Drawing.Point(130, 92);
+            this.pictureBox2.Location = new System.Drawing.Point(79, 92);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(45, 40);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -734,12 +734,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(708, 437);
+            this.ClientSize = new System.Drawing.Size(575, 437);
             this.Controls.Add(this.pnEstructura);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(724, 476);
-            this.MinimumSize = new System.Drawing.Size(724, 476);
+            this.MaximumSize = new System.Drawing.Size(591, 476);
+            this.MinimumSize = new System.Drawing.Size(591, 476);
             this.Name = "VistaCreateCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear Cliente";

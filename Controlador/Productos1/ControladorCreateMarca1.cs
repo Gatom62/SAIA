@@ -104,7 +104,6 @@ namespace AgroServicios.Controlador.Productos1
                 //Mensaje de afirmacion si se pudo realizar la inserccion
                 MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "La marca fue registrada", Properties.Resources.comprobado);
                 VistaLogin backForm = new VistaLogin();
-                ObjCreateMarca.Close();
             }
             else
             {

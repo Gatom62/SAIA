@@ -83,10 +83,5 @@ namespace AgroServicios.Vista.Productos1
                 e.SuppressKeyPress = true;
             }
         }
-
-        private void bunifuButton21_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
