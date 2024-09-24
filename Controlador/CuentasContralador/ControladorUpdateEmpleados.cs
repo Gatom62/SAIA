@@ -93,14 +93,9 @@ namespace AgroServicios.Controlador.CuentasContralador
         {
             if (accion == 2)
             {
-                Objupdate.bunifuLabel1.Text = Spanish.LabelFicha;
 
                 Objupdate.btnUpdateEmpleado.Visible = false;
-                if(ControladorIdioma.idioma == 1)
-                {
-                    Objupdate.bunifuLabel1.Text = Ingles.LabelFicha;
-                }
-           
+
                 Objupdate.txtUpdateNombre.Enabled = false;
                 Objupdate.txtUpdateCorreo.Enabled = false;
                 Objupdate.txtUpdateDireccion.Enabled = false;
@@ -111,10 +106,6 @@ namespace AgroServicios.Controlador.CuentasContralador
             }
             if(accion == 1)
             {
-                if(ControladorIdioma.idioma == 1)
-                {
-                    Objupdate.bunifuLabel1.Text = Ingles.tituloactualizar;
-                }
             }
         }
         private void ActualizarRegistro(object sender, EventArgs e)
