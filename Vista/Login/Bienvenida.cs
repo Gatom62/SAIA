@@ -3,10 +3,18 @@ using AgroServicios.Controlador;
 using System.Windows.Forms;
 using AgroServicios.Controlador.Helper;
 using System.Drawing;
+using System.Media;
+using Microsoft.Reporting.Map.WebForms.BingMaps;
+using System.IO;
+using WMPLib;
+
+//using WMPLib;
+
 namespace AgroServicios.Vista.Login
 {
     public partial class Bienvenida : Form
     {
+        WindowsMediaPlayer player = new WindowsMediaPlayer();
         public Bienvenida()
         {
             InitializeComponent();
@@ -36,6 +44,18 @@ namespace AgroServicios.Vista.Login
 
         private void Bienvenida_Load(object sender, EventArgs e)
         {
+            // Crear un archivo temporal a partir del recurso embebido
+            string tempFilePath = Path.GetTempFileName() + ".mp3";
+            File.WriteAllBytes(tempFilePath, Properties.Resources.Vos_SAIA__vocals_);
+
+            // Establecer la ruta del archivo temporal y reproducirlo
+            player.URL = tempFilePath;
+            player.controls.play();
+
+            // Opcional: eliminar el archivo temporal cuando se cierre el formulario
+            this.FormClosing += (s, args) => { if (File.Exists(tempFilePath)) File.Delete(tempFilePath); };
+
+
             if (ControladorIdioma.idioma == 1)
             {
                 lblbienvenido.Text = Ingles.bienvenida;

@@ -770,6 +770,16 @@ namespace AgroServicios.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] Vos_SAIA__vocals_ {
+            get {
+                object obj = ResourceManager.GetObject("Vos_SAIA__vocals_", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap wifi {

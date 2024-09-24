@@ -110,12 +110,12 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 30;
+            this.timer1.Interval = 45;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // timer2
             // 
-            this.timer2.Interval = 30;
+            this.timer2.Interval = 20;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // BarradeProgeso
