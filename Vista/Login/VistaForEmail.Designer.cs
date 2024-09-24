@@ -70,17 +70,19 @@
             this.lblResult.AllowParentOverrides = false;
             this.lblResult.AutoEllipsis = false;
             this.lblResult.AutoSize = false;
+            this.lblResult.BackColor = System.Drawing.Color.Turquoise;
             this.lblResult.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblResult.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblResult.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.lblResult.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblResult.Location = new System.Drawing.Point(0, 0);
             this.lblResult.Margin = new System.Windows.Forms.Padding(2);
             this.lblResult.Name = "lblResult";
             this.lblResult.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblResult.Size = new System.Drawing.Size(710, 139);
             this.lblResult.TabIndex = 3;
-            this.lblResult.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblResult.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblResult.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // btnEnviar
@@ -219,7 +221,7 @@
             this.txtUser.IconRight = null;
             this.txtUser.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUser.Lines = new string[0];
-            this.txtUser.Location = new System.Drawing.Point(226, 148);
+            this.txtUser.Location = new System.Drawing.Point(227, 148);
             this.txtUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtUser.MaxLength = 32767;
             this.txtUser.MinimumSize = new System.Drawing.Size(1, 1);
@@ -259,7 +261,7 @@
             this.txtUser.Size = new System.Drawing.Size(229, 34);
             this.txtUser.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtUser.TabIndex = 0;
-            this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtUser.TextMarginBottom = 0;
             this.txtUser.TextMarginLeft = 3;
             this.txtUser.TextMarginTop = 1;
