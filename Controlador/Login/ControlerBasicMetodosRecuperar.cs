@@ -47,7 +47,7 @@ namespace AgroServicios.Controlador.Login
         {
             VistaMetodoRecuperacionAdminUser vistaAdministracionUser = new VistaMetodoRecuperacionAdminUser();
             vistaAdministracionUser.ShowDialog();
-            ObjRecuperacion.Close();
+            
         }
 
     }
