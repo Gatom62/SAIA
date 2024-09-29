@@ -502,6 +502,33 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Enter the new password.
+        /// </summary>
+        internal static string IngreseNuevaContra {
+            get {
+                return ResourceManager.GetString("IngreseNuevaContra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Enter your password.
+        /// </summary>
+        internal static string IngreseSuContra {
+            get {
+                return ResourceManager.GetString("IngreseSuContra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Please enter your current password.
+        /// </summary>
+        internal static string IngreseSuContraActual {
+            get {
+                return ResourceManager.GetString("IngreseSuContraActual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Enter your username.
         /// </summary>
         internal static string IngreseSuUsuario {
@@ -880,11 +907,29 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Validate data.
+        /// </summary>
+        internal static string ValidarDatos {
+            get {
+                return ResourceManager.GetString("ValidarDatos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Verify.
         /// </summary>
         internal static string Verificar {
             get {
                 return ResourceManager.GetString("Verificar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Re-enter password.
+        /// </summary>
+        internal static string VuelvaIngresarContra {
+            get {
+                return ResourceManager.GetString("VuelvaIngresarContra", resourceCulture);
             }
         }
         

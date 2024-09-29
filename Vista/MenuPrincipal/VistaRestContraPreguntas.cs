@@ -48,17 +48,37 @@ namespace AgroServicios.Vista.MenuPrincipal
         {
             if (ControladorTema.IsDarkMode == true)
             {
+                this.BackColor = Color.FromArgb(34, 36, 49);
+                //Esto es para cambiar el color de los gradientes del panel cuando se active el modo oscuro
                 bunifuGradientPanel2.GradientBottomLeft = Color.FromArgb(118, 88, 152);
                 bunifuGradientPanel2.GradientTopRight = Color.FromArgb(34, 36, 49);
                 bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(118, 88, 152);
                 bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(34, 36, 49);
+
+                btnRestablecer.IdleFillColor = Color.DarkBlue;
+                btnRestablecer.onHoverState.FillColor = Color.DarkViolet;
+                btnRestablecer.onHoverState.BorderColor = Color.DarkViolet;
+                btnRestablecer.OnPressedState.FillColor = Color.DodgerBlue;
+                btnRestablecer.OnPressedState.BorderColor = Color.DodgerBlue;
+                btnRestablecer.DisabledFillColor = Color.DarkViolet;
+
+                btnRestablecer.DisabledFillColor = Color.FromArgb(118, 88, 152);
+                btnRestablecer.ForeColor = Color.White;
+
+                txtRest.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtRest.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtNuevaContra.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtNuevaContra.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtContraDenuevo.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtContraDenuevo.BorderColorActive = Color.FromArgb(211, 41, 15);
             }
             if (ControladorIdioma.idioma == 1)
             {
                 label1.Text = Ingles.LabelRestUser;
                 btnRestablecer.Text = Ingles.LabelRestContra;
                 txtRest.PlaceholderText = Ingles.Usuario;
-                txtNuevaContra.PlaceholderText = Ingles.Contrasena;
+                txtNuevaContra.PlaceholderText = Ingles.IngreseNuevaContra;
+                txtContraDenuevo.PlaceholderText = Ingles.VuelvaIngresarContra;
             }
         }
 

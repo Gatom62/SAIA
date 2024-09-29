@@ -41,9 +41,9 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pnTitulo = new System.Windows.Forms.TableLayoutPanel();
             this.ptbback = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LbLabelTitulo = new System.Windows.Forms.Label();
             this.btnValidar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -52,7 +52,7 @@
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.pnTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -84,7 +84,7 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 20;
             this.bunifuPanel1.BorderThickness = 2;
-            this.bunifuPanel1.Controls.Add(this.tableLayoutPanel1);
+            this.bunifuPanel1.Controls.Add(this.pnTitulo);
             this.bunifuPanel1.Controls.Add(this.btnValidar);
             this.bunifuPanel1.Controls.Add(this.pictureBox1);
             this.bunifuPanel1.Controls.Add(this.pictureBox3);
@@ -98,22 +98,22 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(575, 349);
             this.bunifuPanel1.TabIndex = 0;
             // 
-            // tableLayoutPanel1
+            // pnTitulo
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.ptbback, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(575, 66);
-            this.tableLayoutPanel1.TabIndex = 21;
+            this.pnTitulo.ColumnCount = 3;
+            this.pnTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.pnTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.pnTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.pnTitulo.Controls.Add(this.ptbback, 0, 0);
+            this.pnTitulo.Controls.Add(this.LbLabelTitulo, 1, 0);
+            this.pnTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnTitulo.Location = new System.Drawing.Point(0, 0);
+            this.pnTitulo.Margin = new System.Windows.Forms.Padding(2);
+            this.pnTitulo.Name = "pnTitulo";
+            this.pnTitulo.RowCount = 1;
+            this.pnTitulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.pnTitulo.Size = new System.Drawing.Size(575, 66);
+            this.pnTitulo.TabIndex = 21;
             // 
             // ptbback
             // 
@@ -150,17 +150,17 @@
             this.ptbback.MouseEnter += new System.EventHandler(this.ptbback_MouseEnter);
             this.ptbback.MouseLeave += new System.EventHandler(this.ptbback_MouseLeave);
             // 
-            // label1
+            // LbLabelTitulo
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(119, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(336, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ingrese su contraseña";
+            this.LbLabelTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.LbLabelTitulo.AutoSize = true;
+            this.LbLabelTitulo.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbLabelTitulo.Location = new System.Drawing.Point(119, 14);
+            this.LbLabelTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LbLabelTitulo.Name = "LbLabelTitulo";
+            this.LbLabelTitulo.Size = new System.Drawing.Size(336, 37);
+            this.LbLabelTitulo.TabIndex = 0;
+            this.LbLabelTitulo.Text = "Ingrese su contraseña";
             // 
             // btnValidar
             // 
@@ -465,10 +465,11 @@
             this.Name = "VistaLoguinCambiarContrasena";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Validar Contraseña actual - Usuario";
+            this.Load += new System.EventHandler(this.VistaLoguinCambiarContrasena_Load);
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.pnTitulo.ResumeLayout(false);
+            this.pnTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
@@ -479,9 +480,9 @@
 
         public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel2;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel pnTitulo;
         public Bunifu.UI.WinForms.BunifuButton.BunifuIconButton ptbback;
-        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label LbLabelTitulo;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnValidar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;

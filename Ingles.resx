@@ -264,6 +264,15 @@
   <data name="IngresarProducto" xml:space="preserve">
     <value>Enter Product</value>
   </data>
+  <data name="IngreseNuevaContra" xml:space="preserve">
+    <value>Enter the new password</value>
+  </data>
+  <data name="IngreseSuContra" xml:space="preserve">
+    <value>Enter your password</value>
+  </data>
+  <data name="IngreseSuContraActual" xml:space="preserve">
+    <value>Please enter your current password</value>
+  </data>
   <data name="IngreseSuUsuario" xml:space="preserve">
     <value>Enter your username</value>
   </data>
@@ -390,8 +399,14 @@
   <data name="Usuario" xml:space="preserve">
     <value>User</value>
   </data>
+  <data name="ValidarDatos" xml:space="preserve">
+    <value>Validate data</value>
+  </data>
   <data name="Verificar" xml:space="preserve">
     <value>Verify</value>
+  </data>
+  <data name="VuelvaIngresarContra" xml:space="preserve">
+    <value>Re-enter password</value>
   </data>
   <data name="welcome" xml:space="preserve">
     <value>Welcome</value>

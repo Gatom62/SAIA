@@ -1,5 +1,7 @@
-﻿using AgroServicios.Controlador.Helper;
+﻿using AgroServicios.Controlador;
+using AgroServicios.Controlador.Helper;
 using AgroServicios.Controlador.MenuPrincipal;
+using Bunifu.UI.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -59,6 +61,41 @@ namespace AgroServicios.Vista.MenuPrincipal
             // Restaurar el tamaño original del PictureBox cuando el cursor sale de la imagen
             ptbback.Size = originalSize;
             ptbback.Location = new Point(ptbback.Location.X + 10, ptbback.Location.Y + 10); // Restaurar la posición
+        }
+
+        private void VistaLoguinCambiarContrasena_Load(object sender, EventArgs e)
+        {
+            if (ControladorIdioma.idioma == 1)
+            {
+                LbLabelTitulo.Text = Ingles.IngreseSuContra;
+                txtUsuario.PlaceholderText = Ingles.Usuario;
+                txtContraseña.PlaceholderText = Ingles.IngreseSuContraActual;
+                btnValidar.Text = Ingles.ValidarDatos;
+            }
+
+            if (ControladorTema.IsDarkMode == true)
+            {
+                this.BackColor = Color.FromArgb(34, 36, 49);
+                btnValidar.IdleFillColor = Color.FromArgb(230, 119, 11);
+                btnValidar.onHoverState.FillColor = Color.FromArgb(211, 41, 15);
+                btnValidar.onHoverState.BorderColor = Color.FromArgb(211, 41, 15);
+                btnValidar.OnPressedState.FillColor = Color.Red;
+                btnValidar.OnPressedState.BorderColor = Color.Red;
+                btnValidar.DisabledFillColor = Color.DarkOrange;
+
+                pnTitulo.BackColor = Color.WhiteSmoke;
+
+                txtUsuario.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtUsuario.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtContraseña.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtContraseña.BorderColorActive = Color.FromArgb(211, 41, 15);
+
+                //Esto es para cambiar el color de los gradientes del panel cuando se active el modo oscuro
+                bunifuGradientPanel2.GradientBottomLeft = Color.FromArgb(118, 88, 152);
+                bunifuGradientPanel2.GradientTopRight = Color.FromArgb(34, 36, 49);
+                bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(118, 88, 152);
+                bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(34, 36, 49);
+            }
         }
     }
 }

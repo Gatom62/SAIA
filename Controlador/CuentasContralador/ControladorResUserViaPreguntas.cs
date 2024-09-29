@@ -64,50 +64,49 @@ namespace AgroServicios.Controlador.CuentasContralador
                 return;
             }
 
-            if (objrest.txtContraDenuevo.Text != objrest.txtNuevaContra.Text) 
+            // Validar que las contraseñas coincidan
+            if (objrest.txtNuevaContra.Text != objrest.txtContraDenuevo.Text)
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "No se a ingresado la misma contraseña dos veces", Properties.Resources.MensajeWarning);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "No se ha ingresado la misma contraseña dos veces", Properties.Resources.MensajeWarning);
                 return;
             }
 
-            // Validar que la contraseña del empleado no exceda 100 caracteres
+            // Validar que la contraseña tenga al menos 8 caracteres
             if (!ValidarContraseña(objrest.txtNuevaContra.Text))
             {
                 MessageBoxP(Color.Yellow, Color.Orange, "Error", "La contraseña debe tener al menos 8 caracteres", Properties.Resources.MensajeWarning);
                 return;
             }
 
-            //Realizamos el proceso de actualización
+            // Realizar el proceso de actualización de la contraseña
             DAOAdminUsers daorest = new DAOAdminUsers();
             Encryp encryp = new Encryp();
             daorest.Usuario1 = objrest.txtRest.Text.Trim();
             daorest.Contraseña1 = encryp.Encriptar(objrest.txtNuevaContra.Text.Trim());
-            //Pedimos una contestación por parte de la base de datos, si nos manda un 1 es que si se logro realizar correctamente la insercción
+
+            // Pedimos respuesta de la base de datos
             int valorRetornado = daorest.restablecerEmpleadov2();
             if (valorRetornado == 1)
             {
-                //Mensaje de afirmacion si se pudo realizar la inserccion
+                // Mensaje de éxito si se actualiza correctamente
                 MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "La contraseña se ha actualizado correctamente", Properties.Resources.comprobado);
                 VistaLogin backForm = new VistaLogin();
                 objrest.Close();
             }
             else
             {
-                //Mensaje de error si se no se pudo realizar la inserccion
+                // Mensaje de error si no se pudo actualizar
                 MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "La contraseña no se ha podido actualizar.", Properties.Resources.ErrorIcono);
                 VistaLogin backForm = new VistaLogin();
             }
 
+            // Método para validar que la contraseña tenga al menos 8 caracteres
             bool ValidarContraseña(string contraseña)
             {
                 // Requiere más de 8 caracteres (letras, dígitos o caracteres especiales)
-                string pattern = @"^.{9,}$";  // Acepta cualquier carácter y al menos 9 de ellos
+                string pattern = @"^.{8,}$";  // Acepta cualquier carácter y al menos 8 de ellos
 
-                if (!Regex.IsMatch(contraseña, pattern))
-                {
-                    return false;
-                }
-                return true;
+                return Regex.IsMatch(contraseña, pattern);
             }
         }
         private void ChargeValues(string user)
