@@ -76,7 +76,7 @@
             this.bunifuPanel1.Controls.Add(this.tableLayoutPanel1);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(671, 59);
@@ -92,7 +92,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -175,7 +175,7 @@
             this.DarkMode.CheckedSwitchColor = System.Drawing.Color.White;
             this.DarkMode.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
             this.DarkMode.Location = new System.Drawing.Point(258, 24);
-            this.DarkMode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DarkMode.Margin = new System.Windows.Forms.Padding(2);
             this.DarkMode.Name = "DarkMode";
             this.DarkMode.OutlineThickness = 2;
             this.DarkMode.Size = new System.Drawing.Size(75, 32);
@@ -284,7 +284,7 @@
             this.switchidioma.CheckedSwitchColor = System.Drawing.Color.White;
             this.switchidioma.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
             this.switchidioma.Location = new System.Drawing.Point(255, 20);
-            this.switchidioma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.switchidioma.Margin = new System.Windows.Forms.Padding(2);
             this.switchidioma.Name = "switchidioma";
             this.switchidioma.OutlineThickness = 2;
             this.switchidioma.Size = new System.Drawing.Size(75, 32);
@@ -709,7 +709,7 @@
             this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
             this.bunifuSeparator1.LineThickness = 2;
             this.bunifuSeparator1.Location = new System.Drawing.Point(27, 57);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator1.Size = new System.Drawing.Size(540, 21);
@@ -724,7 +724,7 @@
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(687, 445);
             this.MinimumSize = new System.Drawing.Size(687, 445);
             this.Name = "VistaAjustes";

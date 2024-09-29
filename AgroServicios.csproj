@@ -181,6 +181,7 @@
     <Compile Include="Controlador\Login\ControladorZoom.cs" />
     <Compile Include="Controlador\Login\ControlerBasicMetodosRecuperar.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorFiltroVentas.cs" />
+    <Compile Include="Controlador\MenuPrincipal\ControladorLoguinCambiarContrasena.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorMenuPrincipal.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorVistaProductos.cs" />
     <Compile Include="Controlador\Productos1\ControladorCreateMarca1.cs" />
@@ -398,6 +399,12 @@
     <Compile Include="Vista\MenuPrincipal\VistaCarrito.Designer.cs">
       <DependentUpon>VistaCarrito.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\MenuPrincipal\VistaLoguinCambiarContrasena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\MenuPrincipal\VistaLoguinCambiarContrasena.Designer.cs">
+      <DependentUpon>VistaLoguinCambiarContrasena.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\MenuPrincipal\VistaMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -602,6 +609,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaCarrito.resx">
       <DependentUpon>VistaCarrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\MenuPrincipal\VistaLoguinCambiarContrasena.resx">
+      <DependentUpon>VistaLoguinCambiarContrasena.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaMenuPrincipal.resx">
       <DependentUpon>VistaMenuPrincipal.cs</DependentUpon>

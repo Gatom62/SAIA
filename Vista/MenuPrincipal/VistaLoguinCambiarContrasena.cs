@@ -1,5 +1,5 @@
-﻿using AgroServicios.Controlador;
-using AgroServicios.Controlador.CuentasContralador;
+﻿using AgroServicios.Controlador.Helper;
+using AgroServicios.Controlador.MenuPrincipal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +13,10 @@ using System.Windows.Forms;
 
 namespace AgroServicios.Vista.MenuPrincipal
 {
-    public partial class VistaRestContraPreguntas : Form
+    public partial class VistaLoguinCambiarContrasena : Form
     {
         private Size originalSize;
+
         // Importar las funciones de la API de Windows para aplicar bordes redondeados
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
@@ -26,13 +27,15 @@ namespace AgroServicios.Vista.MenuPrincipal
             int nWidthEllipse,  // Width of ellipse
             int nHeightEllipse  // Height of ellipse
         );
-        public VistaRestContraPreguntas(string user)
+        public VistaLoguinCambiarContrasena(string user)
         {
             InitializeComponent();
-            ControladorResUserViaPreguntas viaPreguntas = new ControladorResUserViaPreguntas(this, user);
+            ControladorLoguinCambiarContrasena controladorLoguinCambiarContrasena = new ControladorLoguinCambiarContrasena(this, user);
+
             // Aplicar el borde redondeado al formulario
             this.FormBorderStyle = FormBorderStyle.None; // Deshabilitar el borde normal del formulario
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 30, 30));
+
 
             //Metodos para hacer que la imagen cresca cuando el mause pase por heya
             //Para el p
@@ -42,24 +45,6 @@ namespace AgroServicios.Vista.MenuPrincipal
             // Eventos para cuando el mouse entra y sale del PictureBox
             ptbback.MouseEnter += ptbback_MouseEnter;
             ptbback.MouseLeave += ptbback_MouseLeave;
-        }
-
-        private void VistaRestContraPreguntas_Load(object sender, EventArgs e)
-        {
-            if (ControladorTema.IsDarkMode == true)
-            {
-                bunifuGradientPanel2.GradientBottomLeft = Color.FromArgb(118, 88, 152);
-                bunifuGradientPanel2.GradientTopRight = Color.FromArgb(34, 36, 49);
-                bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(118, 88, 152);
-                bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(34, 36, 49);
-            }
-            if (ControladorIdioma.idioma == 1)
-            {
-                label1.Text = Ingles.LabelRestUser;
-                btnRestablecer.Text = Ingles.LabelRestContra;
-                txtRest.PlaceholderText = Ingles.Usuario;
-                txtNuevaContra.PlaceholderText = Ingles.Contrasena;
-            }
         }
 
         private void ptbback_MouseEnter(object sender, EventArgs e)

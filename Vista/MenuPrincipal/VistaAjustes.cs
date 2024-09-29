@@ -1,5 +1,6 @@
 ﻿using AgroServicios.Controlador;
 using AgroServicios.Controlador.Helper;
+using AgroServicios.Controlador.MenuPrincipal;
 using AgroServicios.Vista.Login;
 using AgroServicios.Vista.Server;
 using System;
@@ -132,8 +133,8 @@ namespace AgroServicios.Vista.MenuPrincipal
         private void btnCambiarPass_Click(object sender, EventArgs e)
         {
             string user = StaticSession.Username;
-            VistaRestContraPreguntas frm = new VistaRestContraPreguntas(user);
-            frm.ShowDialog();
+            VistaLoguinCambiarContrasena vistaLoguinCambiarContrasena = new VistaLoguinCambiarContrasena(user);
+            vistaLoguinCambiarContrasena.ShowDialog();
         }
 
         private void btnCambiarPreguntas_Click(object sender, EventArgs e)

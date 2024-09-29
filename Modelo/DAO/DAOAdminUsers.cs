@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Security;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace AgroServicios.Modelo.DAO
 {
@@ -380,6 +381,42 @@ namespace AgroServicios.Modelo.DAO
             catch (Exception)
             {
                 return -1;
+            }
+            finally
+            {
+                Command.Connection.Close();
+            }
+        }
+        public int VerificarDatos()
+        {
+            try
+            {
+                Command.Connection = getConnection();
+                string query = "SELECT COUNT(*) FROM Usuarios WHERE Usuario = @username AND Contraseña = @password";
+                // Crear un comando SQL con la consulta y la conexión
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                // Limpia cualquier parámetro existente en el objeto Command
+                Command.Parameters.Clear();
+                // Asignar valores a los parámetros del query
+                cmd.Parameters.AddWithValue("username", Usuario1);
+                cmd.Parameters.AddWithValue("password", Contraseña1);
+
+                // Ejecutar el comando y obtener el resultado
+                int respuesta = (int)cmd.ExecuteScalar();
+
+                if (respuesta > 0)
+                {
+                    // El usuario fue autenticado correctamente
+                    return 1;
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+            catch (Exception)
+            {
+                return 0;
             }
             finally
             {

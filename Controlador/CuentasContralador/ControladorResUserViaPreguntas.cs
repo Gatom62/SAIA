@@ -58,14 +58,20 @@ namespace AgroServicios.Controlador.CuentasContralador
         private void RestablecerContraseña(object sender, EventArgs e)
         {
             // Validar que los campos no estén vacíos
-            if (string.IsNullOrWhiteSpace(objrest.txtRestPass.Text))
+            if (string.IsNullOrWhiteSpace(objrest.txtNuevaContra.Text))
             {
                 MessageBoxP(Color.Yellow, Color.Orange, "Error", "Todos los campos son obligatorios", Properties.Resources.MensajeWarning);
                 return;
             }
 
+            if (objrest.txtContraDenuevo.Text != objrest.txtNuevaContra.Text) 
+            {
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "No se a ingresado la misma contraseña dos veces", Properties.Resources.MensajeWarning);
+                return;
+            }
+
             // Validar que la contraseña del empleado no exceda 100 caracteres
-            if (!ValidarContraseña(objrest.txtRestPass.Text))
+            if (!ValidarContraseña(objrest.txtNuevaContra.Text))
             {
                 MessageBoxP(Color.Yellow, Color.Orange, "Error", "La contraseña debe tener al menos 8 caracteres", Properties.Resources.MensajeWarning);
                 return;
@@ -75,7 +81,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             DAOAdminUsers daorest = new DAOAdminUsers();
             Encryp encryp = new Encryp();
             daorest.Usuario1 = objrest.txtRest.Text.Trim();
-            daorest.Contraseña1 = encryp.Encriptar(objrest.txtRestPass.Text.Trim());
+            daorest.Contraseña1 = encryp.Encriptar(objrest.txtNuevaContra.Text.Trim());
             //Pedimos una contestación por parte de la base de datos, si nos manda un 1 es que si se logro realizar correctamente la insercción
             int valorRetornado = daorest.restablecerEmpleadov2();
             if (valorRetornado == 1)
@@ -103,7 +109,6 @@ namespace AgroServicios.Controlador.CuentasContralador
                 }
                 return true;
             }
-
         }
         private void ChargeValues(string user)
         {
