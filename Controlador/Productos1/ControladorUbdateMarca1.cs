@@ -18,7 +18,7 @@ namespace AgroServicios.Controlador.Productos1
         VistaUbdateMarca Objupdate;
         private int accion;
         private string role;
-
+        //Vamos aver si se puede
         public ControladorUbdateMarca1(VistaUbdateMarca Vista, int accion, int id, string Name)
         {
             Objupdate = Vista;
