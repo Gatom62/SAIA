@@ -221,6 +221,33 @@ namespace AgroServicios.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a &lt;html&gt;
+        ///&lt;head&gt;
+        ///    
+        ///    &lt;title&gt;Informe de Ventas Diario&lt;/title&gt;
+        ///    &lt;style&gt;
+        ///        body {
+        ///            font-family: &apos;Segoe UI&apos;, Tahoma, Geneva, Verdana, sans-serif;
+        ///            margin: 0;
+        ///            padding: 20px;
+        ///            background-color: #f0f0f0;
+        ///        }
+        ///        .container {
+        ///            background-color: white;
+        ///            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        ///            border-radius: 5px;
+        ///            overflow: hidden;
+        ///        }
+        ///        .header {
+        ///            background-color:  [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string cierre_caja_plantilla {
+            get {
+                return ResourceManager.GetString("cierre_caja_plantilla", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap comprobado {

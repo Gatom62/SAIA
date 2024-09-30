@@ -328,4 +328,7 @@
   <data name="Manual_de_Usuario_1_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Manual de Usuario 1.3.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="cierre_caja_plantilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cierre-caja-plantilla.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>

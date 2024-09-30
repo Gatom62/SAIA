@@ -180,6 +180,7 @@
     <Compile Include="Controlador\Login\ControladorPreguntasRec.cs" />
     <Compile Include="Controlador\Login\ControladorZoom.cs" />
     <Compile Include="Controlador\Login\ControlerBasicMetodosRecuperar.cs" />
+    <Compile Include="Controlador\MenuPrincipal\ControladorCerrarCaja.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorFiltroVentas.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorMenuPrincipal.cs" />
     <Compile Include="Controlador\MenuPrincipal\ControladorVistaProductos.cs" />
@@ -192,6 +193,7 @@
     <Compile Include="Controlador\Server\ControllerAdminConnection.cs" />
     <Compile Include="Modelo\DAO\DAOAdminUsers.cs" />
     <Compile Include="Modelo\DAO\DAOCarrito.cs" />
+    <Compile Include="Modelo\DAO\DAOCierreCaja.cs" />
     <Compile Include="Modelo\DAO\DAOClientes.cs" />
     <Compile Include="Modelo\DAO\DAOCorreoRecuperacion.cs" />
     <Compile Include="Modelo\DAO\DAODCSoporte.cs" />
@@ -207,6 +209,7 @@
     <Compile Include="Modelo\dbContext.cs" />
     <Compile Include="Modelo\DTO\DTOAdminUsers.cs" />
     <Compile Include="Modelo\DTO\DTOCarrito.cs" />
+    <Compile Include="Modelo\DTO\DTOCierreCaja.cs" />
     <Compile Include="Modelo\DTO\DTOClientes.cs" />
     <Compile Include="Modelo\DTO\DTOCorreoRecuperacion.cs" />
     <Compile Include="Modelo\DTO\DTOdbContext.cs" />
@@ -397,6 +400,12 @@
     </Compile>
     <Compile Include="Vista\MenuPrincipal\VistaCarrito.Designer.cs">
       <DependentUpon>VistaCarrito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\MenuPrincipal\VistaCerrarCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\MenuPrincipal\VistaCerrarCaja.Designer.cs">
+      <DependentUpon>VistaCerrarCaja.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\MenuPrincipal\VistaMenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -602,6 +611,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaCarrito.resx">
       <DependentUpon>VistaCarrito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\MenuPrincipal\VistaCerrarCaja.resx">
+      <DependentUpon>VistaCerrarCaja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaMenuPrincipal.resx">
       <DependentUpon>VistaMenuPrincipal.cs</DependentUpon>
@@ -903,6 +915,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\DUIPng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cierre-caja-plantilla.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
