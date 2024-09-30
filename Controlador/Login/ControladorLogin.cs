@@ -45,7 +45,7 @@ namespace AgroServicios.Controlador.Login
             string pdfTempPath = Path.Combine(Path.GetTempPath(), nombreArchivo);
 
             // Escribe el contenido del archivo PDF desde los recursos a la ruta temporal
-            File.WriteAllBytes(pdfTempPath, Properties.Resources.Manual_de_Usuario_1_2);
+            File.WriteAllBytes(pdfTempPath, Properties.Resources.Manual_de_Usuario_1_3);
 
             // Abre el archivo PDF utilizando el visor predeterminado del sistema
             System.Diagnostics.Process.Start(pdfTempPath);

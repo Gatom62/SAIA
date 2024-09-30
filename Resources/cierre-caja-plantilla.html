@@ -1,0 +1,93 @@
+<html>
+<head>
+    
+    <title>Informe de Ventas Diario</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .header {
+            background-color: #40E0D0;
+            color: black;
+            padding: 15px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .informe-info {
+            padding: 15px;
+            background-color: #f8f8f8;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f8f8;
+        }
+        .footer {
+            background-color: #f0f0f0;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .total {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .empleado {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Informe de Ventas Diario</h1>
+        </div>
+        <div class="informe-info">
+            <h2>Sistema de Administración e Inventarios para Agroservicios "SAIA"</h2>
+            <p><strong>Dirección:</strong> Calle El Progreso, Colonia Escalón, San Salvador, El Salvador</p>
+            <p><strong>Correo:</strong> soporte.usuario.saia@gmail.com</p>
+            <p><strong>Fecha del informe:</strong> @FechaInforme</p>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Empleado</th>
+                    <th>Cliente</th>
+                    <th>Fecha y Hora de Cierre</th>
+                    <th>Monto Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                @filasCierres
+            </tbody>
+        </table>
+        <div class="footer">
+            <div class="total">Total del día: @totalDia</div>
+            <div class="empleado">Generado por: @empleadoInforme</div>
+        </div>
+    </div>
+</body>
+</html>
