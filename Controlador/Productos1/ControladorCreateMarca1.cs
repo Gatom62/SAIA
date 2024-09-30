@@ -30,7 +30,6 @@ namespace AgroServicios.Controlador.Productos1
             ObjCreateMarca = Vista;
             this.accion = accion;
             ObjCreateMarca.Load += new EventHandler(LoadData);
-
             //Evento click de botones
             ObjCreateMarca.btnIngresarMarca.Click += new EventHandler(NuevoRegistro);
             ObjCreateMarca.cmsElimarProducto.Click += new EventHandler(EliminarMarca);
