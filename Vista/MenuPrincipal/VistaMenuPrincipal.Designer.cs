@@ -42,7 +42,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.btnprin3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.btnCierreCaja = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnprin2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -109,19 +109,19 @@
             this.PanelView.Controls.Add(this.tableLayoutPanel1);
             this.PanelView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelView.Location = new System.Drawing.Point(0, 0);
-            this.PanelView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PanelView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PanelView.Name = "PanelView";
-            this.PanelView.Size = new System.Drawing.Size(1371, 716);
+            this.PanelView.Size = new System.Drawing.Size(1028, 582);
             this.PanelView.TabIndex = 25;
             // 
             // PanelContenedor
             // 
             this.PanelContenedor.Controls.Add(this.panel2);
             this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContenedor.Location = new System.Drawing.Point(0, 222);
-            this.PanelContenedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PanelContenedor.Location = new System.Drawing.Point(0, 181);
+            this.PanelContenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PanelContenedor.Name = "PanelContenedor";
-            this.PanelContenedor.Size = new System.Drawing.Size(1371, 494);
+            this.PanelContenedor.Size = new System.Drawing.Size(1028, 401);
             this.PanelContenedor.TabIndex = 31;
             // 
             // panel2
@@ -133,9 +133,8 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1371, 494);
+            this.panel2.Size = new System.Drawing.Size(1028, 401);
             this.panel2.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -147,12 +146,11 @@
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(215, 106);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(161, 86);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(941, 264);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(706, 214);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
             // tableLayoutPanel5
@@ -163,13 +161,12 @@
             this.tableLayoutPanel5.Controls.Add(this.bunifuShadowPanel1, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.bunifuShadowPanel2, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(462, 256);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(347, 208);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
             // bunifuShadowPanel1
@@ -181,11 +178,10 @@
             this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel1.BorderRadius = 25;
             this.bunifuShadowPanel1.BorderThickness = 1;
-            this.bunifuShadowPanel1.Controls.Add(this.btnprin3);
+            this.bunifuShadowPanel1.Controls.Add(this.btnCierreCaja);
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(4, 132);
-            this.bunifuShadowPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(3, 107);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.Transparent;
@@ -194,102 +190,102 @@
             this.bunifuShadowPanel1.ShadowDepth = 5;
             this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(454, 120);
+            this.bunifuShadowPanel1.Size = new System.Drawing.Size(341, 98);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 29;
             // 
-            // btnprin3
+            // btnCierreCaja
             // 
-            this.btnprin3.AllowAnimations = true;
-            this.btnprin3.AllowMouseEffects = true;
-            this.btnprin3.AllowToggling = false;
-            this.btnprin3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnCierreCaja.AllowAnimations = true;
+            this.btnCierreCaja.AllowMouseEffects = true;
+            this.btnCierreCaja.AllowToggling = false;
+            this.btnCierreCaja.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnprin3.AnimationSpeed = 200;
-            this.btnprin3.AutoGenerateColors = false;
-            this.btnprin3.AutoRoundBorders = false;
-            this.btnprin3.AutoSizeLeftIcon = true;
-            this.btnprin3.AutoSizeRightIcon = true;
-            this.btnprin3.BackColor = System.Drawing.Color.Transparent;
-            this.btnprin3.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
-            this.btnprin3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnprin3.BackgroundImage")));
-            this.btnprin3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnprin3.ButtonText = "Cierre de caja";
-            this.btnprin3.ButtonTextMarginLeft = 0;
-            this.btnprin3.ColorContrastOnClick = 45;
-            this.btnprin3.ColorContrastOnHover = 45;
-            this.btnprin3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCierreCaja.AnimationSpeed = 200;
+            this.btnCierreCaja.AutoGenerateColors = false;
+            this.btnCierreCaja.AutoRoundBorders = false;
+            this.btnCierreCaja.AutoSizeLeftIcon = true;
+            this.btnCierreCaja.AutoSizeRightIcon = true;
+            this.btnCierreCaja.BackColor = System.Drawing.Color.Transparent;
+            this.btnCierreCaja.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
+            this.btnCierreCaja.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCierreCaja.BackgroundImage")));
+            this.btnCierreCaja.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnCierreCaja.ButtonText = "Cierre de caja";
+            this.btnCierreCaja.ButtonTextMarginLeft = 0;
+            this.btnCierreCaja.ColorContrastOnClick = 45;
+            this.btnCierreCaja.ColorContrastOnHover = 45;
+            this.btnCierreCaja.Cursor = System.Windows.Forms.Cursors.Default;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
             borderEdges1.TopRight = true;
-            this.btnprin3.CustomizableEdges = borderEdges1;
-            this.btnprin3.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnprin3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnprin3.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnprin3.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnprin3.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnprin3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnprin3.ForeColor = System.Drawing.Color.White;
-            this.btnprin3.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnprin3.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnprin3.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnprin3.IconMarginLeft = 11;
-            this.btnprin3.IconPadding = 10;
-            this.btnprin3.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnprin3.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnprin3.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnprin3.IconSize = 25;
-            this.btnprin3.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btnprin3.IdleBorderRadius = 20;
-            this.btnprin3.IdleBorderThickness = 1;
-            this.btnprin3.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
-            this.btnprin3.IdleIconLeftImage = null;
-            this.btnprin3.IdleIconRightImage = null;
-            this.btnprin3.IndicateFocus = false;
-            this.btnprin3.Location = new System.Drawing.Point(4, 5);
-            this.btnprin3.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
-            this.btnprin3.Name = "btnprin3";
-            this.btnprin3.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnprin3.OnDisabledState.BorderRadius = 20;
-            this.btnprin3.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnprin3.OnDisabledState.BorderThickness = 1;
-            this.btnprin3.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnprin3.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnprin3.OnDisabledState.IconLeftImage = null;
-            this.btnprin3.OnDisabledState.IconRightImage = null;
-            this.btnprin3.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnprin3.onHoverState.BorderRadius = 20;
-            this.btnprin3.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnprin3.onHoverState.BorderThickness = 1;
-            this.btnprin3.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnprin3.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnprin3.onHoverState.IconLeftImage = null;
-            this.btnprin3.onHoverState.IconRightImage = null;
-            this.btnprin3.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnprin3.OnIdleState.BorderRadius = 20;
-            this.btnprin3.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnprin3.OnIdleState.BorderThickness = 1;
-            this.btnprin3.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
-            this.btnprin3.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnprin3.OnIdleState.IconLeftImage = null;
-            this.btnprin3.OnIdleState.IconRightImage = null;
-            this.btnprin3.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnprin3.OnPressedState.BorderRadius = 20;
-            this.btnprin3.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnprin3.OnPressedState.BorderThickness = 1;
-            this.btnprin3.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnprin3.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnprin3.OnPressedState.IconLeftImage = null;
-            this.btnprin3.OnPressedState.IconRightImage = null;
-            this.btnprin3.Size = new System.Drawing.Size(430, 99);
-            this.btnprin3.TabIndex = 1;
-            this.btnprin3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnprin3.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnprin3.TextMarginLeft = 0;
-            this.btnprin3.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnprin3.UseDefaultRadiusAndThickness = true;
+            this.btnCierreCaja.CustomizableEdges = borderEdges1;
+            this.btnCierreCaja.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCierreCaja.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnCierreCaja.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnCierreCaja.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnCierreCaja.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnCierreCaja.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCierreCaja.ForeColor = System.Drawing.Color.White;
+            this.btnCierreCaja.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCierreCaja.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnCierreCaja.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnCierreCaja.IconMarginLeft = 11;
+            this.btnCierreCaja.IconPadding = 10;
+            this.btnCierreCaja.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCierreCaja.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnCierreCaja.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnCierreCaja.IconSize = 25;
+            this.btnCierreCaja.IdleBorderColor = System.Drawing.Color.Transparent;
+            this.btnCierreCaja.IdleBorderRadius = 20;
+            this.btnCierreCaja.IdleBorderThickness = 1;
+            this.btnCierreCaja.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
+            this.btnCierreCaja.IdleIconLeftImage = null;
+            this.btnCierreCaja.IdleIconRightImage = null;
+            this.btnCierreCaja.IndicateFocus = false;
+            this.btnCierreCaja.Location = new System.Drawing.Point(3, 4);
+            this.btnCierreCaja.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.btnCierreCaja.Name = "btnCierreCaja";
+            this.btnCierreCaja.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnCierreCaja.OnDisabledState.BorderRadius = 20;
+            this.btnCierreCaja.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnCierreCaja.OnDisabledState.BorderThickness = 1;
+            this.btnCierreCaja.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnCierreCaja.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnCierreCaja.OnDisabledState.IconLeftImage = null;
+            this.btnCierreCaja.OnDisabledState.IconRightImage = null;
+            this.btnCierreCaja.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnCierreCaja.onHoverState.BorderRadius = 20;
+            this.btnCierreCaja.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnCierreCaja.onHoverState.BorderThickness = 1;
+            this.btnCierreCaja.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnCierreCaja.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnCierreCaja.onHoverState.IconLeftImage = null;
+            this.btnCierreCaja.onHoverState.IconRightImage = null;
+            this.btnCierreCaja.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnCierreCaja.OnIdleState.BorderRadius = 20;
+            this.btnCierreCaja.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnCierreCaja.OnIdleState.BorderThickness = 1;
+            this.btnCierreCaja.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
+            this.btnCierreCaja.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnCierreCaja.OnIdleState.IconLeftImage = null;
+            this.btnCierreCaja.OnIdleState.IconRightImage = null;
+            this.btnCierreCaja.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnCierreCaja.OnPressedState.BorderRadius = 20;
+            this.btnCierreCaja.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnCierreCaja.OnPressedState.BorderThickness = 1;
+            this.btnCierreCaja.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnCierreCaja.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnCierreCaja.OnPressedState.IconLeftImage = null;
+            this.btnCierreCaja.OnPressedState.IconRightImage = null;
+            this.btnCierreCaja.Size = new System.Drawing.Size(323, 80);
+            this.btnCierreCaja.TabIndex = 1;
+            this.btnCierreCaja.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCierreCaja.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnCierreCaja.TextMarginLeft = 0;
+            this.btnCierreCaja.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnCierreCaja.UseDefaultRadiusAndThickness = true;
             // 
             // bunifuShadowPanel2
             // 
@@ -303,8 +299,7 @@
             this.bunifuShadowPanel2.Controls.Add(this.btnprin2);
             this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel2.Location = new System.Drawing.Point(4, 4);
-            this.bunifuShadowPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuShadowPanel2.Location = new System.Drawing.Point(3, 3);
             this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
             this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.Transparent;
@@ -313,7 +308,7 @@
             this.bunifuShadowPanel2.ShadowDepth = 5;
             this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel2.Size = new System.Drawing.Size(454, 120);
+            this.bunifuShadowPanel2.Size = new System.Drawing.Size(341, 98);
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 29;
             // 
@@ -367,8 +362,8 @@
             this.btnprin2.IdleIconLeftImage = null;
             this.btnprin2.IdleIconRightImage = null;
             this.btnprin2.IndicateFocus = false;
-            this.btnprin2.Location = new System.Drawing.Point(3, 0);
-            this.btnprin2.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
+            this.btnprin2.Location = new System.Drawing.Point(2, 0);
+            this.btnprin2.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
             this.btnprin2.Name = "btnprin2";
             this.btnprin2.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnprin2.OnDisabledState.BorderRadius = 20;
@@ -402,7 +397,7 @@
             this.btnprin2.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnprin2.OnPressedState.IconLeftImage = null;
             this.btnprin2.OnPressedState.IconRightImage = null;
-            this.btnprin2.Size = new System.Drawing.Size(431, 104);
+            this.btnprin2.Size = new System.Drawing.Size(324, 84);
             this.btnprin2.TabIndex = 0;
             this.btnprin2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnprin2.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -418,13 +413,12 @@
             this.tableLayoutPanel4.Controls.Add(this.bunifuShadowPanel4, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.bunifuShadowPanel3, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(474, 4);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(356, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(463, 256);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(347, 208);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // bunifuShadowPanel4
@@ -439,8 +433,7 @@
             this.bunifuShadowPanel4.Controls.Add(this.btnFichaProductos);
             this.bunifuShadowPanel4.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel4.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel4.Location = new System.Drawing.Point(4, 4);
-            this.bunifuShadowPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuShadowPanel4.Location = new System.Drawing.Point(3, 3);
             this.bunifuShadowPanel4.Name = "bunifuShadowPanel4";
             this.bunifuShadowPanel4.PanelColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel4.PanelColor2 = System.Drawing.Color.Transparent;
@@ -449,7 +442,7 @@
             this.bunifuShadowPanel4.ShadowDepth = 5;
             this.bunifuShadowPanel4.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel4.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel4.Size = new System.Drawing.Size(455, 120);
+            this.bunifuShadowPanel4.Size = new System.Drawing.Size(341, 98);
             this.bunifuShadowPanel4.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel4.TabIndex = 29;
             // 
@@ -504,7 +497,7 @@
             this.btnFichaProductos.IdleIconRightImage = null;
             this.btnFichaProductos.IndicateFocus = false;
             this.btnFichaProductos.Location = new System.Drawing.Point(0, 0);
-            this.btnFichaProductos.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
+            this.btnFichaProductos.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
             this.btnFichaProductos.Name = "btnFichaProductos";
             this.btnFichaProductos.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnFichaProductos.OnDisabledState.BorderRadius = 20;
@@ -538,7 +531,7 @@
             this.btnFichaProductos.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnFichaProductos.OnPressedState.IconLeftImage = null;
             this.btnFichaProductos.OnPressedState.IconRightImage = null;
-            this.btnFichaProductos.Size = new System.Drawing.Size(432, 104);
+            this.btnFichaProductos.Size = new System.Drawing.Size(324, 84);
             this.btnFichaProductos.TabIndex = 2;
             this.btnFichaProductos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnFichaProductos.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -558,8 +551,7 @@
             this.bunifuShadowPanel3.Controls.Add(this.btnVentas);
             this.bunifuShadowPanel3.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel3.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel3.Location = new System.Drawing.Point(4, 132);
-            this.bunifuShadowPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuShadowPanel3.Location = new System.Drawing.Point(3, 107);
             this.bunifuShadowPanel3.Name = "bunifuShadowPanel3";
             this.bunifuShadowPanel3.PanelColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel3.PanelColor2 = System.Drawing.Color.Transparent;
@@ -568,7 +560,7 @@
             this.bunifuShadowPanel3.ShadowDepth = 5;
             this.bunifuShadowPanel3.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel3.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel3.Size = new System.Drawing.Size(455, 120);
+            this.bunifuShadowPanel3.Size = new System.Drawing.Size(341, 98);
             this.bunifuShadowPanel3.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel3.TabIndex = 29;
             // 
@@ -623,7 +615,7 @@
             this.btnVentas.IdleIconRightImage = null;
             this.btnVentas.IndicateFocus = false;
             this.btnVentas.Location = new System.Drawing.Point(0, 0);
-            this.btnVentas.Margin = new System.Windows.Forms.Padding(27, 25, 27, 25);
+            this.btnVentas.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnVentas.OnDisabledState.BorderRadius = 20;
@@ -657,7 +649,7 @@
             this.btnVentas.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnVentas.OnPressedState.IconLeftImage = null;
             this.btnVentas.OnPressedState.IconRightImage = null;
-            this.btnVentas.Size = new System.Drawing.Size(432, 104);
+            this.btnVentas.Size = new System.Drawing.Size(324, 84);
             this.btnVentas.TabIndex = 1;
             this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVentas.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -669,20 +661,18 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(1156, 106);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Location = new System.Drawing.Point(867, 86);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(215, 264);
+            this.panel5.Size = new System.Drawing.Size(161, 214);
             this.panel5.TabIndex = 3;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(0, 106);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Location = new System.Drawing.Point(0, 86);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(215, 264);
+            this.panel4.Size = new System.Drawing.Size(161, 214);
             this.panel4.TabIndex = 2;
             // 
             // tableLayoutPanel2
@@ -694,12 +684,11 @@
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.flowLayoutPanel2, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 370);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 300);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1371, 124);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1028, 101);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -707,10 +696,9 @@
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.Controls.Add(this.btnConfi);
             this.flowLayoutPanel1.Controls.Add(this.btnExit);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1163, 25);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(872, 21);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(204, 95);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(153, 77);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // btnConfi
@@ -755,14 +743,14 @@
             this.btnConfi.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnConfi.IconSize = 25;
             this.btnConfi.IdleBorderColor = System.Drawing.Color.Silver;
-            this.btnConfi.IdleBorderRadius = 37;
+            this.btnConfi.IdleBorderRadius = 30;
             this.btnConfi.IdleBorderThickness = 1;
             this.btnConfi.IdleFillColor = System.Drawing.Color.Silver;
             this.btnConfi.IdleIconLeftImage = null;
             this.btnConfi.IdleIconRightImage = null;
             this.btnConfi.IndicateFocus = false;
-            this.btnConfi.Location = new System.Drawing.Point(3, 2);
-            this.btnConfi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnConfi.Location = new System.Drawing.Point(2, 2);
+            this.btnConfi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConfi.Name = "btnConfi";
             this.btnConfi.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnConfi.OnDisabledState.BorderRadius = 1;
@@ -796,7 +784,7 @@
             this.btnConfi.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnConfi.OnPressedState.IconLeftImage = null;
             this.btnConfi.OnPressedState.IconRightImage = null;
-            this.btnConfi.Size = new System.Drawing.Size(191, 39);
+            this.btnConfi.Size = new System.Drawing.Size(143, 32);
             this.btnConfi.TabIndex = 20;
             this.btnConfi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnConfi.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -847,14 +835,14 @@
             this.btnExit.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnExit.IconSize = 25;
             this.btnExit.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btnExit.IdleBorderRadius = 42;
+            this.btnExit.IdleBorderRadius = 34;
             this.btnExit.IdleBorderThickness = 1;
             this.btnExit.IdleFillColor = System.Drawing.Color.Red;
             this.btnExit.IdleIconLeftImage = null;
             this.btnExit.IdleIconRightImage = null;
             this.btnExit.IndicateFocus = false;
-            this.btnExit.Location = new System.Drawing.Point(3, 45);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExit.Location = new System.Drawing.Point(2, 38);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnExit.OnDisabledState.BorderRadius = 1;
@@ -888,7 +876,7 @@
             this.btnExit.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnExit.OnPressedState.IconLeftImage = null;
             this.btnExit.OnPressedState.IconRightImage = null;
-            this.btnExit.Size = new System.Drawing.Size(195, 44);
+            this.btnExit.Size = new System.Drawing.Size(146, 36);
             this.btnExit.TabIndex = 1;
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnExit.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -900,10 +888,9 @@
             // 
             this.flowLayoutPanel2.Controls.Add(this.bunifuPanel2);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 4);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(359, 116);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(269, 95);
             this.flowLayoutPanel2.TabIndex = 1;
             // 
             // bunifuPanel2
@@ -917,11 +904,10 @@
             this.bunifuPanel2.Controls.Add(this.label2);
             this.bunifuPanel2.Controls.Add(this.label1);
             this.bunifuPanel2.Controls.Add(this.ptbimg);
-            this.bunifuPanel2.Location = new System.Drawing.Point(4, 4);
-            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuPanel2.Location = new System.Drawing.Point(3, 3);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
-            this.bunifuPanel2.Size = new System.Drawing.Size(347, 112);
+            this.bunifuPanel2.Size = new System.Drawing.Size(260, 91);
             this.bunifuPanel2.TabIndex = 0;
             // 
             // label2
@@ -929,10 +915,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(151, 57);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(113, 46);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 37);
+            this.label2.Size = new System.Drawing.Size(86, 30);
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
             // 
@@ -941,10 +926,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(152, 21);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(114, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 23);
+            this.label1.Size = new System.Drawing.Size(96, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Bienvenido";
             // 
@@ -953,13 +937,12 @@
             this.ptbimg.AllowFocused = false;
             this.ptbimg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ptbimg.AutoSizeHeight = false;
-            this.ptbimg.BorderRadius = 40;
+            this.ptbimg.BorderRadius = 49;
             this.ptbimg.Image = ((System.Drawing.Image)(resources.GetObject("ptbimg.Image")));
             this.ptbimg.IsCircle = true;
-            this.ptbimg.Location = new System.Drawing.Point(20, 7);
-            this.ptbimg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ptbimg.Location = new System.Drawing.Point(15, 6);
             this.ptbimg.Name = "ptbimg";
-            this.ptbimg.Size = new System.Drawing.Size(107, 98);
+            this.ptbimg.Size = new System.Drawing.Size(80, 87);
             this.ptbimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbimg.TabIndex = 0;
             this.ptbimg.TabStop = false;
@@ -971,9 +954,8 @@
             this.panel3.Controls.Add(this.tableLayoutPanel6);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1371, 106);
+            this.panel3.Size = new System.Drawing.Size(1028, 86);
             this.panel3.TabIndex = 0;
             // 
             // tableLayoutPanel6
@@ -985,11 +967,10 @@
             this.tableLayoutPanel6.Controls.Add(this.label3, 1, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1371, 106);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(1028, 86);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // label3
@@ -998,10 +979,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(542, 18);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(397, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(287, 70);
+            this.label3.Size = new System.Drawing.Size(232, 56);
             this.label3.TabIndex = 0;
             this.label3.Text = "Procesos";
             // 
@@ -1010,10 +990,10 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.tableLayoutPanel7);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 76);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 62);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1371, 146);
+            this.panel1.Size = new System.Drawing.Size(1028, 119);
             this.panel1.TabIndex = 29;
             // 
             // tableLayoutPanel7
@@ -1025,11 +1005,11 @@
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel8, 1, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1371, 146);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1028, 119);
             this.tableLayoutPanel7.TabIndex = 3;
             // 
             // tableLayoutPanel8
@@ -1039,13 +1019,13 @@
             this.tableLayoutPanel8.Controls.Add(this.lblfecha, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.lblhora, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(345, 2);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(259, 2);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 2;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(679, 142);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(510, 115);
             this.tableLayoutPanel8.TabIndex = 0;
             // 
             // lblfecha
@@ -1054,9 +1034,10 @@
             this.lblfecha.AutoSize = true;
             this.lblfecha.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblfecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
-            this.lblfecha.Location = new System.Drawing.Point(257, 78);
+            this.lblfecha.Location = new System.Drawing.Point(189, 64);
+            this.lblfecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblfecha.Name = "lblfecha";
-            this.lblfecha.Size = new System.Drawing.Size(164, 56);
+            this.lblfecha.Size = new System.Drawing.Size(131, 44);
             this.lblfecha.TabIndex = 34;
             this.lblfecha.Text = "label2";
             // 
@@ -1065,9 +1046,10 @@
             this.lblhora.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblhora.AutoSize = true;
             this.lblhora.Font = new System.Drawing.Font("Century Gothic", 34.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhora.Location = new System.Drawing.Point(239, 2);
+            this.lblhora.Location = new System.Drawing.Point(174, 1);
+            this.lblhora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblhora.Name = "lblhora";
-            this.lblhora.Size = new System.Drawing.Size(201, 67);
+            this.lblhora.Size = new System.Drawing.Size(161, 55);
             this.lblhora.TabIndex = 32;
             this.lblhora.Text = "label1";
             // 
@@ -1085,22 +1067,22 @@
             this.tableLayoutPanel1.Controls.Add(this.btnAccounts, 3, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1371, 76);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1028, 62);
             this.tableLayoutPanel1.TabIndex = 28;
             // 
             // btnStats
             // 
             this.btnStats.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnStats.Image = global::AgroServicios.Properties.Resources.image_49;
-            this.btnStats.Location = new System.Drawing.Point(829, 9);
-            this.btnStats.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStats.Location = new System.Drawing.Point(623, 7);
+            this.btnStats.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStats.Name = "btnStats";
-            this.btnStats.Size = new System.Drawing.Size(52, 48);
+            this.btnStats.Size = new System.Drawing.Size(39, 39);
             this.btnStats.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnStats.TabIndex = 39;
             this.btnStats.TabStop = false;
@@ -1109,10 +1091,10 @@
             // 
             this.btnShop.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnShop.Image = global::AgroServicios.Properties.Resources.bolsita;
-            this.btnShop.Location = new System.Drawing.Point(487, 9);
-            this.btnShop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnShop.Location = new System.Drawing.Point(366, 7);
+            this.btnShop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnShop.Name = "btnShop";
-            this.btnShop.Size = new System.Drawing.Size(52, 48);
+            this.btnShop.Size = new System.Drawing.Size(39, 39);
             this.btnShop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnShop.TabIndex = 38;
             this.btnShop.TabStop = false;
@@ -1121,10 +1103,10 @@
             // 
             this.btnInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnInicio.Image = global::AgroServicios.Properties.Resources.Casa_Logo2;
-            this.btnInicio.Location = new System.Drawing.Point(145, 9);
-            this.btnInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInicio.Location = new System.Drawing.Point(109, 7);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(52, 48);
+            this.btnInicio.Size = new System.Drawing.Size(39, 39);
             this.btnInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnInicio.TabIndex = 1;
             this.btnInicio.TabStop = false;
@@ -1135,10 +1117,10 @@
             // 
             this.btnAccounts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAccounts.Image = global::AgroServicios.Properties.Resources.silueta_de_multiples_usuarios;
-            this.btnAccounts.Location = new System.Drawing.Point(1172, 9);
-            this.btnAccounts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAccounts.Location = new System.Drawing.Point(880, 7);
+            this.btnAccounts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAccounts.Name = "btnAccounts";
-            this.btnAccounts.Size = new System.Drawing.Size(52, 48);
+            this.btnAccounts.Size = new System.Drawing.Size(39, 39);
             this.btnAccounts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnAccounts.TabIndex = 41;
             this.btnAccounts.TabStop = false;
@@ -1150,14 +1132,14 @@
             // 
             // VistaMenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.ClientSize = new System.Drawing.Size(1371, 716);
+            this.ClientSize = new System.Drawing.Size(1028, 582);
             this.Controls.Add(this.PanelView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(1358, 705);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(1022, 580);
             this.Name = "VistaMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VistaMenuPrincipal";
@@ -1218,7 +1200,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnprin3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnprin2;
         public System.Windows.Forms.Label label2;
@@ -1235,5 +1216,6 @@
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel4;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCierreCaja;
     }
 }

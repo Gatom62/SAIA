@@ -208,6 +208,7 @@
     <Compile Include="Modelo\dbContext.cs" />
     <Compile Include="Modelo\DTO\DTOAdminUsers.cs" />
     <Compile Include="Modelo\DTO\DTOCarrito.cs" />
+    <Compile Include="Modelo\DTO\DTOCierreCaja.cs" />
     <Compile Include="Modelo\DTO\DTOClientes.cs" />
     <Compile Include="Modelo\DTO\DTOCorreoRecuperacion.cs" />
     <Compile Include="Modelo\DTO\DTOdbContext.cs" />

@@ -104,7 +104,7 @@ namespace AgroServicios.Vista.MenuPrincipal
             {
                 btnprin2.Text = Ingles.mbp;
                 btnVentas.Text = Ingles.mbv;
-                btnprin3.Text = Ingles.mbc;
+                btnCierreCaja.Text = Ingles.mbc;
                 btnFichaProductos.Text = Ingles.mbf;
                 btnConfi.Text = Ingles.mbcf;
                 btnExit.Text = Ingles.mbe;
