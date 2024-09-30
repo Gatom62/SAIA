@@ -66,8 +66,8 @@ namespace AgroServicios.Controlador.MenuPrincipal
                 {
                     totalDia += monto;
                     filasCierres += "<tr>";
-                    filasCierres += $"<td>{row.Cells["Nombre del cliente"].Value}</td>";
                     filasCierres += $"<td>{row.Cells["Nombre del empleado"].Value}</td>";
+                    filasCierres += $"<td>{row.Cells["Nombre del cliente"].Value}</td>";
                     filasCierres += $"<td>{row.Cells["FechaVenta"].Value}</td>";
                     filasCierres += $"<td>{row.Cells["MontoTotal"].Value}</td>";
                     filasCierres += "</tr>";
