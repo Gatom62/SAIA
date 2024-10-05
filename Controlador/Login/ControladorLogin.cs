@@ -34,7 +34,12 @@ namespace AgroServicios.Controlador.Login
             ObjLogin.cmsConecarBase.Click += new EventHandler(AbrirBase);
             ObjLogin.cmsManualTecnico.Click += new EventHandler(AbrirManualTecnico);
             ObjLogin.cmsManualUsuario.Click += new EventHandler(AbrirManualUsuario);
-            ObjLogin.FormClosing += new FormClosingEventHandler(cerrarPrograma);
+            ObjLogin.ptbback.Click += new EventHandler(CerrarAplicacion);
+        }
+
+        private void CerrarAplicacion(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
         private void AbrirManualUsuario(object sender, EventArgs e)
         {
@@ -49,13 +54,6 @@ namespace AgroServicios.Controlador.Login
 
             // Abre el archivo PDF utilizando el visor predeterminado del sistema
             System.Diagnostics.Process.Start(pdfTempPath);
-        }
-        private void cerrarPrograma(Object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("¿Desea cerrar el programa?, Si lo cierra se estará cerrando en todos los planos", "Decida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Environment.Exit(0);
-            }
         }
 
         private void AbrirManualTecnico(object sender, EventArgs e)

@@ -40,6 +40,12 @@ namespace AgroServicios.Controlador.MenuPrincipal
             ObjMenu.btnprin2.Click += new EventHandler(OpenShop);
             ObjMenu.btnVentas.Click += new EventHandler(OpenVentas);
             ObjMenu.btnFichaProductos.Click += new EventHandler(OpenFichaProductos);
+            ObjMenu.btnCierreCaja.Click += new EventHandler(AbrirTablaCierre);
+        }
+        private void AbrirTablaCierre(object sender, EventArgs e) 
+        {
+            VistaCerrarCaja vistaCerrarCaja = new VistaCerrarCaja();
+            vistaCerrarCaja.ShowDialog();
         }
         private void OpenFichaProductos(object sender, EventArgs e)
         {

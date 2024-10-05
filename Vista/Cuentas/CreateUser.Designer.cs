@@ -59,7 +59,6 @@
             this.cmsImagen = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsimgsubir = new System.Windows.Forms.ToolStripMenuItem();
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
-            this.LabelPrin = new System.Windows.Forms.Label();
             this.txtNewCorreo = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtNewPassword = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtNewPhone = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -82,6 +81,7 @@
             this.lbDUI = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnTitulo = new Bunifu.UI.WinForms.BunifuPanel();
+            this.LabelPrin = new Bunifu.UI.WinForms.BunifuLabel();
             this.cmsImagen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -166,21 +166,6 @@
             this.bunifuToolTip1.TitleForeColor = System.Drawing.Color.Black;
             this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
             this.bunifuToolTip1.ToolTipTitle = null;
-            // 
-            // LabelPrin
-            // 
-            this.LabelPrin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LabelPrin.AutoSize = true;
-            this.LabelPrin.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelPrin.Location = new System.Drawing.Point(187, 14);
-            this.LabelPrin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LabelPrin.Name = "LabelPrin";
-            this.LabelPrin.Size = new System.Drawing.Size(233, 28);
-            this.LabelPrin.TabIndex = 0;
-            this.LabelPrin.Text = "Ingresar Empleado";
-            this.bunifuToolTip1.SetToolTip(this.LabelPrin, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.LabelPrin, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.LabelPrin, "");
             // 
             // txtNewCorreo
             // 
@@ -1069,6 +1054,25 @@
             this.bunifuToolTip1.SetToolTipIcon(this.pnTitulo, null);
             this.bunifuToolTip1.SetToolTipTitle(this.pnTitulo, "");
             // 
+            // LabelPrin
+            // 
+            this.LabelPrin.AllowParentOverrides = false;
+            this.LabelPrin.AutoEllipsis = false;
+            this.LabelPrin.Cursor = System.Windows.Forms.Cursors.Default;
+            this.LabelPrin.CursorType = System.Windows.Forms.Cursors.Default;
+            this.LabelPrin.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.LabelPrin.Location = new System.Drawing.Point(188, 17);
+            this.LabelPrin.Name = "LabelPrin";
+            this.LabelPrin.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelPrin.Size = new System.Drawing.Size(221, 28);
+            this.LabelPrin.TabIndex = 34;
+            this.LabelPrin.Text = "Ingresar Empleado";
+            this.LabelPrin.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.LabelPrin.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuToolTip1.SetToolTip(this.LabelPrin, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.LabelPrin, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.LabelPrin, "");
+            // 
             // CreateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1108,7 +1112,6 @@
         public System.Windows.Forms.ContextMenuStrip cmsImagen;
         public System.Windows.Forms.ToolStripMenuItem cmsimgsubir;
         private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip1;
-        public System.Windows.Forms.Label LabelPrin;
         public Bunifu.UI.WinForms.BunifuTextBox txtNewCorreo;
         public Bunifu.UI.WinForms.BunifuTextBox txtNewPassword;
         public Bunifu.UI.WinForms.BunifuTextBox txtNewPhone;
@@ -1131,5 +1134,6 @@
         private Bunifu.UI.WinForms.BunifuLabel lbDUI;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
         private Bunifu.UI.WinForms.BunifuPanel pnTitulo;
+        public Bunifu.UI.WinForms.BunifuLabel LabelPrin;
     }
 }
