@@ -54,6 +54,12 @@ namespace AgroServicios.Vista.Clientes
                 btnCrearCliente.DisabledFillColor = Color.FromArgb(118, 88, 152);
                 btnCrearCliente.ForeColor = Color.White;
             }
+            if(ControladorIdioma.idioma == 1)
+            {
+                lbProducto.Text = "Customers";
+                txtBuscarClientes.PlaceholderText = "Customer search";
+                btnCrearCliente.Text = "Add customer";
+            }
         }
     }
 }

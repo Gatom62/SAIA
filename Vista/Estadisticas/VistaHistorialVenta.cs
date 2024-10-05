@@ -32,6 +32,12 @@ namespace AgroServicios.Vista.Estadisticas
 
         private void VistaHistorialVenta_Load(object sender, EventArgs e)
         {
+            if(ControladorIdioma.idioma == 1)
+            {
+                label1.Text = "Sales history";
+                btnDevoluciones.Text = "Returns";
+                btnReporte.Text = "Sales sheet";
+            }
             if(ControladorTema.IsDarkMode == true)
             {
                 tableLayoutPanel1.BackColor = Color.FromArgb(118, 88, 152);

@@ -59,6 +59,18 @@ namespace AgroServicios.Controlador.Clientes
             ObjClientes.GriewViewClientes.DataSource = ds.Tables["Clientes"];
 
             ObjClientes.GriewViewClientes.Columns["idCliente"].Visible = false;
+            TraducirEncabezados(ObjClientes.GriewViewClientes);
+        }
+        private void TraducirEncabezados(DataGridView dgv)
+        {
+            if (ControladorIdioma.idioma == 1)
+            {  
+                dgv.Columns[1].HeaderText = "Name";
+                dgv.Columns[2].HeaderText = "Phone";
+                dgv.Columns[3].HeaderText = "Mail";
+                dgv.Columns[4].HeaderText = "Address";
+                dgv.Columns[5].HeaderText = "DUI";
+            }
         }
 
         private void NuevoCliente(object sender, EventArgs e)

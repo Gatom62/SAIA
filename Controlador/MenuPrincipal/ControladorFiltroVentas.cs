@@ -48,6 +48,7 @@ namespace AgroServicios.Controlador.MenuPrincipal
                 if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     objfecha.GriewFiltroV.DataSource = ds.Tables[0];
+                    TraducirEncabezados(objfecha.GriewFiltroV);
                 }
                 else
                 {
@@ -59,6 +60,17 @@ namespace AgroServicios.Controlador.MenuPrincipal
             {
                 // Manejo de errores
                 MessageBox.Show("Ocurrió un error al filtrar las ventas: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void TraducirEncabezados(DataGridView dgv)
+        {
+            if (ControladorIdioma.idioma == 1)
+            {
+                dgv.Columns[0].HeaderText = "Sale ID";
+                dgv.Columns[1].HeaderText = "Customer name";
+                dgv.Columns[2].HeaderText = "Employee name";
+                dgv.Columns[3].HeaderText = "Sale date";
+                dgv.Columns[4].HeaderText = "Total amount";
             }
         }
     }

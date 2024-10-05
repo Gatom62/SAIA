@@ -70,6 +70,7 @@ namespace AgroServicios.Vista.Productos1
                 cmsEditarProducto.Text = Ingles.EditarProducto;
                 cmsElimarProducto.Text = Ingles.Eliminar;
                 cmsInformacion.Text = Ingles.Informacion;
+                txtBuscarP.PlaceholderText = "Search";
             }
         }
 

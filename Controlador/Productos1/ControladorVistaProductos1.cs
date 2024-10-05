@@ -100,34 +100,21 @@ namespace AgroServicios.Controlador.Productos1
             //ObjProductos.GriewViewProductos.Columns["ID del producto"].Visible = false;
             ObjProductos.GriewViewProductos.Columns["imgNombre"].Visible = false;
             // Traducir encabezados de las columnas
-            //TraducirEncabezados(ObjProductos.GriewViewProductos);
+            TraducirEncabezados(ObjProductos.GriewViewProductos);
         }
 
         private void TraducirEncabezados(DataGridView dgv)
         {
             if (ControladorIdioma.idioma == 1)
             {
-                dgv.Columns["ID del producto"].HeaderText = "Employee ID";
-                dgv.Columns["Nombre del producto"].HeaderText = "Name";
-                dgv.Columns["Marca del producto"].HeaderText = "Birthdate";
-                dgv.Columns["Telefono"].HeaderText = "Phone";
-                dgv.Columns["Correo"].HeaderText = "Email";
-                dgv.Columns["DUI"].HeaderText = "DUI";
-                dgv.Columns["Dirección"].HeaderText = "Address";
-                dgv.Columns["Usuario"].HeaderText = "Username";
-                dgv.Columns["Rol"].HeaderText = "Role";
-            }
-            else
-            {
-                dgv.Columns["ID del empleado"].HeaderText = "ID del empleado";
-                dgv.Columns["Nombre"].HeaderText = "Nombre";
-                dgv.Columns["Fecha de nacimiento"].HeaderText = "Fecha de nacimiento";
-                dgv.Columns["Telefono"].HeaderText = "Teléfono";
-                dgv.Columns["Correo"].HeaderText = "Correo";
-                dgv.Columns["DUI"].HeaderText = "DUI";
-                dgv.Columns["Dirección"].HeaderText = "Dirección";
-                dgv.Columns["Usuario"].HeaderText = "Usuario";
-                dgv.Columns["Rol"].HeaderText = "Rol";
+                dgv.Columns[0].HeaderText = "Product ID";
+                dgv.Columns[1].HeaderText = "Name";
+                dgv.Columns[2].HeaderText = "Brand ID";
+                dgv.Columns[3].HeaderText = "Price";
+                dgv.Columns[4].HeaderText = "Product quantity";
+                dgv.Columns[5].HeaderText = "Description";
+                dgv.Columns[6].HeaderText = "Product code";
+
             }
         }
 

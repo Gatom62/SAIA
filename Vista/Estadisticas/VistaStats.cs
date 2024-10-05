@@ -19,9 +19,9 @@ namespace AgroServicios.Vista.Estadisticas
             if(ControladorIdioma.idioma == 1)
             {
                 btnHistorial.Text = Ingles.HistorialVentas;
-                btnProveedores.Text = Ingles.Proveedores;
+                btnProveedores.Text = "Suppliers";
                 btnClientes.Text = Ingles.RegistroVentas;
-                btnSuministros.Text = Ingles.Suministros;
+                btnSuministros.Text = "Products";
             }
             if(ControladorTema.IsDarkMode == true)
             {

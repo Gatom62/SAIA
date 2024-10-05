@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Web.UI.WebControls;
 
 namespace AgroServicios.Controlador.MenuPrincipal
 {
@@ -42,11 +43,23 @@ namespace AgroServicios.Controlador.MenuPrincipal
             if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
             {
                 objcaja.dgvCierre.DataSource = ds.Tables[0];
+                TraducirEncabezados(objcaja.dgvCierre);
             }
             else
             {
                 // Si no hay datos, muestra un mensaje al usuario
                 MessageBox.Show("No se encontraron ventas", "Sin resultados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void TraducirEncabezados(DataGridView dgv)
+        {
+            if(ControladorIdioma.idioma == 1)
+            {
+                dgv.Columns[0].HeaderText = "Sale ID";
+                dgv.Columns[1].HeaderText = "Customer name";
+                dgv.Columns[2].HeaderText = "Employee name";
+                dgv.Columns[3].HeaderText = "Sale date";
+                dgv.Columns[4].HeaderText = "Total amount";
             }
         }
 

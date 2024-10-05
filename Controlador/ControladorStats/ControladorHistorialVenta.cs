@@ -8,6 +8,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AgroServicios.Controlador.ControladorStats
 {
@@ -49,6 +50,18 @@ namespace AgroServicios.Controlador.ControladorStats
             DataSet ds = daogrid.LlenarDataGriew();
 
             objventa.dgvVentas.DataSource = ds.Tables["VistaClienteEmpleado"];
+            TraducirEncabezados(objventa.dgvVentas);
+        }
+        private void TraducirEncabezados(DataGridView dgv)
+        {
+            if (ControladorIdioma.idioma == 1)
+            {
+                dgv.Columns[0].HeaderText = "Sale ID";
+                dgv.Columns[1].HeaderText = "Customer name";
+                dgv.Columns[2].HeaderText = "Employee name";
+                dgv.Columns[3].HeaderText = "Sale date";
+                dgv.Columns[4].HeaderText = "Total amount";
+            }
         }
     }
 }

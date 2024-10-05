@@ -59,9 +59,9 @@
             this.Panel1.Controls.Add(this.bunifuGradientPanel1);
             this.Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel1.Location = new System.Drawing.Point(0, 0);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(1028, 505);
+            this.Panel1.Size = new System.Drawing.Size(1371, 622);
             this.Panel1.TabIndex = 25;
             // 
             // bunifuGradientPanel1
@@ -79,9 +79,10 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1028, 505);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1371, 622);
             this.bunifuGradientPanel1.TabIndex = 6;
             // 
             // tableLayoutPanel1
@@ -95,11 +96,12 @@
             this.tableLayoutPanel1.Controls.Add(this.bunifuShadowPanel3, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1028, 505);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1371, 622);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // bunifuShadowPanel2
@@ -112,7 +114,8 @@
             this.bunifuShadowPanel2.Controls.Add(this.btnHistorial);
             this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel2.Location = new System.Drawing.Point(24, 27);
+            this.bunifuShadowPanel2.Location = new System.Drawing.Point(32, 33);
+            this.bunifuShadowPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
             this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.Transparent;
@@ -121,7 +124,7 @@
             this.bunifuShadowPanel2.ShadowDepth = 5;
             this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel2.Size = new System.Drawing.Size(466, 198);
+            this.bunifuShadowPanel2.Size = new System.Drawing.Size(621, 244);
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 6;
             // 
@@ -172,8 +175,8 @@
             this.btnHistorial.IdleIconLeftImage = global::AgroServicios.Properties.Resources.tdesign_money;
             this.btnHistorial.IdleIconRightImage = null;
             this.btnHistorial.IndicateFocus = true;
-            this.btnHistorial.Location = new System.Drawing.Point(-2, 0);
-            this.btnHistorial.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHistorial.Location = new System.Drawing.Point(-3, 0);
+            this.btnHistorial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHistorial.Name = "btnHistorial";
             this.btnHistorial.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnHistorial.OnDisabledState.BorderRadius = 50;
@@ -207,7 +210,7 @@
             this.btnHistorial.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnHistorial.OnPressedState.IconLeftImage = null;
             this.btnHistorial.OnPressedState.IconRightImage = null;
-            this.btnHistorial.Size = new System.Drawing.Size(459, 182);
+            this.btnHistorial.Size = new System.Drawing.Size(612, 224);
             this.btnHistorial.TabIndex = 3;
             this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHistorial.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -225,7 +228,8 @@
             this.bunifuShadowPanel4.Controls.Add(this.btnProveedores);
             this.bunifuShadowPanel4.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel4.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel4.Location = new System.Drawing.Point(538, 279);
+            this.bunifuShadowPanel4.Location = new System.Drawing.Point(717, 344);
+            this.bunifuShadowPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuShadowPanel4.Name = "bunifuShadowPanel4";
             this.bunifuShadowPanel4.PanelColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel4.PanelColor2 = System.Drawing.Color.Transparent;
@@ -234,7 +238,7 @@
             this.bunifuShadowPanel4.ShadowDepth = 5;
             this.bunifuShadowPanel4.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel4.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel4.Size = new System.Drawing.Size(466, 198);
+            this.bunifuShadowPanel4.Size = new System.Drawing.Size(621, 244);
             this.bunifuShadowPanel4.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel4.TabIndex = 8;
             // 
@@ -288,8 +292,8 @@
             this.btnProveedores.IdleIconLeftImage = global::AgroServicios.Properties.Resources.VAn;
             this.btnProveedores.IdleIconRightImage = null;
             this.btnProveedores.IndicateFocus = true;
-            this.btnProveedores.Location = new System.Drawing.Point(-2, 0);
-            this.btnProveedores.Margin = new System.Windows.Forms.Padding(2);
+            this.btnProveedores.Location = new System.Drawing.Point(-3, 0);
+            this.btnProveedores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnProveedores.OnDisabledState.BorderRadius = 50;
@@ -323,7 +327,7 @@
             this.btnProveedores.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnProveedores.OnPressedState.IconLeftImage = null;
             this.btnProveedores.OnPressedState.IconRightImage = null;
-            this.btnProveedores.Size = new System.Drawing.Size(456, 185);
+            this.btnProveedores.Size = new System.Drawing.Size(608, 228);
             this.btnProveedores.TabIndex = 4;
             this.btnProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnProveedores.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -341,7 +345,8 @@
             this.bunifuShadowPanel5.Controls.Add(this.btnClientes);
             this.bunifuShadowPanel5.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel5.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel5.Location = new System.Drawing.Point(24, 279);
+            this.bunifuShadowPanel5.Location = new System.Drawing.Point(32, 344);
+            this.bunifuShadowPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuShadowPanel5.Name = "bunifuShadowPanel5";
             this.bunifuShadowPanel5.PanelColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel5.PanelColor2 = System.Drawing.Color.Transparent;
@@ -350,7 +355,7 @@
             this.bunifuShadowPanel5.ShadowDepth = 5;
             this.bunifuShadowPanel5.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel5.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel5.Size = new System.Drawing.Size(466, 198);
+            this.bunifuShadowPanel5.Size = new System.Drawing.Size(621, 244);
             this.bunifuShadowPanel5.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel5.TabIndex = 9;
             // 
@@ -404,8 +409,8 @@
             this.btnClientes.IdleIconLeftImage = global::AgroServicios.Properties.Resources.silueta_de_multiples_usuarios;
             this.btnClientes.IdleIconRightImage = null;
             this.btnClientes.IndicateFocus = true;
-            this.btnClientes.Location = new System.Drawing.Point(-2, -1);
-            this.btnClientes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClientes.Location = new System.Drawing.Point(-3, -1);
+            this.btnClientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnClientes.OnDisabledState.BorderRadius = 50;
@@ -439,7 +444,7 @@
             this.btnClientes.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnClientes.OnPressedState.IconLeftImage = null;
             this.btnClientes.OnPressedState.IconRightImage = null;
-            this.btnClientes.Size = new System.Drawing.Size(456, 185);
+            this.btnClientes.Size = new System.Drawing.Size(608, 228);
             this.btnClientes.TabIndex = 4;
             this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnClientes.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -457,7 +462,8 @@
             this.bunifuShadowPanel3.Controls.Add(this.btnSuministros);
             this.bunifuShadowPanel3.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel3.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel3.Location = new System.Drawing.Point(538, 27);
+            this.bunifuShadowPanel3.Location = new System.Drawing.Point(717, 33);
+            this.bunifuShadowPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuShadowPanel3.Name = "bunifuShadowPanel3";
             this.bunifuShadowPanel3.PanelColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel3.PanelColor2 = System.Drawing.Color.Transparent;
@@ -466,7 +472,7 @@
             this.bunifuShadowPanel3.ShadowDepth = 5;
             this.bunifuShadowPanel3.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel3.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel3.Size = new System.Drawing.Size(466, 198);
+            this.bunifuShadowPanel3.Size = new System.Drawing.Size(621, 244);
             this.bunifuShadowPanel3.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel3.TabIndex = 7;
             // 
@@ -487,7 +493,7 @@
             this.btnSuministros.BackColor1 = System.Drawing.Color.White;
             this.btnSuministros.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSuministros.BackgroundImage")));
             this.btnSuministros.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnSuministros.ButtonText = "Suministros";
+            this.btnSuministros.ButtonText = "Productos";
             this.btnSuministros.ButtonTextMarginLeft = 0;
             this.btnSuministros.ColorContrastOnClick = 45;
             this.btnSuministros.ColorContrastOnHover = 45;
@@ -521,7 +527,7 @@
             this.btnSuministros.IdleIconRightImage = null;
             this.btnSuministros.IndicateFocus = true;
             this.btnSuministros.Location = new System.Drawing.Point(-1, 0);
-            this.btnSuministros.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSuministros.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSuministros.Name = "btnSuministros";
             this.btnSuministros.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSuministros.OnDisabledState.BorderRadius = 50;
@@ -555,7 +561,7 @@
             this.btnSuministros.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnSuministros.OnPressedState.IconLeftImage = null;
             this.btnSuministros.OnPressedState.IconRightImage = null;
-            this.btnSuministros.Size = new System.Drawing.Size(456, 185);
+            this.btnSuministros.Size = new System.Drawing.Size(608, 228);
             this.btnSuministros.TabIndex = 5;
             this.btnSuministros.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSuministros.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -565,13 +571,13 @@
             // 
             // VistaStats
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.ClientSize = new System.Drawing.Size(1028, 505);
+            this.ClientSize = new System.Drawing.Size(1371, 622);
             this.Controls.Add(this.Panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "VistaStats";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estadisticas";

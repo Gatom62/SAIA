@@ -34,12 +34,14 @@ namespace AgroServicios.Vista.MenuPrincipal
                 btnBuscar.OnPressedState.FillColor = Color.Red;
                 btnBuscar.OnPressedState.BorderColor = Color.Red;
                 btnBuscar.DisabledFillColor = Color.DarkOrange;
+                GriewFiltroV.BackgroundColor = Color.FromArgb(52, 54, 62);
+                GriewFiltroV.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
             }
             if(ControladorIdioma.idioma == 1)
             {
                 label1.Text = "Start date";
                 label2.Text = "End date";
-                label1.Text = "Filter product";
+                label3.Text = "Filter product";
                 btnBuscar.Text = "Search";
             }
         }
