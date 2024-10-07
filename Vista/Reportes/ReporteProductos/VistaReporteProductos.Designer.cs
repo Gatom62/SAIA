@@ -72,7 +72,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(99, 24);
+            this.label1.Location = new System.Drawing.Point(296, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(314, 38);
@@ -87,7 +87,8 @@
             this.bunifuPictureBox1.BorderRadius = 45;
             this.bunifuPictureBox1.Image = global::AgroServicios.Properties.Resources.Report1;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(200, 3);
+            this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(200, 3, 3, 3);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(91, 91);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
