@@ -32,15 +32,6 @@ namespace AgroServicios.Vista.Login
         {
             InitializeComponent();
             ControladorAdministracionUser controladorAdministracionUser = new ControladorAdministracionUser(this);
-
-            //Hacemos esto para que la contraseña que ingrese el administrador no sea visible
-            txtContraseña.UseSystemPasswordChar = true;
-            // Forzar la actualización del TextBox
-            string tempText = txtContraseña.Text;
-            txtContraseña.Text = string.Empty;
-            txtContraseña.Text = tempText;
-            ResumeLayout();
-
             // Aplicar el borde redondeado al formulario
             this.FormBorderStyle = FormBorderStyle.None; // Deshabilitar el borde normal del formulario
             this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 30, 30));

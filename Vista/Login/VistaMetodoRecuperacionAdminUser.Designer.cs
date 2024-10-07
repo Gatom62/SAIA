@@ -39,6 +39,8 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             this.ptbback = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.btnVerificar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -46,6 +48,8 @@
             this.txtUser = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtContraseña = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.PasswordHide = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
+            this.PasswordVisible = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -367,6 +371,8 @@
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.BorderRadius = 1;
+            this.bunifuGradientPanel1.Controls.Add(this.PasswordHide);
+            this.bunifuGradientPanel1.Controls.Add(this.PasswordVisible);
             this.bunifuGradientPanel1.Controls.Add(this.ptbback);
             this.bunifuGradientPanel1.Controls.Add(this.btnVerificar);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuSeparator1);
@@ -383,6 +389,70 @@
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(526, 367);
             this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // PasswordHide
+            // 
+            this.PasswordHide.AllowAnimations = true;
+            this.PasswordHide.AllowBorderColorChanges = true;
+            this.PasswordHide.AllowMouseEffects = true;
+            this.PasswordHide.AnimationSpeed = 200;
+            this.PasswordHide.BackColor = System.Drawing.Color.Transparent;
+            this.PasswordHide.BackgroundColor = System.Drawing.Color.White;
+            this.PasswordHide.BorderColor = System.Drawing.Color.White;
+            this.PasswordHide.BorderRadius = 1;
+            this.PasswordHide.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
+            this.PasswordHide.BorderThickness = 1;
+            this.PasswordHide.ColorContrastOnClick = 30;
+            this.PasswordHide.ColorContrastOnHover = 30;
+            this.PasswordHide.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.PasswordHide.CustomizableEdges = borderEdges3;
+            this.PasswordHide.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.PasswordHide.Image = global::AgroServicios.Properties.Resources.Show;
+            this.PasswordHide.ImageMargin = new System.Windows.Forms.Padding(0);
+            this.PasswordHide.Location = new System.Drawing.Point(380, 219);
+            this.PasswordHide.Margin = new System.Windows.Forms.Padding(2);
+            this.PasswordHide.Name = "PasswordHide";
+            this.PasswordHide.RoundBorders = true;
+            this.PasswordHide.ShowBorders = true;
+            this.PasswordHide.Size = new System.Drawing.Size(30, 30);
+            this.PasswordHide.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
+            this.PasswordHide.TabIndex = 39;
+            // 
+            // PasswordVisible
+            // 
+            this.PasswordVisible.AllowAnimations = true;
+            this.PasswordVisible.AllowBorderColorChanges = true;
+            this.PasswordVisible.AllowMouseEffects = true;
+            this.PasswordVisible.AnimationSpeed = 200;
+            this.PasswordVisible.BackColor = System.Drawing.Color.Transparent;
+            this.PasswordVisible.BackgroundColor = System.Drawing.Color.White;
+            this.PasswordVisible.BorderColor = System.Drawing.Color.White;
+            this.PasswordVisible.BorderRadius = 1;
+            this.PasswordVisible.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
+            this.PasswordVisible.BorderThickness = 1;
+            this.PasswordVisible.ColorContrastOnClick = 30;
+            this.PasswordVisible.ColorContrastOnHover = 30;
+            this.PasswordVisible.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.PasswordVisible.CustomizableEdges = borderEdges4;
+            this.PasswordVisible.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.PasswordVisible.Image = global::AgroServicios.Properties.Resources.Hide;
+            this.PasswordVisible.ImageMargin = new System.Windows.Forms.Padding(0);
+            this.PasswordVisible.Location = new System.Drawing.Point(380, 219);
+            this.PasswordVisible.Margin = new System.Windows.Forms.Padding(2);
+            this.PasswordVisible.Name = "PasswordVisible";
+            this.PasswordVisible.RoundBorders = true;
+            this.PasswordVisible.ShowBorders = true;
+            this.PasswordVisible.Size = new System.Drawing.Size(30, 30);
+            this.PasswordVisible.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
+            this.PasswordVisible.TabIndex = 40;
             // 
             // VistaMetodoRecuperacionAdminUser
             // 
@@ -414,5 +484,7 @@
         public Bunifu.UI.WinForms.BunifuTextBox txtUser;
         public Bunifu.UI.WinForms.BunifuTextBox txtContraseña;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuIconButton PasswordHide;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuIconButton PasswordVisible;
     }
 }

@@ -20,6 +20,8 @@ namespace AgroServicios.Controlador.Login
             ObjAdminUser = VistaAdminUser;
             VistaAdminUser.ptbback.Click += VolverForm;
             VistaAdminUser.btnVerificar.Click += new EventHandler(VerificarDatos);
+            ObjAdminUser.PasswordVisible.Click += new EventHandler(ShowPassword);
+            ObjAdminUser.PasswordHide.Click += new EventHandler(HidePassword);
         }
         void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
         {
@@ -106,11 +108,34 @@ namespace AgroServicios.Controlador.Login
             }
             return true; // Si solo contiene letras, retorna verdadero
         }
-
         private void MostrarCuentas() 
         {
             VistaCuentasAdminUser vistaCuentas = new VistaCuentasAdminUser();
             vistaCuentas.ShowDialog();
+        }
+        private void ShowPassword(object sender, EventArgs e)
+        {
+            ObjAdminUser.txtContraseña.UseSystemPasswordChar = false;
+            ObjAdminUser.PasswordVisible.Visible = false;
+            ObjAdminUser.PasswordHide.Visible = true;
+            // Forzar la actualización del TextBox
+            string tempText = ObjAdminUser.txtContraseña.Text;
+            ObjAdminUser.txtContraseña.Text = string.Empty;
+            ObjAdminUser.txtContraseña.Text = tempText;
+
+            ObjAdminUser.ResumeLayout();  // Reanudar el redibujado
+        }
+        private void HidePassword(object sender, EventArgs e)
+        {
+            ObjAdminUser.txtContraseña.UseSystemPasswordChar = true;
+            ObjAdminUser.PasswordVisible.Visible = true;
+            ObjAdminUser.PasswordHide.Visible = false;
+            // Forzar la actualización del TextBox
+            string tempText = ObjAdminUser.txtContraseña.Text;
+            ObjAdminUser.txtContraseña.Text = string.Empty;
+            ObjAdminUser.txtContraseña.Text = tempText;
+
+            ObjAdminUser.ResumeLayout();  // Reanudar el redibujado
         }
     }
 }

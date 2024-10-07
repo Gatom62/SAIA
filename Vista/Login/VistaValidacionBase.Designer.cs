@@ -73,7 +73,7 @@
             this.txtContraseña.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtContraseña.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtContraseña.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtContraseña.DefaultFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.DefaultText = "";
             this.txtContraseña.FillColor = System.Drawing.Color.White;
             this.txtContraseña.HideSelection = true;
@@ -83,7 +83,7 @@
             this.txtContraseña.IconRight = null;
             this.txtContraseña.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtContraseña.Lines = new string[0];
-            this.txtContraseña.Location = new System.Drawing.Point(236, 232);
+            this.txtContraseña.Location = new System.Drawing.Point(158, 220);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseña.MaxLength = 32767;
             this.txtContraseña.MinimumSize = new System.Drawing.Size(1, 1);
@@ -140,11 +140,11 @@
             this.bunifuSeparator1.LineColor = System.Drawing.Color.Black;
             this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.DoubleEdgeFaded;
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(75, 283);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(4, 265);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator1.Size = new System.Drawing.Size(566, 21);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(537, 21);
             this.bunifuSeparator1.TabIndex = 30;
             // 
             // bunifuPictureBox1
@@ -155,7 +155,7 @@
             this.bunifuPictureBox1.BorderRadius = 54;
             this.bunifuPictureBox1.Image = global::AgroServicios.Properties.Resources.Ceo_removebg_preview;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(299, 45);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(214, 37);
             this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(109, 109);
@@ -183,7 +183,7 @@
             this.txtUser.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtUser.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUser.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtUser.DefaultFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.DefaultText = "";
             this.txtUser.FillColor = System.Drawing.Color.White;
             this.txtUser.HideSelection = true;
@@ -193,7 +193,7 @@
             this.txtUser.IconRight = null;
             this.txtUser.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUser.Lines = new string[0];
-            this.txtUser.Location = new System.Drawing.Point(236, 177);
+            this.txtUser.Location = new System.Drawing.Point(158, 165);
             this.txtUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtUser.MaxLength = 32767;
             this.txtUser.MinimumSize = new System.Drawing.Size(1, 1);
@@ -263,7 +263,7 @@
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(710, 424);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(541, 366);
             this.bunifuGradientPanel1.TabIndex = 36;
             // 
             // btnVerificar
@@ -313,7 +313,7 @@
             this.btnVerificar.IdleIconLeftImage = null;
             this.btnVerificar.IdleIconRightImage = null;
             this.btnVerificar.IndicateFocus = false;
-            this.btnVerificar.Location = new System.Drawing.Point(217, 323);
+            this.btnVerificar.Location = new System.Drawing.Point(144, 292);
             this.btnVerificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerificar.Name = "btnVerificar";
             this.btnVerificar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -404,7 +404,7 @@
             this.PasswordHide.BorderThickness = 1;
             this.PasswordHide.ColorContrastOnClick = 30;
             this.PasswordHide.ColorContrastOnHover = 30;
-            this.PasswordHide.Cursor = System.Windows.Forms.Cursors.Default;
+            this.PasswordHide.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges3.BottomLeft = true;
             borderEdges3.BottomRight = true;
             borderEdges3.TopLeft = true;
@@ -413,7 +413,7 @@
             this.PasswordHide.DialogResult = System.Windows.Forms.DialogResult.None;
             this.PasswordHide.Image = global::AgroServicios.Properties.Resources.Show;
             this.PasswordHide.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.PasswordHide.Location = new System.Drawing.Point(469, 232);
+            this.PasswordHide.Location = new System.Drawing.Point(391, 220);
             this.PasswordHide.Margin = new System.Windows.Forms.Padding(2);
             this.PasswordHide.Name = "PasswordHide";
             this.PasswordHide.RoundBorders = true;
@@ -436,7 +436,7 @@
             this.PasswordVisible.BorderThickness = 1;
             this.PasswordVisible.ColorContrastOnClick = 30;
             this.PasswordVisible.ColorContrastOnHover = 30;
-            this.PasswordVisible.Cursor = System.Windows.Forms.Cursors.Default;
+            this.PasswordVisible.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges4.BottomLeft = true;
             borderEdges4.BottomRight = true;
             borderEdges4.TopLeft = true;
@@ -445,7 +445,7 @@
             this.PasswordVisible.DialogResult = System.Windows.Forms.DialogResult.None;
             this.PasswordVisible.Image = global::AgroServicios.Properties.Resources.Hide;
             this.PasswordVisible.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.PasswordVisible.Location = new System.Drawing.Point(469, 232);
+            this.PasswordVisible.Location = new System.Drawing.Point(391, 220);
             this.PasswordVisible.Margin = new System.Windows.Forms.Padding(2);
             this.PasswordVisible.Name = "PasswordVisible";
             this.PasswordVisible.RoundBorders = true;
@@ -459,12 +459,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(710, 424);
+            this.ClientSize = new System.Drawing.Size(541, 366);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(710, 424);
-            this.MinimumSize = new System.Drawing.Size(710, 424);
+            this.MaximumSize = new System.Drawing.Size(541, 366);
+            this.MinimumSize = new System.Drawing.Size(541, 366);
             this.Name = "VistaValidacionBase";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "N";
