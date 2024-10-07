@@ -37,8 +37,16 @@ namespace AgroServicios.Vista.MenuPrincipal
                 lbPrecioProducto.ForeColor = Color.White;
                 lbCantidad.ForeColor = Color.White;
             }
-        }
 
+            if (ControladorIdioma.idioma == 1) 
+            {
+                lbCaragteristica.Text = Ingles.Caracteristicas;
+                lbCodigoProducto.Text = Ingles.CodigoProducto;
+                lbPrecioProducto.Text = Ingles.PrecioProducto;
+                lbCantidad.Text = Ingles.Cantidad;
+                btnadd.Text = Ingles.AnadirCarrito;
+            }
+        }
         private void btnadd_Click_1(object sender, EventArgs e)
         {
             if (numericUpDown1.Value > 0)

@@ -63,14 +63,28 @@ namespace AgroServicios.Controlador.Productos1
         {
             if (string.IsNullOrWhiteSpace(Objupdate.txtUbdateMarca.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay campos vacios", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "There are empty fields", Properties.Resources.MensajeWarning);
+                }
+                else 
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay campos vacios", Properties.Resources.MensajeWarning);
+                }
                 return;
             }
 
             // Validar que el nombre del producto no exceda 15 caracteres
             if (!ValidarNombre(Objupdate.txtUbdateMarca.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 15 caragteres en el nombre", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "There are more than 15 characters in the name", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 15 caragteres en el nombre", Properties.Resources.MensajeWarning);
+                }
                 return;
             }
 
@@ -83,14 +97,28 @@ namespace AgroServicios.Controlador.Productos1
 
             if (valorRetornado == 1)
             {
-                MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Proceso realizado", "La marca se actualizo correctamente", Properties.Resources.comprobado);
-                VistaLogin backForm = new VistaLogin();
-
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Process carried out", "The brand was updated successfully", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Proceso realizado", "La marca se actualizo correctamente", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                }
                 Objupdate.Close();
             }
             else
             {
-                MessageBoxP(Color.Red, Color.DarkRed, "Error", "Verifique que los datos no esten duplicados", Properties.Resources.ErrorIcono);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Red, Color.DarkRed, "Error", "Check that the data is not duplicated", Properties.Resources.ErrorIcono);
+                }
+                else
+                {
+                    MessageBoxP(Color.Red, Color.DarkRed, "Error", "Verifique que los datos no esten duplicados", Properties.Resources.ErrorIcono);
+                }
             }
 
             // Método para validar que el nombre de la marca no exceda los 15 caracteres
@@ -99,7 +127,6 @@ namespace AgroServicios.Controlador.Productos1
                 return nombre.Length <= 15;
             }
         }
-
         public void ChargeValues(int id, string Name)
         {
             Objupdate.txtid.Text = id.ToString();

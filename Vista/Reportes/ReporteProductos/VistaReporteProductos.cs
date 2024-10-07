@@ -30,6 +30,11 @@ namespace AgroServicios.Vista.Reportes.ReporteProductos
             this.productosTableAdapter.LlenarProducto(this.dataSetProductos.Productos);
 
             this.reportViewer1.RefreshReport();
+
+            if (ControladorIdioma.idioma == 1) 
+            {
+                label1.Text = Ingles.FichaProducto;
+            }
         }
     }
 }

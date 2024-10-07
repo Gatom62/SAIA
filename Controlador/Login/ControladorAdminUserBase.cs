@@ -40,7 +40,6 @@ namespace AgroServicios.Controlador.Login
 
             frm.ShowDialog();
         }
-
         void MandarValoresAlerta(Color backcolor, Color color, string title, string text, Image icon)
         {
             MessagePersonal message = new MessagePersonal();
@@ -60,17 +59,38 @@ namespace AgroServicios.Controlador.Login
 
         private void VerificarDatos(object sender, EventArgs e)
         {
+            string mensajeVacio, procesorealizado, numerosNombre, datosCorrectos, datosIncorrectos, noConection;
+
+            if (ControladorIdioma.idioma == 1)
+            {
+                mensajeVacio = "You must fill in all the fields.";
+                procesorealizado = "Process carried out";
+                numerosNombre = "There are numbers in the name";
+                datosCorrectos = "The data is correct";
+                datosIncorrectos = "The data is incorrect";
+                noConection = "Could not connect to the database";
+            }
+            else
+            {
+                mensajeVacio = "Debe rellenar todos los campos.";
+                procesorealizado = "Proceso realizado";
+                numerosNombre = "Hay numeros en el nombre";
+                datosCorrectos = "Los datos son correctos";
+                datosIncorrectos = "Los datos son incorrectos";
+                noConection = "No se pudo conectar con la base de datos";
+            }
+
             if (string.IsNullOrEmpty(ObjValidacionBase.txtUser.Text.ToString()) ||
                 string.IsNullOrEmpty(ObjValidacionBase.txtContraseña.Text.ToString()))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay espacios en blanco", Properties.Resources.MensajeWarning);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", mensajeVacio, Properties.Resources.MensajeWarning);
                 return;
             }
 
             // Verificar si el campo txtUser contiene solo letras
             if (!IsOnlyLetters(ObjValidacionBase.txtUser.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay numeros en el nombre", Properties.Resources.MensajeWarning);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", numerosNombre, Properties.Resources.MensajeWarning);
                 return;
             }
 
@@ -81,18 +101,18 @@ namespace AgroServicios.Controlador.Login
             int respuesta = verificar.VerificarAdmin();
             if (respuesta == 1)
             {
-                MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "Los datos son correctos", Properties.Resources.comprobado);
+                MandarValoresAlerta(Color.LightGreen, Color.Black, procesorealizado, datosCorrectos, Properties.Resources.comprobado);
                 VistaLogin backForm = new VistaLogin();
                 MostrarCuentas();
             }
             else if (respuesta == -1)
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Los datos son incorrectos", Properties.Resources.MensajeWarning);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", datosIncorrectos, Properties.Resources.MensajeWarning);
                 return;
             }
             else
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "No se pudo conectar con la base de datos", Properties.Resources.MensajeWarning);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", noConection, Properties.Resources.MensajeWarning);
                 return;
             }
         }

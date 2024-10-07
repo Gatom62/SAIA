@@ -114,14 +114,28 @@ namespace AgroServicios.Controlador.Productos1
                string.IsNullOrWhiteSpace(Objupdate.txtUbdateDescripcion.Text) ||
                string.IsNullOrWhiteSpace(Objupdate.txtUbdateCodigo.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Todos los campos son obligatorios", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "All fields are required", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Todos los campos son obligatorios", Properties.Resources.MensajeWarning);
+                }
                 return;
             }
 
             // Validar que el nombre del producto no exceda 30 caracteres
             if (!ValidarNombre(Objupdate.txtUbdateProducto.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "El nombre tiene mas de 80 caragteres", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "The name has more than 80 characters", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "El nombre tiene más de 80 caracteres", Properties.Resources.MensajeWarning);
+                }
                 return;
             }
 
@@ -129,21 +143,42 @@ namespace AgroServicios.Controlador.Productos1
             if (!ValidarNumero(Objupdate.txtUbdateCodigo.Text) ||
                 !ValidarNumero(Objupdate.txtUbdateCantidad.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Numeros decimales o letras en el codigo o en la cantidad", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Decimal numbers or letters in the code or quantity", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Numeros decimales o letras en el codigo o en la cantidad", Properties.Resources.MensajeWarning);
+                }
                 return;
             }
 
             //Validamos que el codigo no exeda la cantidad de 12 numeros.
             if (!CantidadCodigo(Objupdate.txtUbdateCodigo.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 12 numeros en el codigo", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "There are more than 12 numbers in the code", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 12 numeros en el codigo", Properties.Resources.MensajeWarning);
+                }
                 return;
             }
 
             //Validamos que el codigo no exeda la cantidad de 12 numeros.
             if (!CantidadStock(Objupdate.txtUbdateCantidad.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Se quiere ingresar más de 500 productos del mismo tipo", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "You want to enter more than 500 products of the same type", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Se quiere ingresar más de 500 productos del mismo tipo", Properties.Resources.MensajeWarning);
+                }
                 return;
             }
 
@@ -151,13 +186,27 @@ namespace AgroServicios.Controlador.Productos1
             // Validar que el precio del producto contenga solo decimales
             if (!ValidarDecimales(Objupdate.txtUbdatePrecio.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "El precio tiene numeros enteros o supero los 1000.00", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                     MessageBoxP(Color.Yellow, Color.Orange, "Error", "The price has whole numbers or exceeds 1000.00", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "El precio tiene numeros enteros o supero los 1000.00", Properties.Resources.MensajeWarning);
+                }
                 return;
             }
 
             if (!ValidarDescripcion(Objupdate.txtUbdateDescripcion.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 150 caragteres en la descripción", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "There are more than 150 characters in the description", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay más de 150 caracteres en la descripción", Properties.Resources.MensajeWarning);
+                }
                 return;
             }
 
@@ -200,14 +249,30 @@ namespace AgroServicios.Controlador.Productos1
 
             if (valorRetornado == 1)
             {
-                MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "El producto fue registrado", Properties.Resources.comprobado);
-                VistaLogin backForm = new VistaLogin();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Process carried out", "The product was registered", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "El producto fue registrado", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                }
                 Objupdate.Close();
             }
             else
             {
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el producto no se este duplicando o asociando a otro registro", Properties.Resources.ErrorIcono);
-                VistaLogin backForm = new VistaLogin();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verify that the product is not being duplicated or associated with another record", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el producto no se está duplicando o asociado a otro registro", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
             }
 
             // Método para validar que el nombre del producto no exceda los 80 caracteres
@@ -272,7 +337,6 @@ namespace AgroServicios.Controlador.Productos1
                 return false; // Si no se puede parsear a decimal, retornar false
             }
         }
-
         public void verificarAccion()
         {
             if (accion == 2)
@@ -286,7 +350,6 @@ namespace AgroServicios.Controlador.Productos1
                 Objupdate.txtUbdateDescripcion.Enabled = false;
             }
         }
-
         public void ChargeValues(int id, int idMarca, string Name, string price, string stock, string description, string marc, string code, byte[] imagen)
         {
             Objupdate.txtid.Text = id.ToString();

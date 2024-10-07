@@ -13,19 +13,16 @@ namespace AgroServicios.Controlador.Server
     internal class ControladorServerPass
     {
         VerificarContraServer objpass;
-
         public ControladorServerPass(VerificarContraServer Vista)
         {
             objpass = Vista;
             objpass.btnVerificar.Click += VerificarContra;
             objpass.ptbback.Click += CerrarForm;
         }
-
         private void CerrarForm(object sender, EventArgs e) 
         {
             objpass.Close();
         }
-
         void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
         {
             AlertExito frm = new AlertExito();
@@ -44,14 +41,31 @@ namespace AgroServicios.Controlador.Server
 
             if(pass == StaticSession.Password)
             {
-                MessageBoxP(Color.LightGreen, Color.Black, "Bienvenido", "Los datos son correctos", Properties.Resources.comprobado);
-                ViewAdminConnection objcon = new ViewAdminConnection(2);
-                objcon.ShowDialog();
-                objpass.Close();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.LightGreen, Color.Black, "Welcome", "The data is correct", Properties.Resources.comprobado);
+                    ViewAdminConnection objcon = new ViewAdminConnection(2);
+                    objcon.ShowDialog();
+                    objpass.Close();
+                }
+                else
+                {
+                    MessageBoxP(Color.LightGreen, Color.Black, "Bienvenido", "Los datos son correctos", Properties.Resources.comprobado);
+                    ViewAdminConnection objcon = new ViewAdminConnection(2);
+                    objcon.ShowDialog();
+                    objpass.Close();
+                }
             }
             else
             {
-                MessageBoxP(Color.Red, Color.DarkRed, "Fallo", "Los datos don incorrectos", Properties.Resources.ErrorIcono);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Red, Color.DarkRed, "Fallo", "The data is incorrect", Properties.Resources.ErrorIcono);
+                }
+                else
+                {
+                    MessageBoxP(Color.Red, Color.DarkRed, "Fallo", "Los datos son incorrectos", Properties.Resources.ErrorIcono);
+                }
             }
         }
     }

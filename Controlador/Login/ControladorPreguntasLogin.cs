@@ -79,14 +79,30 @@ namespace AgroServicios.Controlador.Login
                 }
                 else
                 {
-                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "La tabla 'PreguntasSeguridad' no se encontró en el DataSet.", Properties.Resources.ErrorIcono);
-                    VistaLogin backForm = new VistaLogin();
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "The table 'PreguntasSeguridad' was not found in the DataSet.", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
+                    else 
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "La tabla 'PreguntasSeguridad' no se encontró en el DataSet.", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
                 }
             }
             catch (Exception ex)
             {
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Error al cargar los datos: " + ex.Message, Properties.Resources.ErrorIcono);
-                VistaLogin backForm = new VistaLogin();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Error loading data: " + ex.Message, Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Error al cargar los datos: " + ex.Message, Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
             }
         }
         private void VerificarRespuestas(object sender, EventArgs e)
@@ -105,8 +121,17 @@ namespace AgroServicios.Controlador.Login
                 if (daoPreguntas.VerificarRespuestas())
                 {
                     string user = objpre.txtUsuario.Text;
-                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Verificación completada", "Respuestas correctas. Puede restablecer su contraseña.", Properties.Resources.comprobado);
-                    VistaLogin backForm = new VistaLogin();
+
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MandarValoresAlerta(Color.LightGreen, Color.Black, "Verification completed", "Correct answers. You can reset your password.", Properties.Resources.comprobado);
+                        VistaLogin backForm = new VistaLogin();
+                    }
+                    else
+                    {
+                        MandarValoresAlerta(Color.LightGreen, Color.Black, "Verificación completada", "Respuestas correctas. Puede restablecer su contraseña.", Properties.Resources.comprobado);
+                        VistaLogin backForm = new VistaLogin();
+                    }
 
                     objpre.Close();
                     VistaRestContraPreguntas vista = new VistaRestContraPreguntas(user);
@@ -114,8 +139,16 @@ namespace AgroServicios.Controlador.Login
                 }
                 else
                 {
-                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Verificación fallida", "Las respuestas no son correctas. Inténtelo de nuevo.", Properties.Resources.ErrorIcono);
-                    VistaLogin backForm = new VistaLogin();
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Verification failed", "The answers are not correct. Please try again.", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
+                    else
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Verificación fallida", "Las respuestas no son correctas. Inténtelo de nuevo.", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
                 }
             }
         }
@@ -123,16 +156,31 @@ namespace AgroServicios.Controlador.Login
         {
             if (string.IsNullOrWhiteSpace(objpre.txtRes1.Text) || string.IsNullOrWhiteSpace(objpre.txtRes2.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error de validación", "Por favor, complete ambas respuestas de seguridad.", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Validation error", "Please complete both security answers.", Properties.Resources.MensajeWarning);
+                }
+                else 
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error de validación", "Por favor, complete ambas respuestas de seguridad.", Properties.Resources.MensajeWarning);
+                }
+               
                 return false;
             }
 
             if (objpre.droprole1.SelectedValue.ToString() == objpre.droprole2.SelectedValue.ToString())
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error de validación", "Las preguntas de seguridad no pueden ser iguales.", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Validation error", "Security questions cannot be the same.", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error de validación", "Las preguntas de seguridad no pueden ser iguales.", Properties.Resources.MensajeWarning);
+                }
+
                 return false;
             }
-
             return true;
         }
     }

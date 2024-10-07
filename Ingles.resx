@@ -132,6 +132,9 @@
   <data name="AgregarProducto" xml:space="preserve">
     <value>Add product</value>
   </data>
+  <data name="AnadirCarrito" xml:space="preserve">
+    <value>Add to cart</value>
+  </data>
   <data name="BaseDatos" xml:space="preserve">
     <value>Database</value>
   </data>
@@ -165,8 +168,14 @@
   <data name="Busqueda" xml:space="preserve">
     <value>Search product</value>
   </data>
+  <data name="Cantidad" xml:space="preserve">
+    <value>Amount</value>
+  </data>
   <data name="CantidadProducto" xml:space="preserve">
     <value>Product quantity</value>
+  </data>
+  <data name="Caracteristicas" xml:space="preserve">
+    <value>Characteristics</value>
   </data>
   <data name="Carri" xml:space="preserve">
     <value>Cart</value>
@@ -194,6 +203,9 @@
   </data>
   <data name="Codigo" xml:space="preserve">
     <value>Code</value>
+  </data>
+  <data name="CodigoProducto" xml:space="preserve">
+    <value>Product code</value>
   </data>
   <data name="Comp" xml:space="preserve">
     <value>Buy</value>
@@ -245,6 +257,12 @@
   </data>
   <data name="Eliminar" xml:space="preserve">
     <value>Delete</value>
+  </data>
+  <data name="FichaProducto" xml:space="preserve">
+    <value>Product sheets</value>
+  </data>
+  <data name="FichaVentas" xml:space="preserve">
+    <value>Sales sheets</value>
   </data>
   <data name="Guardar" xml:space="preserve">
     <value>Keep</value>
@@ -333,6 +351,12 @@
   <data name="NombreProducto" xml:space="preserve">
     <value>Product Name</value>
   </data>
+  <data name="Precio" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="PrecioProducto" xml:space="preserve">
+    <value>Product price</value>
+  </data>
   <data name="procesos" xml:space="preserve">
     <value>Procesos</value>
   </data>
@@ -350,6 +374,9 @@
   </data>
   <data name="RespuestaUno" xml:space="preserve">
     <value>First answer</value>
+  </data>
+  <data name="Seleccionar" xml:space="preserve">
+    <value>Select</value>
   </data>
   <data name="ServidorURL" xml:space="preserve">
     <value>Server URL</value>

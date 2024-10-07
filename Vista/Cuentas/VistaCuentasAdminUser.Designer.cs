@@ -354,10 +354,8 @@
             this.ClientSize = new System.Drawing.Size(1044, 332);
             this.Controls.Add(this.GriewEmpleados);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1044, 332);
-            this.MinimumSize = new System.Drawing.Size(1044, 332);
             this.Name = "VistaCuentasAdminUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cuentas de los administradores y empleados - Administrador";

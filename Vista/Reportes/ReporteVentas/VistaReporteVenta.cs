@@ -28,6 +28,11 @@ namespace AgroServicios.Vista.Reportes.ReporteVentas
             this.ventasTableAdapter.Fill(this.dataSetVentas.Ventas);
 
             this.reportViewer1.RefreshReport();
+
+            if (ControladorIdioma.idioma == 1) 
+            {
+                label1.Text = Ingles.FichaVentas;
+            }
         }
     }
 }

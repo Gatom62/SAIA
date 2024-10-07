@@ -57,7 +57,15 @@ namespace AgroServicios.Controlador.MenuPrincipal
         {
             if (string.IsNullOrWhiteSpace(ObjLoguinContra.txtContraseña.Text)) 
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "No se a ingresado ninguna contraseña", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "No password has been entered", Properties.Resources.MensajeWarning);
+                }
+                else 
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "No se a ingresado ninguna contraseña", Properties.Resources.MensajeWarning);
+                }
+
                 return;
             }
 
@@ -82,8 +90,16 @@ namespace AgroServicios.Controlador.MenuPrincipal
             else
             {
                 //Mensaje de error si se no se pudo realizar la inserccion
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "La contraseña no se ha podido actualizar.", Properties.Resources.ErrorIcono);
-                VistaLogin backForm = new VistaLogin();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "The password could not be updated.", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else 
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "La contraseña no se ha podido actualizar.", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
             }
         }
         private void CharlesValue(string user) 

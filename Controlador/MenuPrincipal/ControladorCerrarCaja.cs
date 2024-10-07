@@ -13,6 +13,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AgroServicios.Modelo.DAO;
 using System.Data;
+using System.Drawing;
+using AgroServicios.Vista.Notificación;
 
 namespace AgroServicios.Controlador.MenuPrincipal
 {
@@ -27,7 +29,6 @@ namespace AgroServicios.Controlador.MenuPrincipal
             objcaja.Load += CargaInicial;
             objcaja.btnCerrarCaja.Click += CerrarCaja;
         }
-
         private void CargaInicial(object sender, EventArgs e)
         {
             // Crear una instancia del DAO y establecer las fechas
@@ -46,8 +47,14 @@ namespace AgroServicios.Controlador.MenuPrincipal
             }
             else
             {
-                // Si no hay datos, muestra un mensaje al usuario
-                MessageBox.Show("No se encontraron ventas", "Sin resultados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("No sales found", "No results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else 
+                {
+                    MessageBox.Show("No se encontraron ventas", "Sin resultados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
@@ -78,7 +85,14 @@ namespace AgroServicios.Controlador.MenuPrincipal
             // Validar si hay ventas
             if (totalDia <= 0)
             {
-                MessageBox.Show("No hay ventas para cerrar la caja", "Sin ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("There are no sales to close the cash register", "No sales", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show("No hay ventas para cerrar la caja", "Sin ventas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 return;
             }
 
@@ -90,17 +104,41 @@ namespace AgroServicios.Controlador.MenuPrincipal
 
             if (resp > 0)
             {
-                MessageBox.Show("Cierre de caja realizado con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("Cash closing successfully completed", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Cierre de caja realizado con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
                 // Opción para abrir el PDF generado
-                if (MessageBox.Show("¿Desea abrir el informe de cierre de caja?", "Abrir Informe", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (ControladorIdioma.idioma == 1)
                 {
-                    System.Diagnostics.Process.Start(pdfFilePath);
+                    if (MessageBox.Show("¿You want to open the cash closing report?", "Open Report", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(pdfFilePath);
+                    }
+                }
+                else
+                {
+                    if (MessageBox.Show("¿Desea abrir el informe de cierre de caja?", "Abrir Informe", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        System.Diagnostics.Process.Start(pdfFilePath);
+                    }
                 }
             }
             else
             {
-                MessageBox.Show("No se pudo registrar el cierre de caja", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("The cash register closing could not be recorded", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else 
+                {
+                    MessageBox.Show("No se pudo registrar el cierre de caja", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

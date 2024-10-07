@@ -99,14 +99,30 @@ namespace AgroServicios.Controlador.Login
                 }
                 else
                 {
-                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "La tabla 'PreguntasSeguridad' no se encontró en el DataSet.", Properties.Resources.ErrorIcono);
-                    VistaLogin backForm = new VistaLogin();
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "The table 'PreguntasSeguridad' was not found in the DataSet.", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
+                    else 
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "La tabla 'PreguntasSeguridad' no se encontró en el DataSet.", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
                 }
             }
             catch (Exception ex)
             {
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Error al cargar los datos: " + ex.Message, Properties.Resources.ErrorIcono);
-                VistaLogin backForm = new VistaLogin();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Error loading data: " + ex.Message, Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Error al cargar los datos: " + ex.Message, Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
             }
         }
 
@@ -132,12 +148,26 @@ namespace AgroServicios.Controlador.Login
                     }
                     else
                     {
-                        MessageBoxP(Color.Yellow, Color.Orange, "Error", "El usuario no tiene exactamente dos respuestas de seguridad asignadas.", Properties.Resources.MensajeWarning);
+                        if (ControladorIdioma.idioma == 1)
+                        {
+                            MessageBoxP(Color.Yellow, Color.Orange, "Error", "The user does not have exactly two security answers assigned.", Properties.Resources.MensajeWarning);
+                        }
+                        else
+                        {
+                            MessageBoxP(Color.Yellow, Color.Orange, "Error", "El usuario no tiene exactamente dos respuestas de seguridad asignadas.", Properties.Resources.MensajeWarning);
+                        }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Error al cargar los RespuestaID: " + ex.Message, Properties.Resources.MensajeWarning);
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MessageBoxP(Color.Yellow, Color.Orange, "Error", "Error loading ResponseID: " + ex.Message, Properties.Resources.MensajeWarning);
+                    }
+                    else
+                    {
+                        MessageBoxP(Color.Yellow, Color.Orange, "Error", "Error al cargar los RespuestaID: " + ex.Message, Properties.Resources.MensajeWarning);
+                    }
                 }
             }
 
@@ -162,13 +192,29 @@ namespace AgroServicios.Controlador.Login
 
                 if (resultado > 0)
                 {
-                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso completado", "Las respuestas de seguridad se han actualizado correctamente.", Properties.Resources.comprobado);
-                    VistaLogin backForm = new VistaLogin();
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MandarValoresAlerta(Color.LightGreen, Color.Black, "Process completed", "Security responses have been successfully updated.", Properties.Resources.comprobado);
+                        VistaLogin backForm = new VistaLogin();
+                    }
+                    else
+                    {
+                        MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso completado", "Las respuestas de seguridad se han actualizado correctamente.", Properties.Resources.comprobado);
+                        VistaLogin backForm = new VistaLogin();
+                    }
                 }
                 else
                 {
-                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Proceso completado", "Ocurrió un error al actualizar las respuestas de seguridad.", Properties.Resources.ErrorIcono);
-                    VistaLogin backForm = new VistaLogin();
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Process completed", "An error occurred while updating security responses.", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
+                    else
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Proceso completado", "Ocurrió un error al actualizar las respuestas de seguridad.", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
                 }
             }
         }
@@ -190,18 +236,41 @@ namespace AgroServicios.Controlador.Login
 
                 if (resultado > 0)
                 {
-                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso completado", "Las respuestas de seguridad se han guardado correctamente.", Properties.Resources.comprobado);
-                    VistaLogin backForm = new VistaLogin();
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MandarValoresAlerta(Color.LightGreen, Color.Black, "Process completed", "The security answers have been saved successfully.", Properties.Resources.comprobado);
+                        VistaLogin backForm = new VistaLogin();
+                    }
+                    else 
+                    {
+                        MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso completado", "Las respuestas de seguridad se han guardado correctamente.", Properties.Resources.comprobado);
+                        VistaLogin backForm = new VistaLogin();
+                    }
                     objpre.Close();
                 }
                 else if (resultado == -2)
                 {
-                    MessageBoxP(Color.Yellow, Color.Orange, "Proceso interrumpido", "El usuario ya tiene dos preguntas de seguridad asignadas. No se pueden agregar más.", Properties.Resources.MensajeWarning);
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MessageBoxP(Color.Yellow, Color.Orange, "Process interrupted", "The user already has two security questions assigned. No more can be added.", Properties.Resources.MensajeWarning);
+                    }
+                    else
+                    {
+                        MessageBoxP(Color.Yellow, Color.Orange, "Proceso interrumpido", "El usuario ya tiene dos preguntas de seguridad asignadas. No se pueden agregar más.", Properties.Resources.MensajeWarning);
+                    }
                 }
                 else
                 {
-                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Ocurrió un error al guardar las respuestas de seguridad.", Properties.Resources.ErrorIcono);
-                    VistaLogin backForm = new VistaLogin();
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "An error occurred while saving security answers.", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
+                    else
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Ocurrió un error al guardar las respuestas de seguridad.", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
                 }
             }
         }
@@ -209,25 +278,33 @@ namespace AgroServicios.Controlador.Login
         {
             if (string.IsNullOrWhiteSpace(objpre.txtRes1.Text) || string.IsNullOrWhiteSpace(objpre.txtRes2.Text))
             {
-
-                MessageBoxP(Color.Yellow, Color.Orange, "Error de validación", "Por favor complete ambas respuestas de seguridad.", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error de validación", "Please complete both security answers.", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error de validación", "Por favor complete ambas respuestas de seguridad.", Properties.Resources.MensajeWarning);
+                }
                 return false;
             }
 
             if (objpre.droprole1.SelectedValue.ToString() == objpre.droprole2.SelectedValue.ToString())
             {
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error de validación", "Las preguntas de seguridad no pueden ser iguales.", Properties.Resources.ErrorIcono);
-                VistaLogin backForm = new VistaLogin();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Validation error", "Security questions cannot be the same.", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error de validación", "Las preguntas de seguridad no pueden ser iguales.", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
                 return false;
             }
 
             return true;
         }
-
-        //private string CifrarRespuesta(string respuesta)
-        //{
-        //    Encryp encryp = new Encryp();
-        //    return encryp.Encriptar(respuesta);
-        //}
     }
 }

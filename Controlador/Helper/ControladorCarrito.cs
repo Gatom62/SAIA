@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using AgroServicios.Modelo.DTO;
 using Bunifu.UI.WinForms.Helpers.Transitions;
 using System.Linq;
+using System.Drawing;
 
 namespace AgroServicios.Controlador.Helper
 {
@@ -35,36 +36,64 @@ namespace AgroServicios.Controlador.Helper
         {
             if (objCarrito.dgvCarrito.CurrentRow == null)
             {
-                MessageBox.Show("No se ha seleccionado ningún producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("No product has been selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("No se ha seleccionado ningún producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 return; // Salir del método si no hay ninguna fila seleccionada
             }
             else
             {
                 if (objCarrito.dgvCarrito.SelectedRows.Count > 0)
                 {
-
                     // Muestra un mensaje de confirmación
-                    DialogResult result = MessageBox.Show(
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        DialogResult result = MessageBox.Show(
+                        "¿Are you sure you want to remove this product??",
+                        "Confirm Delete",
+                        MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Question);
+
+                        // Si el usuario confirma la eliminación
+                        if (result == DialogResult.Yes)
+                        {
+                            // Obtén el índice de la primera fila seleccionada
+                            int rowIndex = objCarrito.dgvCarrito.SelectedRows[0].Index;
+
+                            // Elimina la fila en el índice especificado
+                            objCarrito.dgvCarrito.Rows.RemoveAt(rowIndex);
+                            // Actualizar el total después de eliminar la fila
+                            ActualizarTotal();
+
+                        }
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show(
                         "¿Estás seguro de que deseas eliminar este producto?",
                         "Confirmar Eliminación",
                         MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Question
-                    );
+                        MessageBoxIcon.Question);
 
-                    // Si el usuario confirma la eliminación
-                    if (result == DialogResult.Yes)
-                    {
-                        // Obtén el índice de la primera fila seleccionada
-                        int rowIndex = objCarrito.dgvCarrito.SelectedRows[0].Index;
+                        // Si el usuario confirma la eliminación
+                        if (result == DialogResult.Yes)
+                        {
+                            // Obtén el índice de la primera fila seleccionada
+                            int rowIndex = objCarrito.dgvCarrito.SelectedRows[0].Index;
 
-                        // Elimina la fila en el índice especificado
-                        objCarrito.dgvCarrito.Rows.RemoveAt(rowIndex);
-                        // Actualizar el total después de eliminar la fila
-                        ActualizarTotal();
+                            // Elimina la fila en el índice especificado
+                            objCarrito.dgvCarrito.Rows.RemoveAt(rowIndex);
+                            // Actualizar el total después de eliminar la fila
+                            ActualizarTotal();
 
+                        }
                     }
                 }
-
             }
         }
         private void Search(object sender, KeyPressEventArgs e)
@@ -106,7 +135,14 @@ namespace AgroServicios.Controlador.Helper
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al procesar el cliente seleccionado: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show($"Error processing the selected client: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show($"Error al procesar el cliente seleccionado: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -116,7 +152,14 @@ namespace AgroServicios.Controlador.Helper
 
             if (objCarrito.cmbCliente.SelectedValue == null)
             {
-                MessageBox.Show("Seleccione un cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("Select a client.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 return;
             }
 
@@ -126,10 +169,16 @@ namespace AgroServicios.Controlador.Helper
             !decimal.TryParse(objCarrito.dgvTotal.Rows[0].Cells[0].Value.ToString().Replace("$", "").Trim(), out decimal total) ||
             total <= 0)
             {
-                MessageBox.Show("El carrito está vacío o el total es 0. No se puede realizar la compra.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("The cart is empty or the total is 0. The purchase cannot be made.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("El carrito está vacío o el total es 0. No se puede realizar la compra.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 return;
             }
-
 
             daoinsert.Idcliente = (int)objCarrito.cmbCliente.SelectedValue;
             daoinsert.Idempleado = StaticSession.Id;
@@ -147,7 +196,14 @@ namespace AgroServicios.Controlador.Helper
                     }
                     else
                     {
-                        MessageBox.Show("Uno de los valores en 'Precio Total' no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (ControladorIdioma.idioma == 1)
+                        {
+                            MessageBox.Show("One of the values ​​in 'Total Price' is not valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Uno de los valores en 'Precio Total' no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                         return;
                     }
                 }
@@ -158,7 +214,14 @@ namespace AgroServicios.Controlador.Helper
 
             if (resp > 0)
             {
-                MessageBox.Show("Se ha hecho la compra", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("The purchase has been made", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Se ha hecho la compra", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
                 // Bucle para actualizar el stock de cada producto
                 foreach (DataGridViewRow row in objCarrito.dgvCarrito.Rows)
                 {
@@ -192,13 +255,27 @@ namespace AgroServicios.Controlador.Helper
                     catch (Exception ex)
                     {
                         // Mostrar el mensaje de error si el envío falla, pero no interrumpir el flujo
-                        MessageBox.Show($"No se pudo enviar el correo: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        if (ControladorIdioma.idioma == 1)
+                        {
+                            MessageBox.Show($"The email could not be sent: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            MessageBox.Show($"No se pudo enviar el correo: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
             else
             {
-                MessageBox.Show("No se ha podido realizar la compra", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("The purchase could not be made", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("No se ha podido realizar la compra", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -259,7 +336,6 @@ namespace AgroServicios.Controlador.Helper
                 stream.Close();
             }
         }
-
         private void ChargeValue(object sender, EventArgs e)
         {
             LlenarTextBox();
@@ -286,7 +362,14 @@ namespace AgroServicios.Controlador.Helper
             // Verifica si la cantidad total en el carrito más la nueva cantidad excede el stock disponible
             if (cantidadEnCarrito + cantidad > stockDisponible)
             {
-                MessageBox.Show($"No hay suficiente stock disponible para {producto}. Stock disponible: {stockDisponible}. Cantidad en carrito: {cantidadEnCarrito}", "Stock Insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show($"There is not enough stock available for {producto}. Stock available: {stockDisponible}. Quantity in cart: {cantidadEnCarrito}", "Insufficient stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    MessageBox.Show($"No hay suficiente stock disponible para {producto}. Stock disponible: {stockDisponible}. Cantidad en carrito: {cantidadEnCarrito}", "Stock Insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 return;
             }
 
@@ -310,7 +393,14 @@ namespace AgroServicios.Controlador.Helper
                     ActualizarTotal();
 
                     // Muestra el mensaje de confirmación
-                    MessageBox.Show($"Se ha añadido {cantidad} {producto} al carrito.", "Producto Añadido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MessageBox.Show($"Has been added {cantidad} {producto} to cart.", "Product Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Se ha añadido {cantidad} {producto} al carrito.", "Producto Añadido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                     return;
                 }
             }
@@ -322,7 +412,14 @@ namespace AgroServicios.Controlador.Helper
             ActualizarTotal();
 
             // Muestra el mensaje de confirmación
-            MessageBox.Show($"Se ha añadido {cantidad} {producto} al carrito.", "Producto Añadido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (ControladorIdioma.idioma == 1)
+            {
+                MessageBox.Show($"Has been added {cantidad} {producto} al carrito.", "Product Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show($"Se ha añadido {cantidad} {producto} al carrito.", "Producto Añadido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void ActualizarTotal()
@@ -345,17 +442,31 @@ namespace AgroServicios.Controlador.Helper
 
         private void Borrarcompra(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro que desea eliminar esta compra?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (ControladorIdioma.idioma == 1)
             {
-                objCarrito.dgvCarrito.Rows.Clear();
-                objCarrito.dgvTotal.Rows.Clear();
-                // Agrega una nueva fila vacía
-                int rowIndex = objCarrito.dgvTotal.Rows.Add();
-                // Establece el valor predeterminado en la primera celda de la fila recién agregada
-                objCarrito.dgvTotal.Rows[rowIndex].Cells[0].Value = "$0.00";
+                if (MessageBox.Show("¿Are you sure you want to delete this purchase?", "Eliminate", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    objCarrito.dgvCarrito.Rows.Clear();
+                    objCarrito.dgvTotal.Rows.Clear();
+                    // Agrega una nueva fila vacía
+                    int rowIndex = objCarrito.dgvTotal.Rows.Add();
+                    // Establece el valor predeterminado en la primera celda de la fila recién agregada
+                    objCarrito.dgvTotal.Rows[rowIndex].Cells[0].Value = "$0.00";
+                }
+            }
+            else
+            {
+                if (MessageBox.Show("¿Está seguro que desea eliminar esta compra?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    objCarrito.dgvCarrito.Rows.Clear();
+                    objCarrito.dgvTotal.Rows.Clear();
+                    // Agrega una nueva fila vacía
+                    int rowIndex = objCarrito.dgvTotal.Rows.Add();
+                    // Establece el valor predeterminado en la primera celda de la fila recién agregada
+                    objCarrito.dgvTotal.Rows[rowIndex].Cells[0].Value = "$0.00";
+                }
             }
         }
-
         void LlenarTextBox()
         {
             DAOCarrito dao = new DAOCarrito();

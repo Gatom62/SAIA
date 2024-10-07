@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AgroServicios.Modelo.DAO;
 using AgroServicios.Vista.MenuPrincipal;
+using AgroServicios.Vista.Notificación;
 
 namespace AgroServicios.Controlador.MenuPrincipal
 {
@@ -19,7 +21,22 @@ namespace AgroServicios.Controlador.MenuPrincipal
             objfecha = vista;
             objfecha.btnBuscar.Click += FiltrarVentas;
         }
+        void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            AlertExito frm = new AlertExito();
 
+            frm.BackColorAlert = backcolor;
+
+            frm.ColorAlertBox = color;
+
+            frm.TittlAlertBox = title;
+
+            frm.TextAlertBox = text;
+
+            frm.IconeAlertBox = icon;
+
+            frm.ShowDialog();
+        }
         private void FiltrarVentas(object sender, EventArgs e)
         {
             try
@@ -27,7 +44,14 @@ namespace AgroServicios.Controlador.MenuPrincipal
                 // Validar que la fecha de inicio no sea mayor que la fecha final
                 if (objfecha.dtpinicio.Value.Date > objfecha.dtpfinal.Value.Date)
                 {
-                    MessageBox.Show("La fecha de inicio no puede ser mayor que la fecha final.", "Error de fechas", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MessageBoxP(Color.Yellow, Color.Orange, "Error", "The start date cannot be greater than the end date.", Properties.Resources.MensajeWarning);
+                    }
+                    else
+                    {
+                        MessageBoxP(Color.Yellow, Color.Orange, "Error", "La fecha de inicio no puede ser mayor que la fecha final.", Properties.Resources.MensajeWarning);
+                    }
                     return;
                 }
 
@@ -52,13 +76,27 @@ namespace AgroServicios.Controlador.MenuPrincipal
                 else
                 {
                     // Si no hay datos, muestra un mensaje al usuario
-                    MessageBox.Show("No se encontraron ventas para el rango de fechas seleccionado.", "Sin resultados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MessageBoxP(Color.Yellow, Color.Orange, "No results", "No sales were found for the selected date range.", Properties.Resources.MensajeWarning);
+                    }
+                    else
+                    {
+                        MessageBoxP(Color.Yellow, Color.Orange, "Sin resultados", "No se encontraron ventas para el rango de fechas seleccionado.", Properties.Resources.MensajeWarning);
+                    }
                 }
             }
             catch (Exception ex)
             {
                 // Manejo de errores
-                MessageBox.Show("Ocurrió un error al filtrar las ventas: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "An error occurred while filtering sales: " + ex.Message, Properties.Resources.MensajeWarning);
+                }
+                else 
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Ocurrió un error al filtrar las ventas: " + ex.Message, Properties.Resources.MensajeWarning);
+                }
             }
         }
     }

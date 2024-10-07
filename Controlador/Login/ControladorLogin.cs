@@ -43,8 +43,19 @@ namespace AgroServicios.Controlador.Login
         }
         private void AbrirManualUsuario(object sender, EventArgs e)
         {
+            string manualUsuario;
+
+            if (ControladorIdioma.idioma == 1)
+            {
+                manualUsuario = "Manual de Usuario";
+            }
+            else
+            {
+                manualUsuario = "User Manual";
+            }
+
             // Nombre del archivo que quieres extraer de los recursos
-            string nombreArchivo = "Manual de Usuario";
+            string nombreArchivo = manualUsuario;
 
             // Ruta temporal donde se guardará el PDF extraído
             string pdfTempPath = Path.Combine(Path.GetTempPath(), nombreArchivo);
@@ -58,8 +69,19 @@ namespace AgroServicios.Controlador.Login
 
         private void AbrirManualTecnico(object sender, EventArgs e)
         {
+            string manualTecnico;
+
+            if (ControladorIdioma.idioma == 1)
+            {
+                manualTecnico = "Manual Ténico";
+            }
+            else
+            {
+                manualTecnico = "Technical Manual";
+            }
+
             // Nombre del archivo que quieres extraer de los recursos
-            string nombreArchivo = "Manual Técnico";
+            string nombreArchivo = manualTecnico;
 
             // Ruta temporal donde se guardará el PDF extraído
             string pdfTempPath = Path.Combine(Path.GetTempPath(), nombreArchivo);
@@ -104,10 +126,6 @@ namespace AgroServicios.Controlador.Login
             message.IconeAlertBox = icon;
             message.ShowDialog();
         }
-        private void CerrarForm(object sender, EventArgs e) 
-        {
-            Application.Exit();
-        }
 
         private void TestConnection(object sender, EventArgs e)
         {
@@ -131,12 +149,27 @@ namespace AgroServicios.Controlador.Login
             {
                 if (dbContext.getConnection() == null)
                 {
-                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Conexión fallida", "No fue posible realizar la conexión al servidor y/o la base de datos.", Properties.Resources.ErrorIcono);
-                    VistaLogin backForm = new VistaLogin();
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Connection failed", "The connection to the server and/or database could not be established.", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
+                    else
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Conexión fallida", "No fue posible realizar la conexión al servidor y/o la base de datos.", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
                 }
                 else
                 {
-                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Conexión exitosa", "La conexión al servidor y la base de datos se ha ejecutado correctamente.", Properties.Resources.comprobado);
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MandarValoresAlerta(Color.LightGreen, Color.Black, "Connection successful", "The connection to the server and database has been executed successfully.", Properties.Resources.comprobado);
+                    }
+                    else
+                    {
+                        MandarValoresAlerta(Color.LightGreen, Color.Black, "Conexión exitosa", "La conexión al servidor y la base de datos se ha ejecutado correctamente.", Properties.Resources.comprobado);
+                    }
                     VistaLogin backForm = new VistaLogin();
                 }
             }
@@ -151,7 +184,7 @@ namespace AgroServicios.Controlador.Login
 
         private void DataAccess(object sender, EventArgs e)
         {
-            string mensajeCampos, tituloCampos, mensajeError, tituloError;
+            string mensajeCampos, tituloCampos, mensajeError, tituloError, configuracionRequerida, debeConfigurarPreguntas, UsuarioContraError, errorAutentication;
 
             if (ControladorIdioma.idioma == 1)
             {
@@ -159,6 +192,10 @@ namespace AgroServicios.Controlador.Login
                 tituloCampos = "Validation error";
                 mensajeError = "Incorrect data";
                 tituloError = "Login error";
+                configuracionRequerida = "Configuración requerida";
+                debeConfigurarPreguntas = "Debe configurar sus preguntas de seguridad para continuar.";
+                UsuarioContraError = "Usuario o contraseña incorrectos.";
+                errorAutentication = "Error de autenticación";
             }
             else
             {
@@ -166,11 +203,15 @@ namespace AgroServicios.Controlador.Login
                 tituloCampos = "Error de validación";
                 mensajeError = "Datos incorrectos";
                 tituloError = "Error al iniciar sesión";
+                configuracionRequerida = "Required configuration";
+                debeConfigurarPreguntas = "You must set up your security questions to continue.";
+                UsuarioContraError = "Incorrect username or password.";
+                errorAutentication = "Authentication error";
             }
 
             if (string.IsNullOrWhiteSpace(ObjLogin.txtUsername.Text) || string.IsNullOrWhiteSpace(ObjLogin.txtPassword.Text))
             {
-                MessageBox.Show(mensajeCampos, tituloCampos, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBoxP(Color.Yellow, Color.Orange, tituloCampos, mensajeCampos, Properties.Resources.MensajeWarning);
                 return;
             }
 
@@ -210,19 +251,20 @@ namespace AgroServicios.Controlador.Login
                     else
                     {
                         // Si el usuario cancela la configuración de preguntas, volver al login
-                        MessageBox.Show("Debe configurar sus preguntas de seguridad para continuar.", "Configuración requerida", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, configuracionRequerida, debeConfigurarPreguntas, Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
                         ObjLogin.Show();
                     }
                     break;
 
                 case 1:
                     // Usuario o contraseña incorrectos
-                    MessageBox.Show("Usuario o contraseña incorrectos.", "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBoxP(Color.Yellow, Color.Orange, UsuarioContraError, errorAutentication, Properties.Resources.MensajeWarning);
                     break;
 
                 default:
                     // Error durante el proceso de login
-                    MessageBox.Show(mensajeError, tituloError, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBoxP(Color.Yellow, Color.Orange, tituloError, mensajeError, Properties.Resources.MensajeWarning);
                     break;
             }
         }
@@ -253,13 +295,11 @@ namespace AgroServicios.Controlador.Login
 
             ObjLogin.ResumeLayout();  // Reanudar el redibujado
         }
-
         private void RecuperarPass(Object sender, EventArgs e)
         {
             ObjLogin.Hide();
             VistaMetodosDeRecuperacion recuperacion = new VistaMetodosDeRecuperacion();
             recuperacion.Show();
         }
-
     }
 }

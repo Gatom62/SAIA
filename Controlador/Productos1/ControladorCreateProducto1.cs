@@ -114,14 +114,28 @@ namespace AgroServicios.Controlador.Productos1
                 ObjCreateProducto1.DropMarca.SelectedValue == null ||
                 ObjCreateProducto1.ptbImagenProducto.Image == null)
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Todos los campos son obligatorios", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "All fields are required", Properties.Resources.MensajeWarning);
+                }
+                else 
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Todos los campos son obligatorios", Properties.Resources.MensajeWarning);
+                }
                 return;
             }
 
             // Validar que el nombre del producto no exceda 80 caracteres
             if (!ValidarNombre(ObjCreateProducto1.txtNombreProducto.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "El nombre tiene mas de 80 caragteres", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "The name has more than 80 characters", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "El nombre tiene más de 80 caragteres", Properties.Resources.MensajeWarning);
+                }
                 return;
             }
 
@@ -129,34 +143,69 @@ namespace AgroServicios.Controlador.Productos1
             if (!ValidarNumero(ObjCreateProducto1.txtCodigo.Text) ||
                 !ValidarNumero(ObjCreateProducto1.txtCantidad.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Numeros decimales o letras en el codigo o en la cantidad", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Decimal numbers or letters in the code or quantity", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Numeros decimales o letras en el codigo o en la cantidad", Properties.Resources.MensajeWarning);
+                }
                 return;
             }
 
             //Validamos que el codigo no exeda la cantidad de 12 numeros.
             if (!CantidadCodigo(ObjCreateProducto1.txtCodigo.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 12 numeros en el codigo", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "There are more than 12 numbers in the code", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay más de 12 numeros en el código", Properties.Resources.MensajeWarning);
+                }
                 return;
             }
 
             //Validamos que el codigo no exeda la cantidad de 12 numeros.
             if (!CantidadStock(ObjCreateProducto1.txtCantidad.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Se quiere ingresar más de 500 productos del mismo tipo", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "You want to enter more than 500 products of the same type", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Se quiere ingresar más de 500 productos del mismo tipo", Properties.Resources.MensajeWarning);
+                }
                 return;
             }
 
             // Validar que el precio del producto contenga solo decimales
             if (!ValidarDecimales(ObjCreateProducto1.txtPrecio.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "El precio tiene numeros enteros o letras o supero los 1000.00", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "The price has whole numbers or letters or exceeds 1000.00", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "El precio tiene numeros enteros o letras o supero los 1000.00", Properties.Resources.MensajeWarning);
+                }
                 return;
             }
             //Validamos que la descripción del producto solo contenga un maximo de 150 caragteres
             if (!ValidarDescripcion(ObjCreateProducto1.txtDescripcion.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 150 caragteres en la descripción", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "There are more than 150 characters in the description", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 150 caracteres en la descripción", Properties.Resources.MensajeWarning);
+                }
                 return;
             }
             //Validamos que el producto obligatoriamente si lleve imagen para ser ingresado
@@ -187,15 +236,31 @@ namespace AgroServicios.Controlador.Productos1
             if (valorRetornado == 1)
             {
                 //Mensaje de afirmacion si se pudo realizar la inserccion
-                MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "El producto fue registrado", Properties.Resources.comprobado);
-                VistaLogin backForm = new VistaLogin();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Process carried out", "The product was registered successfully", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "El producto fue registrado exitosamente", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                }
                 ObjCreateProducto1.Close();
             }
             else
             {
                 //Mensaje de error si se no se pudo realizar la inserccion
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el producto no se este duplicando", Properties.Resources.ErrorIcono);
-                VistaLogin backForm = new VistaLogin();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verify that the product is not being duplicated", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el producto no se está duplicando", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
             }
 
             // Método para validar que el nombre del producto no exceda los 80 caracteres

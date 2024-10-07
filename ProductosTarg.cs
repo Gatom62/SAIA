@@ -65,7 +65,6 @@ namespace AgroServicios
             get { return lblcodigo.Text; }
             set { lblcodigo.Text = value; }
         }
-
         private void ProductosTarg_Load(object sender, EventArgs e)
         {
             if (ControladorTema.IsDarkMode == true)
@@ -76,8 +75,13 @@ namespace AgroServicios
                 lblPrecio.ForeColor = Color.White;
                 bunifuShadowPanel1.ShadowColor = Color.DimGray;
             }
-        }
 
+            if (ControladorIdioma.idioma == 1) 
+            {
+                lblPrecio.Text = Ingles.Precio;
+                btnSeleccionar.Text = Ingles.Seleccionar;
+            }
+        }
         private void ptbimg_Click_1(object sender, EventArgs e)
         {
             using (VistaZoomProduct mm = new VistaZoomProduct())
@@ -112,14 +116,12 @@ namespace AgroServicios
             ptbimg.Size = new Size(originalSize.Width + 5, originalSize.Height + 5);
             ptbimg.Location = new Point(ptbimg.Location.X - 5, ptbimg.Location.Y - 5); // Ajustar la posición
         }
-
         private void ptbimg_MouseLeave(object sender, EventArgs e)
         {
             // Restaurar el tamaño original del PictureBox cuando el cursor sale de la imagen
             ptbimg.Size = originalSize;
             ptbimg.Location = new Point(ptbimg.Location.X + 5, ptbimg.Location.Y + 5); // Restaurar la posición
         }
-
         private void bunifuButton21_Click(object sender, EventArgs e)
         {
             using (VistaZoomProduct mm = new VistaZoomProduct())

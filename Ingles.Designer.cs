@@ -106,6 +106,15 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Add to cart.
+        /// </summary>
+        internal static string AnadirCarrito {
+            get {
+                return ResourceManager.GetString("AnadirCarrito", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Database.
         /// </summary>
         internal static string BaseDatos {
@@ -205,11 +214,29 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Amount.
+        /// </summary>
+        internal static string Cantidad {
+            get {
+                return ResourceManager.GetString("Cantidad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Product quantity.
         /// </summary>
         internal static string CantidadProducto {
             get {
                 return ResourceManager.GetString("CantidadProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Characteristics.
+        /// </summary>
+        internal static string Caracteristicas {
+            get {
+                return ResourceManager.GetString("Caracteristicas", resourceCulture);
             }
         }
         
@@ -291,6 +318,15 @@ namespace AgroServicios {
         internal static string Codigo {
             get {
                 return ResourceManager.GetString("Codigo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Product code.
+        /// </summary>
+        internal static string CodigoProducto {
+            get {
+                return ResourceManager.GetString("CodigoProducto", resourceCulture);
             }
         }
         
@@ -444,6 +480,24 @@ namespace AgroServicios {
         internal static string Eliminar {
             get {
                 return ResourceManager.GetString("Eliminar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Product sheets.
+        /// </summary>
+        internal static string FichaProducto {
+            get {
+                return ResourceManager.GetString("FichaProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Sales sheets.
+        /// </summary>
+        internal static string FichaVentas {
+            get {
+                return ResourceManager.GetString("FichaVentas", resourceCulture);
             }
         }
         
@@ -709,6 +763,24 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Price.
+        /// </summary>
+        internal static string Precio {
+            get {
+                return ResourceManager.GetString("Precio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Product price.
+        /// </summary>
+        internal static string PrecioProducto {
+            get {
+                return ResourceManager.GetString("PrecioProducto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Procesos.
         /// </summary>
         internal static string procesos {
@@ -759,6 +831,15 @@ namespace AgroServicios {
         internal static string RespuestaUno {
             get {
                 return ResourceManager.GetString("RespuestaUno", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Select.
+        /// </summary>
+        internal static string Seleccionar {
+            get {
+                return ResourceManager.GetString("Seleccionar", resourceCulture);
             }
         }
         

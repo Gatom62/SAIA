@@ -70,7 +70,6 @@ namespace AgroServicios.Controlador.Server
                 ObjView.Close();
             }
         }
-
         public void verificarOrigen(int origen)
         {
             if (origen == 2)
@@ -91,7 +90,6 @@ namespace AgroServicios.Controlador.Server
                 ObjView.panelAuth.Enabled = true;
             }
         }
-
         void rdTrueMarked(object sender, EventArgs e)
         {
             if (ObjView.rdHabilitarWindows.Checked == true)
@@ -101,13 +99,19 @@ namespace AgroServicios.Controlador.Server
                 ObjView.txtSqlPass.Clear();
             }
         }
-
         void GuardarRegistro(object sender, EventArgs e)
         {
             // Validar si el servidor contiene doble pleca
             if (ObjView.txtServer.Text.Contains("\\\\"))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "El nombre del servidor no puede contener dos plecas. Por favor corríjalo.", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "The server name cannot contain two characters. Please correct it.", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "El nombre del servidor no puede contener dos plecas. Por favor corríjalo.", Properties.Resources.MensajeWarning);
+                }
                 return; // Detener la ejecución si hay doble pleca
             }
 
@@ -170,10 +174,16 @@ namespace AgroServicios.Controlador.Server
                     DTOdbContext.User = ObjView.txtSqlAuth.Text.Trim();
                     DTOdbContext.Password = ObjView.txtSqlPass.Text.Trim();
                     //Mensaje de afirmacion si se pudo realizar la inserccion
-                    MandarValoresAlerta(Color.LightGreen, Color.Black, $"El archivo fue creado exitosamente.", "Archivo de configuración", Properties.Resources.comprobado);
-                    VistaLogin backForm = new VistaLogin();
-
-                    //MessageBox.Show($"El archivo fue creado exitosamente.", "Archivo de configuración", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MandarValoresAlerta(Color.LightGreen, Color.Black, $"The file was created successfully.", "Configuration file", Properties.Resources.comprobado);
+                        VistaLogin backForm = new VistaLogin();
+                    }
+                    else
+                    {
+                        MandarValoresAlerta(Color.LightGreen, Color.Black, $"El archivo fue creado exitosamente.", "Archivo de configuración", Properties.Resources.comprobado);
+                        VistaLogin backForm = new VistaLogin();
+                    }
                     ObjView.Dispose();
                 }
 
@@ -181,13 +191,20 @@ namespace AgroServicios.Controlador.Server
             catch (XmlException ex)
             {
                 //Mensaje de error si se no se pudo realizar la inserccion
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", $"No se pudo crear el archivo de configuración", Properties.Resources.ErrorIcono);
-                VistaLogin backForm = new VistaLogin();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", $"Failed to create configuration file", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", $"No se pudo crear el archivo de configuración", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
             }
 
         }
         #endregion
-
         public string CodificarBase64String(string textoacifrar)
         {
             try
@@ -202,7 +219,5 @@ namespace AgroServicios.Controlador.Server
                 return string.Empty;
             }
         }
-
-
     }
 }

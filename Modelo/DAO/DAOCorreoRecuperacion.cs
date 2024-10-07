@@ -8,6 +8,9 @@ using System.Text;
 using System;
 using System.Windows.Forms;
 using System.IO;
+using AgroServicios.Vista.Notificación;
+using System.Drawing;
+using AgroServicios.Vista.Login;
 
 namespace AgroServicios.Modelo.DAO
 {
@@ -36,11 +39,47 @@ namespace AgroServicios.Modelo.DAO
             // Habilita SSL para asegurar la conexión al servidor SMTP
             smtpClient.EnableSsl = ssl;
         }
+        void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            AlertExito frm = new AlertExito();
 
+            frm.BackColorAlert = backcolor;
+
+            frm.ColorAlertBox = color;
+
+            frm.TittlAlertBox = title;
+
+            frm.TextAlertBox = text;
+
+            frm.IconeAlertBox = icon;
+
+            frm.ShowDialog();
+        }
+        void MandarValoresAlerta(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            MessagePersonal message = new MessagePersonal();
+            message.BackColorAlert = backcolor;
+            message.ColorAlertBox = color;
+            message.TittlAlertBox = title;
+            message.TextAlertBox = text;
+            message.IconeAlertBox = icon;
+            message.ShowDialog();
+        }
 
         // Método público para enviar un correo electrónico
         public void sendMail(string subject, string body, List<string> destinatarioCorreo)
         {
+            string aocurridoUnError;
+
+            if (ControladorIdioma.idioma == 1)
+            {
+                aocurridoUnError = "An error occurred";
+            }
+            else
+            {
+                aocurridoUnError = "Ocurrió un error";
+            }
+
             // Crear una nueva instancia de MailMessage para el correo a enviar
             var mailMessage = new MailMessage();
             try
@@ -67,7 +106,7 @@ namespace AgroServicios.Modelo.DAO
             catch (Exception ex)
             {
                 // Muestra un mensaje de error si ocurre una excepción durante el envío del correo
-                MessageBox.Show("Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", aocurridoUnError, Properties.Resources.MensajeWarning);
             }
             finally
             {
@@ -80,6 +119,20 @@ namespace AgroServicios.Modelo.DAO
         // Método público para recuperar la contraseña de un usuario
         public string recoverPassword(string usuarioSolicitado)
         {
+            string noHayCuenta, errorActualizarContra, Hola;
+            if (ControladorIdioma.idioma == 1)
+            {
+                noHayCuenta = "Sorry, you do not have an account with that email or username.";
+                errorActualizarContra = "An error occurred while updating the password.";
+                Hola = "Hello";
+            }
+            else
+            {
+                noHayCuenta = "Lo sentimos, no tiene una cuenta con ese correo o nombre de usuario.";
+                errorActualizarContra = "Ocurrió un error al actualizar la contraseña.";
+                Hola = "Hola";
+            }
+
             using (var command = new SqlCommand())
             {
                 // Configura la conexión SQL para el comando
@@ -133,24 +186,42 @@ namespace AgroServicios.Modelo.DAO
                         // Censura el correo del usuario antes de mostrarlo en el mensaje
                         string correoCensurado = CensurarCorreo(correoUsuario);
 
-                        // Retorna un mensaje indicando que el correo fue enviado y muestra el correo censurado
-                        return $"Hola, {nombreUsuario}\nUsted solicitó recuperar su contraseña. Por favor revise su correo: {correoCensurado}";
+                        if (ControladorIdioma.idioma == 1)
+                        {
+                            // Retorna un mensaje indicando que el correo fue enviado y muestra el correo censurado
+                            return $"Hello, {nombreUsuario}\nYou requested to recover your password. Please check your email: {correoCensurado}";
+                        }
+                        else 
+                        {
+                            // Retorna un mensaje indicando que el correo fue enviado y muestra el correo censurado
+                            return $"Hola, {nombreUsuario}\nUsted solicitó recuperar su contraseña. Por favor revise su correo: {correoCensurado}";
+                        }
                     }
                     else
                     {
                         // Retorna un mensaje indicando que ocurrió un error al actualizar la contraseña
-                        return "Ocurrió un error al actualizar la contraseña.";
+                        return errorActualizarContra;
                     }
                 }
                 else
                 {
                     // Retorna un mensaje indicando que no se encontró una cuenta con el usuario o correo especificado
-                    return "Lo sentimos, no tiene una cuenta con ese correo o nombre de usuario.";
+                    return noHayCuenta;
                 }
             }
         }
         public void sendMailWithAttachment(string subject, string body, List<string> destinatarioCorreo, string attachmentPath)
         {
+            string errorCorreo;
+            if (ControladorIdioma.idioma == 1)
+            {
+                errorCorreo = "An error occurred while sending the email.";
+            }
+            else
+            {
+                errorCorreo = "Ocurrió un error al enviar el correo";
+            }
+
             if (destinatarioCorreo == null || destinatarioCorreo.Count == 0)
             {
                 // No hay destinatarios, no se realiza el envío
@@ -192,7 +263,8 @@ namespace AgroServicios.Modelo.DAO
             catch (Exception ex)
             {
                 // Solo se muestra el mensaje si hay un error real
-                MessageBox.Show("Ocurrió un error al enviar el correo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", errorCorreo, Properties.Resources.ErrorIcono);
+                VistaLogin backForm = new VistaLogin();
             }
             finally
             {

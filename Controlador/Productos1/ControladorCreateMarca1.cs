@@ -51,7 +51,6 @@ namespace AgroServicios.Controlador.Productos1
 
             frm.ShowDialog();
         }
-
         void MandarValoresAlerta(Color backcolor, Color color, string title, string text, Image icon)
         {
             MessagePersonal message = new MessagePersonal();
@@ -81,14 +80,29 @@ namespace AgroServicios.Controlador.Productos1
             // Validar que los campos no estén vacíos
             if (ObjCreateMarca.txtNombreMarca.Text == null)
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay campos vacios", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "There are empty fields", Properties.Resources.MensajeWarning);
+                }
+                else 
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay campos vacios", Properties.Resources.MensajeWarning);
+                }
                 return;
             }
 
             // Validar que el nombre de la marca no exceda 15 caracteres
             if (!ValidarNombre(ObjCreateMarca.txtNombreMarca.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 15 caragteres en el nombre", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "There are more than 15 characters in the brand name", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 15 carácteres en el nombre de la marca", Properties.Resources.MensajeWarning);
+                }
+
                 return;
             }
 
@@ -101,14 +115,30 @@ namespace AgroServicios.Controlador.Productos1
             if (valorRetornado == 1)
             {
                 //Mensaje de afirmacion si se pudo realizar la inserccion
-                MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "La marca fue registrada", Properties.Resources.comprobado);
-                VistaLogin backForm = new VistaLogin();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Process carried out", "The trademark was registered", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "La marca fue registrada", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                }
             }
             else
             {
                 //Mensaje de error si se no se pudo realizar la inserccion
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que la marca no se este duplicando", Properties.Resources.ErrorIcono);
-                VistaLogin backForm = new VistaLogin();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Check that the brand is not being duplicated", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que la marca no se este duplicando", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
             }
 
             // Método para validar que el nombre de la marca no exceda los 15 caracteres
@@ -139,22 +169,44 @@ namespace AgroServicios.Controlador.Productos1
         private void EliminarMarca(object sender, EventArgs e)
         {
             int pos = ObjCreateMarca.GriewViewMarcas.CurrentRow.Index;
-
-            if (MessageBox.Show($"¿Seguro que deseas eliminar a: \n {ObjCreateMarca.GriewViewMarcas[1, pos].Value.ToString()}\nLa eliminación sera permanente.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (ControladorIdioma.idioma == 1)
             {
-                DAOProductos1 daodelete = new DAOProductos1();
-                daodelete.IdMarca = int.Parse(ObjCreateMarca.GriewViewMarcas[0, pos].Value.ToString());
-                int valorretornado = daodelete.DeleteMarca();
-                if (valorretornado == 1)
+                if (MessageBox.Show($"¿Surely you want to delete: \n {ObjCreateMarca.GriewViewMarcas[1, pos].Value.ToString()}\nThe deletion will be permanent.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Proceso realizado", "La marca se elimino correctamente", Properties.Resources.comprobado);
-                    VistaLogin backForm = new VistaLogin();
-                    RefrescarData();
+                    DAOProductos1 daodelete = new DAOProductos1();
+                    daodelete.IdMarca = int.Parse(ObjCreateMarca.GriewViewMarcas[0, pos].Value.ToString());
+                    int valorretornado = daodelete.DeleteMarca();
+                    if (valorretornado == 1)
+                    {
+                        MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Process carried out", "The mark was successfully removed", Properties.Resources.comprobado);
+                        VistaLogin backForm = new VistaLogin();
+                        RefrescarData();
+                    }
+                    else
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Check if the trademark is associated with other registrations", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
                 }
-                else
+            }
+            else
+            {
+                if (MessageBox.Show($"¿Seguro que deseas eliminar a: \n {ObjCreateMarca.GriewViewMarcas[1, pos].Value.ToString()}\nLa eliminación sera permanente.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique si la marca esta asociada a otros registros", Properties.Resources.ErrorIcono);
-                    VistaLogin backForm = new VistaLogin();
+                    DAOProductos1 daodelete = new DAOProductos1();
+                    daodelete.IdMarca = int.Parse(ObjCreateMarca.GriewViewMarcas[0, pos].Value.ToString());
+                    int valorretornado = daodelete.DeleteMarca();
+                    if (valorretornado == 1)
+                    {
+                        MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Proceso realizado", "La marca se elimino correctamente", Properties.Resources.comprobado);
+                        VistaLogin backForm = new VistaLogin();
+                        RefrescarData();
+                    }
+                    else
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique si la marca esta asociada a otros registros", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
                 }
             }
         }

@@ -149,7 +149,14 @@ namespace AgroServicios.Controlador.Productos1
         {
             if (ObjProductos.GriewViewProductos.CurrentRow == null)
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "No a seleccionado ningun producto", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "You have not selected any product", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "No a seleccionado ningun producto", Properties.Resources.MensajeWarning);
+                }
                 return; // Salir del método si no hay ninguna fila seleccionada
             }
 
@@ -178,7 +185,14 @@ namespace AgroServicios.Controlador.Productos1
         {
             if (ObjProductos.GriewViewProductos.CurrentRow == null)
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "No a seleccionado ningun producto", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "You have not selected any product", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "No a seleccionado ningun producto", Properties.Resources.MensajeWarning);
+                }
                 return; // Salir del método si no hay ninguna fila seleccionada
             }
 
@@ -206,28 +220,59 @@ namespace AgroServicios.Controlador.Productos1
         {
             if (ObjProductos.GriewViewProductos.CurrentRow == null)
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "No a seleccionado ningun producto", Properties.Resources.MensajeWarning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "You have not selected any product", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "No a seleccionado ningun producto", Properties.Resources.MensajeWarning);
+                }
                 return; // Salir del método si no hay ninguna fila seleccionada
             }
 
             int pos = ObjProductos.GriewViewProductos.CurrentRow.Index;
 
-            if (MessageBox.Show($"¿Seguro que deseas eliminar a: \n {ObjProductos.GriewViewProductos[1, pos].Value.ToString()}\nLa eliminación sera permanente.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (ControladorIdioma.idioma == 1)
             {
-                DAOProductos1 daodelete = new DAOProductos1();
-                daodelete.IdProducto = int.Parse(ObjProductos.GriewViewProductos[0, pos].Value.ToString());
-                daodelete.IdMarca = int.Parse(ObjProductos.GriewViewProductos[2, pos].Value.ToString());
-                int valorretornado = daodelete.DeleteProducto();
-                if (valorretornado == 1)
+                if (MessageBox.Show($"¿Surely you want to delete: \n {ObjProductos.GriewViewProductos[1, pos].Value.ToString()}\nThe deletion will be permanent.", "Confirm action", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Proceso realizado", "El producto se elimino correctamente", Properties.Resources.comprobado);
-                    VistaLogin backForm = new VistaLogin();
-                    RefrescarData();
+                    DAOProductos1 daodelete = new DAOProductos1();
+                    daodelete.IdProducto = int.Parse(ObjProductos.GriewViewProductos[0, pos].Value.ToString());
+                    daodelete.IdMarca = int.Parse(ObjProductos.GriewViewProductos[2, pos].Value.ToString());
+                    int valorretornado = daodelete.DeleteProducto();
+                    if (valorretornado == 1)
+                    {
+                        MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Process carried out", "The product was removed successfully", Properties.Resources.comprobado);
+                        VistaLogin backForm = new VistaLogin();
+                        RefrescarData();
+                    }
+                    else
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Check if the trademark is associated with other registrations", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
                 }
-                else
+            }
+            else
+            {
+                if (MessageBox.Show($"¿Seguro que deseas eliminar a: \n {ObjProductos.GriewViewProductos[1, pos].Value.ToString()}\nLa eliminación sera permanente.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique si la marca esta asociada a otros registros", Properties.Resources.ErrorIcono);
-                    VistaLogin backForm = new VistaLogin();
+                    DAOProductos1 daodelete = new DAOProductos1();
+                    daodelete.IdProducto = int.Parse(ObjProductos.GriewViewProductos[0, pos].Value.ToString());
+                    daodelete.IdMarca = int.Parse(ObjProductos.GriewViewProductos[2, pos].Value.ToString());
+                    int valorretornado = daodelete.DeleteProducto();
+                    if (valorretornado == 1)
+                    {
+                        MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Proceso realizado", "El producto se elimino correctamente", Properties.Resources.comprobado);
+                        VistaLogin backForm = new VistaLogin();
+                        RefrescarData();
+                    }
+                    else
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique si la marca esta asociada a otros registros", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
                 }
             }
         }
