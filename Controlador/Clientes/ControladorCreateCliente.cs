@@ -61,7 +61,6 @@ namespace AgroServicios.Controlador.Clientes
         }
         public void NuevoRegistro(object sender, EventArgs e)
         {
-
             // Validar que los campos no estén vacíos
             if (string.IsNullOrWhiteSpace(ObjCreateCliente.txtNombreCliente.Text) ||
                  string.IsNullOrWhiteSpace(ObjCreateCliente.maskDui.Text))
