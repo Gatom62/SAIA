@@ -90,43 +90,91 @@ namespace AgroServicios.Controlador.Clientes
                 string.IsNullOrWhiteSpace(ObjUbdateCliente.txtUbdateDireccionCliente.Text) ||
                 string.IsNullOrWhiteSpace(ObjUbdateCliente.masDUIUbdate.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay campos bacios", Properties.Resources.MensajeWarning);
-                return;
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "There are empty fields", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay campos vacios", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             string nombreCliente = ObjUbdateCliente.txtUbdateNombreCliente.Text.Trim();
             // Validar que el nombre solo contenga letras y no exceda 65 caracteres
             if (!ValidarLetra(nombreCliente) || !ValidarNombre(nombreCliente))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El nombre nombre tiene numeros o tiene más de 50 letras", Properties.Resources.MensajeWarning);
-                return;
+               if(ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Name has numbers or has more than 50 letters", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El nombre nombre tiene numeros o tiene más de 50 letras", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             if (!ValidarTelefono(ObjUbdateCliente.txtUbdateTelefonoCliente.Text.Trim()))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El telefono debe de ser de El Salvador", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "The phone must be from El Salvador", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El telefono debe de ser de El Salvador", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar el formato y cantidad del correo solo si se ingresó uno
             string correoCliente = ObjUbdateCliente.txtUbdateCorreoCliente.Text.Trim();
             if (!ValidarCorreo(correoCliente) || !ValidarCorreoCantidad(correoCliente))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Falta el @ o el dominio del correo o hay mas de 75 caragteres en el corréo", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "No @, no domain or more than 75 characters in the e-mail", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "No tiene el @, el dominio o hay mas de 75 caracteres en el correo", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             if (!ValidarDireccion(ObjUbdateCliente.txtUbdateDireccionCliente.Text.Trim()))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 100 caragteres en la dirección", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "There are more than 100 characters in the address", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 100 caracteres en la dirección", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar el formato del DUI 
             if (!ValidarDUI(ObjUbdateCliente.masDUIUbdate.Text))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Hay menos de 8 numeros en el dui", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "There are less than 8 numbers in the dui", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Hay menos de 8 numeros en el dui", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             DAOClientes dAOClientes = new DAOClientes();
@@ -141,14 +189,31 @@ namespace AgroServicios.Controlador.Clientes
             int valoRetornado = dAOClientes.ActualizarCliente();
             if (valoRetornado > 0)
             {
-                MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "El cliente fue actualizado", Properties.Resources.comprobado);
-                VistaLogin backForm = new VistaLogin();
-                ObjUbdateCliente.Close();
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Process performed", "The client was upgraded", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                    ObjUbdateCliente.Close();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "El cliente fue actualizado", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                    ObjUbdateCliente.Close();
+                }
             }
             else
             {
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el cliente no se este duplicando", Properties.Resources.ErrorIcono);
-                VistaLogin backForm = new VistaLogin();
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verify that the client is not being duplicated.", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el cliente no se este duplicando", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
             }
 
             bool ValidarCorreo(string email)

@@ -60,37 +60,77 @@ namespace AgroServicios.Controlador.ControladorStats
             DateTime fechaDev = objdev.pickerFechaDev.Value.Date;
             if (fechaDev != DateTime.Now.Date)
             {
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "La fecha de devolución debe ser hoy", Properties.Resources.ErrorIcono);
-                return;
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "The return date must be today", Properties.Resources.ErrorIcono);
+                    return;
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "La fecha de devolución debe ser hoy", Properties.Resources.ErrorIcono);
+                    return;
+                }
             }
 
             // Validación para que la cantidad de producto sea mayor a cero
             if (objdev.nudMonto.Value <= 0)
             {
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "La cantidad del producto debe ser mayor a cero", Properties.Resources.ErrorIcono);
-                return;
+               if(ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Product quantity must be greater than zero", Properties.Resources.ErrorIcono);
+                    return;
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "La cantidad del producto debe ser mayor a cero", Properties.Resources.ErrorIcono);
+                    return;
+                }
             }
 
             // Validación para que el monto de devolución no quede vacío y solo acepte números
             decimal montoDevolucion;
             if (string.IsNullOrWhiteSpace(objdev.txtMonto.Text.Trim()) || !decimal.TryParse(objdev.txtMonto.Text.Trim(), out montoDevolucion))
             {
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "El monto de devolución es inválido o está vacío", Properties.Resources.ErrorIcono);
-                return;
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Return amount is invalid or empty", Properties.Resources.ErrorIcono);
+                    return;
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "El monto de devolución es inválido o está vacío", Properties.Resources.ErrorIcono);
+                    return;
+                }
             }
             // Validación para que el monto de devolución no sea negativo
             if (montoDevolucion < 0)
             {
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "El monto de devolución no puede ser negativo", Properties.Resources.ErrorIcono);
-                return;
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "The return amount cannot be negative", Properties.Resources.ErrorIcono);
+                    return;
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "El monto de devolución no puede ser negativo", Properties.Resources.ErrorIcono);
+                    return;
+                }
             }
 
 
             // Validación para que el motivo de la devolución no quede vacío
             if (string.IsNullOrWhiteSpace(objdev.rchMotivo.Text.Trim()))
             {
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "El motivo de la devolución no puede estar vacío", Properties.Resources.ErrorIcono);
-                return;
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "The reason for return cannot be empty", Properties.Resources.ErrorIcono);
+                    return;
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "El motivo de la devolución no puede estar vacío", Properties.Resources.ErrorIcono);
+                    return;
+                }
             }
 
             DAODevoluciones dao = new DAODevoluciones();
@@ -108,18 +148,40 @@ namespace AgroServicios.Controlador.ControladorStats
             if (resp > 0)
             {
                 //Mensaje de afirmacion si se pudo realizar la inserccion
-                MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "Se logro hacer la devolución correctamente", Properties.Resources.comprobado);
-                objdev.Close();
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Process performed", "The return was successfully completede", Properties.Resources.comprobado);
+                    objdev.Close();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "Se logro hacer la devolución correctamente", Properties.Resources.comprobado);
+                    objdev.Close();
+                }
             }
             else if (resp == -2)
             {
                 // Mensaje de advertencia si el monto de la devolución es mayor que el total de la venta
-                MandarValoresAlerta(Color.Orange, Color.DarkOrange, "Advertencia", "El monto de la devolución no puede ser mayor al total de la venta", Properties.Resources.ErrorIcono);
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Orange, Color.DarkOrange, "Warning", "The amount of the refund cannot exceed the total amount of the sale.", Properties.Resources.ErrorIcono);
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Orange, Color.DarkOrange, "Advertencia", "El monto de la devolución no puede ser mayor al total de la venta", Properties.Resources.ErrorIcono);
+                }
             }
             else
             {
                 //Mensaje de error si se no se pudo realizar la inserccion
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "No se logro hacer la devolución", Properties.Resources.ErrorIcono);
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Failed to make the return", Properties.Resources.ErrorIcono);
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "No se logro hacer la devolución", Properties.Resources.ErrorIcono);
+                }
             }
 
         }

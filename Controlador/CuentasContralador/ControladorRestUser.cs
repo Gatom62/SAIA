@@ -76,15 +76,34 @@ namespace AgroServicios.Controlador.CuentasContralador
         {
             if (string.IsNullOrWhiteSpace(objrest.txtRestPass.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error de validación", "Debe de ingresar una contraseña", Properties.Resources.MensajeWarning);
-                return;
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Validation error", "You must enter a password", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error de validación", "Debe de ingresar una contraseña", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar que la contraseña del empleado no exceda 100 caracteres
             if (!ValidarContraseña(objrest.txtRestPass.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "La contraseña debe tener al menos 8 caracteres", Properties.Resources.MensajeWarning);
-                return;
+                if(ControladorIdioma.idioma == 1)
+                {
+                    if(ControladorIdioma.idioma == 1)
+                    {
+                        MessageBoxP(Color.Yellow, Color.Orange, "Error", "The password must be at least 8 characters long", Properties.Resources.MensajeWarning);
+                        return;
+                    }
+                    else
+                    {
+                        MessageBoxP(Color.Yellow, Color.Orange, "Error", "La contraseña debe tener al menos 8 caracteres", Properties.Resources.MensajeWarning);
+                        return;
+                    }
+                }
             }
 
             DAOAdminUsers daorest = new DAOAdminUsers();
@@ -97,21 +116,48 @@ namespace AgroServicios.Controlador.CuentasContralador
             int valorRetornado = daorest.restablecerEmpleado();
             if (valorRetornado == 2)
             {
-                MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso completado", "La contraseña se ha actualizado correctamente", Properties.Resources.comprobado);
-                VistaLogin backForm = new VistaLogin();
-                objrest.Close();
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Process performed", "Password has been successfully updated", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                    objrest.Close();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso completado", "La contraseña se ha actualizado correctamente", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                    objrest.Close();
+                }
             }
             else if (valorRetornado == 1)
             {
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Los datos no pudieron ser actualizados completamente",
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Data could not be completely updated",
                                 "Error", Properties.Resources.ErrorIcono);
-                VistaLogin backForm = new VistaLogin();
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Los datos no pudieron ser actualizados completamente",
+                "Error", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
             }
             else
             {
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "La contraseña no se ha podido actualizar.",
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "The password could not be updated.",
                                 "Error", Properties.Resources.ErrorIcono);
-                VistaLogin backForm = new VistaLogin();
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "La contraseña no se ha podido actualizar.",
+                                "Error", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
             }
 
             bool ValidarContraseña(string contraseña)

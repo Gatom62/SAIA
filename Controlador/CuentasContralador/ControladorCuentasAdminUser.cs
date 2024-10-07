@@ -82,8 +82,16 @@ namespace AgroServicios.Controlador.CuentasContralador
         {
             if (ObjAdminUser.GriewEmpleados.CurrentRow == null)
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "No se a seleccionado a ningun empleado", Properties.Resources.MensajeWarning);
-                return; // Salir del método si no hay ninguna fila seleccionada
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "No employee has been selected", Properties.Resources.MensajeWarning);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "No se a seleccionado a ningun empleado", Properties.Resources.MensajeWarning);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
             }
 
             int pos = ObjAdminUser.GriewEmpleados.CurrentRow.Index;
@@ -111,8 +119,16 @@ namespace AgroServicios.Controlador.CuentasContralador
         {
             if (ObjAdminUser.GriewEmpleados.CurrentRow == null)
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "No se a seleccionado a ningun empleado", Properties.Resources.MensajeWarning);
-                return; // Salir del método si no hay ninguna fila seleccionada
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "No employee has been selected", Properties.Resources.MensajeWarning);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "No se a seleccionado a ningun empleado", Properties.Resources.MensajeWarning);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
             }
 
             int pos = ObjAdminUser.GriewEmpleados.CurrentRow.Index;

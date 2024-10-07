@@ -142,58 +142,122 @@ namespace AgroServicios.Controlador.CuentasContralador
                 string.IsNullOrWhiteSpace(ObjUsers.txtNewPassword.Text) ||
                 ObjUsers.DropRole.SelectedValue == null)
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay campos sin llenar", Properties.Resources.MensajeWarning);
-                return;
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "There are empty fields", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay campos vacios", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
-            //Validamos que en el nombre del usuario que el manager ingrese o empleado no exeda los 50 caeagteres de longitud
+            //Validamos que en el nombre del usuario que el manager ingrese o empleado no exeda los 50 caracteres de longitud
             if (!ValidarUsuario(ObjUsers.txtNewUser.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 50 caragteres en el usuario", Properties.Resources.MensajeWarning);
-                return;
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "There are more than 50 characters in the user", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 50 caracteres en el usuario", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             string nombreCliente = ObjUsers.txtNewFirstName.Text.Trim();
             // Validar que el nombre solo contenga letras y no exceda 65 caracteres
             if (!ValidarLetra(nombreCliente) || !ValidarNombre(nombreCliente))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El nombre nombre tiene numeros o tiene más de 65 letras", Properties.Resources.MensajeWarning);
-                return;
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Name has numbers or has more than 65 letters", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El nombre nombre tiene numeros o tiene más de 65 letras", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar que la contraseña del empleado no exceda 100 caracteres
             if (!ValidarContraseña(ObjUsers.txtNewPassword.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "La contraseña debe tener al menos 8 caracteres", Properties.Resources.MensajeWarning);
-                return;
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "The password must be at least 8 characters long", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "La contraseña debe tener al menos 8 caracteres", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar el formato del número de teléfono y que este tenga las caragteristicas de un numero de telefono salvadoreño
             if (!ValidarTelefono(ObjUsers.txtNewPhone.Text))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El telefono debe de ser de El Salvador", Properties.Resources.MensajeWarning);
-                return;
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "The phone must be from El Salvador", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El telefono debe de ser de El Salvador", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar el formato y cantidad del correo solo si se ingresó uno
             string correoCliente = ObjUsers.txtNewCorreo.Text.Trim();
             if (!ValidarCorreo(correoCliente) || !ValidarCorreoCantidad(correoCliente))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Falta el @ o el dominio del correo o hay mas de 75 caragteres en el corréo", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "No @, no domain or more than 75 characters in the e-mail", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "No tiene el @, el dominio o hay mas de 75 caracteres en el correo", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar que la direccion del empleado no exeda los 150 caracteres
             if (!ValidarDireccion(ObjUsers.txtNewDireccion.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 150 caragteres en la dirección", Properties.Resources.MensajeWarning);
-                return;
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "There are more than 150 characters in the address", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 150 caracteres en la dirección", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar el formato del DUI y que este no tenga menos de 8 numeros
             if (!ValidarDUI(ObjUsers.maskDui.Text))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Hay menos de 8 numeros en el dui", Properties.Resources.MensajeWarning);
-                return;
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "There are less than 8 numbers in the dui", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Hay menos de 8 numeros en el dui", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar que la fecha de nacimiento sea mayor de 18 años
@@ -204,8 +268,16 @@ namespace AgroServicios.Controlador.CuentasContralador
 
             if (edad < 18)
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El usuario debe de ser mayor de 18 años", Properties.Resources.MensajeWarning);
-                return;
+                if(ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "The user must be 18 years of age or older", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El usuario debe de ser mayor de 18 años", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             //Declaramos que el usuario puede tener una imagen nula, es decir, puede si o no ponerse una imagen de perfil
@@ -252,20 +324,42 @@ namespace AgroServicios.Controlador.CuentasContralador
                 int valorRetornado = DaoInsert.RegistrarUsuario();
                 if (valorRetornado == 1)
                 {
-                    //Mensaje de afirmacion si se pudo realizar la inserccion
-                    string newUser = DaoInsert.Usuario1;
-                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "El usuario fue registrado", Properties.Resources.comprobado);
-                    VistaLogin backForm = new VistaLogin();
-                    ObjUsers.Close();
+                    if(ControladorIdioma.idioma == 1)
+                    {
+                        //Mensaje de afirmacion si se pudo realizar la inserccion
+                        string newUser = DaoInsert.Usuario1;
+                        MandarValoresAlerta(Color.LightGreen, Color.Black, "Process performed", "The user was registered", Properties.Resources.comprobado);
+                        VistaLogin backForm = new VistaLogin();
+                        ObjUsers.Close();
 
-                    VistaPreguntas pre = new VistaPreguntas(newUser, 1);
-                    pre.ShowDialog();
+                        VistaPreguntas pre = new VistaPreguntas(newUser, 1);
+                        pre.ShowDialog();
+                    }
+                    else
+                    {
+                        //Mensaje de afirmacion si se pudo realizar la inserccion
+                        string newUser = DaoInsert.Usuario1;
+                        MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "El usuario fue registrado", Properties.Resources.comprobado);
+                        VistaLogin backForm = new VistaLogin();
+                        ObjUsers.Close();
+
+                        VistaPreguntas pre = new VistaPreguntas(newUser, 1);
+                        pre.ShowDialog();
+                    }
                 }
                 else
                 {
                     //Mensaje de error si se no se pudo realizar la inserccion
-                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el usuario no se este duplicando", Properties.Resources.ErrorIcono);
-                    VistaLogin backForm = new VistaLogin();
+                    if(ControladorIdioma.idioma == 1)
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verify that the user is not being duplicated.", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
+                    else
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el usuario no se este duplicando", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
                 }
             }
 
