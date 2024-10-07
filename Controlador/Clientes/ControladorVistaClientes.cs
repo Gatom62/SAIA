@@ -72,39 +72,77 @@ namespace AgroServicios.Controlador.Clientes
         {
             if (ObjClientes.GriewViewClientes.CurrentRow == null)
             {
-                MessageBox.Show("No se ha seleccionado ningún cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Salir del método si no hay ninguna fila seleccionada
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("No client has been selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
+                else
+                {
+                    MessageBox.Show("No se ha seleccionado ningún cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
             }
 
             int pos = ObjClientes.GriewViewClientes.CurrentRow.Index;
 
-            if (MessageBox.Show($"¿Seguro que deseas eliminar a: \n {ObjClientes.GriewViewClientes[1, pos].Value.ToString()}\nLa eliminación será permanente.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (ControladorIdioma.idioma == 1)
             {
-                DAOClientes daodelete = new DAOClientes();
-                daodelete.IdCliente = int.Parse(ObjClientes.GriewViewClientes[0, pos].Value.ToString());
-                int valorretornado = daodelete.DeleteCLiente();
+                if (MessageBox.Show($"Surely you want to eliminate a: \n {ObjClientes.GriewViewClientes[1, pos].Value.ToString()}\nthe elimination will be permanent.", "Confirm action", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    DAOClientes daodelete = new DAOClientes();
+                    daodelete.IdCliente = int.Parse(ObjClientes.GriewViewClientes[0, pos].Value.ToString());
+                    int valorretornado = daodelete.DeleteCLiente();
 
-                if (valorretornado == 1)
-                {
-                    MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Proceso realizado", "El cliente se elimino correctamente", Properties.Resources.comprobado);
-                    VistaLogin backForm = new VistaLogin();
-                    RefrescarData();
+                    if (valorretornado == 1)
+                    {
+                        MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Process performed", "The client was successfully deleted", Properties.Resources.comprobado);
+                        VistaLogin backForm = new VistaLogin();
+                        RefrescarData();
+                    }
+                    else
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique si el cliente esta asociado a otros registros", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
                 }
-                else
+            }
+            else
+            {
+                if (MessageBox.Show($"¿Seguro que deseas eliminar a: \n {ObjClientes.GriewViewClientes[1, pos].Value.ToString()}\nLa eliminación será permanente.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique si el cliente esta asociado a otros registros", Properties.Resources.ErrorIcono);
-                    VistaLogin backForm = new VistaLogin();
+                    DAOClientes daodelete = new DAOClientes();
+                    daodelete.IdCliente = int.Parse(ObjClientes.GriewViewClientes[0, pos].Value.ToString());
+                    int valorretornado = daodelete.DeleteCLiente();
+
+                    if (valorretornado == 1)
+                    {
+                        MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Proceso realizado", "El cliente se elimino correctamente", Properties.Resources.comprobado);
+                        VistaLogin backForm = new VistaLogin();
+                        RefrescarData();
+                    }
+                    else
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique si el cliente esta asociado a otros registros", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
                 }
             }
         }
-
-
         private void UbdateCliente(object sender, EventArgs e)
         {
             if (ObjClientes.GriewViewClientes.CurrentRow == null)
             {
-                MessageBox.Show("No se ha seleccionado ningún cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Salir del método si no hay ninguna fila seleccionada
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("No client has been selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
+                else
+                {
+                    MessageBox.Show("No se ha seleccionado ningún cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
             }
 
             int pos = ObjClientes.GriewViewClientes.CurrentRow.Index;
@@ -127,8 +165,16 @@ namespace AgroServicios.Controlador.Clientes
         {
             if (ObjClientes.GriewViewClientes.CurrentRow == null)
             {
-                MessageBox.Show("No se ha seleccionado ningún cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Salir del método si no hay ninguna fila seleccionada
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("No client has been selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
+                else
+                {
+                    MessageBox.Show("No se ha seleccionado ningún cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
             }
 
             int pos = ObjClientes.GriewViewClientes.CurrentRow.Index;
@@ -146,7 +192,6 @@ namespace AgroServicios.Controlador.Clientes
             vistaUpdate.ShowDialog();
             RefrescarData();
         }
-
         private void BuscarCliente_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)

@@ -59,29 +59,54 @@ namespace AgroServicios.Controlador.Clientes
             message.IconeAlertBox = icon;
             message.ShowDialog();
         }
+
         public void NuevoRegistro(object sender, EventArgs e)
         {
             // Validar que los campos no estén vacíos
             if (string.IsNullOrWhiteSpace(ObjCreateCliente.txtNombreCliente.Text) ||
                  string.IsNullOrWhiteSpace(ObjCreateCliente.maskDui.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "El nombre y el dui son obligatorios", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Name and dui are required", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "El nombre y el dui son obligatorios", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             string nombreCliente = ObjCreateCliente.txtNombreCliente.Text.Trim();
             // Validar que el nombre solo contenga letras y no exceda 65 caracteres
             if (!ValidarLetra(nombreCliente) || !ValidarNombre(nombreCliente))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El nombre nombre tiene numeros o tiene más de 50 letras", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Name has numbers or has more than 50 letters", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El nombre nombre tiene numeros o tiene más de 50 letras", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar el formato del DUI y que este no tenga menos de 8 numeros
             if (!ValidarDUI(ObjCreateCliente.maskDui.Text))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Hay menos de 8 numeros en el dui", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "There are less than 8 numbers in the dui", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Hay menos de 8 numeros en el dui", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             DAOClientes DaoInsert = new DAOClientes();
@@ -97,8 +122,16 @@ namespace AgroServicios.Controlador.Clientes
             // Validar el formato del teléfono solo si se ingresó uno
             if (!string.IsNullOrWhiteSpace(ObjCreateCliente.txtTelefonoCliente.Text) && !ValidarTelefono())
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El telefono debe de ser de El Salvador", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "The phone must be from El Salvador", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El telefono debe de ser de El Salvador", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar el formato del correo solo si se ingresó uno
@@ -109,29 +142,62 @@ namespace AgroServicios.Controlador.Clientes
                 // Validar que el nombre solo contenga letras y no exceda 75 caracteres
                 if (!ValidarCorreo(correo) || !ValidarCorreoCantidad(correo))
                 {
-                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Notiene el @, el dominio o hay mas de 75 caragteres en el correo", Properties.Resources.MensajeWarning);
-                    return;
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "No @, no domain or more than 75 characters in the e-mail", Properties.Resources.MensajeWarning);
+                        return;
+                    }
+                    else
+                    {
+                        MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "No tiene el @, el dominio o hay mas de 75 caracteres en el correo", Properties.Resources.MensajeWarning);
+                        return;
+                    }
                 }
             }
 
             // Validar la direccion del cliente solo si se ingresó uno
             if (!string.IsNullOrWhiteSpace(ObjCreateCliente.txtDireccionCliente.Text) && !ValidarDireccion())
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 100 caragteres en la dirección", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "There are more than 100 characters in the address", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 100 caracteres en la dirección", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             int valorRetornado = DaoInsert.RetgistraCliente();
             if (valorRetornado > 0)
             {
-                MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "El cliente fue registrado", Properties.Resources.comprobado);
-                VistaLogin backForm = new VistaLogin();
-                ObjCreateCliente.Close();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Process performed", "The client was registered", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                    ObjCreateCliente.Close();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "El cliente fue registrado", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                    ObjCreateCliente.Close();
+                }
             }
             else
             {
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el cliente no se este duplicando", Properties.Resources.ErrorIcono);
-                VistaLogin backForm = new VistaLogin();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verify that the client is not being duplicated.", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el cliente no se este duplicando", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
             }
 
             // Método para validar que el nombre del cliente no exceda los 50 caracteres
