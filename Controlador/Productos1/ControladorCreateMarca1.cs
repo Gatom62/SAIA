@@ -140,7 +140,7 @@ namespace AgroServicios.Controlador.Productos1
         {
             int pos = ObjCreateMarca.GriewViewMarcas.CurrentRow.Index;
 
-            if (MessageBox.Show($"¿Seguro que deseas eliminar a: \n {ObjCreateMarca.GriewViewMarcas[1, pos].Value.ToString()}\nLa eliminación sera permanente.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show($"¿Seguro que deseas eliminar a:\n {ObjCreateMarca.GriewViewMarcas[1, pos].Value.ToString()}\nLa eliminación sera permanente.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 DAOProductos1 daodelete = new DAOProductos1();
                 daodelete.IdMarca = int.Parse(ObjCreateMarca.GriewViewMarcas[0, pos].Value.ToString());
