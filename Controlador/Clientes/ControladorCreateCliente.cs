@@ -236,7 +236,7 @@ namespace AgroServicios.Controlador.Clientes
                 return Regex.IsMatch(email, pattern);
             }
 
-            // Método para validar que el correo del proveedor no exceda los 75 caracteres
+            // Método para validar que el correo del proveedor no exceda los 75 caracteres.
             bool ValidarCorreoCantidad(string nombre)
             {
                 return nombre.Length <= 75;
