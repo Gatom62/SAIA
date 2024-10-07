@@ -206,7 +206,7 @@ namespace AgroServicios.Controlador.Productos1
         {
             if (ObjProductos.GriewViewProductos.CurrentRow == null)
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "No a seleccionado ningun producto", Properties.Resources.MensajeWarning);
+                MessageBoxP(Color.Yellow, Color.Orange, "Error", "No a seleccionado ningun producto.", Properties.Resources.MensajeWarning);
                 return; // Salir del método si no hay ninguna fila seleccionada
             }
 
