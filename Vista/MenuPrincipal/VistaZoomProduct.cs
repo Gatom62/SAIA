@@ -2,6 +2,8 @@
 using AgroServicios.Controlador.Helper;
 using AgroServicios.Controlador.Login;
 using AgroServicios.Modelo.DAO;
+using AgroServicios.Vista.Login;
+using AgroServicios.Vista.Notificación;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +18,32 @@ namespace AgroServicios.Vista.MenuPrincipal
 {
     public partial class VistaZoomProduct : Form
     {
+        void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            AlertExito frm = new AlertExito();
+
+            frm.BackColorAlert = backcolor;
+
+            frm.ColorAlertBox = color;
+
+            frm.TittlAlertBox = title;
+
+            frm.TextAlertBox = text;
+
+            frm.IconeAlertBox = icon;
+
+            frm.ShowDialog();
+        }
+        void MandarValoresAlerta(Color backcolor, Color color, string title, string text, Image icon)
+        {
+            MessagePersonal message = new MessagePersonal();
+            message.BackColorAlert = backcolor;
+            message.ColorAlertBox = color;
+            message.TittlAlertBox = title;
+            message.TextAlertBox = text;
+            message.IconeAlertBox = icon;
+            message.ShowDialog();
+        }
         public VistaZoomProduct()
         {
             InitializeComponent();
@@ -42,7 +70,6 @@ namespace AgroServicios.Vista.MenuPrincipal
             {
                 lbCaragteristica.Text = Ingles.Caracteristicas;
                 lbCodigoProducto.Text = Ingles.CodigoProducto;
-                lbPrecioProducto.Text = Ingles.PrecioProducto;
                 lbCantidad.Text = Ingles.Cantidad;
                 btnadd.Text = Ingles.AnadirCarrito;
             }
@@ -65,7 +92,14 @@ namespace AgroServicios.Vista.MenuPrincipal
             }
             else
             {
-                MessageBox.Show("La cantidad de productos debe ser mayor a cero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("The quantity of products must be greater than zero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else 
+                {
+                    MessageBox.Show("La cantidad de productos debe ser mayor a cero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
     }

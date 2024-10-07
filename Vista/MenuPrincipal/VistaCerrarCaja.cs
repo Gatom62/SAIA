@@ -32,7 +32,12 @@ namespace AgroServicios.Vista.MenuPrincipal
                 btnCerrarCaja.onHoverState.BorderColor = Color.FromArgb(211, 41, 15);
                 btnCerrarCaja.OnPressedState.FillColor = Color.Red;
                 btnCerrarCaja.OnPressedState.BorderColor = Color.Red;
-                btnCerrarCaja.DisabledFillColor = Color.DarkOrange;
+            }
+
+            if (ControladorIdioma.idioma == 1) 
+            {
+                label1.Text = Ingles.CierreCaja;
+                btnCerrarCaja.Text = Ingles.btnCierreCaja;
             }
         }
     }

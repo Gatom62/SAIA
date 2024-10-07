@@ -15,7 +15,6 @@ namespace AgroServicios.Controlador.Login
             ObjZoom = vista;
             ObjZoom.ptbback.Click += new EventHandler(Salir);
         }
-
         private void Salir(object sender, EventArgs e)
         {
             // Cierra la vista actual

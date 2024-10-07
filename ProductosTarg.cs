@@ -69,16 +69,15 @@ namespace AgroServicios
         {
             if (ControladorTema.IsDarkMode == true)
             {
-                bunifuPanel1.BackgroundColor = Color.FromArgb(118, 88, 152);
+                bunifuPanel1.BackgroundColor = Color.White;
                 lblcodigo.ForeColor = Color.White;
-                lblname.ForeColor = Color.White;
+                lblname.ForeColor = Color.FromArgb(230, 119, 11);
                 lblPrecio.ForeColor = Color.White;
                 bunifuShadowPanel1.ShadowColor = Color.DimGray;
             }
 
             if (ControladorIdioma.idioma == 1) 
             {
-                lblPrecio.Text = Ingles.Precio;
                 btnSeleccionar.Text = Ingles.Seleccionar;
             }
         }

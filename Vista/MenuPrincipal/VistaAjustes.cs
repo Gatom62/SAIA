@@ -67,6 +67,11 @@ namespace AgroServicios.Vista.MenuPrincipal
                 pn1.BackgroundColor = Color.DimGray;
                 pn2.BackgroundColor = Color.DimGray;
                 pn3.BackgroundColor = Color.DimGray;
+
+                label1.ForeColor = Color.White;
+                label3.ForeColor = Color.White;
+                label4.ForeColor = Color.White;
+                label5.ForeColor = Color.White;
             }
             if (ControladorIdioma.idioma == 1)
             {

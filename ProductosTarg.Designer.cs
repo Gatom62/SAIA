@@ -205,12 +205,12 @@
             this.lblPrecio.AllowParentOverrides = false;
             this.lblPrecio.AutoEllipsis = false;
             this.lblPrecio.CursorType = null;
-            this.lblPrecio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecio.Location = new System.Drawing.Point(21, 416);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPrecio.Size = new System.Drawing.Size(40, 17);
+            this.lblPrecio.Size = new System.Drawing.Size(47, 18);
             this.lblPrecio.TabIndex = 2;
             this.lblPrecio.Text = "Precio";
             this.lblPrecio.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -222,7 +222,7 @@
             this.lblname.AutoEllipsis = false;
             this.lblname.CursorType = null;
             this.lblname.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblname.Location = new System.Drawing.Point(33, 340);
+            this.lblname.Location = new System.Drawing.Point(45, 340);
             this.lblname.Margin = new System.Windows.Forms.Padding(2);
             this.lblname.Name = "lblname";
             this.lblname.RightToLeft = System.Windows.Forms.RightToLeft.No;

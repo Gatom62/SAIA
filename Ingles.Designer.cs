@@ -187,6 +187,15 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Close box.
+        /// </summary>
+        internal static string btnCierreCaja {
+            get {
+                return ResourceManager.GetString("btnCierreCaja", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Create user.
         /// </summary>
         internal static string btningresarempleado {
@@ -255,6 +264,15 @@ namespace AgroServicios {
         internal static string Celular {
             get {
                 return ResourceManager.GetString("Celular", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Closing the cash register.
+        /// </summary>
+        internal static string CierreCaja {
+            get {
+                return ResourceManager.GetString("CierreCaja", resourceCulture);
             }
         }
         
