@@ -76,12 +76,12 @@
             this.txtUsuario.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtUsuario.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtUsuario.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtUsuario.BorderRadius = 20;
+            this.txtUsuario.BorderRadius = 30;
             this.txtUsuario.BorderThickness = 1;
             this.txtUsuario.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsuario.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtUsuario.DefaultFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.DefaultText = "";
             this.txtUsuario.FillColor = System.Drawing.Color.White;
             this.txtUsuario.HideSelection = true;
@@ -153,7 +153,7 @@
             this.txtRes2.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtRes2.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtRes2.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtRes2.BorderRadius = 20;
+            this.txtRes2.BorderRadius = 30;
             this.txtRes2.BorderThickness = 1;
             this.txtRes2.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtRes2.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -205,7 +205,7 @@
             this.txtRes2.SelectionLength = 0;
             this.txtRes2.SelectionStart = 0;
             this.txtRes2.ShortcutsEnabled = false;
-            this.txtRes2.Size = new System.Drawing.Size(212, 35);
+            this.txtRes2.Size = new System.Drawing.Size(239, 35);
             this.txtRes2.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtRes2.TabIndex = 3;
             this.txtRes2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -230,7 +230,7 @@
             this.txtRes1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtRes1.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txtRes1.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtRes1.BorderRadius = 20;
+            this.txtRes1.BorderRadius = 30;
             this.txtRes1.BorderThickness = 1;
             this.txtRes1.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtRes1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
@@ -282,7 +282,7 @@
             this.txtRes1.SelectionLength = 0;
             this.txtRes1.SelectionStart = 0;
             this.txtRes1.ShortcutsEnabled = false;
-            this.txtRes1.Size = new System.Drawing.Size(212, 35);
+            this.txtRes1.Size = new System.Drawing.Size(239, 35);
             this.txtRes1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtRes1.TabIndex = 2;
             this.txtRes1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -404,9 +404,9 @@
             this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox1.AutoSizeHeight = true;
             this.bunifuPictureBox1.BorderRadius = 54;
-            this.bunifuPictureBox1.Image = global::AgroServicios.Properties.Resources.Signo_de_interrogacion1;
+            this.bunifuPictureBox1.Image = global::AgroServicios.Properties.Resources.Signo_de_interrogacion_removebg_preview;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(170, 34);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(159, 34);
             this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
             this.bunifuPictureBox1.Size = new System.Drawing.Size(109, 109);
@@ -443,7 +443,7 @@
             this.ptbback.Name = "ptbback";
             this.ptbback.RoundBorders = false;
             this.ptbback.ShowBorders = false;
-            this.ptbback.Size = new System.Drawing.Size(50, 48);
+            this.ptbback.Size = new System.Drawing.Size(56, 52);
             this.ptbback.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Flat;
             this.ptbback.TabIndex = 35;
             this.ptbback.MouseEnter += new System.EventHandler(this.ptbback_MouseEnter);
@@ -558,7 +558,7 @@
             this.btnGuardar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnGuardar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnGuardar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGuardar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -570,7 +570,7 @@
             this.btnGuardar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnGuardar.IconSize = 25;
             this.btnGuardar.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.IdleBorderRadius = 15;
+            this.btnGuardar.IdleBorderRadius = 30;
             this.btnGuardar.IdleBorderThickness = 1;
             this.btnGuardar.IdleFillColor = System.Drawing.Color.DodgerBlue;
             this.btnGuardar.IdleIconLeftImage = null;
@@ -579,7 +579,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(251, 337);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnGuardar.OnDisabledState.BorderRadius = 15;
+            this.btnGuardar.OnDisabledState.BorderRadius = 30;
             this.btnGuardar.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnGuardar.OnDisabledState.BorderThickness = 1;
             this.btnGuardar.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -587,7 +587,7 @@
             this.btnGuardar.OnDisabledState.IconLeftImage = null;
             this.btnGuardar.OnDisabledState.IconRightImage = null;
             this.btnGuardar.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnGuardar.onHoverState.BorderRadius = 15;
+            this.btnGuardar.onHoverState.BorderRadius = 30;
             this.btnGuardar.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnGuardar.onHoverState.BorderThickness = 1;
             this.btnGuardar.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -595,7 +595,7 @@
             this.btnGuardar.onHoverState.IconLeftImage = null;
             this.btnGuardar.onHoverState.IconRightImage = null;
             this.btnGuardar.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnGuardar.OnIdleState.BorderRadius = 15;
+            this.btnGuardar.OnIdleState.BorderRadius = 30;
             this.btnGuardar.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnGuardar.OnIdleState.BorderThickness = 1;
             this.btnGuardar.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
@@ -603,7 +603,7 @@
             this.btnGuardar.OnIdleState.IconLeftImage = null;
             this.btnGuardar.OnIdleState.IconRightImage = null;
             this.btnGuardar.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnGuardar.OnPressedState.BorderRadius = 15;
+            this.btnGuardar.OnPressedState.BorderRadius = 30;
             this.btnGuardar.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnGuardar.OnPressedState.BorderThickness = 1;
             this.btnGuardar.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));

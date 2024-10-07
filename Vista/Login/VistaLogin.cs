@@ -12,11 +12,25 @@ namespace AgroServicios.Vista.Login
     public partial class VistaLogin : Form
     {
         private Size originalSize;
+        // Importar las funciones de la API de Windows para aplicar bordes redondeados
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(
+            int nLeftRect,      // X-coordinate of upper-left corner
+            int nTopRect,       // Y-coordinate of upper-left corner
+            int nRightRect,     // X-coordinate of lower-right corner
+            int nBottomRect,    // Y-coordinate of lower-right corner
+            int nWidthEllipse,  // Width of ellipse
+            int nHeightEllipse  // Height of ellipse
+        );
         public VistaLogin()
         {
             InitializeComponent();
             ControladorLogin control = new ControladorLogin(this);
             PasswordVisible.Visible = false;
+
+            // Aplicar el borde redondeado al formulario
+            this.FormBorderStyle = FormBorderStyle.None; // Deshabilitar el borde normal del formulario
+            this.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 30, 30));
         }
 
         private void switchidioma_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuToggleSwitch.CheckedChangedEventArgs e)
@@ -42,7 +56,6 @@ namespace AgroServicios.Vista.Login
                 menu.Text = Ingles.Menu;
                 menuIntegrantes.Text = Ingles.Integrantes;
                 menuTest.Text = Ingles.Conexion;
-
             }
             else
             {
@@ -57,9 +70,7 @@ namespace AgroServicios.Vista.Login
                 menuTest.Text = Spanish.conexion;
                 lblRecuperar.Text = Spanish.recuperar;
             }
-
         }
-
         private void DarkMode_CheckedChanged(object sender, System.EventArgs e)
         {
             if (DarkMode.Checked)

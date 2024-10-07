@@ -50,6 +50,7 @@ namespace AgroServicios.Vista.Login
         {
             if(ControladorTema.IsDarkMode == true)
             {
+                this.BackColor = Color.FromArgb(34, 36, 49);
                 //Esto es para cambiar el color del boton de enviar respuesta
                 btnEnviar.IdleFillColor = Color.FromArgb(230, 119, 11);
                 btnEnviar.onHoverState.FillColor = Color.FromArgb(211, 41, 15);

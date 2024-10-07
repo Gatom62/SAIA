@@ -213,6 +213,26 @@ namespace AgroServicios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Ceo_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Ceo-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ceo_removebg_preview1 {
+            get {
+                object obj = ResourceManager.GetObject("Ceo-removebg-preview1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ceo2 {
             get {
                 object obj = ResourceManager.GetObject("ceo2", resourceCulture);
@@ -705,6 +725,26 @@ namespace AgroServicios.Properties {
         internal static System.Drawing.Bitmap Signo_de_interrogacion_2 {
             get {
                 object obj = ResourceManager.GetObject("Signo de interrogacion 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Signo_de_interrogacion_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Signo_de_interrogacion-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Signo_de_interrogacion_removebg_preview1 {
+            get {
+                object obj = ResourceManager.GetObject("Signo_de_interrogacion-removebg-preview1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

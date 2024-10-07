@@ -81,6 +81,8 @@ namespace AgroServicios.Vista.Login
                 bunifuGradientPanel1.GradientTopRight = Color.FromArgb(34, 36, 49);
                 bunifuGradientPanel1.GradientBottomRight = Color.FromArgb(118, 88, 152);
                 bunifuGradientPanel1.GradientTopLeft = Color.FromArgb(34, 36, 49);
+
+                lbUsuario.ForeColor = Color.FromArgb(230, 119, 11);
             }
 
             if (ControladorIdioma.idioma == 1)

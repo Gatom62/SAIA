@@ -67,7 +67,7 @@
             this.ptbback.BorderThickness = 1;
             this.ptbback.ColorContrastOnClick = 30;
             this.ptbback.ColorContrastOnHover = 30;
-            this.ptbback.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ptbback.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -83,7 +83,7 @@
             this.ptbback.ShowBorders = false;
             this.ptbback.Size = new System.Drawing.Size(63, 60);
             this.ptbback.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Flat;
-            this.ptbback.TabIndex = 1;
+            this.ptbback.TabIndex = 4;
             this.ptbback.MouseEnter += new System.EventHandler(this.ptbback_MouseEnter);
             this.ptbback.MouseLeave += new System.EventHandler(this.ptbback_MouseLeave);
             // 
@@ -105,7 +105,7 @@
             this.btnEmail.ButtonTextMarginLeft = 0;
             this.btnEmail.ColorContrastOnClick = 45;
             this.btnEmail.ColorContrastOnHover = 45;
-            this.btnEmail.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnEmail.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges2.BottomLeft = true;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = true;
@@ -116,7 +116,7 @@
             this.btnEmail.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnEmail.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnEmail.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmail.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmail.ForeColor = System.Drawing.Color.White;
             this.btnEmail.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmail.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -138,7 +138,7 @@
             this.btnEmail.Margin = new System.Windows.Forms.Padding(2);
             this.btnEmail.Name = "btnEmail";
             this.btnEmail.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnEmail.OnDisabledState.BorderRadius = 1;
+            this.btnEmail.OnDisabledState.BorderRadius = 30;
             this.btnEmail.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnEmail.OnDisabledState.BorderThickness = 1;
             this.btnEmail.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -146,7 +146,7 @@
             this.btnEmail.OnDisabledState.IconLeftImage = null;
             this.btnEmail.OnDisabledState.IconRightImage = null;
             this.btnEmail.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnEmail.onHoverState.BorderRadius = 1;
+            this.btnEmail.onHoverState.BorderRadius = 30;
             this.btnEmail.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnEmail.onHoverState.BorderThickness = 1;
             this.btnEmail.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -154,7 +154,7 @@
             this.btnEmail.onHoverState.IconLeftImage = null;
             this.btnEmail.onHoverState.IconRightImage = null;
             this.btnEmail.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnEmail.OnIdleState.BorderRadius = 1;
+            this.btnEmail.OnIdleState.BorderRadius = 30;
             this.btnEmail.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnEmail.OnIdleState.BorderThickness = 1;
             this.btnEmail.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
@@ -162,7 +162,7 @@
             this.btnEmail.OnIdleState.IconLeftImage = null;
             this.btnEmail.OnIdleState.IconRightImage = null;
             this.btnEmail.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnEmail.OnPressedState.BorderRadius = 1;
+            this.btnEmail.OnPressedState.BorderRadius = 30;
             this.btnEmail.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnEmail.OnPressedState.BorderThickness = 1;
             this.btnEmail.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -170,7 +170,7 @@
             this.btnEmail.OnPressedState.IconLeftImage = null;
             this.btnEmail.OnPressedState.IconRightImage = null;
             this.btnEmail.Size = new System.Drawing.Size(298, 49);
-            this.btnEmail.TabIndex = 0;
+            this.btnEmail.TabIndex = 1;
             this.btnEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnEmail.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnEmail.TextMarginLeft = 0;
@@ -195,7 +195,7 @@
             this.btnPreguntas.ButtonTextMarginLeft = 0;
             this.btnPreguntas.ColorContrastOnClick = 45;
             this.btnPreguntas.ColorContrastOnHover = 45;
-            this.btnPreguntas.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnPreguntas.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges3.BottomLeft = true;
             borderEdges3.BottomRight = true;
             borderEdges3.TopLeft = true;
@@ -206,7 +206,7 @@
             this.btnPreguntas.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnPreguntas.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnPreguntas.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnPreguntas.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPreguntas.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPreguntas.ForeColor = System.Drawing.Color.White;
             this.btnPreguntas.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPreguntas.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -228,7 +228,7 @@
             this.btnPreguntas.Margin = new System.Windows.Forms.Padding(2);
             this.btnPreguntas.Name = "btnPreguntas";
             this.btnPreguntas.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnPreguntas.OnDisabledState.BorderRadius = 1;
+            this.btnPreguntas.OnDisabledState.BorderRadius = 30;
             this.btnPreguntas.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnPreguntas.OnDisabledState.BorderThickness = 1;
             this.btnPreguntas.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -236,7 +236,7 @@
             this.btnPreguntas.OnDisabledState.IconLeftImage = null;
             this.btnPreguntas.OnDisabledState.IconRightImage = null;
             this.btnPreguntas.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnPreguntas.onHoverState.BorderRadius = 1;
+            this.btnPreguntas.onHoverState.BorderRadius = 30;
             this.btnPreguntas.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnPreguntas.onHoverState.BorderThickness = 1;
             this.btnPreguntas.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -244,7 +244,7 @@
             this.btnPreguntas.onHoverState.IconLeftImage = null;
             this.btnPreguntas.onHoverState.IconRightImage = null;
             this.btnPreguntas.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnPreguntas.OnIdleState.BorderRadius = 1;
+            this.btnPreguntas.OnIdleState.BorderRadius = 30;
             this.btnPreguntas.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnPreguntas.OnIdleState.BorderThickness = 1;
             this.btnPreguntas.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
@@ -252,7 +252,7 @@
             this.btnPreguntas.OnIdleState.IconLeftImage = null;
             this.btnPreguntas.OnIdleState.IconRightImage = null;
             this.btnPreguntas.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnPreguntas.OnPressedState.BorderRadius = 1;
+            this.btnPreguntas.OnPressedState.BorderRadius = 30;
             this.btnPreguntas.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnPreguntas.OnPressedState.BorderThickness = 1;
             this.btnPreguntas.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -317,7 +317,7 @@
             this.btnRecuperacionAdmin.ButtonTextMarginLeft = 0;
             this.btnRecuperacionAdmin.ColorContrastOnClick = 45;
             this.btnRecuperacionAdmin.ColorContrastOnHover = 45;
-            this.btnRecuperacionAdmin.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnRecuperacionAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges4.BottomLeft = true;
             borderEdges4.BottomRight = true;
             borderEdges4.TopLeft = true;
@@ -328,7 +328,7 @@
             this.btnRecuperacionAdmin.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.btnRecuperacionAdmin.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnRecuperacionAdmin.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnRecuperacionAdmin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecuperacionAdmin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecuperacionAdmin.ForeColor = System.Drawing.Color.White;
             this.btnRecuperacionAdmin.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRecuperacionAdmin.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -340,7 +340,7 @@
             this.btnRecuperacionAdmin.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnRecuperacionAdmin.IconSize = 25;
             this.btnRecuperacionAdmin.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btnRecuperacionAdmin.IdleBorderRadius = 53;
+            this.btnRecuperacionAdmin.IdleBorderRadius = 45;
             this.btnRecuperacionAdmin.IdleBorderThickness = 1;
             this.btnRecuperacionAdmin.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btnRecuperacionAdmin.IdleIconLeftImage = null;
@@ -381,8 +381,8 @@
             this.btnRecuperacionAdmin.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnRecuperacionAdmin.OnPressedState.IconLeftImage = null;
             this.btnRecuperacionAdmin.OnPressedState.IconRightImage = null;
-            this.btnRecuperacionAdmin.Size = new System.Drawing.Size(340, 55);
-            this.btnRecuperacionAdmin.TabIndex = 27;
+            this.btnRecuperacionAdmin.Size = new System.Drawing.Size(298, 47);
+            this.btnRecuperacionAdmin.TabIndex = 3;
             this.btnRecuperacionAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRecuperacionAdmin.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnRecuperacionAdmin.TextMarginLeft = 0;
@@ -411,7 +411,7 @@
             this.bunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox2.AutoSizeHeight = true;
             this.bunifuPictureBox2.BorderRadius = 35;
-            this.bunifuPictureBox2.Image = global::AgroServicios.Properties.Resources.Signo_de_interrogacion;
+            this.bunifuPictureBox2.Image = global::AgroServicios.Properties.Resources.Signo_de_interrogacion_removebg_preview1;
             this.bunifuPictureBox2.IsCircle = true;
             this.bunifuPictureBox2.Location = new System.Drawing.Point(78, 185);
             this.bunifuPictureBox2.Name = "bunifuPictureBox2";
@@ -427,7 +427,7 @@
             this.bunifuPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuPictureBox3.AutoSizeHeight = true;
             this.bunifuPictureBox3.BorderRadius = 35;
-            this.bunifuPictureBox3.Image = global::AgroServicios.Properties.Resources.Ceo;
+            this.bunifuPictureBox3.Image = global::AgroServicios.Properties.Resources.Ceo_removebg_preview;
             this.bunifuPictureBox3.IsCircle = true;
             this.bunifuPictureBox3.Location = new System.Drawing.Point(78, 338);
             this.bunifuPictureBox3.Name = "bunifuPictureBox3";
@@ -455,7 +455,7 @@
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(733, 564);
-            this.bunifuGradientPanel2.TabIndex = 32;
+            this.bunifuGradientPanel2.TabIndex = 0;
             // 
             // bunifuShadowPanel1
             // 
@@ -466,7 +466,7 @@
             this.bunifuShadowPanel1.Controls.Add(this.bunifuPanel1);
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(81, 47);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(91, 39);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.Transparent;
@@ -477,7 +477,7 @@
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
             this.bunifuShadowPanel1.Size = new System.Drawing.Size(591, 505);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel1.TabIndex = 32;
+            this.bunifuShadowPanel1.TabIndex = 0;
             // 
             // bunifuPanel1
             // 
@@ -499,7 +499,7 @@
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(566, 467);
-            this.bunifuPanel1.TabIndex = 29;
+            this.bunifuPanel1.TabIndex = 0;
             // 
             // VistaMetodosDeRecuperacion
             // 
@@ -515,6 +515,7 @@
             this.MinimumSize = new System.Drawing.Size(733, 564);
             this.Name = "VistaMetodosDeRecuperacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Metodos de recuperación de contraseña";
             this.Load += new System.EventHandler(this.VistaMetodosDeRecuperacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
