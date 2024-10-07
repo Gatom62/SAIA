@@ -220,13 +220,13 @@ namespace AgroServicios.Controlador.Productos1
                 int valorretornado = daodelete.DeleteProducto();
                 if (valorretornado == 1)
                 {
-                    MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Proceso realizado", "El producto se elimino correctamente", Properties.Resources.comprobado);
+                    MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Proceso realizado", "El producto se elimino correctamente.", Properties.Resources.comprobado);
                     VistaLogin backForm = new VistaLogin();
                     RefrescarData();
                 }
                 else
                 {
-                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique si la marca esta asociada a otros registros", Properties.Resources.ErrorIcono);
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique si la marca esta asociada a otros registros.", Properties.Resources.ErrorIcono);
                     VistaLogin backForm = new VistaLogin();
                 }
             }
