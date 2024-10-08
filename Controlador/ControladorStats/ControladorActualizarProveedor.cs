@@ -76,33 +76,68 @@ namespace AgroServicios.Controlador.ControladorStats
                 string.IsNullOrWhiteSpace(Objupdate.maskUbdateDui.Text) ||
                 Objupdate.cmbMarca.SelectedValue == null)
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "El nombre, el teléfono y el dui son obligatorios", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Name, phone and dui are required.", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "El nombre, el teléfono y el dui son obligatorios", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             string nombreCliente = Objupdate.txtUpdateNombre.Text.Trim();
             // Validar que el nombre solo contenga letras y no exceda 65 caracteres
             if (!ValidarLetra(nombreCliente) || !ValidarNombre(nombreCliente))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El nombre nombre tiene numeros o tiene más de 65 letras", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Name has numbers or has more than 65 letters", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El nombre nombre tiene numeros o tiene más de 65 letras", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar el formato del número de teléfono
             if (!ValidarTelefono(Objupdate.txtUpdatePhone.Text))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El telefono debe de ser de El Salvador", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "The phone must be from El Salvador", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El telefono debe de ser de El Salvador", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar el formato del DUI 
             if (!ValidarDUI(Objupdate.maskUbdateDui.Text))
             {
-                MessageBox.Show("El DUI del proveedor debe contener exactamente 9 dígitos",
-                                    "Error de validación",
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("The supplier's DUI must contain exactly 9 digits.",
+                                    "Validation error",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
-                return;
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("El DUI del proveedor debe contener exactamente 9 dígitos",
+                    "Error de validación",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                    return;
+                }
             }
 
             DAOProveedores DaoUpdate = new DAOProveedores();
@@ -120,21 +155,46 @@ namespace AgroServicios.Controlador.ControladorStats
                 string correoCliente = Objupdate.txtUpdateCorreo.Text.Trim();
                 if (!ValidarCorreo(correoCliente) || !ValidarCorreoCantidad(correoCliente))
                 {
-                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Falta el @ o el dominio del correo o hay mas de 75 caragteres en el corréo", Properties.Resources.MensajeWarning);
-                    return;
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "No @, no domain or more than 75 characters in the e-mail", Properties.Resources.MensajeWarning);
+                        return;
+                    }
+                    else
+                    {
+                        MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "No tiene el @, el dominio o hay mas de 75 caracteres en el correo", Properties.Resources.MensajeWarning);
+                        return;
+                    }
                 }
             }
             int verificacion = DaoUpdate.ActualizarProveedor();
             if (verificacion == 1)
             {
-                MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "El proveedor fue actualizado", Properties.Resources.comprobado);
-                VistaLogin backForm = new VistaLogin();
-                Objupdate.Close();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Process performed", "The supplier was upgraded", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                    Objupdate.Close();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "El proveedor fue actualizado", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                    Objupdate.Close();
+                }
             }
             else
             {
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el proveedor no se este duplicando", Properties.Resources.ErrorIcono);
-                VistaLogin backForm = new VistaLogin();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verify that the supplier is not being duplicated.", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el proveedor no se este duplicando", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
             }
 
             // Método para validar que el nombre del proveedor no exceda los 65 caracteres

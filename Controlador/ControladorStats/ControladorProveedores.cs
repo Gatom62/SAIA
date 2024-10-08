@@ -103,30 +103,61 @@ namespace AgroServicios.Controlador.ControladorStats
             ObjProv.GriewProveedores.Columns["idProveedor"].Visible = false;
             TraducirEncabezados(ObjProv.GriewProveedores);
         }
-        private void DeleteProv (object sender, EventArgs e)
+        private void DeleteProv(object sender, EventArgs e)
         {
             if (ObjProv.GriewProveedores.CurrentRow == null)
             {
-                MessageBox.Show("No se ha seleccionado ningún proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Salir del método si no hay ninguna fila seleccionada
-            }
-
-            int pos = ObjProv.GriewProveedores.CurrentRow.Index;
-            if (MessageBox.Show($"¿Seguro que deseas eliminar a: \n {ObjProv.GriewProveedores[1, pos].Value.ToString()}\nLa eliminación sera permanente.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                DAOProveedores daoDel = new DAOProveedores();
-                daoDel.IdProveedor = int.Parse(ObjProv.GriewProveedores[0, pos].Value.ToString());
-                int valorRetornado = daoDel.EliminarProv();
-                if (valorRetornado == 1) 
+                if (ControladorIdioma.idioma == 1)
                 {
-                    MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Proceso realizado", "El proveedor se elimino correctamente", Properties.Resources.comprobado);
-                    VistaLogin backForm = new VistaLogin();
-                    RefrescarData();
+                    MessageBox.Show("No supplier has been selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
                 }
                 else
                 {
-                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique si el proveedor esta asociado a otros registros", Properties.Resources.ErrorIcono);
-                    VistaLogin backForm = new VistaLogin();
+                    MessageBox.Show("No se ha seleccionado a ningún proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
+            }
+
+            int pos = ObjProv.GriewProveedores.CurrentRow.Index;
+            if (ControladorIdioma.idioma == 1)
+            {
+                if (MessageBox.Show($"Surely you want to eliminate a: \n {ObjProv.GriewProveedores[1, pos].Value.ToString()}\nthe elimination will be permanent.", "Confirm action", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    DAOProveedores daoDel = new DAOProveedores();
+                    daoDel.IdProveedor = int.Parse(ObjProv.GriewProveedores[0, pos].Value.ToString());
+                    int valorRetornado = daoDel.EliminarProv();
+                    if (valorRetornado == 1)
+                    {
+                        MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Process performed", "The supplier was successfully removed", Properties.Resources.comprobado);
+                        VistaLogin backForm = new VistaLogin();
+                        RefrescarData();
+                    }
+                    else
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Check if the supplier is associated to other records.", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
+                }
+            }
+            else
+            {
+                if (MessageBox.Show($"¿Seguro que deseas eliminar a: \n {ObjProv.GriewProveedores[1, pos].Value.ToString()}\nLa eliminación sera permanente.", "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    DAOProveedores daoDel = new DAOProveedores();
+                    daoDel.IdProveedor = int.Parse(ObjProv.GriewProveedores[0, pos].Value.ToString());
+                    int valorRetornado = daoDel.EliminarProv();
+                    if (valorRetornado == 1)
+                    {
+                        MandarValoresAlerta(Color.LightGreen, Color.SeaGreen, "Proceso realizado", "El proveedor se elimino correctamente", Properties.Resources.comprobado);
+                        VistaLogin backForm = new VistaLogin();
+                        RefrescarData();
+                    }
+                    else
+                    {
+                        MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique si el proveedor esta asociado a otros registros", Properties.Resources.ErrorIcono);
+                        VistaLogin backForm = new VistaLogin();
+                    }
                 }
             }
         }
@@ -134,8 +165,16 @@ namespace AgroServicios.Controlador.ControladorStats
         {
             if (ObjProv.GriewProveedores.CurrentRow == null)
             {
-                MessageBox.Show("No se ha seleccionado ningún proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Salir del método si no hay ninguna fila seleccionada
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("No supplier has been selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
+                else
+                {
+                    MessageBox.Show("No se ha seleccionado a ningún proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
             }
 
             int pos = ObjProv.GriewProveedores.CurrentRow.Index;
@@ -148,18 +187,25 @@ namespace AgroServicios.Controlador.ControladorStats
             phone = ObjProv.GriewProveedores[3, pos].Value.ToString();
             email = ObjProv.GriewProveedores[4, pos].Value.ToString();
             marca = ObjProv.GriewProveedores[5, pos].Value.ToString();
-            
+
             VistaActualizarProveedor vistaUpdate = new VistaActualizarProveedor(1, id, Name, phone, email, Dui, marca);
             vistaUpdate.ShowDialog();
             RefrescarData();
         }
-
         private void InformarProv(object sender, EventArgs e)
         {
             if (ObjProv.GriewProveedores.CurrentRow == null)
             {
-                MessageBox.Show("No se ha seleccionado ningún proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Salir del método si no hay ninguna fila seleccionada
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("No supplier has been selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
+                else
+                {
+                    MessageBox.Show("No se ha seleccionado a ningún proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
             }
 
             int pos = ObjProv.GriewProveedores.CurrentRow.Index;
@@ -177,6 +223,7 @@ namespace AgroServicios.Controlador.ControladorStats
             vistaUpdate.ShowDialog();
             RefrescarData();
         }
+
         private void TraducirEncabezados(DataGridView dgv)
         {
             if (ControladorIdioma.idioma == 1)

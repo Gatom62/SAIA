@@ -62,7 +62,7 @@ namespace AgroServicios.Controlador.ControladorStats
             ObjProveedor.cmbMarca.ValueMember = "idMarca";
             ObjProveedor.cmbMarca.DisplayMember = "NombreMarca";
         }
-        public void AgregarProveedor (object sender, EventArgs e) 
+        public void AgregarProveedor(object sender, EventArgs e)
         {
             // Validar que los campos obligatorios no estén vacíos
             if (string.IsNullOrWhiteSpace(ObjProveedor.txtNewFirstName.Text) ||
@@ -70,30 +70,68 @@ namespace AgroServicios.Controlador.ControladorStats
                 string.IsNullOrEmpty(ObjProveedor.maskDui.Text) ||
                 ObjProveedor.cmbMarca.SelectedValue == null)
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "El nombre, el teléfono y el dui son obligatorios", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Name, phone and dui are required.", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "El nombre, el teléfono y el dui son obligatorios", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar que el nombre solo contenga letras y no exceda 65 caracteres
             string nombreCliente = ObjProveedor.txtNewFirstName.Text.Trim();
             if (!ValidarLetra(nombreCliente) || !ValidarNombre(nombreCliente))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El nombre nombre tiene numeros o tiene más de 50 letras", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Name has numbers or has more than 65 letters", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El nombre nombre tiene numeros o tiene más de 65 letras", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar el formato del número de teléfono y que este tenga las caragteristicas de un numero de telefono salvadoreño
             if (!ValidarTelefono(ObjProveedor.txtNewPhone.Text))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El telefono debe de ser de El Salvador", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "The phone must be from El Salvador", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El telefono debe de ser de El Salvador", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar el formato del DUI y que este no tenga menos de 8 numeros
             if (!ValidarDUI(ObjProveedor.maskDui.Text))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Hay menos de 8 numeros en el dui", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("The supplier's DUI must contain exactly 9 digits.",
+                                    "Validation error",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("El DUI del proveedor debe contener exactamente 9 dígitos",
+                    "Error de validación",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                    return;
+                }
             }
 
             //Realizamos el proceso de inserción
@@ -113,8 +151,16 @@ namespace AgroServicios.Controlador.ControladorStats
                 string correoCliente = ObjProveedor.txtNewCorreo.Text.Trim();
                 if (!ValidarCorreo(correoCliente) || !ValidarCorreoCantidad(correoCliente))
                 {
-                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Notiene el @, el dominio o hay mas de 75 caragteres en el corréo", Properties.Resources.MensajeWarning);
-                    return;
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "No @, no domain or more than 75 characters in the e-mail", Properties.Resources.MensajeWarning);
+                        return;
+                    }
+                    else
+                    {
+                        MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "No tiene el @, el dominio o hay mas de 75 caracteres en el correo", Properties.Resources.MensajeWarning);
+                        return;
+                    }
                 }
             }
             //Pedimos una contestación por parte de la base de datos, si nos manda un 1 es que si se logro realizar correctamente la insercción
@@ -122,15 +168,32 @@ namespace AgroServicios.Controlador.ControladorStats
             if (valorRetornado == 1)
             {
                 //Mensaje de afirmacion si se pudo realizar la inserccion
-                MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "El proveedor fue registrado", Properties.Resources.comprobado);
-                VistaLogin backForm = new VistaLogin();
-                ObjProveedor.Close();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Process performed", "Supplier was registered", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                    ObjProveedor.Close();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "El proveedor fue registrado", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                    ObjProveedor.Close();
+                }
             }
             else
             {
                 //Mensaje de error si se no se pudo realizar la inserccion
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el proveedor no se este duplicando", Properties.Resources.ErrorIcono);
-                VistaLogin backForm = new VistaLogin();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verify that the supplier is not being duplicated.", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el proveedor no se este duplicando", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
             }
 
             //Metodos para validar los datos ingresados por el usuario
