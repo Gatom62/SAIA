@@ -70,12 +70,40 @@ namespace AgroServicios.Controlador.CuentasContralador
             ////Llenar DataGridView
             ObjAdminUser.GriewEmpleados.DataSource = ds.Tables["VistaEmpleadosConRol"];
             // Traducir encabezados de las columnas
-
+            TraducirEncabezados(ObjAdminUser.GriewEmpleados);
+            //O cultamos elementos que no son nesesarios para los procesos de recuperacion de contraseña
             ObjAdminUser.GriewEmpleados.Columns["Image"].Visible = false;
             ObjAdminUser.GriewEmpleados.Columns["ID del empleado"].Visible = false;
             ObjAdminUser.cmsEliminar.Visible = false;
             ObjAdminUser.cmsPreguntas.Visible = false;
             ObjAdminUser.cmsUpdate.Visible = false;
+        }
+        private void TraducirEncabezados(DataGridView dgv)
+        {
+            if (ControladorIdioma.idioma == 1)
+            {
+                dgv.Columns["ID del empleado"].HeaderText = "Employee ID";
+                dgv.Columns["Nombre"].HeaderText = "Name";
+                dgv.Columns["Fecha de nacimiento"].HeaderText = "Birthdate";
+                dgv.Columns["Telefono"].HeaderText = "Phone";
+                dgv.Columns["Correo"].HeaderText = "Email";
+                dgv.Columns["DUI"].HeaderText = "DUI";
+                dgv.Columns["Dirección"].HeaderText = "Address";
+                dgv.Columns["Usuario"].HeaderText = "Username";
+                dgv.Columns["Rol"].HeaderText = "Role";
+            }
+            else
+            {
+                dgv.Columns["ID del empleado"].HeaderText = "ID del empleado";
+                dgv.Columns["Nombre"].HeaderText = "Nombre";
+                dgv.Columns["Fecha de nacimiento"].HeaderText = "Fecha de nacimiento";
+                dgv.Columns["Telefono"].HeaderText = "Teléfono";
+                dgv.Columns["Correo"].HeaderText = "Correo";
+                dgv.Columns["DUI"].HeaderText = "DUI";
+                dgv.Columns["Dirección"].HeaderText = "Dirección";
+                dgv.Columns["Usuario"].HeaderText = "Usuario";
+                dgv.Columns["Rol"].HeaderText = "Rol";
+            }
         }
         private void Infoempleado(object sender, EventArgs e)
         {

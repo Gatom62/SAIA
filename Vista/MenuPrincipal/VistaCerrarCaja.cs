@@ -19,7 +19,6 @@ namespace AgroServicios.Vista.MenuPrincipal
             InitializeComponent();
             ControladorCerrarCaja control = new ControladorCerrarCaja(this);
         }
-
         private void VistaCerrarCaja_Load(object sender, EventArgs e)
         {
             if (ControladorTema.IsDarkMode == true) 
@@ -32,6 +31,7 @@ namespace AgroServicios.Vista.MenuPrincipal
                 btnCerrarCaja.onHoverState.BorderColor = Color.FromArgb(211, 41, 15);
                 btnCerrarCaja.OnPressedState.FillColor = Color.Red;
                 btnCerrarCaja.OnPressedState.BorderColor = Color.Red;
+                btnCerrarCaja.DisabledFillColor = Color.DarkOrange;
             }
 
             if (ControladorIdioma.idioma == 1) 

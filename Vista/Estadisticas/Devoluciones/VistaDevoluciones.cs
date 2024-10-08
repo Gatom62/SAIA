@@ -40,6 +40,19 @@ namespace AgroServicios.Vista.Estadisticas.Devoluciones
                 txtMonto.BorderColorHover = Color.FromArgb(211, 41, 15);
                 txtMonto.BorderColorActive = Color.FromArgb(211, 41, 15);
             }
+
+            if (ControladorIdioma.idioma == 1) 
+            {
+                LabelPrin.Text = Ingles.Ingresar_una_devolucion;
+                lbCantidadProductoDevuelto.Text = Ingles.CantidadProductoDevuelto;
+                lbFechaDevolucion.Text = Ingles.FechaDevolucion;
+                lbIdVenta.Text = Ingles.IdVenta;
+                lbMontoDevolucion.Text = Ingles.MontoDevolucion;
+                lbMotivoDevolucion.Text = Ingles.MotivoDevolucion;
+                lbNombreCliente.Text = Ingles.NombreCliente;
+                lbNombreProducto.Text = Ingles.NombreProducto;
+                btnCrearDevoluciones.Text = Ingles.CrearDevolucion;
+            }
         }
     }
 }

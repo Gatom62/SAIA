@@ -44,7 +44,15 @@ namespace AgroServicios.Vista.Clientes
                 txtUbdateCorreoCliente.BorderColorActive = Color.FromArgb(211, 41, 15);
                 txtUbdateDireccionCliente.BorderColorHover = Color.FromArgb(211, 41, 15);
                 txtUbdateDireccionCliente.BorderColorActive = Color.FromArgb(211, 41, 15);
+            }
 
+            if (ControladorIdioma.idioma == 1) 
+            {
+                txtUbdateNombreCliente.Text = Ingles.Nombre;
+                txtUbdateTelefonoCliente.Text = Ingles.Telefono;
+                txtUbdateCorreoCliente.Text = Ingles.Correo;
+                txtUbdateDireccionCliente.Text = Ingles.Direccion;
+                btnUbdateCliente.Text = Ingles.Actualizar;
             }
         }
     }

@@ -19,7 +19,6 @@ namespace AgroServicios.Vista.MenuPrincipal
             InitializeComponent();
             ControladorFiltroVentas control = new ControladorFiltroVentas(this);
         }
-
         private void VistaVentasPorFecha_Load(object sender, EventArgs e)
         {
             if(ControladorTema.IsDarkMode == true)
@@ -43,6 +42,5 @@ namespace AgroServicios.Vista.MenuPrincipal
                 btnBuscar.Text = "Search";
             }
         }
-
     }
 }

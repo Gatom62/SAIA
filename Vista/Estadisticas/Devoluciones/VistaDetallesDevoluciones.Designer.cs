@@ -43,7 +43,7 @@
             this.ptbback = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbDevoluciones = new System.Windows.Forms.Label();
             this.btnHacerDevolucion = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDevoluciones)).BeginInit();
             this.ContextMenuProductos.SuspendLayout();
@@ -213,10 +213,10 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.9697F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.0303F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.81752F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.18248F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tableLayoutPanel2.Controls.Add(this.lbDevoluciones, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnHacerDevolucion, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(188, 2);
@@ -227,17 +227,17 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(838, 64);
             this.tableLayoutPanel2.TabIndex = 42;
             // 
-            // label1
+            // lbDevoluciones
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 41);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Devoluciónes";
+            this.lbDevoluciones.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbDevoluciones.AutoSize = true;
+            this.lbDevoluciones.BackColor = System.Drawing.Color.Transparent;
+            this.lbDevoluciones.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDevoluciones.Location = new System.Drawing.Point(3, 11);
+            this.lbDevoluciones.Name = "lbDevoluciones";
+            this.lbDevoluciones.Size = new System.Drawing.Size(246, 41);
+            this.lbDevoluciones.TabIndex = 1;
+            this.lbDevoluciones.Text = "Devoluciónes";
             // 
             // btnHacerDevolucion
             // 
@@ -289,7 +289,7 @@
             this.btnHacerDevolucion.IdleIconLeftImage = null;
             this.btnHacerDevolucion.IdleIconRightImage = null;
             this.btnHacerDevolucion.IndicateFocus = false;
-            this.btnHacerDevolucion.Location = new System.Drawing.Point(649, 9);
+            this.btnHacerDevolucion.Location = new System.Drawing.Point(626, 9);
             this.btnHacerDevolucion.Name = "btnHacerDevolucion";
             this.btnHacerDevolucion.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnHacerDevolucion.OnDisabledState.BorderRadius = 25;
@@ -323,7 +323,7 @@
             this.btnHacerDevolucion.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnHacerDevolucion.OnPressedState.IconLeftImage = null;
             this.btnHacerDevolucion.OnPressedState.IconRightImage = null;
-            this.btnHacerDevolucion.Size = new System.Drawing.Size(161, 46);
+            this.btnHacerDevolucion.Size = new System.Drawing.Size(184, 46);
             this.btnHacerDevolucion.TabIndex = 2;
             this.btnHacerDevolucion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHacerDevolucion.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -363,7 +363,7 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuIconButton ptbback;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbDevoluciones;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton btnHacerDevolucion;
         public System.Windows.Forms.ContextMenuStrip ContextMenuProductos;
         public System.Windows.Forms.ToolStripMenuItem cmsInformacion;

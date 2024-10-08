@@ -119,10 +119,10 @@
             this.txtContraseña.SelectedText = "";
             this.txtContraseña.SelectionLength = 0;
             this.txtContraseña.SelectionStart = 0;
-            this.txtContraseña.ShortcutsEnabled = true;
+            this.txtContraseña.ShortcutsEnabled = false;
             this.txtContraseña.Size = new System.Drawing.Size(229, 35);
             this.txtContraseña.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtContraseña.TabIndex = 32;
+            this.txtContraseña.TabIndex = 2;
             this.txtContraseña.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtContraseña.TextMarginBottom = 0;
             this.txtContraseña.TextMarginLeft = 3;
@@ -145,7 +145,7 @@
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
             this.bunifuSeparator1.Size = new System.Drawing.Size(537, 21);
-            this.bunifuSeparator1.TabIndex = 30;
+            this.bunifuSeparator1.TabIndex = 0;
             // 
             // bunifuPictureBox1
             // 
@@ -229,10 +229,10 @@
             this.txtUser.SelectedText = "";
             this.txtUser.SelectionLength = 0;
             this.txtUser.SelectionStart = 0;
-            this.txtUser.ShortcutsEnabled = true;
+            this.txtUser.ShortcutsEnabled = false;
             this.txtUser.Size = new System.Drawing.Size(229, 35);
             this.txtUser.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtUser.TabIndex = 31;
+            this.txtUser.TabIndex = 1;
             this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUser.TextMarginBottom = 0;
             this.txtUser.TextMarginLeft = 3;
@@ -349,7 +349,7 @@
             this.btnVerificar.OnPressedState.IconLeftImage = null;
             this.btnVerificar.OnPressedState.IconRightImage = null;
             this.btnVerificar.Size = new System.Drawing.Size(262, 32);
-            this.btnVerificar.TabIndex = 36;
+            this.btnVerificar.TabIndex = 3;
             this.btnVerificar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnVerificar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnVerificar.TextMarginLeft = 0;
@@ -386,7 +386,7 @@
             this.ptbback.ShowBorders = false;
             this.ptbback.Size = new System.Drawing.Size(50, 48);
             this.ptbback.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Flat;
-            this.ptbback.TabIndex = 34;
+            this.ptbback.TabIndex = 4;
             this.ptbback.MouseEnter += new System.EventHandler(this.ptbback_MouseEnter);
             this.ptbback.MouseLeave += new System.EventHandler(this.ptbback_MouseLeave);
             // 
@@ -420,7 +420,7 @@
             this.PasswordHide.ShowBorders = true;
             this.PasswordHide.Size = new System.Drawing.Size(30, 30);
             this.PasswordHide.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
-            this.PasswordHide.TabIndex = 37;
+            this.PasswordHide.TabIndex = 0;
             // 
             // PasswordVisible
             // 
@@ -452,7 +452,7 @@
             this.PasswordVisible.ShowBorders = true;
             this.PasswordVisible.Size = new System.Drawing.Size(30, 30);
             this.PasswordVisible.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
-            this.PasswordVisible.TabIndex = 38;
+            this.PasswordVisible.TabIndex = 0;
             // 
             // VistaValidacionBase
             // 

@@ -42,7 +42,7 @@ namespace AgroServicios.Vista.Cuentas
                 btnUpdateEmpleado.OnPressedState.BorderColor = Color.Red;
                 btnUpdateEmpleado.DisabledFillColor = Color.DarkOrange;
 
-                pnTitulo.BackColor = Color.DarkOrange;
+                pnTitulo.BackColor = Color.WhiteSmoke;
 
                 txtUser.BorderColorHover = Color.FromArgb(211, 41, 15);
                 txtUser.BorderColorActive = Color.FromArgb(211, 41, 15);

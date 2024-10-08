@@ -192,10 +192,10 @@ namespace AgroServicios.Controlador.Login
                 tituloCampos = "Validation error";
                 mensajeError = "Incorrect data";
                 tituloError = "Login error";
-                configuracionRequerida = "Configuración requerida";
-                debeConfigurarPreguntas = "Debe configurar sus preguntas de seguridad para continuar.";
-                UsuarioContraError = "Usuario o contraseña incorrectos.";
-                errorAutentication = "Error de autenticación";
+                configuracionRequerida = "Required configuration";
+                debeConfigurarPreguntas = "You must set up your security questions to continue.";
+                UsuarioContraError = "Incorrect username or password.";
+                errorAutentication = "Authentication error.";
             }
             else
             {
@@ -203,10 +203,10 @@ namespace AgroServicios.Controlador.Login
                 tituloCampos = "Error de validación";
                 mensajeError = "Datos incorrectos";
                 tituloError = "Error al iniciar sesión";
-                configuracionRequerida = "Required configuration";
-                debeConfigurarPreguntas = "You must set up your security questions to continue.";
-                UsuarioContraError = "Incorrect username or password.";
-                errorAutentication = "Authentication error";
+                configuracionRequerida = "Configuración requerida";
+                debeConfigurarPreguntas = "Debe de configurar sus preguntas de seguridad antes de continuar.";
+                UsuarioContraError = "Error de Autenticación.";
+                errorAutentication = "Usuario o contraseña incorrectos.";
             }
 
             if (string.IsNullOrWhiteSpace(ObjLogin.txtUsername.Text) || string.IsNullOrWhiteSpace(ObjLogin.txtPassword.Text))

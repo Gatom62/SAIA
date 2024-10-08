@@ -240,7 +240,6 @@ namespace AgroServicios.Controlador.CuentasContralador
                 dgv.Columns["Rol"].HeaderText = "Rol";
             }
         }
-
         private void OpenFormCreateUser(object sender, EventArgs e)
         {
             CreateUser createUser = new CreateUser(1);

@@ -164,8 +164,20 @@ namespace AgroServicios.Controlador.Productos1
 
             //Para ocultar columnas que no creo que sehan nesesarias de ver
             ObjCreateMarca.GriewViewMarcas.Columns["Codigo de la Marca"].Visible = false;
+            // Traducir encabezados de las columnas
+            TraducirEncabezados(ObjCreateMarca.GriewViewMarcas);
         }
-
+        private void TraducirEncabezados(DataGridView dgv)
+        {
+            if (ControladorIdioma.idioma == 1)
+            {
+                dgv.Columns["Nombre de la Marca"].HeaderText = "Brand Name";
+            }
+            else
+            {
+                dgv.Columns["Nombre de la Marca"].HeaderText = "Nombre de la Marca";
+            }
+        }
         private void EliminarMarca(object sender, EventArgs e)
         {
             int pos = ObjCreateMarca.GriewViewMarcas.CurrentRow.Index;

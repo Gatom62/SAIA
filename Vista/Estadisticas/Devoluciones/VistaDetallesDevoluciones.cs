@@ -52,6 +52,22 @@ namespace AgroServicios.Vista.Estadisticas.Devoluciones
                 tableLayoutPanel1.BackColor = Color.FromArgb(118, 88, 152);
                 dgvDevoluciones.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
                 dgvDevoluciones.BackgroundColor = Color.FromArgb(50, 56, 62);
+                //Para cambiar el color del voton btnHacerDevolucion cuando el programa se encuentre en modo oscuro.
+                btnHacerDevolucion.IdleFillColor = Color.DarkBlue;
+                btnHacerDevolucion.onHoverState.FillColor = Color.DarkViolet;
+                btnHacerDevolucion.onHoverState.BorderColor = Color.DarkViolet;
+                btnHacerDevolucion.OnPressedState.FillColor = Color.DodgerBlue;
+                btnHacerDevolucion.OnPressedState.BorderColor = Color.DodgerBlue;
+                btnHacerDevolucion.DisabledFillColor = Color.DarkViolet;
+
+                btnHacerDevolucion.DisabledFillColor = Color.FromArgb(118, 88, 152);
+                btnHacerDevolucion.ForeColor = Color.White;
+            }
+
+            if (ControladorIdioma.idioma == 1) 
+            {
+                lbDevoluciones.Text = Ingles.Devoluciones;
+                btnHacerDevolucion.Text = Ingles.HacerDevolucion;
             }
         }
     }

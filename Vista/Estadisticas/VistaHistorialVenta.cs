@@ -37,6 +37,27 @@ namespace AgroServicios.Vista.Estadisticas
                 tableLayoutPanel1.BackColor = Color.FromArgb(118, 88, 152);
                 dgvVentas.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
                 dgvVentas.BackgroundColor = Color.FromArgb(50, 56, 62);
+
+                btnDevoluciones.IdleFillColor = Color.FromArgb(230, 119, 11);
+                btnDevoluciones.onHoverState.FillColor = Color.FromArgb(211, 41, 15);
+                btnDevoluciones.onHoverState.BorderColor = Color.FromArgb(211, 41, 15);
+                btnDevoluciones.OnPressedState.FillColor = Color.Red;
+                btnDevoluciones.OnPressedState.BorderColor = Color.Red;
+                btnDevoluciones.DisabledFillColor = Color.DarkOrange;
+
+                btnReporte.IdleFillColor = Color.FromArgb(230, 119, 11);
+                btnReporte.onHoverState.FillColor = Color.FromArgb(211, 41, 15);
+                btnReporte.onHoverState.BorderColor = Color.FromArgb(211, 41, 15);
+                btnReporte.OnPressedState.FillColor = Color.Red;
+                btnReporte.OnPressedState.BorderColor = Color.Red;
+                btnReporte.DisabledFillColor = Color.DarkOrange;
+            }
+
+            if (ControladorIdioma.idioma == 1)
+            {
+                label1.Text = "Sales history";
+                btnDevoluciones.Text = "Returns";
+                btnReporte.Text = "Sales sheet";
             }
         }
 

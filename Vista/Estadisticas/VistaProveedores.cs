@@ -36,6 +36,7 @@ namespace AgroServicios.Vista.Estadisticas
                 btnAgregarProv.Text = Ingles.btnAñadirP;
                 cmsActualizar.Text = Ingles.CMSUPP;
                 cmsEliminar.Text = Ingles.CMSELIP;
+                txtBuscarP.Text = Ingles.Busqueda;
             } 
             if (ControladorTema.IsDarkMode) 
             {

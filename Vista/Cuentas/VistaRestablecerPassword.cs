@@ -24,14 +24,26 @@ namespace AgroServicios.Vista.Cuentas
         {
             if (ControladorTema.IsDarkMode == true)
             {
-                bunifuGradientPanel2.GradientBottomLeft = Color.FromArgb(118, 88, 152);
-                bunifuGradientPanel2.GradientTopRight = Color.FromArgb(34, 36, 49);
-                bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(118, 88, 152);
-                bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(34, 36, 49);
+                btnRestablecer.IdleFillColor = Color.FromArgb(230, 119, 11);
+                btnRestablecer.onHoverState.FillColor = Color.FromArgb(211, 41, 15);
+                btnRestablecer.onHoverState.BorderColor = Color.FromArgb(211, 41, 15);
+                btnRestablecer.OnPressedState.FillColor = Color.Red;
+                btnRestablecer.OnPressedState.BorderColor = Color.Red;
+                btnRestablecer.DisabledFillColor = Color.DarkOrange;
+
+                pnTitulo.BackColor = Color.WhiteSmoke;
+
+                txtRest.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtRest.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtRestPass.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtRestPass.BorderColorActive = Color.FromArgb(211, 41, 15);
             }
+
             if(ControladorIdioma.idioma == 1)
             {
-                label1.Text = Ingles.LabelRestUser;
+                LabelPrin.Text = Ingles.ActualizarContra;
+                txtRestPass.Text = Ingles.contraseña;
+                btnRestablecer.Text = Ingles.ActualizarContra;
             }
         }
     }

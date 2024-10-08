@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaLoguinCambiarContrasena));
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -39,17 +38,18 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnTitulo = new System.Windows.Forms.TableLayoutPanel();
             this.ptbback = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.LbLabelTitulo = new System.Windows.Forms.Label();
-            this.btnValidar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtContraseña = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtUsuario = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.btnValidar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             this.pnTitulo.SuspendLayout();
@@ -73,7 +73,7 @@
             this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(680, 413);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(604, 390);
             this.bunifuGradientPanel2.TabIndex = 0;
             // 
             // bunifuPanel1
@@ -84,26 +84,26 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 20;
             this.bunifuPanel1.BorderThickness = 2;
-            this.bunifuPanel1.Controls.Add(this.pnTitulo);
             this.bunifuPanel1.Controls.Add(this.btnValidar);
+            this.bunifuPanel1.Controls.Add(this.pnTitulo);
             this.bunifuPanel1.Controls.Add(this.pictureBox1);
             this.bunifuPanel1.Controls.Add(this.pictureBox3);
             this.bunifuPanel1.Controls.Add(this.txtContraseña);
             this.bunifuPanel1.Controls.Add(this.txtUsuario);
             this.bunifuPanel1.Controls.Add(this.bunifuShadowPanel2);
-            this.bunifuPanel1.Location = new System.Drawing.Point(55, 32);
+            this.bunifuPanel1.Location = new System.Drawing.Point(47, 32);
             this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(575, 349);
+            this.bunifuPanel1.Size = new System.Drawing.Size(514, 329);
             this.bunifuPanel1.TabIndex = 0;
             // 
             // pnTitulo
             // 
             this.pnTitulo.ColumnCount = 3;
             this.pnTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.pnTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.pnTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.pnTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.70428F));
+            this.pnTitulo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.45136F));
             this.pnTitulo.Controls.Add(this.ptbback, 0, 0);
             this.pnTitulo.Controls.Add(this.LbLabelTitulo, 1, 0);
             this.pnTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -112,7 +112,7 @@
             this.pnTitulo.Name = "pnTitulo";
             this.pnTitulo.RowCount = 1;
             this.pnTitulo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.pnTitulo.Size = new System.Drawing.Size(575, 66);
+            this.pnTitulo.Size = new System.Drawing.Size(514, 66);
             this.pnTitulo.TabIndex = 21;
             // 
             // ptbback
@@ -131,15 +131,15 @@
             this.ptbback.ColorContrastOnClick = 30;
             this.ptbback.ColorContrastOnHover = 30;
             this.ptbback.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.ptbback.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.ptbback.CustomizableEdges = borderEdges2;
             this.ptbback.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ptbback.Image = global::AgroServicios.Properties.Resources.turn_left_11044726;
             this.ptbback.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.ptbback.Location = new System.Drawing.Point(32, 9);
+            this.ptbback.Location = new System.Drawing.Point(26, 9);
             this.ptbback.Margin = new System.Windows.Forms.Padding(2);
             this.ptbback.Name = "ptbback";
             this.ptbback.RoundBorders = false;
@@ -155,108 +155,18 @@
             this.LbLabelTitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LbLabelTitulo.AutoSize = true;
             this.LbLabelTitulo.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbLabelTitulo.Location = new System.Drawing.Point(119, 14);
+            this.LbLabelTitulo.Location = new System.Drawing.Point(107, 14);
             this.LbLabelTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LbLabelTitulo.Name = "LbLabelTitulo";
             this.LbLabelTitulo.Size = new System.Drawing.Size(336, 37);
             this.LbLabelTitulo.TabIndex = 0;
             this.LbLabelTitulo.Text = "Ingrese su contraseña";
             // 
-            // btnValidar
-            // 
-            this.btnValidar.AllowAnimations = true;
-            this.btnValidar.AllowMouseEffects = true;
-            this.btnValidar.AllowToggling = false;
-            this.btnValidar.AnimationSpeed = 200;
-            this.btnValidar.AutoGenerateColors = false;
-            this.btnValidar.AutoRoundBorders = true;
-            this.btnValidar.AutoSizeLeftIcon = true;
-            this.btnValidar.AutoSizeRightIcon = true;
-            this.btnValidar.BackColor = System.Drawing.Color.Transparent;
-            this.btnValidar.BackColor1 = System.Drawing.Color.DodgerBlue;
-            this.btnValidar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnValidar.BackgroundImage")));
-            this.btnValidar.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnValidar.ButtonText = "Validar datos";
-            this.btnValidar.ButtonTextMarginLeft = 0;
-            this.btnValidar.ColorContrastOnClick = 45;
-            this.btnValidar.ColorContrastOnHover = 45;
-            this.btnValidar.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnValidar.CustomizableEdges = borderEdges2;
-            this.btnValidar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnValidar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnValidar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnValidar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnValidar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnValidar.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnValidar.ForeColor = System.Drawing.Color.White;
-            this.btnValidar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnValidar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnValidar.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnValidar.IconMarginLeft = 11;
-            this.btnValidar.IconPadding = 10;
-            this.btnValidar.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnValidar.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnValidar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnValidar.IconSize = 25;
-            this.btnValidar.IdleBorderColor = System.Drawing.Color.White;
-            this.btnValidar.IdleBorderRadius = 38;
-            this.btnValidar.IdleBorderThickness = 1;
-            this.btnValidar.IdleFillColor = System.Drawing.Color.DodgerBlue;
-            this.btnValidar.IdleIconLeftImage = null;
-            this.btnValidar.IdleIconRightImage = null;
-            this.btnValidar.IndicateFocus = false;
-            this.btnValidar.Location = new System.Drawing.Point(169, 275);
-            this.btnValidar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnValidar.Name = "btnValidar";
-            this.btnValidar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnValidar.OnDisabledState.BorderRadius = 1;
-            this.btnValidar.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnValidar.OnDisabledState.BorderThickness = 1;
-            this.btnValidar.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnValidar.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnValidar.OnDisabledState.IconLeftImage = null;
-            this.btnValidar.OnDisabledState.IconRightImage = null;
-            this.btnValidar.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnValidar.onHoverState.BorderRadius = 1;
-            this.btnValidar.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnValidar.onHoverState.BorderThickness = 1;
-            this.btnValidar.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnValidar.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnValidar.onHoverState.IconLeftImage = null;
-            this.btnValidar.onHoverState.IconRightImage = null;
-            this.btnValidar.OnIdleState.BorderColor = System.Drawing.Color.White;
-            this.btnValidar.OnIdleState.BorderRadius = 1;
-            this.btnValidar.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnValidar.OnIdleState.BorderThickness = 1;
-            this.btnValidar.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnValidar.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnValidar.OnIdleState.IconLeftImage = null;
-            this.btnValidar.OnIdleState.IconRightImage = null;
-            this.btnValidar.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnValidar.OnPressedState.BorderRadius = 1;
-            this.btnValidar.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnValidar.OnPressedState.BorderThickness = 1;
-            this.btnValidar.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnValidar.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnValidar.OnPressedState.IconLeftImage = null;
-            this.btnValidar.OnPressedState.IconRightImage = null;
-            this.btnValidar.Size = new System.Drawing.Size(235, 40);
-            this.btnValidar.TabIndex = 3;
-            this.btnValidar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnValidar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnValidar.TextMarginLeft = 0;
-            this.btnValidar.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnValidar.UseDefaultRadiusAndThickness = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::AgroServicios.Properties.Resources.Logo_Candado;
-            this.pictureBox1.Location = new System.Drawing.Point(68, 188);
+            this.pictureBox1.Location = new System.Drawing.Point(46, 181);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(42, 41);
@@ -268,7 +178,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = global::AgroServicios.Properties.Resources.Rectangle_32;
-            this.pictureBox3.Location = new System.Drawing.Point(68, 106);
+            this.pictureBox3.Location = new System.Drawing.Point(46, 99);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(42, 41);
@@ -305,7 +215,7 @@
             this.txtContraseña.IconRight = null;
             this.txtContraseña.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtContraseña.Lines = new string[0];
-            this.txtContraseña.Location = new System.Drawing.Point(114, 188);
+            this.txtContraseña.Location = new System.Drawing.Point(92, 181);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseña.MaxLength = 32767;
             this.txtContraseña.MinimumSize = new System.Drawing.Size(1, 1);
@@ -383,7 +293,7 @@
             this.txtUsuario.IconRight = null;
             this.txtUsuario.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuario.Lines = new string[0];
-            this.txtUsuario.Location = new System.Drawing.Point(114, 106);
+            this.txtUsuario.Location = new System.Drawing.Point(92, 99);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.MaxLength = 32767;
             this.txtUsuario.MinimumSize = new System.Drawing.Size(1, 1);
@@ -452,16 +362,106 @@
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 29;
             // 
+            // btnValidar
+            // 
+            this.btnValidar.AllowAnimations = true;
+            this.btnValidar.AllowMouseEffects = true;
+            this.btnValidar.AllowToggling = false;
+            this.btnValidar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnValidar.AnimationSpeed = 200;
+            this.btnValidar.AutoGenerateColors = false;
+            this.btnValidar.AutoRoundBorders = false;
+            this.btnValidar.AutoSizeLeftIcon = true;
+            this.btnValidar.AutoSizeRightIcon = true;
+            this.btnValidar.BackColor = System.Drawing.Color.Transparent;
+            this.btnValidar.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.btnValidar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnValidar.BackgroundImage")));
+            this.btnValidar.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnValidar.ButtonText = "Validar datos";
+            this.btnValidar.ButtonTextMarginLeft = 0;
+            this.btnValidar.ColorContrastOnClick = 45;
+            this.btnValidar.ColorContrastOnHover = 45;
+            this.btnValidar.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnValidar.CustomizableEdges = borderEdges1;
+            this.btnValidar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnValidar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnValidar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnValidar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnValidar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnValidar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnValidar.ForeColor = System.Drawing.Color.White;
+            this.btnValidar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnValidar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnValidar.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnValidar.IconMarginLeft = 11;
+            this.btnValidar.IconPadding = 10;
+            this.btnValidar.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnValidar.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnValidar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnValidar.IconSize = 25;
+            this.btnValidar.IdleBorderColor = System.Drawing.Color.Transparent;
+            this.btnValidar.IdleBorderRadius = 20;
+            this.btnValidar.IdleBorderThickness = 1;
+            this.btnValidar.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.btnValidar.IdleIconLeftImage = null;
+            this.btnValidar.IdleIconRightImage = null;
+            this.btnValidar.IndicateFocus = false;
+            this.btnValidar.Location = new System.Drawing.Point(143, 257);
+            this.btnValidar.Name = "btnValidar";
+            this.btnValidar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnValidar.OnDisabledState.BorderRadius = 20;
+            this.btnValidar.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnValidar.OnDisabledState.BorderThickness = 1;
+            this.btnValidar.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnValidar.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnValidar.OnDisabledState.IconLeftImage = null;
+            this.btnValidar.OnDisabledState.IconRightImage = null;
+            this.btnValidar.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnValidar.onHoverState.BorderRadius = 20;
+            this.btnValidar.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnValidar.onHoverState.BorderThickness = 1;
+            this.btnValidar.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnValidar.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnValidar.onHoverState.IconLeftImage = null;
+            this.btnValidar.onHoverState.IconRightImage = null;
+            this.btnValidar.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnValidar.OnIdleState.BorderRadius = 20;
+            this.btnValidar.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnValidar.OnIdleState.BorderThickness = 1;
+            this.btnValidar.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnValidar.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnValidar.OnIdleState.IconLeftImage = null;
+            this.btnValidar.OnIdleState.IconRightImage = null;
+            this.btnValidar.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnValidar.OnPressedState.BorderRadius = 20;
+            this.btnValidar.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnValidar.OnPressedState.BorderThickness = 1;
+            this.btnValidar.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnValidar.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnValidar.OnPressedState.IconLeftImage = null;
+            this.btnValidar.OnPressedState.IconRightImage = null;
+            this.btnValidar.Size = new System.Drawing.Size(215, 41);
+            this.btnValidar.TabIndex = 35;
+            this.btnValidar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnValidar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnValidar.TextMarginLeft = 0;
+            this.btnValidar.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnValidar.UseDefaultRadiusAndThickness = true;
+            // 
             // VistaLoguinCambiarContrasena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 413);
+            this.ClientSize = new System.Drawing.Size(604, 390);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(680, 413);
-            this.MinimumSize = new System.Drawing.Size(680, 413);
+            this.MaximumSize = new System.Drawing.Size(604, 390);
+            this.MinimumSize = new System.Drawing.Size(604, 390);
             this.Name = "VistaLoguinCambiarContrasena";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Validar Contraseña actual - Usuario";
@@ -483,11 +483,11 @@
         private System.Windows.Forms.TableLayoutPanel pnTitulo;
         public Bunifu.UI.WinForms.BunifuButton.BunifuIconButton ptbback;
         public System.Windows.Forms.Label LbLabelTitulo;
-        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnValidar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         public Bunifu.UI.WinForms.BunifuTextBox txtContraseña;
         public Bunifu.UI.WinForms.BunifuTextBox txtUsuario;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnValidar;
     }
 }

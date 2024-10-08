@@ -25,7 +25,7 @@ namespace AgroServicios.Vista.Estadisticas
         {
             if (ControladorIdioma.idioma == 1)
             {
-                AñaP.Text = Ingles.txtAñaP;
+                AnaP.Text = Ingles.txtAñaP;
                 txtNewFirstName.PlaceholderText = Ingles.txtFN;
                 txtNewPhone.PlaceholderText = Ingles.txtTe;
                 txtNewCorreo.PlaceholderText = Ingles.txtCR;
@@ -53,11 +53,15 @@ namespace AgroServicios.Vista.Estadisticas
                 txtNewPhone.BorderColorHover = Color.FromArgb(211, 41, 15);
                 txtNewPhone.BorderColorActive = Color.FromArgb(211, 41, 15);
             }
-        }
 
-        private void bunifuToolTip1_Popup(object sender, BunifuToolTip.PopupEventArgs e)
-        {
-
+            if (ControladorIdioma.idioma == 1) 
+            {
+                AnaP.Text = Ingles.AgreagrProveedor;
+                txtNewFirstName.Text = Ingles.Nombre;
+                txtNewPhone.Text = Ingles.Telefono;
+                txtNewCorreo.Text = Ingles.Correo;
+                btnAgregarProv.Text = Ingles.Agregar;
+            }
         }
     }
 }

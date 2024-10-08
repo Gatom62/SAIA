@@ -62,7 +62,6 @@ namespace AgroServicios.Vista.Productos1
                 txtUbdateMarca.PlaceholderText = Ingles.NombreMarca;
                 btnUbdateMarca.Text = Ingles.Actualizar;
             }
-
         }
     }
 }

@@ -94,43 +94,40 @@ namespace AgroServicios.Controlador.Productos1
             //Declarando nuevo DataSet para que obtenga los datos del metodo ObtenerProductos
             DataSet ds = dAOProductos1.ObtenerProductos();
             ////Llenar DataGridView
-            ObjProductos.GriewViewProductos.DataSource = ds.Tables["Productos"];
+            ObjProductos.GriewViewProductos.DataSource = ds.Tables["ProductosMarcaView1"];
 
             //Para ocultar columnas que no creo que sehan nesesarias de ver
             //ObjProductos.GriewViewProductos.Columns["ID del producto"].Visible = false;
-            ObjProductos.GriewViewProductos.Columns["imgNombre"].Visible = false;
+            ObjProductos.GriewViewProductos.Columns["Imagen del producto"].Visible = false;
+            ObjProductos.GriewViewProductos.Columns["Descripción del producto"].Visible = false;
             // Traducir encabezados de las columnas
-            //TraducirEncabezados(ObjProductos.GriewViewProductos);
+            TraducirEncabezados(ObjProductos.GriewViewProductos);
         }
-
         private void TraducirEncabezados(DataGridView dgv)
         {
             if (ControladorIdioma.idioma == 1)
             {
-                dgv.Columns["ID del producto"].HeaderText = "Employee ID";
-                dgv.Columns["Nombre del producto"].HeaderText = "Name";
-                dgv.Columns["Marca del producto"].HeaderText = "Birthdate";
-                dgv.Columns["Telefono"].HeaderText = "Phone";
-                dgv.Columns["Correo"].HeaderText = "Email";
-                dgv.Columns["DUI"].HeaderText = "DUI";
-                dgv.Columns["Dirección"].HeaderText = "Address";
-                dgv.Columns["Usuario"].HeaderText = "Username";
-                dgv.Columns["Rol"].HeaderText = "Role";
+                dgv.Columns["ID del producto"].HeaderText = "Product Identification";
+                dgv.Columns["Nombre del producto"].HeaderText = "Product name";
+                dgv.Columns["Marca del producto"].HeaderText = "Product brand";
+                dgv.Columns["Precio del producto"].HeaderText = "Product price";
+                dgv.Columns["Cantidad del producto en el sistema"].HeaderText = "Quantity of product in the system";
+                dgv.Columns["Descripción del producto"].HeaderText = "Product Description";
+                dgv.Columns["Codigo del producto"].HeaderText = "Product code";
+                dgv.Columns["Imagen del producto"].HeaderText = "Product image";
             }
             else
             {
-                dgv.Columns["ID del empleado"].HeaderText = "ID del empleado";
-                dgv.Columns["Nombre"].HeaderText = "Nombre";
-                dgv.Columns["Fecha de nacimiento"].HeaderText = "Fecha de nacimiento";
-                dgv.Columns["Telefono"].HeaderText = "Teléfono";
-                dgv.Columns["Correo"].HeaderText = "Correo";
-                dgv.Columns["DUI"].HeaderText = "DUI";
-                dgv.Columns["Dirección"].HeaderText = "Dirección";
-                dgv.Columns["Usuario"].HeaderText = "Usuario";
-                dgv.Columns["Rol"].HeaderText = "Rol";
+                dgv.Columns["ID del producto"].HeaderText = "ID del producto";
+                dgv.Columns["Nombre del producto"].HeaderText = "Nombre del producto";
+                dgv.Columns["Marca del producto"].HeaderText = "Marca del producto";
+                dgv.Columns["Precio del producto"].HeaderText = "Precio del producto";
+                dgv.Columns["Cantidad del producto en el sistema"].HeaderText = "Cantidad del producto en el sistema";
+                dgv.Columns["Descripción del producto"].HeaderText = "Descripción del producto";
+                dgv.Columns["Codigo del producto"].HeaderText = "Codigo del producto";
+                dgv.Columns["Imagen del producto"].HeaderText = "Imagen del producto";
             }
         }
-
         private void NuevoProducto(object sender, EventArgs e)
         {
             VistaCreateProducto nuevoProducto = new VistaCreateProducto(1);

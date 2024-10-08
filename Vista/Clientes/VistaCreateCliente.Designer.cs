@@ -51,9 +51,9 @@
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnTitulo = new Bunifu.UI.WinForms.BunifuPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbAgregarCliente = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnAgregarCliente = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbDui = new Bunifu.UI.WinForms.BunifuLabel();
             this.maskDui = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.txtDireccionCliente = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -86,7 +86,7 @@
             this.pnEstructura.BorderThickness = 2;
             this.pnEstructura.Controls.Add(this.bunifuShadowPanel2);
             this.pnEstructura.Controls.Add(this.btnAgregarCliente);
-            this.pnEstructura.Controls.Add(this.bunifuLabel2);
+            this.pnEstructura.Controls.Add(this.lbDui);
             this.pnEstructura.Controls.Add(this.maskDui);
             this.pnEstructura.Controls.Add(this.pictureBox7);
             this.pnEstructura.Controls.Add(this.txtDireccionCliente);
@@ -141,7 +141,7 @@
             this.pnTitulo.BorderRadius = 20;
             this.pnTitulo.BorderThickness = 1;
             this.pnTitulo.Controls.Add(this.pictureBox1);
-            this.pnTitulo.Controls.Add(this.bunifuLabel1);
+            this.pnTitulo.Controls.Add(this.lbAgregarCliente);
             this.pnTitulo.Location = new System.Drawing.Point(0, 1);
             this.pnTitulo.Name = "pnTitulo";
             this.pnTitulo.ShowBorders = true;
@@ -165,24 +165,24 @@
             this.bunifuToolTip1.SetToolTipIcon(this.pictureBox1, null);
             this.bunifuToolTip1.SetToolTipTitle(this.pictureBox1, "");
             // 
-            // bunifuLabel1
+            // lbAgregarCliente
             // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel1.Location = new System.Drawing.Point(138, 22);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(186, 28);
-            this.bunifuLabel1.TabIndex = 0;
-            this.bunifuLabel1.Text = "Agregar Cliente";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.bunifuToolTip1.SetToolTip(this.bunifuLabel1, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.bunifuLabel1, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuLabel1, "");
+            this.lbAgregarCliente.AllowParentOverrides = false;
+            this.lbAgregarCliente.AutoEllipsis = false;
+            this.lbAgregarCliente.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbAgregarCliente.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lbAgregarCliente.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.lbAgregarCliente.Location = new System.Drawing.Point(138, 22);
+            this.lbAgregarCliente.Name = "lbAgregarCliente";
+            this.lbAgregarCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbAgregarCliente.Size = new System.Drawing.Size(186, 28);
+            this.lbAgregarCliente.TabIndex = 0;
+            this.lbAgregarCliente.Text = "Agregar Cliente";
+            this.lbAgregarCliente.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbAgregarCliente.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuToolTip1.SetToolTip(this.lbAgregarCliente, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbAgregarCliente, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbAgregarCliente, "");
             // 
             // btnAgregarCliente
             // 
@@ -276,24 +276,24 @@
             this.bunifuToolTip1.SetToolTipTitle(this.btnAgregarCliente, "");
             this.btnAgregarCliente.UseDefaultRadiusAndThickness = true;
             // 
-            // bunifuLabel2
+            // lbDui
             // 
-            this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.bunifuLabel2.Location = new System.Drawing.Point(208, 314);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(27, 20);
-            this.bunifuLabel2.TabIndex = 27;
-            this.bunifuLabel2.Text = "DUI";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.bunifuToolTip1.SetToolTip(this.bunifuLabel2, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.bunifuLabel2, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.bunifuLabel2, "");
+            this.lbDui.AllowParentOverrides = false;
+            this.lbDui.AutoEllipsis = false;
+            this.lbDui.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbDui.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lbDui.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+            this.lbDui.Location = new System.Drawing.Point(208, 314);
+            this.lbDui.Name = "lbDui";
+            this.lbDui.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbDui.Size = new System.Drawing.Size(27, 20);
+            this.lbDui.TabIndex = 27;
+            this.lbDui.Text = "DUI";
+            this.lbDui.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbDui.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuToolTip1.SetToolTip(this.lbDui, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbDui, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbDui, "");
             // 
             // maskDui
             // 
@@ -763,7 +763,7 @@
         private Bunifu.UI.WinForms.BunifuPanel pnEstructura;
         private Bunifu.UI.WinForms.BunifuPanel pnTitulo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuLabel lbAgregarCliente;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -774,7 +774,7 @@
         public Bunifu.UI.WinForms.BunifuTextBox txtTelefonoCliente;
         private System.Windows.Forms.PictureBox pictureBox7;
         private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip1;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private Bunifu.UI.WinForms.BunifuLabel lbDui;
         public System.Windows.Forms.MaskedTextBox maskDui;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAgregarCliente;

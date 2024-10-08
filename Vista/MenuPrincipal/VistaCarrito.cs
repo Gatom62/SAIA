@@ -101,6 +101,18 @@ namespace AgroServicios.Vista.MenuPrincipal
                 btnComprar.Text = Ingles.Comp;
                 btneliminar.Text = Ingles.Del;
                 txtBuscarClientes.PlaceholderText = Ingles.bc;
+
+                dgvCarrito.Columns[0].HeaderText = "Product";
+                dgvCarrito.Columns[1].HeaderText = "Quantity";
+                dgvCarrito.Columns[2].HeaderText = "Unit price";
+                dgvCarrito.Columns[3].HeaderText = "Total price";
+            }
+            else
+            {
+                dgvCarrito.Columns[0].HeaderText = "Producto";
+                dgvCarrito.Columns[1].HeaderText = "Cantidad";
+                dgvCarrito.Columns[2].HeaderText = "Precio unitario";
+                dgvCarrito.Columns[3].HeaderText = "Precio total";
             }
         }
     }

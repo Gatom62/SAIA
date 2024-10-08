@@ -101,11 +101,10 @@
             this.pnEstructura.Controls.Add(this.pictureBox2);
             this.pnEstructura.Controls.Add(this.bunifuShadowPanel2);
             this.pnEstructura.Controls.Add(this.menuStrip1);
-            this.pnEstructura.Location = new System.Drawing.Point(80, 22);
-            this.pnEstructura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnEstructura.Location = new System.Drawing.Point(44, 19);
             this.pnEstructura.Name = "pnEstructura";
             this.pnEstructura.ShowBorders = true;
-            this.pnEstructura.Size = new System.Drawing.Size(801, 489);
+            this.pnEstructura.Size = new System.Drawing.Size(490, 406);
             this.pnEstructura.TabIndex = 0;
             this.bunifuToolTip1.SetToolTip(this.pnEstructura, "");
             this.bunifuToolTip1.SetToolTipIcon(this.pnEstructura, null);
@@ -158,8 +157,7 @@
             this.btnUbdateCliente.IdleIconLeftImage = null;
             this.btnUbdateCliente.IdleIconRightImage = null;
             this.btnUbdateCliente.IndicateFocus = false;
-            this.btnUbdateCliente.Location = new System.Drawing.Point(284, 423);
-            this.btnUbdateCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUbdateCliente.Location = new System.Drawing.Point(175, 356);
             this.btnUbdateCliente.Name = "btnUbdateCliente";
             this.btnUbdateCliente.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnUbdateCliente.OnDisabledState.BorderRadius = 15;
@@ -193,7 +191,7 @@
             this.btnUbdateCliente.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnUbdateCliente.OnPressedState.IconLeftImage = null;
             this.btnUbdateCliente.OnPressedState.IconRightImage = null;
-            this.btnUbdateCliente.Size = new System.Drawing.Size(200, 48);
+            this.btnUbdateCliente.Size = new System.Drawing.Size(150, 39);
             this.btnUbdateCliente.TabIndex = 36;
             this.btnUbdateCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnUbdateCliente.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -211,11 +209,10 @@
             this.lbDUI.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbDUI.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbDUI.Font = new System.Drawing.Font("Century Gothic", 11.25F);
-            this.lbDUI.Location = new System.Drawing.Point(345, 377);
-            this.lbDUI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbDUI.Location = new System.Drawing.Point(206, 309);
             this.lbDUI.Name = "lbDUI";
             this.lbDUI.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbDUI.Size = new System.Drawing.Size(31, 22);
+            this.lbDUI.Size = new System.Drawing.Size(27, 20);
             this.lbDUI.TabIndex = 17;
             this.lbDUI.Text = "DUI";
             this.lbDUI.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -227,11 +224,10 @@
             // masDUIUbdate
             // 
             this.masDUIUbdate.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.masDUIUbdate.Location = new System.Drawing.Point(251, 377);
-            this.masDUIUbdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.masDUIUbdate.Location = new System.Drawing.Point(135, 309);
             this.masDUIUbdate.Mask = "00000000-0";
             this.masDUIUbdate.Name = "masDUIUbdate";
-            this.masDUIUbdate.Size = new System.Drawing.Size(85, 24);
+            this.masDUIUbdate.Size = new System.Drawing.Size(65, 21);
             this.masDUIUbdate.TabIndex = 5;
             this.bunifuToolTip1.SetToolTip(this.masDUIUbdate, "");
             this.bunifuToolTip1.SetToolTipIcon(this.masDUIUbdate, null);
@@ -266,8 +262,7 @@
             this.txtUbdateDireccionCliente.IconRight = null;
             this.txtUbdateDireccionCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUbdateDireccionCliente.Lines = new string[0];
-            this.txtUbdateDireccionCliente.Location = new System.Drawing.Point(244, 303);
-            this.txtUbdateDireccionCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUbdateDireccionCliente.Location = new System.Drawing.Point(130, 249);
             this.txtUbdateDireccionCliente.MaxLength = 32767;
             this.txtUbdateDireccionCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUbdateDireccionCliente.Modified = false;
@@ -293,7 +288,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtUbdateDireccionCliente.OnIdleState = stateProperties4;
-            this.txtUbdateDireccionCliente.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUbdateDireccionCliente.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txtUbdateDireccionCliente.PasswordChar = '\0';
             this.txtUbdateDireccionCliente.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtUbdateDireccionCliente.PlaceholderText = "Dirección";
@@ -303,7 +298,7 @@
             this.txtUbdateDireccionCliente.SelectionLength = 0;
             this.txtUbdateDireccionCliente.SelectionStart = 0;
             this.txtUbdateDireccionCliente.ShortcutsEnabled = false;
-            this.txtUbdateDireccionCliente.Size = new System.Drawing.Size(364, 50);
+            this.txtUbdateDireccionCliente.Size = new System.Drawing.Size(273, 41);
             this.txtUbdateDireccionCliente.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtUbdateDireccionCliente.TabIndex = 4;
             this.txtUbdateDireccionCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -346,8 +341,7 @@
             this.txtUbdateCorreoCliente.IconRight = null;
             this.txtUbdateCorreoCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUbdateCorreoCliente.Lines = new string[0];
-            this.txtUbdateCorreoCliente.Location = new System.Drawing.Point(244, 234);
-            this.txtUbdateCorreoCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUbdateCorreoCliente.Location = new System.Drawing.Point(130, 193);
             this.txtUbdateCorreoCliente.MaxLength = 32767;
             this.txtUbdateCorreoCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUbdateCorreoCliente.Modified = false;
@@ -373,7 +367,7 @@
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtUbdateCorreoCliente.OnIdleState = stateProperties8;
-            this.txtUbdateCorreoCliente.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUbdateCorreoCliente.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txtUbdateCorreoCliente.PasswordChar = '\0';
             this.txtUbdateCorreoCliente.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtUbdateCorreoCliente.PlaceholderText = "Correo del cliente";
@@ -383,7 +377,7 @@
             this.txtUbdateCorreoCliente.SelectionLength = 0;
             this.txtUbdateCorreoCliente.SelectionStart = 0;
             this.txtUbdateCorreoCliente.ShortcutsEnabled = false;
-            this.txtUbdateCorreoCliente.Size = new System.Drawing.Size(364, 50);
+            this.txtUbdateCorreoCliente.Size = new System.Drawing.Size(273, 41);
             this.txtUbdateCorreoCliente.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtUbdateCorreoCliente.TabIndex = 3;
             this.txtUbdateCorreoCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -426,8 +420,7 @@
             this.txtUbdateTelefonoCliente.IconRight = null;
             this.txtUbdateTelefonoCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUbdateTelefonoCliente.Lines = new string[0];
-            this.txtUbdateTelefonoCliente.Location = new System.Drawing.Point(244, 166);
-            this.txtUbdateTelefonoCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUbdateTelefonoCliente.Location = new System.Drawing.Point(130, 138);
             this.txtUbdateTelefonoCliente.MaxLength = 32767;
             this.txtUbdateTelefonoCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUbdateTelefonoCliente.Modified = false;
@@ -453,7 +446,7 @@
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtUbdateTelefonoCliente.OnIdleState = stateProperties12;
-            this.txtUbdateTelefonoCliente.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUbdateTelefonoCliente.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txtUbdateTelefonoCliente.PasswordChar = '\0';
             this.txtUbdateTelefonoCliente.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtUbdateTelefonoCliente.PlaceholderText = "Teléfono";
@@ -463,7 +456,7 @@
             this.txtUbdateTelefonoCliente.SelectionLength = 0;
             this.txtUbdateTelefonoCliente.SelectionStart = 0;
             this.txtUbdateTelefonoCliente.ShortcutsEnabled = false;
-            this.txtUbdateTelefonoCliente.Size = new System.Drawing.Size(364, 50);
+            this.txtUbdateTelefonoCliente.Size = new System.Drawing.Size(273, 41);
             this.txtUbdateTelefonoCliente.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtUbdateTelefonoCliente.TabIndex = 2;
             this.txtUbdateTelefonoCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -481,10 +474,9 @@
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = global::AgroServicios.Properties.Resources.DUIPng;
-            this.pictureBox6.Location = new System.Drawing.Point(176, 364);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Location = new System.Drawing.Point(79, 299);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(60, 49);
+            this.pictureBox6.Size = new System.Drawing.Size(45, 40);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 11;
             this.pictureBox6.TabStop = false;
@@ -496,10 +488,9 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::AgroServicios.Properties.Resources.Casa_Logo2;
-            this.pictureBox5.Location = new System.Drawing.Point(176, 300);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Location = new System.Drawing.Point(79, 247);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(60, 49);
+            this.pictureBox5.Size = new System.Drawing.Size(45, 40);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 8;
             this.pictureBox5.TabStop = false;
@@ -511,10 +502,9 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::AgroServicios.Properties.Resources.Logo_Correo;
-            this.pictureBox4.Location = new System.Drawing.Point(176, 234);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Location = new System.Drawing.Point(79, 193);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(60, 49);
+            this.pictureBox4.Size = new System.Drawing.Size(45, 40);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
@@ -526,10 +516,9 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::AgroServicios.Properties.Resources.Telefono_logo;
-            this.pictureBox3.Location = new System.Drawing.Point(176, 166);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(79, 138);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 49);
+            this.pictureBox3.Size = new System.Drawing.Size(45, 40);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
@@ -566,8 +555,7 @@
             this.txtUbdateNombreCliente.IconRight = null;
             this.txtUbdateNombreCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUbdateNombreCliente.Lines = new string[0];
-            this.txtUbdateNombreCliente.Location = new System.Drawing.Point(244, 105);
-            this.txtUbdateNombreCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUbdateNombreCliente.Location = new System.Drawing.Point(130, 92);
             this.txtUbdateNombreCliente.MaxLength = 32767;
             this.txtUbdateNombreCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUbdateNombreCliente.Modified = false;
@@ -593,7 +581,7 @@
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtUbdateNombreCliente.OnIdleState = stateProperties16;
-            this.txtUbdateNombreCliente.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUbdateNombreCliente.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txtUbdateNombreCliente.PasswordChar = '\0';
             this.txtUbdateNombreCliente.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtUbdateNombreCliente.PlaceholderText = "Nombre del cliente";
@@ -603,7 +591,7 @@
             this.txtUbdateNombreCliente.SelectionLength = 0;
             this.txtUbdateNombreCliente.SelectionStart = 0;
             this.txtUbdateNombreCliente.ShortcutsEnabled = false;
-            this.txtUbdateNombreCliente.Size = new System.Drawing.Size(364, 50);
+            this.txtUbdateNombreCliente.Size = new System.Drawing.Size(273, 41);
             this.txtUbdateNombreCliente.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtUbdateNombreCliente.TabIndex = 1;
             this.txtUbdateNombreCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -621,10 +609,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::AgroServicios.Properties.Resources.Rectangle_32;
-            this.pictureBox2.Location = new System.Drawing.Point(176, 103);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(79, 92);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 49);
+            this.pictureBox2.Size = new System.Drawing.Size(45, 40);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -643,7 +630,6 @@
             this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
             this.bunifuShadowPanel2.Location = new System.Drawing.Point(0, 0);
-            this.bunifuShadowPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
             this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.Transparent;
@@ -652,7 +638,7 @@
             this.bunifuShadowPanel2.ShadowDepth = 5;
             this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel2.Size = new System.Drawing.Size(801, 97);
+            this.bunifuShadowPanel2.Size = new System.Drawing.Size(490, 79);
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 17;
             this.bunifuToolTip1.SetToolTip(this.bunifuShadowPanel2, "");
@@ -670,10 +656,9 @@
             this.pnTitulo.Controls.Add(this.pictureBox1);
             this.pnTitulo.Controls.Add(this.bunifuLabel1);
             this.pnTitulo.Location = new System.Drawing.Point(0, 0);
-            this.pnTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnTitulo.Name = "pnTitulo";
             this.pnTitulo.ShowBorders = true;
-            this.pnTitulo.Size = new System.Drawing.Size(801, 85);
+            this.pnTitulo.Size = new System.Drawing.Size(490, 69);
             this.pnTitulo.TabIndex = 0;
             this.bunifuToolTip1.SetToolTip(this.pnTitulo, "");
             this.bunifuToolTip1.SetToolTipIcon(this.pnTitulo, null);
@@ -682,10 +667,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AgroServicios.Properties.Resources.Rectangle_32;
-            this.pictureBox1.Location = new System.Drawing.Point(475, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(310, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 49);
+            this.pictureBox1.Size = new System.Drawing.Size(45, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -700,11 +684,10 @@
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel1.Location = new System.Drawing.Point(284, 26);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel1.Location = new System.Drawing.Point(167, 20);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(171, 37);
+            this.bunifuLabel1.Size = new System.Drawing.Size(137, 28);
             this.bunifuLabel1.TabIndex = 0;
             this.bunifuLabel1.Text = "Editar datos";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -720,7 +703,8 @@
             this.txtid});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(860, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(645, 27);
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             this.bunifuToolTip1.SetToolTip(this.menuStrip1, "");
@@ -732,7 +716,7 @@
             // 
             this.txtid.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(132, 29);
+            this.txtid.Size = new System.Drawing.Size(100, 23);
             this.txtid.Visible = false;
             // 
             // bunifuToolTip1
@@ -772,18 +756,18 @@
             // 
             // VistaUbdateCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(941, 521);
+            this.ClientSize = new System.Drawing.Size(575, 437);
             this.Controls.Add(this.pnEstructura);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaximumSize = new System.Drawing.Size(959, 568);
-            this.MinimumSize = new System.Drawing.Size(959, 568);
+            this.MaximumSize = new System.Drawing.Size(591, 476);
+            this.MinimumSize = new System.Drawing.Size(591, 476);
             this.Name = "VistaUbdateCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Actualizar Cliente";
             this.Load += new System.EventHandler(this.VistaUbdateCliente_Load);
             this.pnEstructura.ResumeLayout(false);

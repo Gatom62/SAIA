@@ -74,7 +74,7 @@
             this.txtContraseña.IconRight = null;
             this.txtContraseña.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtContraseña.Lines = new string[0];
-            this.txtContraseña.Location = new System.Drawing.Point(154, 183);
+            this.txtContraseña.Location = new System.Drawing.Point(79, 183);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtContraseña.MaxLength = 32767;
             this.txtContraseña.MinimumSize = new System.Drawing.Size(1, 1);
@@ -131,11 +131,11 @@
             this.bunifuSeparator1.LineColor = System.Drawing.Color.Black;
             this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.DoubleEdgeFaded;
             this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(103, 224);
+            this.bunifuSeparator1.Location = new System.Drawing.Point(0, 224);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
             this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator1.Size = new System.Drawing.Size(374, 21);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(391, 21);
             this.bunifuSeparator1.TabIndex = 0;
             // 
             // btnVerificar
@@ -185,7 +185,7 @@
             this.btnVerificar.IdleIconLeftImage = null;
             this.btnVerificar.IdleIconRightImage = null;
             this.btnVerificar.IndicateFocus = false;
-            this.btnVerificar.Location = new System.Drawing.Point(154, 268);
+            this.btnVerificar.Location = new System.Drawing.Point(79, 251);
             this.btnVerificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerificar.Name = "btnVerificar";
             this.btnVerificar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -234,13 +234,13 @@
             this.bunifuPictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuPictureBox1.AutoSizeHeight = true;
-            this.bunifuPictureBox1.BorderRadius = 62;
+            this.bunifuPictureBox1.BorderRadius = 51;
             this.bunifuPictureBox1.Image = global::AgroServicios.Properties.Resources.Ceo;
             this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(216, 37);
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(154, 56);
             this.bunifuPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(125, 125);
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(103, 103);
             this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuPictureBox1.TabIndex = 34;
             this.bunifuPictureBox1.TabStop = false;
@@ -276,7 +276,7 @@
             this.ptbback.Name = "ptbback";
             this.ptbback.RoundBorders = false;
             this.ptbback.ShowBorders = false;
-            this.ptbback.Size = new System.Drawing.Size(55, 51);
+            this.ptbback.Size = new System.Drawing.Size(57, 54);
             this.ptbback.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Flat;
             this.ptbback.TabIndex = 35;
             this.ptbback.MouseEnter += new System.EventHandler(this.ptbback_MouseEnter);
@@ -301,7 +301,7 @@
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(547, 372);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(393, 327);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
             // VerificarContraServer
@@ -309,13 +309,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(547, 372);
+            this.ClientSize = new System.Drawing.Size(393, 327);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(547, 372);
-            this.MinimumSize = new System.Drawing.Size(547, 372);
+            this.MaximumSize = new System.Drawing.Size(393, 327);
+            this.MinimumSize = new System.Drawing.Size(393, 327);
             this.Name = "VerificarContraServer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VerificarContraServer";

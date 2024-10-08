@@ -234,8 +234,6 @@ namespace AgroServicios.Controlador.ControladorStats
                 dgv.Columns["Teléfono"].HeaderText = "Phone";
                 dgv.Columns["Correo"].HeaderText = "Email";
                 dgv.Columns["NombreMarca"].HeaderText = "Brand name";
-
-
             }
             else
             {

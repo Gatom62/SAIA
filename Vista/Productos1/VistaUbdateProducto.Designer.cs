@@ -120,7 +120,6 @@
             this.pnEstructura.ShowBorders = true;
             this.pnEstructura.Size = new System.Drawing.Size(646, 462);
             this.pnEstructura.TabIndex = 0;
-            this.pnEstructura.Click += new System.EventHandler(this.bunifuPanel1_Click);
             // 
             // btnUbdateImagen
             // 

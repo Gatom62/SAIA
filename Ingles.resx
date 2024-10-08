@@ -120,8 +120,20 @@
   <data name="Actualizar" xml:space="preserve">
     <value>Update</value>
   </data>
+  <data name="ActualizarContra" xml:space="preserve">
+    <value>Update Password</value>
+  </data>
+  <data name="ActualizarDatos" xml:space="preserve">
+    <value>Update data</value>
+  </data>
+  <data name="AgreagrProveedor" xml:space="preserve">
+    <value>Add supplier</value>
+  </data>
   <data name="Agregar" xml:space="preserve">
     <value>Add</value>
+  </data>
+  <data name="AgregarCliente" xml:space="preserve">
+    <value>Add a client</value>
   </data>
   <data name="AgregarImagen" xml:space="preserve">
     <value>Add image</value>
@@ -177,6 +189,9 @@
   <data name="CantidadProducto" xml:space="preserve">
     <value>Product quantity</value>
   </data>
+  <data name="CantidadProductoDevuelto" xml:space="preserve">
+    <value>Quantity of the returned product</value>
+  </data>
   <data name="Caracteristicas" xml:space="preserve">
     <value>Characteristics</value>
   </data>
@@ -188,6 +203,9 @@
   </data>
   <data name="CierreCaja" xml:space="preserve">
     <value>Closing the cash register</value>
+  </data>
+  <data name="Cliente" xml:space="preserve">
+    <value>Customers</value>
   </data>
   <data name="CMSELIMINAR" xml:space="preserve">
     <value>Delete</value>
@@ -237,6 +255,9 @@
   <data name="Correo" xml:space="preserve">
     <value>e-mail</value>
   </data>
+  <data name="CrearDevolucion" xml:space="preserve">
+    <value>Create return</value>
+  </data>
   <data name="CreateMarca" xml:space="preserve">
     <value>Create new brand</value>
   </data>
@@ -246,8 +267,14 @@
   <data name="Descripcion" xml:space="preserve">
     <value>Description</value>
   </data>
+  <data name="Devoluciones" xml:space="preserve">
+    <value>Devolutions</value>
+  </data>
   <data name="Direccion" xml:space="preserve">
     <value>Address</value>
+  </data>
+  <data name="e" xml:space="preserve">
+    <value />
   </data>
   <data name="EditarDatos" xml:space="preserve">
     <value>Edit Data</value>
@@ -264,6 +291,9 @@
   <data name="Eliminar" xml:space="preserve">
     <value>Delete</value>
   </data>
+  <data name="FechaDevolucion" xml:space="preserve">
+    <value>Date of return</value>
+  </data>
   <data name="FichaProducto" xml:space="preserve">
     <value>Product sheets</value>
   </data>
@@ -279,11 +309,20 @@
   <data name="HabilitarWindows" xml:space="preserve">
     <value>Enable Windows Integrated Security</value>
   </data>
+  <data name="HacerDevolucion" xml:space="preserve">
+    <value>Make a return</value>
+  </data>
   <data name="HistorialVentas" xml:space="preserve">
     <value>Sales history</value>
   </data>
+  <data name="IdVenta" xml:space="preserve">
+    <value>Sale ID</value>
+  </data>
   <data name="Informacion" xml:space="preserve">
     <value>Information</value>
+  </data>
+  <data name="Ingresar una devolucion" xml:space="preserve">
+    <value>Enter a return</value>
   </data>
   <data name="IngresarProducto" xml:space="preserve">
     <value>Enter Product</value>
@@ -348,8 +387,17 @@
   <data name="Menu" xml:space="preserve">
     <value>Options</value>
   </data>
+  <data name="MontoDevolucion" xml:space="preserve">
+    <value>Refund amount</value>
+  </data>
+  <data name="MotivoDevolucion" xml:space="preserve">
+    <value>Reason for return</value>
+  </data>
   <data name="Nombre" xml:space="preserve">
     <value>Full name</value>
+  </data>
+  <data name="NombreCliente" xml:space="preserve">
+    <value>Client Name</value>
   </data>
   <data name="NombreMarca" xml:space="preserve">
     <value>Brand Name</value>
@@ -395,6 +443,9 @@
   </data>
   <data name="TablaMarcas" xml:space="preserve">
     <value>Brand Table</value>
+  </data>
+  <data name="Telefono" xml:space="preserve">
+    <value>Phone</value>
   </data>
   <data name="tituloactualizar" xml:space="preserve">
     <value>Update employee</value>

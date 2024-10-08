@@ -68,15 +68,5 @@ namespace AgroServicios.Vista.Productos1
             }
 
         }
-
-        private void bunifuGradientPanel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuPanel1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -55,9 +55,37 @@ namespace AgroServicios.Modelo.DAO
             try
             {
                 //Accedemos a la conexión que ya se tiene
+                //Command.Connection = getConnection();
+                //Instrucción que se hará hacia la base de datos
+                //string query = "SELECT * FROM ProductosMarcaView1";
+                //Comando sql en el cual se pasa la instrucción y la conexión
+                //SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                //Se ejecuta el comando y con ExecuteNonQuery se verifica su retorno
+                //ExecuteNonQuery devuelve un valor entero.
+                //cmd.ExecuteNonQuery();
+                //Se utiliza un adaptador sql para rellenar el dataset
+                //SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                //Se crea un objeto Dataset que es donde se devolverán los resultados
+                //DataSet ds = new DataSet();
+                //Rellenamos con el Adaptador el DataSet diciendole de que tabla provienen los datos
+                //adp.Fill(ds, "Productos");
+                // Cambiar el nombre del encabezado de la columna "idProducto" a "ID del producto"
+                //if (ds.Tables["Productos"].Columns.Contains("idProducto"))
+                //{
+                //    ds.Tables["Productos"].Columns["idProducto"].ColumnName = "ID del producto";
+                //}
+                // Cambiar el nombre del encabezado de la columna "Stock" a "Cantidad del producto"
+                //if (ds.Tables["Productos"].Columns.Contains("Stock"))
+                //{
+                //    ds.Tables["Productos"].Columns["Stock"].ColumnName = "Cantidad del producto";
+                //}
+                //Devolvemos el Dataset
+                //return ds;
+
+                //Accedemos a la conexión que ya se tiene
                 Command.Connection = getConnection();
                 //Instrucción que se hará hacia la base de datos
-                string query = "SELECT * FROM Productos";
+                string query = "SELECT * FROM ProductosMarcaView1";
                 //Comando sql en el cual se pasa la instrucción y la conexión
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 //Se ejecuta el comando y con ExecuteNonQuery se verifica su retorno
@@ -68,17 +96,7 @@ namespace AgroServicios.Modelo.DAO
                 //Se crea un objeto Dataset que es donde se devolverán los resultados
                 DataSet ds = new DataSet();
                 //Rellenamos con el Adaptador el DataSet diciendole de que tabla provienen los datos
-                adp.Fill(ds, "Productos");
-                // Cambiar el nombre del encabezado de la columna "idProducto" a "ID del producto"
-                if (ds.Tables["Productos"].Columns.Contains("idProducto"))
-                {
-                    ds.Tables["Productos"].Columns["idProducto"].ColumnName = "ID del producto";
-                }
-                // Cambiar el nombre del encabezado de la columna "Stock" a "Cantidad del producto"
-                if (ds.Tables["Productos"].Columns.Contains("Stock"))
-                {
-                    ds.Tables["Productos"].Columns["Stock"].ColumnName = "Cantidad del producto";
-                }
+                adp.Fill(ds, "ProductosMarcaView1");
                 //Devolvemos el Dataset
                 return ds;
             }

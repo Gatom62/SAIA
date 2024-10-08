@@ -8,6 +8,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AgroServicios.Controlador.ControladorStats
 {
@@ -45,10 +46,30 @@ namespace AgroServicios.Controlador.ControladorStats
         void CargarGrid()
         {
             DAOHistorialVenta daogrid = new DAOHistorialVenta();
-
             DataSet ds = daogrid.LlenarDataGriew();
-
+            //Seleccionamos la tabla que mostraremos en el dvgVentas
             objventa.dgvVentas.DataSource = ds.Tables["VistaClienteEmpleado"];
+            // Traducir encabezados de las columnas
+            TraducirEncabezados(objventa.dgvVentas);
+        }
+        private void TraducirEncabezados(DataGridView dgv)
+        {
+            if (ControladorIdioma.idioma == 1)
+            {
+                dgv.Columns["ID de la venta"].HeaderText = "Sale ID";
+                dgv.Columns["Nombre del cliente"].HeaderText = "Client Name";
+                dgv.Columns["Nombre del empleado"].HeaderText = "Employee Name";
+                dgv.Columns["Fecha de la venta"].HeaderText = "Date of sale";
+                dgv.Columns["Monto total"].HeaderText = "Total amount";
+            }
+            else
+            {
+                dgv.Columns["ID de la venta"].HeaderText = "ID de la venta";
+                dgv.Columns["Nombre del cliente"].HeaderText = "Nombre del cliente";
+                dgv.Columns["Nombre del empleado"].HeaderText = "Nombre del empleado";
+                dgv.Columns["Fecha de la venta"].HeaderText = "Fecha de la venta";
+                dgv.Columns["Monto total"].HeaderText = "Monto total";
+            }
         }
     }
 }

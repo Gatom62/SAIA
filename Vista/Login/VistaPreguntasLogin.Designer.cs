@@ -127,7 +127,7 @@
             this.txtUsuario.SelectedText = "";
             this.txtUsuario.SelectionLength = 0;
             this.txtUsuario.SelectionStart = 0;
-            this.txtUsuario.ShortcutsEnabled = true;
+            this.txtUsuario.ShortcutsEnabled = false;
             this.txtUsuario.Size = new System.Drawing.Size(212, 35);
             this.txtUsuario.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtUsuario.TabIndex = 1;
@@ -445,7 +445,7 @@
             this.ptbback.ShowBorders = false;
             this.ptbback.Size = new System.Drawing.Size(56, 52);
             this.ptbback.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Flat;
-            this.ptbback.TabIndex = 35;
+            this.ptbback.TabIndex = 5;
             this.ptbback.MouseEnter += new System.EventHandler(this.ptbback_MouseEnter);
             this.ptbback.MouseLeave += new System.EventHandler(this.ptbback_MouseLeave);
             // 
@@ -503,7 +503,7 @@
             this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
             this.bunifuShadowPanel1.Size = new System.Drawing.Size(690, 180);
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel1.TabIndex = 36;
+            this.bunifuShadowPanel1.TabIndex = 0;
             // 
             // bunifuGradientPanel1
             // 
@@ -527,7 +527,7 @@
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(751, 406);
-            this.bunifuGradientPanel1.TabIndex = 37;
+            this.bunifuGradientPanel1.TabIndex = 0;
             // 
             // btnGuardar
             // 
@@ -611,7 +611,7 @@
             this.btnGuardar.OnPressedState.IconLeftImage = null;
             this.btnGuardar.OnPressedState.IconRightImage = null;
             this.btnGuardar.Size = new System.Drawing.Size(220, 39);
-            this.btnGuardar.TabIndex = 38;
+            this.btnGuardar.TabIndex = 4;
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnGuardar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnGuardar.TextMarginLeft = 0;
