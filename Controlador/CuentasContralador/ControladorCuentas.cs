@@ -46,7 +46,6 @@ namespace AgroServicios.Controlador.CuentasContralador
             //Llenar DataGridView
             ObjEmpleados.GriewEmpleados.DataSource = ds.Tables["VistaEmpleadosConRol"];
         }
-
         private void PreguntasEmp(object sender, EventArgs e)
         {
             if (ObjEmpleados.GriewEmpleados.CurrentRow == null)
@@ -83,8 +82,16 @@ namespace AgroServicios.Controlador.CuentasContralador
         {
             if (ObjEmpleados.GriewEmpleados.CurrentRow == null)
             {
-                MessageBox.Show("No se ha seleccionado ningún empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Salir del método si no hay ninguna fila seleccionada
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("Error", "No employee has been selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
+                else
+                {
+                    MessageBox.Show("Error", "No se ha seleccionado ningún empleado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
             }
 
             int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
@@ -111,8 +118,16 @@ namespace AgroServicios.Controlador.CuentasContralador
         {
             if (ObjEmpleados.GriewEmpleados.CurrentRow == null)
             {
-                MessageBox.Show("No se ha seleccionado ningún empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Salir del método si no hay ninguna fila seleccionada
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("Error", "No employee has been selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
+                else
+                {
+                    MessageBox.Show("Error", "No se ha seleccionado ningún empleado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
             }
 
             int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
@@ -140,8 +155,16 @@ namespace AgroServicios.Controlador.CuentasContralador
         {
             if (ObjEmpleados.GriewEmpleados.CurrentRow == null)
             {
-                MessageBox.Show("No se ha seleccionado ningún empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Salir del método si no hay ninguna fila seleccionada
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("No employee has been selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
+                else
+                {
+                    MessageBox.Show("No se ha seleccionado ningún empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
             }
 
             int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
@@ -154,6 +177,7 @@ namespace AgroServicios.Controlador.CuentasContralador
             vistaRestablecer.ShowDialog();
             RefrescarData();
         }
+
         private void LoadData(object sender, EventArgs e)
         {
             RefrescarData();
@@ -223,58 +247,112 @@ namespace AgroServicios.Controlador.CuentasContralador
             createUser.ShowDialog();
             RefrescarData();
         }
-
         private void EliminarEmpleado(object sender, EventArgs e)
         {
             if (ObjEmpleados.GriewEmpleados.CurrentRow == null)
             {
-                MessageBox.Show("No se ha seleccionado ningún empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Salir del método si no hay ninguna fila seleccionada
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("No employee has been selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
+                else
+                {
+                    MessageBox.Show("No se ha seleccionado ningún empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
             }
 
             int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
 
-            // Confirmación de la eliminación del empleado
-            if (MessageBox.Show($"¿Seguro que deseas eliminar a: {ObjEmpleados.GriewEmpleados[1, pos].Value.ToString()}? La eliminación será permanente.",
-                                "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (ControladorIdioma.idioma == 1)
             {
-                // Crear la instancia del DAO para eliminar el empleado
-                DAOAdminUsers daodelete = new DAOAdminUsers();
-                daodelete.IdEmpleado = int.Parse(ObjEmpleados.GriewEmpleados[0, pos].Value.ToString());
-                daodelete.Usuario1 = ObjEmpleados.GriewEmpleados[7, pos].Value.ToString();
+                // Confirmación de la eliminación del empleado
+                if (MessageBox.Show($"Surely you want to eliminate a: {ObjEmpleados.GriewEmpleados[1, pos].Value.ToString()}? the elimination will be permanent.",
+                                    "Confirm action", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    // Crear la instancia del DAO para eliminar el empleado
+                    DAOAdminUsers daodelete = new DAOAdminUsers();
+                    daodelete.IdEmpleado = int.Parse(ObjEmpleados.GriewEmpleados[0, pos].Value.ToString());
+                    daodelete.Usuario1 = ObjEmpleados.GriewEmpleados[7, pos].Value.ToString();
 
-                // Llamada al método de eliminación
-                int valorretornado = daodelete.DeleteEmpleado();
+                    // Llamada al método de eliminación
+                    int valorretornado = daodelete.DeleteEmpleado();
 
-                // Evaluación de los diferentes resultados
-                if (valorretornado > 0)
-                {
-                    MessageBox.Show("Empleado eliminado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    RefrescarData(); // Refrescar los datos después de la eliminación exitosa
+                    // Evaluación de los diferentes resultados
+                    if (valorretornado > 0)
+                    {
+                        MessageBox.Show("Employee successfully removed", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        RefrescarData(); // Refrescar los datos después de la eliminación exitosa
+                    }
+                    else if (valorretornado == -2)
+                    {
+                        MessageBox.Show("The associated employee or user could not be deleted.", "Failed elimination", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        RefrescarData();
+                    }
+                    else if (valorretornado == -1)
+                    {
+                        MessageBox.Show("An unexpected error occurred during deletion, this may be because this employee has associated data in other records.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("The employee could not be deleted.", "Failed elimination", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        RefrescarData();
+                    }
                 }
-                else if (valorretornado == -2)
+
+            }
+            else
+            {
+                // Confirmación de la eliminación del empleado
+                if (MessageBox.Show($"¿Seguro que deseas eliminar a: {ObjEmpleados.GriewEmpleados[1, pos].Value.ToString()}? La eliminación será permanente.",
+                                    "Confirmar acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    MessageBox.Show("No se ha podido eliminar el empleado o el usuario asociado.", "Eliminación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    RefrescarData();
-                }
-                else if (valorretornado == -1)
-                {
-                    MessageBox.Show("Ocurrió un error inesperado durante la eliminación, esto puede deberse a que este empleado tiene asociado datos en otros registros.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show("El empleado no se ha podido eliminar.", "Eliminación fallida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    RefrescarData();
+                    // Crear la instancia del DAO para eliminar el empleado
+                    DAOAdminUsers daodelete = new DAOAdminUsers();
+                    daodelete.IdEmpleado = int.Parse(ObjEmpleados.GriewEmpleados[0, pos].Value.ToString());
+                    daodelete.Usuario1 = ObjEmpleados.GriewEmpleados[7, pos].Value.ToString();
+
+                    // Llamada al método de eliminación
+                    int valorretornado = daodelete.DeleteEmpleado();
+
+                    // Evaluación de los diferentes resultados
+                    if (valorretornado > 0)
+                    {
+                        MessageBox.Show("Empleado eliminado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        RefrescarData(); // Refrescar los datos después de la eliminación exitosa
+                    }
+                    else if (valorretornado == -2)
+                    {
+                        MessageBox.Show("No se ha podido eliminar el empleado o el usuario asociado.", "Eliminación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        RefrescarData();
+                    }
+                    else if (valorretornado == -1)
+                    {
+                        MessageBox.Show("Ocurrió un error inesperado durante la eliminación, esto puede deberse a que este empleado tiene asociado datos en otros registros.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("El empleado no se ha podido eliminar.", "Eliminación fallida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        RefrescarData();
+                    }
                 }
             }
         }
-
         private void PreguntasEmpAct(object sender, EventArgs e)
         {
             if (ObjEmpleados.GriewEmpleados.CurrentRow == null)
             {
-                MessageBox.Show("No se ha seleccionado ningún empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Salir del método si no hay ninguna fila seleccionada
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("No employee has been selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
+                else
+                {
+                    MessageBox.Show("No se ha seleccionado ningún empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Salir del método si no hay ninguna fila seleccionada
+                }
             }
 
             int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
@@ -290,17 +368,26 @@ namespace AgroServicios.Controlador.CuentasContralador
             // Verificar que se obtuvieron exactamente dos RespuestaID
             if (dtRespuestas.Rows.Count < 2)
             {
-                MessageBox.Show("El usuario no tiene niguna pregunta de seguridad asignada.",
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBox.Show("The user does not have any security questions assigned.",
                                    "Error",
                                    MessageBoxButtons.OK,
                                    MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("El usuario no tiene niguna pregunta de seguridad asignada.",
+                                   "Error",
+                                   MessageBoxButtons.OK,
+                                   MessageBoxIcon.Error);
+                }
             }
             else
             {
                 VistaPreguntas vpre = new VistaPreguntas(user, 2);
                 vpre.ShowDialog();
             }
-
         }
     }
 }

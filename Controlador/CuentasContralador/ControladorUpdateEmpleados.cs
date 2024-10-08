@@ -116,45 +116,93 @@ namespace AgroServicios.Controlador.CuentasContralador
                 string.IsNullOrWhiteSpace(Objupdate.maskDuiUbdate.Text) ||
                 string.IsNullOrWhiteSpace(Objupdate.txtUpdateDireccion.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay campos sin llenar", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "There are empty fields", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay campos vacios", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             string nombreCliente = Objupdate.txtUpdateNombre.Text.Trim();
             // Validar que el nombre solo contenga letras y no exceda 65 caracteres
             if (!ValidarLetra(nombreCliente) || !ValidarNombre(nombreCliente))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El nombre nombre tiene numeros o tiene más de 65 letras", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Name has numbers or has more than 65 letters", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El nombre nombre tiene numeros o tiene más de 65 letras", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar el formato del número de teléfono
             if (!ValidarTelefono(Objupdate.txtUpdatePhone.Text))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El telefono debe de ser de El Salvador", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "The phone must be from El Salvador", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El telefono debe de ser de El Salvador", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar el formato y cantidad del correo solo si se ingresó uno
             string correoCliente = Objupdate.txtUpdateCorreo.Text.Trim();
             if (!ValidarCorreo(correoCliente) || !ValidarCorreoCantidad(correoCliente))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Falta el @ o el dominio del correo o hay mas de 75 caragteres en el corréo", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "No @, no domain or more than 75 characters in the e-mail", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "No tiene el @, el dominio o hay mas de 75 caracteres en el correo", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar que la direccion del empleado no exeda los 100 caracteres
             if (!ValidarDireccion(Objupdate.txtUpdateDireccion.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "La dirección no debe exceder los 150 caracteres", Properties.Resources.Report2);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "There are more than 150 characters in the address", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay mas de 150 caracteres en la dirección", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar que el dui tenga exactamente 9 caragteres, incluyendo la rallita
             if (!ValidarDUI(Objupdate.maskDuiUbdate.Text))
             {
-                MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El DUI debe de tener 8 caragteres", Properties.Resources.Delete);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "There are less than 8 numbers in the dui", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "Hay menos de 8 numeros en el dui", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar que la fecha de nacimiento sea mayor de 18 años
@@ -165,11 +213,16 @@ namespace AgroServicios.Controlador.CuentasContralador
 
             if (edad < 18)
             {
-                MessageBox.Show("La fecha de nacimiento debe ser mayor de 18 años.",
-                                "Error de validación",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "The user must be 18 years of age or older", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.DarkRed, "Error", "El usuario debe de ser mayor de 18 años", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Declara una variable byte[] llamada imageBytes y la inicializa como null.
@@ -215,13 +268,29 @@ namespace AgroServicios.Controlador.CuentasContralador
 
                 if (valorRetornado == 1)
                 {
-                    Objupdate.Close();
-                    MessageBoxP(Color.LightGreen, Color.SeaGreen, "Exito", "Se ha actualizado el empleado", Properties.Resources.actualizar);
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        Objupdate.Close();
+                        MessageBoxP(Color.LightGreen, Color.SeaGreen, "Success", "Employee has been updated", Properties.Resources.actualizar);
+                    }
+                    else
+                    {
+                        Objupdate.Close();
+                        MessageBoxP(Color.LightGreen, Color.SeaGreen, "Exito", "Se ha actualizado el empleado", Properties.Resources.actualizar);
+                    }
                 }
                 else
                 {
-                    MessageBoxP(Color.Red, Color.DarkRed, "Error", "No se pudo actualizar el empleado", Properties.Resources.Delete);
-                    Objupdate.Close();
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        MessageBoxP(Color.Red, Color.DarkRed, "Error", "The employee could not be updated", Properties.Resources.Delete);
+                        Objupdate.Close();
+                    }
+                    else
+                    {
+                        MessageBoxP(Color.Red, Color.DarkRed, "Error", "No se pudo actualizar el empleado", Properties.Resources.Delete);
+                        Objupdate.Close();
+                    }
                 }
             }
 
@@ -282,7 +351,6 @@ namespace AgroServicios.Controlador.CuentasContralador
                 return true;
             }
         }
-
         public void ChargeValues(int id, string Name, string phone, string email, string dni, string address, DateTime birthday, byte[] img, string user)
         {
             Objupdate.txtid.Text = id.ToString();

@@ -60,22 +60,46 @@ namespace AgroServicios.Controlador.CuentasContralador
             // Validar que los campos no estén vacíos
             if (string.IsNullOrWhiteSpace(objrest.txtNuevaContra.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "Todos los campos son obligatorios", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "All fields are required", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Todos los campos son obligatorios", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar que las contraseñas coincidan
             if (objrest.txtNuevaContra.Text != objrest.txtContraDenuevo.Text)
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "No se ha ingresado la misma contraseña dos veces", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "The same password has not been entered twice.", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "No se ha ingresado la misma contraseña dos veces", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Validar que la contraseña tenga al menos 8 caracteres
             if (!ValidarContraseña(objrest.txtNuevaContra.Text))
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", "La contraseña debe tener al menos 8 caracteres", Properties.Resources.MensajeWarning);
-                return;
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "The password must be at least 8 characters long", Properties.Resources.MensajeWarning);
+                    return;
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "La contraseña debe tener al menos 8 caracteres", Properties.Resources.MensajeWarning);
+                    return;
+                }
             }
 
             // Realizar el proceso de actualización de la contraseña
@@ -88,16 +112,35 @@ namespace AgroServicios.Controlador.CuentasContralador
             int valorRetornado = daorest.restablecerEmpleadov2();
             if (valorRetornado == 1)
             {
-                // Mensaje de éxito si se actualiza correctamente
-                MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "La contraseña se ha actualizado correctamente", Properties.Resources.comprobado);
-                VistaLogin backForm = new VistaLogin();
-                objrest.Close();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    // Mensaje de éxito si se actualiza correctamente
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Process performed", "Password has been successfully updated", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                    objrest.Close();
+                }
+                else
+                {
+                    // Mensaje de éxito si se actualiza correctamente
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Proceso realizado", "La contraseña se ha actualizado correctamente", Properties.Resources.comprobado);
+                    VistaLogin backForm = new VistaLogin();
+                    objrest.Close();
+                }
             }
             else
             {
-                // Mensaje de error si no se pudo actualizar
-                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "La contraseña no se ha podido actualizar.", Properties.Resources.ErrorIcono);
-                VistaLogin backForm = new VistaLogin();
+                if (ControladorIdioma.idioma == 1)
+                {
+                    // Mensaje de error si no se pudo actualizar
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "The password could not be updated.", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
+                else
+                {
+                    // Mensaje de error si no se pudo actualizar
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "La contraseña no se ha podido actualizar.", Properties.Resources.ErrorIcono);
+                    VistaLogin backForm = new VistaLogin();
+                }
             }
 
             // Método para validar que la contraseña tenga al menos 8 caracteres
