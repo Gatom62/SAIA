@@ -16,13 +16,8 @@ namespace AgroServicios.Controlador.Login
 {
     internal class ControladorLogin
     {
-       
         VistaLogin ObjLogin;
 
-        /// <summary>
-        /// </summary>
-        /// <param name="Vista"></param>
-        /// 
         public ControladorLogin(VistaLogin Vista)
         {
             ObjLogin = Vista;
@@ -36,66 +31,6 @@ namespace AgroServicios.Controlador.Login
             ObjLogin.cmsManualUsuario.Click += new EventHandler(AbrirManualUsuario);
             ObjLogin.FormClosing += new FormClosingEventHandler(cerrarPrograma);
         }
-        private void AbrirManualUsuario(object sender, EventArgs e)
-        {
-            // Nombre del archivo que quieres extraer de los recursos
-            string nombreArchivo = "Manual de Usuario";
-
-            // Ruta temporal donde se guardará el PDF extraído
-            string pdfTempPath = Path.Combine(Path.GetTempPath(), nombreArchivo);
-
-            // Escribe el contenido del archivo PDF desde los recursos a la ruta temporal
-            File.WriteAllBytes(pdfTempPath, Properties.Resources.Manual_de_Usuario_1_3);
-
-            // Abre el archivo PDF utilizando el visor predeterminado del sistema
-            System.Diagnostics.Process.Start(pdfTempPath);
-        }
-        private void cerrarPrograma(Object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("¿Desea cerrar el programa?, Si lo cierra se estará cerrando en todos los planos", "Decida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                Environment.Exit(0);
-            }
-        }
-
-        private void AbrirManualTecnico(object sender, EventArgs e)
-        {
-            // Nombre del archivo que quieres extraer de los recursos
-            string nombreArchivo = "Manual Técnico";
-
-            // Ruta temporal donde se guardará el PDF extraído
-            string pdfTempPath = Path.Combine(Path.GetTempPath(), nombreArchivo);
-
-            // Escribe el contenido del archivo PDF desde los recursos a la ruta temporal
-            File.WriteAllBytes(pdfTempPath, Properties.Resources.Manual_Técnico_de_SAIA_1_5);
-
-            // Abre el archivo PDF utilizando el visor predeterminado del sistema
-            System.Diagnostics.Process.Start(pdfTempPath);
-        }
-
-        private void AbrirBase(object sender, EventArgs e) 
-        {
-            VistaValidacionBase vistaValidacionBase = new VistaValidacionBase();
-            vistaValidacionBase.Show();
-        }
-
-        void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
-        {
-            AlertExito frm = new AlertExito();
-
-            frm.BackColorAlert = backcolor;
-
-            frm.ColorAlertBox = color;
-
-            frm.TittlAlertBox = title;
-
-            frm.TextAlertBox = text;
-
-            frm.IconeAlertBox = icon;
-
-            frm.ShowDialog();
-        }
-
         void MandarValoresAlerta(Color backcolor, Color color, string title, string text, Image icon)
         {
             MessagePersonal message = new MessagePersonal();
@@ -106,50 +41,78 @@ namespace AgroServicios.Controlador.Login
             message.IconeAlertBox = icon;
             message.ShowDialog();
         }
-        private void CerrarForm(object sender, EventArgs e) 
+
+        private void AbrirManualUsuario(object sender, EventArgs e)
         {
-            Application.Exit();
+            string nombreArchivo = "Manual de Usuario";
+            string pdfTempPath = Path.Combine(Path.GetTempPath(), nombreArchivo);
+            File.WriteAllBytes(pdfTempPath, Properties.Resources.Manual_de_Usuario_1_3);
+            System.Diagnostics.Process.Start(pdfTempPath);
+        }
+
+        private void cerrarPrograma(Object sender, FormClosingEventArgs e)
+        {
+            string mensajeCerrar, tituloCerrar;
+
+            if (ControladorIdioma.idioma == 1)
+            {
+                mensajeCerrar = "Do you want to close the program? If you close it, all sessions will be closed.";
+                tituloCerrar = "Decide";
+            }
+            else
+            {
+                mensajeCerrar = "¿Desea cerrar el programa? Si lo cierra, se estará cerrando en todos los planos.";
+                tituloCerrar = "Decida";
+            }
+
+            if (MessageBox.Show(mensajeCerrar, tituloCerrar, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Environment.Exit(0);
+            }
+        }
+
+        private void AbrirManualTecnico(object sender, EventArgs e)
+        {
+            string nombreArchivo = "Manual Técnico";
+            string pdfTempPath = Path.Combine(Path.GetTempPath(), nombreArchivo);
+            File.WriteAllBytes(pdfTempPath, Properties.Resources.Manual_Técnico_de_SAIA_1_5);
+            System.Diagnostics.Process.Start(pdfTempPath);
+        }
+
+        private void AbrirBase(object sender, EventArgs e)
+        {
+            VistaValidacionBase vistaValidacionBase = new VistaValidacionBase();
+            vistaValidacionBase.Show();
         }
 
         private void TestConnection(object sender, EventArgs e)
         {
-            //Verificar la propiedad idioma para cambiar el idioma
+            string mensajeConexionExitosa, tituloConexionExitosa, mensajeConexionFallida, tituloConexionFallida;
+
             if (ControladorIdioma.idioma == 1)
             {
-                if (dbContext.getConnection() == null)
-                {
-                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Connection failed", "It was not possible to connect to the server and/or database.", Properties.Resources.ErrorIcono);
-                    VistaLogin backForm = new VistaLogin();
-
-                }
-                else
-                {
-                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Conexión exitosa", "La conexión al servidor y la base de datos se ha ejecutado correctamente.", Properties.Resources.comprobado);
-                    VistaLogin backForm = new VistaLogin();
-                }
-
+                mensajeConexionExitosa = "The connection to the server and database has been successfully executed.";
+                tituloConexionExitosa = "Successful connection";
+                mensajeConexionFallida = "It was not possible to connect to the server and/or database.";
+                tituloConexionFallida = "Connection failed";
             }
             else
             {
-                if (dbContext.getConnection() == null)
-                {
-                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Conexión fallida", "No fue posible realizar la conexión al servidor y/o la base de datos.", Properties.Resources.ErrorIcono);
-                    VistaLogin backForm = new VistaLogin();
-                }
-                else
-                {
-                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Conexión exitosa", "La conexión al servidor y la base de datos se ha ejecutado correctamente.", Properties.Resources.comprobado);
-                    VistaLogin backForm = new VistaLogin();
-                }
+                mensajeConexionExitosa = "La conexión al servidor y la base de datos se ha ejecutado correctamente.";
+                tituloConexionExitosa = "Conexión exitosa";
+                mensajeConexionFallida = "No fue posible realizar la conexión al servidor y/o la base de datos.";
+                tituloConexionFallida = "Conexión fallida";
+            }
+
+            if (dbContext.getConnection() == null)
+            {
+                MandarValoresAlerta(Color.Red, Color.DarkRed, tituloConexionFallida, mensajeConexionFallida, Properties.Resources.ErrorIcono);
+            }
+            else
+            {
+                MandarValoresAlerta(Color.LightGreen, Color.Black, tituloConexionExitosa, mensajeConexionExitosa, Properties.Resources.comprobado);
             }
         }
-
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
 
         private void DataAccess(object sender, EventArgs e)
         {
@@ -176,19 +139,15 @@ namespace AgroServicios.Controlador.Login
                 return;
             }
 
-            // Creando objeto de la Clase DAOLogin
             DAOLogin DAOData = new DAOLogin();
-            // Utilizando el objeto DAO para invocar a los métodos getter y setter del DTO
             Encryp ObjEncriptar = new Encryp();
             DAOData.Username = ObjLogin.txtUsername.Text;
             DAOData.Password = ObjEncriptar.Encriptar(ObjLogin.txtPassword.Text);
-            // Invocando al método Login contenido en el DAO
             int answer = DAOData.Login();
 
             switch (answer)
             {
                 case 0:
-                    // Login exitoso y preguntas de seguridad configuradas
                     ObjLogin.Hide();
                     Bienvenida bienvenida = new Bienvenida();
                     bienvenida.ShowDialog();
@@ -198,12 +157,10 @@ namespace AgroServicios.Controlador.Login
                     break;
 
                 case -2:
-                    // Login exitoso pero faltan configurar preguntas de seguridad
                     ObjLogin.Hide();
                     VistaPreguntas formPreguntas = new VistaPreguntas(DAOData.Username, 1);
                     if (formPreguntas.ShowDialog() == DialogResult.OK)
                     {
-                        // Si el usuario configuró sus preguntas exitosamente, proceder al menú principal
                         Bienvenida bienvenidaDespuesPreguntas = new Bienvenida();
                         bienvenidaDespuesPreguntas.ShowDialog();
                         VistaMenuPrincipal vistaMenuDespuesPreguntas = new VistaMenuPrincipal();
@@ -211,36 +168,44 @@ namespace AgroServicios.Controlador.Login
                     }
                     else
                     {
-                        // Si el usuario cancela la configuración de preguntas, volver al login
-                        MessageBox.Show("Debe configurar sus preguntas de seguridad para continuar.", "Configuración requerida", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string mensajeConfigurarPreguntas = ControladorIdioma.idioma == 1 ?
+                            "You must configure your security questions to continue." :
+                            "Debe configurar sus preguntas de seguridad para continuar.";
+                        string tituloConfigurarPreguntas = ControladorIdioma.idioma == 1 ?
+                            "Configuration required" :
+                            "Configuración requerida";
+
+                        MessageBox.Show(mensajeConfigurarPreguntas, tituloConfigurarPreguntas, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ObjLogin.Show();
                     }
                     break;
 
                 case 1:
-                    // Usuario o contraseña incorrectos
-                    MessageBox.Show("Usuario o contraseña incorrectos.", "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    string mensajeAutenticacion = ControladorIdioma.idioma == 1 ?
+                        "Incorrect username or password." :
+                        "Usuario o contraseña incorrectos.";
+                    string tituloAutenticacion = ControladorIdioma.idioma == 1 ?
+                        "Authentication error" :
+                        "Error de autenticación";
+
+                    MessageBox.Show(mensajeAutenticacion, tituloAutenticacion, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
 
                 default:
-                    // Error durante el proceso de login
                     MessageBox.Show(mensajeError, tituloError, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
             }
         }
-
 
         private void ShowPassword(object sender, EventArgs e)
         {
             ObjLogin.txtPassword.UseSystemPasswordChar = false;
             ObjLogin.PasswordVisible.Visible = false;
             ObjLogin.PasswordHide.Visible = true;
-            // Forzar la actualización del TextBox
             string tempText = ObjLogin.txtPassword.Text;
             ObjLogin.txtPassword.Text = string.Empty;
             ObjLogin.txtPassword.Text = tempText;
-
-            ObjLogin.ResumeLayout();  // Reanudar el redibujado
+            ObjLogin.ResumeLayout();
         }
 
         private void HidePassword(object sender, EventArgs e)
@@ -248,12 +213,10 @@ namespace AgroServicios.Controlador.Login
             ObjLogin.txtPassword.UseSystemPasswordChar = true;
             ObjLogin.PasswordVisible.Visible = true;
             ObjLogin.PasswordHide.Visible = false;
-            // Forzar la actualización del TextBox
             string tempText = ObjLogin.txtPassword.Text;
             ObjLogin.txtPassword.Text = string.Empty;
             ObjLogin.txtPassword.Text = tempText;
-
-            ObjLogin.ResumeLayout();  // Reanudar el redibujado
+            ObjLogin.ResumeLayout();
         }
 
         private void RecuperarPass(Object sender, EventArgs e)
@@ -262,6 +225,6 @@ namespace AgroServicios.Controlador.Login
             VistaMetodosDeRecuperacion recuperacion = new VistaMetodosDeRecuperacion();
             recuperacion.Show();
         }
-
     }
 }
+

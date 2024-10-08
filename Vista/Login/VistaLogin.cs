@@ -42,6 +42,8 @@ namespace AgroServicios.Vista.Login
                 menu.Text = Ingles.Menu;
                 menuIntegrantes.Text = Ingles.Integrantes;
                 menuTest.Text = Ingles.Conexion;
+                cmsManualTecnico.Text = "Download technical manual";
+                cmsManualUsuario.Text = "Download user manual";
 
             }
             else
@@ -56,6 +58,8 @@ namespace AgroServicios.Vista.Login
                 menuIntegrantes.Text = Spanish.integrantes;
                 menuTest.Text = Spanish.conexion;
                 lblRecuperar.Text = Spanish.recuperar;
+                cmsManualUsuario.Text = "Descargar manual de usuario";
+                cmsManualTecnico.Text = "Descargar manual técnico";
             }
 
         }
