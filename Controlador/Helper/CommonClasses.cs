@@ -111,7 +111,14 @@ namespace AgroServicios.Controlador.Helper
             }
             catch (Exception ex)
             {
-                return $"Error al descifrar: {ex.Message}";
+                if (ControladorIdioma.idioma == 1)
+                {
+                    return $"Error decrypting: {ex.Message}";
+                }
+                else 
+                {
+                    return $"Error al descifrar: {ex.Message}";
+                }
             }
         }
     }
