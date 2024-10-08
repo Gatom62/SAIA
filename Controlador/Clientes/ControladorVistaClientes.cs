@@ -59,8 +59,31 @@ namespace AgroServicios.Controlador.Clientes
             ObjClientes.GriewViewClientes.DataSource = ds.Tables["Clientes"];
 
             ObjClientes.GriewViewClientes.Columns["idCliente"].Visible = false;
+            TraducirEncabezados(ObjClientes.GriewViewClientes);
         }
+        private void TraducirEncabezados(DataGridView dgv)
+        {
+            if (ControladorIdioma.idioma == 1)
+            {
+                dgv.Columns["idCliente"].HeaderText = "Client Id";
+                dgv.Columns["Nombre"].HeaderText = "Name";
+                dgv.Columns["Telefono"].HeaderText = "Phone";
+                dgv.Columns["Correo"].HeaderText = "Email";
+                dgv.Columns["Direccion"].HeaderText = "Address";
+                dgv.Columns["DUI"].HeaderText = "DUI";
 
+
+            }
+            else
+            {
+                dgv.Columns["idCliente"].HeaderText = "ID del Proveedor";
+                dgv.Columns["Nombre"].HeaderText = "Nombre";
+                dgv.Columns["Telefono"].HeaderText = "Teléfono";
+                dgv.Columns["Correo"].HeaderText = "Correo electrónico";
+                dgv.Columns["Direccion"].HeaderText = "Dirección";
+                dgv.Columns["DUI"].HeaderText = "DUI";
+            }
+        }
         private void NuevoCliente(object sender, EventArgs e)
         {
             VistaCreateCliente nuevoProducto = new VistaCreateCliente(1);
