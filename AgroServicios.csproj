@@ -149,7 +149,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controlador\Busqueda\ControladorBusqueda.cs" />
     <Compile Include="Controlador\Clientes\ControladorCreateCliente.cs" />
     <Compile Include="Controlador\Clientes\ControladorUbdateCliente.cs" />
     <Compile Include="Controlador\Clientes\ControladorVistaClientes.cs" />
@@ -241,12 +240,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Spanish.resx</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Busqueda\VistaBusqueda.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Busqueda\VistaBusqueda.Designer.cs">
-      <DependentUpon>VistaBusqueda.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\Clientes\VistaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,12 +329,6 @@
     </Compile>
     <Compile Include="Vista\Estadisticas\VistaStats.Designer.cs">
       <DependentUpon>VistaStats.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Estadisticas\VistaSuministros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Estadisticas\VistaSuministros.Designer.cs">
-      <DependentUpon>VistaSuministros.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Login\Bienvenida.cs">
       <SubType>Form</SubType>
@@ -541,9 +528,6 @@
     <EmbeddedResource Include="Spanish.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Spanish.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Busqueda\VistaBusqueda.resx">
-      <DependentUpon>VistaBusqueda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Clientes\VistaClientes.resx">
       <DependentUpon>VistaClientes.cs</DependentUpon>

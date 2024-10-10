@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AgroServicios.Vista.MenuPrincipal;
 using AgroServicios.Vista.Estadisticas;
-using AgroServicios.Vista.Busqueda;
 using AgroServicios.Vista.Cuentas;
 using AgroServicios.Vista.Login;
 using AgroServicios.Controlador.Helper;
