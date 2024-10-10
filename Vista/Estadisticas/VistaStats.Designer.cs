@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaStats));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.btnHistorial = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuShadowPanel4 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnProveedores = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuShadowPanel5 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnClientes = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuShadowPanel3 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnSuministros = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.btnHistorial = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.Panel1.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.bunifuShadowPanel2.SuspendLayout();
             this.bunifuShadowPanel4.SuspendLayout();
             this.bunifuShadowPanel5.SuspendLayout();
             this.bunifuShadowPanel3.SuspendLayout();
+            this.bunifuShadowPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel1
@@ -101,119 +101,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1028, 505);
             this.tableLayoutPanel1.TabIndex = 4;
-            // 
-            // bunifuShadowPanel2
-            // 
-            this.bunifuShadowPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuShadowPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.BorderRadius = 20;
-            this.bunifuShadowPanel2.BorderThickness = 1;
-            this.bunifuShadowPanel2.Controls.Add(this.btnHistorial);
-            this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel2.Location = new System.Drawing.Point(24, 27);
-            this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
-            this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.ShadowColor = System.Drawing.Color.LightSeaGreen;
-            this.bunifuShadowPanel2.ShadowDept = 2;
-            this.bunifuShadowPanel2.ShadowDepth = 5;
-            this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel2.Size = new System.Drawing.Size(466, 198);
-            this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel2.TabIndex = 6;
-            // 
-            // btnHistorial
-            // 
-            this.btnHistorial.AllowAnimations = true;
-            this.btnHistorial.AllowMouseEffects = true;
-            this.btnHistorial.AllowToggling = true;
-            this.btnHistorial.AnimationSpeed = 200;
-            this.btnHistorial.AutoGenerateColors = false;
-            this.btnHistorial.AutoRoundBorders = false;
-            this.btnHistorial.AutoSizeLeftIcon = true;
-            this.btnHistorial.AutoSizeRightIcon = true;
-            this.btnHistorial.BackColor = System.Drawing.Color.Transparent;
-            this.btnHistorial.BackColor1 = System.Drawing.Color.White;
-            this.btnHistorial.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHistorial.BackgroundImage")));
-            this.btnHistorial.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnHistorial.ButtonText = "Historial de ventas";
-            this.btnHistorial.ButtonTextMarginLeft = 0;
-            this.btnHistorial.ColorContrastOnClick = 45;
-            this.btnHistorial.ColorContrastOnHover = 45;
-            this.btnHistorial.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnHistorial.CustomizableEdges = borderEdges1;
-            this.btnHistorial.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnHistorial.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnHistorial.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnHistorial.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnHistorial.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnHistorial.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.btnHistorial.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHistorial.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnHistorial.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnHistorial.IconMarginLeft = 11;
-            this.btnHistorial.IconPadding = 10;
-            this.btnHistorial.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnHistorial.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnHistorial.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnHistorial.IconSize = 25;
-            this.btnHistorial.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btnHistorial.IdleBorderRadius = 50;
-            this.btnHistorial.IdleBorderThickness = 1;
-            this.btnHistorial.IdleFillColor = System.Drawing.Color.White;
-            this.btnHistorial.IdleIconLeftImage = global::AgroServicios.Properties.Resources.tdesign_money;
-            this.btnHistorial.IdleIconRightImage = null;
-            this.btnHistorial.IndicateFocus = true;
-            this.btnHistorial.Location = new System.Drawing.Point(-2, 0);
-            this.btnHistorial.Margin = new System.Windows.Forms.Padding(2);
-            this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnHistorial.OnDisabledState.BorderRadius = 50;
-            this.btnHistorial.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnHistorial.OnDisabledState.BorderThickness = 1;
-            this.btnHistorial.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnHistorial.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnHistorial.OnDisabledState.IconLeftImage = null;
-            this.btnHistorial.OnDisabledState.IconRightImage = null;
-            this.btnHistorial.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnHistorial.onHoverState.BorderRadius = 50;
-            this.btnHistorial.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnHistorial.onHoverState.BorderThickness = 1;
-            this.btnHistorial.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnHistorial.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnHistorial.onHoverState.IconLeftImage = null;
-            this.btnHistorial.onHoverState.IconRightImage = null;
-            this.btnHistorial.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnHistorial.OnIdleState.BorderRadius = 50;
-            this.btnHistorial.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnHistorial.OnIdleState.BorderThickness = 1;
-            this.btnHistorial.OnIdleState.FillColor = System.Drawing.Color.White;
-            this.btnHistorial.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
-            this.btnHistorial.OnIdleState.IconLeftImage = global::AgroServicios.Properties.Resources.tdesign_money;
-            this.btnHistorial.OnIdleState.IconRightImage = null;
-            this.btnHistorial.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnHistorial.OnPressedState.BorderRadius = 50;
-            this.btnHistorial.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnHistorial.OnPressedState.BorderThickness = 1;
-            this.btnHistorial.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnHistorial.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnHistorial.OnPressedState.IconLeftImage = null;
-            this.btnHistorial.OnPressedState.IconRightImage = null;
-            this.btnHistorial.Size = new System.Drawing.Size(459, 182);
-            this.btnHistorial.TabIndex = 3;
-            this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnHistorial.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnHistorial.TextMarginLeft = 0;
-            this.btnHistorial.TextPadding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnHistorial.UseDefaultRadiusAndThickness = true;
             // 
             // bunifuShadowPanel4
             // 
@@ -563,6 +450,119 @@
             this.btnSuministros.TextPadding = new System.Windows.Forms.Padding(45, 0, 0, 0);
             this.btnSuministros.UseDefaultRadiusAndThickness = true;
             // 
+            // btnHistorial
+            // 
+            this.btnHistorial.AllowAnimations = true;
+            this.btnHistorial.AllowMouseEffects = true;
+            this.btnHistorial.AllowToggling = true;
+            this.btnHistorial.AnimationSpeed = 200;
+            this.btnHistorial.AutoGenerateColors = false;
+            this.btnHistorial.AutoRoundBorders = false;
+            this.btnHistorial.AutoSizeLeftIcon = true;
+            this.btnHistorial.AutoSizeRightIcon = true;
+            this.btnHistorial.BackColor = System.Drawing.Color.Transparent;
+            this.btnHistorial.BackColor1 = System.Drawing.Color.White;
+            this.btnHistorial.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHistorial.BackgroundImage")));
+            this.btnHistorial.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnHistorial.ButtonText = "Historial de ventas";
+            this.btnHistorial.ButtonTextMarginLeft = 0;
+            this.btnHistorial.ColorContrastOnClick = 45;
+            this.btnHistorial.ColorContrastOnHover = 45;
+            this.btnHistorial.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnHistorial.CustomizableEdges = borderEdges1;
+            this.btnHistorial.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnHistorial.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnHistorial.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnHistorial.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnHistorial.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnHistorial.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.btnHistorial.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHistorial.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnHistorial.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnHistorial.IconMarginLeft = 11;
+            this.btnHistorial.IconPadding = 10;
+            this.btnHistorial.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHistorial.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnHistorial.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnHistorial.IconSize = 25;
+            this.btnHistorial.IdleBorderColor = System.Drawing.Color.Transparent;
+            this.btnHistorial.IdleBorderRadius = 50;
+            this.btnHistorial.IdleBorderThickness = 1;
+            this.btnHistorial.IdleFillColor = System.Drawing.Color.White;
+            this.btnHistorial.IdleIconLeftImage = global::AgroServicios.Properties.Resources.tdesign_money;
+            this.btnHistorial.IdleIconRightImage = null;
+            this.btnHistorial.IndicateFocus = true;
+            this.btnHistorial.Location = new System.Drawing.Point(-2, 0);
+            this.btnHistorial.Margin = new System.Windows.Forms.Padding(2);
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnHistorial.OnDisabledState.BorderRadius = 50;
+            this.btnHistorial.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnHistorial.OnDisabledState.BorderThickness = 1;
+            this.btnHistorial.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnHistorial.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnHistorial.OnDisabledState.IconLeftImage = null;
+            this.btnHistorial.OnDisabledState.IconRightImage = null;
+            this.btnHistorial.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnHistorial.onHoverState.BorderRadius = 50;
+            this.btnHistorial.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnHistorial.onHoverState.BorderThickness = 1;
+            this.btnHistorial.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnHistorial.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnHistorial.onHoverState.IconLeftImage = null;
+            this.btnHistorial.onHoverState.IconRightImage = null;
+            this.btnHistorial.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnHistorial.OnIdleState.BorderRadius = 50;
+            this.btnHistorial.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnHistorial.OnIdleState.BorderThickness = 1;
+            this.btnHistorial.OnIdleState.FillColor = System.Drawing.Color.White;
+            this.btnHistorial.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.btnHistorial.OnIdleState.IconLeftImage = global::AgroServicios.Properties.Resources.tdesign_money;
+            this.btnHistorial.OnIdleState.IconRightImage = null;
+            this.btnHistorial.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnHistorial.OnPressedState.BorderRadius = 50;
+            this.btnHistorial.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnHistorial.OnPressedState.BorderThickness = 1;
+            this.btnHistorial.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnHistorial.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnHistorial.OnPressedState.IconLeftImage = null;
+            this.btnHistorial.OnPressedState.IconRightImage = null;
+            this.btnHistorial.Size = new System.Drawing.Size(459, 182);
+            this.btnHistorial.TabIndex = 3;
+            this.btnHistorial.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHistorial.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnHistorial.TextMarginLeft = 0;
+            this.btnHistorial.TextPadding = new System.Windows.Forms.Padding(45, 0, 0, 0);
+            this.btnHistorial.UseDefaultRadiusAndThickness = true;
+            // 
+            // bunifuShadowPanel2
+            // 
+            this.bunifuShadowPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuShadowPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel2.BorderColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel2.BorderRadius = 20;
+            this.bunifuShadowPanel2.BorderThickness = 1;
+            this.bunifuShadowPanel2.Controls.Add(this.btnHistorial);
+            this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel2.Location = new System.Drawing.Point(24, 27);
+            this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
+            this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel2.ShadowColor = System.Drawing.Color.LightSeaGreen;
+            this.bunifuShadowPanel2.ShadowDept = 2;
+            this.bunifuShadowPanel2.ShadowDepth = 5;
+            this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel2.Size = new System.Drawing.Size(466, 198);
+            this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel2.TabIndex = 6;
+            // 
             // VistaStats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -579,10 +579,10 @@
             this.Panel1.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.bunifuShadowPanel2.ResumeLayout(false);
             this.bunifuShadowPanel4.ResumeLayout(false);
             this.bunifuShadowPanel5.ResumeLayout(false);
             this.bunifuShadowPanel3.ResumeLayout(false);
+            this.bunifuShadowPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -591,13 +591,13 @@
         public System.Windows.Forms.Panel Panel1;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnProveedores;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnSuministros;
-        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnHistorial;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnClientes;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel4;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnHistorial;
     }
 }

@@ -94,7 +94,7 @@
             this.pnEstructura.Controls.Add(this.txtUpdatePhone);
             this.pnEstructura.Controls.Add(this.txtUpdateCorreo);
             this.pnEstructura.Controls.Add(this.menuStrip1);
-            this.pnEstructura.Location = new System.Drawing.Point(36, 22);
+            this.pnEstructura.Location = new System.Drawing.Point(48, 26);
             this.pnEstructura.Margin = new System.Windows.Forms.Padding(2);
             this.pnEstructura.Name = "pnEstructura";
             this.pnEstructura.ShowBorders = true;
@@ -186,7 +186,7 @@
             this.btnUpdateProveedor.OnPressedState.IconLeftImage = null;
             this.btnUpdateProveedor.OnPressedState.IconRightImage = null;
             this.btnUpdateProveedor.Size = new System.Drawing.Size(150, 39);
-            this.btnUpdateProveedor.TabIndex = 47;
+            this.btnUpdateProveedor.TabIndex = 6;
             this.btnUpdateProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnUpdateProveedor.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnUpdateProveedor.TextMarginLeft = 0;
@@ -217,7 +217,7 @@
             this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
             this.bunifuShadowPanel2.Size = new System.Drawing.Size(511, 83);
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel2.TabIndex = 47;
+            this.bunifuShadowPanel2.TabIndex = 0;
             this.bunifuToolTip1.SetToolTip(this.bunifuShadowPanel2, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuShadowPanel2, null);
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuShadowPanel2, "");
@@ -236,7 +236,7 @@
             this.pnTitulo.Name = "pnTitulo";
             this.pnTitulo.ShowBorders = true;
             this.pnTitulo.Size = new System.Drawing.Size(511, 72);
-            this.pnTitulo.TabIndex = 46;
+            this.pnTitulo.TabIndex = 0;
             this.bunifuToolTip1.SetToolTip(this.pnTitulo, "");
             this.bunifuToolTip1.SetToolTipIcon(this.pnTitulo, null);
             this.bunifuToolTip1.SetToolTipTitle(this.pnTitulo, "");
@@ -359,7 +359,7 @@
             this.cmbMarca.Margin = new System.Windows.Forms.Padding(2);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(196, 32);
-            this.cmbMarca.TabIndex = 0;
+            this.cmbMarca.TabIndex = 5;
             this.cmbMarca.Text = null;
             this.cmbMarca.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cmbMarca.TextLeftMargin = 5;

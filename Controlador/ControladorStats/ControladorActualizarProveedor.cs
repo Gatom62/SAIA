@@ -250,11 +250,11 @@ namespace AgroServicios.Controlador.ControladorStats
         {
             if (accion == 2)
             {
-                Objupdate.txtUpdateNombre.Visible = false;
-                Objupdate.txtUpdateCorreo.Visible = false;
-                Objupdate.txtUpdatePhone.Visible = false;
-                Objupdate.maskUbdateDui.Visible = false;
-                Objupdate.btnUpdateProveedor.Visible = false;
+                Objupdate.txtUpdateNombre.Enabled = false;
+                Objupdate.txtUpdateCorreo.Enabled = false;
+                Objupdate.txtUpdatePhone.Enabled = false;
+                Objupdate.maskUbdateDui.Enabled = false;
+                Objupdate.btnUpdateProveedor.Enabled = false;
             }
         }
         public void ChargeValues(int id, string Name, string Dui, string phone, string email)

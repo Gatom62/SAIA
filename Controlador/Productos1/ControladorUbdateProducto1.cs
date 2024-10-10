@@ -88,7 +88,6 @@ namespace AgroServicios.Controlador.Productos1
                 Objupdate.ptbImagenProducto.Tag = rutaImagen;
             }
         }
-
         public void InitialCharge(object sender, EventArgs e)
         {
             DAOProductos1 objmarcas = new DAOProductos1();

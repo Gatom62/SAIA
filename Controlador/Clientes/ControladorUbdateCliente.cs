@@ -70,7 +70,6 @@ namespace AgroServicios.Controlador.Clientes
                 ObjUbdateCliente.masDUIUbdate.Enabled = false;
             }
         }
-
         public void ChargeValues(int id, string Name, string telefono, string correo, string direccion, string dui)
         {
             ObjUbdateCliente.txtid.Text = id.ToString();

@@ -94,7 +94,6 @@ namespace AgroServicios.Controlador.ControladorStats
         {
             RefrescarData();
         }
-
         private void RefrescarData()
         {
             DAOProveedores objAdmin = new DAOProveedores();
@@ -242,7 +241,7 @@ namespace AgroServicios.Controlador.ControladorStats
                 dgv.Columns["DUI"].HeaderText = "DUI";
                 dgv.Columns["Teléfono"].HeaderText = "Teléfono";
                 dgv.Columns["Correo"].HeaderText = "Correo";
-                dgv.Columns["NombreMarca"].HeaderText = "Nombre de la marca";
+                dgv.Columns["NombreMarca"].HeaderText = "Marca que provee";
             }
         }
     }

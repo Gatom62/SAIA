@@ -24,6 +24,7 @@ namespace AgroServicios.Vista.Cuentas
         {
             if (ControladorTema.IsDarkMode == true)
             {
+                this.BackColor = Color.FromArgb(34, 36, 49);
                 btnRestablecer.IdleFillColor = Color.FromArgb(230, 119, 11);
                 btnRestablecer.onHoverState.FillColor = Color.FromArgb(211, 41, 15);
                 btnRestablecer.onHoverState.BorderColor = Color.FromArgb(211, 41, 15);

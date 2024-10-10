@@ -19,7 +19,6 @@ namespace AgroServicios.Vista.Estadisticas.Devoluciones
             InitializeComponent();
             ControladorDevoluciones control = new ControladorDevoluciones(this);
         }
-
         private void VistaDevoluciones_Load(object sender, EventArgs e)
         {
             if(ControladorTema.IsDarkMode == true)

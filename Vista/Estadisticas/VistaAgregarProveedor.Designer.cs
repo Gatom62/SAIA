@@ -186,7 +186,7 @@
             this.btnAgregarProv.OnPressedState.IconLeftImage = null;
             this.btnAgregarProv.OnPressedState.IconRightImage = null;
             this.btnAgregarProv.Size = new System.Drawing.Size(150, 39);
-            this.btnAgregarProv.TabIndex = 46;
+            this.btnAgregarProv.TabIndex = 6;
             this.btnAgregarProv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAgregarProv.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAgregarProv.TextMarginLeft = 0;
@@ -220,7 +220,7 @@
             this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
             this.bunifuShadowPanel2.Size = new System.Drawing.Size(511, 83);
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel2.TabIndex = 45;
+            this.bunifuShadowPanel2.TabIndex = 0;
             this.bunifuToolTip1.SetToolTip(this.bunifuShadowPanel2, "");
             this.bunifuToolTip2.SetToolTip(this.bunifuShadowPanel2, "");
             this.bunifuToolTip2.SetToolTipIcon(this.bunifuShadowPanel2, null);
@@ -242,7 +242,7 @@
             this.pnTitulo.Name = "pnTitulo";
             this.pnTitulo.ShowBorders = true;
             this.pnTitulo.Size = new System.Drawing.Size(511, 72);
-            this.pnTitulo.TabIndex = 44;
+            this.pnTitulo.TabIndex = 0;
             this.bunifuToolTip2.SetToolTip(this.pnTitulo, "");
             this.bunifuToolTip1.SetToolTip(this.pnTitulo, "");
             this.bunifuToolTip2.SetToolTipIcon(this.pnTitulo, null);
@@ -301,7 +301,7 @@
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(27, 20);
-            this.bunifuLabel2.TabIndex = 43;
+            this.bunifuLabel2.TabIndex = 0;
             this.bunifuLabel2.Text = "DUI";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
@@ -383,7 +383,7 @@
             this.cmbMarca.Margin = new System.Windows.Forms.Padding(2);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(196, 32);
-            this.cmbMarca.TabIndex = 0;
+            this.cmbMarca.TabIndex = 5;
             this.cmbMarca.Text = null;
             this.cmbMarca.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.cmbMarca.TextLeftMargin = 5;
@@ -596,7 +596,7 @@
             this.txtNewPhone.ShortcutsEnabled = false;
             this.txtNewPhone.Size = new System.Drawing.Size(308, 40);
             this.txtNewPhone.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtNewPhone.TabIndex = 3;
+            this.txtNewPhone.TabIndex = 2;
             this.txtNewPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNewPhone.TextMarginBottom = 0;
             this.txtNewPhone.TextMarginLeft = 3;
@@ -679,7 +679,7 @@
             this.txtNewCorreo.ShortcutsEnabled = false;
             this.txtNewCorreo.Size = new System.Drawing.Size(308, 40);
             this.txtNewCorreo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtNewCorreo.TabIndex = 4;
+            this.txtNewCorreo.TabIndex = 3;
             this.txtNewCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNewCorreo.TextMarginBottom = 0;
             this.txtNewCorreo.TextMarginLeft = 3;

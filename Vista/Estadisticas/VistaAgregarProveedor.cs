@@ -20,7 +20,6 @@ namespace AgroServicios.Vista.Estadisticas
             InitializeComponent();
             ControladorCrearProveedor control = new ControladorCrearProveedor(this);
         }
-
         private void VistaAgregarProveedor_Load(object sender, EventArgs e)
         {
             if (ControladorIdioma.idioma == 1)

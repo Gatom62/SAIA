@@ -147,12 +147,10 @@ namespace AgroServicios.Controlador.Productos1
                 return nombre.Length <= 15;
             }
         }
-
         public void LoadData(object sender, EventArgs e)
         {
             RefrescarData();
         }
-
         public void RefrescarData()
         {
             //Objeto de la clase DAOAdminUsuarios

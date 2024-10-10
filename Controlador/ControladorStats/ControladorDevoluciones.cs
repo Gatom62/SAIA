@@ -16,10 +16,9 @@ using static AgroServicios.Modelo.DAO.DAODevoluciones;
 
 namespace AgroServicios.Controlador.ControladorStats
 {
-    internal class ControladorDevoluciones
+    class ControladorDevoluciones
     {
         VistaDevoluciones objdev;
-
         public ControladorDevoluciones(VistaDevoluciones Vista)
         {
             objdev = Vista;
