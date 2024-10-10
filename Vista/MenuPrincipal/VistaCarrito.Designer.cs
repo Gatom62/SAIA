@@ -580,6 +580,7 @@
             this.btnComprar.TextMarginLeft = 0;
             this.btnComprar.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnComprar.UseDefaultRadiusAndThickness = true;
+            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // dgvTotal
             // 

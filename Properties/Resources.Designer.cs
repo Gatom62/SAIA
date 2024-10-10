@@ -71,6 +71,16 @@ namespace AgroServicios.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] Audio_Moneda {
+            get {
+                object obj = ResourceManager.GetObject("Audio_Moneda", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap bloqueo_de_rotacion {

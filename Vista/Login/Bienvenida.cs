@@ -19,7 +19,6 @@ namespace AgroServicios.Vista.Login
         {
             InitializeComponent();
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (this.Opacity < 1) this.Opacity += 0.05;
@@ -31,7 +30,6 @@ namespace AgroServicios.Vista.Login
                 timer2.Start();
             }
         }
-
         private void timer2_Tick(object sender, EventArgs e)
         {
             this.Opacity -= 0.1;
@@ -41,7 +39,6 @@ namespace AgroServicios.Vista.Login
                 this.Close();
             }
         }
-
         private void Bienvenida_Load(object sender, EventArgs e)
         {
             // Crear un archivo temporal a partir del recurso embebido
@@ -82,8 +79,6 @@ namespace AgroServicios.Vista.Login
             }
 
             //Esto es para que el form haga ruidito
-
         }
-
     }
 }

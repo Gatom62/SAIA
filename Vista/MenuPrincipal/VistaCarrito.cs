@@ -9,11 +9,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
+using System.Media;
+using Microsoft.Reporting.Map.WebForms.BingMaps;
+using System.IO;
 
 namespace AgroServicios.Vista.MenuPrincipal
 {
     public partial class VistaCarrito : Form
     {
+        WindowsMediaPlayer player = new WindowsMediaPlayer();
+
         // Campo estático privado que almacena la única instancia de la clase VistaCarrito
         // Este campo es privado para evitar que otras clases creen una nueva instancia
         private static VistaCarrito _instance;
@@ -114,6 +120,19 @@ namespace AgroServicios.Vista.MenuPrincipal
                 dgvCarrito.Columns[2].HeaderText = "Precio unitario";
                 dgvCarrito.Columns[3].HeaderText = "Precio total";
             }
+        }
+        private void btnComprar_Click(object sender, EventArgs e)
+        {
+            // Crear un archivo temporal a partir del recurso embebido
+            string tempFilePath = Path.GetTempFileName() + ".mp3";
+            File.WriteAllBytes(tempFilePath, Properties.Resources.Audio_Moneda);
+
+            // Establecer la ruta del archivo temporal y reproducirlo
+            player.URL = tempFilePath;
+            player.controls.play();
+
+            // Opcional: eliminar el archivo temporal cuando se cierre el formulario
+            this.FormClosing += (s, args) => { if (File.Exists(tempFilePath)) File.Delete(tempFilePath); };
         }
     }
 }
