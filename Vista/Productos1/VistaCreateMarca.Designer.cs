@@ -49,6 +49,7 @@
             this.ContextMenuMarcas = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsElimarProducto = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsEditarMarca = new System.Windows.Forms.ToolStripMenuItem();
+            this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.pnEstructura.SuspendLayout();
             this.bunifuShadowPanel2.SuspendLayout();
             this.pnTitulo.SuspendLayout();
@@ -74,6 +75,9 @@
             this.pnEstructura.ShowBorders = true;
             this.pnEstructura.Size = new System.Drawing.Size(755, 236);
             this.pnEstructura.TabIndex = 4;
+            this.bunifuToolTip1.SetToolTip(this.pnEstructura, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.pnEstructura, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.pnEstructura, "");
             // 
             // btnIngresarMarca
             // 
@@ -162,6 +166,9 @@
             this.btnIngresarMarca.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnIngresarMarca.TextMarginLeft = 0;
             this.btnIngresarMarca.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuToolTip1.SetToolTip(this.btnIngresarMarca, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnIngresarMarca, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnIngresarMarca, "");
             this.btnIngresarMarca.UseDefaultRadiusAndThickness = true;
             // 
             // bunifuShadowPanel2
@@ -186,6 +193,9 @@
             this.bunifuShadowPanel2.Size = new System.Drawing.Size(755, 86);
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 0;
+            this.bunifuToolTip1.SetToolTip(this.bunifuShadowPanel2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuShadowPanel2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuShadowPanel2, "");
             // 
             // pnTitulo
             // 
@@ -202,6 +212,9 @@
             this.pnTitulo.ShowBorders = true;
             this.pnTitulo.Size = new System.Drawing.Size(755, 71);
             this.pnTitulo.TabIndex = 0;
+            this.bunifuToolTip1.SetToolTip(this.pnTitulo, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.pnTitulo, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.pnTitulo, "");
             // 
             // pictureBox1
             // 
@@ -213,6 +226,9 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.pictureBox1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.pictureBox1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.pictureBox1, "");
             // 
             // lbCrearNuevaMarca
             // 
@@ -229,6 +245,9 @@
             this.lbCrearNuevaMarca.Text = "Crear Nueva Marca";
             this.lbCrearNuevaMarca.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbCrearNuevaMarca.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuToolTip1.SetToolTip(this.lbCrearNuevaMarca, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lbCrearNuevaMarca, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lbCrearNuevaMarca, "");
             // 
             // txtNombreMarca
             // 
@@ -303,6 +322,9 @@
             this.txtNombreMarca.TextMarginLeft = 3;
             this.txtNombreMarca.TextMarginTop = 1;
             this.txtNombreMarca.TextPlaceholder = "Nombre de la Marca";
+            this.bunifuToolTip1.SetToolTip(this.txtNombreMarca, "Ingrese el nombre de la marca");
+            this.bunifuToolTip1.SetToolTipIcon(this.txtNombreMarca, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.txtNombreMarca, "");
             this.txtNombreMarca.UseSystemPasswordChar = false;
             this.txtNombreMarca.WordWrap = true;
             // 
@@ -371,6 +393,9 @@
             this.GriewViewMarcas.Size = new System.Drawing.Size(252, 133);
             this.GriewViewMarcas.TabIndex = 0;
             this.GriewViewMarcas.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.bunifuToolTip1.SetToolTip(this.GriewViewMarcas, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.GriewViewMarcas, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.GriewViewMarcas, "");
             // 
             // ContextMenuMarcas
             // 
@@ -380,6 +405,9 @@
             this.cmsEditarMarca});
             this.ContextMenuMarcas.Name = "ContextMenuProductos";
             this.ContextMenuMarcas.Size = new System.Drawing.Size(156, 48);
+            this.bunifuToolTip1.SetToolTip(this.ContextMenuMarcas, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.ContextMenuMarcas, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.ContextMenuMarcas, "");
             // 
             // cmsElimarProducto
             // 
@@ -394,6 +422,41 @@
             this.cmsEditarMarca.Name = "cmsEditarMarca";
             this.cmsEditarMarca.Size = new System.Drawing.Size(155, 22);
             this.cmsEditarMarca.Text = "Editar Datos";
+            // 
+            // bunifuToolTip1
+            // 
+            this.bunifuToolTip1.Active = true;
+            this.bunifuToolTip1.AlignTextWithTitle = false;
+            this.bunifuToolTip1.AllowAutoClose = false;
+            this.bunifuToolTip1.AllowFading = true;
+            this.bunifuToolTip1.AutoCloseDuration = 5000;
+            this.bunifuToolTip1.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuToolTip1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.bunifuToolTip1.ClickToShowDisplayControl = false;
+            this.bunifuToolTip1.ConvertNewlinesToBreakTags = true;
+            this.bunifuToolTip1.DisplayControl = null;
+            this.bunifuToolTip1.EntryAnimationSpeed = 350;
+            this.bunifuToolTip1.ExitAnimationSpeed = 200;
+            this.bunifuToolTip1.GenerateAutoCloseDuration = false;
+            this.bunifuToolTip1.IconMargin = 6;
+            this.bunifuToolTip1.InitialDelay = 0;
+            this.bunifuToolTip1.Name = "bunifuToolTip1";
+            this.bunifuToolTip1.Opacity = 1D;
+            this.bunifuToolTip1.OverrideToolTipTitles = false;
+            this.bunifuToolTip1.Padding = new System.Windows.Forms.Padding(10);
+            this.bunifuToolTip1.ReshowDelay = 100;
+            this.bunifuToolTip1.ShowAlways = true;
+            this.bunifuToolTip1.ShowBorders = false;
+            this.bunifuToolTip1.ShowIcons = true;
+            this.bunifuToolTip1.ShowShadows = true;
+            this.bunifuToolTip1.Tag = null;
+            this.bunifuToolTip1.TextFont = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuToolTip1.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuToolTip1.TextMargin = 2;
+            this.bunifuToolTip1.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.bunifuToolTip1.TitleForeColor = System.Drawing.Color.Black;
+            this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
+            this.bunifuToolTip1.ToolTipTitle = null;
             // 
             // VistaCreateMarca
             // 
@@ -433,5 +496,6 @@
         private Bunifu.UI.WinForms.BunifuPanel pnTitulo;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnIngresarMarca;
+        private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip1;
     }
 }

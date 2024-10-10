@@ -103,6 +103,8 @@ namespace AgroServicios.Controlador.Login
             {
                 MandarValoresAlerta(Color.LightGreen, Color.Black, procesorealizado, datosCorrectos, Properties.Resources.comprobado);
                 VistaLogin backForm = new VistaLogin();
+
+                ObjValidacionBase.Close();
                 MostrarCuentas();
             }
             else if (respuesta == -1)

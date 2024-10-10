@@ -114,7 +114,7 @@
             this.dgvDevoluciones.RowHeadersWidth = 51;
             this.dgvDevoluciones.RowTemplate.Height = 40;
             this.dgvDevoluciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDevoluciones.Size = new System.Drawing.Size(1028, 509);
+            this.dgvDevoluciones.Size = new System.Drawing.Size(1135, 509);
             this.dgvDevoluciones.TabIndex = 3;
             this.dgvDevoluciones.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -142,7 +142,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1028, 68);
+            this.panel1.Size = new System.Drawing.Size(1135, 68);
             this.panel1.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -161,7 +161,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1028, 68);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1135, 68);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // ptbback
@@ -188,7 +188,7 @@
             this.ptbback.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ptbback.Image = global::AgroServicios.Properties.Resources.turn_left_11044726;
             this.ptbback.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.ptbback.Location = new System.Drawing.Point(23, 10);
+            this.ptbback.Location = new System.Drawing.Point(28, 10);
             this.ptbback.Margin = new System.Windows.Forms.Padding(2);
             this.ptbback.Name = "ptbback";
             this.ptbback.RoundBorders = false;
@@ -202,7 +202,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AgroServicios.Properties.Resources.tdesign_money;
-            this.pictureBox1.Location = new System.Drawing.Point(99, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(109, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(84, 63);
@@ -215,16 +215,16 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.81752F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.18248F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel2.Controls.Add(this.lbDevoluciones, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnHacerDevolucion, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(188, 2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(207, 2);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(838, 64);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(926, 64);
             this.tableLayoutPanel2.TabIndex = 42;
             // 
             // lbDevoluciones
@@ -289,7 +289,7 @@
             this.btnHacerDevolucion.IdleIconLeftImage = null;
             this.btnHacerDevolucion.IdleIconRightImage = null;
             this.btnHacerDevolucion.IndicateFocus = false;
-            this.btnHacerDevolucion.Location = new System.Drawing.Point(626, 9);
+            this.btnHacerDevolucion.Location = new System.Drawing.Point(702, 9);
             this.btnHacerDevolucion.Name = "btnHacerDevolucion";
             this.btnHacerDevolucion.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnHacerDevolucion.OnDisabledState.BorderRadius = 25;
@@ -335,7 +335,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 577);
+            this.ClientSize = new System.Drawing.Size(1135, 577);
             this.Controls.Add(this.dgvDevoluciones);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
