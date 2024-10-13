@@ -291,6 +291,9 @@
   <data name="Eliminar" xml:space="preserve">
     <value>Delete</value>
   </data>
+  <data name="Estadisticas" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
   <data name="FechaDevolucion" xml:space="preserve">
     <value>Date of return</value>
   </data>
@@ -485,6 +488,15 @@
   </data>
   <data name="ValidarDatos" xml:space="preserve">
     <value>Validate data</value>
+  </data>
+  <data name="VentasDiarias" xml:space="preserve">
+    <value>Daily sales</value>
+  </data>
+  <data name="VentasEchasPorEmpleados" xml:space="preserve">
+    <value>Sales made by employees</value>
+  </data>
+  <data name="VentasSemanales" xml:space="preserve">
+    <value>Weekly sales</value>
   </data>
   <data name="Verificar" xml:space="preserve">
     <value>Verify</value>

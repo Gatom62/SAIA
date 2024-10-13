@@ -583,6 +583,15 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Statistics.
+        /// </summary>
+        internal static string Estadisticas {
+            get {
+                return ResourceManager.GetString("Estadisticas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Date of return.
         /// </summary>
         internal static string FechaDevolucion {
@@ -1164,6 +1173,33 @@ namespace AgroServicios {
         internal static string ValidarDatos {
             get {
                 return ResourceManager.GetString("ValidarDatos", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Daily sales.
+        /// </summary>
+        internal static string VentasDiarias {
+            get {
+                return ResourceManager.GetString("VentasDiarias", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Sales made by employees.
+        /// </summary>
+        internal static string VentasEchasPorEmpleados {
+            get {
+                return ResourceManager.GetString("VentasEchasPorEmpleados", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Weekly sales.
+        /// </summary>
+        internal static string VentasSemanales {
+            get {
+                return ResourceManager.GetString("VentasSemanales", resourceCulture);
             }
         }
         

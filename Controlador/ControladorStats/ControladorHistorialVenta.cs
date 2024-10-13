@@ -1,6 +1,7 @@
 ﻿using AgroServicios.Modelo.DAO;
 using AgroServicios.Vista.Estadisticas;
 using AgroServicios.Vista.Estadisticas.Devoluciones;
+using AgroServicios.Vista.Estadisticas.EstadisticasVentas;
 using AgroServicios.Vista.Reportes.ReporteVentas;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,12 @@ namespace AgroServicios.Controlador.ControladorStats
             objventa.ptbback.Click += new EventHandler(VolverForm);
             objventa.btnReporte.Click += new EventHandler(OpenReporte);
             objventa.btnDevoluciones.Click += OpenDevoluciones;
+            objventa.btnEstadisticas.Click += OpenEstadisticas;
+        }
+        private void OpenEstadisticas(object sender, EventArgs e)
+        {
+            VistaEstadisticasVentas vistaEstadisticasVentas = new VistaEstadisticasVentas();
+            vistaEstadisticasVentas.ShowDialog();
         }
         private void OpenDevoluciones(object sender, EventArgs e)
         {
