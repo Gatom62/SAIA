@@ -15,6 +15,7 @@ using AgroServicios.Vista.Reportes.ReporteProductos;
 using AgroServicios.Modelo.DAO;
 using System.Drawing.Imaging;
 using System.Text.RegularExpressions;
+using AgroServicios.Vista.Estadisticas.EstadisticasVentas;
 
 namespace AgroServicios.Controlador.MenuPrincipal
 {
@@ -40,6 +41,7 @@ namespace AgroServicios.Controlador.MenuPrincipal
             ObjMenu.btnVentas.Click += new EventHandler(OpenVentas);
             ObjMenu.btnFichaProductos.Click += new EventHandler(OpenFichaProductos);
             ObjMenu.btnCierreCaja.Click += new EventHandler(AbrirTablaCierre);
+            ObjMenu.btnEstadisticas.Click += new EventHandler(OpenEstadisticas);
         }
         private void AbrirTablaCierre(object sender, EventArgs e) 
         {
@@ -82,6 +84,11 @@ namespace AgroServicios.Controlador.MenuPrincipal
         private void OpenStats(object sender, EventArgs e)
         {
             AbrirPanel<VistaStats>();
+        }
+
+        private void OpenEstadisticas(object sender, EventArgs e)
+        {
+            AbrirPanel<VistaMostrarEstadisticas>();
         }
 
         private void CerrarSesion(object sender, EventArgs e)

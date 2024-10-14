@@ -172,6 +172,7 @@
     <Compile Include="Controlador\EstadisticasVentas\ControladorEstadisticasEmpleados.cs" />
     <Compile Include="Controlador\EstadisticasVentas\ControladorEstadisticasVentasDirias.cs" />
     <Compile Include="Controlador\EstadisticasVentas\ControladorEstadisticasVentasSemanales.cs" />
+    <Compile Include="Controlador\EstadisticasVentas\ControladorMostrarEstadisticas.cs" />
     <Compile Include="Controlador\Helper\CommonClasses.cs" />
     <Compile Include="Controlador\Helper\ControladorCarrito.cs" />
     <Compile Include="Controlador\Helper\StaticSession.cs" />
@@ -321,6 +322,12 @@
     </Compile>
     <Compile Include="Vista\Estadisticas\EstadisticasVentas\VistaEstadisticasVentasSemanales.Designer.cs">
       <DependentUpon>VistaEstadisticasVentasSemanales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Estadisticas\EstadisticasVentas\VistaMostrarEstadisticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Estadisticas\EstadisticasVentas\VistaMostrarEstadisticas.Designer.cs">
+      <DependentUpon>VistaMostrarEstadisticas.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Estadisticas\VistaActualizarProveedor.cs">
       <SubType>Form</SubType>
@@ -589,6 +596,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Estadisticas\EstadisticasVentas\VistaEstadisticasVentasSemanales.resx">
       <DependentUpon>VistaEstadisticasVentasSemanales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Estadisticas\EstadisticasVentas\VistaMostrarEstadisticas.resx">
+      <DependentUpon>VistaMostrarEstadisticas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Estadisticas\VistaActualizarProveedor.resx">
       <DependentUpon>VistaActualizarProveedor.cs</DependentUpon>

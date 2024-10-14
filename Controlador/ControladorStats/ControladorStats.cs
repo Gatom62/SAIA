@@ -39,7 +39,6 @@ namespace AgroServicios.Controlador.ControladorStats
         {
             AbrirPanel<VistaHistorialVenta>();
         }
-
         private void OpenClientes(object sender, EventArgs e)
         {
             AbrirPanel<VistaClientes>();

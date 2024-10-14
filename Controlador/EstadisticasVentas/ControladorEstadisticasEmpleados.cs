@@ -15,21 +15,6 @@ namespace AgroServicios.Controlador.EstadisticasVentas
         public ControladorEstadisticasEmpleados (VistaEstadisticasVentas vista)
         {
             ObjEstadisticasVentas = vista;
-            ObjEstadisticasVentas.btnSiguiente.Click += new EventHandler(AbrirEstadisticasDiarias);
-            ObjEstadisticasVentas.btnAtras.Click += new EventHandler(AbrirEstadisticasSemanales);
-        }
-        private void AbrirEstadisticasDiarias(object sender, EventArgs e) 
-        {
-            ObjEstadisticasVentas.Close();
-            VistaEstadisticasVentasDiarias vistaEstadisticasVentas = new VistaEstadisticasVentasDiarias();
-            vistaEstadisticasVentas.ShowDialog();
-        }
-
-        private void AbrirEstadisticasSemanales(object sender, EventArgs e) 
-        {
-            ObjEstadisticasVentas.Close();
-            VistaEstadisticasVentasSemanales vistaEstadisticasVentasSemanales = new VistaEstadisticasVentasSemanales();
-            vistaEstadisticasVentasSemanales.ShowDialog();
         }
     }
 }

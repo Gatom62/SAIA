@@ -592,6 +592,33 @@ namespace AgroServicios {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Sales statistics made by users.
+        /// </summary>
+        internal static string EstadisticasDeUsuarios {
+            get {
+                return ResourceManager.GetString("EstadisticasDeUsuarios", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Daily sales statistics.
+        /// </summary>
+        internal static string EstadisticasVentasDiarias {
+            get {
+                return ResourceManager.GetString("EstadisticasVentasDiarias", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Weekly sales statistics.
+        /// </summary>
+        internal static string EstadisticasVentasSemanales {
+            get {
+                return ResourceManager.GetString("EstadisticasVentasSemanales", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Date of return.
         /// </summary>
         internal static string FechaDevolucion {

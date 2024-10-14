@@ -28,8 +28,8 @@ namespace AgroServicios.Controlador.ControladorStats
         }
         private void OpenEstadisticas(object sender, EventArgs e)
         {
-            VistaEstadisticasVentas vistaEstadisticasVentas = new VistaEstadisticasVentas();
-            vistaEstadisticasVentas.ShowDialog();
+            VistaMostrarEstadisticas vistaMostrarEstadisticas = new VistaMostrarEstadisticas();
+            vistaMostrarEstadisticas.ShowDialog();
         }
         private void OpenDevoluciones(object sender, EventArgs e)
         {

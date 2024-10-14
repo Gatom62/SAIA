@@ -294,6 +294,15 @@
   <data name="Estadisticas" xml:space="preserve">
     <value>Statistics</value>
   </data>
+  <data name="EstadisticasDeUsuarios" xml:space="preserve">
+    <value>Sales statistics made by users</value>
+  </data>
+  <data name="EstadisticasVentasDiarias" xml:space="preserve">
+    <value>Daily sales statistics</value>
+  </data>
+  <data name="EstadisticasVentasSemanales" xml:space="preserve">
+    <value>Weekly sales statistics</value>
+  </data>
   <data name="FechaDevolucion" xml:space="preserve">
     <value>Date of return</value>
   </data>

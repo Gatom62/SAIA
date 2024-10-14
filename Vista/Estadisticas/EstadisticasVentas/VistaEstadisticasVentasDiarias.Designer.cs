@@ -33,17 +33,12 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pnEstructura = new Bunifu.UI.WinForms.BunifuPanel();
-            this.btnSiguiente = new System.Windows.Forms.PictureBox();
-            this.btnAtras = new System.Windows.Forms.PictureBox();
-            this.lbVentasDiarias = new Bunifu.UI.WinForms.BunifuLabel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnTitulo = new Bunifu.UI.WinForms.BunifuPanel();
-            this.lbEstadisticas = new Bunifu.UI.WinForms.BunifuLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbVentasDiarias = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnEstructura.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSiguiente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAtras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.bunifuShadowPanel2.SuspendLayout();
             this.pnTitulo.SuspendLayout();
@@ -58,9 +53,6 @@
             this.pnEstructura.BorderColor = System.Drawing.Color.Transparent;
             this.pnEstructura.BorderRadius = 30;
             this.pnEstructura.BorderThickness = 2;
-            this.pnEstructura.Controls.Add(this.btnSiguiente);
-            this.pnEstructura.Controls.Add(this.btnAtras);
-            this.pnEstructura.Controls.Add(this.lbVentasDiarias);
             this.pnEstructura.Controls.Add(this.chart1);
             this.pnEstructura.Controls.Add(this.bunifuShadowPanel2);
             this.pnEstructura.Location = new System.Drawing.Point(28, 23);
@@ -70,61 +62,19 @@
             this.pnEstructura.Size = new System.Drawing.Size(758, 462);
             this.pnEstructura.TabIndex = 2;
             // 
-            // btnSiguiente
-            // 
-            this.btnSiguiente.BackColor = System.Drawing.Color.Transparent;
-            this.btnSiguiente.Image = global::AgroServicios.Properties.Resources.IconoFlecha_flipped;
-            this.btnSiguiente.Location = new System.Drawing.Point(674, 92);
-            this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(56, 50);
-            this.btnSiguiente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnSiguiente.TabIndex = 17;
-            this.btnSiguiente.TabStop = false;
-            this.btnSiguiente.MouseEnter += new System.EventHandler(this.btnSiguiente_MouseEnter);
-            this.btnSiguiente.MouseLeave += new System.EventHandler(this.btnSiguiente_MouseLeave);
-            // 
-            // btnAtras
-            // 
-            this.btnAtras.BackColor = System.Drawing.Color.Transparent;
-            this.btnAtras.Image = global::AgroServicios.Properties.Resources.IconoFlecha;
-            this.btnAtras.Location = new System.Drawing.Point(24, 92);
-            this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(56, 50);
-            this.btnAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnAtras.TabIndex = 16;
-            this.btnAtras.TabStop = false;
-            this.btnAtras.MouseEnter += new System.EventHandler(this.btnAtras_MouseEnter);
-            this.btnAtras.MouseLeave += new System.EventHandler(this.btnAtras_MouseLeave);
-            // 
-            // lbVentasDiarias
-            // 
-            this.lbVentasDiarias.AllowParentOverrides = false;
-            this.lbVentasDiarias.AutoEllipsis = false;
-            this.lbVentasDiarias.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lbVentasDiarias.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbVentasDiarias.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbVentasDiarias.Location = new System.Drawing.Point(303, 103);
-            this.lbVentasDiarias.Name = "lbVentasDiarias";
-            this.lbVentasDiarias.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbVentasDiarias.Size = new System.Drawing.Size(166, 28);
-            this.lbVentasDiarias.TabIndex = 16;
-            this.lbVentasDiarias.Text = "Ventas diarias";
-            this.lbVentasDiarias.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbVentasDiarias.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // chart1
             // 
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(3, 157);
+            this.chart1.Location = new System.Drawing.Point(3, 77);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(752, 302);
+            this.chart1.Size = new System.Drawing.Size(752, 382);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
             // 
@@ -159,40 +109,40 @@
             this.pnTitulo.BorderColor = System.Drawing.Color.Transparent;
             this.pnTitulo.BorderRadius = 20;
             this.pnTitulo.BorderThickness = 2;
-            this.pnTitulo.Controls.Add(this.lbEstadisticas);
             this.pnTitulo.Controls.Add(this.pictureBox1);
+            this.pnTitulo.Controls.Add(this.lbVentasDiarias);
             this.pnTitulo.Location = new System.Drawing.Point(0, -1);
             this.pnTitulo.Name = "pnTitulo";
             this.pnTitulo.ShowBorders = true;
             this.pnTitulo.Size = new System.Drawing.Size(758, 72);
             this.pnTitulo.TabIndex = 0;
             // 
-            // lbEstadisticas
-            // 
-            this.lbEstadisticas.AllowParentOverrides = false;
-            this.lbEstadisticas.AutoEllipsis = false;
-            this.lbEstadisticas.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lbEstadisticas.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbEstadisticas.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEstadisticas.Location = new System.Drawing.Point(257, 19);
-            this.lbEstadisticas.Name = "lbEstadisticas";
-            this.lbEstadisticas.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbEstadisticas.Size = new System.Drawing.Size(178, 38);
-            this.lbEstadisticas.TabIndex = 0;
-            this.lbEstadisticas.Text = "Estadisticas";
-            this.lbEstadisticas.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbEstadisticas.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::AgroServicios.Properties.Resources.image_49;
-            this.pictureBox1.Location = new System.Drawing.Point(441, 12);
+            this.pictureBox1.Image = global::AgroServicios.Properties.Resources.tdesign_money;
+            this.pictureBox1.Location = new System.Drawing.Point(477, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 50);
+            this.pictureBox1.Size = new System.Drawing.Size(48, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            // 
+            // lbVentasDiarias
+            // 
+            this.lbVentasDiarias.AllowParentOverrides = false;
+            this.lbVentasDiarias.AutoEllipsis = false;
+            this.lbVentasDiarias.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbVentasDiarias.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lbVentasDiarias.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVentasDiarias.Location = new System.Drawing.Point(253, 22);
+            this.lbVentasDiarias.Name = "lbVentasDiarias";
+            this.lbVentasDiarias.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbVentasDiarias.Size = new System.Drawing.Size(218, 38);
+            this.lbVentasDiarias.TabIndex = 16;
+            this.lbVentasDiarias.Text = "Ventas diarias";
+            this.lbVentasDiarias.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbVentasDiarias.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // VistaEstadisticasVentasDiarias
             // 
@@ -200,18 +150,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 508);
             this.Controls.Add(this.pnEstructura);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(830, 547);
-            this.MinimumSize = new System.Drawing.Size(830, 547);
             this.Name = "VistaEstadisticasVentasDiarias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estadisticas de ventas diarias / Estadisticas - 2";
             this.Load += new System.EventHandler(this.VistaEstadisticasVentasDiarias_Load);
             this.pnEstructura.ResumeLayout(false);
-            this.pnEstructura.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSiguiente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAtras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.bunifuShadowPanel2.ResumeLayout(false);
             this.pnTitulo.ResumeLayout(false);
@@ -224,13 +168,10 @@
         #endregion
 
         private Bunifu.UI.WinForms.BunifuPanel pnEstructura;
-        public System.Windows.Forms.PictureBox btnSiguiente;
-        public System.Windows.Forms.PictureBox btnAtras;
-        private Bunifu.UI.WinForms.BunifuLabel lbVentasDiarias;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
         private Bunifu.UI.WinForms.BunifuPanel pnTitulo;
-        private Bunifu.UI.WinForms.BunifuLabel lbEstadisticas;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.UI.WinForms.BunifuLabel lbVentasDiarias;
     }
 }

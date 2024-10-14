@@ -75,6 +75,7 @@
             this.btnInicio = new System.Windows.Forms.PictureBox();
             this.btnAccounts = new System.Windows.Forms.PictureBox();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
+            this.btnEstadisticas = new System.Windows.Forms.PictureBox();
             this.PanelView.SuspendLayout();
             this.PanelContenedor.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -100,6 +101,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnShop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAccounts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEstadisticas)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelView
@@ -937,7 +939,7 @@
             this.ptbimg.AllowFocused = false;
             this.ptbimg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ptbimg.AutoSizeHeight = false;
-            this.ptbimg.BorderRadius = 43;
+            this.ptbimg.BorderRadius = 40;
             this.ptbimg.Image = ((System.Drawing.Image)(resources.GetObject("ptbimg.Image")));
             this.ptbimg.IsCircle = true;
             this.ptbimg.Location = new System.Drawing.Point(15, 6);
@@ -1056,11 +1058,13 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
-            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnCount = 5;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178F));
+            this.tableLayoutPanel1.Controls.Add(this.btnEstadisticas, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnStats, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnShop, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnInicio, 0, 0);
@@ -1078,8 +1082,8 @@
             // btnStats
             // 
             this.btnStats.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnStats.Image = global::AgroServicios.Properties.Resources.image_49;
-            this.btnStats.Location = new System.Drawing.Point(623, 7);
+            this.btnStats.Image = global::AgroServicios.Properties.Resources.Caja;
+            this.btnStats.Location = new System.Drawing.Point(510, 7);
             this.btnStats.Margin = new System.Windows.Forms.Padding(2);
             this.btnStats.Name = "btnStats";
             this.btnStats.Size = new System.Drawing.Size(39, 39);
@@ -1091,7 +1095,7 @@
             // 
             this.btnShop.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnShop.Image = global::AgroServicios.Properties.Resources.bolsita;
-            this.btnShop.Location = new System.Drawing.Point(366, 7);
+            this.btnShop.Location = new System.Drawing.Point(298, 7);
             this.btnShop.Margin = new System.Windows.Forms.Padding(2);
             this.btnShop.Name = "btnShop";
             this.btnShop.Size = new System.Drawing.Size(39, 39);
@@ -1103,7 +1107,7 @@
             // 
             this.btnInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnInicio.Image = global::AgroServicios.Properties.Resources.Casa_Logo2;
-            this.btnInicio.Location = new System.Drawing.Point(109, 7);
+            this.btnInicio.Location = new System.Drawing.Point(86, 7);
             this.btnInicio.Margin = new System.Windows.Forms.Padding(2);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(39, 39);
@@ -1117,7 +1121,7 @@
             // 
             this.btnAccounts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAccounts.Image = global::AgroServicios.Properties.Resources.silueta_de_multiples_usuarios;
-            this.btnAccounts.Location = new System.Drawing.Point(880, 7);
+            this.btnAccounts.Location = new System.Drawing.Point(722, 7);
             this.btnAccounts.Margin = new System.Windows.Forms.Padding(2);
             this.btnAccounts.Name = "btnAccounts";
             this.btnAccounts.Size = new System.Drawing.Size(39, 39);
@@ -1129,6 +1133,20 @@
             // 
             this.horafecha.Enabled = true;
             this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
+            // 
+            // btnEstadisticas
+            // 
+            this.btnEstadisticas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnEstadisticas.Image = global::AgroServicios.Properties.Resources.Caja;
+            this.btnEstadisticas.Location = new System.Drawing.Point(918, 7);
+            this.btnEstadisticas.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEstadisticas.Name = "btnEstadisticas";
+            this.btnEstadisticas.Size = new System.Drawing.Size(39, 39);
+            this.btnEstadisticas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnEstadisticas.TabIndex = 42;
+            this.btnEstadisticas.TabStop = false;
+            this.btnEstadisticas.MouseEnter += new System.EventHandler(this.btnEstadisticas_MouseEnter);
+            this.btnEstadisticas.MouseLeave += new System.EventHandler(this.btnEstadisticas_MouseLeave);
             // 
             // VistaMenuPrincipal
             // 
@@ -1174,6 +1192,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnShop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAccounts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEstadisticas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1218,5 +1237,6 @@
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel4;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCierreCaja;
+        public System.Windows.Forms.PictureBox btnEstadisticas;
     }
 }
