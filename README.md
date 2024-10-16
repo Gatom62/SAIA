@@ -23,7 +23,7 @@ Finalidad: Transmitir los conocimientos de programación a través de un program
 
 # El proyecto contiene:
 
-Implementación del patrón de arquitectura MVC.
+* Implementación del patrón de arquitectura MVC.
 Base de datos en línea con SmarterASP.net.
 Configuración del sistema (primera empresa, usuario).
 Configuración del servidor tanto local como remoto mediante archivo XML.
