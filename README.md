@@ -4,9 +4,9 @@
 # Autores:
 
 * Felipe Sebastián Pocasangre Clímaco, Desarrollo de Software, Primer Año.
-*Josué Carlos Ayala Reyes, Desarrollo de Software, Primer Año.
-*Christopher Alexander Morales Quijano, Desarrollo de Software, Primer Año.
-*Diego Alejandro Vásquez Valle, Desarrollo de Software, Primer Año.
+* Josué Carlos Ayala Reyes, Desarrollo de Software, Primer Año.
+* Christopher Alexander Morales Quijano, Desarrollo de Software, Primer Año.
+* Diego Alejandro Vásquez Valle, Desarrollo de Software, Primer Año.
 # Descripción:
 El proyecto titulado "SAIA" se comparte a través de la plataforma GitHub, con el objetivo de difundir, entre la comunidad de programadores, los conocimientos adquiridos durante un año de estudios especializados en la especialidad de Desarrollo de Software.
 
