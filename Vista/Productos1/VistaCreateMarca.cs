@@ -49,7 +49,7 @@ namespace AgroServicios.Vista.Productos1
             if (ControladorIdioma.idioma == 1)
             {
                 lbCrearNuevaMarca.Text = Ingles.CreateMarca;
-                txtNombreMarca.Text = Ingles.NombreMarca;
+                txtNombreMarca.PlaceholderText = Ingles.NombreMarca;
                 btnIngresarMarca.Text = Ingles.Agregar;
                 cmsElimarProducto.Text = Ingles.Eliminar;
                 cmsEditarMarca.Text = Ingles.EditarDatos;

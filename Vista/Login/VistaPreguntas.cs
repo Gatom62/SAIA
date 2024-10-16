@@ -53,7 +53,7 @@ namespace AgroServicios.Vista.Login
             if(ControladorTema.IsDarkMode == true)
             {
                 this.BackColor = Color.FromArgb(34,36,49);
-                txtUsuario.BackColor = Color.WhiteSmoke;
+                txtUsuario.FillColor = Color.WhiteSmoke;
                 txtRes1.BackColor = Color.WhiteSmoke;
                 txtRes2.BackColor = Color.WhiteSmoke;
                 droprole1.BackgroundColor = Color.WhiteSmoke;

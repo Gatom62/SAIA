@@ -68,6 +68,9 @@ namespace AgroServicios.Vista.Login
                 //Esto es para hacer que el borde del txtUser cambie cuando sele pase el cursor ensima
                 txtUser.BorderColorHover = Color.FromArgb(211, 41, 15);
                 txtUser.BorderColorActive = Color.FromArgb(211, 41, 15);
+
+                //Esto es para cambiar el colo de fondo del panel donde sale el mensaje de correo
+                lblResult.BackColor = Color.FromArgb(34, 36, 49);
             }
             if (ControladorIdioma.idioma == 1)
             {

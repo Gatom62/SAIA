@@ -51,10 +51,10 @@ namespace AgroServicios.Vista.Clientes
             {
                 lbAgregarCliente.Text = Ingles.AgregarCliente;
                 lbDui.Text = Ingles.txtDUI;
-                txtNombreCliente.Text = Ingles.NombreCliente;
-                txtTelefonoCliente.Text = Ingles.Telefono;
-                txtCorreoCliente.Text = Ingles.Correo;
-                txtDireccionCliente.Text = Ingles.Direccion;
+                txtNombreCliente.PlaceholderText = Ingles.NombreCliente;
+                txtTelefonoCliente.PlaceholderText = Ingles.Telefono;
+                txtCorreoCliente.PlaceholderText = Ingles.Correo;
+                txtDireccionCliente.PlaceholderText = Ingles.Direccion;
                 btnAgregarCliente.Text = Ingles.Agregar;
             }
         }

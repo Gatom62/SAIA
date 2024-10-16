@@ -84,7 +84,7 @@ namespace AgroServicios.Vista.MenuPrincipal
                 btnComprar.onHoverState.FillColor = Color.DarkViolet;
                 btnComprar.onHoverState.BorderColor = Color.DarkViolet;
                 btnComprar.OnPressedState.FillColor = Color.DodgerBlue;
-                btnComprar.OnPressedState.BorderColor = Color.DodgerBlue;
+                btnComprar.OnPressedState.BorderColor = Color.DarkBlue;
                 btnComprar.DisabledFillColor = Color.DarkViolet;
 
                 btnComprar.DisabledFillColor = Color.FromArgb(118, 88, 152);

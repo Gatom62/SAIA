@@ -56,7 +56,7 @@ namespace AgroServicios.Vista.Estadisticas
             if (ControladorIdioma.idioma == 1) 
             {
                 AnaP.Text = Ingles.ActualizarDatos;
-                txtUpdateCorreo.Text = Ingles.Correo;
+                txtUpdateCorreo.PlaceholderText = Ingles.Correo;
                 btnUpdateProveedor.Text = Ingles.Actualizar;
             }
         }

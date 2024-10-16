@@ -51,15 +51,15 @@ namespace AgroServicios.Vista.Server
         private void ptbback_MouseEnter(object sender, EventArgs e)
         {
             // Aumentar el tamaño del PictureBox cuando el cursor está sobre la imagen
-            ptbback.Size = new Size(originalSize.Width + 10, originalSize.Height + 10);
-            ptbback.Location = new Point(ptbback.Location.X - 10, ptbback.Location.Y - 10); // Ajustar la posición
+            ptbback.Size = new Size(originalSize.Width + 5, originalSize.Height + 5);
+            ptbback.Location = new Point(ptbback.Location.X - 5, ptbback.Location.Y - 5); // Ajustar la posición
         }
 
         private void ptbback_MouseLeave(object sender, EventArgs e)
         {
             // Restaurar el tamaño original del PictureBox cuando el cursor sale de la imagen
             ptbback.Size = originalSize;
-            ptbback.Location = new Point(ptbback.Location.X + 10, ptbback.Location.Y + 10); // Restaurar la posición
+            ptbback.Location = new Point(ptbback.Location.X + 5, ptbback.Location.Y + 5); // Restaurar la posición
         }
 
         private void VerificarContraServer_Load(object sender, EventArgs e)
@@ -77,12 +77,12 @@ namespace AgroServicios.Vista.Server
                 bunifuGradientPanel1.GradientTopRight = Color.Black;
                 bunifuGradientPanel1.GradientBottomRight = Color.DarkViolet;
                 bunifuGradientPanel1.GradientTopLeft = Color.DarkViolet;
-                txtContraseña.BackColor = Color.WhiteSmoke;
+                txtContraseña.FillColor = Color.WhiteSmoke;
             }
 
             if (ControladorIdioma.idioma == 1)
             {
-                txtContraseña.Text = Ingles.ContraseñaAdmin;
+                txtContraseña.PlaceholderText = Ingles.ContraseñaAdmin;
                 btnVerificar.Text = Ingles.Verificar;
             }
         }

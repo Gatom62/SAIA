@@ -44,6 +44,22 @@ namespace AgroServicios.Controlador.MenuPrincipal
             if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
             {
                 objcaja.dgvCierre.DataSource = ds.Tables[0];
+                if (ControladorIdioma.idioma == 1)
+                {
+                    objcaja.dgvCierre.Columns[0].HeaderText = "Sale ID";
+                    objcaja.dgvCierre.Columns[1].HeaderText = "Customer name";
+                    objcaja.dgvCierre.Columns[2].HeaderText = "Employee name";
+                    objcaja.dgvCierre.Columns[3].HeaderText = "Sale date";
+                    objcaja.dgvCierre.Columns[4].HeaderText = "Total amount";
+                }
+                else
+                {
+                    objcaja.dgvCierre.Columns[0].HeaderText = "ID de la venta";
+                    objcaja.dgvCierre.Columns[1].HeaderText = "Nombre del cliente";
+                    objcaja.dgvCierre.Columns[2].HeaderText = "Nombre del empleado";
+                    objcaja.dgvCierre.Columns[3].HeaderText = "Fecha de la venta";
+                    objcaja.dgvCierre.Columns[4].HeaderText = "Monto total";
+                }
             }
             else
             {
@@ -51,20 +67,17 @@ namespace AgroServicios.Controlador.MenuPrincipal
                 {
                     MessageBox.Show("No sales found", "No results", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else 
+                else
                 {
                     MessageBox.Show("No se encontraron ventas", "Sin resultados", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
-
         private void CerrarCaja(object sender, EventArgs e)
         {
             DAOCierreCaja dao = new DAOCierreCaja();
             decimal totalDia = 0;
             string filasCierres = string.Empty;
-
-
 
             // Sumar todas las ventas del DataGridView
             foreach (DataGridViewRow row in objcaja.dgvCierre.Rows)

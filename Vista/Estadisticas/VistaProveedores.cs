@@ -33,10 +33,11 @@ namespace AgroServicios.Vista.Estadisticas
         {
             if (ControladorIdioma.idioma == 1)
             {
+                label1.Text = "Suppliers";
                 btnAgregarProv.Text = Ingles.btnAñadirP;
                 cmsActualizar.Text = Ingles.CMSUPP;
                 cmsEliminar.Text = Ingles.CMSELIP;
-                txtBuscarP.Text = Ingles.Busqueda;
+                txtBuscarP.PlaceholderText = Ingles.Busqueda;
             } 
             if (ControladorTema.IsDarkMode) 
             {

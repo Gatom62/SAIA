@@ -41,7 +41,6 @@ namespace AgroServicios.Controlador.MenuPrincipal
             ObjMenu.btnVentas.Click += new EventHandler(OpenVentas);
             ObjMenu.btnFichaProductos.Click += new EventHandler(OpenFichaProductos);
             ObjMenu.btnCierreCaja.Click += new EventHandler(AbrirTablaCierre);
-            ObjMenu.btnEstadisticas.Click += new EventHandler(OpenEstadisticas);
         }
         private void AbrirTablaCierre(object sender, EventArgs e) 
         {
@@ -86,11 +85,7 @@ namespace AgroServicios.Controlador.MenuPrincipal
             AbrirPanel<VistaStats>();
         }
 
-        private void OpenEstadisticas(object sender, EventArgs e)
-        {
-            AbrirPanel<VistaMostrarEstadisticas>();
-        }
-
+    
         private void CerrarSesion(object sender, EventArgs e)
         {
             if (ControladorIdioma.idioma == 1)

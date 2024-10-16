@@ -51,6 +51,18 @@ namespace AgroServicios.Vista.Estadisticas
                 btnReporte.OnPressedState.FillColor = Color.Red;
                 btnReporte.OnPressedState.BorderColor = Color.Red;
                 btnReporte.DisabledFillColor = Color.DarkOrange;
+
+                btnEstadisticas.IdleFillColor = Color.FromArgb(230, 119, 11);
+                btnEstadisticas.onHoverState.FillColor = Color.FromArgb(211, 41, 15);
+                btnEstadisticas.onHoverState.BorderColor = Color.FromArgb(211, 41, 15);
+                btnEstadisticas.OnPressedState.FillColor = Color.Red;
+                btnEstadisticas.OnPressedState.BorderColor = Color.Red;
+                btnEstadisticas.DisabledFillColor = Color.DarkOrange;
+
+                txtBuscarP.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtBuscarP.BorderColorActive = Color.FromArgb(211, 41, 15);
+
+                tableLayoutPanel3.BackColor = Color.FromArgb(211, 41, 15);
             }
 
             if (ControladorIdioma.idioma == 1)
@@ -58,9 +70,10 @@ namespace AgroServicios.Vista.Estadisticas
                 label1.Text = "Sales history";
                 btnDevoluciones.Text = "Returns";
                 btnReporte.Text = "Sales sheet";
+                txtBuscarP.PlaceholderText = "Look for";
+                btnEstadisticas.Text = "Statistics";
             }
         }
-
         private void ptbback_MouseEnter(object sender, EventArgs e)
         {
             // Aumentar el tamaño del PictureBox cuando el cursor está sobre la imagen

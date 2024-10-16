@@ -652,7 +652,7 @@
             this.txtMonto.Padding = new System.Windows.Forms.Padding(2);
             this.txtMonto.PasswordChar = '\0';
             this.txtMonto.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtMonto.PlaceholderText = "Monto";
+            this.txtMonto.PlaceholderText = "";
             this.txtMonto.ReadOnly = false;
             this.txtMonto.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtMonto.SelectedText = "";
@@ -666,7 +666,7 @@
             this.txtMonto.TextMarginBottom = 0;
             this.txtMonto.TextMarginLeft = 3;
             this.txtMonto.TextMarginTop = 1;
-            this.txtMonto.TextPlaceholder = "Monto";
+            this.txtMonto.TextPlaceholder = "";
             this.txtMonto.UseSystemPasswordChar = false;
             this.txtMonto.WordWrap = true;
             // 

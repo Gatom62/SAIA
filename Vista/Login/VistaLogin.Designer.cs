@@ -47,7 +47,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menu = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTest = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuIntegrantes = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsManualUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsManualTecnico = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsConecarBase = new System.Windows.Forms.ToolStripMenuItem();
@@ -93,7 +92,6 @@
             // 
             this.menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuTest,
-            this.menuIntegrantes,
             this.cmsManualUsuario,
             this.cmsManualTecnico,
             this.cmsConecarBase});
@@ -108,13 +106,6 @@
             this.menuTest.Name = "menuTest";
             this.menuTest.Size = new System.Drawing.Size(290, 22);
             this.menuTest.Text = "Probar conexión";
-            // 
-            // menuIntegrantes
-            // 
-            this.menuIntegrantes.Image = global::AgroServicios.Properties.Resources.silueta_de_multiples_usuarios;
-            this.menuIntegrantes.Name = "menuIntegrantes";
-            this.menuIntegrantes.Size = new System.Drawing.Size(290, 22);
-            this.menuIntegrantes.Text = "Integrantes";
             // 
             // cmsManualUsuario
             // 
@@ -734,7 +725,6 @@
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menu;
-        private System.Windows.Forms.ToolStripMenuItem menuIntegrantes;
         public System.Windows.Forms.ToolStripMenuItem menuTest;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;

@@ -57,7 +57,7 @@ namespace AgroServicios.Vista.Productos1
 
             if (ControladorIdioma.idioma == 1)
             {
-                bunifuLabel1.Text = Ingles.btnañadir;
+                bunifuLabel1.Text = "Update product";
                 txtUbdateProducto.PlaceholderText = Ingles.NombreProducto;
                 txtUbdateCodigo.PlaceholderText = Ingles.Codigo;
                 txtUbdateCantidad.PlaceholderText = Ingles.CantidadProducto;

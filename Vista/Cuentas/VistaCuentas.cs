@@ -20,11 +20,12 @@ namespace AgroServicios.Vista.Cuentas
             InitializeComponent();
             ControladorCuentas control = new ControladorCuentas(this);
         }
-
         private void VistaCuentas_Load(object sender, EventArgs e)
         {
             if(ControladorIdioma.idioma == 1)
             {
+                label1.Text = "Accounts";
+                txtBuscarP.PlaceholderText = "Look for";
                 btnAgregar.Text = Ingles.btnañadir;
                 cmsEliminar.Text = Ingles.CMSELIMINAR;
                 cmsinfo.Text = Ingles.CMSINFO;

@@ -276,7 +276,7 @@
             this.ptbback.Name = "ptbback";
             this.ptbback.RoundBorders = false;
             this.ptbback.ShowBorders = false;
-            this.ptbback.Size = new System.Drawing.Size(57, 54);
+            this.ptbback.Size = new System.Drawing.Size(44, 41);
             this.ptbback.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Flat;
             this.ptbback.TabIndex = 35;
             this.ptbback.MouseEnter += new System.EventHandler(this.ptbback_MouseEnter);

@@ -20,7 +20,7 @@ namespace AgroServicios.Vista.Estadisticas.EstadisticasVentas
             InitializeComponent();
             ControladorEstadisticasEmpleados controladorEstadisticasEmpleados = new ControladorEstadisticasEmpleados(this);
         }
-
+        
         private void VistaEstadisticasVentas_Load(object sender, EventArgs e)
         {
             if (ControladorTema.IsDarkMode == true) 

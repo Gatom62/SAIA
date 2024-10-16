@@ -72,6 +72,23 @@ namespace AgroServicios.Controlador.MenuPrincipal
                 if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
                 {
                     objfecha.GriewFiltroV.DataSource = ds.Tables[0];
+
+                    if (ControladorIdioma.idioma == 1)
+                    {
+                        objfecha.GriewFiltroV.Columns[0].HeaderText = "Sale ID";
+                        objfecha.GriewFiltroV.Columns[1].HeaderText = "Client Name";
+                        objfecha.GriewFiltroV.Columns[2].HeaderText = "Employee Name";
+                        objfecha.GriewFiltroV.Columns[3].HeaderText = "Date of sale";
+                        objfecha.GriewFiltroV.Columns[4].HeaderText = "Total amount";
+                    }
+                    else 
+                    {
+                        objfecha.GriewFiltroV.Columns[0].HeaderText = "ID de la venta";
+                        objfecha.GriewFiltroV.Columns[1].HeaderText = "Nombre del cliente";
+                        objfecha.GriewFiltroV.Columns[2].HeaderText = "Nombre del empleado";
+                        objfecha.GriewFiltroV.Columns[3].HeaderText = "Fecha de la venta";
+                        objfecha.GriewFiltroV.Columns[4].HeaderText = "Monto total";
+                    }
                 }
                 else
                 {

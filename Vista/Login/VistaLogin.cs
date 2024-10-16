@@ -12,6 +12,7 @@ namespace AgroServicios.Vista.Login
     public partial class VistaLogin : Form
     {
         private Size originalSize;
+
         // Importar las funciones de la API de Windows para aplicar bordes redondeados
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
@@ -54,8 +55,9 @@ namespace AgroServicios.Vista.Login
                 txtUsername.PlaceholderText = Ingles.user;
                 lblRecuperar.Text = Ingles.recuperar;
                 menu.Text = Ingles.Menu;
-                menuIntegrantes.Text = Ingles.Integrantes;
                 menuTest.Text = Ingles.Conexion;
+                cmsManualUsuario.Text = "Open user manual";
+                cmsManualTecnico.Text = "Open technical manual";
             }
             else
             {
@@ -66,9 +68,10 @@ namespace AgroServicios.Vista.Login
                 txtPassword.PlaceholderText = Spanish.contraseña;
                 txtUsername.PlaceholderText= Spanish.user;
                 menu.Text= Spanish.Menu;
-                menuIntegrantes.Text = Spanish.integrantes;
                 menuTest.Text = Spanish.conexion;
                 lblRecuperar.Text = Spanish.recuperar;
+                cmsManualUsuario.Text = "Abrir manual de usuario";
+                cmsManualTecnico.Text = "Abrir manual técnico";
             }
         }
         private void DarkMode_CheckedChanged(object sender, System.EventArgs e)

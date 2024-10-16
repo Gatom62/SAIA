@@ -65,7 +65,7 @@ namespace AgroServicios.Controlador.Login
                 procesorealizado = "Process carried out";
                 numerosNombre = "There are numbers in the name";
                 datosCorrectos = "The data is correct";
-                datosIncorrectos = "The data is incorrect";
+                datosIncorrectos = "The data is incorrect, or you don't have the role you need to access";
                 noConection = "Could not connect to the database";
             }
             else
@@ -74,7 +74,7 @@ namespace AgroServicios.Controlador.Login
                 procesorealizado = "Proceso realizado";
                 numerosNombre = "Hay numeros en el nombre";
                 datosCorrectos = "Los datos son correctos";
-                datosIncorrectos = "Los datos son incorrectos";
+                datosIncorrectos = "Los datos son incorrectos, o no tiene el rol necesario para acceder";
                 noConection = "No se pudo conectar con la base de datos";
             }
 

@@ -271,8 +271,7 @@ namespace AgroServicios.Properties {
         ///        }
         ///
         ///        .header {
-        ///            background-color: #40E0D0;
-        ///            [resto de la cadena truncado]&quot;;.
+        ///            background-color:  [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string cierre_caja_plantilla {
             get {
@@ -796,6 +795,16 @@ namespace AgroServicios.Properties {
             get {
                 object obj = ResourceManager.GetObject("silueta-de-multiples-usuarios", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] Sonido_caja_registradora {
+            get {
+                object obj = ResourceManager.GetObject("Sonido_caja_registradora", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

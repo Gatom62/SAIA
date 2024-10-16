@@ -93,7 +93,14 @@ namespace AgroServicios.Controlador.CuentasContralador
         {
             if (accion == 2)
             {
-
+                if(ControladorIdioma.idioma == 1)
+                {
+                    Objupdate.LabelPrin.Text = "Employee information";
+                }
+                else
+                {
+                    Objupdate.LabelPrin.Text = "Información del empleado";
+                }
                 Objupdate.btnUpdateEmpleado.Visible = false;
 
                 Objupdate.txtUpdateNombre.Enabled = false;
@@ -101,11 +108,15 @@ namespace AgroServicios.Controlador.CuentasContralador
                 Objupdate.txtUpdateDireccion.Enabled = false;
                 Objupdate.txtUpdatePhone.Enabled = false;
                 Objupdate.maskDuiUbdate.Enabled = false;
-                Objupdate.PickerBirthUpdate.Enabled = false;
+                Objupdate.PickerBirthUpdate.Enabled = true;
                 Objupdate.cmsactimg.Visible = false;
             }
             if(accion == 1)
             {
+                if(ControladorIdioma.idioma == 1)
+                {
+                    Objupdate.LabelPrin.Text = "Update employee";
+                }
             }
         }
         private void ActualizarRegistro(object sender, EventArgs e)
