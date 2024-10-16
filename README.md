@@ -1,58 +1,62 @@
 # SAIA
-//2024
-//Authores: 
-//- Felipe Sebástian Pocasángre Clímaco, Desarrollo de Software, Primer año.
-//- Josue Carlos Ayala Reyes, Desarrollo de Software, Primer año.
-//- Christopher Alexander Morales Quijano, Desarrollo de Software, Primer año.
-//- Diego Alejandor Vasquez Valle, Desarrollo de Software, Primer año.
-// Descripción: El proyecto titulado "SAIA" se comparte a través de la plataforma GitHub, con el objetivo de difundir, entre la comunidad de programadores, los conocimientos adquiridos durante un año de estudios especializados en la especialidad de Desarrollo de Software.
+2024
 
-//Descripción de SAIAS:
-// - Version 1.0
-// - Todos los curd de: añadir, eliminar, editar e informar
-// - Lenguaje utilizado: C#
-// - Gestor de base de datos: Sql Server 2022
+# Autores:
 
-//Descripción del repositorio:
-// - Tipo: Lectura
-// - Finalidad: Transmitir los conocimiento de programación través de un programa.
-// - Se puede modificar: No
+Felipe Sebastián Pocasangre Clímaco, Desarrollo de Software, Primer Año.
+Josué Carlos Ayala Reyes, Desarrollo de Software, Primer Año.
+Christopher Alexander Morales Quijano, Desarrollo de Software, Primer Año.
+Diego Alejandro Vásquez Valle, Desarrollo de Software, Primer Año.
+Descripción:
+El proyecto titulado "SAIA" se comparte a través de la plataforma GitHub, con el objetivo de difundir, entre la comunidad de programadores, los conocimientos adquiridos durante un año de estudios especializados en la especialidad de Desarrollo de Software.
 
-//El proyecto contine:
-//°Implementación de patrón de arquitectura de MVC
-//°Base de datos en linea con SmarterASP.net
-//°Configuración del sistema (primer empresa, usuario)
-//°Configuración del servidor tanto local como remoto mediante archivo XML
-//°Metodo de codificación y encriptamiento (AES, SHA256)
-//°Creación de preguntas de seguridad por obligación para ingresar al programa
-//°Metodos de recuperación de contraseña (intervención de administrador, envío por correo electrónico, PIN de seguridad, preguntas de seguridad)
-//°Gestion de usuarios
-//°Gestion de productos
-//°Gestion de clientes
-//°Gestion de empleados
-//°Gestion de proveedores
-//°Genera targetas de cada producto que este en el programa
-//°Gestion de ventas de productos
-//°Gestion de cierrre de caja
-//°Gestion de ventas semanales
-//°Reporte general de todos los productos registrados
-//°Reporte general de las ventas del dia
-//°Manda facturas electronicas a los clientes por cada compra que realizan
-//°Guarda el registro de ventas en un pdf que se guarda en los archivos temporales del dispositivo
-//°Guarda el registro de cierre en un pdf que se guarda en los archivos temporales del dispositivo
-//°Estadistica de ventas realizada por los usuarios
-//°Estadistica de ventas realizadas durante semanas
-//°Estadistica de ventas realizadas mensual mente
-//°Gestion de acceso para modificar las credenciales de concexcion de base de datos del programa
-//°Gestion de credenciales de base de datos
-//°Cuando se inicia el programa y este no tiene base de datos, siempre que se inicie, se mostrara el apartado para ingresar las credenciales de una base de datos
-//°Gestion de devolucion de productos
-//°Sonido de intro de ingreso de programa
-//°Sonido de realizar una venta
-//°Sonido de relizar un cierre de caja
-//°Gestion de idioma del programa
-//°Gestion de paletas de colores del programa
-//°Mensaje personalizado que aparece en el centro de la pantalla
-//°Mensaje personalizado que aparece en la parte inferior derecha de la pantalla
-//°Muestra el manual de usuario del programa
-//°Muestra el manual de tecnico del programa
+# Descripción de SAIA:
+
+Versión 1.0.
+Todos los CRUD de: añadir, eliminar, editar e informar.
+Lenguaje utilizado: C#.
+Gestor de base de datos: SQL Server 2022.
+Descripción del repositorio:
+Tipo: Lectura.
+Finalidad: Transmitir los conocimientos de programación a través de un programa.
+¿Se puede modificar?: No.
+
+# El proyecto contiene:
+
+Implementación del patrón de arquitectura MVC.
+Base de datos en línea con SmarterASP.net.
+Configuración del sistema (primera empresa, usuario).
+Configuración del servidor tanto local como remoto mediante archivo XML.
+Métodos de codificación y encriptación (AES, SHA256).
+Creación obligatoria de preguntas de seguridad para ingresar al programa.
+Métodos de recuperación de contraseña (intervención de administrador, envío por correo electrónico, PIN de seguridad, preguntas de seguridad).
+Gestión de usuarios.
+Gestión de productos.
+Gestión de clientes.
+Gestión de empleados.
+Gestión de proveedores.
+Generación de tarjetas de cada producto registrado en el programa.
+Gestión de ventas de productos.
+Gestión de cierre de caja.
+Gestión de ventas semanales.
+Reporte general de todos los productos registrados.
+Reporte general de las ventas del día.
+Envío de facturas electrónicas a los clientes por cada compra realizada.
+Guardado del registro de ventas en un PDF almacenado en los archivos temporales del dispositivo.
+Guardado del registro de cierre de caja en un PDF almacenado en los archivos temporales del dispositivo.
+Estadísticas de ventas realizadas por los usuarios.
+Estadísticas de ventas realizadas durante semanas.
+Estadísticas de ventas realizadas mensualmente.
+Gestión de acceso para modificar las credenciales de conexión de la base de datos del programa.
+Gestión de credenciales de base de datos.
+Cuando se inicia el programa y no tiene base de datos configurada, se mostrará el apartado para ingresar las credenciales de una base de datos.
+Gestión de devolución de productos.
+Sonido de inicio del programa.
+Sonido al realizar una venta.
+Sonido al realizar un cierre de caja.
+Gestión del idioma del programa.
+Gestión de paletas de colores del programa.
+Mensaje personalizado que aparece en el centro de la pantalla.
+Mensaje personalizado que aparece en la parte inferior derecha de la pantalla.
+Muestra el manual de usuario del programa.
+Muestra el manual técnico del programa.
