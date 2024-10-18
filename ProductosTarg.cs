@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AgroServicios
-{
+{   
     public partial class ProductosTarg : UserControl
     {
         private int id = 0;

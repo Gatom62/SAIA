@@ -76,6 +76,8 @@ namespace AgroServicios.Controlador.MenuPrincipal
         private void CerrarCaja(object sender, EventArgs e)
         {
             DAOCierreCaja dao = new DAOCierreCaja();
+            DAODCSoporte mailService = new DAODCSoporte();
+
             decimal totalDia = 0;
             string filasCierres = string.Empty;
 
@@ -125,6 +127,18 @@ namespace AgroServicios.Controlador.MenuPrincipal
                 {
                     MessageBox.Show("Cierre de caja realizado con éxito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                // Obtener correos de managers
+                List<string> correosManagers = dao.ObtenerCorreosManagers();
+
+                // Enviar el PDF a los managers
+                mailService.sendMailWithAttachment(
+                    subject: "Informe de Cierre de Caja",
+                    body: "Adjunto se encuentra el informe de cierre de caja del día.",
+                    destinatarioCorreo: correosManagers,
+                    attachmentPath: pdfFilePath
+                );
+
+
 
                 // Opción para abrir el PDF generado
                 if (ControladorIdioma.idioma == 1)

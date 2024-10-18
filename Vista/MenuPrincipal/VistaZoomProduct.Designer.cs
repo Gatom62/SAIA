@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaZoomProduct));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             this.lblname = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbPrecioProducto = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbCantidad = new Bunifu.UI.WinForms.BunifuLabel();
@@ -168,11 +168,11 @@
             this.btnadd.ColorContrastOnClick = 45;
             this.btnadd.ColorContrastOnHover = 45;
             this.btnadd.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges9.BottomLeft = true;
-            borderEdges9.BottomRight = true;
-            borderEdges9.TopLeft = true;
-            borderEdges9.TopRight = true;
-            this.btnadd.CustomizableEdges = borderEdges9;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnadd.CustomizableEdges = borderEdges1;
             this.btnadd.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnadd.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnadd.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -326,11 +326,11 @@
             this.ptbback.ColorContrastOnClick = 30;
             this.ptbback.ColorContrastOnHover = 30;
             this.ptbback.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges10.BottomLeft = true;
-            borderEdges10.BottomRight = true;
-            borderEdges10.TopLeft = true;
-            borderEdges10.TopRight = true;
-            this.ptbback.CustomizableEdges = borderEdges10;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.ptbback.CustomizableEdges = borderEdges2;
             this.ptbback.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ptbback.Image = global::AgroServicios.Properties.Resources.ErrorIcono;
             this.ptbback.ImageMargin = new System.Windows.Forms.Padding(0);
@@ -341,6 +341,7 @@
             this.ptbback.Size = new System.Drawing.Size(46, 46);
             this.ptbback.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
             this.ptbback.TabIndex = 3;
+            this.ptbback.Click += new System.EventHandler(this.ptbback_Click);
             // 
             // bunifuLabel1
             // 

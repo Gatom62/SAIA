@@ -13,6 +13,27 @@ namespace AgroServicios.Modelo.DAO
     {
         readonly SqlCommand command = new SqlCommand();
 
+        public List<string> ObtenerCorreosManagers()
+        {
+            List<string> correos = new List<string>();
+
+            string query = "SELECT Correo FROM VistaEmpleadosConRol WHERE Rol = 'Manager'";
+
+            using (SqlConnection connection = getConnection())
+            using (SqlCommand command = new SqlCommand(query, connection))
+            {
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        correos.Add(reader["Correo"].ToString());
+                    }
+                }
+            }
+
+            return correos;
+        }
         public DataSet FIltrarVentasHoy()
         {
             DataSet ds = new DataSet();
