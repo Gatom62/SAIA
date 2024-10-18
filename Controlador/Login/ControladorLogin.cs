@@ -15,8 +15,7 @@ using System.IO;
 namespace AgroServicios.Controlador.Login
 {
     internal class ControladorLogin
-    {
-       
+    {   
         VistaLogin ObjLogin;
 
         /// <summary>

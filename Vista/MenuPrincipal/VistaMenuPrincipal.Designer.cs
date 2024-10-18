@@ -41,14 +41,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.SpCierreCaja = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnCierreCaja = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.SpProducto = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnprin2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuShadowPanel4 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.SpFichaProductos = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnFichaProductos = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.bunifuShadowPanel3 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.SpFiltrarVentas = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.btnVentas = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -81,11 +81,11 @@
             this.panel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            this.bunifuShadowPanel1.SuspendLayout();
-            this.bunifuShadowPanel2.SuspendLayout();
+            this.SpCierreCaja.SuspendLayout();
+            this.SpProducto.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.bunifuShadowPanel4.SuspendLayout();
-            this.bunifuShadowPanel3.SuspendLayout();
+            this.SpFichaProductos.SuspendLayout();
+            this.SpFiltrarVentas.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -160,8 +160,8 @@
             this.tableLayoutPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.bunifuShadowPanel1, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.bunifuShadowPanel2, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.SpCierreCaja, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.SpProducto, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -171,30 +171,30 @@
             this.tableLayoutPanel5.Size = new System.Drawing.Size(485, 305);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
-            // bunifuShadowPanel1
+            // SpCierreCaja
             // 
-            this.bunifuShadowPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.SpCierreCaja.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.BorderRadius = 25;
-            this.bunifuShadowPanel1.BorderThickness = 1;
-            this.bunifuShadowPanel1.Controls.Add(this.btnCierreCaja);
-            this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(3, 155);
-            this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
-            this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.DimGray;
-            this.bunifuShadowPanel1.ShadowDept = 2;
-            this.bunifuShadowPanel1.ShadowDepth = 5;
-            this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel1.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel1.Size = new System.Drawing.Size(479, 147);
-            this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel1.TabIndex = 29;
+            this.SpCierreCaja.BackColor = System.Drawing.Color.Transparent;
+            this.SpCierreCaja.BorderColor = System.Drawing.Color.Transparent;
+            this.SpCierreCaja.BorderRadius = 25;
+            this.SpCierreCaja.BorderThickness = 1;
+            this.SpCierreCaja.Controls.Add(this.btnCierreCaja);
+            this.SpCierreCaja.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.SpCierreCaja.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.SpCierreCaja.Location = new System.Drawing.Point(3, 155);
+            this.SpCierreCaja.Name = "SpCierreCaja";
+            this.SpCierreCaja.PanelColor = System.Drawing.Color.Transparent;
+            this.SpCierreCaja.PanelColor2 = System.Drawing.Color.Transparent;
+            this.SpCierreCaja.ShadowColor = System.Drawing.Color.DimGray;
+            this.SpCierreCaja.ShadowDept = 2;
+            this.SpCierreCaja.ShadowDepth = 5;
+            this.SpCierreCaja.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.SpCierreCaja.ShadowTopLeftVisible = false;
+            this.SpCierreCaja.Size = new System.Drawing.Size(479, 147);
+            this.SpCierreCaja.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.SpCierreCaja.TabIndex = 29;
             // 
             // btnCierreCaja
             // 
@@ -246,7 +246,7 @@
             this.btnCierreCaja.IdleIconLeftImage = null;
             this.btnCierreCaja.IdleIconRightImage = null;
             this.btnCierreCaja.IndicateFocus = false;
-            this.btnCierreCaja.Location = new System.Drawing.Point(3, 4);
+            this.btnCierreCaja.Location = new System.Drawing.Point(3, 0);
             this.btnCierreCaja.Margin = new System.Windows.Forms.Padding(20);
             this.btnCierreCaja.Name = "btnCierreCaja";
             this.btnCierreCaja.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -281,7 +281,7 @@
             this.btnCierreCaja.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnCierreCaja.OnPressedState.IconLeftImage = null;
             this.btnCierreCaja.OnPressedState.IconRightImage = null;
-            this.btnCierreCaja.Size = new System.Drawing.Size(461, 128);
+            this.btnCierreCaja.Size = new System.Drawing.Size(461, 132);
             this.btnCierreCaja.TabIndex = 1;
             this.btnCierreCaja.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCierreCaja.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -289,30 +289,30 @@
             this.btnCierreCaja.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnCierreCaja.UseDefaultRadiusAndThickness = true;
             // 
-            // bunifuShadowPanel2
+            // SpProducto
             // 
-            this.bunifuShadowPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.SpProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuShadowPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.BorderRadius = 25;
-            this.bunifuShadowPanel2.BorderThickness = 1;
-            this.bunifuShadowPanel2.Controls.Add(this.btnprin2);
-            this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel2.Location = new System.Drawing.Point(3, 3);
-            this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
-            this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.ShadowColor = System.Drawing.Color.DimGray;
-            this.bunifuShadowPanel2.ShadowDept = 2;
-            this.bunifuShadowPanel2.ShadowDepth = 5;
-            this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel2.Size = new System.Drawing.Size(479, 146);
-            this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel2.TabIndex = 29;
+            this.SpProducto.BackColor = System.Drawing.Color.Transparent;
+            this.SpProducto.BorderColor = System.Drawing.Color.Transparent;
+            this.SpProducto.BorderRadius = 25;
+            this.SpProducto.BorderThickness = 1;
+            this.SpProducto.Controls.Add(this.btnprin2);
+            this.SpProducto.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.SpProducto.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.SpProducto.Location = new System.Drawing.Point(3, 3);
+            this.SpProducto.Name = "SpProducto";
+            this.SpProducto.PanelColor = System.Drawing.Color.Transparent;
+            this.SpProducto.PanelColor2 = System.Drawing.Color.Transparent;
+            this.SpProducto.ShadowColor = System.Drawing.Color.DimGray;
+            this.SpProducto.ShadowDept = 2;
+            this.SpProducto.ShadowDepth = 5;
+            this.SpProducto.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.SpProducto.ShadowTopLeftVisible = false;
+            this.SpProducto.Size = new System.Drawing.Size(479, 146);
+            this.SpProducto.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.SpProducto.TabIndex = 29;
             // 
             // btnprin2
             // 
@@ -412,8 +412,8 @@
             this.tableLayoutPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.bunifuShadowPanel4, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.bunifuShadowPanel3, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.SpFichaProductos, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.SpFiltrarVentas, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(494, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -423,30 +423,30 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(486, 305);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
-            // bunifuShadowPanel4
+            // SpFichaProductos
             // 
-            this.bunifuShadowPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.SpFichaProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuShadowPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel4.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel4.BorderRadius = 25;
-            this.bunifuShadowPanel4.BorderThickness = 1;
-            this.bunifuShadowPanel4.Controls.Add(this.btnFichaProductos);
-            this.bunifuShadowPanel4.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel4.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel4.Location = new System.Drawing.Point(3, 3);
-            this.bunifuShadowPanel4.Name = "bunifuShadowPanel4";
-            this.bunifuShadowPanel4.PanelColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel4.PanelColor2 = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel4.ShadowColor = System.Drawing.Color.DimGray;
-            this.bunifuShadowPanel4.ShadowDept = 2;
-            this.bunifuShadowPanel4.ShadowDepth = 5;
-            this.bunifuShadowPanel4.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel4.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel4.Size = new System.Drawing.Size(480, 146);
-            this.bunifuShadowPanel4.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel4.TabIndex = 29;
+            this.SpFichaProductos.BackColor = System.Drawing.Color.Transparent;
+            this.SpFichaProductos.BorderColor = System.Drawing.Color.Transparent;
+            this.SpFichaProductos.BorderRadius = 25;
+            this.SpFichaProductos.BorderThickness = 1;
+            this.SpFichaProductos.Controls.Add(this.btnFichaProductos);
+            this.SpFichaProductos.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.SpFichaProductos.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.SpFichaProductos.Location = new System.Drawing.Point(3, 3);
+            this.SpFichaProductos.Name = "SpFichaProductos";
+            this.SpFichaProductos.PanelColor = System.Drawing.Color.Transparent;
+            this.SpFichaProductos.PanelColor2 = System.Drawing.Color.Transparent;
+            this.SpFichaProductos.ShadowColor = System.Drawing.Color.DimGray;
+            this.SpFichaProductos.ShadowDept = 2;
+            this.SpFichaProductos.ShadowDepth = 5;
+            this.SpFichaProductos.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.SpFichaProductos.ShadowTopLeftVisible = false;
+            this.SpFichaProductos.Size = new System.Drawing.Size(480, 146);
+            this.SpFichaProductos.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.SpFichaProductos.TabIndex = 29;
             // 
             // btnFichaProductos
             // 
@@ -541,30 +541,30 @@
             this.btnFichaProductos.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnFichaProductos.UseDefaultRadiusAndThickness = true;
             // 
-            // bunifuShadowPanel3
+            // SpFiltrarVentas
             // 
-            this.bunifuShadowPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.SpFiltrarVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuShadowPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel3.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel3.BorderRadius = 25;
-            this.bunifuShadowPanel3.BorderThickness = 1;
-            this.bunifuShadowPanel3.Controls.Add(this.btnVentas);
-            this.bunifuShadowPanel3.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel3.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel3.Location = new System.Drawing.Point(3, 155);
-            this.bunifuShadowPanel3.Name = "bunifuShadowPanel3";
-            this.bunifuShadowPanel3.PanelColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel3.PanelColor2 = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel3.ShadowColor = System.Drawing.Color.DimGray;
-            this.bunifuShadowPanel3.ShadowDept = 2;
-            this.bunifuShadowPanel3.ShadowDepth = 5;
-            this.bunifuShadowPanel3.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel3.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel3.Size = new System.Drawing.Size(480, 147);
-            this.bunifuShadowPanel3.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel3.TabIndex = 29;
+            this.SpFiltrarVentas.BackColor = System.Drawing.Color.Transparent;
+            this.SpFiltrarVentas.BorderColor = System.Drawing.Color.Transparent;
+            this.SpFiltrarVentas.BorderRadius = 25;
+            this.SpFiltrarVentas.BorderThickness = 1;
+            this.SpFiltrarVentas.Controls.Add(this.btnVentas);
+            this.SpFiltrarVentas.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.SpFiltrarVentas.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.SpFiltrarVentas.Location = new System.Drawing.Point(3, 155);
+            this.SpFiltrarVentas.Name = "SpFiltrarVentas";
+            this.SpFiltrarVentas.PanelColor = System.Drawing.Color.Transparent;
+            this.SpFiltrarVentas.PanelColor2 = System.Drawing.Color.Transparent;
+            this.SpFiltrarVentas.ShadowColor = System.Drawing.Color.DimGray;
+            this.SpFiltrarVentas.ShadowDept = 2;
+            this.SpFiltrarVentas.ShadowDepth = 5;
+            this.SpFiltrarVentas.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.SpFiltrarVentas.ShadowTopLeftVisible = false;
+            this.SpFiltrarVentas.Size = new System.Drawing.Size(480, 147);
+            this.SpFiltrarVentas.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.SpFiltrarVentas.TabIndex = 29;
             // 
             // btnVentas
             // 
@@ -583,7 +583,7 @@
             this.btnVentas.BackColor1 = System.Drawing.Color.DodgerBlue;
             this.btnVentas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVentas.BackgroundImage")));
             this.btnVentas.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnVentas.ButtonText = "Ficha de cierre de cajas";
+            this.btnVentas.ButtonText = "Filtrar ventas";
             this.btnVentas.ButtonTextMarginLeft = 0;
             this.btnVentas.ColorContrastOnClick = 45;
             this.btnVentas.ColorContrastOnHover = 45;
@@ -1156,8 +1156,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(1321, 718);
-            this.MinimumSize = new System.Drawing.Size(1321, 718);
             this.Name = "VistaMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu principal";
@@ -1168,11 +1166,11 @@
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
-            this.bunifuShadowPanel1.ResumeLayout(false);
-            this.bunifuShadowPanel2.ResumeLayout(false);
+            this.SpCierreCaja.ResumeLayout(false);
+            this.SpProducto.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
-            this.bunifuShadowPanel4.ResumeLayout(false);
-            this.bunifuShadowPanel3.ResumeLayout(false);
+            this.SpFichaProductos.ResumeLayout(false);
+            this.SpFiltrarVentas.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -1231,10 +1229,10 @@
         public System.Windows.Forms.PictureBox btnShop;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnFichaProductos;
         public System.Windows.Forms.PictureBox btnAccounts;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel4;
+        private Bunifu.UI.WinForms.BunifuShadowPanel SpProducto;
+        private Bunifu.UI.WinForms.BunifuShadowPanel SpCierreCaja;
+        private Bunifu.UI.WinForms.BunifuShadowPanel SpFiltrarVentas;
+        private Bunifu.UI.WinForms.BunifuShadowPanel SpFichaProductos;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCierreCaja;
         public System.Windows.Forms.PictureBox btnCerrar;
     }

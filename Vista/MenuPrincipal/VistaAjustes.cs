@@ -64,6 +64,26 @@ namespace AgroServicios.Vista.MenuPrincipal
                 btnGuardarConfi.OnPressedState.BorderColor = Color.Red;
                 btnGuardarConfi.DisabledFillColor = Color.DarkOrange;
 
+                btnCambiarPass.IdleFillColor = Color.DarkBlue;
+                btnCambiarPass.onHoverState.FillColor = Color.DarkViolet;
+                btnCambiarPass.onHoverState.BorderColor = Color.DarkViolet;
+                btnCambiarPass.OnPressedState.FillColor = Color.DodgerBlue;
+                btnCambiarPass.OnPressedState.BorderColor = Color.DodgerBlue;
+                btnCambiarPass.DisabledFillColor = Color.DarkViolet;
+
+                btnCambiarPass.DisabledFillColor = Color.FromArgb(118, 88, 152);
+                btnCambiarPass.ForeColor = Color.White;
+
+                btnCambiarPreguntas.IdleFillColor = Color.DarkBlue;
+                btnCambiarPreguntas.onHoverState.FillColor = Color.DarkViolet;
+                btnCambiarPreguntas.onHoverState.BorderColor = Color.DarkViolet;
+                btnCambiarPreguntas.OnPressedState.FillColor = Color.DodgerBlue;
+                btnCambiarPreguntas.OnPressedState.BorderColor = Color.DodgerBlue;
+                btnCambiarPreguntas.DisabledFillColor = Color.DarkViolet;
+
+                btnCambiarPreguntas.DisabledFillColor = Color.FromArgb(118, 88, 152);
+                btnCambiarPreguntas.ForeColor = Color.White;
+
                 pn1.BackgroundColor = Color.DimGray;
                 pn2.BackgroundColor = Color.DimGray;
                 pn3.BackgroundColor = Color.DimGray;

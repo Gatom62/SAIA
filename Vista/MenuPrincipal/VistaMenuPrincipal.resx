@@ -120,8 +120,8 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnCierreCaja.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAc0AAACACAYAAABp9DIbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM9SURBVHhe7dwvUxtBHMfhSGRlZSUSidt7CUgkshKJ5B0w
+        iVBORw0KGgoAAAANSUhEUgAAAc0AAACECAYAAADyZXANAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANMSURBVHhe7dwvUxtBHMfhSGRlZSUSidt7CUgkshKJ5B0w
         lzBTycuorKysRMbkOKoqkfQu7JABtu23ljy/mQeG2U3sZ/b+sPjXLIdyuBpLtxzL2fT7EgDek9q37npT
         jmr6/n/6oZyvxu528ggAe2Ho1nNIb9bloObw77M9WQ7d9+aXAcB+uO3vy3FNY3vmI2o/dg+NDwPA3pkO
         khc1kS9nPmEKJgC8Vrqayt24JAsAb/VDN16ty4eay+eHfpqbAWDvDd1NTeb2lLlubgIAHufbl9vT5vxe
@@ -132,10 +132,10 @@
         aAJASDQBICSaABASTQAIiSYAhEQTAEKiCQAh0QSAkGgCQEg0ASAkmgAQEk0ACIkmAIREEwBCogkAIdEE
         gJBoAkBINAEgJJoAEBJNAAiJJgCERBMAQqIJACHRBICQaAJASDQBICSaABASTQAIiSYAhEQTAEKiCQAh
         0QSAkGgCQEg0ASAkmgAQEk0ACIkmAIREEwBCogkAIdEEgJBoAkBINAEgJJoAEBJNAAiJJgCERBMAQqIJ
-        ACHRBICQaAJASDQBICSaABASTQAITdFcDuWivQgA7MzRHMtZexEA2Jmi2d+X4/YiAPBsU04XN+tyMP3x
-        680iAPDsaiyfFvP0Y/eltQEA6B6XY/djG8x5rn+Wj/3Qja2NALDPpoPlw/WmHNVkPs1yKCetzQCwz+a3
-        TGoqX47LtACwsxy7rzWR7amvoHgwCIC9NV+S/eMJ8/XUe5zfWl8EAO/c7fw6Zk1iPvPjtau78vnpX+0B
-        wPvVD+V8Ol0e1gQ2ZrH4DSzuaNoZTN85AAAAAElFTkSuQmCC
+        ACHRBICQaAJASDQBICSaABASTQAIiSYAhEQTAEKiCQAh0QSA0BTN5VAu2osAwM4czbGctRcBgJ0pmv19
+        OW4vAgDPNuV0cbMuB9Mfv94sAgDPrsbyaTFPP3ZfWhsAgO5xOXY/tsGc5/pn+dgP3djaCAD7bDpYPlxv
+        ylFN5tMsh3LS2gwA+2x+y6Sm8uW4TAsAO8ux+1oT2Z76CooHgwDYW/Ml2T+eMF9Pvcf5rfVFAPDO3c6v
+        Y9Yk5jM/Xru6K5+f/tUeALxf/VDOp9PlYU1gYxaL33CoAprh7ybVAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="btnprin2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

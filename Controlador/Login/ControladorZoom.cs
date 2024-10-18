@@ -10,7 +10,7 @@ namespace AgroServicios.Controlador.Login
     class ControladorZoom
     {
         VistaZoomProduct ObjZoom;
-
+       
         public ControladorZoom(VistaZoomProduct vista){
             ObjZoom = vista;
             ObjZoom.ptbback.Click += new EventHandler(Salir);

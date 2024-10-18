@@ -9,6 +9,7 @@ using System.Drawing;
 using Newtonsoft.Json.Linq;
 using System.Numerics;
 using System.Drawing.Imaging;
+using AgroServicios.Modelo.DTO;
 
 namespace AgroServicios.Vista.MenuPrincipal
 {
@@ -74,8 +75,6 @@ namespace AgroServicios.Vista.MenuPrincipal
                 lblfecha.Text = DateTime.Now.ToLongDateString();
             }
         }
-
-
         private void VistaMenuPrincipal_Load(object sender, EventArgs e)
         {
             if (ControladorTema.IsDarkMode == true)
@@ -84,13 +83,27 @@ namespace AgroServicios.Vista.MenuPrincipal
                 lblhora.ForeColor = Color.White;
                 lblfecha.ForeColor = Color.FromArgb(68, 197, 197);
                 PanelContenedor.BackColor = Color.FromArgb(18,18,18);
-                btnprin2.IdleFillColor = Color.FromArgb(82, 208, 83);
                
                 tableLayoutPanel1.BackColor = Color.FromArgb(230, 119, 11);
                 btnInicio.BackColor = Color.FromArgb(230, 119, 11);
                 btnShop.BackColor = Color.FromArgb(230, 119, 11);
                 btnStats.BackColor = Color.FromArgb(230, 119, 11);
-               
+
+                btnprin2.IdleFillColor = Color.FromArgb(118, 88, 152);
+                btnprin2.ForeColor = Color.White;
+                btnCierreCaja.IdleFillColor = Color.FromArgb(118, 88, 152);
+                btnCierreCaja.ForeColor = Color.White;
+                btnFichaProductos.IdleFillColor = Color.FromArgb(118, 88, 152);
+                btnFichaProductos.ForeColor = Color.White;
+                btnVentas.IdleFillColor = Color.FromArgb(118, 88, 152);
+                btnVentas.ForeColor = Color.White;
+
+                //Esto es para que cambie el color del fondo de los botones
+                SpCierreCaja.ShadowColor = Color.LightSeaGreen;
+                SpFichaProductos.ShadowColor = Color.LightSeaGreen;
+                SpFiltrarVentas.ShadowColor = Color.LightSeaGreen;
+                SpProducto.ShadowColor = Color.LightSeaGreen;
+
                 bunifuPanel2.BackgroundColor = Color.FromArgb(34, 36, 49);
                 label1.ForeColor = Color.White;
                 label2.ForeColor = Color.FromArgb(68, 197, 197);
