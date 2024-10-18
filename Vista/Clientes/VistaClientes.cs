@@ -59,7 +59,10 @@ namespace AgroServicios.Vista.Clientes
             {
                 lbProducto.Text = Ingles.Cliente;
                 btnCrearCliente.Text = Ingles.AgregarCliente;
-                txtBuscarClientes.Text = Ingles.Busqueda;
+                cmsEditarCliente.Text = "Update client.";
+                cmsEliminarCliente.Text = "Delete client.";
+                cmsInformacionCliente.Text = "Customer information.";
+                txtBuscarClientes.PlaceholderText = Ingles.Busqueda;
             }
         }
     }

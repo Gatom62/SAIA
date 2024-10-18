@@ -58,13 +58,6 @@ namespace AgroServicios.Vista.MenuPrincipal
             btnAccounts.MouseEnter += btnAccounts_MouseEnter;
             btnAccounts.MouseLeave += btnAccounts_MouseLeave;
 
-            //Para el boton de estadisticas
-            // Cargar la imagen desde los recursos
-            btnEstadisticas.Image = Properties.Resources.image_49;
-            originalSize = btnEstadisticas.Size;
-            // Eventos para cuando el mouse entra y sale del PictureBox
-            btnEstadisticas.MouseEnter += btnEstadisticas_MouseEnter;
-            btnEstadisticas.MouseLeave += btnEstadisticas_MouseLeave;
         }
 
         private void horafecha_Tick(object sender, EventArgs e)
@@ -182,18 +175,5 @@ namespace AgroServicios.Vista.MenuPrincipal
             btnAccounts.Location = new Point(btnAccounts.Location.X + 10, btnAccounts.Location.Y + 10); // Restaurar la posición
         }
 
-        private void btnEstadisticas_MouseEnter(object sender, EventArgs e)
-        {
-            // Restaurar el tamaño original del PictureBox cuando el cursor sale de la imagen
-            btnEstadisticas.Size = originalSize;
-            btnEstadisticas.Location = new Point(btnEstadisticas.Location.X + 10, btnEstadisticas.Location.Y + 10); // Restaurar la posición
-        }
-
-        private void btnEstadisticas_MouseLeave(object sender, EventArgs e)
-        {
-            // Restaurar el tamaño original del PictureBox cuando el cursor sale de la imagen
-            btnEstadisticas.Size = originalSize;
-            btnEstadisticas.Location = new Point(btnEstadisticas.Location.X + 10, btnEstadisticas.Location.Y + 10); // Restaurar la posición
-        }
     }
 }

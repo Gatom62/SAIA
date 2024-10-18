@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaProductos));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -47,13 +47,13 @@
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnAgregarMarca = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.lbProducto = new System.Windows.Forms.Label();
             this.ptbback = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtBuscarP = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnAgregarProducto = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregarMarca = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.GriewViewProductos = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.ContextMenuProductos.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -71,27 +71,27 @@
             this.cmsEditarProducto,
             this.cmsInformacion});
             this.ContextMenuProductos.Name = "ContextMenuProductos";
-            this.ContextMenuProductos.Size = new System.Drawing.Size(200, 82);
+            this.ContextMenuProductos.Size = new System.Drawing.Size(176, 82);
             // 
             // cmsElimarProducto
             // 
             this.cmsElimarProducto.Image = global::AgroServicios.Properties.Resources.borrar;
             this.cmsElimarProducto.Name = "cmsElimarProducto";
-            this.cmsElimarProducto.Size = new System.Drawing.Size(199, 26);
+            this.cmsElimarProducto.Size = new System.Drawing.Size(175, 26);
             this.cmsElimarProducto.Text = "Eliminar";
             // 
             // cmsEditarProducto
             // 
             this.cmsEditarProducto.Image = global::AgroServicios.Properties.Resources.actualizar;
             this.cmsEditarProducto.Name = "cmsEditarProducto";
-            this.cmsEditarProducto.Size = new System.Drawing.Size(199, 26);
+            this.cmsEditarProducto.Size = new System.Drawing.Size(175, 26);
             this.cmsEditarProducto.Text = "Editar Datos";
             // 
             // cmsInformacion
             // 
             this.cmsInformacion.Image = global::AgroServicios.Properties.Resources.informacion;
             this.cmsInformacion.Name = "cmsInformacion";
-            this.cmsInformacion.Size = new System.Drawing.Size(199, 26);
+            this.cmsInformacion.Size = new System.Drawing.Size(175, 26);
             this.cmsInformacion.Text = "Informacion ";
             // 
             // bunifuLabel1
@@ -105,7 +105,7 @@
             this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(372, 47);
+            this.bunifuLabel1.Size = new System.Drawing.Size(295, 38);
             this.bunifuLabel1.TabIndex = 4;
             this.bunifuLabel1.Text = "Tabla de Productos";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -116,9 +116,9 @@
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1371, 84);
+            this.panel1.Size = new System.Drawing.Size(1028, 68);
             this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -129,9 +129,9 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.19048F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.654762F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 58.03571F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 244F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 257F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 183F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel1.Controls.Add(this.lbProducto, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.ptbback, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 3, 0);
@@ -140,104 +140,13 @@
             this.tableLayoutPanel1.Controls.Add(this.btnAgregarMarca, 5, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1371, 84);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1028, 68);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // btnAgregarMarca
-            // 
-            this.btnAgregarMarca.AllowAnimations = true;
-            this.btnAgregarMarca.AllowMouseEffects = true;
-            this.btnAgregarMarca.AllowToggling = false;
-            this.btnAgregarMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAgregarMarca.AnimationSpeed = 200;
-            this.btnAgregarMarca.AutoGenerateColors = false;
-            this.btnAgregarMarca.AutoRoundBorders = false;
-            this.btnAgregarMarca.AutoSizeLeftIcon = true;
-            this.btnAgregarMarca.AutoSizeRightIcon = true;
-            this.btnAgregarMarca.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgregarMarca.BackColor1 = System.Drawing.Color.DodgerBlue;
-            this.btnAgregarMarca.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarMarca.BackgroundImage")));
-            this.btnAgregarMarca.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnAgregarMarca.ButtonText = "Agregar marca";
-            this.btnAgregarMarca.ButtonTextMarginLeft = 0;
-            this.btnAgregarMarca.ColorContrastOnClick = 45;
-            this.btnAgregarMarca.ColorContrastOnHover = 45;
-            this.btnAgregarMarca.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnAgregarMarca.CustomizableEdges = borderEdges3;
-            this.btnAgregarMarca.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAgregarMarca.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnAgregarMarca.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAgregarMarca.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnAgregarMarca.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.btnAgregarMarca.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarMarca.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarMarca.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregarMarca.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAgregarMarca.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btnAgregarMarca.IconMarginLeft = 11;
-            this.btnAgregarMarca.IconPadding = 10;
-            this.btnAgregarMarca.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregarMarca.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAgregarMarca.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btnAgregarMarca.IconSize = 25;
-            this.btnAgregarMarca.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btnAgregarMarca.IdleBorderRadius = 15;
-            this.btnAgregarMarca.IdleBorderThickness = 1;
-            this.btnAgregarMarca.IdleFillColor = System.Drawing.Color.DodgerBlue;
-            this.btnAgregarMarca.IdleIconLeftImage = null;
-            this.btnAgregarMarca.IdleIconRightImage = null;
-            this.btnAgregarMarca.IndicateFocus = false;
-            this.btnAgregarMarca.Location = new System.Drawing.Point(1117, 7);
-            this.btnAgregarMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnAgregarMarca.Name = "btnAgregarMarca";
-            this.btnAgregarMarca.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnAgregarMarca.OnDisabledState.BorderRadius = 15;
-            this.btnAgregarMarca.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnAgregarMarca.OnDisabledState.BorderThickness = 1;
-            this.btnAgregarMarca.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnAgregarMarca.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnAgregarMarca.OnDisabledState.IconLeftImage = null;
-            this.btnAgregarMarca.OnDisabledState.IconRightImage = null;
-            this.btnAgregarMarca.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnAgregarMarca.onHoverState.BorderRadius = 15;
-            this.btnAgregarMarca.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnAgregarMarca.onHoverState.BorderThickness = 1;
-            this.btnAgregarMarca.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnAgregarMarca.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarMarca.onHoverState.IconLeftImage = null;
-            this.btnAgregarMarca.onHoverState.IconRightImage = null;
-            this.btnAgregarMarca.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAgregarMarca.OnIdleState.BorderRadius = 15;
-            this.btnAgregarMarca.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnAgregarMarca.OnIdleState.BorderThickness = 1;
-            this.btnAgregarMarca.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnAgregarMarca.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarMarca.OnIdleState.IconLeftImage = null;
-            this.btnAgregarMarca.OnIdleState.IconRightImage = null;
-            this.btnAgregarMarca.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnAgregarMarca.OnPressedState.BorderRadius = 15;
-            this.btnAgregarMarca.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnAgregarMarca.OnPressedState.BorderThickness = 1;
-            this.btnAgregarMarca.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnAgregarMarca.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarMarca.OnPressedState.IconLeftImage = null;
-            this.btnAgregarMarca.OnPressedState.IconRightImage = null;
-            this.btnAgregarMarca.Size = new System.Drawing.Size(248, 59);
-            this.btnAgregarMarca.TabIndex = 33;
-            this.btnAgregarMarca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAgregarMarca.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnAgregarMarca.TextMarginLeft = 0;
-            this.btnAgregarMarca.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btnAgregarMarca.UseDefaultRadiusAndThickness = true;
             // 
             // lbProducto
             // 
@@ -245,10 +154,10 @@
             this.lbProducto.BackColor = System.Drawing.Color.Transparent;
             this.lbProducto.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbProducto.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lbProducto.Location = new System.Drawing.Point(93, 7);
-            this.lbProducto.Margin = new System.Windows.Forms.Padding(3, 0, 3, 12);
+            this.lbProducto.Location = new System.Drawing.Point(70, 6);
+            this.lbProducto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 10);
             this.lbProducto.Name = "lbProducto";
-            this.lbProducto.Size = new System.Drawing.Size(216, 47);
+            this.lbProducto.Size = new System.Drawing.Size(162, 38);
             this.lbProducto.TabIndex = 0;
             this.lbProducto.Text = "Productos";
             // 
@@ -276,12 +185,12 @@
             this.ptbback.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ptbback.Image = global::AgroServicios.Properties.Resources.turn_left_11044726;
             this.ptbback.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.ptbback.Location = new System.Drawing.Point(10, 8);
-            this.ptbback.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ptbback.Location = new System.Drawing.Point(8, 6);
+            this.ptbback.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ptbback.Name = "ptbback";
             this.ptbback.RoundBorders = false;
             this.ptbback.ShowBorders = false;
-            this.ptbback.Size = new System.Drawing.Size(67, 58);
+            this.ptbback.Size = new System.Drawing.Size(50, 47);
             this.ptbback.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Flat;
             this.ptbback.TabIndex = 1;
             this.ptbback.MouseEnter += new System.EventHandler(this.ptbback_MouseEnter);
@@ -293,15 +202,15 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.txtBuscarP, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(367, 2);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(274, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(498, 70);
-            this.tableLayoutPanel2.TabIndex = 38;
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(373, 56);
+            this.tableLayoutPanel2.TabIndex = 0;
             // 
             // txtBuscarP
             // 
@@ -335,8 +244,8 @@
             this.txtBuscarP.IconRight = null;
             this.txtBuscarP.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBuscarP.Lines = new string[0];
-            this.txtBuscarP.Location = new System.Drawing.Point(3, 12);
-            this.txtBuscarP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBuscarP.Location = new System.Drawing.Point(2, 10);
+            this.txtBuscarP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBuscarP.MaxLength = 32767;
             this.txtBuscarP.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtBuscarP.Modified = false;
@@ -362,7 +271,7 @@
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtBuscarP.OnIdleState = stateProperties4;
-            this.txtBuscarP.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBuscarP.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBuscarP.PasswordChar = '\0';
             this.txtBuscarP.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtBuscarP.PlaceholderText = "Buscar";
@@ -372,7 +281,7 @@
             this.txtBuscarP.SelectionLength = 0;
             this.txtBuscarP.SelectionStart = 0;
             this.txtBuscarP.ShortcutsEnabled = true;
-            this.txtBuscarP.Size = new System.Drawing.Size(492, 45);
+            this.txtBuscarP.Size = new System.Drawing.Size(369, 35);
             this.txtBuscarP.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtBuscarP.TabIndex = 2;
             this.txtBuscarP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -431,8 +340,7 @@
             this.btnAgregarProducto.IdleIconLeftImage = null;
             this.btnAgregarProducto.IdleIconRightImage = null;
             this.btnAgregarProducto.IndicateFocus = false;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(882, 6);
-            this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(660, 5);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAgregarProducto.OnDisabledState.BorderRadius = 15;
@@ -466,8 +374,8 @@
             this.btnAgregarProducto.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnAgregarProducto.OnPressedState.IconLeftImage = null;
             this.btnAgregarProducto.OnPressedState.IconRightImage = null;
-            this.btnAgregarProducto.Size = new System.Drawing.Size(215, 62);
-            this.btnAgregarProducto.TabIndex = 40;
+            this.btnAgregarProducto.Size = new System.Drawing.Size(161, 50);
+            this.btnAgregarProducto.TabIndex = 3;
             this.btnAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAgregarProducto.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAgregarProducto.TextMarginLeft = 0;
@@ -482,12 +390,102 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(318, 14);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(238, 11);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 46);
-            this.button1.TabIndex = 39;
+            this.button1.Size = new System.Drawing.Size(32, 37);
+            this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnAgregarMarca
+            // 
+            this.btnAgregarMarca.AllowAnimations = true;
+            this.btnAgregarMarca.AllowMouseEffects = true;
+            this.btnAgregarMarca.AllowToggling = false;
+            this.btnAgregarMarca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAgregarMarca.AnimationSpeed = 200;
+            this.btnAgregarMarca.AutoGenerateColors = false;
+            this.btnAgregarMarca.AutoRoundBorders = false;
+            this.btnAgregarMarca.AutoSizeLeftIcon = true;
+            this.btnAgregarMarca.AutoSizeRightIcon = true;
+            this.btnAgregarMarca.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgregarMarca.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.btnAgregarMarca.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarMarca.BackgroundImage")));
+            this.btnAgregarMarca.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAgregarMarca.ButtonText = "Agregar marca";
+            this.btnAgregarMarca.ButtonTextMarginLeft = 0;
+            this.btnAgregarMarca.ColorContrastOnClick = 45;
+            this.btnAgregarMarca.ColorContrastOnHover = 45;
+            this.btnAgregarMarca.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnAgregarMarca.CustomizableEdges = borderEdges3;
+            this.btnAgregarMarca.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAgregarMarca.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnAgregarMarca.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAgregarMarca.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnAgregarMarca.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnAgregarMarca.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarMarca.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarMarca.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarMarca.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAgregarMarca.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnAgregarMarca.IconMarginLeft = 11;
+            this.btnAgregarMarca.IconPadding = 10;
+            this.btnAgregarMarca.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregarMarca.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAgregarMarca.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnAgregarMarca.IconSize = 25;
+            this.btnAgregarMarca.IdleBorderColor = System.Drawing.Color.Transparent;
+            this.btnAgregarMarca.IdleBorderRadius = 15;
+            this.btnAgregarMarca.IdleBorderThickness = 1;
+            this.btnAgregarMarca.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.btnAgregarMarca.IdleIconLeftImage = null;
+            this.btnAgregarMarca.IdleIconRightImage = null;
+            this.btnAgregarMarca.IndicateFocus = false;
+            this.btnAgregarMarca.Location = new System.Drawing.Point(837, 6);
+            this.btnAgregarMarca.Name = "btnAgregarMarca";
+            this.btnAgregarMarca.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnAgregarMarca.OnDisabledState.BorderRadius = 15;
+            this.btnAgregarMarca.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAgregarMarca.OnDisabledState.BorderThickness = 1;
+            this.btnAgregarMarca.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnAgregarMarca.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnAgregarMarca.OnDisabledState.IconLeftImage = null;
+            this.btnAgregarMarca.OnDisabledState.IconRightImage = null;
+            this.btnAgregarMarca.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnAgregarMarca.onHoverState.BorderRadius = 15;
+            this.btnAgregarMarca.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAgregarMarca.onHoverState.BorderThickness = 1;
+            this.btnAgregarMarca.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnAgregarMarca.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarMarca.onHoverState.IconLeftImage = null;
+            this.btnAgregarMarca.onHoverState.IconRightImage = null;
+            this.btnAgregarMarca.OnIdleState.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAgregarMarca.OnIdleState.BorderRadius = 15;
+            this.btnAgregarMarca.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAgregarMarca.OnIdleState.BorderThickness = 1;
+            this.btnAgregarMarca.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnAgregarMarca.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarMarca.OnIdleState.IconLeftImage = null;
+            this.btnAgregarMarca.OnIdleState.IconRightImage = null;
+            this.btnAgregarMarca.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnAgregarMarca.OnPressedState.BorderRadius = 15;
+            this.btnAgregarMarca.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnAgregarMarca.OnPressedState.BorderThickness = 1;
+            this.btnAgregarMarca.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnAgregarMarca.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarMarca.OnPressedState.IconLeftImage = null;
+            this.btnAgregarMarca.OnPressedState.IconRightImage = null;
+            this.btnAgregarMarca.Size = new System.Drawing.Size(186, 48);
+            this.btnAgregarMarca.TabIndex = 4;
+            this.btnAgregarMarca.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAgregarMarca.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAgregarMarca.TextMarginLeft = 0;
+            this.btnAgregarMarca.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnAgregarMarca.UseDefaultRadiusAndThickness = true;
             // 
             // GriewViewProductos
             // 
@@ -544,27 +542,26 @@
             this.GriewViewProductos.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.GriewViewProductos.HeaderBgColor = System.Drawing.Color.Empty;
             this.GriewViewProductos.HeaderForeColor = System.Drawing.Color.White;
-            this.GriewViewProductos.Location = new System.Drawing.Point(0, 84);
-            this.GriewViewProductos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GriewViewProductos.Location = new System.Drawing.Point(0, 68);
+            this.GriewViewProductos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GriewViewProductos.Name = "GriewViewProductos";
             this.GriewViewProductos.ReadOnly = true;
             this.GriewViewProductos.RowHeadersVisible = false;
             this.GriewViewProductos.RowHeadersWidth = 51;
             this.GriewViewProductos.RowTemplate.Height = 40;
             this.GriewViewProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GriewViewProductos.Size = new System.Drawing.Size(1371, 626);
-            this.GriewViewProductos.TabIndex = 5;
+            this.GriewViewProductos.Size = new System.Drawing.Size(1028, 509);
+            this.GriewViewProductos.TabIndex = 0;
             this.GriewViewProductos.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // VistaProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1371, 710);
+            this.ClientSize = new System.Drawing.Size(1028, 577);
             this.Controls.Add(this.GriewViewProductos);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "VistaProductos";
             this.Text = "Productos";
             this.Load += new System.EventHandler(this.VistaProductos_Load);

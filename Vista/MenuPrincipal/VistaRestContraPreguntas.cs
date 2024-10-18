@@ -49,11 +49,6 @@ namespace AgroServicios.Vista.MenuPrincipal
             if (ControladorTema.IsDarkMode == true)
             {
                 this.BackColor = Color.FromArgb(34, 36, 49);
-                //Esto es para cambiar el color de los gradientes del panel cuando se active el modo oscuro
-                bunifuGradientPanel2.GradientBottomLeft = Color.FromArgb(118, 88, 152);
-                bunifuGradientPanel2.GradientTopRight = Color.FromArgb(34, 36, 49);
-                bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(118, 88, 152);
-                bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(34, 36, 49);
 
                 btnRestablecer.IdleFillColor = Color.DarkBlue;
                 btnRestablecer.onHoverState.FillColor = Color.DarkViolet;
@@ -71,6 +66,8 @@ namespace AgroServicios.Vista.MenuPrincipal
                 txtNuevaContra.BorderColorActive = Color.FromArgb(211, 41, 15);
                 txtContraDenuevo.BorderColorHover = Color.FromArgb(211, 41, 15);
                 txtContraDenuevo.BorderColorActive = Color.FromArgb(211, 41, 15);
+
+                pnEstructura.BackgroundColor = Color.WhiteSmoke;
             }
             if (ControladorIdioma.idioma == 1)
             {

@@ -36,7 +36,6 @@ namespace AgroServicios.Controlador.Login
             ObjLogin.cmsManualUsuario.Click += new EventHandler(AbrirManualUsuario);
             ObjLogin.ptbback.Click += new EventHandler(CerrarAplicacion);
         }
-
         private void CerrarAplicacion(object sender, EventArgs e)
         {
             Application.Exit();
@@ -87,7 +86,7 @@ namespace AgroServicios.Controlador.Login
             string pdfTempPath = Path.Combine(Path.GetTempPath(), nombreArchivo);
 
             // Escribe el contenido del archivo PDF desde los recursos a la ruta temporal
-            File.WriteAllBytes(pdfTempPath, Properties.Resources.Manual_Técnico_de_SAIA_1_5);
+            File.WriteAllBytes(pdfTempPath, Properties.Resources.Manual_Técnico_de_SAIA_1_6);
 
             // Abre el archivo PDF utilizando el visor predeterminado del sistema
             System.Diagnostics.Process.Start(pdfTempPath);
@@ -134,16 +133,14 @@ namespace AgroServicios.Controlador.Login
             {
                 if (dbContext.getConnection() == null)
                 {
-                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Connection failed", "It was not possible to connect to the server and/or database.", Properties.Resources.ErrorIcono);
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Conexción exitosa", "La conexión al servidor y la base de datos se ha ejecutado correctamente.", Properties.Resources.comprobado);
                     VistaLogin backForm = new VistaLogin();
-
                 }
                 else
                 {
-                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Conexión exitosa", "La conexión al servidor y la base de datos se ha ejecutado correctamente.", Properties.Resources.comprobado);
+                    MandarValoresAlerta(Color.LightGreen, Color.Black, "Connection successful", "The connection to the server and database has been executed successfully.", Properties.Resources.ErrorIcono);
                     VistaLogin backForm = new VistaLogin();
                 }
-
             }
             else
             {
@@ -174,7 +171,6 @@ namespace AgroServicios.Controlador.Login
                 }
             }
         }
-
 
         /// <summary>
         /// 
@@ -268,8 +264,6 @@ namespace AgroServicios.Controlador.Login
                     break;
             }
         }
-
-
         private void ShowPassword(object sender, EventArgs e)
         {
             ObjLogin.txtPassword.UseSystemPasswordChar = false;

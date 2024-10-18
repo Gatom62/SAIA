@@ -114,7 +114,12 @@ namespace AgroServicios.Modelo.DAO
             try
             {
                 Command.Connection = getConnection();
-                string query = "SELECT COUNT(*) FROM Usuarios WHERE Usuario = @username AND Contraseña = @password";
+                // Consulta para verificar usuario, contraseña y rol del empleado
+                string query = @"SELECT COUNT(*) 
+                         FROM Usuarios U
+                         INNER JOIN Categorias C ON U.idCategoria = C.idCategoria
+                         WHERE U.Usuario = @username AND U.Contraseña = @password AND C.Nombre = 'Manager'";
+
                 // Crear un comando SQL con la consulta y la conexión
                 SqlCommand cmd = new SqlCommand(query, Command.Connection);
                 // Limpia cualquier parámetro existente en el objeto Command
@@ -128,10 +133,10 @@ namespace AgroServicios.Modelo.DAO
 
                 if (respuesta > 0)
                 {
-                    // El usuario fue autenticado correctamente
+                    // El usuario es un Manager o Admin y ha sido autenticado correctamente
                     return 1;
                 }
-                else 
+                else
                 {
                     return -1;
                 }
@@ -145,5 +150,6 @@ namespace AgroServicios.Modelo.DAO
                 Command.Connection.Close();
             }
         }
+
     }
 }

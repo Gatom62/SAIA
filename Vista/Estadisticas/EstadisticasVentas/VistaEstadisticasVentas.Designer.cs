@@ -33,10 +33,14 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             this.pnEstructura = new Bunifu.UI.WinForms.BunifuPanel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pnTitulo = new Bunifu.UI.WinForms.BunifuPanel();
+            this.FlechaDer = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
+            this.FlechaIzq = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.lbVentasEchasPorEmpleados = new Bunifu.UI.WinForms.BunifuLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
@@ -58,7 +62,7 @@
             this.pnEstructura.Controls.Add(this.chart1);
             this.pnEstructura.Controls.Add(this.bunifuShadowPanel2);
             this.pnEstructura.Location = new System.Drawing.Point(29, 20);
-            this.pnEstructura.Margin = new System.Windows.Forms.Padding(2);
+            this.pnEstructura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnEstructura.Name = "pnEstructura";
             this.pnEstructura.ShowBorders = true;
             this.pnEstructura.Size = new System.Drawing.Size(758, 462);
@@ -120,6 +124,8 @@
             this.pnTitulo.BorderColor = System.Drawing.Color.Transparent;
             this.pnTitulo.BorderRadius = 20;
             this.pnTitulo.BorderThickness = 2;
+            this.pnTitulo.Controls.Add(this.FlechaDer);
+            this.pnTitulo.Controls.Add(this.FlechaIzq);
             this.pnTitulo.Controls.Add(this.lbVentasEchasPorEmpleados);
             this.pnTitulo.Controls.Add(this.pictureBox1);
             this.pnTitulo.Location = new System.Drawing.Point(0, -1);
@@ -130,6 +136,76 @@
             this.bunifuToolTip1.SetToolTip(this.pnTitulo, "");
             this.bunifuToolTip1.SetToolTipIcon(this.pnTitulo, null);
             this.bunifuToolTip1.SetToolTipTitle(this.pnTitulo, "");
+            // 
+            // FlechaDer
+            // 
+            this.FlechaDer.AllowAnimations = true;
+            this.FlechaDer.AllowBorderColorChanges = true;
+            this.FlechaDer.AllowMouseEffects = true;
+            this.FlechaDer.AnimationSpeed = 200;
+            this.FlechaDer.BackColor = System.Drawing.Color.Transparent;
+            this.FlechaDer.BackgroundColor = System.Drawing.Color.Transparent;
+            this.FlechaDer.BorderColor = System.Drawing.Color.Transparent;
+            this.FlechaDer.BorderRadius = 1;
+            this.FlechaDer.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
+            this.FlechaDer.BorderThickness = 1;
+            this.FlechaDer.ColorContrastOnClick = 30;
+            this.FlechaDer.ColorContrastOnHover = 30;
+            this.FlechaDer.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.FlechaDer.CustomizableEdges = borderEdges1;
+            this.FlechaDer.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.FlechaDer.Image = global::AgroServicios.Properties.Resources.IconoFlecha_flipped;
+            this.FlechaDer.ImageMargin = new System.Windows.Forms.Padding(0);
+            this.FlechaDer.Location = new System.Drawing.Point(697, 15);
+            this.FlechaDer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FlechaDer.Name = "FlechaDer";
+            this.FlechaDer.RoundBorders = true;
+            this.FlechaDer.ShowBorders = true;
+            this.FlechaDer.Size = new System.Drawing.Size(38, 38);
+            this.FlechaDer.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
+            this.FlechaDer.TabIndex = 19;
+            this.bunifuToolTip1.SetToolTip(this.FlechaDer, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.FlechaDer, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.FlechaDer, "");
+            // 
+            // FlechaIzq
+            // 
+            this.FlechaIzq.AllowAnimations = true;
+            this.FlechaIzq.AllowBorderColorChanges = true;
+            this.FlechaIzq.AllowMouseEffects = true;
+            this.FlechaIzq.AnimationSpeed = 200;
+            this.FlechaIzq.BackColor = System.Drawing.Color.Transparent;
+            this.FlechaIzq.BackgroundColor = System.Drawing.Color.Transparent;
+            this.FlechaIzq.BorderColor = System.Drawing.Color.Transparent;
+            this.FlechaIzq.BorderRadius = 1;
+            this.FlechaIzq.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderStyles.Solid;
+            this.FlechaIzq.BorderThickness = 1;
+            this.FlechaIzq.ColorContrastOnClick = 30;
+            this.FlechaIzq.ColorContrastOnHover = 30;
+            this.FlechaIzq.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.FlechaIzq.CustomizableEdges = borderEdges2;
+            this.FlechaIzq.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.FlechaIzq.Image = global::AgroServicios.Properties.Resources.IconoFlecha;
+            this.FlechaIzq.ImageMargin = new System.Windows.Forms.Padding(0);
+            this.FlechaIzq.Location = new System.Drawing.Point(28, 15);
+            this.FlechaIzq.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FlechaIzq.Name = "FlechaIzq";
+            this.FlechaIzq.RoundBorders = true;
+            this.FlechaIzq.ShowBorders = true;
+            this.FlechaIzq.Size = new System.Drawing.Size(38, 38);
+            this.FlechaIzq.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
+            this.FlechaIzq.TabIndex = 18;
+            this.bunifuToolTip1.SetToolTip(this.FlechaIzq, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.FlechaIzq, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.FlechaIzq, "");
             // 
             // lbVentasEchasPorEmpleados
             // 
@@ -154,7 +230,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::AgroServicios.Properties.Resources.silueta_de_multiples_usuarios;
-            this.pictureBox1.Location = new System.Drawing.Point(556, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(597, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 43);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -203,9 +279,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 508);
+            this.ClientSize = new System.Drawing.Size(815, 514);
             this.Controls.Add(this.pnEstructura);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(831, 553);
+            this.MinimumSize = new System.Drawing.Size(831, 553);
             this.Name = "VistaEstadisticasVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estadisticas de empleados / Estadisticas - 1";
@@ -226,8 +305,10 @@
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
         private Bunifu.UI.WinForms.BunifuPanel pnTitulo;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.UI.WinForms.BunifuLabel lbVentasEchasPorEmpleados;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip1;
+        public Bunifu.UI.WinForms.BunifuLabel lbVentasEchasPorEmpleados;
+        public System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuIconButton FlechaDer;
+        public Bunifu.UI.WinForms.BunifuButton.BunifuIconButton FlechaIzq;
     }
 }

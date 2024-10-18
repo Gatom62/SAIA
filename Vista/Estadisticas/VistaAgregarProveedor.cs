@@ -56,9 +56,9 @@ namespace AgroServicios.Vista.Estadisticas
             if (ControladorIdioma.idioma == 1) 
             {
                 AnaP.Text = Ingles.AgreagrProveedor;
-                txtNewFirstName.Text = Ingles.Nombre;
-                txtNewPhone.Text = Ingles.Telefono;
-                txtNewCorreo.Text = Ingles.Correo;
+                txtNewFirstName.PlaceholderText = Ingles.Nombre;
+                txtNewPhone.PlaceholderText = Ingles.Telefono;
+                txtNewCorreo.PlaceholderText = Ingles.Correo;
                 btnAgregarProv.Text = Ingles.Agregar;
             }
         }

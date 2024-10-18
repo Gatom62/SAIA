@@ -45,5 +45,41 @@ namespace AgroServicios.Modelo.DAO
                 command.Connection.Close();
             }
         }
+        public DataSet BuscarClienteEmpleado(string valor)
+        {
+            try
+            {
+                // Accedemos a la conexión que ya se tiene
+                command.Connection = getConnection();
+                // Instrucción que se hará hacia la base de datos
+                string query = "SELECT * FROM VistaClienteEmpleado WHERE [Nombre del cliente] LIKE @valor OR [Nombre del empleado] LIKE @valor OR [ID de la venta] LIKE @valor";
+                // Comando sql en el cual se pasa la instrucción y la conexión
+                SqlCommand cmd = new SqlCommand(query, command.Connection);
+                // Añadimos el parámetro
+                cmd.Parameters.AddWithValue("@valor", "%" + valor + "%");
+                // Se utiliza un adaptador sql para rellenar el dataset
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                // Se crea un objeto Dataset que es donde se devolverán los resultados
+                DataSet ds = new DataSet();
+                // Rellenamos con el Adaptador el DataSet diciéndole de qué tabla provienen los datos
+                adp.Fill(ds, "VistaClienteEmpleado");
+                // Devolvemos el Dataset
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                // Imprimimos el error y retornamos null si existiera algún error durante la ejecución
+                Console.WriteLine("Error en BuscarClienteEmpleado: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                // Independientemente se haga o no el proceso cerramos la conexión
+                if (command.Connection != null && command.Connection.State == ConnectionState.Open)
+                {
+                    command.Connection.Close();
+                }
+            }
+        }
     }
 }

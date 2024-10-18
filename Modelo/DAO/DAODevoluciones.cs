@@ -12,7 +12,50 @@ namespace AgroServicios.Modelo.DAO
     internal class DAODevoluciones : DTODevoluciones
     {
         SqlCommand Command = new SqlCommand();
-        public int RegistrarDevolucion()
+        public DataSet BuscarDevoluciones(string valor)
+        {
+            try
+            {
+                // Accedemos a la conexión que ya se tiene
+                Command.Connection = getConnection();
+
+                // Instrucción que se hará hacia la base de datos
+                string query = "SELECT * FROM viewDevoluciones WHERE [ID de la devolución] LIKE @valor OR [ID de la venta] LIKE @valor OR [Nombre del cliente] LIKE @valor";
+
+                // Comando sql en el cual se pasa la instrucción y la conexión
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+
+                // Añadimos el parámetro
+                cmd.Parameters.AddWithValue("@valor", "%" + valor + "%");
+
+                // Se utiliza un adaptador sql para rellenar el dataset
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+                // Se crea un objeto Dataset que es donde se devolverán los resultados
+                DataSet ds = new DataSet();
+
+                // Rellenamos con el Adaptador el DataSet diciéndole de qué tabla provienen los datos
+                adp.Fill(ds, "viewDevoluciones");
+
+                // Devolvemos el Dataset
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                // Imprimimos el error y retornamos null si existiera algún error durante la ejecución
+                Console.WriteLine("Error en BuscarDevoluciones: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                // Independientemente se haga o no el proceso cerramos la conexión
+                if (Command.Connection != null && Command.Connection.State == ConnectionState.Open)
+                {
+                    Command.Connection.Close();
+                }
+            }
+        }
+            public int RegistrarDevolucion()
         {
             SqlTransaction transaction = null;
             try

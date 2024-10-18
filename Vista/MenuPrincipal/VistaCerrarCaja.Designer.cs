@@ -58,7 +58,7 @@
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(951, 70);
-            this.tableLayoutPanel2.TabIndex = 5;
+            this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label1
             // 
@@ -155,16 +155,19 @@
             this.btnCerrarCaja.OnPressedState.IconLeftImage = null;
             this.btnCerrarCaja.OnPressedState.IconRightImage = null;
             this.btnCerrarCaja.Size = new System.Drawing.Size(186, 48);
-            this.btnCerrarCaja.TabIndex = 34;
+            this.btnCerrarCaja.TabIndex = 1;
             this.btnCerrarCaja.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCerrarCaja.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnCerrarCaja.TextMarginLeft = 0;
             this.btnCerrarCaja.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnCerrarCaja.UseDefaultRadiusAndThickness = true;
+            this.btnCerrarCaja.Click += new System.EventHandler(this.btnCerrarCaja_Click);
             // 
             // dgvCierre
             // 
             this.dgvCierre.AllowCustomTheming = false;
+            this.dgvCierre.AllowUserToAddRows = false;
+            this.dgvCierre.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.dgvCierre.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
@@ -217,12 +220,13 @@
             this.dgvCierre.Location = new System.Drawing.Point(0, 70);
             this.dgvCierre.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCierre.Name = "dgvCierre";
+            this.dgvCierre.ReadOnly = true;
             this.dgvCierre.RowHeadersVisible = false;
             this.dgvCierre.RowHeadersWidth = 51;
             this.dgvCierre.RowTemplate.Height = 40;
             this.dgvCierre.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCierre.Size = new System.Drawing.Size(951, 448);
-            this.dgvCierre.TabIndex = 6;
+            this.dgvCierre.TabIndex = 0;
             this.dgvCierre.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
             // VistaCerrarCaja

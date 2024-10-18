@@ -48,10 +48,12 @@ namespace AgroServicios.Vista.Clientes
 
             if (ControladorIdioma.idioma == 1) 
             {
-                txtUbdateNombreCliente.Text = Ingles.Nombre;
-                txtUbdateTelefonoCliente.Text = Ingles.Telefono;
-                txtUbdateCorreoCliente.Text = Ingles.Correo;
-                txtUbdateDireccionCliente.Text = Ingles.Direccion;
+                bunifuLabel1.Text = Ingles.EditarDatos;
+                txtUbdateNombreCliente.PlaceholderText = Ingles.Nombre;
+                txtUbdateTelefonoCliente.PlaceholderText = Ingles.Telefono;
+                txtUbdateCorreoCliente.PlaceholderText = Ingles.Correo;
+                txtUbdateDireccionCliente.PlaceholderText = Ingles.Direccion;
+                lbDUI.Text = Ingles.txtDUI;
                 btnUbdateCliente.Text = Ingles.Actualizar;
             }
         }

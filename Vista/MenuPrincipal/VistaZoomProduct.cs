@@ -18,32 +18,6 @@ namespace AgroServicios.Vista.MenuPrincipal
 {
     public partial class VistaZoomProduct : Form
     {
-        void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
-        {
-            AlertExito frm = new AlertExito();
-
-            frm.BackColorAlert = backcolor;
-
-            frm.ColorAlertBox = color;
-
-            frm.TittlAlertBox = title;
-
-            frm.TextAlertBox = text;
-
-            frm.IconeAlertBox = icon;
-
-            frm.ShowDialog();
-        }
-        void MandarValoresAlerta(Color backcolor, Color color, string title, string text, Image icon)
-        {
-            MessagePersonal message = new MessagePersonal();
-            message.BackColorAlert = backcolor;
-            message.ColorAlertBox = color;
-            message.TittlAlertBox = title;
-            message.TextAlertBox = text;
-            message.IconeAlertBox = icon;
-            message.ShowDialog();
-        }
         public VistaZoomProduct()
         {
             InitializeComponent();
@@ -61,15 +35,16 @@ namespace AgroServicios.Vista.MenuPrincipal
                 btnadd.IdleFillColor = Color.DarkViolet;
                 btnadd.ForeColor = Color.White;
                 lbCaragteristica.ForeColor = Color.White;
-                lbCodigoProducto.ForeColor = Color.White;
+                bunifuLabel1.ForeColor = Color.White;
                 lbPrecioProducto.ForeColor = Color.White;
                 lbCantidad.ForeColor = Color.White;
             }
 
-            if (ControladorIdioma.idioma == 1) 
+            if (ControladorIdioma.idioma == 1)
             {
-                lbCaragteristica.Text = Ingles.Caracteristicas;
-                lbCodigoProducto.Text = Ingles.CodigoProducto;
+                bunifuLabel1.Text = "Product Description:";
+                lbPrecioProducto.Text = Ingles.PrecioProducto;
+                lbCaragteristica.Text = "Code:";
                 lbCantidad.Text = Ingles.Cantidad;
                 btnadd.Text = Ingles.AnadirCarrito;
             }

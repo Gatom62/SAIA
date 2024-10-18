@@ -27,7 +27,6 @@ namespace AgroServicios.Controlador.CuentasContralador
             ObjEmpleados.cmsinfo.Click += new EventHandler(Infoempleado);
 
             ObjEmpleados.txtBuscarP.KeyPress += new KeyPressEventHandler(Search);
-            ObjEmpleados.cmsPreguntas.Click += new EventHandler(PreguntasEmpAct);
         }
         private void Search(object sender, KeyPressEventArgs e)
         {
@@ -336,56 +335,6 @@ namespace AgroServicios.Controlador.CuentasContralador
                         RefrescarData();
                     }
                 }
-            }
-        }
-        private void PreguntasEmpAct(object sender, EventArgs e)
-        {
-            if (ObjEmpleados.GriewEmpleados.CurrentRow == null)
-            {
-                if (ControladorIdioma.idioma == 1)
-                {
-                    MessageBox.Show("No employee has been selected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return; // Salir del método si no hay ninguna fila seleccionada
-                }
-                else
-                {
-                    MessageBox.Show("No se ha seleccionado ningún empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return; // Salir del método si no hay ninguna fila seleccionada
-                }
-            }
-
-            int pos = ObjEmpleados.GriewEmpleados.CurrentRow.Index;
-            string user;
-
-            user = ObjEmpleados.GriewEmpleados[7, pos].Value.ToString();
-
-            DAOPreguntasRec rec = new DAOPreguntasRec();
-
-            // Obtener los RespuestaID del usuario
-            DataTable dtRespuestas = rec.ObtenerRespuestaIDs(user);
-
-            // Verificar que se obtuvieron exactamente dos RespuestaID
-            if (dtRespuestas.Rows.Count < 2)
-            {
-                if (ControladorIdioma.idioma == 1)
-                {
-                    MessageBox.Show("The user does not have any security questions assigned.",
-                                   "Error",
-                                   MessageBoxButtons.OK,
-                                   MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show("El usuario no tiene niguna pregunta de seguridad asignada.",
-                                   "Error",
-                                   MessageBoxButtons.OK,
-                                   MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                VistaPreguntas vpre = new VistaPreguntas(user, 2);
-                vpre.ShowDialog();
             }
         }
     }

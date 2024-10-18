@@ -69,6 +69,7 @@ namespace AgroServicios
         {
             if (ControladorTema.IsDarkMode == true)
             {
+                this.BackColor = Color.Black;
                 bunifuPanel1.BackgroundColor = Color.White;
                 lblcodigo.ForeColor = Color.White;
                 lblname.ForeColor = Color.FromArgb(230, 119, 11);

@@ -271,8 +271,7 @@ namespace AgroServicios.Properties {
         ///        }
         ///
         ///        .header {
-        ///            background-color: #40E0D0;
-        ///            [resto de la cadena truncado]&quot;;.
+        ///            background-color:  [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string cierre_caja_plantilla {
             get {
@@ -592,26 +591,6 @@ namespace AgroServicios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
-        internal static byte[] Manual_de_SAIA_1_2 {
-            get {
-                object obj = ResourceManager.GetObject("Manual_de_SAIA_1_2", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Byte[].
-        /// </summary>
-        internal static byte[] Manual_de_Usuario_1_2 {
-            get {
-                object obj = ResourceManager.GetObject("Manual_de_Usuario_1_2", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Byte[].
-        /// </summary>
         internal static byte[] Manual_de_Usuario_1_3 {
             get {
                 object obj = ResourceManager.GetObject("Manual_de_Usuario_1_3", resourceCulture);
@@ -622,9 +601,9 @@ namespace AgroServicios.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
-        internal static byte[] Manual_Técnico_de_SAIA_1_5 {
+        internal static byte[] Manual_Técnico_de_SAIA_1_6 {
             get {
-                object obj = ResourceManager.GetObject("Manual_Técnico_de_SAIA_1_5", resourceCulture);
+                object obj = ResourceManager.GetObject("Manual_Técnico_de_SAIA_1_6", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -796,6 +775,16 @@ namespace AgroServicios.Properties {
             get {
                 object obj = ResourceManager.GetObject("silueta-de-multiples-usuarios", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] Sonido_caja_registradora {
+            get {
+                object obj = ResourceManager.GetObject("Sonido_caja_registradora", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

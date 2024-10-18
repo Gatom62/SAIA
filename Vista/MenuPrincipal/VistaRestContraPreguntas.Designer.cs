@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaRestContraPreguntas));
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -39,12 +43,9 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            this.bunifuGradientPanel2 = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.pnEstructura = new Bunifu.UI.WinForms.BunifuPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtContraDenuevo = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnRestablecer = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.ptbback = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
@@ -54,58 +55,125 @@
             this.txtNuevaContra = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtRest = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txtContraDenuevo = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuGradientPanel2.SuspendLayout();
-            this.bunifuPanel1.SuspendLayout();
+            this.pnEstructura.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuGradientPanel2
+            // pnEstructura
             // 
-            this.bunifuGradientPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
-            this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel2.BorderRadius = 1;
-            this.bunifuGradientPanel2.Controls.Add(this.bunifuPanel1);
-            this.bunifuGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(242)))), ((int)(((byte)(32)))));
-            this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(242)))), ((int)(((byte)(32)))));
-            this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
-            this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
-            this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(665, 413);
-            this.bunifuGradientPanel2.TabIndex = 0;
+            this.pnEstructura.BackgroundColor = System.Drawing.Color.White;
+            this.pnEstructura.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnEstructura.BackgroundImage")));
+            this.pnEstructura.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnEstructura.BorderColor = System.Drawing.Color.Transparent;
+            this.pnEstructura.BorderRadius = 20;
+            this.pnEstructura.BorderThickness = 2;
+            this.pnEstructura.Controls.Add(this.pictureBox2);
+            this.pnEstructura.Controls.Add(this.txtContraDenuevo);
+            this.pnEstructura.Controls.Add(this.btnRestablecer);
+            this.pnEstructura.Controls.Add(this.tableLayoutPanel1);
+            this.pnEstructura.Controls.Add(this.pictureBox1);
+            this.pnEstructura.Controls.Add(this.pictureBox3);
+            this.pnEstructura.Controls.Add(this.txtNuevaContra);
+            this.pnEstructura.Controls.Add(this.txtRest);
+            this.pnEstructura.Controls.Add(this.bunifuShadowPanel2);
+            this.pnEstructura.Location = new System.Drawing.Point(44, 34);
+            this.pnEstructura.Margin = new System.Windows.Forms.Padding(2);
+            this.pnEstructura.Name = "pnEstructura";
+            this.pnEstructura.ShowBorders = true;
+            this.pnEstructura.Size = new System.Drawing.Size(575, 349);
+            this.pnEstructura.TabIndex = 0;
             // 
-            // bunifuPanel1
+            // pictureBox2
             // 
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BorderRadius = 20;
-            this.bunifuPanel1.BorderThickness = 2;
-            this.bunifuPanel1.Controls.Add(this.pictureBox2);
-            this.bunifuPanel1.Controls.Add(this.txtContraDenuevo);
-            this.bunifuPanel1.Controls.Add(this.btnRestablecer);
-            this.bunifuPanel1.Controls.Add(this.tableLayoutPanel1);
-            this.bunifuPanel1.Controls.Add(this.pictureBox1);
-            this.bunifuPanel1.Controls.Add(this.pictureBox3);
-            this.bunifuPanel1.Controls.Add(this.txtNuevaContra);
-            this.bunifuPanel1.Controls.Add(this.txtRest);
-            this.bunifuPanel1.Controls.Add(this.bunifuShadowPanel2);
-            this.bunifuPanel1.Location = new System.Drawing.Point(55, 32);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(575, 349);
-            this.bunifuPanel1.TabIndex = 0;
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::AgroServicios.Properties.Resources.bloqueo_de_rotacion__2_;
+            this.pictureBox2.Location = new System.Drawing.Point(71, 218);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(42, 41);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 37;
+            this.pictureBox2.TabStop = false;
+            // 
+            // txtContraDenuevo
+            // 
+            this.txtContraDenuevo.AcceptsReturn = false;
+            this.txtContraDenuevo.AcceptsTab = false;
+            this.txtContraDenuevo.AnimationSpeed = 200;
+            this.txtContraDenuevo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtContraDenuevo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtContraDenuevo.AutoSizeHeight = true;
+            this.txtContraDenuevo.BackColor = System.Drawing.Color.Transparent;
+            this.txtContraDenuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtContraDenuevo.BackgroundImage")));
+            this.txtContraDenuevo.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtContraDenuevo.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtContraDenuevo.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtContraDenuevo.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtContraDenuevo.BorderRadius = 30;
+            this.txtContraDenuevo.BorderThickness = 1;
+            this.txtContraDenuevo.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
+            this.txtContraDenuevo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtContraDenuevo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtContraDenuevo.DefaultFont = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraDenuevo.DefaultText = "";
+            this.txtContraDenuevo.FillColor = System.Drawing.Color.White;
+            this.txtContraDenuevo.HideSelection = true;
+            this.txtContraDenuevo.IconLeft = null;
+            this.txtContraDenuevo.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtContraDenuevo.IconPadding = 10;
+            this.txtContraDenuevo.IconRight = null;
+            this.txtContraDenuevo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtContraDenuevo.Lines = new string[0];
+            this.txtContraDenuevo.Location = new System.Drawing.Point(117, 218);
+            this.txtContraDenuevo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtContraDenuevo.MaxLength = 32767;
+            this.txtContraDenuevo.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtContraDenuevo.Modified = false;
+            this.txtContraDenuevo.Multiline = false;
+            this.txtContraDenuevo.Name = "txtContraDenuevo";
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtContraDenuevo.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtContraDenuevo.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtContraDenuevo.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtContraDenuevo.OnIdleState = stateProperties4;
+            this.txtContraDenuevo.Padding = new System.Windows.Forms.Padding(2);
+            this.txtContraDenuevo.PasswordChar = '\0';
+            this.txtContraDenuevo.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtContraDenuevo.PlaceholderText = "Vuelva a ingresar la contraseña";
+            this.txtContraDenuevo.ReadOnly = false;
+            this.txtContraDenuevo.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtContraDenuevo.SelectedText = "";
+            this.txtContraDenuevo.SelectionLength = 0;
+            this.txtContraDenuevo.SelectionStart = 0;
+            this.txtContraDenuevo.ShortcutsEnabled = true;
+            this.txtContraDenuevo.Size = new System.Drawing.Size(386, 41);
+            this.txtContraDenuevo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtContraDenuevo.TabIndex = 3;
+            this.txtContraDenuevo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtContraDenuevo.TextMarginBottom = 0;
+            this.txtContraDenuevo.TextMarginLeft = 3;
+            this.txtContraDenuevo.TextMarginTop = 1;
+            this.txtContraDenuevo.TextPlaceholder = "Vuelva a ingresar la contraseña";
+            this.txtContraDenuevo.UseSystemPasswordChar = false;
+            this.txtContraDenuevo.WordWrap = true;
             // 
             // btnRestablecer
             // 
@@ -199,6 +267,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
@@ -461,101 +530,13 @@
             this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel2.TabIndex = 29;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = global::AgroServicios.Properties.Resources.bloqueo_de_rotacion__2_;
-            this.pictureBox2.Location = new System.Drawing.Point(71, 218);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(42, 41);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 37;
-            this.pictureBox2.TabStop = false;
-            // 
-            // txtContraDenuevo
-            // 
-            this.txtContraDenuevo.AcceptsReturn = false;
-            this.txtContraDenuevo.AcceptsTab = false;
-            this.txtContraDenuevo.AnimationSpeed = 200;
-            this.txtContraDenuevo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtContraDenuevo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtContraDenuevo.AutoSizeHeight = true;
-            this.txtContraDenuevo.BackColor = System.Drawing.Color.Transparent;
-            this.txtContraDenuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtContraDenuevo.BackgroundImage")));
-            this.txtContraDenuevo.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txtContraDenuevo.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtContraDenuevo.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txtContraDenuevo.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtContraDenuevo.BorderRadius = 30;
-            this.txtContraDenuevo.BorderThickness = 1;
-            this.txtContraDenuevo.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
-            this.txtContraDenuevo.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtContraDenuevo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtContraDenuevo.DefaultFont = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraDenuevo.DefaultText = "";
-            this.txtContraDenuevo.FillColor = System.Drawing.Color.White;
-            this.txtContraDenuevo.HideSelection = true;
-            this.txtContraDenuevo.IconLeft = null;
-            this.txtContraDenuevo.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtContraDenuevo.IconPadding = 10;
-            this.txtContraDenuevo.IconRight = null;
-            this.txtContraDenuevo.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtContraDenuevo.Lines = new string[0];
-            this.txtContraDenuevo.Location = new System.Drawing.Point(117, 218);
-            this.txtContraDenuevo.Margin = new System.Windows.Forms.Padding(2);
-            this.txtContraDenuevo.MaxLength = 32767;
-            this.txtContraDenuevo.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txtContraDenuevo.Modified = false;
-            this.txtContraDenuevo.Multiline = false;
-            this.txtContraDenuevo.Name = "txtContraDenuevo";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtContraDenuevo.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtContraDenuevo.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtContraDenuevo.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtContraDenuevo.OnIdleState = stateProperties4;
-            this.txtContraDenuevo.Padding = new System.Windows.Forms.Padding(2);
-            this.txtContraDenuevo.PasswordChar = '\0';
-            this.txtContraDenuevo.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtContraDenuevo.PlaceholderText = "Vuelva a ingresar la contraseña";
-            this.txtContraDenuevo.ReadOnly = false;
-            this.txtContraDenuevo.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtContraDenuevo.SelectedText = "";
-            this.txtContraDenuevo.SelectionLength = 0;
-            this.txtContraDenuevo.SelectionStart = 0;
-            this.txtContraDenuevo.ShortcutsEnabled = true;
-            this.txtContraDenuevo.Size = new System.Drawing.Size(386, 41);
-            this.txtContraDenuevo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtContraDenuevo.TabIndex = 3;
-            this.txtContraDenuevo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtContraDenuevo.TextMarginBottom = 0;
-            this.txtContraDenuevo.TextMarginLeft = 3;
-            this.txtContraDenuevo.TextMarginTop = 1;
-            this.txtContraDenuevo.TextPlaceholder = "Vuelva a ingresar la contraseña";
-            this.txtContraDenuevo.UseSystemPasswordChar = false;
-            this.txtContraDenuevo.WordWrap = true;
-            // 
             // VistaRestContraPreguntas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(665, 413);
-            this.Controls.Add(this.bunifuGradientPanel2);
+            this.Controls.Add(this.pnEstructura);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -565,21 +546,18 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Restablecer contraseña";
             this.Load += new System.EventHandler(this.VistaRestContraPreguntas_Load);
-            this.bunifuGradientPanel2.ResumeLayout(false);
-            this.bunifuPanel1.ResumeLayout(false);
+            this.pnEstructura.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        public Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel2;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private Bunifu.UI.WinForms.BunifuPanel pnEstructura;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         public System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;

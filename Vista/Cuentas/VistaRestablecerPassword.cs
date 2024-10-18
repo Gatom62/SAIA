@@ -19,7 +19,6 @@ namespace AgroServicios.Vista.Cuentas
             InitializeComponent();
             ControladorRestUser control = new ControladorRestUser(this, usuario, role);
         }
-
         private void VistaRestablecerPassword_Load(object sender, EventArgs e)
         {
             if (ControladorTema.IsDarkMode == true)
@@ -32,10 +31,12 @@ namespace AgroServicios.Vista.Cuentas
                 btnRestablecer.OnPressedState.BorderColor = Color.Red;
                 btnRestablecer.DisabledFillColor = Color.DarkOrange;
 
-                pnTitulo.BackColor = Color.WhiteSmoke;
+                bunifuPanel1.BackColor = Color.WhiteSmoke;
 
                 txtRest.BorderColorHover = Color.FromArgb(211, 41, 15);
                 txtRest.BorderColorActive = Color.FromArgb(211, 41, 15);
+
+                txtRestPass.PlaceholderForeColor = Color.Silver;
                 txtRestPass.BorderColorHover = Color.FromArgb(211, 41, 15);
                 txtRestPass.BorderColorActive = Color.FromArgb(211, 41, 15);
             }
@@ -43,7 +44,7 @@ namespace AgroServicios.Vista.Cuentas
             if(ControladorIdioma.idioma == 1)
             {
                 LabelPrin.Text = Ingles.ActualizarContra;
-                txtRestPass.Text = Ingles.contraseña;
+                txtRestPass.PlaceholderText = Ingles.contraseña;
                 btnRestablecer.Text = Ingles.ActualizarContra;
             }
         }

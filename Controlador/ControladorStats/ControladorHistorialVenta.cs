@@ -25,10 +25,28 @@ namespace AgroServicios.Controlador.ControladorStats
             objventa.btnReporte.Click += new EventHandler(OpenReporte);
             objventa.btnDevoluciones.Click += OpenDevoluciones;
             objventa.btnEstadisticas.Click += OpenEstadisticas;
+            objventa.txtBuscarP.KeyPress += new KeyPressEventHandler(Search);
+        }
+        private void Search(object sender, KeyPressEventArgs e)
+        {
+            // Verifica que la tecla presionada sea Enter antes de buscar
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                BuscarDevolucion();
+                e.Handled = true;
+            }
+        }
+        private void BuscarDevolucion()
+        {
+            DAOHistorialVenta objdev = new DAOHistorialVenta();
+            //Declarando nuevo DataSet para que obtenga los datos del metodo ObtenerPersonas
+            DataSet ds = objdev.BuscarClienteEmpleado(objventa.txtBuscarP.Text.Trim());
+            //Llenar DataGridView
+            objventa.dgvVentas.DataSource = ds.Tables["VistaClienteEmpleado"];
         }
         private void OpenEstadisticas(object sender, EventArgs e)
         {
-            VistaMostrarEstadisticas vistaMostrarEstadisticas = new VistaMostrarEstadisticas();
+            VistaEstadisticasVentas vistaMostrarEstadisticas = new VistaEstadisticasVentas();
             vistaMostrarEstadisticas.ShowDialog();
         }
         private void OpenDevoluciones(object sender, EventArgs e)

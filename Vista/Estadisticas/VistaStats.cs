@@ -20,7 +20,7 @@ namespace AgroServicios.Vista.Estadisticas
             {
                 btnHistorial.Text = Ingles.HistorialVentas;
                 btnProveedores.Text = Ingles.Proveedores;
-                btnClientes.Text = Ingles.RegistroVentas;
+                btnClientes.Text = "Customers";
                 btnSuministros.Text = Ingles.Suministros;
             }
             if(ControladorTema.IsDarkMode == true)

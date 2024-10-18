@@ -1,21 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using AgroServicios.Vista.MenuPrincipal;
-using AgroServicios.Vista.Estadisticas;
+﻿using AgroServicios.Controlador.Helper;
 using AgroServicios.Vista.Cuentas;
+using AgroServicios.Vista.Estadisticas;
 using AgroServicios.Vista.Login;
-using AgroServicios.Controlador.Helper;
-using System.IO;
-using System.Drawing;
+using AgroServicios.Vista.MenuPrincipal;
 using AgroServicios.Vista.Reportes.ReporteProductos;
-using AgroServicios.Modelo.DAO;
-using System.Drawing.Imaging;
-using System.Text.RegularExpressions;
-using AgroServicios.Vista.Estadisticas.EstadisticasVentas;
+using System;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace AgroServicios.Controlador.MenuPrincipal
 {
@@ -23,6 +16,7 @@ namespace AgroServicios.Controlador.MenuPrincipal
     {
         VistaMenuPrincipal ObjMenu;
         Form currentForm;
+
         /// <summary>
         /// Constructor de la clase ControllerLogin que inicia los eventos de la vista
         /// </summary>
@@ -41,8 +35,13 @@ namespace AgroServicios.Controlador.MenuPrincipal
             ObjMenu.btnVentas.Click += new EventHandler(OpenVentas);
             ObjMenu.btnFichaProductos.Click += new EventHandler(OpenFichaProductos);
             ObjMenu.btnCierreCaja.Click += new EventHandler(AbrirTablaCierre);
-            ObjMenu.btnEstadisticas.Click += new EventHandler(OpenEstadisticas);
+            ObjMenu.btnCerrar.Click += new EventHandler(CerrarPrograma);
         }
+        private void CerrarPrograma(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void AbrirTablaCierre(object sender, EventArgs e) 
         {
             VistaCerrarCaja vistaCerrarCaja = new VistaCerrarCaja();
@@ -86,11 +85,7 @@ namespace AgroServicios.Controlador.MenuPrincipal
             AbrirPanel<VistaStats>();
         }
 
-        private void OpenEstadisticas(object sender, EventArgs e)
-        {
-            AbrirPanel<VistaMostrarEstadisticas>();
-        }
-
+    
         private void CerrarSesion(object sender, EventArgs e)
         {
             if (ControladorIdioma.idioma == 1)

@@ -20,7 +20,6 @@ namespace AgroServicios.Vista.MenuPrincipal
             InitializeComponent();
             ControladorVistaProductos control = new ControladorVistaProductos(this);
         }
-
         private void VistaProductos_Load(object sender, EventArgs e)
         {
             if(ControladorTema.IsDarkMode == true)
