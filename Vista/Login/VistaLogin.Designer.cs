@@ -291,7 +291,7 @@
             this.ptbback.BorderThickness = 2;
             this.ptbback.ColorContrastOnClick = 30;
             this.ptbback.ColorContrastOnHover = 30;
-            this.ptbback.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ptbback.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;

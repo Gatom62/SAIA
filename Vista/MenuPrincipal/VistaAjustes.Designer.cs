@@ -174,6 +174,7 @@
             this.DarkMode.CheckedBackColor = System.Drawing.Color.DodgerBlue;
             this.DarkMode.CheckedSwitchColor = System.Drawing.Color.White;
             this.DarkMode.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
+            this.DarkMode.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DarkMode.Location = new System.Drawing.Point(258, 24);
             this.DarkMode.Margin = new System.Windows.Forms.Padding(2);
             this.DarkMode.Name = "DarkMode";
@@ -283,6 +284,7 @@
             this.switchidioma.CheckedBackColor = System.Drawing.Color.DodgerBlue;
             this.switchidioma.CheckedSwitchColor = System.Drawing.Color.White;
             this.switchidioma.CheckedSwitchStyle = Bunifu.UI.WinForms.BunifuToggleSwitch2.SwitchStyles.Fill;
+            this.switchidioma.Cursor = System.Windows.Forms.Cursors.Hand;
             this.switchidioma.Location = new System.Drawing.Point(255, 20);
             this.switchidioma.Margin = new System.Windows.Forms.Padding(2);
             this.switchidioma.Name = "switchidioma";
@@ -354,7 +356,7 @@
             this.btnCambiarPreguntas.ButtonTextMarginLeft = 0;
             this.btnCambiarPreguntas.ColorContrastOnClick = 45;
             this.btnCambiarPreguntas.ColorContrastOnHover = 45;
-            this.btnCambiarPreguntas.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCambiarPreguntas.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -445,7 +447,7 @@
             this.btnCambiarPass.ButtonTextMarginLeft = 0;
             this.btnCambiarPass.ColorContrastOnClick = 45;
             this.btnCambiarPass.ColorContrastOnHover = 45;
-            this.btnCambiarPass.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCambiarPass.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges2.BottomLeft = true;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = true;
@@ -536,7 +538,7 @@
             this.btnConfigurarServidor.ButtonTextMarginLeft = 0;
             this.btnConfigurarServidor.ColorContrastOnClick = 45;
             this.btnConfigurarServidor.ColorContrastOnHover = 45;
-            this.btnConfigurarServidor.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnConfigurarServidor.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges3.BottomLeft = true;
             borderEdges3.BottomRight = true;
             borderEdges3.TopLeft = true;
@@ -627,7 +629,7 @@
             this.btnGuardarConfi.ButtonTextMarginLeft = 0;
             this.btnGuardarConfi.ColorContrastOnClick = 45;
             this.btnGuardarConfi.ColorContrastOnHover = 45;
-            this.btnGuardarConfi.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnGuardarConfi.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges4.BottomLeft = true;
             borderEdges4.BottomRight = true;
             borderEdges4.TopLeft = true;

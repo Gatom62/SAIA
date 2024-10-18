@@ -45,7 +45,7 @@ namespace AgroServicios.Vista.MenuPrincipal
 
             //Para el boton de stats
             // Cargar la imagen desde los recursos
-            btnStats.Image = Properties.Resources.Caja;
+            btnStats.Image = Properties.Resources.image_49;
             originalSize = btnStats.Size;
             // Eventos para cuando el mouse entra y sale del PictureBox
             btnStats.MouseEnter += btnStats_MouseEnter;
@@ -59,6 +59,13 @@ namespace AgroServicios.Vista.MenuPrincipal
             btnAccounts.MouseEnter += btnAccounts_MouseEnter;
             btnAccounts.MouseLeave += btnAccounts_MouseLeave;
 
+            //Para el boton de cierre
+            // Cargar la imagen desde los recursos
+            btnCerrar.Image = Properties.Resources.ErrorIcono;
+            originalSize = btnCerrar.Size;
+            // Eventos para cuando el mouse entra y sale del PictureBox
+            btnCerrar.MouseEnter += btnCerrar_MouseEnter;
+            btnCerrar.MouseLeave += btnCerrar_MouseLeave;
         }
 
         private void horafecha_Tick(object sender, EventArgs e)
@@ -188,5 +195,18 @@ namespace AgroServicios.Vista.MenuPrincipal
             btnAccounts.Location = new Point(btnAccounts.Location.X + 10, btnAccounts.Location.Y + 10); // Restaurar la posición
         }
 
+        private void btnCerrar_MouseEnter(object sender, EventArgs e)
+        {
+            // Aumentar el tamaño del PictureBox cuando el cursor está sobre la imagen
+            btnCerrar.Size = new Size(originalSize.Width + 20, originalSize.Height + 20);
+            btnCerrar.Location = new Point(btnCerrar.Location.X - 10, btnCerrar.Location.Y - 20); // Ajustar la posición
+        }
+
+        private void btnCerrar_MouseLeave(object sender, EventArgs e)
+        {
+            // Restaurar el tamaño original del PictureBox cuando el cursor sale de la imagen
+            btnCerrar.Size = originalSize;
+            btnCerrar.Location = new Point(btnCerrar.Location.X + 10, btnCerrar.Location.Y + 10); // Restaurar la posición
+        }
     }
 }

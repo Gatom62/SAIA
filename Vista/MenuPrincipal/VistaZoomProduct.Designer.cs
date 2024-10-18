@@ -45,7 +45,7 @@
             this.ptbback = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbCaragteristica = new System.Windows.Forms.Label();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.PanelDescrip = new Bunifu.UI.WinForms.BunifuPanel();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.bunifuShadowPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbimg)).BeginInit();
@@ -372,19 +372,19 @@
             this.lbCaragteristica.TabIndex = 46;
             this.lbCaragteristica.Text = "Codigo:";
             // 
-            // bunifuPanel1
+            // PanelDescrip
             // 
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.Orange;
-            this.bunifuPanel1.BorderRadius = 3;
-            this.bunifuPanel1.BorderThickness = 2;
-            this.bunifuPanel1.Location = new System.Drawing.Point(321, 99);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(439, 142);
-            this.bunifuPanel1.TabIndex = 0;
+            this.PanelDescrip.BackgroundColor = System.Drawing.Color.Transparent;
+            this.PanelDescrip.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelDescrip.BackgroundImage")));
+            this.PanelDescrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelDescrip.BorderColor = System.Drawing.Color.Orange;
+            this.PanelDescrip.BorderRadius = 15;
+            this.PanelDescrip.BorderThickness = 2;
+            this.PanelDescrip.Location = new System.Drawing.Point(321, 99);
+            this.PanelDescrip.Name = "PanelDescrip";
+            this.PanelDescrip.ShowBorders = true;
+            this.PanelDescrip.Size = new System.Drawing.Size(439, 142);
+            this.PanelDescrip.TabIndex = 0;
             // 
             // VistaZoomProduct
             // 
@@ -405,7 +405,7 @@
             this.Controls.Add(this.lbldescripcion);
             this.Controls.Add(this.lblcodigo);
             this.Controls.Add(this.lbCantidad);
-            this.Controls.Add(this.bunifuPanel1);
+            this.Controls.Add(this.PanelDescrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -438,6 +438,6 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuIconButton ptbback;
         public Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         public System.Windows.Forms.Label lbCaragteristica;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        public Bunifu.UI.WinForms.BunifuPanel PanelDescrip;
     }
 }

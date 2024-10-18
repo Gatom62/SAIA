@@ -83,18 +83,12 @@ namespace AgroServicios.Vista.MenuPrincipal
                 btnValidar.OnPressedState.BorderColor = Color.Red;
                 btnValidar.DisabledFillColor = Color.DarkOrange;
 
-                pnTitulo.BackColor = Color.WhiteSmoke;
+                pnEstructura.BackgroundColor = Color.WhiteSmoke;
 
                 txtUsuario.BorderColorHover = Color.FromArgb(211, 41, 15);
                 txtUsuario.BorderColorActive = Color.FromArgb(211, 41, 15);
                 txtContraseña.BorderColorHover = Color.FromArgb(211, 41, 15);
                 txtContraseña.BorderColorActive = Color.FromArgb(211, 41, 15);
-
-                //Esto es para cambiar el color de los gradientes del panel cuando se active el modo oscuro
-                bunifuGradientPanel2.GradientBottomLeft = Color.FromArgb(118, 88, 152);
-                bunifuGradientPanel2.GradientTopRight = Color.FromArgb(34, 36, 49);
-                bunifuGradientPanel2.GradientBottomRight = Color.FromArgb(118, 88, 152);
-                bunifuGradientPanel2.GradientTopLeft = Color.FromArgb(34, 36, 49);
             }
         }
     }

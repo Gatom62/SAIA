@@ -194,7 +194,7 @@
             this.btnRestablecer.ButtonTextMarginLeft = 0;
             this.btnRestablecer.ColorContrastOnClick = 45;
             this.btnRestablecer.ColorContrastOnHover = 45;
-            this.btnRestablecer.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnRestablecer.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -298,7 +298,7 @@
             this.ptbback.BorderThickness = 1;
             this.ptbback.ColorContrastOnClick = 30;
             this.ptbback.ColorContrastOnHover = 30;
-            this.ptbback.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ptbback.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges2.BottomLeft = true;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = true;

@@ -38,6 +38,7 @@ namespace AgroServicios.Vista.MenuPrincipal
                 bunifuLabel1.ForeColor = Color.White;
                 lbPrecioProducto.ForeColor = Color.White;
                 lbCantidad.ForeColor = Color.White;
+                PanelDescrip.BorderColor = Color.White;
             }
 
             if (ControladorIdioma.idioma == 1)

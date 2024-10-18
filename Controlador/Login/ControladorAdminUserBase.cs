@@ -109,7 +109,9 @@ namespace AgroServicios.Controlador.Login
             }
             else if (respuesta == -1)
             {
-                MessageBoxP(Color.Yellow, Color.Orange, "Error", datosIncorrectos, Properties.Resources.MensajeWarning);
+                //Mensaje de error si se no se pudo realizar la inserccion
+                MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", datosIncorrectos, Properties.Resources.ErrorIcono);
+                VistaLogin backForm = new VistaLogin();
                 return;
             }
             else

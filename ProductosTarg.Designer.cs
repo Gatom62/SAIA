@@ -42,6 +42,7 @@
             this.lbldesc = new System.Windows.Forms.RichTextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.btnadd = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.lbCodeText = new System.Windows.Forms.Label();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbimg)).BeginInit();
@@ -76,6 +77,7 @@
             this.bunifuPanel2.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel2.BorderRadius = 3;
             this.bunifuPanel2.BorderThickness = 1;
+            this.bunifuPanel2.Controls.Add(this.lbCodeText);
             this.bunifuPanel2.Controls.Add(this.btnSeleccionar);
             this.bunifuPanel2.Controls.Add(this.ptbimg);
             this.bunifuPanel2.Controls.Add(this.lblPrecio);
@@ -238,7 +240,7 @@
             this.lblcodigo.AutoEllipsis = false;
             this.lblcodigo.CursorType = null;
             this.lblcodigo.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcodigo.Location = new System.Drawing.Point(328, 417);
+            this.lblcodigo.Location = new System.Drawing.Point(342, 418);
             this.lblcodigo.Margin = new System.Windows.Forms.Padding(2);
             this.lblcodigo.Name = "lblcodigo";
             this.lblcodigo.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -384,6 +386,16 @@
             this.btnadd.UseDefaultRadiusAndThickness = true;
             this.btnadd.Visible = false;
             // 
+            // lbCodeText
+            // 
+            this.lbCodeText.AutoSize = true;
+            this.lbCodeText.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCodeText.Location = new System.Drawing.Point(283, 418);
+            this.lbCodeText.Name = "lbCodeText";
+            this.lbCodeText.Size = new System.Drawing.Size(59, 16);
+            this.lbCodeText.TabIndex = 0;
+            this.lbCodeText.Text = "Código:";
+            // 
             // ProductosTarg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -416,5 +428,6 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnSeleccionar;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
+        private System.Windows.Forms.Label lbCodeText;
     }
 }

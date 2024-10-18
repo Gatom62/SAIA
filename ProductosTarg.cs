@@ -75,11 +75,23 @@ namespace AgroServicios
                 lblname.ForeColor = Color.FromArgb(230, 119, 11);
                 lblPrecio.ForeColor = Color.White;
                 bunifuShadowPanel1.ShadowColor = Color.DimGray;
+                lbCodeText.ForeColor = Color.White;
+
+                btnSeleccionar.IdleFillColor = Color.DarkBlue;
+                btnSeleccionar.onHoverState.FillColor = Color.DarkViolet;
+                btnSeleccionar.onHoverState.BorderColor = Color.DarkViolet;
+                btnSeleccionar.OnPressedState.FillColor = Color.DodgerBlue;
+                btnSeleccionar.OnPressedState.BorderColor = Color.DodgerBlue;
+                btnSeleccionar.DisabledFillColor = Color.DarkViolet;
+
+                btnSeleccionar.DisabledFillColor = Color.FromArgb(118, 88, 152);
+                btnSeleccionar.ForeColor = Color.White;
             }
 
             if (ControladorIdioma.idioma == 1) 
             {
                 btnSeleccionar.Text = Ingles.Seleccionar;
+                lbCodeText.Text = "Code:";
             }
         }
         private void ptbimg_Click_1(object sender, EventArgs e)

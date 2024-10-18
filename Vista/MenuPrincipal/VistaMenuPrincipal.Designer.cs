@@ -76,6 +76,7 @@
             this.btnInicio = new System.Windows.Forms.PictureBox();
             this.btnAccounts = new System.Windows.Forms.PictureBox();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
+            this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.PanelView.SuspendLayout();
             this.PanelContenedor.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -115,6 +116,9 @@
             this.PanelView.Name = "PanelView";
             this.PanelView.Size = new System.Drawing.Size(1305, 679);
             this.PanelView.TabIndex = 25;
+            this.bunifuToolTip1.SetToolTip(this.PanelView, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.PanelView, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.PanelView, "");
             // 
             // PanelContenedor
             // 
@@ -125,6 +129,9 @@
             this.PanelContenedor.Name = "PanelContenedor";
             this.PanelContenedor.Size = new System.Drawing.Size(1305, 498);
             this.PanelContenedor.TabIndex = 31;
+            this.bunifuToolTip1.SetToolTip(this.PanelContenedor, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.PanelContenedor, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.PanelContenedor, "");
             // 
             // panel2
             // 
@@ -138,6 +145,9 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1305, 498);
             this.panel2.TabIndex = 0;
+            this.bunifuToolTip1.SetToolTip(this.panel2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.panel2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.panel2, "");
             // 
             // tableLayoutPanel3
             // 
@@ -154,6 +164,9 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(983, 311);
             this.tableLayoutPanel3.TabIndex = 4;
+            this.bunifuToolTip1.SetToolTip(this.tableLayoutPanel3, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.tableLayoutPanel3, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.tableLayoutPanel3, "");
             // 
             // tableLayoutPanel5
             // 
@@ -170,6 +183,9 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(485, 305);
             this.tableLayoutPanel5.TabIndex = 1;
+            this.bunifuToolTip1.SetToolTip(this.tableLayoutPanel5, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.tableLayoutPanel5, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.tableLayoutPanel5, "");
             // 
             // SpCierreCaja
             // 
@@ -195,6 +211,9 @@
             this.SpCierreCaja.Size = new System.Drawing.Size(479, 147);
             this.SpCierreCaja.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.SpCierreCaja.TabIndex = 29;
+            this.bunifuToolTip1.SetToolTip(this.SpCierreCaja, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.SpCierreCaja, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.SpCierreCaja, "");
             // 
             // btnCierreCaja
             // 
@@ -217,7 +236,7 @@
             this.btnCierreCaja.ButtonTextMarginLeft = 0;
             this.btnCierreCaja.ColorContrastOnClick = 45;
             this.btnCierreCaja.ColorContrastOnHover = 45;
-            this.btnCierreCaja.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCierreCaja.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -287,6 +306,9 @@
             this.btnCierreCaja.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnCierreCaja.TextMarginLeft = 0;
             this.btnCierreCaja.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuToolTip1.SetToolTip(this.btnCierreCaja, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnCierreCaja, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnCierreCaja, "");
             this.btnCierreCaja.UseDefaultRadiusAndThickness = true;
             // 
             // SpProducto
@@ -313,6 +335,9 @@
             this.SpProducto.Size = new System.Drawing.Size(479, 146);
             this.SpProducto.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.SpProducto.TabIndex = 29;
+            this.bunifuToolTip1.SetToolTip(this.SpProducto, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.SpProducto, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.SpProducto, "");
             // 
             // btnprin2
             // 
@@ -335,7 +360,7 @@
             this.btnprin2.ButtonTextMarginLeft = 0;
             this.btnprin2.ColorContrastOnClick = 45;
             this.btnprin2.ColorContrastOnHover = 45;
-            this.btnprin2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnprin2.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges2.BottomLeft = true;
             borderEdges2.BottomRight = true;
             borderEdges2.TopLeft = true;
@@ -405,6 +430,9 @@
             this.btnprin2.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnprin2.TextMarginLeft = 0;
             this.btnprin2.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuToolTip1.SetToolTip(this.btnprin2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnprin2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnprin2, "");
             this.btnprin2.UseDefaultRadiusAndThickness = true;
             // 
             // tableLayoutPanel4
@@ -422,6 +450,9 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(486, 305);
             this.tableLayoutPanel4.TabIndex = 0;
+            this.bunifuToolTip1.SetToolTip(this.tableLayoutPanel4, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.tableLayoutPanel4, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.tableLayoutPanel4, "");
             // 
             // SpFichaProductos
             // 
@@ -447,6 +478,9 @@
             this.SpFichaProductos.Size = new System.Drawing.Size(480, 146);
             this.SpFichaProductos.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.SpFichaProductos.TabIndex = 29;
+            this.bunifuToolTip1.SetToolTip(this.SpFichaProductos, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.SpFichaProductos, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.SpFichaProductos, "");
             // 
             // btnFichaProductos
             // 
@@ -469,7 +503,7 @@
             this.btnFichaProductos.ButtonTextMarginLeft = 0;
             this.btnFichaProductos.ColorContrastOnClick = 45;
             this.btnFichaProductos.ColorContrastOnHover = 45;
-            this.btnFichaProductos.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnFichaProductos.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges3.BottomLeft = true;
             borderEdges3.BottomRight = true;
             borderEdges3.TopLeft = true;
@@ -539,6 +573,9 @@
             this.btnFichaProductos.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnFichaProductos.TextMarginLeft = 0;
             this.btnFichaProductos.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuToolTip1.SetToolTip(this.btnFichaProductos, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnFichaProductos, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnFichaProductos, "");
             this.btnFichaProductos.UseDefaultRadiusAndThickness = true;
             // 
             // SpFiltrarVentas
@@ -565,6 +602,9 @@
             this.SpFiltrarVentas.Size = new System.Drawing.Size(480, 147);
             this.SpFiltrarVentas.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.SpFiltrarVentas.TabIndex = 29;
+            this.bunifuToolTip1.SetToolTip(this.SpFiltrarVentas, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.SpFiltrarVentas, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.SpFiltrarVentas, "");
             // 
             // btnVentas
             // 
@@ -587,7 +627,7 @@
             this.btnVentas.ButtonTextMarginLeft = 0;
             this.btnVentas.ColorContrastOnClick = 45;
             this.btnVentas.ColorContrastOnHover = 45;
-            this.btnVentas.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnVentas.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges4.BottomLeft = true;
             borderEdges4.BottomRight = true;
             borderEdges4.TopLeft = true;
@@ -657,6 +697,9 @@
             this.btnVentas.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnVentas.TextMarginLeft = 0;
             this.btnVentas.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuToolTip1.SetToolTip(this.btnVentas, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnVentas, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnVentas, "");
             this.btnVentas.UseDefaultRadiusAndThickness = true;
             // 
             // panel5
@@ -667,6 +710,9 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(161, 311);
             this.panel5.TabIndex = 3;
+            this.bunifuToolTip1.SetToolTip(this.panel5, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.panel5, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.panel5, "");
             // 
             // panel4
             // 
@@ -676,6 +722,9 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(161, 311);
             this.panel4.TabIndex = 2;
+            this.bunifuToolTip1.SetToolTip(this.panel4, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.panel4, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.panel4, "");
             // 
             // tableLayoutPanel2
             // 
@@ -692,6 +741,9 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1305, 101);
             this.tableLayoutPanel2.TabIndex = 1;
+            this.bunifuToolTip1.SetToolTip(this.tableLayoutPanel2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.tableLayoutPanel2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.tableLayoutPanel2, "");
             // 
             // flowLayoutPanel1
             // 
@@ -702,6 +754,9 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(153, 77);
             this.flowLayoutPanel1.TabIndex = 0;
+            this.bunifuToolTip1.SetToolTip(this.flowLayoutPanel1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.flowLayoutPanel1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.flowLayoutPanel1, "");
             // 
             // btnConfi
             // 
@@ -722,7 +777,7 @@
             this.btnConfi.ButtonTextMarginLeft = 0;
             this.btnConfi.ColorContrastOnClick = 45;
             this.btnConfi.ColorContrastOnHover = 45;
-            this.btnConfi.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnConfi.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges5.BottomLeft = true;
             borderEdges5.BottomRight = true;
             borderEdges5.TopLeft = true;
@@ -792,6 +847,9 @@
             this.btnConfi.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnConfi.TextMarginLeft = 0;
             this.btnConfi.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuToolTip1.SetToolTip(this.btnConfi, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnConfi, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnConfi, "");
             this.btnConfi.UseDefaultRadiusAndThickness = true;
             this.btnConfi.Click += new System.EventHandler(this.btnConfi_Click_1);
             // 
@@ -814,7 +872,7 @@
             this.btnExit.ButtonTextMarginLeft = 0;
             this.btnExit.ColorContrastOnClick = 45;
             this.btnExit.ColorContrastOnHover = 45;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges6.BottomLeft = true;
             borderEdges6.BottomRight = true;
             borderEdges6.TopLeft = true;
@@ -884,6 +942,9 @@
             this.btnExit.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnExit.TextMarginLeft = 0;
             this.btnExit.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bunifuToolTip1.SetToolTip(this.btnExit, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnExit, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnExit, "");
             this.btnExit.UseDefaultRadiusAndThickness = true;
             // 
             // flowLayoutPanel2
@@ -894,6 +955,9 @@
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(269, 95);
             this.flowLayoutPanel2.TabIndex = 1;
+            this.bunifuToolTip1.SetToolTip(this.flowLayoutPanel2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.flowLayoutPanel2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.flowLayoutPanel2, "");
             // 
             // bunifuPanel2
             // 
@@ -911,6 +975,9 @@
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(260, 91);
             this.bunifuPanel2.TabIndex = 0;
+            this.bunifuToolTip1.SetToolTip(this.bunifuPanel2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuPanel2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuPanel2, "");
             // 
             // label2
             // 
@@ -922,6 +989,9 @@
             this.label2.Size = new System.Drawing.Size(86, 30);
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
+            this.bunifuToolTip1.SetToolTip(this.label2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label2, "");
             // 
             // label1
             // 
@@ -933,6 +1003,9 @@
             this.label1.Size = new System.Drawing.Size(96, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Bienvenido";
+            this.bunifuToolTip1.SetToolTip(this.label1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label1, "");
             // 
             // ptbimg
             // 
@@ -948,6 +1021,9 @@
             this.ptbimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbimg.TabIndex = 0;
             this.ptbimg.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.ptbimg, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.ptbimg, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.ptbimg, "");
             this.ptbimg.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
             // panel3
@@ -959,6 +1035,9 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1305, 86);
             this.panel3.TabIndex = 0;
+            this.bunifuToolTip1.SetToolTip(this.panel3, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.panel3, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.panel3, "");
             // 
             // tableLayoutPanel6
             // 
@@ -974,6 +1053,9 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(1305, 86);
             this.tableLayoutPanel6.TabIndex = 0;
+            this.bunifuToolTip1.SetToolTip(this.tableLayoutPanel6, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.tableLayoutPanel6, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.tableLayoutPanel6, "");
             // 
             // label3
             // 
@@ -986,6 +1068,9 @@
             this.label3.Size = new System.Drawing.Size(232, 56);
             this.label3.TabIndex = 0;
             this.label3.Text = "Procesos";
+            this.bunifuToolTip1.SetToolTip(this.label3, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.label3, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.label3, "");
             // 
             // panel1
             // 
@@ -997,6 +1082,9 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1305, 119);
             this.panel1.TabIndex = 29;
+            this.bunifuToolTip1.SetToolTip(this.panel1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.panel1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.panel1, "");
             // 
             // tableLayoutPanel7
             // 
@@ -1013,6 +1101,9 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(1305, 119);
             this.tableLayoutPanel7.TabIndex = 3;
+            this.bunifuToolTip1.SetToolTip(this.tableLayoutPanel7, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.tableLayoutPanel7, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.tableLayoutPanel7, "");
             // 
             // tableLayoutPanel8
             // 
@@ -1029,6 +1120,9 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(648, 115);
             this.tableLayoutPanel8.TabIndex = 0;
+            this.bunifuToolTip1.SetToolTip(this.tableLayoutPanel8, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.tableLayoutPanel8, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.tableLayoutPanel8, "");
             // 
             // lblfecha
             // 
@@ -1042,6 +1136,9 @@
             this.lblfecha.Size = new System.Drawing.Size(131, 44);
             this.lblfecha.TabIndex = 34;
             this.lblfecha.Text = "label2";
+            this.bunifuToolTip1.SetToolTip(this.lblfecha, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lblfecha, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lblfecha, "");
             // 
             // lblhora
             // 
@@ -1054,6 +1151,9 @@
             this.lblhora.Size = new System.Drawing.Size(161, 55);
             this.lblhora.TabIndex = 32;
             this.lblhora.Text = "label1";
+            this.bunifuToolTip1.SetToolTip(this.lblhora, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.lblhora, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.lblhora, "");
             // 
             // tableLayoutPanel1
             // 
@@ -1078,10 +1178,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1305, 62);
             this.tableLayoutPanel1.TabIndex = 28;
+            this.bunifuToolTip1.SetToolTip(this.tableLayoutPanel1, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.tableLayoutPanel1, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.tableLayoutPanel1, "");
             // 
             // btnStats
             // 
             this.btnStats.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnStats.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStats.Image = global::AgroServicios.Properties.Resources.image_49;
             this.btnStats.Location = new System.Drawing.Point(663, 7);
             this.btnStats.Margin = new System.Windows.Forms.Padding(2);
@@ -1090,10 +1194,14 @@
             this.btnStats.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnStats.TabIndex = 39;
             this.btnStats.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.btnStats, "Estadisticas");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnStats, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnStats, "");
             // 
             // btnCerrar
             // 
             this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = global::AgroServicios.Properties.Resources.ErrorIcono;
             this.btnCerrar.Location = new System.Drawing.Point(1179, 7);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
@@ -1102,10 +1210,16 @@
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCerrar.TabIndex = 42;
             this.btnCerrar.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.btnCerrar, "Cerrar programa");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnCerrar, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnCerrar, "");
+            this.btnCerrar.MouseEnter += new System.EventHandler(this.btnCerrar_MouseEnter);
+            this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
             // 
             // btnShop
             // 
             this.btnShop.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnShop.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnShop.Image = global::AgroServicios.Properties.Resources.bolsita;
             this.btnShop.Location = new System.Drawing.Point(390, 7);
             this.btnShop.Margin = new System.Windows.Forms.Padding(2);
@@ -1114,10 +1228,14 @@
             this.btnShop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnShop.TabIndex = 38;
             this.btnShop.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.btnShop, "Carrito");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnShop, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnShop, "");
             // 
             // btnInicio
             // 
             this.btnInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.Image = global::AgroServicios.Properties.Resources.Casa_Logo2;
             this.btnInicio.Location = new System.Drawing.Point(117, 7);
             this.btnInicio.Margin = new System.Windows.Forms.Padding(2);
@@ -1126,12 +1244,16 @@
             this.btnInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnInicio.TabIndex = 1;
             this.btnInicio.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.btnInicio, "Inicio");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnInicio, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnInicio, "");
             this.btnInicio.MouseEnter += new System.EventHandler(this.btnInicio_MouseEnter);
             this.btnInicio.MouseLeave += new System.EventHandler(this.btnInicio_MouseLeave);
             // 
             // btnAccounts
             // 
             this.btnAccounts.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAccounts.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAccounts.Image = global::AgroServicios.Properties.Resources.silueta_de_multiples_usuarios;
             this.btnAccounts.Location = new System.Drawing.Point(936, 7);
             this.btnAccounts.Margin = new System.Windows.Forms.Padding(2);
@@ -1140,11 +1262,49 @@
             this.btnAccounts.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnAccounts.TabIndex = 41;
             this.btnAccounts.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.btnAccounts, "Usuarios");
+            this.bunifuToolTip1.SetToolTipIcon(this.btnAccounts, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.btnAccounts, "");
             // 
             // horafecha
             // 
             this.horafecha.Enabled = true;
             this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
+            // 
+            // bunifuToolTip1
+            // 
+            this.bunifuToolTip1.Active = true;
+            this.bunifuToolTip1.AlignTextWithTitle = false;
+            this.bunifuToolTip1.AllowAutoClose = true;
+            this.bunifuToolTip1.AllowFading = true;
+            this.bunifuToolTip1.AutoCloseDuration = 5000;
+            this.bunifuToolTip1.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuToolTip1.BorderColor = System.Drawing.Color.Gainsboro;
+            this.bunifuToolTip1.ClickToShowDisplayControl = false;
+            this.bunifuToolTip1.ConvertNewlinesToBreakTags = true;
+            this.bunifuToolTip1.DisplayControl = null;
+            this.bunifuToolTip1.EntryAnimationSpeed = 350;
+            this.bunifuToolTip1.ExitAnimationSpeed = 200;
+            this.bunifuToolTip1.GenerateAutoCloseDuration = false;
+            this.bunifuToolTip1.IconMargin = 6;
+            this.bunifuToolTip1.InitialDelay = 0;
+            this.bunifuToolTip1.Name = "bunifuToolTip1";
+            this.bunifuToolTip1.Opacity = 1D;
+            this.bunifuToolTip1.OverrideToolTipTitles = false;
+            this.bunifuToolTip1.Padding = new System.Windows.Forms.Padding(10);
+            this.bunifuToolTip1.ReshowDelay = 100;
+            this.bunifuToolTip1.ShowAlways = true;
+            this.bunifuToolTip1.ShowBorders = false;
+            this.bunifuToolTip1.ShowIcons = true;
+            this.bunifuToolTip1.ShowShadows = true;
+            this.bunifuToolTip1.Tag = null;
+            this.bunifuToolTip1.TextFont = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuToolTip1.TextForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuToolTip1.TextMargin = 2;
+            this.bunifuToolTip1.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.bunifuToolTip1.TitleForeColor = System.Drawing.Color.Black;
+            this.bunifuToolTip1.ToolTipPosition = new System.Drawing.Point(0, 0);
+            this.bunifuToolTip1.ToolTipTitle = null;
             // 
             // VistaMenuPrincipal
             // 
@@ -1152,10 +1312,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
             this.ClientSize = new System.Drawing.Size(1305, 679);
+            this.ControlBox = false;
             this.Controls.Add(this.PanelView);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimizeBox = false;
             this.Name = "VistaMenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu principal";
@@ -1235,5 +1396,6 @@
         private Bunifu.UI.WinForms.BunifuShadowPanel SpFichaProductos;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCierreCaja;
         public System.Windows.Forms.PictureBox btnCerrar;
+        private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip1;
     }
 }

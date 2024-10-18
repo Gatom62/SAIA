@@ -110,7 +110,7 @@
             this.btnBuscar.ButtonTextMarginLeft = 0;
             this.btnBuscar.ColorContrastOnClick = 45;
             this.btnBuscar.ColorContrastOnHover = 45;
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
             borderEdges1.TopLeft = true;
@@ -214,6 +214,7 @@
             this.dtpinicio.BorderRadius = 10;
             this.dtpinicio.CalendarFont = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpinicio.Color = System.Drawing.Color.White;
+            this.dtpinicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpinicio.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
             this.dtpinicio.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
             this.dtpinicio.DisabledColor = System.Drawing.Color.Gray;
@@ -254,6 +255,7 @@
             this.dtpfinal.BorderColor = System.Drawing.Color.White;
             this.dtpfinal.BorderRadius = 10;
             this.dtpfinal.Color = System.Drawing.Color.White;
+            this.dtpfinal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtpfinal.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
             this.dtpfinal.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
             this.dtpfinal.DisabledColor = System.Drawing.Color.Gray;
