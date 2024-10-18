@@ -78,8 +78,5 @@ namespace AgroServicios.Vista.MenuPrincipal
             }
         }
 
-        private void ptbback_Click(object sender, EventArgs e)
-        {
-        }
     }
 }

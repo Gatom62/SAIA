@@ -45,6 +45,7 @@
             this.ptbback = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbCaragteristica = new System.Windows.Forms.Label();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.bunifuShadowPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbimg)).BeginInit();
@@ -76,7 +77,7 @@
             this.lbPrecioProducto.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbPrecioProducto.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.lbPrecioProducto.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbPrecioProducto.Location = new System.Drawing.Point(349, 241);
+            this.lbPrecioProducto.Location = new System.Drawing.Point(346, 261);
             this.lbPrecioProducto.Margin = new System.Windows.Forms.Padding(2);
             this.lbPrecioProducto.Name = "lbPrecioProducto";
             this.lbPrecioProducto.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -94,7 +95,7 @@
             this.lbCantidad.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbCantidad.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.lbCantidad.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbCantidad.Location = new System.Drawing.Point(346, 294);
+            this.lbCantidad.Location = new System.Drawing.Point(346, 304);
             this.lbCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.lbCantidad.Name = "lbCantidad";
             this.lbCantidad.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -107,7 +108,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(444, 294);
+            this.numericUpDown1.Location = new System.Drawing.Point(444, 304);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(79, 22);
@@ -122,7 +123,7 @@
             this.lbldescripcion.CursorType = null;
             this.lbldescripcion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbldescripcion.ForeColor = System.Drawing.Color.Black;
-            this.lbldescripcion.Location = new System.Drawing.Point(330, 101);
+            this.lbldescripcion.Location = new System.Drawing.Point(330, 107);
             this.lbldescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.lbldescripcion.Name = "lbldescripcion";
             this.lbldescripcion.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -138,7 +139,7 @@
             this.lblprecio.CursorType = null;
             this.lblprecio.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.lblprecio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblprecio.Location = new System.Drawing.Point(536, 240);
+            this.lblprecio.Location = new System.Drawing.Point(533, 260);
             this.lblprecio.Margin = new System.Windows.Forms.Padding(2);
             this.lblprecio.Name = "lblprecio";
             this.lblprecio.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -265,7 +266,7 @@
             this.bunifuShadowPanel2.Controls.Add(this.btnadd);
             this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel2.Location = new System.Drawing.Point(373, 334);
+            this.bunifuShadowPanel2.Location = new System.Drawing.Point(373, 344);
             this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
             this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.Transparent;
             this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.Transparent;
@@ -341,7 +342,6 @@
             this.ptbback.Size = new System.Drawing.Size(46, 46);
             this.ptbback.Style = Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.ButtonStyles.Round;
             this.ptbback.TabIndex = 3;
-            this.ptbback.Click += new System.EventHandler(this.ptbback_Click);
             // 
             // bunifuLabel1
             // 
@@ -352,7 +352,7 @@
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuLabel1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.bunifuLabel1.Location = new System.Drawing.Point(345, 73);
+            this.bunifuLabel1.Location = new System.Drawing.Point(321, 72);
             this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -371,6 +371,20 @@
             this.lbCaragteristica.Size = new System.Drawing.Size(83, 22);
             this.lbCaragteristica.TabIndex = 46;
             this.lbCaragteristica.Text = "Codigo:";
+            // 
+            // bunifuPanel1
+            // 
+            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
+            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel1.BorderColor = System.Drawing.Color.Orange;
+            this.bunifuPanel1.BorderRadius = 3;
+            this.bunifuPanel1.BorderThickness = 2;
+            this.bunifuPanel1.Location = new System.Drawing.Point(321, 99);
+            this.bunifuPanel1.Name = "bunifuPanel1";
+            this.bunifuPanel1.ShowBorders = true;
+            this.bunifuPanel1.Size = new System.Drawing.Size(439, 142);
+            this.bunifuPanel1.TabIndex = 0;
             // 
             // VistaZoomProduct
             // 
@@ -391,6 +405,7 @@
             this.Controls.Add(this.lbldescripcion);
             this.Controls.Add(this.lblcodigo);
             this.Controls.Add(this.lbCantidad);
+            this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -423,5 +438,6 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuIconButton ptbback;
         public Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         public System.Windows.Forms.Label lbCaragteristica;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
     }
 }
