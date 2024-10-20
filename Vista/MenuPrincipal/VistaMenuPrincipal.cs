@@ -128,7 +128,7 @@ namespace AgroServicios.Vista.MenuPrincipal
                 btnCierreCaja.Text = Ingles.mbc;
                 btnFichaProductos.Text = Ingles.mbf;
                 btnConfi.Text = Ingles.mbcf;
-                btnExit.Text = Ingles.mbe;
+                btnExit.Text = "log out";
                 label1.Text = Ingles.welcome;
                 label3.Text = "Processes";
             }

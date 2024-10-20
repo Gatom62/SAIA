@@ -55,6 +55,46 @@ namespace AgroServicios.Controlador.ControladorStats
         }
         private void CrearDevoluciones(object sender, EventArgs e)
         {
+            if (objdev.dropVenta.SelectedValue == null)
+            {
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "You must select a sale", Properties.Resources.ErrorIcono);
+                    return;
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Debe seleccionar una venta", Properties.Resources.ErrorIcono);
+                    return;
+                }
+            }
+            if (objdev.dropProducto.SelectedValue == null)
+            {
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "You must select a product", Properties.Resources.ErrorIcono);
+                    return;
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Debe seleccionar un producto", Properties.Resources.ErrorIcono);
+                    return;
+                }
+            }
+            if (objdev.dropCliente.SelectedValue == null)
+            {
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "You must select a client", Properties.Resources.ErrorIcono);
+                    return;
+                }
+                else
+                {
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Debe seleccionar un cliente", Properties.Resources.ErrorIcono);
+                    return;
+                }
+            }
+
             // Validación para la fecha de la devolución: debe ser hoy
             DateTime fechaDev = objdev.pickerFechaDev.Value.Date;
             if (fechaDev != DateTime.Now.Date)

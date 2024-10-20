@@ -63,6 +63,18 @@ namespace AgroServicios.Controlador.Productos1
         }
         private void UpdateMarca(object sender, EventArgs e)
         {
+            if (ObjCreateMarca.GriewViewMarcas.CurrentRow == null) 
+            {
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "The brand has not been selected", Properties.Resources.MensajeWarning);
+                }
+                else 
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "No se ha seleccionado ninguna marca", Properties.Resources.MensajeWarning);
+                }
+            }
+
             int pos = ObjCreateMarca.GriewViewMarcas.CurrentRow.Index;
             int id;
             string Name;
@@ -178,6 +190,18 @@ namespace AgroServicios.Controlador.Productos1
         }
         private void EliminarMarca(object sender, EventArgs e)
         {
+            if (ObjCreateMarca.GriewViewMarcas.CurrentRow == null)
+            {
+                if (ControladorIdioma.idioma == 1)
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "The brand has not been selected", Properties.Resources.MensajeWarning);
+                }
+                else
+                {
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "No se ha seleccionado ninguna marca", Properties.Resources.MensajeWarning);
+                }
+            }
+
             int pos = ObjCreateMarca.GriewViewMarcas.CurrentRow.Index;
             if (ControladorIdioma.idioma == 1)
             {
