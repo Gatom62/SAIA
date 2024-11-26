@@ -22,6 +22,7 @@ namespace AgroServicios.Controlador.Productos1
         VistaCreateProducto ObjCreateProducto1;
         private int accion;
         private string marca;
+        private string estante;
 
         /// <summary>
         /// Constructor para inserción de datos
@@ -34,6 +35,7 @@ namespace AgroServicios.Controlador.Productos1
             ObjCreateProducto1 = Vista;
             this.accion = accion;
             ObjCreateProducto1.Load += new EventHandler(InitialCharge);
+            ObjCreateProducto1.Load += new EventHandler(InitialChargev2);
             ObjCreateProducto1.btnCrearProducto.Click += new EventHandler(NuevoRegistro);
             ObjCreateProducto1.btnImagenProducto.Click += AgregarImagen;
         }
@@ -103,6 +105,22 @@ namespace AgroServicios.Controlador.Productos1
             }
         }
 
+        public void InitialChargev2(object sender, EventArgs e)
+        {
+            DAOProductos1 objestante = new DAOProductos1();
+            //Declarando nuevo DataSet para que obtenga los datos del metodo LlenarCombo
+            DataSet ds = objestante.LlenarCombov2();
+            //Llenar combobox tbRole
+            ObjCreateProducto1.DropEstante.DataSource = ds.Tables["Estantes"];
+            ObjCreateProducto1.DropEstante.ValueMember = "idEstante"; 
+            ObjCreateProducto1.DropEstante.DisplayMember = "NombreEstante";
+            //La condición sirve para que al actualizar un registro, el valor del registro aparezca seleccionado.
+            if (accion == 2)
+            {
+                ObjCreateProducto1.DropEstante.Text = estante;
+            }
+        }
+
         public void NuevoRegistro(object sender, EventArgs e)
         {
             // Validamos que los campos no esten vacios cuando vallamos a ingresar los datos 
@@ -112,6 +130,7 @@ namespace AgroServicios.Controlador.Productos1
                 string.IsNullOrWhiteSpace(ObjCreateProducto1.txtPrecio.Text) ||
                 string.IsNullOrWhiteSpace(ObjCreateProducto1.txtDescripcion.Text) ||
                 ObjCreateProducto1.DropMarca.SelectedValue == null ||
+                ObjCreateProducto1.DropEstante.SelectedValue == null ||
                 ObjCreateProducto1.ptbImagenProducto.Image == null)
             {
                 if (ControladorIdioma.idioma == 1)
@@ -231,6 +250,7 @@ namespace AgroServicios.Controlador.Productos1
             DaoInsert.Precio1 = ObjCreateProducto1.txtPrecio.Text.Trim();
             DaoInsert.Descripcion1 = ObjCreateProducto1.txtDescripcion.Text.Trim();
             DaoInsert.IdMarca = int.Parse(ObjCreateProducto1.DropMarca.SelectedValue.ToString());
+            DaoInsert.IdEstante = int.Parse(ObjCreateProducto1.DropEstante.SelectedValue.ToString());
             //Pedimos una contestación por parte de la base de datos, si nos manda un uno es que si se logro realizar correctamente la insercción
             int valorRetornado = DaoInsert.RegistrarProducto();
             if (valorRetornado == 1)

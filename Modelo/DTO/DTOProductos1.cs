@@ -17,6 +17,7 @@ namespace AgroServicios.Modelo.DTO
         private string Codigo;
         //Marcas
         private int idMarca;
+        private int idEstante;
         private string NombreMarca;
 
         public string Nombre1 { get => Nombre; set => Nombre = value; }
@@ -28,5 +29,6 @@ namespace AgroServicios.Modelo.DTO
         public int IdProducto { get => idProducto; set => idProducto = value; }
         public string Codigo1 { get => Codigo; set => Codigo = value; }
         public byte[] Img { get => img; set => img = value; }
+        public int IdEstante { get => idEstante; set => idEstante = value; }
     }
 }

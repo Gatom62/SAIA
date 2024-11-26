@@ -386,24 +386,6 @@
     <Compile Include="Vista\Login\VistaValidacionBase.Designer.cs">
       <DependentUpon>VistaValidacionBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Mapa\VistaMapa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Mapa\VistaMapa.Designer.cs">
-      <DependentUpon>VistaMapa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Mapa\VistaMapaPrimeraZona.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Mapa\VistaMapaPrimeraZona.Designer.cs">
-      <DependentUpon>VistaMapaPrimeraZona.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista\Mapa\VistaMapaSegundaZona.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\Mapa\VistaMapaSegundaZona.Designer.cs">
-      <DependentUpon>VistaMapaSegundaZona.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\MenuPrincipal\VistaAjustes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -632,12 +614,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Login\VistaValidacionBase.resx">
       <DependentUpon>VistaValidacionBase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Mapa\VistaMapa.resx">
-      <DependentUpon>VistaMapa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Mapa\VistaMapaPrimeraZona.resx">
-      <DependentUpon>VistaMapaPrimeraZona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaAjustes.resx">
       <DependentUpon>VistaAjustes.cs</DependentUpon>

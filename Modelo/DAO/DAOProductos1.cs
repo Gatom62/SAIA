@@ -55,34 +55,6 @@ namespace AgroServicios.Modelo.DAO
             try
             {
                 //Accedemos a la conexión que ya se tiene
-                //Command.Connection = getConnection();
-                //Instrucción que se hará hacia la base de datos
-                //string query = "SELECT * FROM ProductosMarcaView1";
-                //Comando sql en el cual se pasa la instrucción y la conexión
-                //SqlCommand cmd = new SqlCommand(query, Command.Connection);
-                //Se ejecuta el comando y con ExecuteNonQuery se verifica su retorno
-                //ExecuteNonQuery devuelve un valor entero.
-                //cmd.ExecuteNonQuery();
-                //Se utiliza un adaptador sql para rellenar el dataset
-                //SqlDataAdapter adp = new SqlDataAdapter(cmd);
-                //Se crea un objeto Dataset que es donde se devolverán los resultados
-                //DataSet ds = new DataSet();
-                //Rellenamos con el Adaptador el DataSet diciendole de que tabla provienen los datos
-                //adp.Fill(ds, "Productos");
-                // Cambiar el nombre del encabezado de la columna "idProducto" a "ID del producto"
-                //if (ds.Tables["Productos"].Columns.Contains("idProducto"))
-                //{
-                //    ds.Tables["Productos"].Columns["idProducto"].ColumnName = "ID del producto";
-                //}
-                // Cambiar el nombre del encabezado de la columna "Stock" a "Cantidad del producto"
-                //if (ds.Tables["Productos"].Columns.Contains("Stock"))
-                //{
-                //    ds.Tables["Productos"].Columns["Stock"].ColumnName = "Cantidad del producto";
-                //}
-                //Devolvemos el Dataset
-                //return ds;
-
-                //Accedemos a la conexión que ya se tiene
                 Command.Connection = getConnection();
                 //Instrucción que se hará hacia la base de datos
                 string query = "SELECT * FROM Productos";
@@ -182,6 +154,41 @@ namespace AgroServicios.Modelo.DAO
             }
         }
 
+        public DataSet LlenarCombov2()
+        {
+            try
+            {
+                //Se crea una conexión para garantizar que efectivamente haya conexión a la base.
+                Command.Connection = getConnection();
+                //**
+                //Se crea el query que indica la acción que el sistema desea realizar con la base de datos
+                //En caso sea una consulta parametrizada se deberá respetar la sintaxis sobre como colocar parametros en la instrucción sql (REVISAR LOS DEMÁS MANTENIMIENTOS PARA VER COMO SE CREAN PARAMETROS Y SE LES DA VALORES).
+                string query = "SELECT * FROM Estantes";
+                //Se crea un comando de tipo sql al cual se le pasa el query y la conexión, esto para que el sistema sepa que hacer y donde hacerlo.
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+                //ExecuteNonQuery indicará cuantos filas fueron afectadas, es decir, cuantas filas de datos se ingresaron o encontraron, por lo general cuando es una consulta su valor puede ser 1 o mayor a 1.
+                cmd.ExecuteNonQuery();
+                //Se crea un objeto SqlDataAdapter para poder llenar el DataSet que posteriormente utilizaremos, además recibe el comando sql
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+                //Se crea un DataSet que será el objeto de retorno del método
+                DataSet ds = new DataSet();
+                //Rellenamos el DataSet con los datos encontrados con el SqlDataAdapter, además, indicamos de donde provienen los datos
+                adp.Fill(ds, "Estantes");
+                //Retornamos el objeto DataSet
+                return ds;
+            }
+            catch (Exception)
+            {
+                //Se retorna null si durate la ejecución del try ocurrió algún error
+                return null;
+            }
+            finally
+            {
+                //Independientemente se haga o no el proceso cerramos la conexión
+                getConnection().Close();
+            }
+        }
+
         public int RegistrarMarca()
         {
             try
@@ -231,7 +238,7 @@ namespace AgroServicios.Modelo.DAO
                 //**
                 //Se crea el query que indica la acción que el sistema desea realizar con la base de datos
                 //el query posee parametros para evitar algún tipo de ataque como SQL Injection
-                string query2 = "INSERT INTO Productos(Nombre, idMarca, Precio, Stock, Descripcion, Codigo, imgNombre) VALUES (@name, @idbrand, @price, @stock, @description, @code, @imgname)";
+                string query2 = "INSERT INTO Productos(Nombre, idMarca, Precio, Stock, Descripcion, Codigo, imgNombre, idEstante) VALUES (@name, @idbrand, @price, @stock, @description, @code, @imgname, @idshelf)";
                 //Se crea un comando de tipo sql al cual se le pasa el query y la conexión, esto para que el sistema sepa que hacer y donde hacerlo.
                 SqlCommand cmd2 = new SqlCommand(query2, Command.Connection);
                 //Se le da un valor a los parametros contenidos en el query, es importante mencionar que lo que esta entre comillas es el nombre del parametro y lo que esta después de la coma es el valor que se le asignará al parametro, estos valores vienen del DTO respectivo.
@@ -242,6 +249,7 @@ namespace AgroServicios.Modelo.DAO
                 cmd2.Parameters.AddWithValue("description", Descripcion1);
                 cmd2.Parameters.AddWithValue("code", Codigo1);
                 cmd2.Parameters.AddWithValue("imgname", Img);
+                cmd2.Parameters.AddWithValue("idshelf", IdEstante);
                 //Se ejecuta el comando ya con todos los valores de sus parametros.
                 //ExecuteNonQuery indicará cuantos filas fueron afectadas, es decir, cuantas filas de datos se ingresaron, por lo general devolvera 1 porque se hace una inserción a la vez.
                 int respuesta = cmd2.ExecuteNonQuery();
@@ -360,7 +368,7 @@ namespace AgroServicios.Modelo.DAO
                     }
                 }
 
-                string query2 = "UPDATE Productos SET Nombre = @nombre, Precio = @price, Stock = @stock, idMarca = @marc ,Descripcion = @description, Codigo = @code WHERE idProducto = @idProduc";
+                string query2 = "UPDATE Productos SET Nombre = @nombre, Precio = @price, Stock = @stock, idMarca = @marc ,idEstante = @shelf, Descripcion = @description, Codigo = @code WHERE idProducto = @idProduc";
                 SqlCommand cmd2 = new SqlCommand(query2, Command.Connection);
 
                 cmd2.Parameters.AddWithValue("@idProduc", IdProducto);
@@ -370,6 +378,7 @@ namespace AgroServicios.Modelo.DAO
                 cmd2.Parameters.AddWithValue("@description", Descripcion1);
                 cmd2.Parameters.AddWithValue("@code", Codigo1);
                 cmd2.Parameters.AddWithValue("@marc", IdMarca);
+                cmd2.Parameters.AddWithValue("@shelf", IdEstante);
                 respuesta = cmd2.ExecuteNonQuery();
 
                 return respuesta;

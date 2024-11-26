@@ -22,16 +22,18 @@ namespace AgroServicios.Controlador.Productos1
         VistaUbdateProducto Objupdate;
         private int accion;
         private string marca;
+        private string estante;
 
-        public ControladorUbdateProducto1(VistaUbdateProducto Vista, int accion, int id, int idMarca, string Name, string price, string stock, string description, string marc, string code, byte[] imagen)
+        public ControladorUbdateProducto1(VistaUbdateProducto Vista, int accion, int id, int idMarca, int idShelf,string Name, string price, string stock, string description, string marc, string code, byte[] imagen, string shelf)
         {
             Objupdate = Vista;
             this.accion = accion;
             //Objupdate.Load += new EventHandler(InitialCharge);
             verificarAccion();
-            ChargeValues(id, idMarca, Name, price, stock, description, marc, code, imagen);
+            ChargeValues(id, idMarca, idShelf, Name, price, stock, description, marc, code, imagen, shelf);
 
             Objupdate.Load += new EventHandler(InitialCharge);
+            Objupdate.Load += new EventHandler(InitialChargev2);
             Objupdate.btnUbdateProducto.Click += new EventHandler(ActualizarRegistro);
             Objupdate.btnUbdateImagen.Click += AgregarImagen;
         }
@@ -104,10 +106,27 @@ namespace AgroServicios.Controlador.Productos1
             }
         }
 
+        public void InitialChargev2(object sender, EventArgs e)
+        {
+            DAOProductos1 objestantes = new DAOProductos1();
+            //Declarando nuevo DataSet para que obtenga los datos del metodo LlenarCombo
+            DataSet ds = objestantes.LlenarCombov2();
+            //Llenar combobox tbRole
+            Objupdate.DropUbdateEstante.DataSource = ds.Tables["Estantes"];
+            Objupdate.DropUbdateEstante.ValueMember = "idEstante";
+            Objupdate.DropUbdateEstante.DisplayMember = "NombreEstante";
+            //La condición sirve para que al actualizar un registro, el valor del registro aparezca seleccionado.
+            if (accion == 2)
+            {
+                Objupdate.DropUbdateMarca.Text = estante;
+            }
+        }
+
         private void ActualizarRegistro(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(Objupdate.txtUbdateProducto.Text) ||
                string.IsNullOrWhiteSpace(Objupdate.DropUbdateMarca.Text) ||
+                string.IsNullOrWhiteSpace(Objupdate.DropUbdateEstante.Text) ||
                string.IsNullOrWhiteSpace(Objupdate.txtUbdatePrecio.Text) ||
                string.IsNullOrWhiteSpace(Objupdate.txtUbdateCantidad.Text) ||
                string.IsNullOrWhiteSpace(Objupdate.txtUbdateDescripcion.Text) ||
@@ -238,6 +257,7 @@ namespace AgroServicios.Controlador.Productos1
             DaoUpdate.Img = imageBytes;
             DaoUpdate.IdProducto = int.Parse(Objupdate.txtid.Text.Trim());
             DaoUpdate.IdMarca = int.Parse(Objupdate.DropUbdateMarca.SelectedValue.ToString());
+            DaoUpdate.IdEstante = int.Parse(Objupdate.DropUbdateEstante.SelectedValue.ToString());
             DaoUpdate.Nombre1 = Objupdate.txtUbdateProducto.Text.Trim();
             DaoUpdate.Codigo1 = Objupdate.txtUbdateCodigo.Text.Trim();
             DaoUpdate.Stock1 = Objupdate.txtUbdateCantidad.Text.Trim();
@@ -349,16 +369,18 @@ namespace AgroServicios.Controlador.Productos1
                 Objupdate.txtUbdateDescripcion.Enabled = false;
             }
         }
-        public void ChargeValues(int id, int idMarca, string Name, string price, string stock, string description, string marc, string code, byte[] imagen)
+        public void ChargeValues(int id, int idMarca, int idShelf,string Name, string price, string stock, string description, string marc, string code, byte[] imagen, string shelf)
         {
             Objupdate.txtid.Text = id.ToString();
             Objupdate.txtIdMarca.Text = idMarca.ToString();
+            Objupdate.txtidShelf.Text = idShelf.ToString();
             Objupdate.txtUbdateProducto.Text = Name;
             Objupdate.txtUbdateCantidad.Text = price;
             Objupdate.txtUbdatePrecio.Text = stock;
             Objupdate.txtUbdateDescripcion.Text = description;
             Objupdate.txtUbdateCodigo.Text = code;
             Objupdate.DropUbdateMarca.Text = marc;
+            Objupdate.DropUbdateMarca.Text = shelf;
             using (MemoryStream ms = new MemoryStream(imagen))
             {
                 Objupdate.ptbImagenProducto.Image = Image.FromStream(ms);

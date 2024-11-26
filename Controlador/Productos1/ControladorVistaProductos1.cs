@@ -110,10 +110,11 @@ namespace AgroServicios.Controlador.Productos1
                 dgv.Columns["Nombre"].HeaderText = "Product name";
                 dgv.Columns["idMarca"].HeaderText = "Product brand";
                 dgv.Columns["Precio"].HeaderText = "Product price";
-                dgv.Columns["Stock"].HeaderText = "Quantity of product in the system";
+                dgv.Columns["Stock"].HeaderText = "Quantity";
                 dgv.Columns["Descripcion"].HeaderText = "Product Description";
                 dgv.Columns["Codigo"].HeaderText = "Product code";
                 dgv.Columns["imgNombre"].HeaderText = "Product image";
+                dgv.Columns["idEstante"].HeaderText = "N° Shelf";
             }
             else
             {
@@ -121,10 +122,11 @@ namespace AgroServicios.Controlador.Productos1
                 dgv.Columns["Nombre"].HeaderText = "Nombre del producto";
                 dgv.Columns["idMarca"].HeaderText = "Marca del producto";
                 dgv.Columns["Precio"].HeaderText = "Precio del producto";
-                dgv.Columns["Stock"].HeaderText = "Cantidad del producto en el sistema";
+                dgv.Columns["Stock"].HeaderText = "Cantidad";
                 dgv.Columns["Descripcion"].HeaderText = "Descripción del producto";
                 dgv.Columns["Codigo"].HeaderText = "Codigo del producto";
                 dgv.Columns["imgNombre"].HeaderText = "Imagen del producto";
+                dgv.Columns["idEstante"].HeaderText = "N° Estante";
             }
         }
         private void NuevoProducto(object sender, EventArgs e)
@@ -157,21 +159,23 @@ namespace AgroServicios.Controlador.Productos1
             }
 
             int pos = ObjProductos.GriewViewProductos.CurrentRow.Index;
-            int id, idMarc;
-            string Name, code, stock, price, description, marc;
+            int id, idMarc, idShelf;
+            string Name, code, stock, price, description, marc, shelf;
             byte[] imagen;
 
             id = int.Parse(ObjProductos.GriewViewProductos[0, pos].Value.ToString());
             idMarc = int.Parse(ObjProductos.GriewViewProductos[2, pos].Value.ToString());
+            marc = ObjProductos.GriewViewProductos[2, pos].Value.ToString();
             Name = ObjProductos.GriewViewProductos[1, pos].Value.ToString();
             code = ObjProductos.GriewViewProductos[6, pos].Value.ToString();
             stock = ObjProductos.GriewViewProductos[4, pos].Value.ToString();
             price = ObjProductos.GriewViewProductos[3, pos].Value.ToString();
             description = ObjProductos.GriewViewProductos[5, pos].Value.ToString();
             imagen = (byte[])ObjProductos.GriewViewProductos[7, pos].Value;
-            marc = ObjProductos.GriewViewProductos[2, pos].Value.ToString();
+            idShelf = int.Parse(ObjProductos.GriewViewProductos[8, pos].Value.ToString());
+            shelf = ObjProductos.GriewViewProductos[8, pos].Value.ToString();
 
-            VistaUbdateProducto vistaUpdate = new VistaUbdateProducto(2, id, idMarc, Name, stock, price, description, marc, code, imagen);
+            VistaUbdateProducto vistaUpdate = new VistaUbdateProducto(2, id, idMarc, idShelf, Name, stock, price, description, marc, code, imagen, shelf);
             vistaUpdate.ShowDialog();
             RefrescarData();
         }
@@ -191,21 +195,23 @@ namespace AgroServicios.Controlador.Productos1
             }
 
             int pos = ObjProductos.GriewViewProductos.CurrentRow.Index;
-            int id, idMarc;
-            string Name, code, stock, price, description, marc;
+            int id, idMarc, idShelf;
+            string Name, code, stock, price, description, marc, shelf;
             byte[] imagen;
 
             id = int.Parse(ObjProductos.GriewViewProductos[0, pos].Value.ToString());
             idMarc = int.Parse(ObjProductos.GriewViewProductos[2, pos].Value.ToString());
+            marc = ObjProductos.GriewViewProductos[2, pos].Value.ToString();
             Name = ObjProductos.GriewViewProductos[1, pos].Value.ToString();
             code = ObjProductos.GriewViewProductos[6, pos].Value.ToString();
             stock = ObjProductos.GriewViewProductos[4, pos].Value.ToString();
             price = ObjProductos.GriewViewProductos[3, pos].Value.ToString();
             description = ObjProductos.GriewViewProductos[5, pos].Value.ToString();
             imagen = (byte[])ObjProductos.GriewViewProductos[7, pos].Value;
-            marc = ObjProductos.GriewViewProductos[2, pos].Value.ToString();
+            idShelf = int.Parse(ObjProductos.GriewViewProductos[8, pos].Value.ToString());
+            shelf = ObjProductos.GriewViewProductos[8, pos].Value.ToString();
 
-            VistaUbdateProducto vistaUpdate = new VistaUbdateProducto(1, id, idMarc, Name, stock, price, description, marc, code, imagen);
+            VistaUbdateProducto vistaUpdate = new VistaUbdateProducto(1, id, idMarc, idShelf,Name, stock, price, description, marc, code, imagen, shelf);
             vistaUpdate.ShowDialog();
             RefrescarData();
         }
