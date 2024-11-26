@@ -386,6 +386,24 @@
     <Compile Include="Vista\Login\VistaValidacionBase.Designer.cs">
       <DependentUpon>VistaValidacionBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\Mapa\VistaMapa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Mapa\VistaMapa.Designer.cs">
+      <DependentUpon>VistaMapa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Mapa\VistaMapaPrimeraZona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Mapa\VistaMapaPrimeraZona.Designer.cs">
+      <DependentUpon>VistaMapaPrimeraZona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Mapa\VistaMapaSegundaZona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Mapa\VistaMapaSegundaZona.Designer.cs">
+      <DependentUpon>VistaMapaSegundaZona.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\MenuPrincipal\VistaAjustes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -451,6 +469,12 @@
     </Compile>
     <Compile Include="Vista\Notificación\MessagePersonal.Designer.cs">
       <DependentUpon>MessagePersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Pedidos\VistaPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Pedidos\VistaPedidos.Designer.cs">
+      <DependentUpon>VistaPedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\Productos1\VistaCreateMarca.cs">
       <SubType>Form</SubType>
@@ -608,6 +632,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Login\VistaValidacionBase.resx">
       <DependentUpon>VistaValidacionBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Mapa\VistaMapa.resx">
+      <DependentUpon>VistaMapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Mapa\VistaMapaPrimeraZona.resx">
+      <DependentUpon>VistaMapaPrimeraZona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\MenuPrincipal\VistaAjustes.resx">
       <DependentUpon>VistaAjustes.cs</DependentUpon>
@@ -983,6 +1013,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sonido caja registradora.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconoMapa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconoPedido-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

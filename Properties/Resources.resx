@@ -124,6 +124,9 @@
   <data name="Report" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="IconoMapa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoMapa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -135,6 +138,9 @@
   </data>
   <data name="Rectangle 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rectangle 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Manual_de_Usuario_1_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Manual de Usuario 1.3.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Logo casa" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo casa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,8 +184,8 @@
   <data name="calendario1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calendario1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo Candado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo Candado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Factura_Plantilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Factura_Plantilla.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="Logo de reporte" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo de reporte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,17 +199,20 @@
   <data name="Report2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Report2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Logo Candado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo Candado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Imagen de WhatsApp 2024-05-25 a las 21.38 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Imagen de WhatsApp 2024-05-25 a las 21.38 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="borrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\borrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bloqueo-de-rotacion (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bloqueo-de-rotacion (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tdesign_money" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tdesign_money.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Manual_Técnico_de_SAIA_1_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Manual Técnico de SAIA 1.6.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Signo de interrogacion1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Signo de interrogacion1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,9 +235,6 @@
   <data name="Vector" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo base2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo base2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="carro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\carro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -238,8 +244,14 @@
   <data name="Plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Signo_de_interrogacion-removebg-preview1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Signo_de_interrogacion-removebg-preview1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Ceo-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ceo-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MensajeWarning" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MensajeWarning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Vector (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Vector (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,6 +265,9 @@
   <data name="Report (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Report (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Sonido_caja_registradora" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sonido caja registradora.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Report (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Report (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -262,20 +277,23 @@
   <data name="Casa logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Casa logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MensajeWarning" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MensajeWarning.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="image 49" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image 49.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="borrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\borrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Casa Logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Casa Logo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Factura_Plantilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Factura_Plantilla.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
   <data name="Audio_Moneda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Audio Moneda.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Logo telefono" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo telefono.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IconoFlecha_flipped" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoFlecha_flipped.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Signo de interrogacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Signo de interrogacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,8 +313,8 @@
   <data name="Imagen_de_WhatsApp_2024-07-08_a_las_17.271" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Imagen_de_WhatsApp_2024-07-08_a_las_17.27.06_487df51c-removebg-preview1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Signo_de_interrogacion-removebg-preview1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Signo_de_interrogacion-removebg-preview1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Logo base2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo base2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Signo de interrogacion 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Signo de interrogacion 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,9 +337,6 @@
   <data name="hugeicons_shopping-basket-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hugeicons_shopping-basket-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image 49" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image 49.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="actualizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\actualizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -340,16 +355,7 @@
   <data name="Installing Updates" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Installing Updates.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconoFlecha_flipped" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoFlecha_flipped.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sonido_caja_registradora" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sonido caja registradora.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Manual_de_Usuario_1_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Manual de Usuario 1.3.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Manual_Técnico_de_SAIA_1_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Manual Técnico de SAIA 1.6.pdf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="IconoPedido-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoPedido-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

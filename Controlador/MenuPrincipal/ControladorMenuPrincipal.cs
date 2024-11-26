@@ -2,6 +2,8 @@
 using AgroServicios.Vista.Cuentas;
 using AgroServicios.Vista.Estadisticas;
 using AgroServicios.Vista.Login;
+using AgroServicios.Vista.Mapa;
+using AgroServicios.Vista.Pedidos;
 using AgroServicios.Vista.MenuPrincipal;
 using AgroServicios.Vista.Reportes.ReporteProductos;
 using System;
@@ -26,22 +28,26 @@ namespace AgroServicios.Controlador.MenuPrincipal
         {
             ObjMenu = Menu;
             ObjMenu.Load += LoadUser;
+            //Eventos de panel controlador, osea las voladitas que aparecen arriba en el menu principal
+            ObjMenu.btnMapa.Click += new EventHandler(AbrirMapa);
+            ObjMenu.btnPedidos.Click += new EventHandler(AbrirPedidos);
             ObjMenu.btnStats.Click += new EventHandler(OpenStats);
             ObjMenu.btnInicio.Click += new EventHandler(OpenInicio);
-            ObjMenu.btnExit.Click += new EventHandler(CerrarSesion);
-            ObjMenu.btnAccounts.Click += new EventHandler(OpenCuentas);
             ObjMenu.btnShop.Click += new EventHandler(OpenCarrito);
-            ObjMenu.btnprin2.Click += new EventHandler(OpenShop);
-            ObjMenu.btnVentas.Click += new EventHandler(OpenVentas);
+            ObjMenu.btnAccounts.Click += new EventHandler(OpenCuentas);
+            ObjMenu.btnCerrar.Click += new EventHandler(CerrarPrograma);
+            //Eventos de botones de menu principal
             ObjMenu.btnFichaProductos.Click += new EventHandler(OpenFichaProductos);
             ObjMenu.btnCierreCaja.Click += new EventHandler(AbrirTablaCierre);
-            ObjMenu.btnCerrar.Click += new EventHandler(CerrarPrograma);
+            ObjMenu.btnprin2.Click += new EventHandler(OpenShop);
+            ObjMenu.btnVentas.Click += new EventHandler(OpenVentas);
+            //Eventos de ajustes de menu principal
+            ObjMenu.btnExit.Click += new EventHandler(CerrarSesion);
         }
         private void CerrarPrograma(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void AbrirTablaCierre(object sender, EventArgs e) 
         {
             VistaCerrarCaja vistaCerrarCaja = new VistaCerrarCaja();
@@ -74,18 +80,22 @@ namespace AgroServicios.Controlador.MenuPrincipal
         {
             AbrirPanel<VistaProductos>();
         }
- 
         private void OpenCuentas(object sender, EventArgs e)
         {
             AbrirPanel<VistaCuentas>();
         }
-
         private void OpenStats(object sender, EventArgs e)
         {
             AbrirPanel<VistaStats>();
         }
-
-    
+        private void AbrirMapa(object sender, EventArgs e)
+        {
+            AbrirPanel<VistaMapa>();
+        }
+        private void AbrirPedidos(object sender, EventArgs e)
+        {
+            AbrirPanel<VistaPedidos>();
+        }
         private void CerrarSesion(object sender, EventArgs e)
         {
             if (ControladorIdioma.idioma == 1)
