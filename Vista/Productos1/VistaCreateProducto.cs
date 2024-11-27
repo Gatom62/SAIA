@@ -49,6 +49,8 @@ namespace AgroServicios.Vista.Productos1
                 txtNombreProducto.BorderColorActive = Color.FromArgb(211, 41, 15);
                 txtCodigo.BorderColorHover = Color.FromArgb(211, 41, 15);
                 txtCodigo.BorderColorActive = Color.FromArgb(211, 41, 15);
+                txtCodigoBarra.BorderColorHover = Color.FromArgb(211, 41, 15);
+                txtCodigoBarra.BorderColorActive = Color.FromArgb(211, 41, 15);
                 txtCantidad.BorderColorHover = Color.FromArgb(211, 41, 15);
                 txtCantidad.BorderColorActive = Color.FromArgb(211, 41, 15);
                 txtPrecio.BorderColorHover = Color.FromArgb(211, 41, 15);
@@ -81,6 +83,15 @@ namespace AgroServicios.Vista.Productos1
             {
                 // Evitar la acción de copiar, pegar o cortar
                 e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txtCodigoBarra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char) Keys.Enter) 
+            {
+            
+            
             }
         }
     }

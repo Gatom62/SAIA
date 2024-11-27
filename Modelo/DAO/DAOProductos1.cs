@@ -50,6 +50,44 @@ namespace AgroServicios.Modelo.DAO
                 Command.Connection.Close();
             }
         }
+        public DataSet BuscarProductov2(string valor)
+        {
+            try
+            {
+                // Accedemos a la conexión que ya se tiene
+                Command.Connection = getConnection();
+
+                // Instrucción que se hará hacia la base de datos
+                string query = $"SELECT * FROM Productos WHERE CodigoBarra LIKE '%{valor}%'";
+
+                // Comando sql en el cual se pasa la instrucción y la conexión
+                SqlCommand cmd = new SqlCommand(query, Command.Connection);
+
+                // Se utiliza un adaptador sql para rellenar el dataset
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+                // Se crea un objeto Dataset que es donde se devolverán los resultados
+                DataSet ds = new DataSet();
+
+                // Rellenamos con el Adaptador el DataSet diciéndole de qué tabla provienen los datos
+                adp.Fill(ds, "Productos"); // Nombre correcto de la tabla
+
+                // Devolvemos el Dataset
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                // Retornamos null si existiera algún error durante la ejecución
+                Console.WriteLine("Error: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                // Independientemente se haga o no el proceso cerramos la conexión
+                Command.Connection.Close();
+            }
+        }
+
         public DataSet ObtenerProductos()
         {
             try
@@ -238,7 +276,7 @@ namespace AgroServicios.Modelo.DAO
                 //**
                 //Se crea el query que indica la acción que el sistema desea realizar con la base de datos
                 //el query posee parametros para evitar algún tipo de ataque como SQL Injection
-                string query2 = "INSERT INTO Productos(Nombre, idMarca, Precio, Stock, Descripcion, Codigo, imgNombre, idEstante) VALUES (@name, @idbrand, @price, @stock, @description, @code, @imgname, @idshelf)";
+                string query2 = "INSERT INTO Productos(Nombre, idMarca, Precio, Stock, Descripcion, Codigo, imgNombre, idEstante, CodigoBarra) VALUES (@name, @idbrand, @price, @stock, @description, @code, @imgname, @idshelf, @barcode)";
                 //Se crea un comando de tipo sql al cual se le pasa el query y la conexión, esto para que el sistema sepa que hacer y donde hacerlo.
                 SqlCommand cmd2 = new SqlCommand(query2, Command.Connection);
                 //Se le da un valor a los parametros contenidos en el query, es importante mencionar que lo que esta entre comillas es el nombre del parametro y lo que esta después de la coma es el valor que se le asignará al parametro, estos valores vienen del DTO respectivo.
@@ -250,6 +288,7 @@ namespace AgroServicios.Modelo.DAO
                 cmd2.Parameters.AddWithValue("code", Codigo1);
                 cmd2.Parameters.AddWithValue("imgname", Img);
                 cmd2.Parameters.AddWithValue("idshelf", IdEstante);
+                cmd2.Parameters.AddWithValue("barcode", CodigoBarrav21);
                 //Se ejecuta el comando ya con todos los valores de sus parametros.
                 //ExecuteNonQuery indicará cuantos filas fueron afectadas, es decir, cuantas filas de datos se ingresaron, por lo general devolvera 1 porque se hace una inserción a la vez.
                 int respuesta = cmd2.ExecuteNonQuery();
@@ -368,7 +407,7 @@ namespace AgroServicios.Modelo.DAO
                     }
                 }
 
-                string query2 = "UPDATE Productos SET Nombre = @nombre, Precio = @price, Stock = @stock, idMarca = @marc ,idEstante = @shelf, Descripcion = @description, Codigo = @code WHERE idProducto = @idProduc";
+                string query2 = "UPDATE Productos SET Nombre = @nombre, Precio = @price, Stock = @stock, idMarca = @marc ,idEstante = @shelf, Descripcion = @description, Codigo = @code, CodigoBarra = @barcode WHERE idProducto = @idProduc";
                 SqlCommand cmd2 = new SqlCommand(query2, Command.Connection);
 
                 cmd2.Parameters.AddWithValue("@idProduc", IdProducto);
@@ -379,6 +418,7 @@ namespace AgroServicios.Modelo.DAO
                 cmd2.Parameters.AddWithValue("@code", Codigo1);
                 cmd2.Parameters.AddWithValue("@marc", IdMarca);
                 cmd2.Parameters.AddWithValue("@shelf", IdEstante);
+                cmd2.Parameters.AddWithValue("@barcode", CodigoBarrav21);
                 respuesta = cmd2.ExecuteNonQuery();
 
                 return respuesta;

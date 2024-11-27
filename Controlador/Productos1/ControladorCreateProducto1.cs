@@ -129,6 +129,7 @@ namespace AgroServicios.Controlador.Productos1
                 string.IsNullOrWhiteSpace(ObjCreateProducto1.txtCantidad.Text) ||
                 string.IsNullOrWhiteSpace(ObjCreateProducto1.txtPrecio.Text) ||
                 string.IsNullOrWhiteSpace(ObjCreateProducto1.txtDescripcion.Text) ||
+                string.IsNullOrWhiteSpace(ObjCreateProducto1.txtCodigoBarra.Text) ||
                 ObjCreateProducto1.DropMarca.SelectedValue == null ||
                 ObjCreateProducto1.DropEstante.SelectedValue == null ||
                 ObjCreateProducto1.ptbImagenProducto.Image == null)
@@ -160,34 +161,35 @@ namespace AgroServicios.Controlador.Productos1
 
             // Validar que la cantidad del producto contenga solo números enteros
             if (!ValidarNumero(ObjCreateProducto1.txtCodigo.Text) ||
+                !ValidarNumero(ObjCreateProducto1.txtCodigoBarra.Text) ||
                 !ValidarNumero(ObjCreateProducto1.txtCantidad.Text))
             {
                 if (ControladorIdioma.idioma == 1)
                 {
-                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Decimal numbers or letters in the code or quantity", Properties.Resources.MensajeWarning);
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Decimal numbers or letters in both codes or in the quantity", Properties.Resources.MensajeWarning);
                 }
                 else
                 {
-                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Numeros decimales o letras en el codigo o en la cantidad", Properties.Resources.MensajeWarning);
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Numeros decimales o letras en los dos codigos o en la cantidad", Properties.Resources.MensajeWarning);
                 }
                 return;
             }
 
-            //Validamos que el codigo no exeda la cantidad de 12 numeros.
-            if (!CantidadCodigo(ObjCreateProducto1.txtCodigo.Text))
-            {
-                if (ControladorIdioma.idioma == 1)
-                {
-                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "There are more than 12 numbers in the code", Properties.Resources.MensajeWarning);
-                }
-                else
-                {
-                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay más de 12 numeros en el código", Properties.Resources.MensajeWarning);
-                }
-                return;
-            }
+            ////Validamos que el codigo no exeda la cantidad de 12 numeros.
+            //if (!CantidadCodigo(ObjCreateProducto1.txtCodigo.Text))
+            //{
+            //    if (ControladorIdioma.idioma == 1)
+            //    {
+            //        MessageBoxP(Color.Yellow, Color.Orange, "Error", "There are more than 12 numbers in the code", Properties.Resources.MensajeWarning);
+            //    }
+            //    else
+            //    {
+            //        MessageBoxP(Color.Yellow, Color.Orange, "Error", "Hay más de 12 numeros en el código", Properties.Resources.MensajeWarning);
+            //    }
+            //    return;
+            //}
 
-            //Validamos que el codigo no exeda la cantidad de 12 numeros.
+            ////Validamos que el codigo no exeda la cantidad de 12 numeros.
             if (!CantidadStock(ObjCreateProducto1.txtCantidad.Text))
             {
                 if (ControladorIdioma.idioma == 1)
@@ -246,6 +248,7 @@ namespace AgroServicios.Controlador.Productos1
             DaoInsert.Img = imageBytes;
             DaoInsert.Nombre1 = ObjCreateProducto1.txtNombreProducto.Text.Trim();
             DaoInsert.Codigo1 = ObjCreateProducto1.txtCodigo.Text.Trim();
+            DaoInsert.CodigoBarrav21 = ObjCreateProducto1.txtCodigoBarra.Text.Trim();
             DaoInsert.Stock1 = ObjCreateProducto1.txtCantidad.Text.Trim();
             DaoInsert.Precio1 = ObjCreateProducto1.txtPrecio.Text.Trim();
             DaoInsert.Descripcion1 = ObjCreateProducto1.txtDescripcion.Text.Trim();
@@ -278,7 +281,7 @@ namespace AgroServicios.Controlador.Productos1
                 }
                 else
                 {
-                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el producto no se está duplicando", Properties.Resources.ErrorIcono);
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "No se puedo guardar el producto, verifique si el producto no se está duplicando", Properties.Resources.ErrorIcono);
                     VistaLogin backForm = new VistaLogin();
                 }
             }
@@ -318,8 +321,8 @@ namespace AgroServicios.Controlador.Productos1
                 // Intentar convertir la cantidad a un número entero
                 if (int.TryParse(numero, out int cantidadNumero))
                 {
-                    // Validar que la cantidad no exceda 500
-                    return cantidadNumero <= 500;
+                    // Validar que la cantidad no exceda 1000
+                    return cantidadNumero <= 10000;
                 }
 
                 // Si no se puede convertir a entero, retornar false

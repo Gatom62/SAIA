@@ -996,6 +996,12 @@
   <ItemGroup>
     <None Include="Resources\IconoPedido-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño_sin_título__1_-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

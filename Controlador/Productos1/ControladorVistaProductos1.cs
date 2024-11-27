@@ -32,7 +32,8 @@ namespace AgroServicios.Controlador.Productos1
             ObjProductos.cmsElimarProducto.Click += new EventHandler(EliminarProducto);
             ObjProductos.cmsEditarProducto.Click += new EventHandler(EditarProducto);
             ObjProductos.cmsInformacion.Click += new EventHandler(InformacionProducto);
-            objProductos.txtBuscarP.KeyPress += new KeyPressEventHandler(Search);
+            ObjProductos.txtBuscarP.KeyPress += new KeyPressEventHandler(Search);
+            ObjProductos.txtBuscarCodeBar.KeyPress += new KeyPressEventHandler(Searchv2);
         }
         void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
         {
@@ -69,6 +70,16 @@ namespace AgroServicios.Controlador.Productos1
                 e.Handled = true;
             }
         }
+
+        private void Searchv2(object sender, KeyPressEventArgs e)
+        {
+            // Verifica que la tecla presionada sea Enter antes de buscar
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                BuscarProv2();
+                e.Handled = true;
+            }
+        }
         private void VolverForm(object sender, EventArgs e)
         {
             // Cierra la vista actual
@@ -76,9 +87,17 @@ namespace AgroServicios.Controlador.Productos1
         }
         void BuscarPro()
         {
-           DAOProductos1 dao = new DAOProductos1();
-            //Declarando nuevo DataSet para que obtenga los datos del metodo ObtenerPersonas
+            DAOProductos1 dao = new DAOProductos1();
+            //Declarando nuevo DataSet para que obtenga los datos del metodo BuscarProductos
             DataSet ds = dao.BuscarProducto(ObjProductos.txtBuscarP.Text.Trim());
+            //Llenar DataGridView
+            ObjProductos.GriewViewProductos.DataSource = ds.Tables["Productos"];
+        }
+        void BuscarProv2()
+        {
+            DAOProductos1 dao = new DAOProductos1();
+            //Declarando nuevo DataSet para que obtenga los datos del metodo BuscarProductos
+            DataSet ds = dao.BuscarProductov2(ObjProductos.txtBuscarCodeBar.Text.Trim());
             //Llenar DataGridView
             ObjProductos.GriewViewProductos.DataSource = ds.Tables["Productos"];
         }
@@ -160,7 +179,7 @@ namespace AgroServicios.Controlador.Productos1
 
             int pos = ObjProductos.GriewViewProductos.CurrentRow.Index;
             int id, idMarc, idShelf;
-            string Name, code, stock, price, description, marc, shelf;
+            string Name, code, stock, price, description, marc, shelf, barcode;
             byte[] imagen;
 
             id = int.Parse(ObjProductos.GriewViewProductos[0, pos].Value.ToString());
@@ -174,8 +193,8 @@ namespace AgroServicios.Controlador.Productos1
             imagen = (byte[])ObjProductos.GriewViewProductos[7, pos].Value;
             idShelf = int.Parse(ObjProductos.GriewViewProductos[8, pos].Value.ToString());
             shelf = ObjProductos.GriewViewProductos[8, pos].Value.ToString();
-
-            VistaUbdateProducto vistaUpdate = new VistaUbdateProducto(2, id, idMarc, idShelf, Name, stock, price, description, marc, code, imagen, shelf);
+            barcode = ObjProductos.GriewViewProductos[9, pos].Value.ToString();
+            VistaUbdateProducto vistaUpdate = new VistaUbdateProducto(2, id, idMarc, idShelf, Name, stock, price, description, marc, code, imagen, shelf, barcode);
             vistaUpdate.ShowDialog();
             RefrescarData();
         }
@@ -196,7 +215,7 @@ namespace AgroServicios.Controlador.Productos1
 
             int pos = ObjProductos.GriewViewProductos.CurrentRow.Index;
             int id, idMarc, idShelf;
-            string Name, code, stock, price, description, marc, shelf;
+            string Name, code, stock, price, description, marc, shelf, barcode;
             byte[] imagen;
 
             id = int.Parse(ObjProductos.GriewViewProductos[0, pos].Value.ToString());
@@ -210,8 +229,9 @@ namespace AgroServicios.Controlador.Productos1
             imagen = (byte[])ObjProductos.GriewViewProductos[7, pos].Value;
             idShelf = int.Parse(ObjProductos.GriewViewProductos[8, pos].Value.ToString());
             shelf = ObjProductos.GriewViewProductos[8, pos].Value.ToString();
+            barcode = ObjProductos.GriewViewProductos[9, pos].Value.ToString();
 
-            VistaUbdateProducto vistaUpdate = new VistaUbdateProducto(1, id, idMarc, idShelf,Name, stock, price, description, marc, code, imagen, shelf);
+            VistaUbdateProducto vistaUpdate = new VistaUbdateProducto(1, id, idMarc, idShelf,Name, stock, price, description, marc, code, imagen, shelf, barcode);
             vistaUpdate.ShowDialog();
             RefrescarData();
         }

@@ -17,10 +17,10 @@ namespace AgroServicios.Vista.Productos1
 {
     public partial class VistaUbdateProducto : Form
     {
-        public VistaUbdateProducto(int accion, int id, int idMarc, int idShelf,string Name, string price, string stock, string description, string marc, string code, byte[] imagen, string shelf)
+        public VistaUbdateProducto(int accion, int id, int idMarc, int idShelf,string Name, string price, string stock, string description, string marc, string code, byte[] imagen, string shelf, string barcode)
         {
             InitializeComponent();
-            ControladorUbdateProducto1 control = new ControladorUbdateProducto1(this, accion, id, idMarc, idShelf,Name, price, stock, description, marc, code, imagen, shelf);
+            ControladorUbdateProducto1 control = new ControladorUbdateProducto1(this, accion, id, idMarc, idShelf,Name, price, stock, description, marc, code, imagen, shelf, barcode);
         }
         private void VistaUbdateProducto_Load(object sender, EventArgs e)
         {

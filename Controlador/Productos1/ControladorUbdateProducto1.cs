@@ -24,13 +24,13 @@ namespace AgroServicios.Controlador.Productos1
         private string marca;
         private string estante;
 
-        public ControladorUbdateProducto1(VistaUbdateProducto Vista, int accion, int id, int idMarca, int idShelf,string Name, string price, string stock, string description, string marc, string code, byte[] imagen, string shelf)
+        public ControladorUbdateProducto1(VistaUbdateProducto Vista, int accion, int id, int idMarca, int idShelf,string Name, string price, string stock, string description, string marc, string code, byte[] imagen, string shelf, string barcode)
         {
             Objupdate = Vista;
             this.accion = accion;
             //Objupdate.Load += new EventHandler(InitialCharge);
             verificarAccion();
-            ChargeValues(id, idMarca, idShelf, Name, price, stock, description, marc, code, imagen, shelf);
+            ChargeValues(id, idMarca, idShelf, Name, price, stock, description, marc, code, imagen, shelf, barcode);
 
             Objupdate.Load += new EventHandler(InitialCharge);
             Objupdate.Load += new EventHandler(InitialChargev2);
@@ -126,10 +126,11 @@ namespace AgroServicios.Controlador.Productos1
         {
             if (string.IsNullOrWhiteSpace(Objupdate.txtUbdateProducto.Text) ||
                string.IsNullOrWhiteSpace(Objupdate.DropUbdateMarca.Text) ||
-                string.IsNullOrWhiteSpace(Objupdate.DropUbdateEstante.Text) ||
+               string.IsNullOrWhiteSpace(Objupdate.DropUbdateEstante.Text) ||
                string.IsNullOrWhiteSpace(Objupdate.txtUbdatePrecio.Text) ||
                string.IsNullOrWhiteSpace(Objupdate.txtUbdateCantidad.Text) ||
                string.IsNullOrWhiteSpace(Objupdate.txtUbdateDescripcion.Text) ||
+               string.IsNullOrWhiteSpace(Objupdate.txtUbdateCodigoBarra.Text) ||
                string.IsNullOrWhiteSpace(Objupdate.txtUbdateCodigo.Text))
             {
                 if (ControladorIdioma.idioma == 1)
@@ -159,15 +160,16 @@ namespace AgroServicios.Controlador.Productos1
 
             // Validar que la cantidad del producto contenga solo números enteros
             if (!ValidarNumero(Objupdate.txtUbdateCodigo.Text) ||
+                !ValidarNumero(Objupdate.txtUbdateCodigoBarra.Text) ||
                 !ValidarNumero(Objupdate.txtUbdateCantidad.Text))
             {
                 if (ControladorIdioma.idioma == 1)
                 {
-                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Decimal numbers or letters in the code or quantity", Properties.Resources.MensajeWarning);
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Decimal numbers or letters in both codes or in the quantity", Properties.Resources.MensajeWarning);
                 }
                 else
                 {
-                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Numeros decimales o letras en el codigo o en la cantidad", Properties.Resources.MensajeWarning);
+                    MessageBoxP(Color.Yellow, Color.Orange, "Error", "Numeros decimales o letras en los dos codigos o en la cantidad", Properties.Resources.MensajeWarning);
                 }
                 return;
             }
@@ -260,6 +262,7 @@ namespace AgroServicios.Controlador.Productos1
             DaoUpdate.IdEstante = int.Parse(Objupdate.DropUbdateEstante.SelectedValue.ToString());
             DaoUpdate.Nombre1 = Objupdate.txtUbdateProducto.Text.Trim();
             DaoUpdate.Codigo1 = Objupdate.txtUbdateCodigo.Text.Trim();
+            DaoUpdate.CodigoBarrav21 = Objupdate.txtUbdateCodigoBarra.Text.Trim();
             DaoUpdate.Stock1 = Objupdate.txtUbdateCantidad.Text.Trim();
             DaoUpdate.Precio1 = Objupdate.txtUbdatePrecio.Text.Trim();
             DaoUpdate.Descripcion1 = Objupdate.txtUbdateDescripcion.Text.Trim();
@@ -284,12 +287,12 @@ namespace AgroServicios.Controlador.Productos1
             {
                 if (ControladorIdioma.idioma == 1)
                 {
-                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verify that the product is not being duplicated or associated with another record", Properties.Resources.ErrorIcono);
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Error updating record, please verify that the product is not duplicated or associated with another record", Properties.Resources.ErrorIcono);
                     VistaLogin backForm = new VistaLogin();
                 }
                 else
                 {
-                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Verifique que el producto no se está duplicando o asociado a otro registro", Properties.Resources.ErrorIcono);
+                    MandarValoresAlerta(Color.Red, Color.DarkRed, "Error", "Error al actualizar el registro, verifique que el producto no se está duplicando o asociado a otro registro", Properties.Resources.ErrorIcono);
                     VistaLogin backForm = new VistaLogin();
                 }
             }
@@ -369,7 +372,7 @@ namespace AgroServicios.Controlador.Productos1
                 Objupdate.txtUbdateDescripcion.Enabled = false;
             }
         }
-        public void ChargeValues(int id, int idMarca, int idShelf,string Name, string price, string stock, string description, string marc, string code, byte[] imagen, string shelf)
+        public void ChargeValues(int id, int idMarca, int idShelf,string Name, string price, string stock, string description, string marc, string code, byte[] imagen, string shelf, string barcode)
         {
             Objupdate.txtid.Text = id.ToString();
             Objupdate.txtIdMarca.Text = idMarca.ToString();
@@ -381,6 +384,7 @@ namespace AgroServicios.Controlador.Productos1
             Objupdate.txtUbdateCodigo.Text = code;
             Objupdate.DropUbdateMarca.Text = marc;
             Objupdate.DropUbdateMarca.Text = shelf;
+            Objupdate.txtUbdateCodigoBarra.Text = barcode;
             using (MemoryStream ms = new MemoryStream(imagen))
             {
                 Objupdate.ptbImagenProducto.Image = Image.FromStream(ms);
