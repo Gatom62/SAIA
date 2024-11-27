@@ -33,7 +33,6 @@ namespace AgroServicios.Controlador.Productos1
             ObjProductos.cmsEditarProducto.Click += new EventHandler(EditarProducto);
             ObjProductos.cmsInformacion.Click += new EventHandler(InformacionProducto);
             ObjProductos.txtBuscarP.KeyPress += new KeyPressEventHandler(Search);
-            ObjProductos.txtBuscarCodeBar.KeyPress += new KeyPressEventHandler(Searchv2);
         }
         void MessageBoxP(Color backcolor, Color color, string title, string text, Image icon)
         {
@@ -71,15 +70,6 @@ namespace AgroServicios.Controlador.Productos1
             }
         }
 
-        private void Searchv2(object sender, KeyPressEventArgs e)
-        {
-            // Verifica que la tecla presionada sea Enter antes de buscar
-            if (e.KeyChar == (char)Keys.Enter)
-            {
-                BuscarProv2();
-                e.Handled = true;
-            }
-        }
         private void VolverForm(object sender, EventArgs e)
         {
             // Cierra la vista actual
@@ -90,14 +80,6 @@ namespace AgroServicios.Controlador.Productos1
             DAOProductos1 dao = new DAOProductos1();
             //Declarando nuevo DataSet para que obtenga los datos del metodo BuscarProductos
             DataSet ds = dao.BuscarProducto(ObjProductos.txtBuscarP.Text.Trim());
-            //Llenar DataGridView
-            ObjProductos.GriewViewProductos.DataSource = ds.Tables["Productos"];
-        }
-        void BuscarProv2()
-        {
-            DAOProductos1 dao = new DAOProductos1();
-            //Declarando nuevo DataSet para que obtenga los datos del metodo BuscarProductos
-            DataSet ds = dao.BuscarProductov2(ObjProductos.txtBuscarCodeBar.Text.Trim());
             //Llenar DataGridView
             ObjProductos.GriewViewProductos.DataSource = ds.Tables["Productos"];
         }
@@ -112,12 +94,13 @@ namespace AgroServicios.Controlador.Productos1
             //Declarando nuevo DataSet para que obtenga los datos del metodo ObtenerProductos
             DataSet ds = dAOProductos1.ObtenerProductos();
             ////Llenar DataGridView
-            ObjProductos.GriewViewProductos.DataSource = ds.Tables["Productos"];
+            ObjProductos.GriewViewProductos.DataSource = ds.Tables["viewProductos"];
 
             //Para ocultar columnas que no creo que sehan nesesarias de ver
             //ObjProductos.GriewViewProductos.Columns["ID del producto"].Visible = false;
             ObjProductos.GriewViewProductos.Columns["imgNombre"].Visible = false;
             ObjProductos.GriewViewProductos.Columns["Descripcion"].Visible = false;
+            ObjProductos.GriewViewProductos.Columns["CodigoBarra"].Visible = false;
             // Traducir encabezados de las columnas
             TraducirEncabezados(ObjProductos.GriewViewProductos);
         }
@@ -127,25 +110,24 @@ namespace AgroServicios.Controlador.Productos1
             {
                 dgv.Columns["idProducto"].HeaderText = "Product Identification";
                 dgv.Columns["Nombre"].HeaderText = "Product name";
-                dgv.Columns["idMarca"].HeaderText = "Product brand";
+                dgv.Columns["Marca"].HeaderText = "Product brand";
                 dgv.Columns["Precio"].HeaderText = "Product price";
                 dgv.Columns["Stock"].HeaderText = "Quantity";
                 dgv.Columns["Descripcion"].HeaderText = "Product Description";
                 dgv.Columns["Codigo"].HeaderText = "Product code";
                 dgv.Columns["imgNombre"].HeaderText = "Product image";
-                dgv.Columns["idEstante"].HeaderText = "N° Shelf";
+                dgv.Columns["Estante n°"].HeaderText = "N° Shelf";
             }
             else
             {
                 dgv.Columns["idProducto"].HeaderText = "ID del producto";
                 dgv.Columns["Nombre"].HeaderText = "Nombre del producto";
-                dgv.Columns["idMarca"].HeaderText = "Marca del producto";
+                dgv.Columns["Marca"].HeaderText = "Marca del producto";
                 dgv.Columns["Precio"].HeaderText = "Precio del producto";
                 dgv.Columns["Stock"].HeaderText = "Cantidad";
                 dgv.Columns["Descripcion"].HeaderText = "Descripción del producto";
                 dgv.Columns["Codigo"].HeaderText = "Codigo del producto";
                 dgv.Columns["imgNombre"].HeaderText = "Imagen del producto";
-                dgv.Columns["idEstante"].HeaderText = "N° Estante";
             }
         }
         private void NuevoProducto(object sender, EventArgs e)

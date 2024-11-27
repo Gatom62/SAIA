@@ -30,15 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VistaProductos));
+            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -51,8 +47,6 @@
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtBuscarCodeBar = new Bunifu.UI.WinForms.BunifuTextBox();
             this.lbProducto = new System.Windows.Forms.Label();
             this.ptbback = new Bunifu.UI.WinForms.BunifuButton.BunifuIconButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -64,7 +58,6 @@
             this.ContextMenuProductos.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GriewViewProductos)).BeginInit();
             this.SuspendLayout();
@@ -133,14 +126,13 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(19)))));
             this.tableLayoutPanel1.ColumnCount = 7;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.22864F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.72126F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.94386F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 277F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 167F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 164F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.01402F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.658878F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.16355F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 181F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.lbProducto, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.ptbback, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 3, 0);
@@ -157,109 +149,13 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1212, 68);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.txtBuscarCodeBar, 0, 1);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(604, 2);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(273, 55);
-            this.tableLayoutPanel3.TabIndex = 1;
-            // 
-            // txtBuscarCodeBar
-            // 
-            this.txtBuscarCodeBar.AcceptsReturn = false;
-            this.txtBuscarCodeBar.AcceptsTab = false;
-            this.txtBuscarCodeBar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBuscarCodeBar.AnimationSpeed = 200;
-            this.txtBuscarCodeBar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtBuscarCodeBar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtBuscarCodeBar.AutoSizeHeight = true;
-            this.txtBuscarCodeBar.BackColor = System.Drawing.Color.Transparent;
-            this.txtBuscarCodeBar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtBuscarCodeBar.BackgroundImage")));
-            this.txtBuscarCodeBar.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txtBuscarCodeBar.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtBuscarCodeBar.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txtBuscarCodeBar.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtBuscarCodeBar.BorderRadius = 30;
-            this.txtBuscarCodeBar.BorderThickness = 1;
-            this.txtBuscarCodeBar.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
-            this.txtBuscarCodeBar.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtBuscarCodeBar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscarCodeBar.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.txtBuscarCodeBar.DefaultText = "";
-            this.txtBuscarCodeBar.FillColor = System.Drawing.Color.White;
-            this.txtBuscarCodeBar.HideSelection = true;
-            this.txtBuscarCodeBar.IconLeft = null;
-            this.txtBuscarCodeBar.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscarCodeBar.IconPadding = 10;
-            this.txtBuscarCodeBar.IconRight = null;
-            this.txtBuscarCodeBar.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBuscarCodeBar.Lines = new string[0];
-            this.txtBuscarCodeBar.Location = new System.Drawing.Point(2, 10);
-            this.txtBuscarCodeBar.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBuscarCodeBar.MaxLength = 32767;
-            this.txtBuscarCodeBar.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txtBuscarCodeBar.Modified = false;
-            this.txtBuscarCodeBar.Multiline = false;
-            this.txtBuscarCodeBar.Name = "txtBuscarCodeBar";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBuscarCodeBar.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtBuscarCodeBar.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBuscarCodeBar.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBuscarCodeBar.OnIdleState = stateProperties4;
-            this.txtBuscarCodeBar.Padding = new System.Windows.Forms.Padding(2);
-            this.txtBuscarCodeBar.PasswordChar = '\0';
-            this.txtBuscarCodeBar.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtBuscarCodeBar.PlaceholderText = "Codigo de barra";
-            this.txtBuscarCodeBar.ReadOnly = false;
-            this.txtBuscarCodeBar.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtBuscarCodeBar.SelectedText = "";
-            this.txtBuscarCodeBar.SelectionLength = 0;
-            this.txtBuscarCodeBar.SelectionStart = 0;
-            this.txtBuscarCodeBar.ShortcutsEnabled = true;
-            this.txtBuscarCodeBar.Size = new System.Drawing.Size(269, 34);
-            this.txtBuscarCodeBar.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtBuscarCodeBar.TabIndex = 2;
-            this.txtBuscarCodeBar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtBuscarCodeBar.TextMarginBottom = 0;
-            this.txtBuscarCodeBar.TextMarginLeft = 3;
-            this.txtBuscarCodeBar.TextMarginTop = 1;
-            this.txtBuscarCodeBar.TextPlaceholder = "Codigo de barra";
-            this.txtBuscarCodeBar.UseSystemPasswordChar = false;
-            this.txtBuscarCodeBar.WordWrap = true;
-            // 
             // lbProducto
             // 
             this.lbProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbProducto.BackColor = System.Drawing.Color.Transparent;
             this.lbProducto.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbProducto.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.lbProducto.Location = new System.Drawing.Point(99, 5);
+            this.lbProducto.Location = new System.Drawing.Point(101, 5);
             this.lbProducto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 10);
             this.lbProducto.Name = "lbProducto";
             this.lbProducto.Size = new System.Drawing.Size(162, 38);
@@ -290,7 +186,7 @@
             this.ptbback.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ptbback.Image = global::AgroServicios.Properties.Resources.turn_left_11044726;
             this.ptbback.ImageMargin = new System.Windows.Forms.Padding(0);
-            this.ptbback.Location = new System.Drawing.Point(5, 6);
+            this.ptbback.Location = new System.Drawing.Point(18, 6);
             this.ptbback.Margin = new System.Windows.Forms.Padding(2);
             this.ptbback.Name = "ptbback";
             this.ptbback.RoundBorders = false;
@@ -307,14 +203,14 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.txtBuscarP, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(345, 2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(337, 2);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(255, 55);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(502, 55);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // txtBuscarP
@@ -356,26 +252,26 @@
             this.txtBuscarP.Modified = false;
             this.txtBuscarP.Multiline = false;
             this.txtBuscarP.Name = "txtBuscarP";
-            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBuscarP.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtBuscarP.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBuscarP.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtBuscarP.OnIdleState = stateProperties8;
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtBuscarP.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtBuscarP.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtBuscarP.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtBuscarP.OnIdleState = stateProperties4;
             this.txtBuscarP.Padding = new System.Windows.Forms.Padding(2);
             this.txtBuscarP.PasswordChar = '\0';
             this.txtBuscarP.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -386,7 +282,7 @@
             this.txtBuscarP.SelectionLength = 0;
             this.txtBuscarP.SelectionStart = 0;
             this.txtBuscarP.ShortcutsEnabled = true;
-            this.txtBuscarP.Size = new System.Drawing.Size(251, 35);
+            this.txtBuscarP.Size = new System.Drawing.Size(498, 35);
             this.txtBuscarP.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtBuscarP.TabIndex = 2;
             this.txtBuscarP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -405,7 +301,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(309, 11);
+            this.button1.Location = new System.Drawing.Point(301, 11);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(32, 37);
@@ -460,7 +356,7 @@
             this.btnAgregarMarca.IdleIconLeftImage = null;
             this.btnAgregarMarca.IdleIconRightImage = null;
             this.btnAgregarMarca.IndicateFocus = false;
-            this.btnAgregarMarca.Location = new System.Drawing.Point(1049, 5);
+            this.btnAgregarMarca.Location = new System.Drawing.Point(1040, 5);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
             this.btnAgregarMarca.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAgregarMarca.OnDisabledState.BorderRadius = 15;
@@ -550,7 +446,7 @@
             this.btnAgregarProducto.IdleIconLeftImage = null;
             this.btnAgregarProducto.IdleIconRightImage = null;
             this.btnAgregarProducto.IndicateFocus = false;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(882, 4);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(858, 4);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAgregarProducto.OnDisabledState.BorderRadius = 15;
@@ -673,7 +569,6 @@
             this.ContextMenuProductos.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GriewViewProductos)).EndInit();
             this.ResumeLayout(false);
@@ -696,7 +591,5 @@
         public Bunifu.UI.WinForms.BunifuDataGridView GriewViewProductos;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAgregarProducto;
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnAgregarMarca;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        public Bunifu.UI.WinForms.BunifuTextBox txtBuscarCodeBar;
     }
 }

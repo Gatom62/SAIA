@@ -71,7 +71,6 @@ namespace AgroServicios.Vista.Productos1
                 cmsElimarProducto.Text = Ingles.Eliminar;
                 cmsInformacion.Text = Ingles.Informacion;
                 txtBuscarP.PlaceholderText = "Look for";
-                txtBuscarCodeBar.PlaceholderText = "Bar code";
             }
         }
 
