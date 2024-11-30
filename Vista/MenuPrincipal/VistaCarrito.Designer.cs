@@ -252,7 +252,7 @@
             this.txtBuscarClientes.Padding = new System.Windows.Forms.Padding(2);
             this.txtBuscarClientes.PasswordChar = '\0';
             this.txtBuscarClientes.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtBuscarClientes.PlaceholderText = "Buscar clientes";
+            this.txtBuscarClientes.PlaceholderText = "Buscar usuario";
             this.txtBuscarClientes.ReadOnly = false;
             this.txtBuscarClientes.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txtBuscarClientes.SelectedText = "";
@@ -266,7 +266,7 @@
             this.txtBuscarClientes.TextMarginBottom = 0;
             this.txtBuscarClientes.TextMarginLeft = 3;
             this.txtBuscarClientes.TextMarginTop = 1;
-            this.txtBuscarClientes.TextPlaceholder = "Buscar clientes";
+            this.txtBuscarClientes.TextPlaceholder = "Buscar usuario";
             this.txtBuscarClientes.UseSystemPasswordChar = false;
             this.txtBuscarClientes.WordWrap = true;
             // 
@@ -416,7 +416,7 @@
             this.btneliminar.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(9)))), ((int)(((byte)(9)))));
             this.btneliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btneliminar.BackgroundImage")));
             this.btneliminar.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btneliminar.ButtonText = "Eliminar compra";
+            this.btneliminar.ButtonText = "Eliminar pedido";
             this.btneliminar.ButtonTextMarginLeft = 0;
             this.btneliminar.ColorContrastOnClick = 45;
             this.btneliminar.ColorContrastOnHover = 45;
@@ -506,7 +506,7 @@
             this.btnComprar.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(231)))), ((int)(((byte)(64)))));
             this.btnComprar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnComprar.BackgroundImage")));
             this.btnComprar.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.btnComprar.ButtonText = "Realizar compra";
+            this.btnComprar.ButtonText = "Realizar pedido";
             this.btnComprar.ButtonTextMarginLeft = 0;
             this.btnComprar.ColorContrastOnClick = 45;
             this.btnComprar.ColorContrastOnHover = 45;

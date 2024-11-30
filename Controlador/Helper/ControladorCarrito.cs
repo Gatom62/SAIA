@@ -246,8 +246,8 @@ namespace AgroServicios.Controlador.Helper
                     {
                         var mailService = new DAODCSoporte();
                         mailService.sendMailWithAttachment(
-                            subject: "Factura de Compra",
-                            body: $"Hola, {objCarrito.cmbCliente.Text}\nGracias por su compra. Esperamos que vuelva a comprar en su agroservicio de confianza.",
+                            subject: "Factura de pedido",
+                            body: $"Hola, {objCarrito.cmbCliente.Text}\nEstos son los datos del pedido a rrealizar. Esperamos que sea un exitoso pedido.",
                             destinatarioCorreo: new List<string> { clienteEmail },
                             attachmentPath: pdfFilePath
                         );
@@ -274,7 +274,7 @@ namespace AgroServicios.Controlador.Helper
                 }
                 else
                 {
-                    MessageBox.Show("No se ha podido realizar la compra", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se ha podido realizar el pedido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -294,7 +294,7 @@ namespace AgroServicios.Controlador.Helper
 
             string fechaEmision = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"); // Formato con fecha y hora
             paginahtml_texto = paginahtml_texto.Replace("@FechaEmision", fechaEmision);
-            paginahtml_texto = paginahtml_texto.Replace("@Cliente", cliente);
+            paginahtml_texto = paginahtml_texto.Replace("@Empleado", cliente);
             paginahtml_texto = paginahtml_texto.Replace("@total", total);
             paginahtml_texto = paginahtml_texto.Replace("@vendedor", vendedor);
 
@@ -368,7 +368,7 @@ namespace AgroServicios.Controlador.Helper
                 }
                 else
                 {
-                    MessageBox.Show($"No hay suficiente stock disponible para {producto}. Stock disponible: {stockDisponible}. Cantidad en carrito: {cantidadEnCarrito}", "Stock Insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show($"No hay suficiente productos disponibles para {producto}. Cantidad disponible: {stockDisponible}. Cantidad que desea ingresar: {cantidadEnCarrito}", "Cantidad Insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 return;
             }
@@ -399,7 +399,7 @@ namespace AgroServicios.Controlador.Helper
                     }
                     else
                     {
-                        MessageBox.Show($"Se ha añadido {cantidad} {producto} al carrito.", "Producto Añadido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"Se ha añadido {cantidad} {producto} al pedido.", "Producto Añadido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     return;
                 }
@@ -456,7 +456,7 @@ namespace AgroServicios.Controlador.Helper
             }
             else
             {
-                if (MessageBox.Show("¿Está seguro que desea eliminar esta compra?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("¿Está seguro que desea eliminar este pedido?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     objCarrito.dgvCarrito.Rows.Clear();
                     objCarrito.dgvTotal.Rows.Clear();

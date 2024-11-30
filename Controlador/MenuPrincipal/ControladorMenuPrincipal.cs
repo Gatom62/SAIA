@@ -2,7 +2,6 @@
 using AgroServicios.Vista.Cuentas;
 using AgroServicios.Vista.Estadisticas;
 using AgroServicios.Vista.Login;
-using AgroServicios.Vista.Pedidos;
 using AgroServicios.Vista.MenuPrincipal;
 using AgroServicios.Vista.Reportes.ReporteProductos;
 using System;
@@ -28,7 +27,6 @@ namespace AgroServicios.Controlador.MenuPrincipal
             ObjMenu = Menu;
             ObjMenu.Load += LoadUser;
             //Eventos de panel controlador, osea las voladitas que aparecen arriba en el menu principal
-            ObjMenu.btnPedidos.Click += new EventHandler(AbrirPedidos);
             ObjMenu.btnStats.Click += new EventHandler(OpenStats);
             ObjMenu.btnInicio.Click += new EventHandler(OpenInicio);
             ObjMenu.btnShop.Click += new EventHandler(OpenCarrito);
@@ -85,10 +83,6 @@ namespace AgroServicios.Controlador.MenuPrincipal
         private void OpenStats(object sender, EventArgs e)
         {
             AbrirPanel<VistaStats>();
-        }
-        private void AbrirPedidos(object sender, EventArgs e)
-        {
-            AbrirPanel<VistaPedidos>();
         }
         private void CerrarSesion(object sender, EventArgs e)
         {

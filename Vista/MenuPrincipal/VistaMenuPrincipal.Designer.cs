@@ -75,7 +75,6 @@
             this.btnInicio = new System.Windows.Forms.PictureBox();
             this.btnAccounts = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnPedidos = new System.Windows.Forms.PictureBox();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.PanelView.SuspendLayout();
@@ -104,7 +103,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAccounts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPedidos)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelView
@@ -1160,19 +1158,17 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(233)))), ((int)(((byte)(252)))));
-            this.tableLayoutPanel1.ColumnCount = 6;
+            this.tableLayoutPanel1.ColumnCount = 5;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 188F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 190F));
             this.tableLayoutPanel1.Controls.Add(this.btnStats, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnShop, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnInicio, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnAccounts, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnPedidos, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnCerrar, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnCerrar, 4, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
@@ -1191,7 +1187,7 @@
             this.btnStats.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnStats.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStats.Image = global::AgroServicios.Properties.Resources.image_49;
-            this.btnStats.Location = new System.Drawing.Point(558, 7);
+            this.btnStats.Location = new System.Drawing.Point(678, 7);
             this.btnStats.Margin = new System.Windows.Forms.Padding(2);
             this.btnStats.Name = "btnStats";
             this.btnStats.Size = new System.Drawing.Size(39, 39);
@@ -1206,11 +1202,11 @@
             // 
             this.btnShop.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnShop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnShop.Image = global::AgroServicios.Properties.Resources.bolsita;
-            this.btnShop.Location = new System.Drawing.Point(327, 7);
+            this.btnShop.Image = global::AgroServicios.Properties.Resources.carro;
+            this.btnShop.Location = new System.Drawing.Point(392, 7);
             this.btnShop.Margin = new System.Windows.Forms.Padding(2);
             this.btnShop.Name = "btnShop";
-            this.btnShop.Size = new System.Drawing.Size(39, 39);
+            this.btnShop.Size = new System.Drawing.Size(53, 39);
             this.btnShop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnShop.TabIndex = 38;
             this.btnShop.TabStop = false;
@@ -1223,7 +1219,7 @@
             this.btnInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.Image = global::AgroServicios.Properties.Resources.Casa_Logo2;
-            this.btnInicio.Location = new System.Drawing.Point(96, 7);
+            this.btnInicio.Location = new System.Drawing.Point(120, 7);
             this.btnInicio.Margin = new System.Windows.Forms.Padding(2);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(39, 39);
@@ -1241,7 +1237,7 @@
             this.btnAccounts.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAccounts.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAccounts.Image = global::AgroServicios.Properties.Resources.silueta_de_multiples_usuarios;
-            this.btnAccounts.Location = new System.Drawing.Point(789, 7);
+            this.btnAccounts.Location = new System.Drawing.Point(957, 7);
             this.btnAccounts.Margin = new System.Windows.Forms.Padding(2);
             this.btnAccounts.Name = "btnAccounts";
             this.btnAccounts.Size = new System.Drawing.Size(39, 39);
@@ -1257,7 +1253,7 @@
             this.btnCerrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = global::AgroServicios.Properties.Resources.ErrorIcono;
-            this.btnCerrar.Location = new System.Drawing.Point(1189, 7);
+            this.btnCerrar.Location = new System.Drawing.Point(1191, 7);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(39, 39);
@@ -1269,24 +1265,6 @@
             this.bunifuToolTip1.SetToolTipTitle(this.btnCerrar, "");
             this.btnCerrar.MouseEnter += new System.EventHandler(this.btnCerrar_MouseEnter);
             this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
-            // 
-            // btnPedidos
-            // 
-            this.btnPedidos.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPedidos.Image = global::AgroServicios.Properties.Resources.IconoPedido_removebg_preview;
-            this.btnPedidos.Location = new System.Drawing.Point(994, 7);
-            this.btnPedidos.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(48, 39);
-            this.btnPedidos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnPedidos.TabIndex = 44;
-            this.btnPedidos.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.btnPedidos, "Pedidos");
-            this.bunifuToolTip1.SetToolTipIcon(this.btnPedidos, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.btnPedidos, "");
-            this.btnPedidos.MouseEnter += new System.EventHandler(this.btnPedidos_MouseEnter);
-            this.btnPedidos.MouseLeave += new System.EventHandler(this.btnPedidos_MouseLeave);
             // 
             // horafecha
             // 
@@ -1373,7 +1351,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAccounts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPedidos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1420,6 +1397,5 @@
         public Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnCierreCaja;
         public System.Windows.Forms.PictureBox btnCerrar;
         private Bunifu.UI.WinForms.BunifuToolTip bunifuToolTip1;
-        public System.Windows.Forms.PictureBox btnPedidos;
     }
 }
