@@ -66,14 +66,6 @@ namespace AgroServicios.Vista.MenuPrincipal
             // Eventos para cuando el mouse entra y sale del PictureBox
             btnCerrar.MouseEnter += btnCerrar_MouseEnter;
             btnCerrar.MouseLeave += btnCerrar_MouseLeave;
-
-            //Para el boton de pedidos
-            // Cargar la imagen desde los recursos
-            btnPedidos.Image = Properties.Resources.IconoPedido_removebg_preview;
-            originalSize = btnPedidos.Size;
-            // Eventos para cuando el mouse entra y sale del PictureBox
-            btnPedidos.MouseEnter += btnPedidos_MouseEnter;
-            btnPedidos.MouseLeave += btnPedidos_MouseLeave;
         }
 
         private void horafecha_Tick(object sender, EventArgs e)
@@ -215,19 +207,6 @@ namespace AgroServicios.Vista.MenuPrincipal
             // Restaurar el tamaño original del PictureBox cuando el cursor sale de la imagen
             btnCerrar.Size = originalSize;
             btnCerrar.Location = new Point(btnCerrar.Location.X + 10, btnCerrar.Location.Y + 10); // Restaurar la posición
-        }
-        private void btnPedidos_MouseEnter(object sender, EventArgs e)
-        {
-            // Aumentar el tamaño del PictureBox cuando el cursor está sobre la imagen
-            btnPedidos.Size = new Size(originalSize.Width + 20, originalSize.Height + 20);
-            btnPedidos.Location = new Point(btnPedidos.Location.X - 10, btnPedidos.Location.Y - 20); // Ajustar la posición
-        }
-
-        private void btnPedidos_MouseLeave(object sender, EventArgs e)
-        {
-            // Restaurar el tamaño original del PictureBox cuando el cursor sale de la imagen
-            btnPedidos.Size = originalSize;
-            btnPedidos.Location = new Point(btnPedidos.Location.X + 10, btnPedidos.Location.Y + 10); // Restaurar la posición
         }
     }
 }
