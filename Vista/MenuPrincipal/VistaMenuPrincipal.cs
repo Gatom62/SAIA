@@ -208,5 +208,7 @@ namespace AgroServicios.Vista.MenuPrincipal
             btnCerrar.Size = originalSize;
             btnCerrar.Location = new Point(btnCerrar.Location.X + 10, btnCerrar.Location.Y + 10); // Restaurar la posición
         }
+
+
     }
 }
